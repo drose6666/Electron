@@ -1,0 +1,135 @@
+/* TODO Axiforma */
+
+
+/* Light */
+@font-face {
+   font-family: 'Futura New';
+   src: url('../fonts/FuturaNew/FuturaNewLight-Reg.eot');
+   src: local('FuturaNew'), local('FuturaNewLight-Reg'),
+      url('../fonts/FuturaNew/FuturaNewLight-Reg.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/FuturaNew/FuturaNewLight-Reg.woff') format('woff'),
+		url('../fonts/FuturaNew/FuturaNewLight-Reg.woff2') format('woff2'),
+      url('../fonts/FuturaNew/FuturaNewLight-Reg.ttf') format('truetype');
+   font-weight: 200;
+   font-style: normal;
+	font-display: fallback;
+}
+
+@font-face {
+   font-family: 'Futura New';
+   src: url('../fonts/FuturaNew/FuturaNewLight-Obl.eot');
+   src: local('FuturaNew'), local('FuturaNewLight-Obl'),
+      url('../fonts/FuturaNew/FuturaNewLight-Obl.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/FuturaNew/FuturaNewLight-Obl.woff') format('woff'),
+		url('../fonts/FuturaNew/FuturaNewLight-Obl.woff2') format('woff2'),
+      url('../fonts/FuturaNew/FuturaNewLight-Obl.ttf') format('truetype');
+   font-weight: 200;
+   font-style: oblique;
+	font-display: fallback;
+}
+
+
+
+/* Book */
+@font-face {
+   font-family: 'Futura New';
+   src: url('../fonts/FuturaNew/FuturaNewBook-Reg.eot');
+   src: local('FuturaNew'), local('FuturaNewBook-Reg'),
+      url('../fonts/FuturaNew/FuturaNewBook-Reg.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/FuturaNew/FuturaNewBook-Reg.woff') format('woff'),
+		url('../fonts/FuturaNew/FuturaNewBook-Reg.woff2') format('woff2'),
+      url('../fonts/FuturaNew/FuturaNewBook-Reg.ttf') format('truetype');
+   font-weight: 300;
+   font-style: normal;
+	font-display: fallback;
+}
+
+@font-face {
+   font-family: 'Futura New';
+   src: url('../fonts/FuturaNew/FuturaNewBook-Obl.eot');
+   src: local('FuturaNew'), local('FuturaNewBook-Obl'),
+      url('../fonts/FuturaNew/FuturaNewBook-Obl.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/FuturaNew/FuturaNewBook-Obl.woff') format('woff'),
+		url('../fonts/FuturaNew/FuturaNewBook-Obl.woff2') format('woff2'),
+      url('../fonts/FuturaNew/FuturaNewBook-Obl.ttf') format('truetype');
+   font-weight: 300;
+   font-style: oblique;
+	font-display: fallback;
+}
+
+
+
+/* Medium */
+@font-face {
+   font-family: 'Futura New';
+   src: url('../fonts/FuturaNew/FuturaNewMedium-Reg.eot');
+   src: local('FuturaNew'), local('FuturaNewMedium-Reg'),
+      url('../fonts/FuturaNew/FuturaNewMedium-Reg.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/FuturaNew/FuturaNewMedium-Reg.woff') format('woff'),
+		url('../fonts/FuturaNew/FuturaNewMedium-Reg.woff2') format('woff2'),
+      url('../fonts/FuturaNew/FuturaNewMedium-Reg.ttf') format('truetype');
+   font-weight: 400;
+   font-style: normal;
+	font-display: fallback;
+}
+
+@font-face {
+   font-family: 'Futura New';
+   src: url('../fonts/FuturaNew/FuturaNewMedium-Obl.eot');
+   src: local('FuturaNew'), local('FuturaNewMedium-Obl'),
+      url('../fonts/FuturaNew/FuturaNewMedium-Obl.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/FuturaNew/FuturaNewMedium-Obl.woff') format('woff'),
+		url('../fonts/FuturaNew/FuturaNewMedium-Obl.woff2') format('woff2'),
+      url('../fonts/FuturaNew/FuturaNewMedium-Obl.ttf') format('truetype');
+   font-weight: 400;
+   font-style: oblique;
+	font-display: fallback;
+}
+
+
+
+/* Demi */
+@font-face {
+   font-family: 'Futura New';
+   src: url('../fonts/FuturaNew/FuturaNewDemi-Reg.eot');
+   src: local('FuturaNew'), local('FuturaNewDemi-Reg'),
+      url('../fonts/FuturaNew/FuturaNewDemi-Reg.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/FuturaNew/FuturaNewDemi-Reg.woff') format('woff'),
+		url('../fonts/FuturaNew/FuturaNewDemi-Reg.woff2') format('woff2'),
+      url('../fonts/FuturaNew/FuturaNewDemi-Reg.ttf') format('truetype');
+   font-weight: 500;
+   font-style: normal;
+	font-display: fallback;
+}
+
+
+
+/* Heavy */
+@font-face {
+   font-family: 'Futura New';
+   src: url('../fonts/FuturaNew/FuturaNewHeavy-Reg.eot');
+   src: local('FuturaNew'), local('FuturaNewHeavy-Reg'),
+      url('../fonts/FuturaNew/FuturaNewHeavy-Reg.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/FuturaNew/FuturaNewHeavy-Reg.woff') format('woff'),
+		url('../fonts/FuturaNew/FuturaNewHeavy-Reg.woff2') format('woff2'),
+      url('../fonts/FuturaNew/FuturaNewHeavy-Reg.ttf') format('truetype');
+   font-weight: 600;
+   font-style: normal;
+	font-display: fallback;
+}
+
+
+
+/* Bold */
+@font-face {
+   font-family: 'Futura New';
+   src: url('../fonts/FuturaNew/FuturaNewBold-Reg.eot');
+   src: local('FuturaNew'), local('FuturaNewBold-Reg'),
+      url('../fonts/FuturaNew/FuturaNewBold-Reg.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/FuturaNew/FuturaNewBold-Reg.woff') format('woff'),
+		url('../fonts/FuturaNew/FuturaNewBold-Reg.woff2') format('woff2'),
+      url('../fonts/FuturaNew/FuturaNewBold-Reg.ttf') format('truetype');
+   font-weight: 700;
+   font-style: normal;
+	font-display: fallback;
+}
