@@ -1,0 +1,37 @@
+<div class="product-card swiper-slide">
+   <div class="img">
+      <a href="#">
+         <img src="@@img" alt="">
+         <img src="@@imgHover" alt="" class="hover-img">
+      </a>
+      
+      <div class="sticker-wrap"></div>
+
+      <div class="quick-nav">
+         @@include('../../../ui/ui-button/ui-button-circle/ui-button-circle.html', {
+            "classNameIcon": "eye",
+            "className": "btn_product_quick"
+         })
+         @@include('../../../ui/ui-button/ui-button-circle/ui-button-circle.html', {
+            "classNameIcon": "compare",
+            "className": "btn_product_quick"
+         })
+         @@include('../../../ui/ui-button/ui-button-circle/ui-button-circle.html', {
+            "classNameIcon": "heart",
+            "className": "btn_product_quick"
+         })
+      </div>
+
+      <div class="action-wrap">
+         @@include('../../../ui/ui-button/ui-button-circle/ui-button-circle.html', {
+            "classNameIcon": "cart",
+            "className": "btn_product_cart"
+         })
+      </div>
+   </div>
+
+   <div class="info">
+      <h4 class="title"><a href="#">@@title</a></h4>
+      <span class="price">@@price</span>
+   </div>
+</div>

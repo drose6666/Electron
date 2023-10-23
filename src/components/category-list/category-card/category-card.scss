@@ -1,0 +1,213 @@
+.category-card-wrap {
+   container-type: inline-size;
+
+   .category-card {
+      position: relative;
+      overflow: hidden;
+      border-radius: clamp(var(--optionalRd), 11cqi, var(--defaultRd));
+      background: #F3F5F7;
+      display: flex;
+      align-items: flex-end;
+      justify-content: flex-start;
+      min-height: clamp(310px, 75cqi, 380px);
+      cursor: pointer;
+      transition: all .4s ease;
+   
+      .content {
+         padding: 0 15px 25px clamp(15px, 7cqi, 30px);
+         display: flex;
+         flex-direction: column;
+         gap: 10px;
+         position: relative;
+         z-index: 2;
+   
+         .title {
+            font-size: clamp(26px, 7cqi, 50px);
+            font-weight: 600;
+            line-height: 100%;
+            color: var(--dark);
+         }
+      }
+   
+      .img {
+         position: absolute;
+         top: 0;
+         right: 0;
+         max-width: clamp(150px, 85cqi, 910px);
+         width: 100%;
+         height: auto;
+         object-fit: contain;
+         object-position: right center;
+         z-index: 1;
+      }
+
+      .icon-right, .icon-left {
+         position: absolute;
+         background: #E0CDD1;
+         border-radius: var(--circleRd);
+         z-index: 0;
+         transition: all 1s ease .05s;
+
+         &:after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 160%;
+            height: 160%;
+            border: 1px solid #E0CDD1;
+            border-radius: var(--circleRd);
+         }
+      }
+
+      .icon-right {
+         bottom: -15%;
+         right: -10%;
+         width: clamp(150px, 35cqw, 220px);
+         height: clamp(150px, 35cqw, 220px);
+      }
+
+      .icon-left {
+         display: none;
+      }
+   }
+
+   &.pc {
+      $bg: #F3F5F7;
+      $decor: #E6E8EE;
+
+      grid-column: 1 / 4;
+
+      .category-card {
+         background: $bg;
+
+         .img {
+            top: 10px;
+            max-width: clamp(150px, 70cqi, 950px);
+         }
+
+         .icon-right {
+            background: $decor;
+            bottom: -15%;
+            right: -20%;
+            width: clamp(160px,32cqw,720px);
+            height: clamp(160px,32cqw,720px);
+            opacity: .6;
+         }
+
+         .icon-left {
+            background: $decor;
+            top: -6cqi;
+            left: -4cqi;
+            width: clamp(100px,18cqw,480px);
+            height: clamp(100px,18cqw,480px);
+            display: block;
+         }
+
+         .icon-left, .icon-right {
+            &:after {
+               border-color: $decor;
+            }
+         }
+      }
+
+      @include media (max-width, 1000px) {
+         grid-column: 1 / 2;
+
+         .category-card {
+            .img {
+               max-width: 100cqi;
+               right: -5cqi;
+            }
+
+            .icon-left {
+               display: none;
+            }
+
+            .icon-right {
+               bottom: -15%;
+               right: -10%;
+               width: clamp(150px, 35cqw, 220px);
+               height: clamp(150px, 35cqw, 220px);
+               opacity: 1;
+            }
+         }
+      }
+   }
+
+   &.smartphones {
+      $bg: #EDDDE0;
+      $decor: #E0CDD1;
+      $hoverDecor: #52343C;
+
+      .category-card {
+         background: $bg;
+
+         .icon-right {
+            background: $decor;
+
+            &:after {
+               border-color: $decor;
+            }
+         }
+      }
+   }
+
+   &.complect {
+      $bg: #FFF7EF;
+      $decor: #FFEFE2;
+      $hoverDecor: #31200D;
+
+      .category-card {
+         background: $bg;
+
+         .img {
+            max-width: 90cqi;
+         }
+
+         .icon-right {
+            background: $decor;
+
+            &:after {
+               border-color: $decor;
+            }
+         }
+      }
+   }
+
+   &.accessories {
+      $bg: #F5F5FF;
+      $decor: #EAEAF9;
+      $hoverDecor: #224E73;
+
+      .category-card {
+         background: $bg;
+
+         .img {
+            top: -7cqi;
+            max-width: 100cqi;
+         }
+
+         .icon-right {
+            background: $decor;
+
+            &:after {
+               border-color: $decor;
+            }
+         }
+      }
+   }
+
+   &:hover {
+      .category-card {
+         translate: 0 -10px;
+
+         .icon-right {
+            transform: translate(-20%, -20%) scale(1.1);
+         }
+      }
+   }
+}
+
+

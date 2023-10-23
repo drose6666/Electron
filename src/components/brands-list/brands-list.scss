@@ -1,0 +1,24 @@
+@import './brand-card/brand-card';
+
+.brands-list {
+   padding-top: var(--section_padding);
+   display: grid;
+   grid-template: auto / repeat(6, 1fr);
+   gap: 10px;
+
+   @include media (max-width, 1200px) {
+      grid-template: auto / repeat(5, 1fr);
+   }
+
+   @include media (max-width, 1000px) {
+      grid-template: auto / repeat(4, 1fr);
+   }
+
+   @include media (max-width, 800px) {
+      grid-template: auto / repeat(3, 1fr);
+   }
+
+   @include media (max-width, 600px) {
+      grid-template: auto / repeat(2, 1fr);
+   }
+}
