@@ -9,4 +9,10 @@
 
 @function calcSize ($currentWidth, $targetWidth, $currentFont, $targetFont) {
    @return calc((100vw - #{$targetWidth}px) / (#{$currentWidth} - #{$targetWidth}) * (#{$currentFont} - #{$targetFont}) + #{$targetFont}px)
+};
+
+// TODO Px в Rem
+@function pxToRem($font) {
+   $remValue: $font / var(--basic_font_size);
+   @return #{$remValue}rem;
 }

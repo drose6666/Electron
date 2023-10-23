@@ -1,0 +1,7 @@
+@import '../../main-slider/main-slider';
+@import '../../features-products/features-products';
+
+.hero-section {
+   margin-top: 80px;
+   @extend %fullWidthElement;
+}

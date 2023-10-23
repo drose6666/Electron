@@ -1,0 +1,102 @@
+.ui-btn-icon {
+   border-radius: var(--defaultRd);
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   transition: all .2s ease;
+
+   span {
+      position: relative;
+      z-index: 1;
+      transition: inherit;
+   }
+
+   .icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      transition: inherit;
+
+      i {
+         font-size: 20px;
+      }
+   }
+   
+   &.btn_primary {
+      padding: 2px 2px 2px 20px;
+      gap: 20px;
+
+      span {
+         font-size: 18px;
+         font-weight: 400;
+         line-height: 100%;
+         color: var(--light);
+      }
+
+      .icon {
+         width: 41px;
+         height: 41px;
+      }
+   }
+
+   &.btn_secondary {
+      padding: 2px 2px 2px 15px;
+      font-size: 17px;
+      gap: 15px;
+
+      .icon i { font-size: 17px; }
+   }
+
+
+   &.btn_i_action {
+      background: var(--action);
+
+      span { color: var(--light); }
+
+      .icon {
+         background: var(--dark);
+
+         i { color: var(--light); }
+      }
+   }
+
+   &.btn_i_dark {
+      background: var(--dark);
+
+      span { color: var(--light); }
+
+      .icon {
+         background: var(--action);
+
+         i { color: var(--light); }
+      }
+   }
+
+   &.btn_i_disabled {
+      background: var(--separating);
+
+      span { color: var(--text_additional); }
+
+      .icon {
+         background: var(--separating_contrast);
+
+         i { color: var(--text_additional); }
+      }
+   }
+
+   &.btn_hero-slide_1 {
+      background: var(--dark);
+      span {
+         color: var(--light);
+      }
+
+      .icon {
+         background: #A63233;
+         i {
+            color: #FFDC80;
+         }
+      }
+      
+   }
+}

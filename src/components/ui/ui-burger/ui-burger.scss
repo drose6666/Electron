@@ -1,0 +1,59 @@
+.ui-burger {
+   $height: 3px;
+   
+   height: 20px;
+   width: 30px;
+   display: none;
+   flex-direction: column;
+   align-items: center;
+   justify-content: space-between;
+   cursor: pointer;
+
+   span {
+      position: relative;
+      width: 100%;
+      height: $height;
+      
+      &:after {
+         content: '';
+         position: absolute;
+         top: 0;
+         right: 0;
+         height: inherit;
+         width: 80%;
+         background: var(--dark);
+         border-radius: var(--xlRd);
+         transition: all .2s ease;
+      }
+
+      &:before {
+         content: '';
+         position: absolute;
+         top: 0;
+         left: 0;
+         width: $height;
+         height: inherit;
+         background: var(--action);
+         border-radius: var(--circleRd);
+      }
+   }
+
+   &:hover {
+      span {
+         &:after {
+            width: 100%;
+            // background: var(--action);
+         }
+
+         &:nth-child(2) {
+            &:after {
+               transform: translateX(10px);
+            }
+         }
+      }
+   }
+
+   @include media(max-width, 1000px) {
+      display: flex;
+   }
+}

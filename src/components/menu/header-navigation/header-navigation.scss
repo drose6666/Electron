@@ -1,0 +1,36 @@
+.header-navigation {
+   ul {
+      display: flex;
+      align-items: center;
+      gap: clamp(17px, 3.2cqi, 45px);
+
+      li {
+         position: relative;
+         @include hoverLinks($hoverChild: true, $height: 3px);
+
+         a {
+            padding: 34px 0;
+            font-size: clamp(18px, 1.9cqi, 22px);
+            font-weight: 500;
+            line-height: 100%;
+            color: var(--dark);
+            display: inline-block;
+            transition: background-size .2s ease, color .2s ease;
+
+            &:hover {
+               color: var(--action);
+            }
+         }
+      }
+   }
+
+   @include media(max-width, 1200px) {
+      ul > li > a {
+         font-size: clamp(17px, 1.8cqi, 22px);
+      }
+   }
+
+   @include media(max-width, 1000px) {
+      display: none;
+   }
+}

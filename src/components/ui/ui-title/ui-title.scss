@@ -1,0 +1,15 @@
+.ui-section-title {
+   margin-bottom: 60px;
+   font-size: 40px;
+   font-weight: 600;
+   line-height: 100%;
+   color: var(--dark);
+
+   &.sm-mt {
+      margin-bottom: 40px;
+   }
+
+   &.center {
+      text-align: center;
+   }
+}

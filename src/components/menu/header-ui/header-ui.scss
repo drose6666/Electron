@@ -1,0 +1,21 @@
+.header-ui {
+   display: flex;
+   align-items: center;
+   gap: var(--default_padding);
+
+   @include media(max-width, 460px) {
+      .ui-btn-circle_menu {
+         &.btn_compare, &.btn_favourites {
+            display: none;
+         }
+      }
+   }
+
+   @include media(max-width, 400px) {
+      .ui-btn-circle {
+         &.btn_search{
+            // display: none;
+         }
+      }
+   }
+}

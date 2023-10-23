@@ -1,4 +1,6 @@
 @import '../../scss/common';
 
-@import './tech-links/tech-links';
-@import './benefit-list-item/benefit-list-item';
+// Components
+@import './sections/hero-section/hero-section';
+@import './sections/new-products-section/new-products-section';
+@import './sections/category-section/category-section';

@@ -1,0 +1,20 @@
+<div class="top-menu">
+   <div class="ui-container">
+      <div class="nav-wrap">
+         @@include('../../ui/ui-burger/ui-burger.html')
+         @@include('top-navigation/top-navigation.html')
+      </div>
+
+      <div class="btn-group">
+         @@include('../../ui/ui-button/ui-button-default/ui-button-default.html', {
+            "text": "Регистрация",
+            "className": "btn_secondary btn_outline btn_register"
+         })
+
+         @@include('../../ui/ui-button/ui-button-default/ui-button-default.html', {
+            "text": "Вход",
+            "className": "btn_secondary btn_action"
+         })
+      </div>
+   </div>
+</div>

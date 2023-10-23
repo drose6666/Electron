@@ -1,0 +1,35 @@
+header {
+   margin: 0 var(--default_padding);
+   background: var(--separating);
+   border-radius: var(--mdRd);
+
+   .ui-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+   }
+
+   .nav-wrap {
+      display: flex;
+      align-items: center;
+      gap: 70px;
+   }
+
+   
+
+   @include media(max-width, 1200px) {
+      .nav-wrap  {
+         gap: clamp(25px, 4cqi, 70px);
+      }
+   }
+
+   @include media(max-width, 1000px) {
+      padding: 10px 0;
+   }
+
+   @include media(max-width, 576px) {
+      .nav-wrap  {
+         gap: 25px;
+      }
+   }
+}

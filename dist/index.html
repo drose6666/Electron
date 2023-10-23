@@ -8,7 +8,7 @@
    <meta property="og:title" content="Electron - лучший выбор в мире электроники">
    <meta property="og:description" content="Компьютеры, смартфоны, комплектующие и аксессуары от оригинальных производителей">
    <meta property="og:url" content="http://danilarose.net">
-   <meta property="og:image" content="http://danilarose.net/img/optimized/og-image.jpg">
+   <!-- <meta property="og:image" content="http://danilarose.net/img/optimized/og-image.jpg"> -->
    <meta property="og:site_name" content="Electron">
    <!-- Иконка для вкладки браузера -->
    <link rel="icon" href="../../img/favicon/fav_32.ico" type="image/x-icon">
@@ -22,22 +22,724 @@
    <link rel="icon" href="../../img/favicon/fav_48.png" type="image/png" sizes="48x48">
    <link rel="icon" href="../../img/favicon/fav_128.png" type="image/png" sizes="128x128">
    
-   <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css?_v=20230927222126" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
-   <link rel="stylesheet" href="../../libs/css/bootstrap-grid.min.css?_v=20230927222126">
-   <link rel="stylesheet" href="../../libs/css/reset.min.css?_v=20230927222126">
-   <link rel="stylesheet" as="font" href="../../fonts/fonts.css?_v=20230927222126">
-   <link rel="stylesheet" as="font" href="../../fonts/icon-font.css?_v=20230927222126">
-   <link rel="stylesheet" href="./pages/index/css/index.min.css?_v=20230927222126">
+   <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css?_v=20231023205944" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+   <!-- <link rel="stylesheet" href="../../libs/css/bootstrap-grid.min.css?_v=20231023205944"> -->
+
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css?_v=20231023205944" />
+   <script defer src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js?_v=20231023205944"></script>
+   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js?_v=20231023205944" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+   <link rel="stylesheet" href="../../libs/css/reset.min.css?_v=20231023205944">
+   <link rel="stylesheet" as="font" href="../../fonts/fonts.css?_v=20231023205944">
+   <link rel="stylesheet" as="font" href="../../fonts/icon-font.css?_v=20231023205944">
+   <link rel="stylesheet" href="./pages/index/css/index.min.css?_v=20231023205944">
    
    <title>Electron</title>
 </head>
 
-<body>
-   
-   <main>
+   <body>
+      <div class="top-menu">
+   <div class="ui-container">
+      <div class="nav-wrap">
+         <div class="ui-burger">
+   <span></span>
+   <span></span>
+   <span></span>
+</div>
+         <nav class="top-navigation">
+   <ul>
+      <li><a href="">Отследить заказ</a></li>
+      <li><a href="">Доставка</a></li>
+      <li><a href="">Сервис</a></li>
+   </ul>
+
+   <ul>
+      <li><a href="">Контакты</a></li>
+      <li><a href="">Блог</a></li>
+      <li><a href="">Акции и Подборки</a></li>
+      <li><a href="">Бренды</a></li>
+   </ul>
+</nav>
+      </div>
+
+      <div class="btn-group">
+         <button class="ui-btn-default btn_secondary btn_outline btn_register">
+   <span>Регистрация</span>
+</button>
+
+         <button class="ui-btn-default btn_secondary btn_action">
+   <span>Вход</span>
+</button>
+      </div>
+   </div>
+</div>
+      <header>
+   <div class="ui-container">
+      <div class="nav-wrap">
+         <a href="#" class="logo"></a>
+         <nav class="header-navigation">
+   <ul>
+      <li><a class="child" href="">Ноутбуки и ПК</a></li>
+      <li><a class="child" href="">Смартфоны</a></li>
+      <li><a class="child" href="">Комплектующие</a></li>
+      <li><a class="child" href="">Аксессуары</a></li>
+   </ul>
+</nav>
+      </div>
+      <div class="header-ui">
+   <div class="ui-btn-circle btn_transparent btn_search">
+   <i class="i-search"></i>
+</div>
+   <div class="ui-btn-circle_menu btn_compare">
+   <i class="i-compare"></i>
+   <div class="counter"><span>99</span></div>
+</div>
+   <div class="ui-btn-circle_menu btn_favourites">
+   <i class="i-heart"></i>
+   <div class="counter"><span>2</span></div>
+</div>
+   <div class="ui-btn-circle_menu btn_cart">
+   <i class="i-cart"></i>
+   <div class="counter"><span>56</span></div>
+</div>
+</div>
+   </div>
+</header>
       
-   </main>
+      <main>
+         
+         <section class="new-products-section">
+   <div class="ui-container">
+      <h2 class="ui-section-title sm-mt center">Новинки</h2>
+
+      <div class="ui-tabs">
+         <button class="ui-tab active">Ноутбуки и ПК</button><button class="ui-tab @@className">Смартфоны</button><button class="ui-tab @@className">Комплектующие</button><button class="ui-tab @@className">Аксессуары</button>
+      </div>
+      
+      <div class="content">
+         <div class="swiper-container new-products-container">
+   <div class="swiper" id="new-product-swiper-1">
+      <div class="swiper-wrapper">
+         <div class="product-card swiper-slide">
+   <div class="img">
+      <a href="#">
+         <img src="../../../img/optimized/cards/card_3.webp" alt="">
+         <img src="../../../img/optimized/cards/card_3_2.webp" alt="" class="hover-img">
+      </a>
+      
+      <div class="sticker-wrap"></div>
+
+      <div class="quick-nav">
+         <div class="ui-btn-circle btn_product_quick">
+   <i class="i-eye"></i>
+</div>
+         <div class="ui-btn-circle btn_product_quick">
+   <i class="i-compare"></i>
+</div>
+         <div class="ui-btn-circle btn_product_quick">
+   <i class="i-heart"></i>
+</div>
+      </div>
+
+      <div class="action-wrap">
+         <div class="ui-btn-circle btn_product_cart">
+   <i class="i-cart"></i>
+</div>
+      </div>
+   </div>
+
+   <div class="info">
+      <h4 class="title"><a href="#">iPhone 15 Plus</a></h4>
+      <span class="price">190 990 ₽</span>
+   </div>
+</div><div class="product-card swiper-slide">
+   <div class="img">
+      <a href="#">
+         <img src="../../../img/optimized/cards/card_1.webp" alt="">
+         <img src="../../../img/optimized/cards/card_1.webpHover" alt="" class="hover-img">
+      </a>
+      
+      <div class="sticker-wrap"></div>
+
+      <div class="quick-nav">
+         <div class="ui-btn-circle btn_product_quick">
+   <i class="i-eye"></i>
+</div>
+         <div class="ui-btn-circle btn_product_quick">
+   <i class="i-compare"></i>
+</div>
+         <div class="ui-btn-circle btn_product_quick">
+   <i class="i-heart"></i>
+</div>
+      </div>
+
+      <div class="action-wrap">
+         <div class="ui-btn-circle btn_product_cart">
+   <i class="i-cart"></i>
+</div>
+      </div>
+   </div>
+
+   <div class="info">
+      <h4 class="title"><a href="#">MacBook Pro (M2 Pro, 2023)</a></h4>
+      <span class="price">300 990 ₽</span>
+   </div>
+</div><div class="product-card swiper-slide">
+   <div class="img">
+      <a href="#">
+         <img src="../../../img/optimized/cards/card_2.webp" alt="">
+         <img src="../../../img/optimized/cards/card_2.webpHover" alt="" class="hover-img">
+      </a>
+      
+      <div class="sticker-wrap"></div>
+
+      <div class="quick-nav">
+         <div class="ui-btn-circle btn_product_quick">
+   <i class="i-eye"></i>
+</div>
+         <div class="ui-btn-circle btn_product_quick">
+   <i class="i-compare"></i>
+</div>
+         <div class="ui-btn-circle btn_product_quick">
+   <i class="i-heart"></i>
+</div>
+      </div>
+
+      <div class="action-wrap">
+         <div class="ui-btn-circle btn_product_cart">
+   <i class="i-cart"></i>
+</div>
+      </div>
+   </div>
+
+   <div class="info">
+      <h4 class="title"><a href="#">Samsung Galaxy S23 Ultra в комплекте с Buds 2 Pro</a></h4>
+      <span class="price">170 990 ₽</span>
+   </div>
+</div><div class="product-card swiper-slide">
+   <div class="img">
+      <a href="#">
+         <img src="../../../img/optimized/cards/card_4.webp" alt="">
+         <img src="../../../img/optimized/cards/card_4.webpHover" alt="" class="hover-img">
+      </a>
+      
+      <div class="sticker-wrap"></div>
+
+      <div class="quick-nav">
+         <div class="ui-btn-circle btn_product_quick">
+   <i class="i-eye"></i>
+</div>
+         <div class="ui-btn-circle btn_product_quick">
+   <i class="i-compare"></i>
+</div>
+         <div class="ui-btn-circle btn_product_quick">
+   <i class="i-heart"></i>
+</div>
+      </div>
+
+      <div class="action-wrap">
+         <div class="ui-btn-circle btn_product_cart">
+   <i class="i-cart"></i>
+</div>
+      </div>
+   </div>
+
+   <div class="info">
+      <h4 class="title"><a href="#">iPad Pro (6th Gen, 2022)</a></h4>
+      <span class="price">160 990 ₽</span>
+   </div>
+</div>
+
+      </div>
+   </div>
+
+   <div class="swiper-button-prev new-products-prev prev-1"></div>
+   <div class="swiper-button-next new-products-next next-1"></div>
+</div>
+         <div class="swiper-container new-products-container">
+   <div class="swiper" id="new-product-swiper-2">
+      <div class="swiper-wrapper">
+         <div class="product-card swiper-slide">
+   <div class="img">
+      <a href="#">
+         <img src="../../../img/optimized/cards/card_3.webp" alt="">
+         <img src="../../../img/optimized/cards/card_3_2.webp" alt="" class="hover-img">
+      </a>
+      
+      <div class="sticker-wrap"></div>
+
+      <div class="quick-nav">
+         <div class="ui-btn-circle btn_product_quick">
+   <i class="i-eye"></i>
+</div>
+         <div class="ui-btn-circle btn_product_quick">
+   <i class="i-compare"></i>
+</div>
+         <div class="ui-btn-circle btn_product_quick">
+   <i class="i-heart"></i>
+</div>
+      </div>
+
+      <div class="action-wrap">
+         <div class="ui-btn-circle btn_product_cart">
+   <i class="i-cart"></i>
+</div>
+      </div>
+   </div>
+
+   <div class="info">
+      <h4 class="title"><a href="#">iPhone 15 Plus</a></h4>
+      <span class="price">190 990 ₽</span>
+   </div>
+</div><div class="product-card swiper-slide">
+   <div class="img">
+      <a href="#">
+         <img src="../../../img/optimized/cards/card_1.webp" alt="">
+         <img src="../../../img/optimized/cards/card_1.webpHover" alt="" class="hover-img">
+      </a>
+      
+      <div class="sticker-wrap"></div>
+
+      <div class="quick-nav">
+         <div class="ui-btn-circle btn_product_quick">
+   <i class="i-eye"></i>
+</div>
+         <div class="ui-btn-circle btn_product_quick">
+   <i class="i-compare"></i>
+</div>
+         <div class="ui-btn-circle btn_product_quick">
+   <i class="i-heart"></i>
+</div>
+      </div>
+
+      <div class="action-wrap">
+         <div class="ui-btn-circle btn_product_cart">
+   <i class="i-cart"></i>
+</div>
+      </div>
+   </div>
+
+   <div class="info">
+      <h4 class="title"><a href="#">MacBook Pro (M2 Pro, 2023)</a></h4>
+      <span class="price">300 990 ₽</span>
+   </div>
+</div><div class="product-card swiper-slide">
+   <div class="img">
+      <a href="#">
+         <img src="../../../img/optimized/cards/card_2.webp" alt="">
+         <img src="../../../img/optimized/cards/card_2.webpHover" alt="" class="hover-img">
+      </a>
+      
+      <div class="sticker-wrap"></div>
+
+      <div class="quick-nav">
+         <div class="ui-btn-circle btn_product_quick">
+   <i class="i-eye"></i>
+</div>
+         <div class="ui-btn-circle btn_product_quick">
+   <i class="i-compare"></i>
+</div>
+         <div class="ui-btn-circle btn_product_quick">
+   <i class="i-heart"></i>
+</div>
+      </div>
+
+      <div class="action-wrap">
+         <div class="ui-btn-circle btn_product_cart">
+   <i class="i-cart"></i>
+</div>
+      </div>
+   </div>
+
+   <div class="info">
+      <h4 class="title"><a href="#">Samsung Galaxy S23 Ultra в комплекте с Buds 2 Pro</a></h4>
+      <span class="price">170 990 ₽</span>
+   </div>
+</div><div class="product-card swiper-slide">
+   <div class="img">
+      <a href="#">
+         <img src="../../../img/optimized/cards/card_4.webp" alt="">
+         <img src="../../../img/optimized/cards/card_4.webpHover" alt="" class="hover-img">
+      </a>
+      
+      <div class="sticker-wrap"></div>
+
+      <div class="quick-nav">
+         <div class="ui-btn-circle btn_product_quick">
+   <i class="i-eye"></i>
+</div>
+         <div class="ui-btn-circle btn_product_quick">
+   <i class="i-compare"></i>
+</div>
+         <div class="ui-btn-circle btn_product_quick">
+   <i class="i-heart"></i>
+</div>
+      </div>
+
+      <div class="action-wrap">
+         <div class="ui-btn-circle btn_product_cart">
+   <i class="i-cart"></i>
+</div>
+      </div>
+   </div>
+
+   <div class="info">
+      <h4 class="title"><a href="#">iPad Pro (6th Gen, 2022)</a></h4>
+      <span class="price">160 990 ₽</span>
+   </div>
+</div>
+
+      </div>
+   </div>
+
+   <div class="swiper-button-prev new-products-prev prev-2"></div>
+   <div class="swiper-button-next new-products-next next-2"></div>
+</div>
+         <div class="swiper-container new-products-container">
+   <div class="swiper" id="new-product-swiper-3">
+      <div class="swiper-wrapper">
+         <div class="product-card swiper-slide">
+   <div class="img">
+      <a href="#">
+         <img src="../../../img/optimized/cards/card_3.webp" alt="">
+         <img src="../../../img/optimized/cards/card_3_2.webp" alt="" class="hover-img">
+      </a>
+      
+      <div class="sticker-wrap"></div>
+
+      <div class="quick-nav">
+         <div class="ui-btn-circle btn_product_quick">
+   <i class="i-eye"></i>
+</div>
+         <div class="ui-btn-circle btn_product_quick">
+   <i class="i-compare"></i>
+</div>
+         <div class="ui-btn-circle btn_product_quick">
+   <i class="i-heart"></i>
+</div>
+      </div>
+
+      <div class="action-wrap">
+         <div class="ui-btn-circle btn_product_cart">
+   <i class="i-cart"></i>
+</div>
+      </div>
+   </div>
+
+   <div class="info">
+      <h4 class="title"><a href="#">iPhone 15 Plus</a></h4>
+      <span class="price">190 990 ₽</span>
+   </div>
+</div><div class="product-card swiper-slide">
+   <div class="img">
+      <a href="#">
+         <img src="../../../img/optimized/cards/card_1.webp" alt="">
+         <img src="../../../img/optimized/cards/card_1.webpHover" alt="" class="hover-img">
+      </a>
+      
+      <div class="sticker-wrap"></div>
+
+      <div class="quick-nav">
+         <div class="ui-btn-circle btn_product_quick">
+   <i class="i-eye"></i>
+</div>
+         <div class="ui-btn-circle btn_product_quick">
+   <i class="i-compare"></i>
+</div>
+         <div class="ui-btn-circle btn_product_quick">
+   <i class="i-heart"></i>
+</div>
+      </div>
+
+      <div class="action-wrap">
+         <div class="ui-btn-circle btn_product_cart">
+   <i class="i-cart"></i>
+</div>
+      </div>
+   </div>
+
+   <div class="info">
+      <h4 class="title"><a href="#">MacBook Pro (M2 Pro, 2023)</a></h4>
+      <span class="price">300 990 ₽</span>
+   </div>
+</div><div class="product-card swiper-slide">
+   <div class="img">
+      <a href="#">
+         <img src="../../../img/optimized/cards/card_2.webp" alt="">
+         <img src="../../../img/optimized/cards/card_2.webpHover" alt="" class="hover-img">
+      </a>
+      
+      <div class="sticker-wrap"></div>
+
+      <div class="quick-nav">
+         <div class="ui-btn-circle btn_product_quick">
+   <i class="i-eye"></i>
+</div>
+         <div class="ui-btn-circle btn_product_quick">
+   <i class="i-compare"></i>
+</div>
+         <div class="ui-btn-circle btn_product_quick">
+   <i class="i-heart"></i>
+</div>
+      </div>
+
+      <div class="action-wrap">
+         <div class="ui-btn-circle btn_product_cart">
+   <i class="i-cart"></i>
+</div>
+      </div>
+   </div>
+
+   <div class="info">
+      <h4 class="title"><a href="#">Samsung Galaxy S23 Ultra в комплекте с Buds 2 Pro</a></h4>
+      <span class="price">170 990 ₽</span>
+   </div>
+</div><div class="product-card swiper-slide">
+   <div class="img">
+      <a href="#">
+         <img src="../../../img/optimized/cards/card_4.webp" alt="">
+         <img src="../../../img/optimized/cards/card_4.webpHover" alt="" class="hover-img">
+      </a>
+      
+      <div class="sticker-wrap"></div>
+
+      <div class="quick-nav">
+         <div class="ui-btn-circle btn_product_quick">
+   <i class="i-eye"></i>
+</div>
+         <div class="ui-btn-circle btn_product_quick">
+   <i class="i-compare"></i>
+</div>
+         <div class="ui-btn-circle btn_product_quick">
+   <i class="i-heart"></i>
+</div>
+      </div>
+
+      <div class="action-wrap">
+         <div class="ui-btn-circle btn_product_cart">
+   <i class="i-cart"></i>
+</div>
+      </div>
+   </div>
+
+   <div class="info">
+      <h4 class="title"><a href="#">iPad Pro (6th Gen, 2022)</a></h4>
+      <span class="price">160 990 ₽</span>
+   </div>
+</div>
+
+      </div>
+   </div>
+
+   <div class="swiper-button-prev new-products-prev prev-3"></div>
+   <div class="swiper-button-next new-products-next next-3"></div>
+</div>
+         <div class="swiper-container new-products-container">
+   <div class="swiper" id="new-product-swiper-4">
+      <div class="swiper-wrapper">
+         <div class="product-card swiper-slide">
+   <div class="img">
+      <a href="#">
+         <img src="../../../img/optimized/cards/card_3.webp" alt="">
+         <img src="../../../img/optimized/cards/card_3_2.webp" alt="" class="hover-img">
+      </a>
+      
+      <div class="sticker-wrap"></div>
+
+      <div class="quick-nav">
+         <div class="ui-btn-circle btn_product_quick">
+   <i class="i-eye"></i>
+</div>
+         <div class="ui-btn-circle btn_product_quick">
+   <i class="i-compare"></i>
+</div>
+         <div class="ui-btn-circle btn_product_quick">
+   <i class="i-heart"></i>
+</div>
+      </div>
+
+      <div class="action-wrap">
+         <div class="ui-btn-circle btn_product_cart">
+   <i class="i-cart"></i>
+</div>
+      </div>
+   </div>
+
+   <div class="info">
+      <h4 class="title"><a href="#">iPhone 15 Plus</a></h4>
+      <span class="price">190 990 ₽</span>
+   </div>
+</div><div class="product-card swiper-slide">
+   <div class="img">
+      <a href="#">
+         <img src="../../../img/optimized/cards/card_1.webp" alt="">
+         <img src="../../../img/optimized/cards/card_1.webpHover" alt="" class="hover-img">
+      </a>
+      
+      <div class="sticker-wrap"></div>
+
+      <div class="quick-nav">
+         <div class="ui-btn-circle btn_product_quick">
+   <i class="i-eye"></i>
+</div>
+         <div class="ui-btn-circle btn_product_quick">
+   <i class="i-compare"></i>
+</div>
+         <div class="ui-btn-circle btn_product_quick">
+   <i class="i-heart"></i>
+</div>
+      </div>
+
+      <div class="action-wrap">
+         <div class="ui-btn-circle btn_product_cart">
+   <i class="i-cart"></i>
+</div>
+      </div>
+   </div>
+
+   <div class="info">
+      <h4 class="title"><a href="#">MacBook Pro (M2 Pro, 2023)</a></h4>
+      <span class="price">300 990 ₽</span>
+   </div>
+</div><div class="product-card swiper-slide">
+   <div class="img">
+      <a href="#">
+         <img src="../../../img/optimized/cards/card_2.webp" alt="">
+         <img src="../../../img/optimized/cards/card_2.webpHover" alt="" class="hover-img">
+      </a>
+      
+      <div class="sticker-wrap"></div>
+
+      <div class="quick-nav">
+         <div class="ui-btn-circle btn_product_quick">
+   <i class="i-eye"></i>
+</div>
+         <div class="ui-btn-circle btn_product_quick">
+   <i class="i-compare"></i>
+</div>
+         <div class="ui-btn-circle btn_product_quick">
+   <i class="i-heart"></i>
+</div>
+      </div>
+
+      <div class="action-wrap">
+         <div class="ui-btn-circle btn_product_cart">
+   <i class="i-cart"></i>
+</div>
+      </div>
+   </div>
+
+   <div class="info">
+      <h4 class="title"><a href="#">Samsung Galaxy S23 Ultra в комплекте с Buds 2 Pro</a></h4>
+      <span class="price">170 990 ₽</span>
+   </div>
+</div><div class="product-card swiper-slide">
+   <div class="img">
+      <a href="#">
+         <img src="../../../img/optimized/cards/card_4.webp" alt="">
+         <img src="../../../img/optimized/cards/card_4.webpHover" alt="" class="hover-img">
+      </a>
+      
+      <div class="sticker-wrap"></div>
+
+      <div class="quick-nav">
+         <div class="ui-btn-circle btn_product_quick">
+   <i class="i-eye"></i>
+</div>
+         <div class="ui-btn-circle btn_product_quick">
+   <i class="i-compare"></i>
+</div>
+         <div class="ui-btn-circle btn_product_quick">
+   <i class="i-heart"></i>
+</div>
+      </div>
+
+      <div class="action-wrap">
+         <div class="ui-btn-circle btn_product_cart">
+   <i class="i-cart"></i>
+</div>
+      </div>
+   </div>
+
+   <div class="info">
+      <h4 class="title"><a href="#">iPad Pro (6th Gen, 2022)</a></h4>
+      <span class="price">160 990 ₽</span>
+   </div>
+</div>
+
+      </div>
+   </div>
+
+   <div class="swiper-button-prev new-products-prev prev-4"></div>
+   <div class="swiper-button-next new-products-next next-4"></div>
+</div>
+      </div>
+   </div>
+</section>
+         <section class="category-section">
+   <div class="ui-container">
+      <div class="category-list">
+         <div class="category-card-wrap pc">
+   <div class="category-card">
+      <div class="content">
+         <h3 class="title">Ноутбуки <br> и Компьютеры</h3>
+         <a href="#" class="ui-move-link hoverLinksChild dark">
+   <span class="child">Смотреть все</span>
+</a>
+      </div>
+      
+      <img src="../../img/optimized/categories/pc.webp" alt="" class="img">
    
-   <script type="module" src="./pages/index/js/bundle-index.min.js?_v=20230927222126"></script>
-</body>
-</html>
+      <div class="icon-left"></div>
+      <div class="icon-right"></div>
+   </div>
+</div><div class="category-card-wrap smartphones">
+   <div class="category-card">
+      <div class="content">
+         <h3 class="title">Смартфоны</h3>
+         <a href="#" class="ui-move-link hoverLinksChild dark">
+   <span class="child">Смотреть все</span>
+</a>
+      </div>
+      
+      <img src="../../img/optimized/categories/smart.webp" alt="" class="img">
+   
+      <div class="icon-left"></div>
+      <div class="icon-right"></div>
+   </div>
+</div><div class="category-card-wrap complect">
+   <div class="category-card">
+      <div class="content">
+         <h3 class="title">Комплектующие</h3>
+         <a href="#" class="ui-move-link hoverLinksChild dark">
+   <span class="child">Смотреть все</span>
+</a>
+      </div>
+      
+      <img src="../../img/optimized/categories/complect.webp" alt="" class="img">
+   
+      <div class="icon-left"></div>
+      <div class="icon-right"></div>
+   </div>
+</div><div class="category-card-wrap accessories">
+   <div class="category-card">
+      <div class="content">
+         <h3 class="title">Аксессуары</h3>
+         <a href="#" class="ui-move-link hoverLinksChild dark">
+   <span class="child">Смотреть все</span>
+</a>
+      </div>
+      
+      <img src="../../img/optimized/categories/accessor.webp" alt="" class="img">
+   
+      <div class="icon-left"></div>
+      <div class="icon-right"></div>
+   </div>
+</div>
+      </div>
+   </div>
+</section>
+      </main>
+      
+      <script type="module" src="./pages/index/js/bundle-index.min.js?_v=20231023205944"></script>
+   </body>
+</html>  

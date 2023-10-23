@@ -1,0 +1,55 @@
+.swiper-container {
+   position: relative;
+
+   .swiper-button-next,
+   .swiper-button-prev {
+      margin: 0;
+      padding: 0;
+      top: 40%;
+      transform: translateY(-50%);
+      width: clamp(25px, 10cqw, 46px);
+      height: clamp(25px, 10cqw, 46px);
+      border-radius: var(--circleRd);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--dark);
+      overflow: hidden;
+      transition: all .2s ease;
+      
+      &:after {
+         font-family: var(--icon_font);
+         font-size: clamp(11px, 5cqi, 20px);
+         color: var(--light);
+         transition: inherit;
+      }
+
+      &.swiper-button-disabled {
+         opacity: 0;
+         visibility: hidden;
+         translate: -5px;
+      }
+
+      &:hover {
+         &:after {
+            color: var(--action);
+         }
+      }
+   }
+
+   .swiper-button-next {
+      right: -15px;
+
+      &:after {
+         content: '\e905';
+      }
+   }
+
+   .swiper-button-prev {
+      left: -15px;
+
+      &:after {
+         content: '\e902';
+      }
+   }
+}

@@ -10,7 +10,8 @@ import dartSass from "sass";
 import gulpSass from "gulp-sass";
 import rename from "gulp-rename";
 
-import cleanCss from "gulp-clean-css"; // CSS File Compression
+// import cleanCss from "gulp-clean-css"; // CSS File Compression
+import cssNano from 'gulp-cssnano';
 import webpCss from "gulp-webpcss"; // Rendering WebP Images
 import autoprefixer from "gulp-autoprefixer"; // Adding vendor prefixes
 import groupCssMediaQueries from "gulp-group-css-media-queries"; // Grouping media queries
@@ -46,7 +47,7 @@ const scss = (pageName) => {
        * compressed style.min.css and uncompressed style.css
       */
       .pipe(gulp.dest(path.dist[`${pageName}Scss`]))
-      .pipe(cleanCss())
+      .pipe(cssNano())
       .pipe(rename({
          extname: ".min.css" // rename the final file to style.min.css
       }))

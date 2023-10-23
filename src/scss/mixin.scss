@@ -1,0 +1,52 @@
+// TODO Эффект наведения на ссылки (background)
+@mixin hoverLinks (
+   $hoverChild: false,
+   $color: var(--action),
+   $height: 1px,
+) {
+   @if $hoverChild == false {
+      background: -webkit-gradient(linear,left top,left bottom,from($color));
+      background-size: 0% $height;
+      background-position: right 0% bottom;
+      background-repeat: no-repeat;
+      &:hover {
+         background-position: left 0% bottom;
+         background-size: 100% $height;
+      }
+   } @else {
+      & > .child {
+         background: -webkit-gradient(linear,left top,left bottom,from($color));
+         background-size: 0% $height;
+         background-position: right 0% bottom;
+         background-repeat: no-repeat;
+      }
+      &:hover > .child {
+         background-position: left 0% bottom;
+         background-size: 100% $height;
+      }
+   }
+}
+
+.hoverLinks { @include hoverLinks; }
+.hoverLinksChild { @include hoverLinks($hoverChild: true); }
+
+
+
+// TODO Стили для широкоформатных блоков
+%fullWidthElement {
+   margin: 0 auto;
+   max-width: 1920px;
+   width: calc(100% - var(--default_padding) * 2);
+}
+
+
+
+
+
+
+// TODO Медиа запросы
+@mixin media($range, $value) {
+   @media all and (#{$range}: #{$value}) {
+      @content
+   }
+};

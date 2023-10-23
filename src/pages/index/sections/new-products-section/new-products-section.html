@@ -1,0 +1,24 @@
+<section class="new-products-section">
+   <div class="ui-container">
+      @@include('../../../../components/ui/ui-title/ui-section-title.html', {
+         "text": "Новинки",
+         "className": "sm-mt center"
+      })
+
+      <div class="ui-tabs">
+         @@loop('../../../../components/ui/ui-tab/ui-tab.html', [
+            { "text": "Ноутбуки и ПК", "className": "active" },
+            { "text": "Смартфоны" },
+            { "text": "Комплектующие" },
+            { "text": "Аксессуары" },
+         ])
+      </div>
+      
+      <div class="content">
+         @@include('./new-products-slider/new-products-slider.html', { "id": "1" })
+         @@include('./new-products-slider/new-products-slider.html', { "id": "2" })
+         @@include('./new-products-slider/new-products-slider.html', { "id": "3" })
+         @@include('./new-products-slider/new-products-slider.html', { "id": "4" })
+      </div>
+   </div>
+</section>

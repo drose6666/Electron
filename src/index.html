@@ -4,12 +4,16 @@
       "mainCss": "./pages/index/css/index.min.css",
       "title": "Electron"
    })
-<body>
-   @@include('./components/header/header.html')
-   <main>
+   <body>
+      @@include('./components/menu/top-menu/top-menu.html')
+      @@include('./components/header/header.html')
       
-   </main>
-   
-   <script type="module" src="./pages/index/js/bundle-index.min.js"></script>
-</body>
-</html>
+      <main>
+         <!-- @@include('pages/index/sections/hero-section/hero-section.html') -->
+         @@include('./pages/index/sections/new-products-section/new-products-section.html')
+         @@include('./pages/index/sections/category-section/category-section.html')
+      </main>
+      
+      <script type="module" src="./pages/index/js/bundle-index.min.js"></script>
+   </body>
+</html>  
