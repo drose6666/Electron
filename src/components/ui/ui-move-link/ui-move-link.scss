@@ -11,8 +11,9 @@
       font-weight: 400;
       line-height: 100%;
       color: var(--light);
-      transition: background-size .2s;
       position: relative;
+      white-space: nowrap;
+      transition: background-size .2s;
    }
 
    &:after {
@@ -28,6 +29,17 @@
       &:after {
          translate: 3px;
          color: var(--action);
+      }
+   }
+
+   &.small {
+      span {
+         padding: 2px 0;
+         font-size: 15px;
+      }
+
+      &:after {
+         font-size: 13px;
       }
    }
 

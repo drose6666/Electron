@@ -23,12 +23,13 @@
       }
    }
    
+   // NOTE Font-size, Padding
    &.btn_primary {
       padding: 2px 2px 2px 20px;
       gap: 20px;
 
       span {
-         font-size: 18px;
+         font-size: 17px;
          font-weight: 400;
          line-height: 100%;
          color: var(--light);
@@ -48,7 +49,7 @@
       .icon i { font-size: 17px; }
    }
 
-
+   // NOTE Colors
    &.btn_i_action {
       background: var(--action);
 
@@ -85,18 +86,21 @@
       }
    }
 
-   &.btn_hero-slide_1 {
-      background: var(--dark);
+   &.btn_more {
+      background: #EEF1F5;
+
       span {
-         color: var(--light);
+         color: var(--dark);
       }
 
       .icon {
-         background: #A63233;
+         width: 35px;
+         height: 35px;
+         background: var(--dark);
+
          i {
-            color: #FFDC80;
+            color: var(--light);
          }
       }
-      
    }
 }

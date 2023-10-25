@@ -1,0 +1,11 @@
+@import '../collection-card/collection-card';
+
+.collection-list {
+   display: grid;
+   grid-template: auto / 1fr 1fr;
+   gap: var(--default_padding);
+
+   @include media(max-width, 1000px) {
+      grid-template: auto / 1fr;
+   }
+}

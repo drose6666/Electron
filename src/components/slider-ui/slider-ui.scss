@@ -7,19 +7,20 @@
       padding: 0;
       top: 40%;
       transform: translateY(-50%);
-      width: clamp(25px, 10cqw, 46px);
-      height: clamp(25px, 10cqw, 46px);
+      width: clamp(35px, 7cqw, 46px);
+      height: clamp(35px, 7cqw, 46px);
       border-radius: var(--circleRd);
       display: flex;
       align-items: center;
       justify-content: center;
       background: var(--dark);
       overflow: hidden;
+      z-index: 2;
       transition: all .2s ease;
       
       &:after {
          font-family: var(--icon_font);
-         font-size: clamp(11px, 5cqi, 20px);
+         font-size: clamp(12px, 4cqi, 20px);
          color: var(--light);
          transition: inherit;
       }
@@ -50,6 +51,54 @@
 
       &:after {
          content: '\e902';
+      }
+   }
+
+   .reviews-arrows {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: var(--small_btn_padding);
+      position: absolute;
+      right: 0;
+      top: -80px;
+
+      .swiper-button-next,
+      .swiper-button-prev {
+         position: static;
+         transform: none;
+      }
+   }
+
+
+
+   .swiper-pagination {
+      margin-top: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100% !important;
+      transform: none !important;
+      gap: 7px;
+      position: static;
+
+      .swiper-pagination-bullet {
+         display: none;
+
+         &.swiper-pagination-bullet-active {
+            display: block;
+            background: var(--dark);
+         }
+      }
+
+      [class*="swiper-pagination-bullet-active-next"] {
+         margin: 0;
+         width: 10px;
+         height: 10px;
+         background: var(--dark);
+         display: block;
+
+         
       }
    }
 }

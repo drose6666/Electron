@@ -1,0 +1,39 @@
+<article class="post-card card">
+   <div class="post-inside">
+      <div class="quick-nav">
+         @@loop('../../../components/ui/ui-button/ui-circle-icon/ui-circle-icon.html', [
+            {
+               "classNameIcon": "link",
+               "className": "circle-icon_card dark"
+            },
+            {
+               "classNameIcon": "share",
+               "className": "circle-icon_card dark"
+            },
+            {
+               "classNameIcon": "heart",
+               "className": "circle-icon_card dark"
+            }
+         ])
+      </div>
+
+      <a href="#" class="content">
+         <div class="category-post-list">
+            @@loop('../category-post/category-post-card.html', [
+               { "text": "Новости" },
+               { "text": "Starship" },
+               { "text": "Илон Маск" }
+            ])
+         </div>
+   
+         <h3 class="title">Илон Маск запускает «Starship» — крупнейшую ракету в истории</h3>
+         <div class="post-info">
+            <time class="post-info__item">Апрель 17, 2023</time>
+            <div class="post-info__item"><i class="i-comment"></i> <span>2 234</span></div>
+            <div class="post-info__item"><i class="i-like"></i> <span>2 234</span></div>
+         </div>
+      </a>
+
+      <img src="../../../img/optimized/posts/post_1.webp" alt="" class="img">
+   </div>
+</article>

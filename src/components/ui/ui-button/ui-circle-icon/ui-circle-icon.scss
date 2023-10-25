@@ -1,0 +1,177 @@
+.ui-circle-icon {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   border-radius: var(--circleRd);
+   background: var(--light);
+   width: 40px;
+   height: 40px;
+   cursor: pointer;
+   transition: all .2s ease;
+
+   i {
+      color: var(--dark);
+      font-size: 19px;
+      transition: all .2s ease;
+   }
+
+   &:hover {
+      background: var(--action);
+
+      i {
+         color: var(--light);
+      }
+   }
+
+   // NOTE Кнопка прозрачная (поиск в header)
+   &.circle-icon_transparent {
+      background: transparent;
+
+      &:hover {
+         background: var(--dark);
+
+         i {
+            color: var(--light);
+         }
+      }
+   }
+
+   // NOTE Кнопка корзины в карточке товара
+   &.circle-icon_cart {
+      width: 46px;
+      height: 46px;
+      box-shadow: var(--light_btn_shadow);
+
+      i {
+         margin-top: -1px;
+         // margin-left: 2px;
+         font-size: 22px;
+      }
+
+      &:hover {
+         background: var(--action);
+         box-shadow: var(--card_btn_action_hover_shadow);
+         translate: 0 -3px;
+
+         i {
+            color: var(--light);
+         }
+      }
+   }
+
+   // NOTE Дополнительные кнопки в каточках товара, поста (сравнение, избранное, быстрый просмотр и т.д.)
+   &.circle-icon_card {
+      width: clamp( 26px, 12cqw, 35px);
+      height: clamp( 26px, 12cqw, 35px);
+      box-shadow: var(--light_btn_shadow);
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(7px);
+
+      i {
+         font-size: clamp(14px, 6cqi, 17px);
+         color: var(--text_additional);
+      }
+
+      &:nth-child(2) {
+         transition: 
+            transform .2s ease .05s, 
+            opacity .2s ease .05s, 
+            visibility .2s ease .05s, 
+            translate .2s ease,
+            background-color .2s ease;
+      }
+
+      &:nth-child(3) {
+         transition: 
+            transform .2s ease .1s, 
+            opacity .2s ease .1s, 
+            visibility .2s ease .1s, 
+            translate .2s ease,
+            background-color .2s ease;
+      }
+
+      &.active, &:hover {
+         background: var(--light);
+         
+         i {
+            color: var(--action);
+         }
+      }
+      
+      &:hover {
+         translate: 0 -2px;
+      }
+
+      &.dark {
+         background: var(--dark);
+
+         i {
+            color: var(--light);
+         }
+
+         &.active, &:hover {
+            i {
+               color: var(--action);
+            }
+         }
+      }
+   }
+}
+
+
+// Круглые кнопки меню
+.ui-circle-icon-menu {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   border-radius: var(--circleRd);
+   width: 40px;
+   height: 40px;
+   background: var(--separating_contrast);
+   position: relative;
+   cursor: pointer;
+   transition: all .2s ease;
+
+   i {
+      color: var(--dark);
+      font-size: 19px;
+      transition: inherit
+   }
+
+   .counter {
+      position: absolute;
+      top: -5px;
+      right: -8px;
+      width: 22px;
+      height: 22px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--action);
+      border-radius: var(--circleRd);
+      
+      span {
+         display: inline-block;
+         margin-top: 1px;
+         font-size: 14px;
+         font-weight: 400;
+         line-height: 70%;
+         color: var(--light);
+      }
+   }
+
+   &.btn_favourites {
+      i {
+         font-size: 20px;
+      }
+   }
+
+   &:hover {
+      background: var(--dark);
+
+      i {
+         color: var(--light);
+      }
+   }
+}

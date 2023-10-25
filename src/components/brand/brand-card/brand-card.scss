@@ -1,0 +1,29 @@
+.brand-card {
+   padding: 15px 5px;
+   min-height: 100px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   border-radius: clamp(var(--slRd), 3cqi, var(--mdRd));
+   background: var(--separating);
+   container-type: inline-size;
+   transition: all .3s ease;
+   
+   img {
+      max-width: 80cqi;
+      height: auto;
+      filter: grayscale(1);
+      display: inline-block;
+      transition: all .2s ease;
+   }
+
+   &:hover {
+      background: var(--light);
+      box-shadow: 0px 8px 30px 0px rgba(0, 0, 0, 0.05);
+      transform: translateY(-3px);
+
+      img {
+         filter: grayscale(0);
+      }
+   }
+}

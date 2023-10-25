@@ -22,21 +22,28 @@
    <link rel="icon" href="../../img/favicon/fav_48.png" type="image/png" sizes="48x48">
    <link rel="icon" href="../../img/favicon/fav_128.png" type="image/png" sizes="128x128">
    
-   <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css?_v=20231024012508" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
-   <!-- <link rel="stylesheet" href="../../libs/css/bootstrap-grid.min.css?_v=20231024012508"> -->
+   <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css?_v=20231025224601" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+   <!-- <link rel="stylesheet" href="../../libs/css/bootstrap-grid.min.css?_v=20231025224601"> -->
 
-   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css?_v=20231024012508" />
-   <script defer src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js?_v=20231024012508"></script>
-   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js?_v=20231024012508" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-   <link rel="stylesheet" href="../../libs/css/reset.min.css?_v=20231024012508">
-   <link rel="stylesheet" as="font" href="../../fonts/fonts.css?_v=20231024012508">
-   <link rel="stylesheet" as="font" href="../../fonts/icon-font.css?_v=20231024012508">
-   <link rel="stylesheet" href="./pages/index/css/index.min.css?_v=20231024012508">
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css?_v=20231025224601" />
+   <script defer src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js?_v=20231025224601"></script>
+   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js?_v=20231025224601" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+   <link rel="stylesheet" href="../../libs/css/reset.min.css?_v=20231025224601">
+   <link rel="stylesheet" as="font" href="../../fonts/fonts.css?_v=20231025224601">
+   <link rel="stylesheet" as="font" href="../../fonts/icon-font.css?_v=20231025224601">
+   <link rel="stylesheet" href="./pages/index/css/index.min.css?_v=20231025224601">
    
    <title>Electron</title>
 </head>
 
    <body>
+      <div class="ui-preloader" id="ui-preloader">
+   <div class="loadingio-spinner-eclipse-e1yqoh6tcuv">
+      <div class="ldio-q8lh4k68ww">
+         <div></div>
+      </div>
+   </div>
+</div>
       <div class="top-menu">
    <div class="ui-container">
       <div class="nav-wrap">
@@ -86,18 +93,17 @@
 </nav>
       </div>
       <div class="header-ui">
-   <div class="ui-btn-circle btn_transparent btn_search">
+   <div class="ui-circle-icon circle-icon_transparent btn_search">
    <i class="i-search"></i>
 </div>
-   <div class="ui-btn-circle_menu btn_compare">
+
+   <div class="ui-circle-icon-menu btn_compare">
    <i class="i-compare"></i>
    <div class="counter"><span>99</span></div>
-</div>
-   <div class="ui-btn-circle_menu btn_favourites">
+</div><div class="ui-circle-icon-menu btn_favourites">
    <i class="i-heart"></i>
    <div class="counter"><span>2</span></div>
-</div>
-   <div class="ui-btn-circle_menu btn_cart">
+</div><div class="ui-circle-icon-menu btn_cart">
    <i class="i-cart"></i>
    <div class="counter"><span>56</span></div>
 </div>
@@ -119,7 +125,7 @@
          <div class="swiper-container new-products-container">
    <div class="swiper" id="new-product-swiper-1">
       <div class="swiper-wrapper">
-         <div class="product-card swiper-slide">
+         <div class="product-card swiper-slide card">
    <div class="img">
       <a href="#">
          <img src="../../../img/optimized/cards/card_3.webp" alt="">
@@ -129,19 +135,17 @@
       <div class="sticker-wrap"></div>
 
       <div class="quick-nav">
-         <div class="ui-btn-circle btn_product_quick">
+         <div class="ui-circle-icon circle-icon_card">
    <i class="i-eye"></i>
-</div>
-         <div class="ui-btn-circle btn_product_quick">
+</div><div class="ui-circle-icon circle-icon_card">
    <i class="i-compare"></i>
-</div>
-         <div class="ui-btn-circle btn_product_quick">
+</div><div class="ui-circle-icon circle-icon_card">
    <i class="i-heart"></i>
 </div>
       </div>
 
       <div class="action-wrap">
-         <div class="ui-btn-circle btn_product_cart">
+         <div class="ui-circle-icon circle-icon_cart">
    <i class="i-cart"></i>
 </div>
       </div>
@@ -151,7 +155,7 @@
       <h4 class="title"><a href="#">iPhone 15 Plus</a></h4>
       <span class="price">190 990 ₽</span>
    </div>
-</div><div class="product-card swiper-slide">
+</div><div class="product-card swiper-slide card">
    <div class="img">
       <a href="#">
          <img src="../../../img/optimized/cards/card_1.webp" alt="">
@@ -161,19 +165,17 @@
       <div class="sticker-wrap"></div>
 
       <div class="quick-nav">
-         <div class="ui-btn-circle btn_product_quick">
+         <div class="ui-circle-icon circle-icon_card">
    <i class="i-eye"></i>
-</div>
-         <div class="ui-btn-circle btn_product_quick">
+</div><div class="ui-circle-icon circle-icon_card">
    <i class="i-compare"></i>
-</div>
-         <div class="ui-btn-circle btn_product_quick">
+</div><div class="ui-circle-icon circle-icon_card">
    <i class="i-heart"></i>
 </div>
       </div>
 
       <div class="action-wrap">
-         <div class="ui-btn-circle btn_product_cart">
+         <div class="ui-circle-icon circle-icon_cart">
    <i class="i-cart"></i>
 </div>
       </div>
@@ -183,7 +185,7 @@
       <h4 class="title"><a href="#">MacBook Pro (M2 Pro, 2023)</a></h4>
       <span class="price">300 990 ₽</span>
    </div>
-</div><div class="product-card swiper-slide">
+</div><div class="product-card swiper-slide card">
    <div class="img">
       <a href="#">
          <img src="../../../img/optimized/cards/card_2.webp" alt="">
@@ -193,19 +195,17 @@
       <div class="sticker-wrap"></div>
 
       <div class="quick-nav">
-         <div class="ui-btn-circle btn_product_quick">
+         <div class="ui-circle-icon circle-icon_card">
    <i class="i-eye"></i>
-</div>
-         <div class="ui-btn-circle btn_product_quick">
+</div><div class="ui-circle-icon circle-icon_card">
    <i class="i-compare"></i>
-</div>
-         <div class="ui-btn-circle btn_product_quick">
+</div><div class="ui-circle-icon circle-icon_card">
    <i class="i-heart"></i>
 </div>
       </div>
 
       <div class="action-wrap">
-         <div class="ui-btn-circle btn_product_cart">
+         <div class="ui-circle-icon circle-icon_cart">
    <i class="i-cart"></i>
 </div>
       </div>
@@ -215,7 +215,7 @@
       <h4 class="title"><a href="#">Samsung Galaxy S23 Ultra в комплекте с Buds 2 Pro</a></h4>
       <span class="price">170 990 ₽</span>
    </div>
-</div><div class="product-card swiper-slide">
+</div><div class="product-card swiper-slide card">
    <div class="img">
       <a href="#">
          <img src="../../../img/optimized/cards/card_4.webp" alt="">
@@ -225,19 +225,17 @@
       <div class="sticker-wrap"></div>
 
       <div class="quick-nav">
-         <div class="ui-btn-circle btn_product_quick">
+         <div class="ui-circle-icon circle-icon_card">
    <i class="i-eye"></i>
-</div>
-         <div class="ui-btn-circle btn_product_quick">
+</div><div class="ui-circle-icon circle-icon_card">
    <i class="i-compare"></i>
-</div>
-         <div class="ui-btn-circle btn_product_quick">
+</div><div class="ui-circle-icon circle-icon_card">
    <i class="i-heart"></i>
 </div>
       </div>
 
       <div class="action-wrap">
-         <div class="ui-btn-circle btn_product_cart">
+         <div class="ui-circle-icon circle-icon_cart">
    <i class="i-cart"></i>
 </div>
       </div>
@@ -258,7 +256,7 @@
          <div class="swiper-container new-products-container">
    <div class="swiper" id="new-product-swiper-2">
       <div class="swiper-wrapper">
-         <div class="product-card swiper-slide">
+         <div class="product-card swiper-slide card">
    <div class="img">
       <a href="#">
          <img src="../../../img/optimized/cards/card_3.webp" alt="">
@@ -268,19 +266,17 @@
       <div class="sticker-wrap"></div>
 
       <div class="quick-nav">
-         <div class="ui-btn-circle btn_product_quick">
+         <div class="ui-circle-icon circle-icon_card">
    <i class="i-eye"></i>
-</div>
-         <div class="ui-btn-circle btn_product_quick">
+</div><div class="ui-circle-icon circle-icon_card">
    <i class="i-compare"></i>
-</div>
-         <div class="ui-btn-circle btn_product_quick">
+</div><div class="ui-circle-icon circle-icon_card">
    <i class="i-heart"></i>
 </div>
       </div>
 
       <div class="action-wrap">
-         <div class="ui-btn-circle btn_product_cart">
+         <div class="ui-circle-icon circle-icon_cart">
    <i class="i-cart"></i>
 </div>
       </div>
@@ -290,7 +286,7 @@
       <h4 class="title"><a href="#">iPhone 15 Plus</a></h4>
       <span class="price">190 990 ₽</span>
    </div>
-</div><div class="product-card swiper-slide">
+</div><div class="product-card swiper-slide card">
    <div class="img">
       <a href="#">
          <img src="../../../img/optimized/cards/card_1.webp" alt="">
@@ -300,19 +296,17 @@
       <div class="sticker-wrap"></div>
 
       <div class="quick-nav">
-         <div class="ui-btn-circle btn_product_quick">
+         <div class="ui-circle-icon circle-icon_card">
    <i class="i-eye"></i>
-</div>
-         <div class="ui-btn-circle btn_product_quick">
+</div><div class="ui-circle-icon circle-icon_card">
    <i class="i-compare"></i>
-</div>
-         <div class="ui-btn-circle btn_product_quick">
+</div><div class="ui-circle-icon circle-icon_card">
    <i class="i-heart"></i>
 </div>
       </div>
 
       <div class="action-wrap">
-         <div class="ui-btn-circle btn_product_cart">
+         <div class="ui-circle-icon circle-icon_cart">
    <i class="i-cart"></i>
 </div>
       </div>
@@ -322,7 +316,7 @@
       <h4 class="title"><a href="#">MacBook Pro (M2 Pro, 2023)</a></h4>
       <span class="price">300 990 ₽</span>
    </div>
-</div><div class="product-card swiper-slide">
+</div><div class="product-card swiper-slide card">
    <div class="img">
       <a href="#">
          <img src="../../../img/optimized/cards/card_2.webp" alt="">
@@ -332,19 +326,17 @@
       <div class="sticker-wrap"></div>
 
       <div class="quick-nav">
-         <div class="ui-btn-circle btn_product_quick">
+         <div class="ui-circle-icon circle-icon_card">
    <i class="i-eye"></i>
-</div>
-         <div class="ui-btn-circle btn_product_quick">
+</div><div class="ui-circle-icon circle-icon_card">
    <i class="i-compare"></i>
-</div>
-         <div class="ui-btn-circle btn_product_quick">
+</div><div class="ui-circle-icon circle-icon_card">
    <i class="i-heart"></i>
 </div>
       </div>
 
       <div class="action-wrap">
-         <div class="ui-btn-circle btn_product_cart">
+         <div class="ui-circle-icon circle-icon_cart">
    <i class="i-cart"></i>
 </div>
       </div>
@@ -354,7 +346,7 @@
       <h4 class="title"><a href="#">Samsung Galaxy S23 Ultra в комплекте с Buds 2 Pro</a></h4>
       <span class="price">170 990 ₽</span>
    </div>
-</div><div class="product-card swiper-slide">
+</div><div class="product-card swiper-slide card">
    <div class="img">
       <a href="#">
          <img src="../../../img/optimized/cards/card_4.webp" alt="">
@@ -364,19 +356,17 @@
       <div class="sticker-wrap"></div>
 
       <div class="quick-nav">
-         <div class="ui-btn-circle btn_product_quick">
+         <div class="ui-circle-icon circle-icon_card">
    <i class="i-eye"></i>
-</div>
-         <div class="ui-btn-circle btn_product_quick">
+</div><div class="ui-circle-icon circle-icon_card">
    <i class="i-compare"></i>
-</div>
-         <div class="ui-btn-circle btn_product_quick">
+</div><div class="ui-circle-icon circle-icon_card">
    <i class="i-heart"></i>
 </div>
       </div>
 
       <div class="action-wrap">
-         <div class="ui-btn-circle btn_product_cart">
+         <div class="ui-circle-icon circle-icon_cart">
    <i class="i-cart"></i>
 </div>
       </div>
@@ -397,7 +387,7 @@
          <div class="swiper-container new-products-container">
    <div class="swiper" id="new-product-swiper-3">
       <div class="swiper-wrapper">
-         <div class="product-card swiper-slide">
+         <div class="product-card swiper-slide card">
    <div class="img">
       <a href="#">
          <img src="../../../img/optimized/cards/card_3.webp" alt="">
@@ -407,19 +397,17 @@
       <div class="sticker-wrap"></div>
 
       <div class="quick-nav">
-         <div class="ui-btn-circle btn_product_quick">
+         <div class="ui-circle-icon circle-icon_card">
    <i class="i-eye"></i>
-</div>
-         <div class="ui-btn-circle btn_product_quick">
+</div><div class="ui-circle-icon circle-icon_card">
    <i class="i-compare"></i>
-</div>
-         <div class="ui-btn-circle btn_product_quick">
+</div><div class="ui-circle-icon circle-icon_card">
    <i class="i-heart"></i>
 </div>
       </div>
 
       <div class="action-wrap">
-         <div class="ui-btn-circle btn_product_cart">
+         <div class="ui-circle-icon circle-icon_cart">
    <i class="i-cart"></i>
 </div>
       </div>
@@ -429,7 +417,7 @@
       <h4 class="title"><a href="#">iPhone 15 Plus</a></h4>
       <span class="price">190 990 ₽</span>
    </div>
-</div><div class="product-card swiper-slide">
+</div><div class="product-card swiper-slide card">
    <div class="img">
       <a href="#">
          <img src="../../../img/optimized/cards/card_1.webp" alt="">
@@ -439,19 +427,17 @@
       <div class="sticker-wrap"></div>
 
       <div class="quick-nav">
-         <div class="ui-btn-circle btn_product_quick">
+         <div class="ui-circle-icon circle-icon_card">
    <i class="i-eye"></i>
-</div>
-         <div class="ui-btn-circle btn_product_quick">
+</div><div class="ui-circle-icon circle-icon_card">
    <i class="i-compare"></i>
-</div>
-         <div class="ui-btn-circle btn_product_quick">
+</div><div class="ui-circle-icon circle-icon_card">
    <i class="i-heart"></i>
 </div>
       </div>
 
       <div class="action-wrap">
-         <div class="ui-btn-circle btn_product_cart">
+         <div class="ui-circle-icon circle-icon_cart">
    <i class="i-cart"></i>
 </div>
       </div>
@@ -461,7 +447,7 @@
       <h4 class="title"><a href="#">MacBook Pro (M2 Pro, 2023)</a></h4>
       <span class="price">300 990 ₽</span>
    </div>
-</div><div class="product-card swiper-slide">
+</div><div class="product-card swiper-slide card">
    <div class="img">
       <a href="#">
          <img src="../../../img/optimized/cards/card_2.webp" alt="">
@@ -471,19 +457,17 @@
       <div class="sticker-wrap"></div>
 
       <div class="quick-nav">
-         <div class="ui-btn-circle btn_product_quick">
+         <div class="ui-circle-icon circle-icon_card">
    <i class="i-eye"></i>
-</div>
-         <div class="ui-btn-circle btn_product_quick">
+</div><div class="ui-circle-icon circle-icon_card">
    <i class="i-compare"></i>
-</div>
-         <div class="ui-btn-circle btn_product_quick">
+</div><div class="ui-circle-icon circle-icon_card">
    <i class="i-heart"></i>
 </div>
       </div>
 
       <div class="action-wrap">
-         <div class="ui-btn-circle btn_product_cart">
+         <div class="ui-circle-icon circle-icon_cart">
    <i class="i-cart"></i>
 </div>
       </div>
@@ -493,7 +477,7 @@
       <h4 class="title"><a href="#">Samsung Galaxy S23 Ultra в комплекте с Buds 2 Pro</a></h4>
       <span class="price">170 990 ₽</span>
    </div>
-</div><div class="product-card swiper-slide">
+</div><div class="product-card swiper-slide card">
    <div class="img">
       <a href="#">
          <img src="../../../img/optimized/cards/card_4.webp" alt="">
@@ -503,19 +487,17 @@
       <div class="sticker-wrap"></div>
 
       <div class="quick-nav">
-         <div class="ui-btn-circle btn_product_quick">
+         <div class="ui-circle-icon circle-icon_card">
    <i class="i-eye"></i>
-</div>
-         <div class="ui-btn-circle btn_product_quick">
+</div><div class="ui-circle-icon circle-icon_card">
    <i class="i-compare"></i>
-</div>
-         <div class="ui-btn-circle btn_product_quick">
+</div><div class="ui-circle-icon circle-icon_card">
    <i class="i-heart"></i>
 </div>
       </div>
 
       <div class="action-wrap">
-         <div class="ui-btn-circle btn_product_cart">
+         <div class="ui-circle-icon circle-icon_cart">
    <i class="i-cart"></i>
 </div>
       </div>
@@ -536,7 +518,7 @@
          <div class="swiper-container new-products-container">
    <div class="swiper" id="new-product-swiper-4">
       <div class="swiper-wrapper">
-         <div class="product-card swiper-slide">
+         <div class="product-card swiper-slide card">
    <div class="img">
       <a href="#">
          <img src="../../../img/optimized/cards/card_3.webp" alt="">
@@ -546,19 +528,17 @@
       <div class="sticker-wrap"></div>
 
       <div class="quick-nav">
-         <div class="ui-btn-circle btn_product_quick">
+         <div class="ui-circle-icon circle-icon_card">
    <i class="i-eye"></i>
-</div>
-         <div class="ui-btn-circle btn_product_quick">
+</div><div class="ui-circle-icon circle-icon_card">
    <i class="i-compare"></i>
-</div>
-         <div class="ui-btn-circle btn_product_quick">
+</div><div class="ui-circle-icon circle-icon_card">
    <i class="i-heart"></i>
 </div>
       </div>
 
       <div class="action-wrap">
-         <div class="ui-btn-circle btn_product_cart">
+         <div class="ui-circle-icon circle-icon_cart">
    <i class="i-cart"></i>
 </div>
       </div>
@@ -568,7 +548,7 @@
       <h4 class="title"><a href="#">iPhone 15 Plus</a></h4>
       <span class="price">190 990 ₽</span>
    </div>
-</div><div class="product-card swiper-slide">
+</div><div class="product-card swiper-slide card">
    <div class="img">
       <a href="#">
          <img src="../../../img/optimized/cards/card_1.webp" alt="">
@@ -578,19 +558,17 @@
       <div class="sticker-wrap"></div>
 
       <div class="quick-nav">
-         <div class="ui-btn-circle btn_product_quick">
+         <div class="ui-circle-icon circle-icon_card">
    <i class="i-eye"></i>
-</div>
-         <div class="ui-btn-circle btn_product_quick">
+</div><div class="ui-circle-icon circle-icon_card">
    <i class="i-compare"></i>
-</div>
-         <div class="ui-btn-circle btn_product_quick">
+</div><div class="ui-circle-icon circle-icon_card">
    <i class="i-heart"></i>
 </div>
       </div>
 
       <div class="action-wrap">
-         <div class="ui-btn-circle btn_product_cart">
+         <div class="ui-circle-icon circle-icon_cart">
    <i class="i-cart"></i>
 </div>
       </div>
@@ -600,7 +578,7 @@
       <h4 class="title"><a href="#">MacBook Pro (M2 Pro, 2023)</a></h4>
       <span class="price">300 990 ₽</span>
    </div>
-</div><div class="product-card swiper-slide">
+</div><div class="product-card swiper-slide card">
    <div class="img">
       <a href="#">
          <img src="../../../img/optimized/cards/card_2.webp" alt="">
@@ -610,19 +588,17 @@
       <div class="sticker-wrap"></div>
 
       <div class="quick-nav">
-         <div class="ui-btn-circle btn_product_quick">
+         <div class="ui-circle-icon circle-icon_card">
    <i class="i-eye"></i>
-</div>
-         <div class="ui-btn-circle btn_product_quick">
+</div><div class="ui-circle-icon circle-icon_card">
    <i class="i-compare"></i>
-</div>
-         <div class="ui-btn-circle btn_product_quick">
+</div><div class="ui-circle-icon circle-icon_card">
    <i class="i-heart"></i>
 </div>
       </div>
 
       <div class="action-wrap">
-         <div class="ui-btn-circle btn_product_cart">
+         <div class="ui-circle-icon circle-icon_cart">
    <i class="i-cart"></i>
 </div>
       </div>
@@ -632,7 +608,7 @@
       <h4 class="title"><a href="#">Samsung Galaxy S23 Ultra в комплекте с Buds 2 Pro</a></h4>
       <span class="price">170 990 ₽</span>
    </div>
-</div><div class="product-card swiper-slide">
+</div><div class="product-card swiper-slide card">
    <div class="img">
       <a href="#">
          <img src="../../../img/optimized/cards/card_4.webp" alt="">
@@ -642,19 +618,17 @@
       <div class="sticker-wrap"></div>
 
       <div class="quick-nav">
-         <div class="ui-btn-circle btn_product_quick">
+         <div class="ui-circle-icon circle-icon_card">
    <i class="i-eye"></i>
-</div>
-         <div class="ui-btn-circle btn_product_quick">
+</div><div class="ui-circle-icon circle-icon_card">
    <i class="i-compare"></i>
-</div>
-         <div class="ui-btn-circle btn_product_quick">
+</div><div class="ui-circle-icon circle-icon_card">
    <i class="i-heart"></i>
 </div>
       </div>
 
       <div class="action-wrap">
-         <div class="ui-btn-circle btn_product_cart">
+         <div class="ui-circle-icon circle-icon_cart">
    <i class="i-cart"></i>
 </div>
       </div>
@@ -736,7 +710,6 @@
    </div>
 </div>
 </div>
-      <br>
       <div class="brands-list">
    <a href="#" class="brand-card">
    <img src="../../../img/optimized/brands/brand_1.webp" alt="">
@@ -764,10 +737,544 @@
    <img src="../../../img/optimized/brands/brand_12.webp" alt="">
 </a>
 </div>
+
+      <button class="ui-btn-icon btn_secondary btn_more">
+   <span>Смотреть все</span>
+   <div class="icon"><i class="i-arrow_up_long"></i></div>
+</button>
+   </div>
+</section>
+         <section class="top-sale-section">
+   <div class="ui-container">
+      <div class="ui-section-title-more @@className">
+   <h2 class="ui-section-title">Топ продаж</h2>
+
+   <a href="@@link" class="ui-move-link hoverLinksChild dark">
+   <span class="child">Смотреть все</span>
+</a>
+</div>
+
+      <div class="product-list">
+   <div class="product-card swiper-slide card">
+   <div class="img">
+      <a href="#">
+         <img src="../../../img/optimized/cards/card_3.webp" alt="">
+         <img src="../../../img/optimized/cards/card_3_2.webp" alt="" class="hover-img">
+      </a>
+      
+      <div class="sticker-wrap"></div>
+
+      <div class="quick-nav">
+         <div class="ui-circle-icon circle-icon_card">
+   <i class="i-eye"></i>
+</div><div class="ui-circle-icon circle-icon_card">
+   <i class="i-compare"></i>
+</div><div class="ui-circle-icon circle-icon_card">
+   <i class="i-heart"></i>
+</div>
+      </div>
+
+      <div class="action-wrap">
+         <div class="ui-circle-icon circle-icon_cart">
+   <i class="i-cart"></i>
+</div>
+      </div>
+   </div>
+
+   <div class="info">
+      <h4 class="title"><a href="#">iPhone 15 Plus</a></h4>
+      <span class="price">190 990 ₽</span>
+   </div>
+</div><div class="product-card swiper-slide card">
+   <div class="img">
+      <a href="#">
+         <img src="../../../img/optimized/cards/card_1.webp" alt="">
+         <img src="../../../img/optimized/cards/card_1.webpHover" alt="" class="hover-img">
+      </a>
+      
+      <div class="sticker-wrap"></div>
+
+      <div class="quick-nav">
+         <div class="ui-circle-icon circle-icon_card">
+   <i class="i-eye"></i>
+</div><div class="ui-circle-icon circle-icon_card">
+   <i class="i-compare"></i>
+</div><div class="ui-circle-icon circle-icon_card">
+   <i class="i-heart"></i>
+</div>
+      </div>
+
+      <div class="action-wrap">
+         <div class="ui-circle-icon circle-icon_cart">
+   <i class="i-cart"></i>
+</div>
+      </div>
+   </div>
+
+   <div class="info">
+      <h4 class="title"><a href="#">MacBook Pro (M2 Pro, 2023)</a></h4>
+      <span class="price">300 990 ₽</span>
+   </div>
+</div><div class="product-card swiper-slide card">
+   <div class="img">
+      <a href="#">
+         <img src="../../../img/optimized/cards/card_2.webp" alt="">
+         <img src="../../../img/optimized/cards/card_2.webpHover" alt="" class="hover-img">
+      </a>
+      
+      <div class="sticker-wrap"></div>
+
+      <div class="quick-nav">
+         <div class="ui-circle-icon circle-icon_card">
+   <i class="i-eye"></i>
+</div><div class="ui-circle-icon circle-icon_card">
+   <i class="i-compare"></i>
+</div><div class="ui-circle-icon circle-icon_card">
+   <i class="i-heart"></i>
+</div>
+      </div>
+
+      <div class="action-wrap">
+         <div class="ui-circle-icon circle-icon_cart">
+   <i class="i-cart"></i>
+</div>
+      </div>
+   </div>
+
+   <div class="info">
+      <h4 class="title"><a href="#">Samsung Galaxy S23 Ultra в комплекте с Buds 2 Pro</a></h4>
+      <span class="price">170 990 ₽</span>
+   </div>
+</div><div class="product-card swiper-slide card">
+   <div class="img">
+      <a href="#">
+         <img src="../../../img/optimized/cards/card_4.webp" alt="">
+         <img src="../../../img/optimized/cards/card_4.webpHover" alt="" class="hover-img">
+      </a>
+      
+      <div class="sticker-wrap"></div>
+
+      <div class="quick-nav">
+         <div class="ui-circle-icon circle-icon_card">
+   <i class="i-eye"></i>
+</div><div class="ui-circle-icon circle-icon_card">
+   <i class="i-compare"></i>
+</div><div class="ui-circle-icon circle-icon_card">
+   <i class="i-heart"></i>
+</div>
+      </div>
+
+      <div class="action-wrap">
+         <div class="ui-circle-icon circle-icon_cart">
+   <i class="i-cart"></i>
+</div>
+      </div>
+   </div>
+
+   <div class="info">
+      <h4 class="title"><a href="#">iPad Pro (6th Gen, 2022)</a></h4>
+      <span class="price">160 990 ₽</span>
+   </div>
+</div><div class="product-card swiper-slide card">
+   <div class="img">
+      <a href="#">
+         <img src="../../../img/optimized/cards/card_5.webp" alt="">
+         <img src="../../../img/optimized/cards/card_5_2.webp" alt="" class="hover-img">
+      </a>
+      
+      <div class="sticker-wrap"></div>
+
+      <div class="quick-nav">
+         <div class="ui-circle-icon circle-icon_card">
+   <i class="i-eye"></i>
+</div><div class="ui-circle-icon circle-icon_card">
+   <i class="i-compare"></i>
+</div><div class="ui-circle-icon circle-icon_card">
+   <i class="i-heart"></i>
+</div>
+      </div>
+
+      <div class="action-wrap">
+         <div class="ui-circle-icon circle-icon_cart">
+   <i class="i-cart"></i>
+</div>
+      </div>
+   </div>
+
+   <div class="info">
+      <h4 class="title"><a href="#">iPhone 15 Pro Max</a></h4>
+      <span class="price">210 990 ₽</span>
+   </div>
+</div><div class="product-card swiper-slide card">
+   <div class="img">
+      <a href="#">
+         <img src="../../../img/optimized/cards/card_6.webp" alt="">
+         <img src="../../../img/optimized/cards/card_6.webpHover" alt="" class="hover-img">
+      </a>
+      
+      <div class="sticker-wrap"></div>
+
+      <div class="quick-nav">
+         <div class="ui-circle-icon circle-icon_card">
+   <i class="i-eye"></i>
+</div><div class="ui-circle-icon circle-icon_card">
+   <i class="i-compare"></i>
+</div><div class="ui-circle-icon circle-icon_card">
+   <i class="i-heart"></i>
+</div>
+      </div>
+
+      <div class="action-wrap">
+         <div class="ui-circle-icon circle-icon_cart">
+   <i class="i-cart"></i>
+</div>
+      </div>
+   </div>
+
+   <div class="info">
+      <h4 class="title"><a href="#">MacBook Air 15</a></h4>
+      <span class="price">300 990 ₽</span>
+   </div>
+</div><div class="product-card swiper-slide card">
+   <div class="img">
+      <a href="#">
+         <img src="../../../img/optimized/cards/card_7.webp" alt="">
+         <img src="../../../img/optimized/cards/card_7.webpHover" alt="" class="hover-img">
+      </a>
+      
+      <div class="sticker-wrap"></div>
+
+      <div class="quick-nav">
+         <div class="ui-circle-icon circle-icon_card">
+   <i class="i-eye"></i>
+</div><div class="ui-circle-icon circle-icon_card">
+   <i class="i-compare"></i>
+</div><div class="ui-circle-icon circle-icon_card">
+   <i class="i-heart"></i>
+</div>
+      </div>
+
+      <div class="action-wrap">
+         <div class="ui-circle-icon circle-icon_cart">
+   <i class="i-cart"></i>
+</div>
+      </div>
+   </div>
+
+   <div class="info">
+      <h4 class="title"><a href="#">Mac Mini</a></h4>
+      <span class="price">190 990 ₽</span>
+   </div>
+</div><div class="product-card swiper-slide card">
+   <div class="img">
+      <a href="#">
+         <img src="../../../img/optimized/cards/card_16.webp" alt="">
+         <img src="../../../img/optimized/cards/card_16.webpHover" alt="" class="hover-img">
+      </a>
+      
+      <div class="sticker-wrap"></div>
+
+      <div class="quick-nav">
+         <div class="ui-circle-icon circle-icon_card">
+   <i class="i-eye"></i>
+</div><div class="ui-circle-icon circle-icon_card">
+   <i class="i-compare"></i>
+</div><div class="ui-circle-icon circle-icon_card">
+   <i class="i-heart"></i>
+</div>
+      </div>
+
+      <div class="action-wrap">
+         <div class="ui-circle-icon circle-icon_cart">
+   <i class="i-cart"></i>
+</div>
+      </div>
+   </div>
+
+   <div class="info">
+      <h4 class="title"><a href="#">ASUS VivoBook 15 M1502IA-BQ011W</a></h4>
+      <span class="price">270 990 ₽</span>
+   </div>
+</div>
+</div>
+   </div>
+</section>
+         <section class="collections-section">
+   <div class="ui-container">
+      <div class="collection-list">
+   <a href="#" class="collection-card @@className">
+   <div class="content">
+      <p class="text-decor">Setup для настоящих</p>
+      <h3 class="title">Геймеров</h3>
+      <p class="text">Мы подобрали лучшее для твоих побед. Стань лучшим в киберпространстве. Покупай и побеждай</p>
+
+      <button class="ui-btn-default btn_collection">Подробнее</button>
+   </div>
+
+   <img src="../../../img/optimized/collections/collection_1.webp" alt="" class="img">
+</a><a href="#" class="collection-card dark-content">
+   <div class="content">
+      <p class="text-decor">Для Вас важна не столько мощь, сколько...</p>
+      <h3 class="title">Стиль и Эстетика</h3>
+      <p class="text">Специально для Вас мы сделали акцент на стиль, удобство, простоту и доступность, вместо передовых технологий. Красота может быть доступной!</p>
+
+      <button class="ui-btn-default btn_collection">Подробнее</button>
+   </div>
+
+   <img src="../../../img/optimized/collections/collection_2.webp" alt="" class="img">
+</a>
+</div>
+   </div>
+</section>
+         <section class="about-section">
+   <div class="content">
+      <h2 class="ui-section-title @@className">Несколько слов о нас</h2>
+      <p class="text">Мы - твоя платформа для воплощения идей в цифровую реальность. С нами ты обретешь силу инноваций, удобства онлайн-покупок и качественной техники. Наша цель - сделать технологии доступными для каждого, воплощая твои потребности в каждом устройстве и аксессуаре. Присоединяйся к нашей электронной революции!</p>
+      
+      <div class="btn-group">
+         <button class="ui-btn-icon btn_primary btn_i_dark">
+   <span>Наши контакты</span>
+   <div class="icon"><i class="i-arrow_right"></i></div>
+</button>
+
+         <button class="ui-btn-default btn_default btn_outline">
+   <span>Оставить отзыв</span>
+</button>
+      </div>
+
+      <div class="socials">
+   <a href="#"><i class="i-telegram"></i></a>
+   <a href="#"><i class="i-vk"></i></a>
+   <a href="#"><i class="i-facebook"></i></a>
+   <a href="#"><i class="i-instagram"></i></a>
+   <a href="#"><i class="i-whatsapp"></i></a>
+</div>
+   </div>
+
+   <div class="img">
+      <picture>
+         <source media="(max-width:1063px)" srcset="../../../../img/optimized/about/about_1063.webp">
+         <img src="../../../../img/optimized/about/about.webp" alt="">
+       </picture>
+
+      <div class="video-open">
+         <div class="icon">
+            <i class="i-play"></i>
+         </div>
+         <p class="video-text">Лучше один <br> раз увидеть!</p>
+      </div>
+   </div>
+</section>
+         <section class="reviews-section">
+   <div class="ui-container">
+      <h2 class="ui-section-title md">Что говорят о нас наши клиенты</h2>
+
+      <div class="swiper-container reviews-container">
+         <div class="reviews-arrows">
+            <div class="swiper-button-prev reviews-prev"></div>
+            <div class="swiper-button-next reviews-next"></div>
+         </div>
+
+         <div class="swiper" id="reviews-swiper">
+            <div class="swiper-wrapper">
+               <div class="swiper-slide review">
+   <div class="review-inside">
+      <div class="author">
+         <div class="name">Константин Константинов</div>
+         <time class="date">Август 13, 2023</time>
+      </div>
+
+      <p class="text">Есть над чем задуматься: сторонники тоталитаризма в науке рассмотрены исключительно в разрезе маркетинговых и финансовых предпосылок. И нет сомнений, что реплицированные с зарубежных источников, современные исследования, вне зависимости от их уровня, должны быть объективно рассмотрены соответствующими инстанциями</p>
+
+      <div class="info">
+         <a href="" class="ui-move-link hoverLinksChild dark small">
+   <span class="child">Смотреть</span>
+</a>
+
+         <div class="rating">
+            <div class="rating__stars"><img src="../../../../../img/rating_5.svg" alt=""></div>
+            <div class="rating__number">5.0</div>
+         </div>
+      </div>
+   </div>
+</div>
+               <div class="swiper-slide review">
+   <div class="review-inside">
+      <div class="author">
+         <div class="name">Константин Константинов</div>
+         <time class="date">Август 13, 2023</time>
+      </div>
+
+      <p class="text">Есть над чем задуматься: сторонники тоталитаризма в науке рассмотрены исключительно в разрезе маркетинговых и финансовых предпосылок. И нет сомнений, что реплицированные с зарубежных источников, современные исследования, вне зависимости от их уровня, должны быть объективно рассмотрены соответствующими инстанциями</p>
+
+      <div class="info">
+         <a href="" class="ui-move-link hoverLinksChild dark small">
+   <span class="child">Смотреть</span>
+</a>
+
+         <div class="rating">
+            <div class="rating__stars"><img src="../../../../../img/rating_5.svg" alt=""></div>
+            <div class="rating__number">5.0</div>
+         </div>
+      </div>
+   </div>
+</div>
+               <div class="swiper-slide review">
+   <div class="review-inside">
+      <div class="author">
+         <div class="name">Константин Константинов</div>
+         <time class="date">Август 13, 2023</time>
+      </div>
+
+      <p class="text">Есть над чем задуматься: сторонники тоталитаризма в науке рассмотрены исключительно в разрезе маркетинговых и финансовых предпосылок. И нет сомнений, что реплицированные с зарубежных источников, современные исследования, вне зависимости от их уровня, должны быть объективно рассмотрены соответствующими инстанциями</p>
+
+      <div class="info">
+         <a href="" class="ui-move-link hoverLinksChild dark small">
+   <span class="child">Смотреть</span>
+</a>
+
+         <div class="rating">
+            <div class="rating__stars"><img src="../../../../../img/rating_5.svg" alt=""></div>
+            <div class="rating__number">5.0</div>
+         </div>
+      </div>
+   </div>
+</div>
+               <div class="swiper-slide review">
+   <div class="review-inside">
+      <div class="author">
+         <div class="name">Константин Константинов</div>
+         <time class="date">Август 13, 2023</time>
+      </div>
+
+      <p class="text">Есть над чем задуматься: сторонники тоталитаризма в науке рассмотрены исключительно в разрезе маркетинговых и финансовых предпосылок. И нет сомнений, что реплицированные с зарубежных источников, современные исследования, вне зависимости от их уровня, должны быть объективно рассмотрены соответствующими инстанциями</p>
+
+      <div class="info">
+         <a href="" class="ui-move-link hoverLinksChild dark small">
+   <span class="child">Смотреть</span>
+</a>
+
+         <div class="rating">
+            <div class="rating__stars"><img src="../../../../../img/rating_5.svg" alt=""></div>
+            <div class="rating__number">5.0</div>
+         </div>
+      </div>
+   </div>
+</div>
+               <div class="swiper-slide review">
+   <div class="review-inside">
+      <div class="author">
+         <div class="name">Константин Константинов</div>
+         <time class="date">Август 13, 2023</time>
+      </div>
+
+      <p class="text">Есть над чем задуматься: сторонники тоталитаризма в науке рассмотрены исключительно в разрезе маркетинговых и финансовых предпосылок. И нет сомнений, что реплицированные с зарубежных источников, современные исследования, вне зависимости от их уровня, должны быть объективно рассмотрены соответствующими инстанциями</p>
+
+      <div class="info">
+         <a href="" class="ui-move-link hoverLinksChild dark small">
+   <span class="child">Смотреть</span>
+</a>
+
+         <div class="rating">
+            <div class="rating__stars"><img src="../../../../../img/rating_5.svg" alt=""></div>
+            <div class="rating__number">5.0</div>
+         </div>
+      </div>
+   </div>
+</div>
+            </div>
+         </div>
+
+         <!-- <div class="swiper-pagination reviews-pagination"></div> -->
+      </div>
+   </div>
+</section>
+         <section class="blog-section">
+   <div class="ui-container">
+      <div class="ui-section-title-more @@className">
+   <h2 class="ui-section-title">Новое в блоге</h2>
+
+   <a href="@@link" class="ui-move-link hoverLinksChild dark">
+   <span class="child">Смотреть все</span>
+</a>
+</div>
+
+      <div class="post-list">
+   <article class="post-card card">
+   <div class="post-inside">
+      <div class="quick-nav">
+         <div class="ui-circle-icon circle-icon_card dark">
+   <i class="i-link"></i>
+</div><div class="ui-circle-icon circle-icon_card dark">
+   <i class="i-share"></i>
+</div><div class="ui-circle-icon circle-icon_card dark">
+   <i class="i-heart"></i>
+</div>
+      </div>
+
+      <a href="#" class="content">
+         <div class="category-post-list">
+            <div class="category-post card">
+   Новости
+</div><div class="category-post card">
+   Starship
+</div><div class="category-post card">
+   Илон Маск
+</div>
+         </div>
+   
+         <h3 class="title">Илон Маск запускает «Starship» — крупнейшую ракету в истории</h3>
+         <div class="post-info">
+            <time class="post-info__item">Апрель 17, 2023</time>
+            <div class="post-info__item"><i class="i-comment"></i> <span>2 234</span></div>
+            <div class="post-info__item"><i class="i-like"></i> <span>2 234</span></div>
+         </div>
+      </a>
+
+      <img src="../../../img/optimized/posts/post_1.webp" alt="" class="img">
+   </div>
+</article>
+   <article class="post-card card">
+   <div class="post-inside">
+      <div class="quick-nav">
+         <div class="ui-circle-icon circle-icon_card dark">
+   <i class="i-link"></i>
+</div><div class="ui-circle-icon circle-icon_card dark">
+   <i class="i-share"></i>
+</div><div class="ui-circle-icon circle-icon_card dark">
+   <i class="i-heart"></i>
+</div>
+      </div>
+
+      <a href="#" class="content">
+         <div class="category-post-list">
+            <div class="category-post card">
+   Новости
+</div><div class="category-post card">
+   Starship
+</div><div class="category-post card">
+   Илон Маск
+</div>
+         </div>
+   
+         <h3 class="title">Илон Маск запускает «Starship» — крупнейшую ракету в истории</h3>
+         <div class="post-info">
+            <time class="post-info__item">Апрель 17, 2023</time>
+            <div class="post-info__item"><i class="i-comment"></i> <span>2 234</span></div>
+            <div class="post-info__item"><i class="i-like"></i> <span>2 234</span></div>
+         </div>
+      </a>
+
+      <img src="../../../img/optimized/posts/post_1.webp" alt="" class="img">
+   </div>
+</article>
+</div>
    </div>
 </section>
       </main>
+
       
-      <script type="module" src="./pages/index/js/bundle-index.min.js?_v=20231024012508"></script>
+      
+      <script type="module" src="./pages/index/js/bundle-index.min.js?_v=20231025224601"></script>
    </body>
 </html>  

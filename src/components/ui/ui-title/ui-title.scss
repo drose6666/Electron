@@ -4,6 +4,7 @@
    font-weight: 600;
    line-height: 100%;
    color: var(--dark);
+   text-wrap: balance;
 
    &.sm-mt {
       margin-bottom: 40px;
@@ -11,5 +12,40 @@
 
    &.center {
       text-align: center;
+   }
+
+   &.md {
+      font-size: 35px;
+      font-weight: 400;
+      line-height: 90%;
+   }
+
+   @include media (max-width, 830px) {
+      font-size: clamp(30px, 20cqi, 40px);
+
+      &.md {
+         font-size: clamp(30px, 5cqi, 35px);
+      }
+   }
+}
+
+.ui-section-title-more {
+   margin-bottom: 60px;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   gap: 20px;
+
+   .ui-section-title {
+      margin-bottom: 0;
+   }
+
+   @include media (max-width, 560px) {
+      flex-direction: column;
+      align-items: center;
+
+      .ui-section-title {
+         text-align: center;
+      }
    }
 }

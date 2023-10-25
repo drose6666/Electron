@@ -1,7 +1,12 @@
 <section class="category-brands-section">
    <div class="ui-container">
-      @@include('../../../../components/category-list/category-list.html')
-      <br>
-      @@include('../../../../components/brands-list/brands-list.html')
+      @@include('../../../../components/category/category-list/category-list.html')
+      @@include('../../../../components/brand/brands-list/brands-list.html')
+
+      @@include('../../../../components/ui/ui-button/ui-button-icon/ui-button-icon.html', {
+         "text": "Смотреть все",
+         "className": "btn_secondary btn_more",
+         "classNameIcon": "arrow_up_long"
+      })
    </div>
 </section>

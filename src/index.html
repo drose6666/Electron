@@ -5,6 +5,7 @@
       "title": "Electron"
    })
    <body>
+      @@include('./components/ui/ui-preloader/ui-preloader.html')
       @@include('./components/menu/top-menu/top-menu.html')
       @@include('./components/header/header.html')
       
@@ -12,7 +13,14 @@
          <!-- @@include('pages/index/sections/hero-section/hero-section.html') -->
          @@include('./pages/index/sections/new-products-section/new-products-section.html')
          @@include('./pages/index/sections/category-brands-section/category-brands-section.html')
+         @@include('./pages/index/sections/top-sale-section/top-sale-section.html')
+         @@include('./pages/index/sections/collections-section/collections-section.html')
+         @@include('./pages/index/sections/about-section/about-section.html')
+         @@include('./pages/index/sections/reviews-section/reviews-section.html')
+         @@include('./pages/index/sections/blog-section/blog-section.html')
       </main>
+
+      
       
       <script type="module" src="./pages/index/js/bundle-index.min.js"></script>
    </body>

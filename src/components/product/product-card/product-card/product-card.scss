@@ -1,0 +1,109 @@
+.product-card {
+   user-select: none;
+   container-type: inline-size;
+
+   .img {
+      border-radius: clamp(var(--optionalRd), 11cqi, var(--defaultRd));
+      background: var(--separating);
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+      display: inline-block;
+      transition: all .2s ease;
+
+      img {
+         max-width: 100%;
+         height: auto;
+      }
+
+      .hover-img {
+         position: absolute;
+         top: 0;
+         right: 0;
+         transform: translateX(100%);
+         transition: all .5s ease;
+      }
+
+      .action-wrap {
+         position: absolute;
+         bottom: clamp(12px, 5cqi, 20px);
+         right: clamp(12px, 5cqi, 20px);
+
+         .btn_product_cart {
+            width: clamp(38px, 15cqw, 46px);
+            height: clamp(38px, 15cqw, 46px);
+
+            i {
+               font-size: clamp(19px, 6cqi, 22px);
+            }
+         }
+      }
+
+      .quick-nav {
+         position: absolute;
+         top: clamp(12px, 5cqi, 20px);
+         right: clamp(12px, 5cqi, 20px);
+         display: flex;
+         flex-direction: column;
+         gap: clamp(6px, 3cqi, 10px);
+         transition: all .2s ease;
+      }
+   }
+
+   .info {
+      padding: 0 10px;
+      margin-top: clamp(12px, 5cqi, 15px);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+
+      .title {
+         font-size: clamp(18px, 8cqi, 23px);
+         font-weight: 300;
+         line-height: clamp(105%, 8cqi, 110%);
+         text-align: center;
+         transition: all .2s ease;
+   
+         a {
+            color: var(--dark);
+            transition: inherit;
+         }
+      }
+
+      .price {
+         color: var(--dark);
+         font-size: clamp(18px, 5cqi, 20px);
+         font-weight: 600;
+         line-height: 100%;
+      }
+   }
+
+   &:hover {
+      .img {
+         background: var(--separating_contrast);
+
+         .quick-nav {
+            .circle-icon_card {
+               transform: none;
+               opacity: 1;
+               visibility: visible;
+   
+               &:hover {
+                  translate: 0 -2px;
+               }
+            }
+         }
+      }
+
+      .hover-img {
+         transform: none;
+      }
+
+      .info {
+         .title a {
+            color: var(--action);
+         }
+      }
+   }
+}

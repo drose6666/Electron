@@ -1,0 +1,20 @@
+@import './review/review';
+
+.reviews-section {
+   padding-top: 110px;
+
+   .ui-section-title {
+      margin-bottom: 40px;
+      max-width: 340px;
+   }
+
+   @include media (max-width, 1063px) {
+      padding-top: 160px;
+   }
+
+   @include media (max-width, 370px) {
+      .reviews-container .reviews-arrows {
+         top: -15px;
+      }
+   }
+}

@@ -1,0 +1,37 @@
+<section class="about-section">
+   <div class="content">
+      @@include('../../../../components/ui/ui-title/ui-section-title.html', {
+         "text": "Несколько слов о нас"
+      })
+      <p class="text">Мы - твоя платформа для воплощения идей в цифровую реальность. С нами ты обретешь силу инноваций, удобства онлайн-покупок и качественной техники. Наша цель - сделать технологии доступными для каждого, воплощая твои потребности в каждом устройстве и аксессуаре. Присоединяйся к нашей электронной революции!</p>
+      
+      <div class="btn-group">
+         @@include('../../../../components/ui/ui-button/ui-button-icon/ui-link-icon.html', {
+            "className": "btn_primary btn_i_dark",
+            "text": "Наши контакты",
+            "classNameIcon": "arrow_right"
+         })
+
+         @@include('../../../../components/ui/ui-button/ui-button-default/ui-button-default.html', {
+            "text": "Оставить отзыв",
+            "className": "btn_default btn_outline"
+         })
+      </div>
+
+      @@include('../../../../components/socials/socials.html')
+   </div>
+
+   <div class="img">
+      <picture>
+         <source media="(max-width:1063px)" srcset="../../../../img/optimized/about/about_1063.webp">
+         <img src="../../../../img/optimized/about/about.webp" alt="">
+       </picture>
+
+      <div class="video-open">
+         <div class="icon">
+            <i class="i-play"></i>
+         </div>
+         <p class="video-text">Лучше один <br> раз увидеть!</p>
+      </div>
+   </div>
+</section>
