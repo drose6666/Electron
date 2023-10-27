@@ -3,7 +3,8 @@
    container-type: inline-size;
 
    .img {
-      border-radius: clamp(var(--optionalRd), 11cqi, var(--defaultRd));
+      @extend %dynamicRadius40to25;
+      
       background: var(--separating);
       position: relative;
       overflow: hidden;

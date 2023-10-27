@@ -1,0 +1,158 @@
+@mixin input (
+   $paddingY: 5px,
+   $paddingLeft: 20px,
+   $paddingRight: 10px,
+   $height: 45px,
+   $fSize: 17px,
+   $fWeight: 300,
+   $color: var(--dark),
+   $bg: var(--separating),
+   $borderColor: transparent,
+   $border: 1px solid $borderColor,
+   $type: primary,
+   $theme: light
+) {
+   padding: $paddingY $paddingRight $paddingY $paddingLeft;
+   display: flex;
+   align-items: center;
+   height: $height;
+   font-family: inherit;
+   font-size: $fSize;
+   font-weight: $fWeight;
+   line-height: 100%;
+   color: $color;
+   background: $bg;
+   border-radius: var(--defaultRd);
+   outline: none;
+   border: $border;
+   width: 100%;
+
+   &::placeholder {
+      color: var(--text_additional);
+   }
+
+   @if $type == primary {
+      height: $height;
+   } @else if $type == phone {
+      $paddingLeft: 85px;
+   
+      padding: $paddingY $paddingRight $paddingY $paddingLeft;
+
+   } @else if $type == search {
+      $paddingRight: 117px;
+
+      padding: $paddingY $paddingRight $paddingY $paddingLeft;
+
+   } @else if $type == mainSearch {
+      $paddingRight: 117px;
+      $fSize: 19px;
+      $fWeight: 500;
+      $height: 49px;
+
+      padding: $paddingY $paddingRight $paddingY $paddingLeft;
+      font-size: $fSize;
+      font-weight: $fWeight;
+      height: $height;
+      
+   } @else if $type == promocode {
+      $paddingRight: 57px;
+      $fWeight: 400;
+      $height: 49px;
+
+      padding: $paddingY $paddingRight $paddingY $paddingLeft;
+      font-weight: $fWeight;
+      height: $height;
+
+   } @else if $type == subscribe {
+      $paddingRight: 180px;
+      $height: 49px;
+
+      padding: $paddingY $paddingRight $paddingY $paddingLeft;
+      height: $height;
+
+   } @else {
+      @error "Такого типа input не существует #{$type}.";
+   }
+
+   @if $theme == light {
+      $bg: var(--separating);
+      $color: var(--dark);
+
+      background: $bg;
+      color: $color;
+
+   } @else if $theme == dark {
+      $bg: var(--ui_dark);
+      $color: var(--light);
+
+      background: $bg;
+      color: $color;
+
+   } @else {
+      @error "Такой темы input не существует #{$theme}.";
+   }
+
+   &:active, &:focus {
+      border-color: var(--action_slow);
+   }
+}
+
+// NOTE Инпут
+.input_subscribe {
+   @include input (
+      $type: subscribe,
+      $theme: dark
+   )
+}
+
+.element-inside-input {
+   position: absolute;
+   top: 2px;
+
+   &.left {
+      left: 2px;
+   }
+
+   &.right {
+      right: 2px;
+   }
+}
+
+// NOTE ui-form-item
+.ui-form-item {
+   position: relative;
+   
+   .error-message {
+      font-size: 13px;
+      font-weight: 400;
+      line-height: 100%;
+      color: var(--error);
+      position: relative;
+      top: 2px;
+      display: none;
+   }
+
+   &.error {
+      .ui-input {
+         background: var(--error_bg);
+         color: var(--error);
+         outline-color: var(--error);
+
+         &::placeholder {
+            color: var(-error);
+         }
+      }
+
+      .error-message {
+         display: block;
+      }
+   }
+
+   &:has(.ui-innput.promocode) {
+      &.success {
+         color: var(--success);
+      }
+   }
+}
+
+

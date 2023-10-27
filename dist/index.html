@@ -22,16 +22,16 @@
    <link rel="icon" href="../../img/favicon/fav_48.png" type="image/png" sizes="48x48">
    <link rel="icon" href="../../img/favicon/fav_128.png" type="image/png" sizes="128x128">
    
-   <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css?_v=20231025224601" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
-   <!-- <link rel="stylesheet" href="../../libs/css/bootstrap-grid.min.css?_v=20231025224601"> -->
+   <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css?_v=20231027171848" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+   <!-- <link rel="stylesheet" href="../../libs/css/bootstrap-grid.min.css?_v=20231027171848"> -->
 
-   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css?_v=20231025224601" />
-   <script defer src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js?_v=20231025224601"></script>
-   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js?_v=20231025224601" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-   <link rel="stylesheet" href="../../libs/css/reset.min.css?_v=20231025224601">
-   <link rel="stylesheet" as="font" href="../../fonts/fonts.css?_v=20231025224601">
-   <link rel="stylesheet" as="font" href="../../fonts/icon-font.css?_v=20231025224601">
-   <link rel="stylesheet" href="./pages/index/css/index.min.css?_v=20231025224601">
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css?_v=20231027171848" />
+   <script defer src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js?_v=20231027171848"></script>
+   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js?_v=20231027171848" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+   <link rel="stylesheet" href="../../libs/css/reset.min.css?_v=20231027171848">
+   <link rel="stylesheet" as="font" href="../../fonts/fonts.css?_v=20231027171848">
+   <link rel="stylesheet" as="font" href="../../fonts/icon-font.css?_v=20231027171848">
+   <link rel="stylesheet" href="./pages/index/css/index.min.css?_v=20231027171848">
    
    <title>Electron</title>
 </head>
@@ -69,13 +69,9 @@
       </div>
 
       <div class="btn-group">
-         <button class="ui-btn-default btn_secondary btn_outline btn_register">
-   <span>Регистрация</span>
-</button>
+         <button class="ui-btn btn_reg">Регистрация</button>
 
-         <button class="ui-btn-default btn_secondary btn_action">
-   <span>Вход</span>
-</button>
+         <button class="ui-btn btn_enter">Вход</button>
       </div>
    </div>
 </div>
@@ -738,8 +734,8 @@
 </a>
 </div>
 
-      <button class="ui-btn-icon btn_secondary btn_more">
-   <span>Смотреть все</span>
+      <button class="ui-btn-icon btn_i_helper btn_more">
+   Смотреть все
    <div class="icon"><i class="i-arrow_up_long"></i></div>
 </button>
    </div>
@@ -1032,14 +1028,12 @@
       <p class="text">Мы - твоя платформа для воплощения идей в цифровую реальность. С нами ты обретешь силу инноваций, удобства онлайн-покупок и качественной техники. Наша цель - сделать технологии доступными для каждого, воплощая твои потребности в каждом устройстве и аксессуаре. Присоединяйся к нашей электронной революции!</p>
       
       <div class="btn-group">
-         <button class="ui-btn-icon btn_primary btn_i_dark">
-   <span>Наши контакты</span>
+         <a href="@@link" target="_@@target" class="ui-btn-icon btn_primary btn_i_dark">
+   Наши контакты
    <div class="icon"><i class="i-arrow_right"></i></div>
-</button>
+</a>
 
-         <button class="ui-btn-default btn_default btn_outline">
-   <span>Оставить отзыв</span>
-</button>
+         <button class="ui-btn btn_default btn_outline">Оставить отзыв</button>
       </div>
 
       <div class="socials">
@@ -1271,10 +1265,27 @@
 </div>
    </div>
 </section>
+         <div class="subscribe">
+   <div class="subscribe__inside">
+      <h2 class="subscribe__title">Подписывайтесь</h2>
+      <p class="subscribe__text">Чтобы первыми узнавать о наших новинках, событиях и акциях, а также полезных лайфхаках и новостях</p>
+      
+      <form class="ui-form" action="" method="" id="form-subscribe">
+   <div class="ui-form-item">
+      <input type="email" name="user_subscribe" inputmode="email" placeholder="Email..." class="ui-input input_subscribe ">
+      <button class="ui-btn btn_subscribe element-inside-input right">Подписаться</button>
+   </div>
+</form>
+
+      <p class="warning-text">
+         Подписываясь на обновления, Вы соглашаетесь с нашей <strong>политикой конфиденциальности</strong>
+      </p>
+   </div>
+</div>
       </main>
 
       
       
-      <script type="module" src="./pages/index/js/bundle-index.min.js?_v=20231025224601"></script>
+      <script type="module" src="./pages/index/js/bundle-index.min.js?_v=20231027171848"></script>
    </body>
 </html>  

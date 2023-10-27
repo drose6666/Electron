@@ -5,22 +5,21 @@
 
 
 // UI
-@import '../components/ui/ui-button/ui-button-default/ui-button-default';
-@import '../components/ui/ui-button/ui-button-icon/ui-button-icon';
+@import '../components/ui/ui-button/ui-btn/ui-button';
+@import '../components/ui/ui-button/ui-btn-icon/ui-button-icon';
+@import '../components/ui/ui-button/ui-btn-icon/ui-button-icon';
 @import '../components/ui/ui-button/ui-circle-icon/ui-circle-icon';
 @import '../components/ui/ui-container/ui-container';
 @import '../components/ui/ui-burger/ui-burger';
 @import '../components/ui/ui-move-link/ui-move-link';
 @import '../components/ui/ui-title/ui-title';
 @import '../components/ui/ui-tab/ui-tab';
+@import '../components/ui/ui-input/ui-input';
 @import '../components/ui/ui-preloader/ui-preloader';
 
 
 // Components
-@import '../components/menu/header-navigation/header-navigation';
 @import '../components/menu/top-menu/top-menu';
-@import '../components/menu/top-menu/top-navigation/top-navigation';
-@import '../components/menu/header-ui/header-ui';
 @import '../components/header/header';
 @import '../components/logo/logo';
 @import '../components/search/search-header/search-header';
@@ -28,6 +27,8 @@
 @import '../components/socials/socials';
 @import '../components/category/category-card/category-card';
 @import '../components/brand/brand-card/brand-card';
+@import '../components/sections/section-footer/section-footer';
+@import '../components/subscribe/subscribe';
 
 
 // Custom scrollbar for Firefox 

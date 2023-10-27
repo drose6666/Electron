@@ -39,6 +39,17 @@
    width: calc(100% - var(--default_padding) * 2);
 }
 
+// TODO Блоки на ширингу контейнера
+%fullContainerWidth {
+   margin: 0 auto;
+   max-width: var(--full_container_width);
+   width: calc(100% - var(--default_padding) * 2);
+}
+
+%dynamicRadius40to25 {
+   border-radius: clamp(var(--optionalRd), 11cqi, var(--defaultRd));
+}
+
 
 
 

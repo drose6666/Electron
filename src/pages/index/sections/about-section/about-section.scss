@@ -55,6 +55,7 @@
          position: absolute;
          bottom: clamp(40px, 3cqi, 60px);
          left: clamp(-40px, 3cqi, -60px);
+         cursor: pointer;
          transition: all .3s ease;
 
          .icon {
@@ -72,6 +73,7 @@
             transition: inherit;
 
             i {
+               margin-left: 2px;
                font-size: 24px;
                color: var(--action);
                transition: inherit;
@@ -84,8 +86,20 @@
             line-height: 95%;
             color: var(--light);
          }
+
+         &:hover {
+            .icon {
+                  background: var(--action);
+                  box-shadow: 0px 0px 0px 12px rgba(250, 9, 89, .25);
+                  
+                  i {
+                     color: var(--light);
+                  }
+            }
+         }
       }
    }
+
 
    @container (max-width: 1120px) {
       .content {
@@ -153,6 +167,17 @@
          .video-open {
             .icon {
                box-shadow: 0px 0px 0px 8px rgba(255, 255, 255, 0.30);
+            }
+            
+            &:hover {
+               .icon {
+                  background: var(--action);
+                  box-shadow: 0px 0px 0px 8px rgba(250, 9, 89, .25);
+                  
+                  i {
+                     color: var(--light);
+                  }
+               }
             }
          }
       }

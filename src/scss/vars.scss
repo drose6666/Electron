@@ -9,9 +9,14 @@
    --text_dark: #5C5C5C;
    --text_additional: #9095A2;
    --text_selected_on_dark: #D1CFDD;
+   --text_dark_action: #8B002E;
+   --text_slow_action: #B9A8B9;
    --separating: #F8F9FB;
    --separating_contrast: #EEF1F5;
    --ui_disabled_light: #F7F8FA;
+   --error: #a40000;
+   --error_bg: #d79393;
+   --success: #9EFF8E;
 
    // Shadows
    --light_btn_shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.06);
@@ -44,5 +49,5 @@
    --section_padding: 160px;
    
    // Sizes
-   --full_container_width: 1580px;
+   --full_container_width: 1540px;
 }

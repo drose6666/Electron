@@ -1,3 +1,6 @@
+@import './header-navigation/header-navigation';
+@import './header-ui/header-ui';
+
 header {
    margin: 0 var(--default_padding);
    background: var(--separating);
