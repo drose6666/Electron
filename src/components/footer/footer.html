@@ -1,0 +1,65 @@
+<footer>
+   <div class="ui-container footer-inside">
+      <div class="footer-col main">
+         <a href="/" class="logo">
+            <img src="../../img/logo_footer.svg" alt="">
+         </a>
+
+         <p class="text">Мы поможем подобрать лучшее устройство, которое подходит именно Вам!</p>
+
+         @@include('../socials/socials.html', { "className": "only_icon" })
+      </div>
+
+      <div class="footer-col navigation">
+         <div class="navigation-col">
+            <h5 class="navigation-title">Информация</h5>
+            <ul class="navigation-list">
+               <li><a href="" class="hoverLinks">Контакты</a></li>
+               <li><a href="" class="hoverLinks">Блог</a></li>
+               <li><a href="" class="hoverLinks">Сервис</a></li>
+               <li><a href="" class="hoverLinks">Доставка</a></li>
+               <li><a href="" class="hoverLinks">Акции</a></li>
+            </ul>
+         </div>
+
+         <div class="navigation-col">
+            <h5 class="navigation-title">Магазин</h5>
+            <ul class="navigation-list">
+               <li><a href="" class="hoverLinks">Ноутбуки</a></li>
+               <li><a href="" class="hoverLinks">Смартфоны</a></li>
+               <li><a href="" class="hoverLinks">Аксессуары</a></li>
+               <li><a href="" class="hoverLinks">Комплектующие</a></li>
+               <li><a href="" class="hoverLinks">Сравнение</a></li>
+            </ul>
+         </div>
+
+         <div class="navigation-col">
+            <h5 class="navigation-title">Личный кабинет</h5>
+            <ul class="navigation-list">
+               <li><a href="" class="hoverLinks">История заказов</a></li>
+               <li><a href="" class="hoverLinks">Отследить заказ</a></li>
+               <li><a href="" class="hoverLinks">Избранное</a></li>
+            </ul>
+         </div>
+      </div>
+
+      <div class="footer-col contact">
+         <a href="tel:" class="phone">+7 911 149 05 05</a>
+
+         <div class="contact-inside">
+            <a href="mailto:electronics.info@yandex.com" class="contact-inside__item">electronics.info@yandex.com</a>
+            <div class="contact-inside__item">График: <strong>Пн-Вс: 09:00-20:00</strong></div>
+         </div>
+
+         @@include('../ui/ui-button/ui-btn-icon/ui-button-icon-link.html', {
+            "text": "Личный кабинет",
+            "className": "btn_i_action",
+            "classNameIcon": "arrow_right",
+         })
+      </div>
+   </div>
+
+   <div class="ui-container">
+      @@include('../copyright/copyright.html')
+   </div>
+</footer>

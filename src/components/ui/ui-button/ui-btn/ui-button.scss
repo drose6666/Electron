@@ -29,8 +29,6 @@
    font-size: $fSize;
    font-weight: $fWeight;
    line-height: 100%;
-   color: $color;
-   background: $bg;
    border-radius: var(--defaultRd);
    white-space: nowrap;
    transition: $transition;
@@ -302,6 +300,7 @@
       $theme: outlines,
       $childTheme: outlinesDefault
    );
+   padding: 11px clamp(20px, 3cqi, 30px);
 
    &:hover {
       color: var(--dark);
@@ -315,6 +314,7 @@
       $type: uiSmall,
       $theme: action,
    );
+   padding: 11px clamp(20px, 3cqi, 30px);
 }
 
 .btn_subscribe {
@@ -325,4 +325,16 @@
    );
 }
 
+.btn_outlines_default {
+   @include button (
+      $theme: outlines,
+      $childTheme: outlinesDefault
+   )
+}
+
+.btn_primary {
+   @include button (
+      $type: primary
+   )
+}
 

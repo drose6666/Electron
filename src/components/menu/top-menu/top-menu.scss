@@ -19,10 +19,6 @@
       display: flex;
       align-items: center;
       gap: var(--small_btn_padding);
-
-      button {
-         padding: 11px 30px;
-      }
    }
 
    @include media(max-width, 350px) {

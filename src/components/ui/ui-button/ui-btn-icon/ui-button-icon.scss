@@ -94,7 +94,7 @@
       $iconBg: var(--action);
 
       color: $color;
-      background: var(--bg);
+      background: $bg;
 
       .icon {
          background: $iconBg;
@@ -148,7 +148,7 @@
       $iconBg: var(--dark);
 
       color: $color;
-      background: var(--bg);
+      background: $bg;
 
       .icon {
          background: $iconBg;
@@ -213,4 +213,27 @@
          $theme: light
       );
    }
+}
+
+.btn_i_action {
+   @include buttonIcon (
+      $type: primary,
+      $theme: action,
+   );
+
+   padding-left: clamp(20px, 3cqi, 30px);
+   gap: clamp(20px, 3cqi, 30px);
+   max-width: 230px;
+}
+
+.btn_i_primary {
+   @include buttonIcon (
+      $type: primary
+   )
+}
+
+.btn_i_dark {
+   @include buttonIcon (
+      $theme: dark
+   )
 }

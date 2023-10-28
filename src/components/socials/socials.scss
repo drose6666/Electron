@@ -30,4 +30,27 @@
          }
       }
    }
+
+   &.only_icon {
+      gap: 30px;
+      a {
+         width: auto;
+         height: auto;
+         border: none;
+
+         i {
+            font-size: 17px;
+            color: var(--light);
+         }
+
+         &:hover {
+            background: transparent;
+            border-color: transparent;
+            
+            i {
+               color: var(--action);
+            }
+         }
+      }
+   }
 }
