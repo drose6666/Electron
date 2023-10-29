@@ -1,0 +1,89 @@
+<div class="mobile-wrap">
+   <div class="mobile-menu">
+      <!-- absolute element -->
+      <div class="mobile-menu__inside inside_main">
+         <ul class="main-list mobile-menu__item">
+            <li data-for="1" class="has-children"><a class="child">Каталог</a></li>
+            <li data-for="2" class="has-children"><a class="child">Личный кабинет</a></li>
+            <li><a href="" class="child">Акции</a></li>
+            <li><a href="" class="child">Блог</a></li>
+         </ul>
+
+         <div class="sub-links mobile-menu__item">
+            <ul class="sub-list">
+               <li><a href="" class="child">Избранное</a></li>
+               <li><a href="" class="child">Сравнение</a></li>
+               <li><a href="" class="child">Сервис</a></li>
+               <li><a href="" class="child">Доставка</a></li>
+               <li><a href="" class="child">Гарантия</a></li>
+               <li><a href="" class="child">Условия возврата</a></li>
+               <li><a href="" class="child">Контакты</a></li>
+            </ul>
+   
+            <ul class="additional-list">
+               <li><span class="child">Правила и условия</span></li>
+               <li><span class="child">Политика конфиденциальности</span></li>
+            </ul>
+         </div>
+
+         <div class="contact-links mobile-menu__item">
+            <a href="tel:" class="phone">+7 911 149 05 05</a>
+
+            <div class="contact-info">
+               <a href="" class="contact-info__item">
+                  <i class="i-clock_fill"></i>
+                  <span class="child">electronics.infoplace@yandex.com</span>
+               </a>
+               <div class="contact-info__item">
+                  <i class="i-clock_fill"></i>
+                  <span>Пн-Пт: 09:00-20:00</span>
+               </div>
+            </div>
+
+            @@include('../../socials/socials.html', { "className": "mobile_menu" })
+         </div>
+
+         <div data-depth="1" data-id="1" class="mobile-menu__inside inside_sub">
+            <h3 class="sub-list-title has-children"><span class="child">Каталог</span></h3>
+            <ul class="sub-list">
+               <li class="has-children"><a href="" class="child">Ноутбук и ПК</a></li>
+               <li><a href="" class="child">Смартфоны</a></li>
+               <li><a href="" class="child">Аксессуары</a></li>
+               <li class="has-children"><a href="" class="child">Копмлектующие</a></li>
+            </ul>
+
+            <div data-id="1" class="mobile-menu__inside inside_sub_sub">
+               <h3 class="sub-list-title has-children"><span class="child">Каталог</span></h3>
+               <ul class="sub-list">
+                  <li class="has-children"><a href="" class="child">Ноутбук и ПК</a></li>
+                  <li><a href="" class="child">Смартфоны</a></li>
+                  <li><a href="" class="child">Аксессуары</a></li>
+                  <li class="has-children"><a href="" class="child">Копмлектующие</a></li>
+               </ul>
+            </div>
+         </div>
+
+         <div data-depth="1" data-id="2" class="mobile-menu__inside inside_sub">
+            <h3 class="sub-list-title has-children"><span class="child">Каталог</span></h3>
+            <ul class="sub-list">
+               <li class="has-children"><a href="" class="child">Ноутбук и ПК</a></li>
+               <li><a href="" class="child">Смартфоны</a></li>
+               <li><a href="" class="child">Аксессуары</a></li>
+               <li class="has-children"><a href="" class="child">Копмлектующие</a></li>
+            </ul>
+
+            <div data-depth="2" class="mobile-menu__inside inside_sub_sub">
+               <h3 class="sub-list-title has-children"><span class="child">Каталог</span></h3>
+               <ul class="sub-list">
+                  <li class="has-children"><a href="" class="child">Ноутбук и ПК</a></li>
+                  <li><a href="" class="child">Смартфоны</a></li>
+                  <li><a href="" class="child">Аксессуары</a></li>
+                  <li class="has-children"><a href="" class="child">Копмлектующие</a></li>
+               </ul>
+            </div>
+         </div>
+      </div>
+   </div>
+
+   <div class="ui-overlay overlay_mobile-menu"></div>
+</div>

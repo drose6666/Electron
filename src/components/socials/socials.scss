@@ -53,4 +53,30 @@
          }
       }
    }
+
+   &.mobile_menu {
+      a {
+         border: none;
+         background: var(--ui_dark);
+
+         i {
+            font-size: 17px;
+            color: var(--action);
+         }
+         
+         &:hover {
+            background: var(--action);
+            
+            i {
+               color: var(--light)
+            };
+         }
+      }
+   }
+}
+
+@container mobileMenu (max-width: 300px) {
+   .socials.mobile_menu {
+      gap: clamp(10px, 3cqi, 15px);
+   }
 }

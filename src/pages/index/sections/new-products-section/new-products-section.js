@@ -1,3 +1,5 @@
+
+import './new-products-slider/new-products-slider.js';
 import Tabs from './../../../../libs/js/module/tabs.js'
 
 const newProductsTabs = new Tabs({

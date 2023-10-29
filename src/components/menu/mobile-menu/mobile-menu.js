@@ -1,0 +1,1 @@
+const parentListItem = document.querySelectorAll

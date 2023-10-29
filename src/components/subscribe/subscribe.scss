@@ -64,7 +64,7 @@
    }
 
    .decor-left, .decor-right {
-      $size: clamp(500px, 73cqi, 1100px);
+      $size: clamp(70cqmax, 70cqi, 1000px);
 
       position: absolute;
       width: $size;
@@ -73,13 +73,31 @@
    }
 
    .decor-left {
-      top: clamp(-220px, -60cqi, -33cqi);
-      left: clamp(-220px, -60cqi, -32cqi);
+      top: -30cqi;
+      left: -30cqi;
    }
 
    .decor-right {
-      bottom: clamp(-220px, -60cqi, -33cqi);
-      right: clamp(-220px, -60cqi, -32cqi);
+      bottom: -30cqi;
+      right: -30cqi;
+   }
+
+   @container subscribe (max-width: 750px) {
+      .decor-left, .decor-right {
+         $size: 500px;
+
+         width: $size;
+      }
+
+      .decor-left {
+         top: -220px;
+         left: -220px;
+      }
+   
+      .decor-right {
+         bottom: -220px;
+         right: -220px;
+      }
    }
 
    @container subscribe (max-width: 440px) {

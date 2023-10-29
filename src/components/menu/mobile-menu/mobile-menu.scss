@@ -1,0 +1,235 @@
+$allGap: clamp(30px, 10cqi, 47px);
+$padingXMenu: clamp(var(--default_padding), 5cqi, var(--fade_on_the_side_padding));
+$transitionDuration: .2s ease;
+$transition: background-size $transitionDuration, color $transitionDuration;  
+
+@mixin hasChildren (
+   $content: '\e907',
+   $fSize: 30px,
+   $color: var(--light),
+) {
+   position: relative;
+
+   &:after {
+      content: $content;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 0;
+      font-family: var(--icon_font);
+      font-size: $fSize;
+      color: $color;
+      transition: $transitionDuration;
+   }
+
+   &:hover {
+      &:after {
+         color: var(--action);
+      }
+   }
+}
+
+@mixin mobileMenuListItem (
+   $margin: 7px 0,
+   $padding: 3px 0,
+   $fSize: 40px,
+   $fWeight: 500,
+   $lHeight: 100%,
+   $color: var(--light),
+   $hoverColor: var(--action),
+   $trans: $transition,
+) {
+   @include hoverLinks( $hoverChild: true );
+
+   .child {
+      margin: $margin;
+      padding: $padding;
+      font-size: $fSize;
+      font-weight: $fWeight;
+      line-height: $lHeight;
+      color: $color;
+      cursor: pointer;
+      transition: $trans;               
+   }
+
+   &:hover {
+      .child {
+         color: $hoverColor;
+      }
+   }
+}
+
+.main-list li.has-children {
+   @include hasChildren(
+      $fSize: clamp(18px, 8cqi, 30px)
+   );
+}
+
+.sub-list li.has-children {
+   @include hasChildren(
+      $content: '\e901',
+      $fSize: 20px
+   );
+}
+
+%gridTemplateMenu {
+   display: grid;
+   grid-template: auto / 1fr;
+   gap: $allGap;
+}
+
+.mobile-wrap {
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   overflow-y: auto;
+   z-index: 2;
+
+   .mobile-menu {
+      // padding: 0 $padingXMenu;
+      max-width: var(--fade_on_the_side_width);
+      width: 100%;
+      background: var(--dark);
+      position: relative;
+      z-index: 2;
+      container-name: mobileMenu;
+      container-type: inline-size;
+
+      &__inside {
+         padding: 120px $padingXMenu 60px $padingXMenu;
+         width: 100%;
+         height: 100dvh;
+
+         &.inside_main {
+            position: relative;
+            visibility: hidden;
+            opacity: 0;
+            @extend %gridTemplateMenu;
+         }
+
+         &.inside_sub {
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: grid;
+            grid-template: max-content max-content / 1fr;
+            align-content: center;
+         }
+      }
+
+      .sub-list-title {
+         @include mobileMenuListItem (
+            $margin: clamp(4.5px, 3cqi, 7px) 0,
+            $fSize: clamp(24px, 10.5cqi, 40px)
+         );
+         @include hasChildren(
+            $fSize: clamp(18px, 8cqi, 30px),
+            $content: '\e903',
+         );
+
+         margin-bottom: $allGap;
+      }
+
+      &__item {
+         &:not(:first-child) {
+            padding-top: $allGap;
+            border-top: 1px solid var(--ui_dark);
+         }
+      }
+
+      .main-list {
+         li {
+            @include mobileMenuListItem (
+               $margin: clamp(4.5px, 3cqi, 7px) 0,
+               $fSize: clamp(24px, 10.5cqi, 40px)
+            );
+         }
+      }
+
+      .sub-links {
+         @extend %gridTemplateMenu;
+      }
+
+      .sub-list {
+         li {
+            @include mobileMenuListItem(
+               $margin: clamp(5px, 3cqi, 9.5px) 0,
+               $padding: 3px 0,
+               $fSize: clamp(18px, 8cqi, 25px),
+               $fWeight: 300,
+            );
+         }
+      }
+
+      .additional-list {
+         display: flex;
+         flex-direction: column;
+         
+         li {
+            @include mobileMenuListItem(
+               $margin: clamp(1.5px, 1cqi, 4.5px) 0,
+               $padding: 3px 0,
+               $fSize: clamp(15px, 7cqi, 20px),
+               $fWeight: 300,
+               $color: var(--text_additional),
+               $hoverColor: var(--light)
+            );
+         }
+      }
+
+      .contact-links {
+         .phone {
+            font-size: clamp(30px, 10cqi, 35px);
+            font-weight: 400;
+            line-height: 100%;
+            color: var(--light);
+            transition: all $transitionDuration;
+
+            &:hover {
+               color: var(--action);
+            }
+         }
+
+         .contact-info {
+            margin-top: 30px;
+            margin-bottom: $allGap;
+            display: flex;
+            flex-direction: column;
+
+            &__item {
+               display: inline-flex;
+               align-items: center;
+
+               span {
+                  padding: 2px 0;
+                  font-size: clamp(16px, 5cqi, 18px);
+                  font-weight: 300;
+                  line-height: 100%;
+                  color: var(--light);
+               }
+
+               i {
+                  margin-right: clamp(7px, 3cqi, 15px);
+                  font-size: clamp(15px, 7cqi, 19px);
+                  color: var(--action);
+               }
+
+               &:not(:last-child) {
+                  margin-bottom: var(--small_tabs_padding);
+               }
+            }
+
+            a.contact-info__item {
+               cursor: pointer;
+               @include hoverLinks( $hoverChild: true );
+
+               span {
+                  transition: $transition;
+               }
+            }
+         }
+      }
+   }
+}

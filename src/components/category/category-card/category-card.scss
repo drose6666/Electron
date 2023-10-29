@@ -1,7 +1,7 @@
-.category-card-wrap {
+.category-card {
    container-type: inline-size;
 
-   .category-card {
+   &__inside {
       position: relative;
       overflow: hidden;
       border-radius: clamp(var(--optionalRd), 11cqi, var(--defaultRd));
@@ -79,7 +79,7 @@
 
       grid-column: 1 / 4;
 
-      .category-card {
+      .category-card__inside {
          background: $bg;
 
          .img {
@@ -115,7 +115,7 @@
       @include media (max-width, 1000px) {
          grid-column: 1 / 2;
 
-         .category-card {
+         .category-card__inside {
             .img {
                max-width: 100cqi;
                right: -5cqi;
@@ -141,7 +141,7 @@
       $decor: #E0CDD1;
       $hoverDecor: #52343C;
 
-      .category-card {
+      .category-card__inside {
          background: $bg;
 
          .icon-right {
@@ -159,7 +159,7 @@
       $decor: #FFEFE2;
       $hoverDecor: #31200D;
 
-      .category-card {
+      .category-card__inside {
          background: $bg;
 
          .img {
@@ -181,7 +181,7 @@
       $decor: #EAEAF9;
       $hoverDecor: #224E73;
 
-      .category-card {
+      .category-card__inside {
          background: $bg;
 
          .img {
@@ -200,11 +200,11 @@
    }
 
    &:hover {
-      .category-card {
-         translate: 0 -10px;
+      .category-card__inside {
+         transform: translateY(-10px);
 
          .icon-right {
-            transform: translate(-20%, -20%) scale(1.1);
+            transform: translate(-20%, -20%) scale(7);
          }
       }
    }

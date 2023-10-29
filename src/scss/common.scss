@@ -5,6 +5,7 @@
 
 
 // UI
+@import '../components/ui/ui-preloader/ui-preloader';
 @import '../components/ui/ui-button/ui-btn/ui-button';
 @import '../components/ui/ui-button/ui-btn-icon/ui-button-icon';
 @import '../components/ui/ui-button/ui-btn-icon/ui-button-icon';
@@ -15,11 +16,12 @@
 @import '../components/ui/ui-title/ui-title';
 @import '../components/ui/ui-tab/ui-tab';
 @import '../components/ui/ui-input/ui-input';
-@import '../components/ui/ui-preloader/ui-preloader';
+@import '../components/ui/ui-overlay/ui-overlay';
 
 
 // Components
 @import '../components/menu/top-menu/top-menu';
+@import '../components/menu/mobile-menu/mobile-menu';
 @import '../components/header/header';
 @import '../components/logo/logo';
 @import '../components/search/search-header/search-header';
@@ -64,6 +66,7 @@ html,body {
 }
 
 body {
+   margin-bottom: 20px;
    font-family: var(--basic_font);
 
    &.not-scroll {
@@ -73,7 +76,6 @@ body {
    
 html, body, main {
    width: 100%;
-   height: 100%;
 }
 
 i {
