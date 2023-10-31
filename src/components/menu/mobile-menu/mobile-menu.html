@@ -1,32 +1,30 @@
 <div class="mobile-wrap">
    <div class="mobile-menu">
-      <!-- absolute element -->
-      <div class="mobile-menu__inside inside_main">
-         <ul class="main-list mobile-menu__item">
-            <li data-for="1" class="has-children"><a class="child">Каталог</a></li>
-            <li data-for="2" class="has-children"><a class="child">Личный кабинет</a></li>
-            <li><a href="" class="child">Акции</a></li>
-            <li><a href="" class="child">Блог</a></li>
-         </ul>
 
-         <div class="sub-links mobile-menu__item">
-            <ul class="sub-list">
-               <li><a href="" class="child">Избранное</a></li>
-               <li><a href="" class="child">Сравнение</a></li>
-               <li><a href="" class="child">Сервис</a></li>
-               <li><a href="" class="child">Доставка</a></li>
-               <li><a href="" class="child">Гарантия</a></li>
-               <li><a href="" class="child">Условия возврата</a></li>
-               <li><a href="" class="child">Контакты</a></li>
+      <ul class="mobile-menu__inside parent_list" data-id="0">
+         <li data-for="1" class="parent-item has-children list-title"><a class="child">Каталог</a></li>
+         <li data-for="2" class="parent-item has-children list-title"><a class="child">Личный кабинет</a></li>
+         <li class="parent-item"><a href="" class="child">Акции</a></li>
+         <li class="parent-item"><a href="" class="child">Блог</a></li>
+         
+         <li class="gap-item child-item-wrap">
+            <ul class="child-list">
+               <li class="child-item"><a href="" class="child">Избранное</a></li>
+               <li class="child-item"><a href="" class="child">Сравнение</a></li>
+               <li class="child-item"><a href="" class="child">Сервис</a></li>
+               <li class="child-item"><a href="" class="child">Доставка</a></li>
+               <li class="child-item"><a href="" class="child">Гарантия</a></li>
+               <li class="child-item"><a href="" class="child">Условия возврата</a></li>
+               <li class="child-item"><a href="" class="child">Контакты</a></li>
             </ul>
-   
-            <ul class="additional-list">
-               <li><span class="child">Правила и условия</span></li>
-               <li><span class="child">Политика конфиденциальности</span></li>
-            </ul>
-         </div>
 
-         <div class="contact-links mobile-menu__item">
+            <ul class="additional-list menu_close">
+               <li class="additional-item"><span class="child">Правила и условия</span></li>
+               <li class="additional-item"><span class="child">Политика конфиденциальности</span></li>
+            </ul>
+         </li>
+
+         <li class="gap-item contact-item-wrap">
             <a href="tel:" class="phone">+7 911 149 05 05</a>
 
             <div class="contact-info">
@@ -41,48 +39,69 @@
             </div>
 
             @@include('../../socials/socials.html', { "className": "mobile_menu" })
-         </div>
+         </li>
+      </ul>
 
-         <div data-depth="1" data-id="1" class="mobile-menu__inside inside_sub">
-            <h3 class="sub-list-title has-children"><span class="child">Каталог</span></h3>
-            <ul class="sub-list">
-               <li class="has-children"><a href="" class="child">Ноутбук и ПК</a></li>
-               <li><a href="" class="child">Смартфоны</a></li>
-               <li><a href="" class="child">Аксессуары</a></li>
-               <li class="has-children"><a href="" class="child">Копмлектующие</a></li>
+      <ul data-id="1" class="mobile-menu__inside child_list hidden">
+         <li data-for="0" class="back-item has-children"><span class="child">Каталог</span></li>
+         <li>
+            <ul class="child-list">
+               <li class="child-item"><a href="" class="child">Ноутбуки и ПК</a></li>
+               <li class="child-item"><a href="" class="child">Смартфоны</a></li>
+               <li class="child-item"><a href="" class="child">Аксессуары</a></li>
+               <li data-for="3" class="child-item has-children list-title"><span class="child">Комплектующие</span></li>
             </ul>
+         </li>
+      </ul>
 
-            <div data-id="1" class="mobile-menu__inside inside_sub_sub">
-               <h3 class="sub-list-title has-children"><span class="child">Каталог</span></h3>
-               <ul class="sub-list">
-                  <li class="has-children"><a href="" class="child">Ноутбук и ПК</a></li>
-                  <li><a href="" class="child">Смартфоны</a></li>
-                  <li><a href="" class="child">Аксессуары</a></li>
-                  <li class="has-children"><a href="" class="child">Копмлектующие</a></li>
-               </ul>
-            </div>
-         </div>
-
-         <div data-depth="1" data-id="2" class="mobile-menu__inside inside_sub">
-            <h3 class="sub-list-title has-children"><span class="child">Каталог</span></h3>
-            <ul class="sub-list">
-               <li class="has-children"><a href="" class="child">Ноутбук и ПК</a></li>
-               <li><a href="" class="child">Смартфоны</a></li>
-               <li><a href="" class="child">Аксессуары</a></li>
-               <li class="has-children"><a href="" class="child">Копмлектующие</a></li>
+      <ul data-id="2" class="mobile-menu__inside child_list hidden">
+         <li data-for="0" class="back-item has-children"><span class="child">Личный кабинет</span></li>
+         <li>
+            <ul class="child-list">
+               <li class="child-item"><a href="" class="child">Мои заказы</a></li>
+               <li class="child-item"><a href="" class="child">История заказов</a></li>
+               <li class="child-item"><a href="" class="child">Отследить заказ</a></li>
             </ul>
+         </li>
+      </ul>
 
-            <div data-depth="2" class="mobile-menu__inside inside_sub_sub">
-               <h3 class="sub-list-title has-children"><span class="child">Каталог</span></h3>
-               <ul class="sub-list">
-                  <li class="has-children"><a href="" class="child">Ноутбук и ПК</a></li>
-                  <li><a href="" class="child">Смартфоны</a></li>
-                  <li><a href="" class="child">Аксессуары</a></li>
-                  <li class="has-children"><a href="" class="child">Копмлектующие</a></li>
-               </ul>
-            </div>
-         </div>
-      </div>
+      <ul data-id="3" class="mobile-menu__inside child_list hidden">
+         <li data-for="1" class="back-item has-children"><span class="child">Комплектующие</span></li>
+         <li>
+            <ul class="child-list">
+               <li class="child-item"><a href="" class="child">Материннские платы</a></li>
+               <li class="child-item"><a href="" class="child">Процессоры</a></li>
+               <li class="child-item"><a href="" class="child">Жесткие диски (HDD-накопители)</a></li>
+               <li class="child-item"><a href="" class="child">Накопители SSD</a></li>
+               <li class="child-item"><a href="" class="child">Видеокарты</a></li>
+               <li class="child-item"><a href="" class="child">Модули памяти</a></li>
+               <li class="child-item"><a href="" class="child">Оптические приводы</a></li>
+               <li class="child-item"><a href="" class="child">Звуковые карты</a></li>
+               <li class="child-item"><a href="" class="child">Блоки питания</a></li>
+               <li class="child-item"><a href="" class="child">Корпуса</a></li>
+               <li class="child-item"><a href="" class="child">Системы охлаждения</a></li>
+               <li class="child-item"><a href="" class="child">Термопасты</a></li>
+
+               <li class="child-item"><a href="" class="child">Материннские платы</a></li>
+               <li class="child-item"><a href="" class="child">Процессоры</a></li>
+               <li class="child-item"><a href="" class="child">Жесткие диски (HDD-накопители) + SSD-накопители</a></li>
+               <li class="child-item"><a href="" class="child">Накопители SSD</a></li>
+               <li class="child-item"><a href="" class="child">Видеокарты</a></li>
+               <li class="child-item"><a href="" class="child">Модули памяти</a></li>
+               <li class="child-item"><a href="" class="child">Оптические приводы</a></li>
+               <li class="child-item"><a href="" class="child">Звуковые карты</a></li>
+               <li class="child-item"><a href="" class="child">Блоки питания</a></li>
+               <li class="child-item"><a href="" class="child">Корпуса</a></li>
+               <li class="child-item"><a href="" class="child">Системы охлаждения</a></li>
+               <li class="child-item"><a href="" class="child">Термопасты</a></li>
+            </ul>
+         </li>
+      </ul>
+
+      @@include('../../ui/ui-close/ui-close.html', {
+         "className": "fade_close mobile",
+         "classNameIcon": "angle_right"
+      })
    </div>
 
    <div class="ui-overlay overlay_mobile-menu"></div>

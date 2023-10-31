@@ -5,7 +5,7 @@
    $height: 1px,
 ) {
    @if $hoverChild == false {
-      display: inline-block;
+      // display: inline-block;
       background: -webkit-gradient(linear,left top,left bottom,from($color));
       background-size: 0% $height;
       background-position: right 0% bottom;
@@ -16,7 +16,7 @@
       }
    } @else {
       & > .child {
-         display: inline-block;
+         // display: inline-block;
          background: -webkit-gradient(linear,left top,left bottom,from($color));
          background-size: 0% $height;
          background-position: right 0% bottom;

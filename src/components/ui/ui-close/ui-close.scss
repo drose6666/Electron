@@ -1,0 +1,39 @@
+.ui-close {
+   $size: clamp(35px, 10cqi, 45px);
+   $fSize: clamp(19px, 5cqi, 24px);
+
+   width: $size;
+   height: $size;
+   background: var(--ui_dark);
+   border-radius: var(--circleRd);
+   box-shadow: var(--ui_close_shadow);
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   position: absolute;
+   right: -20px;
+   top: 45px;
+   transition: all .2s ease;
+
+   i {
+      font-size: $fSize;
+      color: var(--text_selected_on_dark);
+      transition: inherit;
+   }
+
+   &:hover {
+      background: var(--dark);
+
+      i {
+         color: var(--light);
+      }
+   }
+}
+
+@include media (max-width, 670px) {
+   .ui-close {
+      &.fade_close {
+         right: 20px;
+      }
+   }
+}
