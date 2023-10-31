@@ -1,5 +1,43 @@
+.decor-circle {
+   $bg: #E0CDD1;
+   $afterSize: 160%;
+   $afterColor: #E6E8EE;
+
+   position: absolute;
+   width: clamp(150px, 35cqw, 220px);
+   height: clamp(150px, 35cqw, 220px);
+   background: $bg;
+   border-radius: var(--circleRd);
+   z-index: 0;
+   transition: all 1s ease;
+
+   &:after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: $afterSize;
+      height: $afterSize;
+      border: 1px solid $afterColor;
+      border-radius: var(--circleRd);
+   }
+
+   &.right {
+      bottom: -15%;
+      right: -10%;
+   }
+
+   &.left {
+      top: -15%;
+      left: -10%;
+      display: none;
+   }
+}
+
 .category-card {
    container-type: inline-size;
+   transition: all .4s ease;
 
    &__inside {
       position: relative;
@@ -11,8 +49,7 @@
       justify-content: flex-start;
       min-height: clamp(310px, 75cqi, 380px);
       cursor: pointer;
-      transition: all .4s ease;
-   
+      
       .content {
          padding: 0 15px 25px clamp(15px, 7cqi, 30px);
          display: flex;
@@ -40,74 +77,47 @@
          object-position: right center;
          z-index: 1;
       }
-
-      .icon-right, .icon-left {
-         position: absolute;
-         background: #E0CDD1;
-         border-radius: var(--circleRd);
-         z-index: 0;
-         transition: all 1s ease .05s;
-
-         &:after {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 160%;
-            height: 160%;
-            border: 1px solid #E0CDD1;
-            border-radius: var(--circleRd);
-         }
-      }
-
-      .icon-right {
-         bottom: -15%;
-         right: -10%;
-         width: clamp(150px, 35cqw, 220px);
-         height: clamp(150px, 35cqw, 220px);
-      }
-
-      .icon-left {
-         display: none;
-      }
    }
 
    &.pc {
-      $bg: #F3F5F7;
-      $decor: #E6E8EE;
-
       grid-column: 1 / 4;
 
       .category-card__inside {
-         background: $bg;
+         background: #F3F5F7;
 
          .img {
             top: 10px;
             max-width: clamp(150px, 70cqi, 950px);
          }
 
-         .icon-right {
-            background: $decor;
-            bottom: -15%;
-            right: -20%;
-            width: clamp(160px,32cqw,720px);
-            height: clamp(160px,32cqw,720px);
-            opacity: .6;
-         }
+         .decor-circle  {
+            $bg: #E6E8EE;
+            $afterColor: #E6E8EE;
+            
+            &.left {
+               display: block;
+               background: #E6E8EE;
+               width: clamp(100px,18cqw,480px);
+               top: -6cqi;
+               left: -4cqi;
 
-         .icon-left {
-            background: $decor;
-            top: -6cqi;
-            left: -4cqi;
-            width: clamp(100px,18cqw,480px);
-            height: clamp(100px,18cqw,480px);
-            display: block;
-         }
+               &:after {
+                  border-color: $afterColor;
+               }
+            }
 
-         .icon-left, .icon-right {
-            &:after {
-               border-color: $decor;
+            &.right {
+               display: block;
+               background: #E6E8EE;
+               bottom: -15%;
+               right: -20%;
+               width: clamp(160px,32cqw,720px);
+               height: clamp(160px,32cqw,720px);
+               opacity: .6;
+
+               &:after {
+                  border-color: $afterColor;
+               }
             }
          }
       }
@@ -137,77 +147,111 @@
    }
 
    &.smartphones {
-      $bg: #EDDDE0;
-      $decor: #E0CDD1;
-      $hoverDecor: #52343C;
-
       .category-card__inside {
-         background: $bg;
+         background: #EDDDE0;
 
-         .icon-right {
-            background: $decor;
+         .decor-circle  {
+            $bg: #E0CDD1;
+            
+            background: $bg;
 
             &:after {
-               border-color: $decor;
+               border-color: $bg;
             }
          }
       }
    }
 
    &.complect {
-      $bg: #FFF7EF;
-      $decor: #FFEFE2;
-      $hoverDecor: #31200D;
-
       .category-card__inside {
-         background: $bg;
+         background: #FFF7EF;
 
          .img {
             max-width: 90cqi;
          }
 
-         .icon-right {
-            background: $decor;
+         .decor-circle  {
+            $bg: #FFEFE2;
+            
+            background: $bg;
 
             &:after {
-               border-color: $decor;
+               border-color: $bg;
             }
          }
       }
    }
 
    &.accessories {
-      $bg: #F5F5FF;
-      $decor: #EAEAF9;
-      $hoverDecor: #224E73;
-
       .category-card__inside {
-         background: $bg;
+         background: #F5F5FF;
 
          .img {
             top: -7cqi;
             max-width: 100cqi;
          }
 
-         .icon-right {
-            background: $decor;
+         .decor-circle  {
+            $bg: #EAEAF9;
+            
+            background: $bg;
 
             &:after {
-               border-color: $decor;
+               border-color: $bg;
             }
          }
       }
    }
 
    &:hover {
-      .category-card__inside {
-         transform: translateY(-10px);
+      transform: translateY(-3px);
 
-         .icon-right {
+      .category-card__inside {
+         .decor-circle.right {
             transform: translate(-20%, -20%) scale(7);
          }
       }
    }
 }
+
+.category-card {
+   &.card_search {
+      width: 150px;
+      height: 80px;
+
+      .category-card__inside {
+         min-height: 80px;
+         border-radius: var(--smRd);
+
+         .img {
+            max-width: clamp(120px, 85cqi, 910px);
+         }
+         
+         .ui-move-link,
+         .title, 
+         .category-card.search.pc .decor-left {
+            display: none;
+         }
+   
+         .decor-circle.right {
+            $size: 100px;
+   
+            width: $size;
+            height: $size;
+            bottom: -45px;
+            right: -15px;
+         }    
+      }
+
+      &:hover {
+         .category-card__inside {
+            .decor-circle {
+               transform: scale(3);
+            }
+         }
+      }
+   }
+}
+
 
 

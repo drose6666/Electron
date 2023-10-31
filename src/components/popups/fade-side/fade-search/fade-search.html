@@ -1,0 +1,131 @@
+<div class="fade-side" id="fade-search">
+   <div class="fade-side__content search-content">
+
+      <h2 class="fade-side__name">Поиск</h2>
+      @@include('../../../forms/form-search-main/form-search-main.html')
+
+      <ul class="search-history">
+         <li class="history-item">
+            <strong class="history-item__text search_query">smartphone</strong>
+            <span class="history-item__text search_proposed">iphone 14</span>
+         </li>
+
+         <li class="history-item">
+            <strong class="history-item__text search_query">smartphone</strong>
+            <span class="history-item__text search_proposed">xiaomi note 11</span>
+         </li>
+
+         <li class="history-item">
+            <strong class="history-item__text search_query">smartphone</strong>
+            <span class="history-item__text search_proposed">samsung galaxy s23</span>
+         </li>
+
+         <li class="history-item">
+            <strong class="history-item__text search_query">smartphone</strong>
+            <span class="history-item__text search_proposed">samsung galaxy s 23 mini</span>
+         </li>
+
+         <li class="history-item">
+            <strong class="history-item__text search_query">smartphone</strong>
+            <span class="history-item__text search_proposed">iphone 14</span>
+         </li>
+
+         <li class="history-item">
+            <strong class="history-item__text search_query">smartphone</strong>
+            <span class="history-item__text search_proposed">xiaomi note 11</span>
+         </li>
+
+         <li class="history-item">
+            <strong class="history-item__text search_query">smartphone</strong>
+            <span class="history-item__text search_proposed">samsung galaxy s23</span>
+         </li>
+
+         <li class="history-item">
+            <strong class="history-item__text search_query">smartphone</strong>
+            <span class="history-item__text search_proposed">samsung galaxy s 23 mini</span>
+         </li>
+      </ul>
+
+      <ul class="search-type-list search_category">
+         <li class="type-item">
+            <div class="info">
+               <h4 class="title">Смартфоны</h4>
+               <span class="type">Категория</span>
+            </div>
+            
+            <div class="visual">
+               @@include('../../../category/category-card/category-card.html', {
+                  "title": "Смартфоны",
+                  "img": "../../../../img/optimized/categories/smart.webp",
+                  "className": "smartphones card_search"
+               })
+            </div>
+         </li>
+      </ul>
+
+      <ul class="search-type-list">
+         <li class="type-item">
+            <div class="info">
+               <h4 class="title">Logitech</h4>
+               <span class="type">Бренд</span>
+            </div>
+
+            <div class="visual">
+               @@include('../../../brand/brand-card/brand-card.html', {
+                  "className": "card_search",
+                  "img": "../../../../img/optimized/brands/brand_1.webp"
+               })
+            </div>
+         </li>
+
+         <li class="type-item">
+            <div class="info">
+               <h4 class="title">Microsoft</h4>
+               <span class="type">Бренд</span>
+            </div>
+
+            <div class="visual">
+               @@include('../../../brand/brand-card/brand-card.html', {
+                  "className": "card_search",
+                  "img": "../../../../img/optimized/brands/brand_10.webp"
+               })
+            </div>
+         </li>
+
+         <li class="type-item">
+            <div class="info">
+               <h4 class="title">Lenovo</h4>
+               <span class="type">Бренд</span>
+            </div>
+
+            <div class="visual">
+               @@include('../../../brand/brand-card/brand-card.html', {
+                  "className": "card_search",
+                  "img": "../../../../img/optimized/brands/brand_12.webp"
+               })
+            </div>
+         </li>
+
+         <li class="type-item">
+            <div class="info">
+               <h4 class="title">Lenovo</h4>
+               <span class="type">Бренд</span>
+            </div>
+
+            <div class="visual">
+               @@include('../../../brand/brand-card/brand-card.html', {
+                  "className": "card_search",
+                  "img": "../../../../img/optimized/brands/brand_12.webp"
+               })
+            </div>
+         </li>
+      </ul>
+
+      @@include('../../../ui/ui-close/ui-close.html', {
+         "className": "fade_close left_side search",
+         "classNameIcon": "angle_right"
+      })
+   </div>
+
+   <div class="ui-overlay" id="overlay-search"></div>
+</div>

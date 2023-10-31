@@ -41,7 +41,7 @@
    } @else if $type == search {
       $paddingRight: 117px;
 
-      padding: $paddingY $paddingRight $paddingY $paddingLeft;
+      padding: $paddingY $paddingRight $paddingY $paddingLeft; 
 
    } @else if $type == mainSearch {
       $paddingRight: 117px;
@@ -53,6 +53,10 @@
       font-size: $fSize;
       font-weight: $fWeight;
       height: $height;
+
+      &::placeholder {
+         font-weight: 300;
+      }
       
    } @else if $type == promocode {
       $paddingRight: 57px;
@@ -92,15 +96,22 @@
       @error "Такой темы input не существует #{$theme}.";
    }
 
-   &:active, &:focus {
-      border-color: var(--action_slow);
-   }
+   // &:active, &:focus {
+   //    border-color: var(--action_slow);
+   // }
 }
 
 // NOTE Инпут
 .input_subscribe {
    @include input (
       $type: subscribe,
+      $theme: dark
+   )
+}
+
+.input_search-main {
+   @include input (
+      $type: mainSearch,
       $theme: dark
    )
 }

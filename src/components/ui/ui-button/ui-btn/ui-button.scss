@@ -294,6 +294,19 @@
    );
 }
 
+.btn_outlines_default {
+   @include button (
+      $theme: outlines,
+      $childTheme: outlinesDefault
+   )
+}
+
+.btn_primary {
+   @include button (
+      $type: primary
+   )
+}
+
 .btn_reg {
    @include button (
       $type: uiSmall,
@@ -325,16 +338,13 @@
    );
 }
 
-.btn_outlines_default {
+.btn_search-main {
    @include button (
-      $theme: outlines,
-      $childTheme: outlinesDefault
-   )
+      $type: primary,
+      $theme: action,
+   );
+   padding: 5px 25px;
 }
 
-.btn_primary {
-   @include button (
-      $type: primary
-   )
-}
+
 

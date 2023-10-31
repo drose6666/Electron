@@ -1,17 +1,17 @@
-import openMobileMenu from '../../../libs/js/module/openMobileMenu.js';
+import openFadeOnTheSide from '../../../libs/js/module/openFadeOnTheSide.js';
 
-new openMobileMenu({
-   menu: '.mobile-wrap',
+new openFadeOnTheSide({
+   fadeSelector: '#fade-mobile-menu',
    close: '.ui-close.mobile',
    open: '.ui-burger',
-   overlay: '.overlay_mobile-menu',
+   overlay: '#overlay-mobile',
    closeItems: '.menu_close'
 })
 
 const mobileMenu = document.querySelector('.mobile-menu');
 const listItems = mobileMenu.querySelectorAll('[data-for]');
 const lists = mobileMenu.querySelectorAll('[data-id]');
-const mobileOverlay = document.querySelector('.overlay_mobile-menu')
+const mobileOverlay = document.getElementById('overlay-mobile')
 const burger = document.querySelector('.ui-burger')
 
 listItems.forEach(item => {

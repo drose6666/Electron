@@ -1,0 +1,123 @@
+@import '../../../forms/form-search-main/form-search-main';
+
+// NOTE Родительский файл стилей - fade-side.scss , все переменные взяты оттдуда
+
+.search-content {
+   .search-history {
+      margin: $gapDefault 0;
+
+      .history-item {
+         $fSize: 19px;
+         $paddingLeft: calc(#{$fSize} + 15px);
+
+         padding: 8px 0 8px $paddingLeft;
+         position: relative;
+         cursor: pointer;
+
+         &:before {
+            content: '\e923';
+            position: absolute;
+            top: 9px;
+            left: 0;
+            font-family: var(--icon_font);
+            font-size: $fSize;
+            color: var(--text_additional);
+            transition: all .2s ease;
+         }
+
+         &__text {
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 100%;
+            color: var(--text_selected_on_dark);
+            transition: all .2s ease;
+
+            &.search_proposed {
+               font-weight: 300;
+               color: var(--text_selected_on_dark);
+            }
+         }
+
+         &:hover {
+            &:before {
+               color: var(--action);
+            }
+
+            .history-item__text {
+               color: var(--light);
+            }
+         }
+      }
+   }
+
+   .search-type-list {
+      .type-item {
+         display: flex;
+         align-items: center;
+         justify-content: space-between;
+         gap: 30px;
+         cursor: pointer;
+
+         &:not(:last-child) {
+            margin-bottom: 20px;
+         }
+
+         .info {
+            .title {
+               margin-bottom: 4px;
+               font-size: 20px;
+               font-weight: 500;
+               line-height: 100%;
+               color: var(--text_selected_on_dark);
+               transition: all .2s ease;
+            }
+   
+            .type {
+               font-size: 15px;
+               font-weight: 300;
+               line-height: 100%;
+               color: var(--text_additional);
+               transition: all .2s ease;
+            }
+         }
+   
+         &:hover {
+            .info {
+               .title {
+                  color: var(--light);
+               }
+
+               .type {
+                  color: var(--action);
+               }
+            }
+         }
+      }
+
+      &.search_category {
+         $border: 1px solid var(--ui_dark);
+
+         margin-bottom: $gapDefault;
+         padding: 15px 0;
+         border-top: $border;
+         border-bottom: $border;
+         
+      }
+   }
+}
+
+@container fadeSide (max-width: 380px) {
+   .search-content {
+      .search-type-list {
+         .type-item {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 15px;
+
+            &:not(:last-child) {
+               margin-bottom: 30px;
+            }
+         }
+      }
+   }
+}

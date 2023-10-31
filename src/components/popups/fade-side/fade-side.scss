@@ -1,0 +1,63 @@
+$gapDefault: 50px;
+$fadePaddingX: clamp(var(--default_padding), 5cqi, var(--fade_on_the_side_padding));
+$fadePadding: 110px $fadePaddingX 60px $fadePaddingX;
+$transitionDuration: .2s ease;
+
+.fade-side {
+   position: fixed;
+   top: 0;
+   right: 0;
+   width: 100%;
+   height: 100%;
+   display: grid;
+   opacity: 0;
+   visibility: hidden;
+   z-index: 2;
+   container-name: fadeSide;
+   container-type: inline-size;
+   overflow-y: auto;
+   overflow-x: hidden;
+   transition: all .2s ease .3s;
+
+   &__content {
+      padding: 110px $fadePaddingX 60px $fadePaddingX;
+      justify-self: end;
+      align-self: start;
+      max-width: var(--fade_on_the_side_width);
+      width: 100%;
+      min-height: 100dvh;
+      background: var(--dark);
+      position: relative;
+      container-name: fadeSideContent;
+      container-type: inline-size;
+      transform: translateX(calc(30px + var(--fade_on_the_side_width)));
+      z-index: 2;
+      transition: all .5s ease;
+   }
+
+   &.left_side {
+      .fade-side__content {
+         justify-self: start;
+      }
+   }
+
+   &.active {
+      opacity: 1;
+      visibility: visible;
+      transition-delay: 0s;
+
+      .fade-side__content {
+         transform: none;
+         transition-delay: 0s;
+      }
+   }
+}
+
+
+.fade-side__name {
+   margin-bottom: 50px;
+   font-size: 40px;
+   font-weight: 500;
+   line-height: 110%;
+   color: var(--light);
+}

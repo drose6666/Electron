@@ -13,12 +13,19 @@
    position: absolute;
    right: -20px;
    top: 45px;
-   transition: all .2s ease;
+   opacity: 0;
+   visibility: hidden;
+   transform: translateX(-20px);
+   transition: 
+      background .2s ease, 
+      transform .5s ease 0s,
+      opacity .5s ease 0s,
+      visibility .5s ease 0s;
 
    i {
       font-size: $fSize;
       color: var(--text_selected_on_dark);
-      transition: inherit;
+      transition: all .2s ease;
    }
 
    &:hover {
@@ -28,12 +35,36 @@
          color: var(--light);
       }
    }
+
+   &.left_side {
+      right: none;
+      left: -20px;
+      transform: translateX(20px);
+   }
+}
+
+.fade-side.active {
+   .ui-close {
+      transition: 
+         background .2s ease, 
+         transform .5s ease .65s,
+         opacity .5s ease .65s,
+         visibility .5s ease .65s;
+      transform: none;
+      opacity: 1;
+      visibility: visible;
+   }
 }
 
 @include media (max-width, 670px) {
    .ui-close {
       &.fade_close {
          right: 20px;
+
+         &.left_side {
+            right: none;
+            left: 20px;
+         }
       }
    }
 }
