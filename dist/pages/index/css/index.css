@@ -1959,7 +1959,7 @@ footer, .information-links {
   left: 0;
   width: 100%;
   height: 100%;
-  background: var(--overlay);
+  background: transparent;
   z-index: 1;
   opacity: 0;
   visibility: hidden;
@@ -2020,7 +2020,7 @@ footer, .information-links {
   background: var(--dark);
 }
 .ui-close:hover i {
-  color: var(--light);
+  color: var(--action);
 }
 .ui-close.left_side {
   right: none;
@@ -2031,11 +2031,11 @@ footer, .information-links {
 }
 
 .fade-side.active .ui-close {
-  -webkit-transition: background 0.2s ease, opacity 0.5s ease 0.65s, visibility 0.5s ease 0.65s, -webkit-transform 0.5s ease 0.65s;
-  transition: background 0.2s ease, opacity 0.5s ease 0.65s, visibility 0.5s ease 0.65s, -webkit-transform 0.5s ease 0.65s;
-  -o-transition: background 0.2s ease, transform 0.5s ease 0.65s, opacity 0.5s ease 0.65s, visibility 0.5s ease 0.65s;
-  transition: background 0.2s ease, transform 0.5s ease 0.65s, opacity 0.5s ease 0.65s, visibility 0.5s ease 0.65s;
-  transition: background 0.2s ease, transform 0.5s ease 0.65s, opacity 0.5s ease 0.65s, visibility 0.5s ease 0.65s, -webkit-transform 0.5s ease 0.65s;
+  -webkit-transition: background 0.2s ease, opacity 0.5s ease 0.5s, visibility 0.5s ease 0.5s, -webkit-transform 0.5s ease 0.5s;
+  transition: background 0.2s ease, opacity 0.5s ease 0.5s, visibility 0.5s ease 0.5s, -webkit-transform 0.5s ease 0.5s;
+  -o-transition: background 0.2s ease, transform 0.5s ease 0.5s, opacity 0.5s ease 0.5s, visibility 0.5s ease 0.5s;
+  transition: background 0.2s ease, transform 0.5s ease 0.5s, opacity 0.5s ease 0.5s, visibility 0.5s ease 0.5s;
+  transition: background 0.2s ease, transform 0.5s ease 0.5s, opacity 0.5s ease 0.5s, visibility 0.5s ease 0.5s, -webkit-transform 0.5s ease 0.5s;
   -webkit-transform: none;
       -ms-transform: none;
           transform: none;
@@ -2174,19 +2174,21 @@ footer, .information-links {
   height: 100%;
   display: -ms-grid;
   display: grid;
+  background: var(--overlay);
   opacity: 0;
   visibility: hidden;
   z-index: 2;
-  container-name: fadeSide;
-  container-type: inline-size;
   overflow-y: auto;
   overflow-x: hidden;
   -webkit-transition: all 0.2s ease 0.3s;
   -o-transition: all 0.2s ease 0.3s;
   transition: all 0.2s ease 0.3s;
 }
+.fade-side::-webkit-scrollbar {
+  display: none;
+}
 .fade-side__content {
-  padding: 110px clamp(var(--default_padding), 5cqi, var(--fade_on_the_side_padding)) 60px clamp(var(--default_padding), 5cqi, var(--fade_on_the_side_padding));
+  padding: 110px clamp(var(--default_padding), 5cqi, var(--fade_on_the_side_padding)) 40px clamp(var(--default_padding), 5cqi, var(--fade_on_the_side_padding));
   -ms-grid-column-align: end;
       justify-self: end;
   -webkit-align-self: start;
@@ -2244,19 +2246,21 @@ footer, .information-links {
   height: 100%;
   display: -ms-grid;
   display: grid;
+  background: var(--overlay);
   opacity: 0;
   visibility: hidden;
   z-index: 2;
-  container-name: fadeSide;
-  container-type: inline-size;
   overflow-y: auto;
   overflow-x: hidden;
   -webkit-transition: all 0.2s ease 0.3s;
   -o-transition: all 0.2s ease 0.3s;
   transition: all 0.2s ease 0.3s;
 }
+.fade-side::-webkit-scrollbar {
+  display: none;
+}
 .fade-side__content {
-  padding: 110px clamp(var(--default_padding), 5cqi, var(--fade_on_the_side_padding)) 60px clamp(var(--default_padding), 5cqi, var(--fade_on_the_side_padding));
+  padding: 110px clamp(var(--default_padding), 5cqi, var(--fade_on_the_side_padding)) 40px clamp(var(--default_padding), 5cqi, var(--fade_on_the_side_padding));
   -ms-grid-column-align: end;
       justify-self: end;
   -webkit-align-self: start;
@@ -2389,7 +2393,9 @@ footer, .information-links {
 }
 .mobile-menu__inside {
   width: 100%;
-  min-height: 100dvh;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
   -webkit-transition: all 0.3s ease 0.2s;
   -o-transition: all 0.3s ease 0.2s;
   transition: all 0.3s ease 0.2s;
@@ -2673,7 +2679,7 @@ footer, .information-links {
   border-bottom: 1px solid var(--ui_dark);
 }
 
-@container fadeSide (max-width: 380px) {
+@media all and (max-width: 380px) {
   .search-content .search-type-list .type-item {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;

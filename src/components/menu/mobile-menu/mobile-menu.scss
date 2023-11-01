@@ -115,7 +115,7 @@ $paddingMenu: 110px $padingXMenu 60px $padingXMenu;
 
    &__inside {
       width: 100%;
-      min-height: 100dvh;
+      height: max-content;
       transition: all .3s ease .2s;
 
       &.child_list {

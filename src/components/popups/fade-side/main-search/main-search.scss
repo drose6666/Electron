@@ -7,8 +7,8 @@
       margin: $gapDefault 0;
 
       .history-item {
-         $fSize: 19px;
-         $paddingLeft: calc(#{$fSize} + 15px);
+         $fSizeIcon: 19px;
+         $paddingLeft: calc(#{$fSizeIcon} + 15px);
 
          padding: 8px 0 8px $paddingLeft;
          position: relative;
@@ -20,7 +20,7 @@
             top: 9px;
             left: 0;
             font-family: var(--icon_font);
-            font-size: $fSize;
+            font-size: $fSizeIcon;
             color: var(--text_additional);
             transition: all .2s ease;
          }
@@ -106,7 +106,7 @@
    }
 }
 
-@container fadeSide (max-width: 380px) {
+@include media (max-width, 380px) {
    .search-content {
       .search-type-list {
          .type-item {
