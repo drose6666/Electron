@@ -1,0 +1,124 @@
+$transition: all .2s ease;
+
+.product-card-cart {
+   padding: 5px 15px 5px 5px;
+   position: relative;
+   border-radius: var(--mdRd);
+   background: var(--ui_dark);
+   display: grid;
+   grid-template: 1fr / 162px 1fr;
+   gap: 25px;
+
+   .img {
+      width: 100%;
+      background: var(--separating);
+      border-radius: var(--slRd);
+      transition: $transition;
+
+      img {
+         max-width: 100%;
+         height: auto;
+      }
+
+      &:hover {
+         background: var(--separating_contrast);
+      }
+   }
+
+   .content {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      align-self: center;
+
+      .product-name {
+         margin-bottom: 10px;
+
+         a {
+            font-size: 20px;
+            font-weight: 400;
+            line-height: 110%;
+            color: var(--light);
+            transition: $transition;
+         }
+
+         &:hover {
+            a {
+               color: var(--action);
+            }
+         }
+      }
+
+      .product-options {
+         display: flex;
+         align-items: center;
+         gap: 5px;
+
+         .option-item {
+            padding: 6px 10px;
+            font-size: 13px;
+            font-weight: 400;
+            line-height: 100%;
+            color: var(--text_selected_on_dark);
+            background: var(--border_dark);
+            border: 1px solid transparent;
+            border-radius: var(--defaultRd);
+            white-space: nowrap;
+            transition: $transition;
+
+            &:hover {
+               border-color: var(--action);
+               color: var(--light);
+            }
+         }
+
+         .color-item {
+            $size: 22px;
+   
+            margin-right: 5px;
+            border-radius: var(--circleRd);
+            background: #DE8E86;
+            width: $size;
+            height: $size;
+         }
+
+      }
+
+      .additional-info {
+         display: flex;
+         align-items: center;
+         justify-content: space-between;
+         gap: var(--default_padding);
+
+         .price {
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 100%;
+            color: var(--separating_contrast);
+         }
+      }
+   }
+}
+
+.product-card-cart.fade-compare-card {
+   .content {
+      gap: var(--small_tabs_padding);
+
+      .product-name {
+         a {
+            font-size: 23px;
+         }
+      }
+
+      .product-options, .ui-product-counter {
+         display: none;
+      }
+
+      .additional-info {
+         .price {
+            font-size: 20px;
+            color: var(--text_additional);
+         }
+      }
+   }
+}

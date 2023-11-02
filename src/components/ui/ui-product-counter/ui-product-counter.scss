@@ -1,0 +1,31 @@
+$transition: all .2s ease;
+
+.ui-product-counter {
+   display: flex;
+   align-items: center;
+   gap: 15px;
+
+   i {
+      font-size: 14px;
+      color: var(--text_additional);
+      cursor: pointer;
+      transition: $transition;
+
+      &:hover {
+         color: var(--light);
+      }
+   }
+
+   .count {
+      font-size: 17px;
+      font-weight: 400;
+      line-height: 170%;
+      color: var(--light);
+      width: 30px;
+      height: 15px;
+      background: transparent;
+      border: none;
+      outline: none;
+      text-align: center;
+   }
+}

@@ -1,0 +1,49 @@
+.cost-order {
+   margin: 80px 0;
+   width: 100%;
+
+   .cost-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 15px;
+      position: relative;
+
+      .key {
+         font-size: 14px;
+         font-weight: 400;
+         line-height: 100%;
+         color: var(--text_selected_on_dark);
+         text-transform: uppercase;
+      }
+
+      .value {
+         font-size: 18px;
+         font-weight: 500;
+         line-height: 100%;
+         color: var(--light);
+
+         &.thin {
+            font-size: 17px;
+            font-weight: 300;
+         }
+      }
+
+      &:not(:last-child) {
+         margin-bottom: 12px;
+      }
+
+      &.total-cost {
+         margin-top: 30px;
+         padding-top: 15px;
+         border-top: 1px solid var(--border_dark);
+
+         .key, .value {
+            font-size: 20px;
+            font-weight: 500;
+            color: var(--light);
+         }
+      }
+   }
+}

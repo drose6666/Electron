@@ -1,0 +1,27 @@
+<div class="product-card-cart @@className">
+   <a href="#" class="img">
+      <img src="@@img" alt="">
+   </a>
+
+   <div class="content">
+      <div class="main-info">
+         <h4 class="product-name"><a href="#">@@name</a></h4>
+         <ul class="product-options">
+            <li class="color-item"></li>
+            <li class="option-item">16/512 Gb</li>
+            <li class="option-item">256 Gb</li>
+            <li class="option-item">16/512 Gb</li>
+         </ul>
+      </div>
+
+      <div class="additional-info">
+         <div class="price">@@price</div>
+         @@include('../../../ui/ui-product-counter/ui-product-counter.html')
+      </div>
+   </div>
+
+   @@include('../../../ui/ui-close/ui-close.html', {
+      "className": "product_remove",
+      "classNameIcon": "close"
+   })
+</div>

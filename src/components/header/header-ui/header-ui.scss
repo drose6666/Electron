@@ -4,7 +4,7 @@
    gap: var(--default_padding);
 
    @include media(max-width, 460px) {
-      .btn_compare, .btn_favourites {
+      .btn_favourites {
          display: none;
       }
       

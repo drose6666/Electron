@@ -1,4 +1,4 @@
-$gapDefault: 50px;
+$gapDefault: 40px;
 $fadePaddingX: clamp(var(--default_padding), 5cqi, var(--fade_on_the_side_padding));
 $fadePadding: 110px $fadePaddingX 40px $fadePaddingX;
 $transitionDuration: .2s ease;
@@ -20,6 +20,52 @@ $transitionDuration: .2s ease;
 
    &::-webkit-scrollbar {
       display: none;
+   }
+
+   .btn-group {
+      display: grid;
+      grid-template: auto / repeat(2, 1fr);
+      column-gap: 20px;
+      row-gap: 15px;
+
+      .btn_cart {
+         @include buttonIcon (
+            $type: primary,
+            $theme: action,
+            $freeWidth: true,
+            $maxWidth: 100%,
+         )
+      }
+
+      .btn_order {
+         @include button (
+            $type: primary,
+            $theme: outlines,
+            $childTheme: outlinesLight,
+            $freeWidth: true,
+            $maxWidth: 100%,
+         );
+
+         &:hover {
+            border-color: var(--action);
+            background: var(--action);
+         }
+      }
+   }
+
+   .link-group {
+      margin-top: 80px;
+      display: grid;
+      grid-template: auto / max-content 1fr;
+      column-gap: 30px;
+      row-gap: 15px;
+
+      .btn_cart {
+         @include buttonIcon (
+            $type: primary,
+            $theme: action,
+         )
+      }
    }
 
    &__content {
@@ -56,11 +102,48 @@ $transitionDuration: .2s ease;
    }
 }
 
+@container fadeSideContent (max-width: 540px) {
+   .fade-side .btn-group, .fade-side .link-group {
+      margin: 0 auto;
+      grid-template: 1fr 1fr / 1fr;
+      max-width: 350px;
+   }
+
+   .fade-side .link-group {
+      margin: 80px auto 0 auto;
+
+      .ui-move-link {
+         justify-self: center;
+      }
+   }
+}
+
 
 .fade-side__name {
-   margin-bottom: 50px;
+   margin-bottom: 60px;
    font-size: 40px;
    font-weight: 500;
    line-height: 110%;
    color: var(--light);
+}
+
+.fade-product-wrap {
+   margin-top: -20px;
+   margin-left: -20px;
+   padding-top: 20px;
+   padding-left: 20px;
+   padding-bottom: 10px;
+   overflow-y: visible;
+   overflow-x: auto;
+
+   &::-webkit-scrollbar {
+      display: none;
+   }
+}
+
+.fade-product-list {
+   display: grid;
+   grid-template: auto / 1fr;
+   gap: 20px;
+   min-width: 570px;
 }

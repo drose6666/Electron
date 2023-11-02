@@ -10,7 +10,8 @@
    $transition: all .2s ease,
    $freeWidth: false,
    $theme: dark,
-   $type: primary
+   $type: primary,
+   $maxWidth: 100%
 ) {
    padding: 2px 2px 2px $paddingLeft;
    display: flex;
@@ -195,6 +196,7 @@
    @if $freeWidth {
       max-width: $maxWidth;
       width: 100%;
+      justify-content: space-between;
    }
 }
 

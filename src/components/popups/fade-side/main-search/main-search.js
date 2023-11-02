@@ -5,5 +5,4 @@ new openFadeOnTheSide ({
    close: '.ui-close.search',
    open: '.btn_search',
    overlay: '#overlay-search',
-   closeItems: '.menu_close'
 })

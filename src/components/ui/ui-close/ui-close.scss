@@ -11,8 +11,6 @@
    align-items: center;
    justify-content: center;
    position: absolute;
-   right: -20px;
-   top: 45px;
    opacity: 0;
    visibility: hidden;
    transform: translateX(-20px);
@@ -36,10 +34,26 @@
       }
    }
 
+   &.right_side {
+      right: -20px;
+      top: 45px;
+   }
+
    &.left_side {
-      right: none;
       left: -20px;
+      top: 45px;
       transform: translateX(20px);
+   }
+
+   &.product_remove {
+      width: 35px;
+      height: 35px;
+      left: -15px;
+      top: -15px;
+
+      i {
+         font-size: 15px;
+      }
    }
 }
 
