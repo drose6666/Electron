@@ -22,6 +22,40 @@ $transitionDuration: .2s ease;
       display: none;
    }
 
+   &__content {
+      padding: $fadePadding;
+      justify-self: end;
+      align-self: start;
+      max-width: var(--fade_on_the_side_width);
+      width: 100%;
+      min-height: 100dvh;
+      background: var(--dark);
+      position: relative;
+      container-name: fadeSideContent;
+      container-type: inline-size;
+      transform: translateX(calc(30px + var(--fade_on_the_side_width)));
+      z-index: 2;
+      transition: all .5s ease;
+   }
+
+   &.left_side {
+      .fade-side__content {
+         transform: translateX(calc(-1 * (30px + var(--fade_on_the_side_width))));
+         justify-self: start;
+      }
+   }
+
+   &.active {
+      opacity: 1;
+      visibility: visible;
+      transition-delay: 0s;
+
+      .fade-side__content {
+         transform: none;
+         transition-delay: 0s;
+      }
+   }
+
    .btn-group {
       display: grid;
       grid-template: auto / repeat(2, 1fr);
@@ -67,39 +101,6 @@ $transitionDuration: .2s ease;
          )
       }
    }
-
-   &__content {
-      padding: $fadePadding;
-      justify-self: end;
-      align-self: start;
-      max-width: var(--fade_on_the_side_width);
-      width: 100%;
-      min-height: 100dvh;
-      background: var(--dark);
-      position: relative;
-      container-name: fadeSideContent;
-      container-type: inline-size;
-      transform: translateX(calc(30px + var(--fade_on_the_side_width)));
-      z-index: 2;
-      transition: all .5s ease;
-   }
-
-   &.left_side {
-      .fade-side__content {
-         justify-self: start;
-      }
-   }
-
-   &.active {
-      opacity: 1;
-      visibility: visible;
-      transition-delay: 0s;
-
-      .fade-side__content {
-         transform: none;
-         transition-delay: 0s;
-      }
-   }
 }
 
 @container fadeSideContent (max-width: 540px) {
@@ -117,22 +118,135 @@ $transitionDuration: .2s ease;
       }
    }
 }
+ 
 
-
+// NOTE Заголовок
 .fade-side__name {
    margin-bottom: 60px;
    font-size: 40px;
    font-weight: 500;
    line-height: 110%;
    color: var(--light);
+
+   &.underline {
+      padding-bottom: 10px;
+      position: relative;
+
+      &:after {
+         content: '';
+         position: absolute;
+         bottom: 0;
+         left: 0;
+         width: 70px;
+         height: 2px;
+         background: var(--light);
+         border-radius: var(--defaultRd);
+      }
+   }
 }
 
+
+#fade-filters {
+   .fade-side__content {
+      padding: 60px $fadePaddingX 40px $fadePaddingX;
+      max-width: 450px;
+
+   }
+
+   .filters-form__nav {
+      margin-top: 40px;
+   }
+
+   .btn-group {
+      margin: 0;
+      display: grid;
+      grid-template: auto / repeat(auto-fill, minmax(140px, 1fr));
+      row-gap: 15px;
+      column-gap: 20px;
+      max-width: 100%;
+
+      .btn_filter_apply {
+         @include button (
+            $type: ui,
+            $theme: action,
+            $freeWidth: true,
+            $maxWidth: 100%
+         )
+      }
+
+      .btn_filter_cancel {
+         @include button (
+            $type: ui,
+            $theme: outlines,
+            $childTheme: outlinesLight,
+            $freeWidth: true,
+            $maxWidth: 100%
+         );
+         border-color: var(--text_additional);
+
+         &:hover {
+            background: var(--text_additional);
+         }
+      }
+   }
+
+   .products-count {
+      margin-bottom: 20px;
+      font-size: 17px;
+      font-weight: 300;
+      line-height: 100%;
+      color: var(--text_additional);
+      text-align: center;
+
+      strong {
+         color: var(--light);
+      }
+   }
+}
+
+#filters-form {
+   height: 100dvh;
+   display: grid;
+   grid-template: min-content 1fr min-content / 1fr;
+
+   .filters-form__content {
+      margin-right: -15px;
+      padding-right: 15px;
+      overflow-y: auto;
+
+      &::-webkit-scrollbar {
+         background: transparent;
+         width: 4px;
+         height: 4px;
+      }
+      
+      &::-webkit-scrollbar-thumb {
+         background: var(--ui_dark);
+         border-radius: 50px;
+      }
+      
+      &::-webkit-scrollbar-corner {
+         background: transparent;
+      }
+   }
+}
+
+@container fadeSideContent (max-height: 680px) {
+   #filters-form {
+      .filters-form__content {
+         min-height: 350px;
+      }
+   }
+}
+
+
+
+
+
+// NOTE Compare and Cart
 .fade-product-wrap {
-   margin-top: -20px;
-   margin-left: -20px;
-   padding-top: 20px;
-   padding-left: 20px;
-   padding-bottom: 10px;
+   margin: -20px 0 0 -20px;
+   padding: 20px 0 20px 20px;
    overflow-y: visible;
    overflow-x: auto;
 

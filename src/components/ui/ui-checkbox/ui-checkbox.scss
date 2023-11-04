@@ -1,0 +1,83 @@
+$checkoxSize: 23px;
+
+.ui-checkbox {
+   position: relative;
+
+   &__input {
+      @extend %visuallyHidden;
+   }
+
+   &__custom {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      width: $checkoxSize;
+      height: $checkoxSize;
+      display: inline-block;
+      background: transparent;
+      border-radius: var(--xsRd);
+      border: 1px solid var(--text_selected_on_dark);
+      overflow: hidden;
+      cursor: pointer;
+      transition: all .2s ease;
+
+      &:after {
+         content: '\e90c';
+         position: absolute;
+         top: 50%;
+         left: 50%;
+         transform: translate(-50%, -140%);
+         font-family: var(--icon_font);
+         font-size: 14px;
+         color: var(--light);
+         opacity: 0;
+         visibility: hidden;
+         transition: all .3s ease;
+      }
+   }
+
+   &__name {
+      padding-left: calc(#{$checkoxSize} + var(--small_tabs_padding));
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: var(--small_tabs_padding);
+      font-size: 17px;
+      font-weight: 300;
+      line-height: 100%;
+      user-select: none;
+      cursor: pointer;
+
+      .value {
+         color: var(--text_selected_on_dark);
+         transition: all .2s ease;
+      }
+
+      .count {
+         color: var(--text_additional);
+         transition: all .2s ease;
+      }
+   }
+
+   &__input:checked + &__custom {
+      border-color: var(--action);
+      background: var(--action);
+
+      &:after {
+         opacity: 1;
+         visibility: visible;
+         transform: translate(-50%, -50%);
+      }
+   }
+
+   &__input:checked ~ &__name {
+      .value, .count {
+         color: var(--light);
+      }
+
+      .value {
+         font-weight: 500;
+      }
+   }
+}

@@ -111,7 +111,6 @@ $paddingMenu: 110px $padingXMenu 60px $padingXMenu;
 
 .mobile-menu {
    padding: $paddingMenu;
-   transform: translateX(calc(-1 * (30px + var(--fade_on_the_side_width))));
 
    &__inside {
       width: 100%;

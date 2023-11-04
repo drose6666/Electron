@@ -1,0 +1,37 @@
+<div class="fade-side left_side" id="fade-filters">
+   <form action="" method="" class="fade-side__content filters-content" id="filters-form">
+      <h2 class="fade-side__name underline">Фильтры</h2>
+
+      <div class="filters-form__content">
+         
+         @@include('./filter-item/filter-item-brand.html')
+         @@include('./filter-item/filter-item-resolution.html')
+         @@include('./filter-item/filter-item-diagonal.html')
+      </div>
+
+      <div class="filters-form__nav">
+         <p class="products-count">Показано товаров: <strong>257</strong></p>
+      
+         <div class="btn-group">
+            @@include('../../../ui/ui-button/ui-btn/ui-button.html', {
+               "text": "Применить",
+               "className": "btn_filter_apply",
+               "type": "submit"
+            })
+            @@include('../../../ui/ui-button/ui-btn/ui-button.html', {
+               "text": "Сбросить",
+               "className": "btn_filter_cancel",
+               "type": "submit"
+            })
+         </div>
+      </div>
+
+
+      @@include('../../../ui/ui-close/ui-close.html', {
+         "className": "fade_close right_side fade_filters",
+         "classNameIcon": "angle_right"
+      })
+   </form>
+
+   <div class="ui-overlay" id="overlay-filters"></div>
+</div>

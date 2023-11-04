@@ -48,16 +48,31 @@
    width: calc(100% - var(--default_padding) * 2);
 }
 
+// TODO Уменьшение border radius
 %dynamicRadius40to25 {
    border-radius: clamp(var(--optionalRd), 11cqi, var(--defaultRd));
 }
 
+// TODO Уменьшение border radius
 %dynamicRadius30to25 {
    border-radius: clamp(var(--optionalRd), 11cqi, var(--lgRd));
 }
 
+// TODO Скрытие браузерных ui-элементоы
+%visuallyHidden {
+   margin: -1px;
+   padding: 0;
+   position: absolute;
+   width: 1px;
+   height: 1px;
+   border: 0;
+   overflow: hidden;
+   clip: rect(0 0 0 0);
+}
 
-
+.visually-hidden {
+   @extend %visuallyHidden
+}
 
 
 

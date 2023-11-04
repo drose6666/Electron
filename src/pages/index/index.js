@@ -4,5 +4,6 @@ import './sections/reviews-section/reviews-section.js';
 import '../../components/menu/mobile-menu/mobile-menu.js';
 import '../../components/popups/fade-side/fade-side.js';
 import '../../components/ui//ui-product-counter/ui-product-counter.js';
+import '../../components/popups/fade-side/fade-filters/fade-filters.js';
 
 console.log('index');
