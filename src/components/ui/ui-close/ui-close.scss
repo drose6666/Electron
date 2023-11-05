@@ -58,18 +58,35 @@
    }
 }
 
-.fade-side.active {
+%uiCloseInActiveElements {
+   transition: 
+      background .2s ease, 
+      transform .5s ease .5s,
+      opacity .5s ease .5s,
+      visibility .5s ease .5s;
+   transform: none;
+   opacity: 1;
+   visibility: visible;
+}
+
+.fade-side.active, .ui-popup.active {
    .ui-close {
-      transition: 
-         background .2s ease, 
-         transform .5s ease .5s,
-         opacity .5s ease .5s,
-         visibility .5s ease .5s;
-      transform: none;
-      opacity: 1;
-      visibility: visible;
+      @extend %uiCloseInActiveElements;
    }
 }
+
+.ui-popup {
+   .ui-close {
+      top: 23px;
+      right: -23px;
+      
+      i {
+         font-size: 19px;
+      }
+   }
+}
+
+
 
 @include media (max-width, 670px) {
    .ui-close {

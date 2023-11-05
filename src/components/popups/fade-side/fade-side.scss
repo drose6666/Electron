@@ -218,10 +218,11 @@ $transitionDuration: .2s ease;
          background: transparent;
          width: 4px;
          height: 4px;
+         display: none;
       }
       
       &::-webkit-scrollbar-thumb {
-         background: var(--action);
+         background: var(--ui_dark);
          border-radius: 50px;
       }
       

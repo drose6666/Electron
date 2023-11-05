@@ -4,7 +4,8 @@
    left: 0;
    width: 100%;
    height: 100%;
-   background: transparent;
+   // background: transparent;
+   background: var(--overlay);
    z-index: 1;
    opacity: 0;
    visibility: hidden;
@@ -14,5 +15,13 @@
       opacity: 1;
       visibility: visible;
       transition-delay: 0s;
+   }
+
+   &.popup_overlay {
+      transition: all .2s ease .4s;
+
+      &.active {
+         transition-delay: 0s;
+      }
    }
 }
