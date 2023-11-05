@@ -1,0 +1,28 @@
+.price-range {
+   margin-top: 10px;
+   display: grid;
+   grid-template: auto / 1fr 20px 1fr;
+   gap: clamp(10px, 5cqi, 25px);
+
+   .input_filter-price {
+      @include input ($type: primary, $theme: dark);
+      padding: 5px;
+      text-align: center;
+   }
+
+   .separate {
+      font-size: 20px;
+      color: var(--text_additional);
+      align-self: center;
+   }
+
+   .label {
+      font-size: 17px;
+      font-weight: 400;
+      line-height: 50%;
+      color: var(--text_additional);
+      position: absolute;
+      top: -20px;
+      left: 0;
+   }
+}
