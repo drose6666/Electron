@@ -2,8 +2,13 @@
    <div class="ui-popup__content">
 
       <!-- Здесь контент -->
+      <div class="product-review-rating-wrap">
+         @@include('../../../ui/ui-star-rating/ui-star-rating.html')
+         
+      </div>
+      <!-- Здесь контент -->
 
-      @@include('../../ui/ui-close/ui-close.html', {
+      @@include('../../../ui/ui-close/ui-close.html', {
          "className": "popup-product-review",
          "classNameIcon": "close"
       })

@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'Electron';
-  src:  url('../fonts/Electron/Electron.eot?8py3wt');
-  src:  url('../fonts/Electron/Electron.eot?8py3wt#iefix') format('embedded-opentype'),
-    url('../fonts/Electron/Electron.ttf?8py3wt') format('truetype'),
-    url('../fonts/Electron/Electron.woff?8py3wt') format('woff'),
-    url('../fonts/Electron/Electron.svg?8py3wt#Electron') format('svg');
+  src:  url('../fonts/Electron/Electron.eot?jgnm0u');
+  src:  url('../fonts/Electron/Electron.eot?jgnm0u#iefix') format('embedded-opentype'),
+    url('../fonts/Electron/Electron.ttf?jgnm0u') format('truetype'),
+    url('../fonts/Electron/Electron.woff?jgnm0u') format('woff'),
+    url('../fonts/Electron/Electron.svg?jgnm0u#Electron') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -25,6 +25,15 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.i-angle_left:before {
+  content: "\e92c";
+}
+.i-arrow_up_right_long:before {
+  content: "\e92d";
+}
+.i-star:before {
+  content: "\e92e";
+}
 .i-angle_right:before {
   content: "\e900";
 }

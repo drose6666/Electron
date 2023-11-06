@@ -54,20 +54,13 @@
             color: var(--light);
          }
       }
-
-      .copyright-text  {
-         font-size: 16px;
-         font-weight: 300;
-         line-height: 100%;
-         color: var(--text_additional);
-      }
    }
 
    .copyright-text {
       font-size: 16px;
       font-weight: 300;
       line-height: 100%;
-      color: var(--ui_dark);
+      color: var(--border_dark);
    }
 
    @container footer (max-width: 1250px) {

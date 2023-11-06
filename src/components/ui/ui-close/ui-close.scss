@@ -69,7 +69,7 @@
    visibility: visible;
 }
 
-.fade-side.active, .ui-popup.active {
+.fade-on-side.active, .ui-popup.active {
    .ui-close {
       @extend %uiCloseInActiveElements;
    }

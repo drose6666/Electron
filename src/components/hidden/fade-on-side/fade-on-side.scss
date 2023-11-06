@@ -3,24 +3,9 @@ $fadePaddingX: clamp(var(--default_padding), 5cqi, var(--fade_on_the_side_paddin
 $fadePadding: 110px $fadePaddingX 40px $fadePaddingX;
 $transitionDuration: .2s ease;
 
-.fade-side {
-   position: fixed;
-   top: 0;
-   right: 0;
-   width: 100%;
-   height: 100%;
-   display: grid;
-   background: var(--overlay);
-   opacity: 0;
-   visibility: hidden;
-   z-index: 2;
-   overflow-y: auto;
-   overflow-x: hidden;
+.fade-on-side {
+   @extend %hiddenWrap;
    transition: all .2s ease .3s;
-
-   &::-webkit-scrollbar {
-      display: none;
-   }
 
    &__content {
       padding: $fadePadding;
@@ -38,19 +23,21 @@ $transitionDuration: .2s ease;
       transition: all .5s ease;
    }
 
+   // NOTE Позиционирвоание fade-on-side__content
    &.left_side {
-      .fade-side__content {
+      .fade-on-side__content {
          transform: translateX(calc(-1 * (30px + var(--fade_on_the_side_width))));
          justify-self: start;
       }
    }
 
+   // NOTE Появленеи элемента
    &.active {
       opacity: 1;
       visibility: visible;
       transition-delay: 0s;
 
-      .fade-side__content {
+      .fade-on-side__content {
          transform: none;
          transition-delay: 0s;
       }
@@ -120,8 +107,8 @@ $transitionDuration: .2s ease;
 }
  
 
-// NOTE Заголовок
-.fade-side__name {
+// NOTE Заголовок (название компонента fade-on-side)
+.fade-on-side__name {
    margin-bottom: 60px;
    font-size: 40px;
    font-weight: 500;
@@ -146,8 +133,9 @@ $transitionDuration: .2s ease;
 }
 
 
+// NOTE Фильтр в каталоге
 #fade-filters {
-   .fade-side__content {
+   .fade-on-side__content {
       padding: 60px $fadePaddingX 40px $fadePaddingX;
       max-width: 450px;
 
@@ -204,6 +192,7 @@ $transitionDuration: .2s ease;
    }
 }
 
+// NOTE Форма фильтра в каталоге
 #filters-form {
    height: 100dvh;
    display: grid;
@@ -241,10 +230,7 @@ $transitionDuration: .2s ease;
 }
 
 
-
-
-
-// NOTE Compare and Cart
+// NOTE Корзина и Сравнение
 .fade-product-wrap {
    margin: -20px 0 0 -20px;
    padding: 20px 0 20px 20px;
@@ -256,9 +242,12 @@ $transitionDuration: .2s ease;
    }
 }
 
+// NOTE Список товаров в Корзине и Сравнении
 .fade-product-list {
    display: grid;
    grid-template: auto / 1fr;
    gap: 20px;
    min-width: 570px;
 }
+
+
