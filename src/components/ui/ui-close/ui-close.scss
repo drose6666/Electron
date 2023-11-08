@@ -1,3 +1,14 @@
+%uiCloseInActiveElements {
+   transition: 
+      background .2s ease, 
+      transform .5s ease .5s,
+      opacity .5s ease .5s,
+      visibility .5s ease .5s;
+   transform: none;
+   opacity: 1;
+   visibility: visible;
+}
+
 .ui-close {
    $size: clamp(35px, 10cqi, 45px);
    $fSize: clamp(19px, 5cqi, 24px);
@@ -56,17 +67,8 @@
          font-size: 15px;
       }
    }
-}
 
-%uiCloseInActiveElements {
-   transition: 
-      background .2s ease, 
-      transform .5s ease .5s,
-      opacity .5s ease .5s,
-      visibility .5s ease .5s;
-   transform: none;
-   opacity: 1;
-   visibility: visible;
+   
 }
 
 .fade-on-side.active, .ui-popup.active {
@@ -81,13 +83,33 @@
       right: -23px;
       
       i {
-         font-size: 19px;
+         font-size: clamp(15px, 5cqi, 19px);
+      }
+
+      &.close_image-preview {
+         width: 30px;
+         height: 30px;
+         top: -10px;
+         right: -8px;
+   
+         i {
+            font-size: 13px;
+         }
       }
    }
 }
 
+// NOTE Popup close
+@include media (max-width, 900px) {
+   .ui-popup {
+      .ui-close {
+         top: -15px;
+         right: 15px;
+      }
+   }
+}
 
-
+// NOTE Fade in Side close
 @include media (max-width, 670px) {
    .ui-close {
       &.fade_close {
@@ -100,3 +122,4 @@
       }
    }
 }
+

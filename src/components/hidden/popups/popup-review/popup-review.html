@@ -1,0 +1,15 @@
+<div class="ui-popup" id="popup-review">
+   <div class="ui-popup__content">
+
+      <!-- Здесь контент -->
+      @@include('./../../../forms/form-review/form-review.html')
+      <!-- Здесь контент -->
+
+      @@include('../../../ui/ui-close/ui-close.html', {
+         "className": "popup-review",
+         "classNameIcon": "close"
+      })
+   </div>
+
+   <div class="ui-overlay popup_overlay" id="overlay-review-form"></div>
+</div>

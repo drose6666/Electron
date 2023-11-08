@@ -101,6 +101,18 @@
    // }
 }
 
+.input_rating {
+   @include input ( 
+      $paddingLeft: 5px,
+      $paddingRight: 5px,
+      $theme: dark 
+   );
+
+   text-align: center;
+   height: 36px;
+   width: 90px;
+}
+
 // NOTE Инпут
 .input_subscribe {
    @include input (

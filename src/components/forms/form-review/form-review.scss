@@ -1,0 +1,10 @@
+@import '../../ui/ui-input-file/ui-input-file';
+
+#form-review {
+   .review-rating-wrap {
+      .ui-form-item {
+         display: flex;
+         justify-content: flex-end;
+      }
+   }
+}

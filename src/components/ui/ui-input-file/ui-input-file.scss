@@ -1,0 +1,121 @@
+$transition: all .2s ease;
+
+.ui-file {
+   padding: 23px 15px;
+   border-radius: var(--mdRd);
+   background: transparent;
+   border: 3px dashed var(--ui_dark);
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   gap: 15px;
+   cursor: pointer;
+   transition: $transition;
+
+   &__title {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      color: var(--light);
+      font-size: 25px;
+      font-weight: 400;
+      line-height: 100%;
+      color: var(--light);
+      transition: $transition;
+
+      i {
+         font-size: 30px;
+         color: inherit;
+      }
+   }
+
+   &__text {
+      font-size: 15px;
+      font-weight: 300;
+      line-height: 125%;
+      text-align: center;
+      max-width: 400px;
+      color: VAR(--text_additional);
+
+      strong {
+         color: var(--text_selected_on_dark);
+      }
+   }
+
+   &:hover {
+      background: var(--ui_dark);
+
+      .ui-file__title {
+         color: var(--action);
+      }
+   }
+
+   &.hidden {
+      display: none;
+   }
+}
+
+.ui-file-previews {
+   margin-bottom: var(--default_padding);
+   display: grid;
+   grid-template: auto / repeat(auto-fill, minmax(200px, 1fr));
+   gap: 15px;
+
+   .preview {
+      position: relative;
+      width: 100%;
+      height: 190px;
+      border-radius: var(--slRd);
+
+      img {
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+         border-radius: inherit;
+      }
+
+      &__info {
+         padding: 7px 10px;
+         background: rgba(36, 39, 45, .8);
+         border-bottom-left-radius: var(--slRd);
+         border-bottom-right-radius: var(--slRd);
+         display: flex;
+         align-items: center;
+         justify-content: space-between;
+         gap: 5px;
+         position: absolute;
+         left: 0;
+         bottom: 0;
+         width: 100%;
+         transform: translateY(15px);
+         opacity: 0;
+         visibility: visible;
+         transition: $transition;
+
+         &__item  {
+            font-size: 13px;
+            font-weight: 400;
+            line-height: 100%;
+            color: var(--light);
+
+            &.name {
+               text-overflow: ellipsis;
+               overflow: hidden;
+               max-width: 50%;
+               white-space: nowrap;
+            }
+         }
+      }
+
+      &:hover {
+         .preview__info {
+            opacity: 1;
+            visibility: visible;
+            transform: none;
+         }
+      }
+   }
+}
+
+ 

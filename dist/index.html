@@ -22,16 +22,16 @@
    <link rel="icon" href="../../img/favicon/fav_48.png" type="image/png" sizes="48x48">
    <link rel="icon" href="../../img/favicon/fav_128.png" type="image/png" sizes="128x128">
    
-   <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css?_v=20231106155531" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
-   <!-- <link rel="stylesheet" href="../../libs/css/bootstrap-grid.min.css?_v=20231106155531"> -->
+   <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css?_v=20231108214720" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+   <!-- <link rel="stylesheet" href="../../libs/css/bootstrap-grid.min.css?_v=20231108214720"> -->
 
-   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css?_v=20231106155531" />
-   <script defer src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js?_v=20231106155531"></script>
-   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js?_v=20231106155531" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-   <link rel="stylesheet" href="../../libs/css/reset.min.css?_v=20231106155531">
-   <link rel="stylesheet" as="font" href="../../fonts/fonts.css?_v=20231106155531">
-   <link rel="stylesheet" as="font" href="../../fonts/icon-font.css?_v=20231106155531">
-   <link rel="stylesheet" href="./pages/index/css/index.min.css?_v=20231106155531">
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css?_v=20231108214720" />
+   <script defer src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js?_v=20231108214720"></script>
+   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js?_v=20231108214720" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+   <link rel="stylesheet" href="../../libs/css/reset.min.css?_v=20231108214720">
+   <link rel="stylesheet" as="font" href="../../fonts/fonts.css?_v=20231108214720">
+   <link rel="stylesheet" as="font" href="../../fonts/icon-font.css?_v=20231108214720">
+   <link rel="stylesheet" href="./pages/index/css/index.min.css?_v=20231108214720">
    
    <title>Electron</title>
 </head>
@@ -1033,7 +1033,7 @@
    <div class="icon"><i class="i-arrow_up_right_long"></i></div>
 </a>
 
-         <button type="@@type" class="ui-btn btn_ui_primary btn_outlines_default btn_product-reviews-form">Оставить отзыв</button>
+         <button type="@@type" class="ui-btn btn_ui_primary btn_outlines_default btn_review-form">Оставить отзыв</button>
       </div>
 
       <div class="socials @@className">
@@ -1536,7 +1536,7 @@
       </ul>
 
       <div class="ui-close fade_close right_side mobile">
-   <i class="i-angle_right"></i>
+   <i class="i-angle_left"></i>
 </div>
    </div>
 
@@ -2150,47 +2150,84 @@
 
 
       <div class="ui-close fade_close right_side fade_filters">
-   <i class="i-angle_right"></i>
+   <i class="i-angle_left"></i>
 </div>
    </form>
 
    <div class="ui-overlay" id="overlay-filters"></div>
 </div>
-      <div class="ui-popup" id="popup-product-review">
+      <div class="ui-popup" id="popup-review">
    <div class="ui-popup__content">
 
       <!-- Здесь контент -->
-      <div class="product-review-rating-wrap">
+      <form action="" class="ui-form form_review" id="form-review">
+   <div class="popup-head">
+      <div class="popup-title-wrap">
+         <h3 class="popup-title">Рейтинг</h3>
+         <p class="popup-text">Укажите рейтинг от 1 до 5 (можно использовать десятичные значения)</p>
+      </div>
+      
+      <div class="review-rating-wrap">
          <div class="ui-star-rating">
    <label class="ui-star">
-   <input type="radio" name="product_rating" value="5.0" class="ui-star__input visually-hidden">
-   <i class="i-star ui-star__icon"></i>
-</label><label class="ui-star">
-   <input type="radio" name="product_rating" value="4.0" class="ui-star__input visually-hidden">
-   <i class="i-star ui-star__icon"></i>
-</label><label class="ui-star">
-   <input type="radio" name="product_rating" value="3.0" class="ui-star__input visually-hidden">
-   <i class="i-star ui-star__icon"></i>
-</label><label class="ui-star">
-   <input type="radio" name="product_rating" value="2.0" class="ui-star__input visually-hidden">
-   <i class="i-star ui-star__icon"></i>
-</label><label class="ui-star">
-   <input type="radio" name="product_rating" value="1.0" class="ui-star__input visually-hidden">
-   <i class="i-star ui-star__icon"></i>
-</label>
+      <input type="radio" name="product_rating" value="5.0" class="ui-star__input visually-hidden">
+      <i class="i-star ui-star__icon"></i>
+   </label>
+   
+   <label class="ui-star">
+      <input type="radio" name="product_rating" checked value="4.0" class="ui-star__input visually-hidden">
+      <i class="i-star ui-star__icon"></i>
+   </label>
+
+   <label class="ui-star">
+      <input type="radio" name="product_rating" value="3.0" class="ui-star__input visually-hidden">
+      <i class="i-star ui-star__icon"></i>
+   </label>
+ 
+   <label class="ui-star">
+      <input type="radio" name="product_rating" value="2.0" class="ui-star__input visually-hidden">
+      <i class="i-star ui-star__icon"></i>
+   </label>
+
+   <label class="ui-star">
+      <input type="radio" name="product_rating" value="1.0" class="ui-star__input visually-hidden">
+      <i class="i-star ui-star__icon"></i>
+   </label> 
 </div>
-         
+         <div class="ui-form-item">
+            <input type="text" name="rating" inputmode="numeric" autocomplete="off" placeholder="4.0" value="4.0" class="ui-input input_rating">
+         </div>
       </div>
+   </div>
+
+   <div class="ui-file-previews"></div>
+
+<label class="ui-file">
+   <input class="ui-file__input visually-hidden" type="file" id="ui-file__input" accept=".jpg, .jpeg, .png, .webp" multiple>
+   <h5 class="ui-file__title">
+      <i class="i-arrow_upload"></i> Выберите файл
+   </h5>
+   <p class="ui-file__text">Вы можете загрузить <strong>не более 6</strong> изображений в форматах <strong>.jpeg, .jpg, .png, .webp</strong>. Размер каждого не должен превышать <strong>5Мб</strong></p>
+</label> 
+
+
+
+
+   <button class="ui-btn-icon btn_i_primary btn_i_action">
+   Оствавить отзыв
+   <div class="icon"><i class="i-arrow_up_right_long"></i></div>
+</button>
+</form>
       <!-- Здесь контент -->
 
-      <div class="ui-close popup-product-review">
+      <div class="ui-close popup-review">
    <i class="i-close"></i>
 </div>
    </div>
 
-   <div class="ui-overlay popup_overlay" id="overlay-product-review-form"></div>
+   <div class="ui-overlay popup_overlay" id="overlay-review-form"></div>
 </div>
       
-      <script type="module" src="./pages/index/js/bundle-index.min.js?_v=20231106155531"></script>
+      <script type="module" src="./pages/index/js/bundle-index.min.js?_v=20231108214720"></script>
    </body>
 </html>  

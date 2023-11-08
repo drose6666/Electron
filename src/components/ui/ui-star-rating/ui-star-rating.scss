@@ -1,9 +1,9 @@
 @import './ui-star/ui-star';
 
 .ui-star-rating {
+   margin-bottom: 10px;
    display: inline-flex;
    align-items: center;
    flex-flow: row-reverse;
-   gap: 5px;
-   
+   gap: 7px;
 }

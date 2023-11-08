@@ -1,9 +1,26 @@
 <div class="ui-star-rating">
-   @@loop('./ui-star/ui-star.html', [
-      { "name": "product_rating", "value": "5.0" },
-      { "name": "product_rating", "value": "4.0" },
-      { "name": "product_rating", "value": "3.0" },
-      { "name": "product_rating", "value": "2.0" },
-      { "name": "product_rating", "value": "1.0" },
-   ])
+   <label class="ui-star">
+      <input type="radio" name="product_rating" value="5.0" class="ui-star__input visually-hidden">
+      <i class="i-star ui-star__icon"></i>
+   </label>
+   
+   <label class="ui-star">
+      <input type="radio" name="product_rating" checked value="4.0" class="ui-star__input visually-hidden">
+      <i class="i-star ui-star__icon"></i>
+   </label>
+
+   <label class="ui-star">
+      <input type="radio" name="product_rating" value="3.0" class="ui-star__input visually-hidden">
+      <i class="i-star ui-star__icon"></i>
+   </label>
+ 
+   <label class="ui-star">
+      <input type="radio" name="product_rating" value="2.0" class="ui-star__input visually-hidden">
+      <i class="i-star ui-star__icon"></i>
+   </label>
+
+   <label class="ui-star">
+      <input type="radio" name="product_rating" value="1.0" class="ui-star__input visually-hidden">
+      <i class="i-star ui-star__icon"></i>
+   </label> 
 </div>
