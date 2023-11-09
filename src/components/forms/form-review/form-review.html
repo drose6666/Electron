@@ -1,5 +1,5 @@
-<form action="" class="ui-form form_review" id="form-review">
-   <div class="popup-head">
+<form action="" class="ui-form form_review form_grid" id="form-review">
+   <div class="form-head">
       <div class="popup-title-wrap">
          <h3 class="popup-title">Рейтинг</h3>
          <p class="popup-text">Укажите рейтинг от 1 до 5 (можно использовать десятичные значения)</p>
@@ -13,11 +13,34 @@
       </div>
    </div>
 
-   @@include('../../ui/ui-input-file/ui-input-file.html')
+   <div class="form-fields">
+      <div class="ui-form-item">
+         <input type="email" name="user_subscribe" inputmode="email" autocomplete="email" placeholder="Email..." class="ui-input dark_theme">
+         <span class="error-message"></span>
+      </div>
+   
+      <div class="ui-form-item">
+         <input type="email" name="user_subscribe" inputmode="email" autocomplete="email" placeholder="Email..." class="ui-input dark_theme">
+         <span class="error-message"></span>
+      </div>
+   
+      <div class="ui-form-item full-width">
+         <textarea type="email" name="user_subscribe" inputmode="email" autocomplete="email" placeholder="Email..." class="ui-input dark_theme">
+         <span class="error-message"></span>
+      </div>
+   
+      <div class="ui-form-item full-width">
+         @@include('../../ui/ui-input-file/ui-input-file.html')
+      </div>
+   </div>
 
-   @@include('../../ui/ui-button/ui-btn-icon/ui-button-icon.html', {
-      "text": "Оствавить отзыв",
-      "className": "btn_i_primary btn_i_action",
-      "classNameIcon": "arrow_up_right_long"
-   })
+   <div class="form-submit">
+      @@include('../../ui/ui-button/ui-btn-icon/ui-button-icon.html', {
+         "text": "Оствавить отзыв",
+         "className": "btn_i_primary btn_i_action",
+         "classNameIcon": "arrow_up_right_long"
+      })
+
+      <p class="submit-text">Конфиденциальность введенных данных гарантируется</p>
+   </div>
 </form>

@@ -2,6 +2,7 @@ const fileComponent = document.querySelector('.ui-file')
 const fileInput = document.getElementById("ui-file__input");
 const imagePreviewContainer = document.querySelector(".ui-file-previews");
 
+let previewImage = {}
 
 fileInput.addEventListener("change", handleFileSelection);
 
@@ -12,11 +13,9 @@ function handleFileSelection() {
       if (file.type.match(/image.*/) && selectedFiles.length <= 6) {
          if (file.size <= 5 * 1024 * 1024) {
 
-            let previewImage = {
-               name: file.name,
-               size: formatBytes(file.size),
-               url: URL.createObjectURL(file)
-            }
+            previewImage.name = file.name,
+            previewImage.size = formatBytes(file.size),
+            previewImage.url = URL.createObjectURL(file)
             
             imagePreviewContainer.insertAdjacentHTML('beforeend', createPreviewFile(previewImage))
 
@@ -24,19 +23,11 @@ function handleFileSelection() {
             previewFileCloseBtn.forEach(closeBtn => {
                closeBtn.addEventListener('click', function () {
                   removePreviewFile(closeBtn);
-                  if (imagePreviewContainer.childElementCount >= 6) {
-                     fileComponent.classList.add('hidden')
-                  } else {
-                     fileComponent.classList.remove('hidden')
-                  }
+                  hideFileInput()
                })
             })
 
-            if (imagePreviewContainer.childElementCount >= 6) {
-               fileComponent.classList.add('hidden')
-            } else {
-               fileComponent.classList.remove('hidden')
-            }
+            hideFileInput()
             
          } else {
             console.log("Размер изображения превышает 5 Мб");
@@ -65,12 +56,10 @@ function createPreviewFile ({ name, size, url }) {
 }
 
 function removePreviewFile (currentBtnClose) {
-   
    let parent = currentBtnClose.parentNode;
    parent.remove();
    fileInput.value = '';
 }
-
 
 function formatBytes(bytes, decimals = 1) {
   if (bytes === 0) return "0 Б";
@@ -83,5 +72,7 @@ function formatBytes(bytes, decimals = 1) {
 }
 
 function hideFileInput() {
-   fileComponent.style.display = "none";
+   imagePreviewContainer.childElementCount >= 6 
+      ? fileComponent.classList.add('hidden')
+      : fileComponent.classList.remove('hidden')
 }

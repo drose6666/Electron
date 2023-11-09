@@ -101,6 +101,12 @@
    // }
 }
 
+.dark_theme {
+   @include input ( $theme: dark )
+}
+
+
+// NOTE input числового значения рейтинга в форме отзыва
 .input_rating {
    @include input ( 
       $paddingLeft: 5px,
@@ -113,7 +119,7 @@
    width: 90px;
 }
 
-// NOTE Инпут
+// NOTE Инпут Подписки на уведомления
 .input_subscribe {
    @include input (
       $type: subscribe,
@@ -121,12 +127,14 @@
    )
 }
 
+// NOTE Инпут главноего поиска
 .input_search-main {
    @include input (
       $type: mainSearch,
       $theme: dark
    )
 }
+
 
 .element-inside-input {
    position: absolute;
@@ -140,6 +148,7 @@
       right: 2px;
    }
 }
+
 
 // NOTE ui-form-item
 .ui-form-item {

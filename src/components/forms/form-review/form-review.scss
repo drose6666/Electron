@@ -1,10 +1,20 @@
 @import '../../ui/ui-input-file/ui-input-file';
 
-#form-review {
+.form_grid {
+   display: grid;
+   grid-template: auto / 1fr;
+   gap: 60px;
+
    .review-rating-wrap {
       .ui-form-item {
          display: flex;
          justify-content: flex-end;
       }
+   }
+
+   .form-fields {
+      display: grid;
+      grid-template: auto / 1fr 1fr;
+      gap: 20px;
    }
 }
