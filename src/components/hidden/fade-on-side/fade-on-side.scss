@@ -107,32 +107,6 @@ $transitionDuration: .2s ease;
 }
  
 
-// NOTE Заголовок (название компонента fade-on-side)
-.fade-on-side__name {
-   margin-bottom: 60px;
-   font-size: 40px;
-   font-weight: 500;
-   line-height: 110%;
-   color: var(--light);
-
-   &.underline {
-      padding-bottom: 10px;
-      position: relative;
-
-      &:after {
-         content: '';
-         position: absolute;
-         bottom: 0;
-         left: 0;
-         width: 70px;
-         height: 2px;
-         background: var(--light);
-         border-radius: var(--defaultRd);
-      }
-   }
-}
-
-
 // NOTE Фильтр в каталоге
 #fade-filters {
    .fade-on-side__content {

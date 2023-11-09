@@ -106,6 +106,22 @@
 }
 
 
+
+.ui-input_popup {
+   @include input (
+      $height: 50px,
+      $theme: dark,
+   )
+}
+
+
+.ui-textarea {
+   padding-top: 16px;
+   border-radius: var(--mdRd);
+   min-height: 120px;
+}
+
+
 // NOTE input числового значения рейтинга в форме отзыва
 .input_rating {
    @include input ( 

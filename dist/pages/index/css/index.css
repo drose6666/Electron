@@ -88,20 +88,17 @@ a, a:active, a:focus, a:hover {
 footer, .information-links {
   margin: 0 auto;
   max-width: 1920px;
-  width: -webkit-calc(100% - var(--default_padding) * 2);
   width: calc(100% - var(--default_padding) * 2);
 }
 
 .subscribe {
   margin: 0 auto;
   max-width: var(--full_container_width);
-  width: -webkit-calc(100% - var(--default_padding) * 2);
   width: calc(100% - var(--default_padding) * 2);
 }
 
 .product-card .img, .ui-popup__content, footer, .information-links, .subscribe__inside {
-  -webkit-border-radius: clamp(var(--optionalRd), 11cqi, var(--defaultRd));
-          border-radius: clamp(var(--optionalRd), 11cqi, var(--defaultRd));
+  border-radius: clamp(var(--optionalRd), 11cqi, var(--defaultRd));
 }
 
 .ui-checkbox__input, .visually-hidden {
@@ -182,15 +179,12 @@ footer, .information-links {
   width: 100%;
   height: 100%;
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
   background: var(--dark);
@@ -244,8 +238,7 @@ footer, .information-links {
   height: 88px;
   top: 11px;
   left: 11px;
-  -webkit-border-radius: 50%;
-          border-radius: 50%;
+  border-radius: 50%;
   -webkit-box-shadow: 0 4px 0 0 var(--action);
           box-shadow: 0 4px 0 0 var(--action);
   -webkit-transform-origin: 44px 45.1px;
@@ -285,15 +278,12 @@ footer, .information-links {
 .ui-btn {
   padding: 5px 40px;
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
   height: 45px;
@@ -301,8 +291,7 @@ footer, .information-links {
   font-size: 17px;
   font-weight: 400;
   line-height: 100%;
-  -webkit-border-radius: var(--defaultRd);
-          border-radius: var(--defaultRd);
+  border-radius: var(--defaultRd);
   white-space: nowrap;
   -webkit-transition: all 0.2s ease;
   -o-transition: all 0.2s ease;
@@ -321,15 +310,12 @@ footer, .information-links {
 .btn_outlines_default {
   padding: 5px 40px;
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
   height: 45px;
@@ -337,8 +323,7 @@ footer, .information-links {
   font-size: 17px;
   font-weight: 400;
   line-height: 100%;
-  -webkit-border-radius: var(--defaultRd);
-          border-radius: var(--defaultRd);
+  border-radius: var(--defaultRd);
   white-space: nowrap;
   -webkit-transition: all 0.2s ease;
   -o-transition: all 0.2s ease;
@@ -363,15 +348,12 @@ footer, .information-links {
 .btn_primary {
   padding: 5px 40px;
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
   height: 45px;
@@ -379,8 +361,7 @@ footer, .information-links {
   font-size: 17px;
   font-weight: 400;
   line-height: 100%;
-  -webkit-border-radius: var(--defaultRd);
-          border-radius: var(--defaultRd);
+  border-radius: var(--defaultRd);
   white-space: nowrap;
   -webkit-transition: all 0.2s ease;
   -o-transition: all 0.2s ease;
@@ -399,15 +380,12 @@ footer, .information-links {
 .btn_reg {
   padding: 5px 40px;
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
   height: 45px;
@@ -415,8 +393,7 @@ footer, .information-links {
   font-size: 17px;
   font-weight: 400;
   line-height: 100%;
-  -webkit-border-radius: var(--defaultRd);
-          border-radius: var(--defaultRd);
+  border-radius: var(--defaultRd);
   white-space: nowrap;
   -webkit-transition: all 0.2s ease;
   -o-transition: all 0.2s ease;
@@ -447,15 +424,12 @@ footer, .information-links {
 .btn_enter {
   padding: 5px 40px;
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
   height: 45px;
@@ -463,8 +437,7 @@ footer, .information-links {
   font-size: 17px;
   font-weight: 400;
   line-height: 100%;
-  -webkit-border-radius: var(--defaultRd);
-          border-radius: var(--defaultRd);
+  border-radius: var(--defaultRd);
   white-space: nowrap;
   -webkit-transition: all 0.2s ease;
   -o-transition: all 0.2s ease;
@@ -484,15 +457,12 @@ footer, .information-links {
 .btn_subscribe {
   padding: 5px 25px;
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
   height: 45px;
@@ -500,8 +470,7 @@ footer, .information-links {
   font-size: 17px;
   font-weight: 400;
   line-height: 100%;
-  -webkit-border-radius: var(--defaultRd);
-          border-radius: var(--defaultRd);
+  border-radius: var(--defaultRd);
   white-space: nowrap;
   -webkit-transition: all 0.2s ease;
   -o-transition: all 0.2s ease;
@@ -520,15 +489,12 @@ footer, .information-links {
 .btn_search-main {
   padding: 5px 40px;
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
   height: 45px;
@@ -536,8 +502,7 @@ footer, .information-links {
   font-size: 17px;
   font-weight: 400;
   line-height: 100%;
-  -webkit-border-radius: var(--defaultRd);
-          border-radius: var(--defaultRd);
+  border-radius: var(--defaultRd);
   white-space: nowrap;
   -webkit-transition: all 0.2s ease;
   -o-transition: all 0.2s ease;
@@ -557,15 +522,12 @@ footer, .information-links {
 .ui-btn-icon {
   padding: 2px 2px 2px 20px;
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
   gap: 20px;
@@ -575,8 +537,7 @@ footer, .information-links {
   line-height: 100%;
   color: var(--light);
   background: var(--dark);
-  -webkit-border-radius: var(--defaultRd);
-          border-radius: var(--defaultRd);
+  border-radius: var(--defaultRd);
   -webkit-transition: all 0.2s ease;
   -o-transition: all 0.2s ease;
   transition: all 0.2s ease;
@@ -590,20 +551,16 @@ footer, .information-links {
   width: 41px;
   height: 41px;
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
   background: var(--action);
-  -webkit-border-radius: var(--circleRd);
-          border-radius: var(--circleRd);
+  border-radius: var(--circleRd);
   -webkit-transition: all 0.2s ease;
   -o-transition: all 0.2s ease;
   transition: all 0.2s ease;
@@ -642,15 +599,12 @@ footer, .information-links {
   margin: 50px auto 0 auto;
   padding: 2px 2px 2px 20px;
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
   gap: 20px;
@@ -660,8 +614,7 @@ footer, .information-links {
   line-height: 100%;
   color: var(--light);
   background: var(--dark);
-  -webkit-border-radius: var(--defaultRd);
-          border-radius: var(--defaultRd);
+  border-radius: var(--defaultRd);
   -webkit-transition: all 0.2s ease;
   -o-transition: all 0.2s ease;
   transition: all 0.2s ease;
@@ -675,20 +628,16 @@ footer, .information-links {
   width: 41px;
   height: 41px;
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
   background: var(--action);
-  -webkit-border-radius: var(--circleRd);
-          border-radius: var(--circleRd);
+  border-radius: var(--circleRd);
   -webkit-transition: all 0.2s ease;
   -o-transition: all 0.2s ease;
   transition: all 0.2s ease;
@@ -726,15 +675,12 @@ footer, .information-links {
 .btn_i_action {
   padding: 2px 2px 2px 20px;
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
   gap: 20px;
@@ -744,8 +690,7 @@ footer, .information-links {
   line-height: 100%;
   color: var(--light);
   background: var(--dark);
-  -webkit-border-radius: var(--defaultRd);
-          border-radius: var(--defaultRd);
+  border-radius: var(--defaultRd);
   -webkit-transition: all 0.2s ease;
   -o-transition: all 0.2s ease;
   transition: all 0.2s ease;
@@ -762,20 +707,16 @@ footer, .information-links {
   width: 41px;
   height: 41px;
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
   background: var(--action);
-  -webkit-border-radius: var(--circleRd);
-          border-radius: var(--circleRd);
+  border-radius: var(--circleRd);
   -webkit-transition: all 0.2s ease;
   -o-transition: all 0.2s ease;
   transition: all 0.2s ease;
@@ -814,15 +755,12 @@ footer, .information-links {
 .btn_i_primary {
   padding: 2px 2px 2px 20px;
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
   gap: 20px;
@@ -832,8 +770,7 @@ footer, .information-links {
   line-height: 100%;
   color: var(--light);
   background: var(--dark);
-  -webkit-border-radius: var(--defaultRd);
-          border-radius: var(--defaultRd);
+  border-radius: var(--defaultRd);
   -webkit-transition: all 0.2s ease;
   -o-transition: all 0.2s ease;
   transition: all 0.2s ease;
@@ -847,20 +784,16 @@ footer, .information-links {
   width: 41px;
   height: 41px;
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
   background: var(--action);
-  -webkit-border-radius: var(--circleRd);
-          border-radius: var(--circleRd);
+  border-radius: var(--circleRd);
   -webkit-transition: all 0.2s ease;
   -o-transition: all 0.2s ease;
   transition: all 0.2s ease;
@@ -895,15 +828,12 @@ footer, .information-links {
 .btn_i_dark {
   padding: 2px 2px 2px 20px;
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
   gap: 20px;
@@ -913,8 +843,7 @@ footer, .information-links {
   line-height: 100%;
   color: var(--light);
   background: var(--dark);
-  -webkit-border-radius: var(--defaultRd);
-          border-radius: var(--defaultRd);
+  border-radius: var(--defaultRd);
   -webkit-transition: all 0.2s ease;
   -o-transition: all 0.2s ease;
   transition: all 0.2s ease;
@@ -928,20 +857,16 @@ footer, .information-links {
   width: 41px;
   height: 41px;
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
   background: var(--action);
-  -webkit-border-radius: var(--circleRd);
-          border-radius: var(--circleRd);
+  border-radius: var(--circleRd);
   -webkit-transition: all 0.2s ease;
   -o-transition: all 0.2s ease;
   transition: all 0.2s ease;
@@ -976,15 +901,12 @@ footer, .information-links {
 .ui-btn-icon {
   padding: 2px 2px 2px 20px;
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
   gap: 20px;
@@ -994,8 +916,7 @@ footer, .information-links {
   line-height: 100%;
   color: var(--light);
   background: var(--dark);
-  -webkit-border-radius: var(--defaultRd);
-          border-radius: var(--defaultRd);
+  border-radius: var(--defaultRd);
   -webkit-transition: all 0.2s ease;
   -o-transition: all 0.2s ease;
   transition: all 0.2s ease;
@@ -1009,20 +930,16 @@ footer, .information-links {
   width: 41px;
   height: 41px;
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
   background: var(--action);
-  -webkit-border-radius: var(--circleRd);
-          border-radius: var(--circleRd);
+  border-radius: var(--circleRd);
   -webkit-transition: all 0.2s ease;
   -o-transition: all 0.2s ease;
   transition: all 0.2s ease;
@@ -1061,15 +978,12 @@ footer, .information-links {
   margin: 50px auto 0 auto;
   padding: 2px 2px 2px 20px;
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
   gap: 20px;
@@ -1079,8 +993,7 @@ footer, .information-links {
   line-height: 100%;
   color: var(--light);
   background: var(--dark);
-  -webkit-border-radius: var(--defaultRd);
-          border-radius: var(--defaultRd);
+  border-radius: var(--defaultRd);
   -webkit-transition: all 0.2s ease;
   -o-transition: all 0.2s ease;
   transition: all 0.2s ease;
@@ -1094,20 +1007,16 @@ footer, .information-links {
   width: 41px;
   height: 41px;
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
   background: var(--action);
-  -webkit-border-radius: var(--circleRd);
-          border-radius: var(--circleRd);
+  border-radius: var(--circleRd);
   -webkit-transition: all 0.2s ease;
   -o-transition: all 0.2s ease;
   transition: all 0.2s ease;
@@ -1145,15 +1054,12 @@ footer, .information-links {
 .btn_i_action {
   padding: 2px 2px 2px 20px;
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
   gap: 20px;
@@ -1163,8 +1069,7 @@ footer, .information-links {
   line-height: 100%;
   color: var(--light);
   background: var(--dark);
-  -webkit-border-radius: var(--defaultRd);
-          border-radius: var(--defaultRd);
+  border-radius: var(--defaultRd);
   -webkit-transition: all 0.2s ease;
   -o-transition: all 0.2s ease;
   transition: all 0.2s ease;
@@ -1181,20 +1086,16 @@ footer, .information-links {
   width: 41px;
   height: 41px;
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
   background: var(--action);
-  -webkit-border-radius: var(--circleRd);
-          border-radius: var(--circleRd);
+  border-radius: var(--circleRd);
   -webkit-transition: all 0.2s ease;
   -o-transition: all 0.2s ease;
   transition: all 0.2s ease;
@@ -1233,15 +1134,12 @@ footer, .information-links {
 .btn_i_primary {
   padding: 2px 2px 2px 20px;
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
   gap: 20px;
@@ -1251,8 +1149,7 @@ footer, .information-links {
   line-height: 100%;
   color: var(--light);
   background: var(--dark);
-  -webkit-border-radius: var(--defaultRd);
-          border-radius: var(--defaultRd);
+  border-radius: var(--defaultRd);
   -webkit-transition: all 0.2s ease;
   -o-transition: all 0.2s ease;
   transition: all 0.2s ease;
@@ -1266,20 +1163,16 @@ footer, .information-links {
   width: 41px;
   height: 41px;
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
   background: var(--action);
-  -webkit-border-radius: var(--circleRd);
-          border-radius: var(--circleRd);
+  border-radius: var(--circleRd);
   -webkit-transition: all 0.2s ease;
   -o-transition: all 0.2s ease;
   transition: all 0.2s ease;
@@ -1314,15 +1207,12 @@ footer, .information-links {
 .btn_i_dark {
   padding: 2px 2px 2px 20px;
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
   gap: 20px;
@@ -1332,8 +1222,7 @@ footer, .information-links {
   line-height: 100%;
   color: var(--light);
   background: var(--dark);
-  -webkit-border-radius: var(--defaultRd);
-          border-radius: var(--defaultRd);
+  border-radius: var(--defaultRd);
   -webkit-transition: all 0.2s ease;
   -o-transition: all 0.2s ease;
   transition: all 0.2s ease;
@@ -1347,20 +1236,16 @@ footer, .information-links {
   width: 41px;
   height: 41px;
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
   background: var(--action);
-  -webkit-border-radius: var(--circleRd);
-          border-radius: var(--circleRd);
+  border-radius: var(--circleRd);
   -webkit-transition: all 0.2s ease;
   -o-transition: all 0.2s ease;
   transition: all 0.2s ease;
@@ -1394,19 +1279,15 @@ footer, .information-links {
 
 .ui-circle-icon {
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-border-radius: var(--circleRd);
-          border-radius: var(--circleRd);
+  border-radius: var(--circleRd);
   background: var(--light);
   width: 40px;
   height: 40px;
@@ -1506,19 +1387,15 @@ footer, .information-links {
 
 .ui-circle-icon-menu {
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-border-radius: var(--circleRd);
-          border-radius: var(--circleRd);
+  border-radius: var(--circleRd);
   width: 40px;
   height: 40px;
   background: var(--separating_contrast);
@@ -1542,20 +1419,16 @@ footer, .information-links {
   width: 22px;
   height: 22px;
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
   background: var(--action);
-  -webkit-border-radius: var(--circleRd);
-          border-radius: var(--circleRd);
+  border-radius: var(--circleRd);
 }
 .ui-circle-icon-menu .counter span {
   display: inline-block;
@@ -1587,15 +1460,12 @@ footer, .information-links {
   display: none;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
   -webkit-box-align: center;
-  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
   cursor: pointer;
@@ -1613,8 +1483,7 @@ footer, .information-links {
   height: inherit;
   width: 80%;
   background: var(--dark);
-  -webkit-border-radius: var(--xlRd);
-          border-radius: var(--xlRd);
+  border-radius: var(--xlRd);
   -webkit-transition: all 0.2s ease;
   -o-transition: all 0.2s ease;
   transition: all 0.2s ease;
@@ -1627,8 +1496,7 @@ footer, .information-links {
   width: 3px;
   height: inherit;
   background: var(--action);
-  -webkit-border-radius: var(--circleRd);
-          border-radius: var(--circleRd);
+  border-radius: var(--circleRd);
 }
 .ui-burger:hover span:after {
   width: 100%;
@@ -1641,7 +1509,6 @@ footer, .information-links {
 @media all and (max-width: 1000px) {
   .ui-burger {
     display: -webkit-box;
-    display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
   }
@@ -1649,11 +1516,9 @@ footer, .information-links {
 
 .ui-move-link {
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
   gap: 15px;
@@ -1741,15 +1606,12 @@ footer, .information-links {
 .ui-section-title-more {
   margin-bottom: 60px;
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
   gap: 20px;
@@ -1761,11 +1623,9 @@ footer, .information-links {
   .ui-section-title-more {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
         -ms-flex-direction: column;
             flex-direction: column;
     -webkit-box-align: center;
-    -webkit-align-items: center;
         -ms-flex-align: center;
             align-items: center;
   }
@@ -1774,19 +1634,44 @@ footer, .information-links {
   }
 }
 
+.hidden__title {
+  margin-bottom: 60px;
+  font-size: 40px;
+  color: var(--light);
+}
+.hidden__title.underline {
+  padding-bottom: 10px;
+  position: relative;
+}
+.hidden__title.underline:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 70px;
+  height: 2px;
+  background: var(--light);
+  border-radius: var(--defaultRd);
+}
+.hidden__title .title_fade-on-side {
+  font-weight: 500;
+  line-height: 110%;
+}
+.hidden__title .title_popup {
+  font-weight: 400;
+  line-height: 100%;
+}
+
 .ui-tabs {
   overflow-x: auto;
   overflow-y: visible;
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
   gap: var(--small_tabs_padding);
@@ -1797,7 +1682,6 @@ footer, .information-links {
 @media all and (max-width: 700px) {
   .ui-tabs {
     -webkit-box-pack: start;
-    -webkit-justify-content: flex-start;
         -ms-flex-pack: start;
             justify-content: flex-start;
   }
@@ -1806,15 +1690,12 @@ footer, .information-links {
 .ui-tab {
   padding: 5px 40px;
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
   font-family: inherit;
@@ -1824,8 +1705,7 @@ footer, .information-links {
   color: var(--dark);
   background: transparent;
   border: 1px solid var(--border);
-  -webkit-border-radius: var(--defaultRd);
-          border-radius: var(--defaultRd);
+  border-radius: var(--defaultRd);
   height: 45px;
   white-space: nowrap;
   -webkit-transition: all 0.2s ease;
@@ -1847,11 +1727,9 @@ footer, .information-links {
 .dark_theme {
   padding: 5px 10px 5px 20px;
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
   height: 45px;
@@ -1861,8 +1739,7 @@ footer, .information-links {
   line-height: 100%;
   color: var(--dark);
   background: var(--separating);
-  -webkit-border-radius: var(--defaultRd);
-          border-radius: var(--defaultRd);
+  border-radius: var(--defaultRd);
   outline: none;
   border: 1px solid transparent;
   width: 100%;
@@ -1886,14 +1763,57 @@ footer, .information-links {
   color: var(--text_additional);
 }
 
-.input_rating {
-  padding: 5px 5px 5px 5px;
+.ui-input_popup {
+  padding: 5px 10px 5px 20px;
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 50px;
+  font-family: inherit;
+  font-size: 17px;
+  font-weight: 300;
+  line-height: 100%;
+  color: var(--dark);
+  background: var(--separating);
+  border-radius: var(--defaultRd);
+  outline: none;
+  border: 1px solid transparent;
+  width: 100%;
+  height: 50px;
+  background: var(--ui_dark);
+  color: var(--light);
+}
+.ui-input_popup::-webkit-input-placeholder {
+  color: var(--text_additional);
+}
+.ui-input_popup::-moz-placeholder {
+  color: var(--text_additional);
+}
+.ui-input_popup:-ms-input-placeholder {
+  color: var(--text_additional);
+}
+.ui-input_popup::-ms-input-placeholder {
+  color: var(--text_additional);
+}
+.ui-input_popup::placeholder {
+  color: var(--text_additional);
+}
+
+.ui-textarea {
+  padding-top: 16px;
+  border-radius: var(--mdRd);
+  min-height: 120px;
+}
+
+.input_rating {
+  padding: 5px 5px 5px 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   height: 45px;
@@ -1903,8 +1823,7 @@ footer, .information-links {
   line-height: 100%;
   color: var(--dark);
   background: var(--separating);
-  -webkit-border-radius: var(--defaultRd);
-          border-radius: var(--defaultRd);
+  border-radius: var(--defaultRd);
   outline: none;
   border: 1px solid transparent;
   width: 100%;
@@ -1934,11 +1853,9 @@ footer, .information-links {
 .input_subscribe {
   padding: 5px 10px 5px 20px;
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
   height: 45px;
@@ -1948,8 +1865,7 @@ footer, .information-links {
   line-height: 100%;
   color: var(--dark);
   background: var(--separating);
-  -webkit-border-radius: var(--defaultRd);
-          border-radius: var(--defaultRd);
+  border-radius: var(--defaultRd);
   outline: none;
   border: 1px solid transparent;
   width: 100%;
@@ -1977,11 +1893,9 @@ footer, .information-links {
 .input_search-main {
   padding: 5px 10px 5px 20px;
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
   height: 45px;
@@ -1991,8 +1905,7 @@ footer, .information-links {
   line-height: 100%;
   color: var(--dark);
   background: var(--separating);
-  -webkit-border-radius: var(--defaultRd);
-          border-radius: var(--defaultRd);
+  border-radius: var(--defaultRd);
   outline: none;
   border: 1px solid transparent;
   width: 100%;
@@ -2098,8 +2011,7 @@ footer, .information-links {
   height: 23px;
   display: inline-block;
   background: transparent;
-  -webkit-border-radius: var(--xsRd);
-          border-radius: var(--xsRd);
+  border-radius: var(--xsRd);
   border: 1px solid var(--text_selected_on_dark);
   overflow: hidden;
   cursor: pointer;
@@ -2125,18 +2037,14 @@ footer, .information-links {
   transition: all 0.3s ease;
 }
 .ui-checkbox__name {
-  padding-left: -webkit-calc(23px + var(--small_tabs_padding));
   padding-left: calc(23px + var(--small_tabs_padding));
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
   gap: var(--small_tabs_padding);
@@ -2228,20 +2136,16 @@ footer, .information-links {
   width: clamp(35px, 10cqi, 45px);
   height: clamp(35px, 10cqi, 45px);
   background: var(--ui_dark);
-  -webkit-border-radius: var(--circleRd);
-          border-radius: var(--circleRd);
+  border-radius: var(--circleRd);
   -webkit-box-shadow: var(--ui_close_shadow);
           box-shadow: var(--ui_close_shadow);
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
   position: absolute;
@@ -2325,11 +2229,9 @@ footer, .information-links {
 }
 .ui-product-counter {
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
   gap: 15px;
@@ -2360,22 +2262,18 @@ footer, .information-links {
 
 .top-navigation {
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
   gap: 25px;
 }
 .top-navigation ul {
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
   gap: 25px;
@@ -2388,8 +2286,7 @@ footer, .information-links {
   display: block;
   width: 4px;
   height: 4px;
-  -webkit-border-radius: 50%;
-          border-radius: 50%;
+  border-radius: 50%;
   background: var(--dark);
 }
 .top-navigation ul li {
@@ -2432,36 +2329,29 @@ footer, .information-links {
 }
 .top-menu .ui-container {
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
 .top-menu .nav-wrap {
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
   gap: 30px;
 }
 .top-menu .btn-group {
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
   gap: var(--small_btn_padding);
@@ -2481,10 +2371,9 @@ footer, .information-links {
   padding: 110px clamp(var(--default_padding), 5cqi, var(--fade_on_the_side_padding)) 40px clamp(var(--default_padding), 5cqi, var(--fade_on_the_side_padding));
   -ms-grid-column-align: end;
       justify-self: end;
-  -webkit-align-self: start;
-      -ms-flex-item-align: start;
-              -ms-grid-row-align: start;
-          align-self: start;
+  -ms-flex-item-align: start;
+      -ms-grid-row-align: start;
+      align-self: start;
   max-width: var(--fade_on_the_side_width);
   width: 100%;
   min-height: 100dvh;
@@ -2492,7 +2381,7 @@ footer, .information-links {
   position: relative;
   container-name: fadeSideContent;
   container-type: inline-size;
-  -webkit-transform: translateX(-webkit-calc(30px + var(--fade_on_the_side_width)));
+  -webkit-transform: translateX(calc(30px + var(--fade_on_the_side_width)));
       -ms-transform: translateX(calc(30px + var(--fade_on_the_side_width)));
           transform: translateX(calc(30px + var(--fade_on_the_side_width)));
   z-index: 2;
@@ -2501,7 +2390,7 @@ footer, .information-links {
   transition: all 0.5s ease;
 }
 .fade-on-side.left_side .fade-on-side__content {
-  -webkit-transform: translateX(-webkit-calc(-1 * (30px + var(--fade_on_the_side_width))));
+  -webkit-transform: translateX(calc(-1 * (30px + var(--fade_on_the_side_width))));
       -ms-transform: translateX(calc(-1 * (30px + var(--fade_on_the_side_width))));
           transform: translateX(calc(-1 * (30px + var(--fade_on_the_side_width))));
   -ms-grid-column-align: start;
@@ -2536,15 +2425,12 @@ footer, .information-links {
 .fade-on-side .btn-group .btn_cart {
   padding: 2px 2px 2px 20px;
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
   gap: 20px;
@@ -2554,8 +2440,7 @@ footer, .information-links {
   line-height: 100%;
   color: var(--light);
   background: var(--dark);
-  -webkit-border-radius: var(--defaultRd);
-          border-radius: var(--defaultRd);
+  border-radius: var(--defaultRd);
   -webkit-transition: all 0.2s ease;
   -o-transition: all 0.2s ease;
   transition: all 0.2s ease;
@@ -2572,20 +2457,16 @@ footer, .information-links {
   width: 41px;
   height: 41px;
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
   background: var(--action);
-  -webkit-border-radius: var(--circleRd);
-          border-radius: var(--circleRd);
+  border-radius: var(--circleRd);
   -webkit-transition: all 0.2s ease;
   -o-transition: all 0.2s ease;
   transition: all 0.2s ease;
@@ -2623,15 +2504,12 @@ footer, .information-links {
 .fade-on-side .btn-group .btn_order {
   padding: 5px 40px;
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
   height: 45px;
@@ -2639,8 +2517,7 @@ footer, .information-links {
   font-size: 17px;
   font-weight: 400;
   line-height: 100%;
-  -webkit-border-radius: var(--defaultRd);
-          border-radius: var(--defaultRd);
+  border-radius: var(--defaultRd);
   white-space: nowrap;
   -webkit-transition: all 0.2s ease;
   -o-transition: all 0.2s ease;
@@ -2683,15 +2560,12 @@ footer, .information-links {
 .fade-on-side .link-group .btn_cart {
   padding: 2px 2px 2px 20px;
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
   gap: 20px;
@@ -2701,8 +2575,7 @@ footer, .information-links {
   line-height: 100%;
   color: var(--light);
   background: var(--dark);
-  -webkit-border-radius: var(--defaultRd);
-          border-radius: var(--defaultRd);
+  border-radius: var(--defaultRd);
   -webkit-transition: all 0.2s ease;
   -o-transition: all 0.2s ease;
   transition: all 0.2s ease;
@@ -2716,20 +2589,16 @@ footer, .information-links {
   width: 41px;
   height: 41px;
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
   background: var(--action);
-  -webkit-border-radius: var(--circleRd);
-          border-radius: var(--circleRd);
+  border-radius: var(--circleRd);
   -webkit-transition: all 0.2s ease;
   -o-transition: all 0.2s ease;
   transition: all 0.2s ease;
@@ -2781,29 +2650,6 @@ footer, .information-links {
         justify-self: center;
   }
 }
-.fade-on-side__name {
-  margin-bottom: 60px;
-  font-size: 40px;
-  font-weight: 500;
-  line-height: 110%;
-  color: var(--light);
-}
-.fade-on-side__name.underline {
-  padding-bottom: 10px;
-  position: relative;
-}
-.fade-on-side__name.underline:after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 70px;
-  height: 2px;
-  background: var(--light);
-  -webkit-border-radius: var(--defaultRd);
-          border-radius: var(--defaultRd);
-}
-
 #fade-filters .fade-on-side__content {
   padding: 60px clamp(var(--default_padding), 5cqi, var(--fade_on_the_side_padding)) 40px clamp(var(--default_padding), 5cqi, var(--fade_on_the_side_padding));
   max-width: 450px;
@@ -2825,15 +2671,12 @@ footer, .information-links {
 #fade-filters .btn-group .btn_filter_apply {
   padding: 5px 40px;
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
   height: 45px;
@@ -2841,8 +2684,7 @@ footer, .information-links {
   font-size: 17px;
   font-weight: 400;
   line-height: 100%;
-  -webkit-border-radius: var(--defaultRd);
-          border-radius: var(--defaultRd);
+  border-radius: var(--defaultRd);
   white-space: nowrap;
   -webkit-transition: all 0.2s ease;
   -o-transition: all 0.2s ease;
@@ -2862,15 +2704,12 @@ footer, .information-links {
 #fade-filters .btn-group .btn_filter_cancel {
   padding: 5px 40px;
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
   height: 45px;
@@ -2878,8 +2717,7 @@ footer, .information-links {
   font-size: 17px;
   font-weight: 400;
   line-height: 100%;
-  -webkit-border-radius: var(--defaultRd);
-          border-radius: var(--defaultRd);
+  border-radius: var(--defaultRd);
   white-space: nowrap;
   -webkit-transition: all 0.2s ease;
   -o-transition: all 0.2s ease;
@@ -2941,8 +2779,7 @@ footer, .information-links {
 }
 #filters-form .filters-form__content::-webkit-scrollbar-thumb {
   background: var(--ui_dark);
-  -webkit-border-radius: 50px;
-          border-radius: 50px;
+  border-radius: 50px;
 }
 #filters-form .filters-form__content::-webkit-scrollbar-corner {
   background: transparent;
@@ -2979,20 +2816,16 @@ footer, .information-links {
 }
 .cost-order .cost-item {
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-flex-wrap: wrap;
-      -ms-flex-wrap: wrap;
-          flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   gap: 15px;
   position: relative;
 }
@@ -3036,10 +2869,9 @@ footer, .information-links {
   padding: 110px clamp(var(--default_padding), 5cqi, var(--fade_on_the_side_padding)) 40px clamp(var(--default_padding), 5cqi, var(--fade_on_the_side_padding));
   -ms-grid-column-align: end;
       justify-self: end;
-  -webkit-align-self: start;
-      -ms-flex-item-align: start;
-              -ms-grid-row-align: start;
-          align-self: start;
+  -ms-flex-item-align: start;
+      -ms-grid-row-align: start;
+      align-self: start;
   max-width: var(--fade_on_the_side_width);
   width: 100%;
   min-height: 100dvh;
@@ -3047,7 +2879,7 @@ footer, .information-links {
   position: relative;
   container-name: fadeSideContent;
   container-type: inline-size;
-  -webkit-transform: translateX(-webkit-calc(30px + var(--fade_on_the_side_width)));
+  -webkit-transform: translateX(calc(30px + var(--fade_on_the_side_width)));
       -ms-transform: translateX(calc(30px + var(--fade_on_the_side_width)));
           transform: translateX(calc(30px + var(--fade_on_the_side_width)));
   z-index: 2;
@@ -3056,7 +2888,7 @@ footer, .information-links {
   transition: all 0.5s ease;
 }
 .fade-on-side.left_side .fade-on-side__content {
-  -webkit-transform: translateX(-webkit-calc(-1 * (30px + var(--fade_on_the_side_width))));
+  -webkit-transform: translateX(calc(-1 * (30px + var(--fade_on_the_side_width))));
       -ms-transform: translateX(calc(-1 * (30px + var(--fade_on_the_side_width))));
           transform: translateX(calc(-1 * (30px + var(--fade_on_the_side_width))));
   -ms-grid-column-align: start;
@@ -3091,15 +2923,12 @@ footer, .information-links {
 .fade-on-side .btn-group .btn_cart {
   padding: 2px 2px 2px 20px;
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
   gap: 20px;
@@ -3109,8 +2938,7 @@ footer, .information-links {
   line-height: 100%;
   color: var(--light);
   background: var(--dark);
-  -webkit-border-radius: var(--defaultRd);
-          border-radius: var(--defaultRd);
+  border-radius: var(--defaultRd);
   -webkit-transition: all 0.2s ease;
   -o-transition: all 0.2s ease;
   transition: all 0.2s ease;
@@ -3127,20 +2955,16 @@ footer, .information-links {
   width: 41px;
   height: 41px;
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
   background: var(--action);
-  -webkit-border-radius: var(--circleRd);
-          border-radius: var(--circleRd);
+  border-radius: var(--circleRd);
   -webkit-transition: all 0.2s ease;
   -o-transition: all 0.2s ease;
   transition: all 0.2s ease;
@@ -3178,15 +3002,12 @@ footer, .information-links {
 .fade-on-side .btn-group .btn_order {
   padding: 5px 40px;
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
   height: 45px;
@@ -3194,8 +3015,7 @@ footer, .information-links {
   font-size: 17px;
   font-weight: 400;
   line-height: 100%;
-  -webkit-border-radius: var(--defaultRd);
-          border-radius: var(--defaultRd);
+  border-radius: var(--defaultRd);
   white-space: nowrap;
   -webkit-transition: all 0.2s ease;
   -o-transition: all 0.2s ease;
@@ -3238,15 +3058,12 @@ footer, .information-links {
 .fade-on-side .link-group .btn_cart {
   padding: 2px 2px 2px 20px;
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
   gap: 20px;
@@ -3256,8 +3073,7 @@ footer, .information-links {
   line-height: 100%;
   color: var(--light);
   background: var(--dark);
-  -webkit-border-radius: var(--defaultRd);
-          border-radius: var(--defaultRd);
+  border-radius: var(--defaultRd);
   -webkit-transition: all 0.2s ease;
   -o-transition: all 0.2s ease;
   transition: all 0.2s ease;
@@ -3271,20 +3087,16 @@ footer, .information-links {
   width: 41px;
   height: 41px;
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
   background: var(--action);
-  -webkit-border-radius: var(--circleRd);
-          border-radius: var(--circleRd);
+  border-radius: var(--circleRd);
   -webkit-transition: all 0.2s ease;
   -o-transition: all 0.2s ease;
   transition: all 0.2s ease;
@@ -3336,29 +3148,6 @@ footer, .information-links {
         justify-self: center;
   }
 }
-.fade-on-side__name {
-  margin-bottom: 60px;
-  font-size: 40px;
-  font-weight: 500;
-  line-height: 110%;
-  color: var(--light);
-}
-.fade-on-side__name.underline {
-  padding-bottom: 10px;
-  position: relative;
-}
-.fade-on-side__name.underline:after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 70px;
-  height: 2px;
-  background: var(--light);
-  -webkit-border-radius: var(--defaultRd);
-          border-radius: var(--defaultRd);
-}
-
 #fade-filters .fade-on-side__content {
   padding: 60px clamp(var(--default_padding), 5cqi, var(--fade_on_the_side_padding)) 40px clamp(var(--default_padding), 5cqi, var(--fade_on_the_side_padding));
   max-width: 450px;
@@ -3380,15 +3169,12 @@ footer, .information-links {
 #fade-filters .btn-group .btn_filter_apply {
   padding: 5px 40px;
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
   height: 45px;
@@ -3396,8 +3182,7 @@ footer, .information-links {
   font-size: 17px;
   font-weight: 400;
   line-height: 100%;
-  -webkit-border-radius: var(--defaultRd);
-          border-radius: var(--defaultRd);
+  border-radius: var(--defaultRd);
   white-space: nowrap;
   -webkit-transition: all 0.2s ease;
   -o-transition: all 0.2s ease;
@@ -3417,15 +3202,12 @@ footer, .information-links {
 #fade-filters .btn-group .btn_filter_cancel {
   padding: 5px 40px;
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
   height: 45px;
@@ -3433,8 +3215,7 @@ footer, .information-links {
   font-size: 17px;
   font-weight: 400;
   line-height: 100%;
-  -webkit-border-radius: var(--defaultRd);
-          border-radius: var(--defaultRd);
+  border-radius: var(--defaultRd);
   white-space: nowrap;
   -webkit-transition: all 0.2s ease;
   -o-transition: all 0.2s ease;
@@ -3496,8 +3277,7 @@ footer, .information-links {
 }
 #filters-form .filters-form__content::-webkit-scrollbar-thumb {
   background: var(--ui_dark);
-  -webkit-border-radius: 50px;
-          border-radius: 50px;
+  border-radius: 50px;
 }
 #filters-form .filters-form__content::-webkit-scrollbar-corner {
   background: transparent;
@@ -3725,12 +3505,10 @@ footer, .information-links {
 }
 .mobile-menu .additional-list {
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
 }
@@ -3750,22 +3528,18 @@ footer, .information-links {
   margin-top: 30px;
   margin-bottom: clamp(30px, 10cqi, 47px);
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
 }
 .mobile-menu .contact-item-wrap .contact-info__item {
   display: -webkit-inline-box;
-  display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
   -webkit-box-align: center;
-  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
 }
@@ -3807,7 +3581,6 @@ footer, .information-links {
   margin: 40px 0;
 }
 .search-content .search-history .history-item {
-  padding: 8px 0 8px -webkit-calc(19px + 15px);
   padding: 8px 0 8px calc(19px + 15px);
   position: relative;
   cursor: pointer;
@@ -3845,15 +3618,12 @@ footer, .information-links {
 }
 .search-content .search-type-list .type-item {
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
   gap: 30px;
@@ -3898,11 +3668,9 @@ footer, .information-links {
   .search-content .search-type-list .type-item {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
         -ms-flex-direction: column;
             flex-direction: column;
     -webkit-box-align: start;
-    -webkit-align-items: flex-start;
         -ms-flex-align: start;
             align-items: flex-start;
     gap: 15px;
@@ -3913,11 +3681,9 @@ footer, .information-links {
 }
 .header-navigation ul {
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
   gap: clamp(17px, 3.2cqi, 45px);
@@ -3962,11 +3728,9 @@ footer, .information-links {
 
 .header-ui {
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
   gap: var(--default_padding);
@@ -3980,30 +3744,24 @@ footer, .information-links {
 header {
   margin: 0 var(--default_padding);
   background: var(--separating);
-  -webkit-border-radius: var(--mdRd);
-          border-radius: var(--mdRd);
+  border-radius: var(--mdRd);
 }
 header .ui-container {
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
 header .nav-wrap {
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
   gap: 70px;
@@ -4027,8 +3785,7 @@ header .nav-wrap {
 header .logo {
   width: 60px;
   height: 60px;
-  -webkit-border-radius: 50%;
-          border-radius: 50%;
+  border-radius: 50%;
   background: var(--dark);
 }
 
@@ -4045,18 +3802,14 @@ header .logo {
           transform: translateY(-50%);
   width: clamp(35px, 7cqw, 46px);
   height: clamp(35px, 7cqw, 46px);
-  -webkit-border-radius: var(--circleRd);
-          border-radius: var(--circleRd);
+  border-radius: var(--circleRd);
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
   background: var(--dark);
@@ -4099,15 +3852,12 @@ header .logo {
 }
 .swiper-container .reviews-arrows {
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
   gap: var(--small_btn_padding);
@@ -4125,15 +3875,12 @@ header .logo {
 .swiper-container .swiper-pagination {
   margin-top: 30px;
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
   width: 100% !important;
@@ -4160,11 +3907,9 @@ header .logo {
 
 .socials {
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
   gap: var(--slRd);
@@ -4174,18 +3919,14 @@ header .logo {
   height: 35px;
   background: transparent;
   border: 1px solid var(--border);
-  -webkit-border-radius: var(--circleRd);
-          border-radius: var(--circleRd);
+  border-radius: var(--circleRd);
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-transition: all 0.2s ease;
@@ -4253,8 +3994,7 @@ header .logo {
   width: clamp(150px, 35cqw, 220px);
   height: clamp(150px, 35cqw, 220px);
   background: #E0CDD1;
-  -webkit-border-radius: var(--circleRd);
-          border-radius: var(--circleRd);
+  border-radius: var(--circleRd);
   z-index: 0;
   -webkit-transition: all 1s ease;
   -o-transition: all 1s ease;
@@ -4271,8 +4011,7 @@ header .logo {
   width: 160%;
   height: 160%;
   border: 1px solid #E6E8EE;
-  -webkit-border-radius: var(--circleRd);
-          border-radius: var(--circleRd);
+  border-radius: var(--circleRd);
 }
 .decor-circle.right {
   bottom: -15%;
@@ -4293,19 +4032,15 @@ header .logo {
 .category-card__inside {
   position: relative;
   overflow: hidden;
-  -webkit-border-radius: clamp(var(--optionalRd), 11cqi, var(--defaultRd));
-          border-radius: clamp(var(--optionalRd), 11cqi, var(--defaultRd));
+  border-radius: clamp(var(--optionalRd), 11cqi, var(--defaultRd));
   background: #F3F5F7;
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: end;
-  -webkit-align-items: flex-end;
       -ms-flex-align: end;
           align-items: flex-end;
   -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
       -ms-flex-pack: start;
           justify-content: flex-start;
   min-height: clamp(310px, 75cqi, 380px);
@@ -4314,12 +4049,10 @@ header .logo {
 .category-card__inside .content {
   padding: 0 15px 25px clamp(15px, 7cqi, 30px);
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 10px;
@@ -4451,8 +4184,7 @@ header .logo {
 }
 .category-card.card_search .category-card__inside {
   min-height: 80px;
-  -webkit-border-radius: var(--smRd);
-          border-radius: var(--smRd);
+  border-radius: var(--smRd);
 }
 .category-card.card_search .category-card__inside .img {
   max-width: clamp(120px, 85cqi, 910px);
@@ -4478,19 +4210,15 @@ header .logo {
   padding: 15px 5px;
   min-height: 100px;
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-border-radius: clamp(var(--slRd), 3cqi, var(--mdRd));
-          border-radius: clamp(var(--slRd), 3cqi, var(--mdRd));
+  border-radius: clamp(var(--slRd), 3cqi, var(--mdRd));
   background: var(--separating);
   container-type: inline-size;
   -webkit-transition: all 0.3s ease;
@@ -4525,8 +4253,7 @@ header .logo {
   height: 39px;
   min-height: 39px;
   background: var(--separating_contrast);
-  -webkit-border-radius: var(--xsRd);
-          border-radius: var(--xsRd);
+  border-radius: var(--xsRd);
 }
 .brand-card.card_search img {
   max-width: 100%;
@@ -4682,41 +4409,33 @@ header .logo {
 }
 .information-links__item {
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-align-self: center;
-      -ms-flex-item-align: center;
-              -ms-grid-row-align: center;
-          align-self: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
   gap: var(--default_padding);
 }
 .information-links__item .icon {
   width: 60px;
   height: 60px;
   -webkit-box-flex: 0;
-  -webkit-flex: 0 0 60px;
       -ms-flex: 0 0 60px;
           flex: 0 0 60px;
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
   background: transparent;
-  -webkit-border-radius: var(--circleRd);
-          border-radius: var(--circleRd);
+  border-radius: var(--circleRd);
   border: 1px solid var(--dark);
   -webkit-transition: all 0.2s ease;
   -o-transition: all 0.2s ease;
@@ -4737,11 +4456,9 @@ header .logo {
 }
 .information-links__item .info .link {
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
   gap: var(--small_btn_padding);
@@ -4795,27 +4512,22 @@ header .logo {
   .information-links__item {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
         -ms-flex-direction: column;
             flex-direction: column;
     -webkit-box-align: center;
-    -webkit-align-items: center;
         -ms-flex-align: center;
             align-items: center;
     gap: var(--small_tabs_padding);
   }
   .information-links__item .info {
     display: -webkit-box;
-    display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
         -ms-flex-direction: column;
             flex-direction: column;
     -webkit-box-align: center;
-    -webkit-align-items: center;
         -ms-flex-align: center;
             align-items: center;
   }
@@ -4840,16 +4552,14 @@ footer .footer-inside {
       grid-template: auto/minmax(250px, 350px) 1fr -webkit-min-content;
       grid-template: auto/minmax(250px, 350px) 1fr min-content;
   -webkit-box-align: start;
-  -webkit-align-items: flex-start;
       -ms-flex-align: start;
           align-items: flex-start;
   gap: clamp(40px, 3cqi, 112px);
 }
 footer .footer-col {
-  -webkit-align-self: center;
-      -ms-flex-item-align: center;
-              -ms-grid-row-align: center;
-          align-self: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 footer .footer-col.main .logo {
   display: inline-block;
@@ -4869,15 +4579,12 @@ footer .footer-col.main .text {
 }
 footer .footer-col.navigation {
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: start;
-  -webkit-align-items: flex-start;
       -ms-flex-align: start;
           align-items: flex-start;
   -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
   -ms-grid-column-align: center;
@@ -4964,7 +4671,6 @@ footer .footer-col.contact .contact-inside a.contact-inside__item:hover {
   }
   footer .footer-col.main {
     -webkit-box-ordinal-group: 2;
-    -webkit-order: 1;
         -ms-flex-order: 1;
             order: 1;
   }
@@ -4973,7 +4679,6 @@ footer .footer-col.contact .contact-inside a.contact-inside__item:hover {
   }
   footer .footer-col.contact {
     -webkit-box-ordinal-group: 3;
-    -webkit-order: 2;
         -ms-flex-order: 2;
             order: 2;
     -ms-grid-column-align: end;
@@ -4985,14 +4690,12 @@ footer .footer-col.contact .contact-inside a.contact-inside__item:hover {
   footer .footer-col.navigation {
     margin-top: 60px;
     -webkit-box-ordinal-group: 4;
-    -webkit-order: 3;
         -ms-flex-order: 3;
             order: 3;
     -ms-grid-column: 1;
     -ms-grid-column-span: 2;
     grid-column: 1/3;
     -webkit-box-pack: justify;
-    -webkit-justify-content: space-between;
         -ms-flex-pack: justify;
             justify-content: space-between;
     width: 100%;
@@ -5016,16 +4719,13 @@ footer .footer-col.contact .contact-inside a.contact-inside__item:hover {
     -ms-grid-column-align: start;
         justify-self: start;
     display: -webkit-box;
-    display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
         -ms-flex-direction: column;
             flex-direction: column;
     -webkit-box-align: center;
-    -webkit-align-items: center;
         -ms-flex-align: center;
             align-items: center;
   }
@@ -5039,16 +4739,13 @@ footer .footer-col.contact .contact-inside a.contact-inside__item:hover {
     max-width: 300px;
     width: 100%;
     display: -webkit-box;
-    display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
         -ms-flex-direction: column;
             flex-direction: column;
     -webkit-box-align: center;
-    -webkit-align-items: center;
         -ms-flex-align: center;
             align-items: center;
   }
@@ -5072,20 +4769,16 @@ footer .footer-col.contact .contact-inside a.contact-inside__item:hover {
   }
   footer .footer-col.navigation, footer .footer-col .navigation-col, footer .footer-col .navigation-list {
     display: -webkit-box;
-    display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
         -ms-flex-direction: column;
             flex-direction: column;
     -webkit-box-align: center;
-    -webkit-align-items: center;
         -ms-flex-align: center;
             align-items: center;
     -webkit-box-pack: center;
-    -webkit-justify-content: center;
         -ms-flex-pack: center;
             justify-content: center;
   }
@@ -5106,30 +4799,24 @@ footer .footer-col.contact .contact-inside a.contact-inside__item:hover {
   padding: var(--default_padding) 0;
   border-top: 1px solid var(--border_dark);
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
   gap: 15px;
 }
 .copyright .payments {
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
 }
@@ -5137,7 +4824,6 @@ footer .footer-col.contact .contact-inside a.contact-inside__item:hover {
   width: clamp(28px, 3cqw, 30px);
   height: clamp(28px, 3cqw, 30px);
   -webkit-box-flex: 0;
-  -webkit-flex: 0 0 clamp(28px, 3cqw, 30px);
       -ms-flex: 0 0 clamp(28px, 3cqw, 30px);
           flex: 0 0 clamp(28px, 3cqw, 30px);
   display: inline-block;
@@ -5155,16 +4841,13 @@ footer .footer-col.contact .contact-inside a.contact-inside__item:hover {
 }
 .copyright .rules {
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-flex-wrap: wrap;
-      -ms-flex-wrap: wrap;
-          flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   gap: 25px;
 }
 .copyright .rules__link {
@@ -5195,15 +4878,12 @@ footer .footer-col.contact .contact-inside a.contact-inside__item:hover {
     padding: 30px 0 var(--default_padding) 0;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
         -ms-flex-direction: column;
             flex-direction: column;
     -webkit-box-align: center;
-    -webkit-align-items: center;
         -ms-flex-align: center;
             align-items: center;
     -webkit-box-pack: center;
-    -webkit-justify-content: center;
         -ms-flex-pack: center;
             justify-content: center;
   }
@@ -5213,15 +4893,12 @@ footer .footer-col.contact .contact-inside a.contact-inside__item:hover {
     margin: 10px 0;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
         -ms-flex-direction: column;
             flex-direction: column;
     -webkit-box-align: center;
-    -webkit-align-items: center;
         -ms-flex-align: center;
             align-items: center;
     -webkit-box-pack: center;
-    -webkit-justify-content: center;
         -ms-flex-pack: center;
             justify-content: center;
     gap: 10px;
@@ -5231,8 +4908,7 @@ footer .footer-col.contact .contact-inside a.contact-inside__item:hover {
 .product-card-cart {
   padding: 5px 15px 5px 5px;
   position: relative;
-  -webkit-border-radius: var(--mdRd);
-          border-radius: var(--mdRd);
+  border-radius: var(--mdRd);
   background: var(--ui_dark);
   display: -ms-grid;
   display: grid;
@@ -5244,8 +4920,7 @@ footer .footer-col.contact .contact-inside a.contact-inside__item:hover {
 .product-card-cart .img {
   width: 100%;
   background: var(--separating);
-  -webkit-border-radius: var(--slRd);
-          border-radius: var(--slRd);
+  border-radius: var(--slRd);
   -webkit-transition: all 0.2s ease;
   -o-transition: all 0.2s ease;
   transition: all 0.2s ease;
@@ -5259,19 +4934,16 @@ footer .footer-col.contact .contact-inside a.contact-inside__item:hover {
 }
 .product-card-cart .content {
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 20px;
-  -webkit-align-self: center;
-      -ms-flex-item-align: center;
-              -ms-grid-row-align: center;
-          align-self: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 .product-card-cart .content .product-name {
   margin-bottom: 10px;
@@ -5290,11 +4962,9 @@ footer .footer-col.contact .contact-inside a.contact-inside__item:hover {
 }
 .product-card-cart .content .product-options {
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
   gap: 5px;
@@ -5307,8 +4977,7 @@ footer .footer-col.contact .contact-inside a.contact-inside__item:hover {
   color: var(--text_selected_on_dark);
   background: var(--border_dark);
   border: 1px solid transparent;
-  -webkit-border-radius: var(--defaultRd);
-          border-radius: var(--defaultRd);
+  border-radius: var(--defaultRd);
   white-space: nowrap;
   -webkit-transition: all 0.2s ease;
   -o-transition: all 0.2s ease;
@@ -5320,23 +4989,19 @@ footer .footer-col.contact .contact-inside a.contact-inside__item:hover {
 }
 .product-card-cart .content .product-options .color-item {
   margin-right: 5px;
-  -webkit-border-radius: var(--circleRd);
-          border-radius: var(--circleRd);
+  border-radius: var(--circleRd);
   background: #DE8E86;
   width: 22px;
   height: 22px;
 }
 .product-card-cart .content .additional-info {
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
   gap: var(--default_padding);
@@ -5363,19 +5028,18 @@ footer .footer-col.contact .contact-inside a.contact-inside__item:hover {
 }
 
 .ui-popup {
-  padding: 20px;
+  padding: 20px clamp(10px, 3cqi, 20px);
 }
 .ui-popup__content {
-  padding: 50px clamp(20px, 4cqi, 50px);
+  padding: clamp(35px, 4cqi, 50px) clamp(20px, 4cqi, 50px);
   max-width: 820px;
   width: 100%;
   background: var(--dark);
   -webkit-box-shadow: var(--popup_shadow);
           box-shadow: var(--popup_shadow);
-  -webkit-align-self: center;
-      -ms-flex-item-align: center;
-              -ms-grid-row-align: center;
-          align-self: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
   -ms-grid-column-align: center;
       justify-self: center;
   position: relative;
@@ -5422,43 +5086,22 @@ footer .footer-col.contact .contact-inside a.contact-inside__item:hover {
   max-width: 320px;
 }
 
-.popup-head {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: start;
-  -webkit-align-items: flex-start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  gap: 15px;
-}
-
 .ui-file {
   padding: 23px 15px;
-  -webkit-border-radius: var(--mdRd);
-          border-radius: var(--mdRd);
+  border-radius: var(--mdRd);
   background: transparent;
   border: 3px dashed var(--ui_dark);
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
   -webkit-box-align: center;
-  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
   gap: 15px;
@@ -5469,11 +5112,9 @@ footer .footer-col.contact .contact-inside a.contact-inside__item:hover {
 }
 .ui-file__title {
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
   gap: 15px;
@@ -5512,7 +5153,6 @@ footer .footer-col.contact .contact-inside a.contact-inside__item:hover {
 }
 
 .ui-file-previews {
-  margin-bottom: var(--default_padding);
   display: -ms-grid;
   display: grid;
   grid-template: auto/repeat(auto-fill, minmax(200px, 1fr));
@@ -5522,34 +5162,27 @@ footer .footer-col.contact .contact-inside a.contact-inside__item:hover {
   position: relative;
   width: 100%;
   height: 190px;
-  -webkit-border-radius: var(--slRd);
-          border-radius: var(--slRd);
+  border-radius: var(--slRd);
 }
 .ui-file-previews .preview img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  -webkit-border-radius: inherit;
-          border-radius: inherit;
+  border-radius: inherit;
 }
 .ui-file-previews .preview__info {
   padding: 7px 10px;
   background: rgba(36, 39, 45, 0.8);
-  -webkit-border-bottom-left-radius: var(--slRd);
-          border-bottom-left-radius: var(--slRd);
-  -webkit-border-bottom-right-radius: var(--slRd);
-          border-bottom-right-radius: var(--slRd);
+  border-bottom-left-radius: var(--slRd);
+  border-bottom-right-radius: var(--slRd);
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
   gap: 5px;
@@ -5597,13 +5230,23 @@ footer .footer-col.contact .contact-inside a.contact-inside__item:hover {
 }
 .form_grid .review-rating-wrap .ui-form-item {
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: end;
-  -webkit-justify-content: flex-end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+}
+.form_grid .form-head {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 15px;
 }
 .form_grid .form-fields {
   display: -ms-grid;
@@ -5613,7 +5256,87 @@ footer .footer-col.contact .contact-inside a.contact-inside__item:hover {
       grid-template: auto/1fr 1fr;
   gap: 20px;
 }
+.form_grid .form-submit {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 15px;
+}
+.form_grid .form-submit__text {
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 100%;
+  color: var(--text_additional);
+  max-width: 200px;
+}
+.form_grid .full-width {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-column: 1/3;
+  gap: 20px;
+}
 
+@container uiPopup (max-width: 500px) {
+  .form_grid {
+    gap: 50px;
+  }
+  .form_grid .form-fields {
+    -ms-grid-rows: auto;
+    -ms-grid-columns: 1fr;
+        grid-template: auto/1fr;
+  }
+  .form_grid .full-width {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1/2;
+  }
+  .form_grid .form-head {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    gap: 20px;
+  }
+  .form_grid .form-submit {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 15px;
+  }
+  .form_grid .form-submit__text {
+    text-align: center;
+    max-width: 400px;
+  }
+  .form_grid .popup-title, .form_grid .popup-text {
+    text-align: center;
+  }
+  .form_grid .review-rating-wrap .ui-form-item {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .form_grid .ui-star-rating {
+    margin-bottom: 15px;
+  }
+}
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -5633,8 +5356,7 @@ footer .footer-col.contact .contact-inside a.contact-inside__item:hover {
 
 ::-webkit-scrollbar-thumb {
   background: var(--action);
-  -webkit-border-radius: 50px;
-          border-radius: 50px;
+  border-radius: 50px;
 }
 
 ::-webkit-scrollbar-corner {
@@ -5713,12 +5435,10 @@ i {
   top: clamp(12px, 5cqi, 20px);
   right: clamp(12px, 5cqi, 20px);
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
   gap: clamp(6px, 3cqi, 10px);
@@ -5730,16 +5450,13 @@ i {
   padding: 0 10px;
   margin-top: clamp(12px, 5cqi, 15px);
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
   -webkit-box-align: center;
-  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
   gap: 10px;
@@ -5902,8 +5619,7 @@ i {
   padding: clamp(40px, 5cqi, 50px) clamp(10px, 2cqi, 20px);
   position: relative;
   overflow: hidden;
-  -webkit-border-radius: clamp(var(--optionalRd), 11cqi, var(--defaultRd));
-          border-radius: clamp(var(--optionalRd), 11cqi, var(--defaultRd));
+  border-radius: clamp(var(--optionalRd), 11cqi, var(--defaultRd));
   min-height: clamp(470px, 45cqi, 660px);
   container-type: inline-size;
   -webkit-transition: all 0.3s ease;
@@ -5912,16 +5628,13 @@ i {
 }
 .collection-card .content {
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
   -webkit-box-align: center;
-  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
   gap: var(--default_padding);
@@ -5961,8 +5674,7 @@ i {
   font-weight: 400;
   background: var(--light);
   color: var(--dark);
-  -webkit-border-radius: var(--defaultRd);
-          border-radius: var(--defaultRd);
+  border-radius: var(--defaultRd);
   -webkit-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
@@ -6030,10 +5742,8 @@ i {
   margin: clamp(180px, 30cqi, 260px) auto 0 auto;
   padding: clamp(60px, 7cqi, 80px) clamp(20px, 3cqi, 50px);
   max-width: 1580px;
-  width: -webkit-calc(100% - var(--default_padding) * 2);
   width: calc(100% - var(--default_padding) * 2);
-  -webkit-border-radius: var(--defaultRd);
-          border-radius: var(--defaultRd);
+  border-radius: var(--defaultRd);
   background: var(--separating);
   position: relative;
   container-type: inline-size;
@@ -6049,11 +5759,9 @@ i {
 .about-section .content .btn-group {
   margin-bottom: 50px;
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
   gap: clamp(var(--small_btn_padding), 3cqi, var(--default_padding));
@@ -6072,25 +5780,21 @@ i {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  -webkit-border-radius: var(--defaultRd);
-          border-radius: var(--defaultRd);
+  border-radius: var(--defaultRd);
 }
 .about-section .img .video-open {
   padding: clamp(20px, 2cqi, 30px);
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
   gap: clamp(25px, 3cqi, 40px);
   max-width: clamp(240px, 22cqi, 310px);
   width: 100%;
   background: var(--dark);
-  -webkit-border-radius: clamp(var(--slRd), 3cqi, var(--lgRd));
-          border-radius: clamp(var(--slRd), 3cqi, var(--lgRd));
+  border-radius: clamp(var(--slRd), 3cqi, var(--lgRd));
   -webkit-box-shadow: var(--dark_block_shadow);
           box-shadow: var(--dark_block_shadow);
   position: absolute;
@@ -6103,26 +5807,21 @@ i {
 }
 .about-section .img .video-open .icon {
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
   width: clamp(45px, 5cqw, 60px);
   height: clamp(45px, 5cqw, 60px);
   -webkit-box-flex: 0;
-  -webkit-flex: 0 0 clamp(45px, 5cqw, 60px);
       -ms-flex: 0 0 clamp(45px, 5cqw, 60px);
           flex: 0 0 clamp(45px, 5cqw, 60px);
   background: var(--light);
-  -webkit-border-radius: var(--circleRd);
-          border-radius: var(--circleRd);
+  border-radius: var(--circleRd);
   -webkit-box-shadow: var(--circe_light_shadow);
           box-shadow: var(--circe_light_shadow);
   -webkit-transition: inherit;
@@ -6171,9 +5870,8 @@ i {
   }
   .about-section .content .btn-group {
     margin-bottom: clamp(40px, 5cqi, 50px);
-    -webkit-flex-wrap: wrap;
-        -ms-flex-wrap: wrap;
-            flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
   .about-section .img {
     margin-top: 100px;
@@ -6186,8 +5884,7 @@ i {
     height: 300px;
   }
   .about-section .img img {
-    -webkit-border-radius: clamp(var(--optionalRd), 11cqi, var(--defaultRd));
-            border-radius: clamp(var(--optionalRd), 11cqi, var(--defaultRd));
+    border-radius: clamp(var(--optionalRd), 11cqi, var(--defaultRd));
     position: absolute;
     top: 0;
     left: 0;
@@ -6226,8 +5923,7 @@ i {
 }
 .review .review-inside {
   padding: clamp(20px, 8cqi, 40px);
-  -webkit-border-radius: clamp(var(--optionalRd), 11cqi, var(--defaultRd));
-          border-radius: clamp(var(--optionalRd), 11cqi, var(--defaultRd));
+  border-radius: clamp(var(--optionalRd), 11cqi, var(--defaultRd));
   background: var(--separating);
 }
 .review .review-inside .author {
@@ -6259,26 +5955,21 @@ i {
 }
 .review .review-inside .info {
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
   gap: 15px;
 }
 .review .review-inside .info .rating {
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
   gap: 15px;
@@ -6296,11 +5987,9 @@ i {
   .review .review-inside .info {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
         -ms-flex-direction: column;
             flex-direction: column;
     -webkit-box-align: start;
-    -webkit-align-items: flex-start;
         -ms-flex-align: start;
             align-items: flex-start;
     gap: 10px;
@@ -6327,16 +6016,13 @@ i {
 
 .post-info {
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-flex-wrap: wrap;
-      -ms-flex-wrap: wrap;
-          flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   gap: clamp(10px, 2cqi, 15px);
 }
 .post-info__item {
@@ -6345,11 +6031,9 @@ i {
   line-height: 100%;
   color: var(--text_selected_on_dark);
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
   gap: 10px;
@@ -6370,8 +6054,7 @@ i {
   display: block;
   width: 4px;
   height: 4px;
-  -webkit-border-radius: var(--circleRd);
-          border-radius: var(--circleRd);
+  border-radius: var(--circleRd);
   background: var(--action);
 }
 .post-info__item.link:hover {
@@ -6384,8 +6067,7 @@ i {
 .post-card .post-inside {
   padding: 30px clamp(17px, 7cqi, 40px);
   position: relative;
-  -webkit-border-radius: clamp(var(--optionalRd), 11cqi, var(--lgRd));
-          border-radius: clamp(var(--optionalRd), 11cqi, var(--lgRd));
+  border-radius: clamp(var(--optionalRd), 11cqi, var(--lgRd));
   overflow: hidden;
   min-height: 370px;
   width: 100%;
@@ -6393,20 +6075,16 @@ i {
 }
 .post-card .post-inside .content {
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
   -webkit-box-align: start;
-  -webkit-align-items: flex-start;
       -ms-flex-align: start;
           align-items: flex-start;
   -webkit-box-pack: end;
-  -webkit-justify-content: flex-end;
       -ms-flex-pack: end;
           justify-content: flex-end;
   width: 100%;
@@ -6453,11 +6131,9 @@ i {
 }
 .post-card .post-inside .quick-nav {
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
   position: absolute;
@@ -6514,15 +6190,12 @@ i {
 .category-post {
   padding: 10px 20px;
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: center;
-  -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
   font-size: 17px;
@@ -6532,8 +6205,7 @@ i {
   color: var(--dark);
   text-align: center;
   background: var(--separating_contrast);
-  -webkit-border-radius: var(--defaultRd);
-          border-radius: var(--defaultRd);
+  border-radius: var(--defaultRd);
   cursor: pointer;
   -webkit-transition: all 0.2s ease;
   -o-transition: all 0.2s ease;
@@ -6559,16 +6231,13 @@ i {
 .category-post-list {
   margin-bottom: clamp(15px, 3cqi, 25px);
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-flex-wrap: wrap;
-      -ms-flex-wrap: wrap;
-          flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   gap: 10px;
 }
 
@@ -6626,8 +6295,7 @@ i {
 }
 .filter-list::-webkit-scrollbar-thumb {
   background: var(--text_additional);
-  -webkit-border-radius: 50px;
-          border-radius: 50px;
+  border-radius: 50px;
 }
 .filter-list::-webkit-scrollbar-corner {
   background: transparent;
@@ -6666,11 +6334,9 @@ i {
 .price-range .input_filter-price {
   padding: 5px 10px 5px 20px;
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
   height: 45px;
@@ -6680,8 +6346,7 @@ i {
   line-height: 100%;
   color: var(--dark);
   background: var(--separating);
-  -webkit-border-radius: var(--defaultRd);
-          border-radius: var(--defaultRd);
+  border-radius: var(--defaultRd);
   outline: none;
   border: 1px solid transparent;
   width: 100%;
@@ -6709,10 +6374,9 @@ i {
 .price-range .separate {
   font-size: 20px;
   color: var(--text_additional);
-  -webkit-align-self: center;
-      -ms-flex-item-align: center;
-              -ms-grid-row-align: center;
-          align-self: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 .price-range .label {
   font-size: 17px;
@@ -6724,43 +6388,62 @@ i {
   left: 0;
 }
 
-.ui-star {
-  cursor: pointer;
+.ui-star-rating-static {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 15px;
 }
-.ui-star__icon {
-  font-size: 40px;
+.ui-star-rating-static .stars {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-flow: row-reverse;
+          flex-flow: row-reverse;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 2px;
+}
+.ui-star-rating-static .stars .star {
+  font-size: 18px;
   color: var(--ui_dark);
-  -webkit-transition: all 0.2s ease;
-  -o-transition: all 0.2s ease;
-  transition: all 0.2s ease;
 }
-.ui-star__input:checked + .ui-star__icon {
-  color: var(--active_star);
-}
-.ui-star:hover .ui-star__icon {
-  color: var(--active_star);
-}
-.ui-star:hover ~ .ui-star .ui-star__icon {
-  color: var(--active_star);
-}
-.ui-star:has(.ui-star__input:checked) ~ .ui-star .ui-star__icon {
+.ui-star-rating-static .stars .star:hover ~ star {
   color: var(--active_star);
 }
 
-.ui-star-rating {
-  margin-bottom: 10px;
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
+.ui-star-rating-static {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-align: center;
-  -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
+  gap: 15px;
+}
+.ui-star-rating-static .stars {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: reverse;
-  -webkit-flex-flow: row-reverse;
       -ms-flex-flow: row-reverse;
           flex-flow: row-reverse;
-  gap: 7px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 2px;
+}
+.ui-star-rating-static .stars .star {
+  font-size: 18px;
+  color: var(--ui_dark);
+}
+.ui-star-rating-static .stars .star:hover ~ star {
+  color: var(--active_star);
 }

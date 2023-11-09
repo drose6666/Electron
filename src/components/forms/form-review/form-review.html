@@ -6,7 +6,7 @@
       </div>
       
       <div class="review-rating-wrap">
-         @@include('../../ui/ui-star-rating/ui-star-rating.html')
+         @@include('../../ui/ui-star-rating/ui-star-rating-form/ui-star-rating-form.html')
          <div class="ui-form-item">
             <input type="text" name="rating" inputmode="numeric" autocomplete="off" placeholder="4.0" value="4.0" class="ui-input input_rating">
          </div>
@@ -15,17 +15,17 @@
 
    <div class="form-fields">
       <div class="ui-form-item">
-         <input type="email" name="user_subscribe" inputmode="email" autocomplete="email" placeholder="Email..." class="ui-input dark_theme">
+         <input type="email" name="user_subscribe" inputmode="email" autocomplete="email" placeholder="Email..." class="ui-input_popup dark_theme">
          <span class="error-message"></span>
       </div>
    
       <div class="ui-form-item">
-         <input type="email" name="user_subscribe" inputmode="email" autocomplete="email" placeholder="Email..." class="ui-input dark_theme">
+         <input type="email" name="user_subscribe" inputmode="email" autocomplete="email" placeholder="Email..." class="ui-input_popup dark_theme">
          <span class="error-message"></span>
       </div>
    
       <div class="ui-form-item full-width">
-         <textarea type="email" name="user_subscribe" inputmode="email" autocomplete="email" placeholder="Email..." class="ui-input dark_theme">
+         <textarea name="user_review" placeholder="Отзыв" class="ui-input_popup ui-textarea dark_theme"></textarea>
          <span class="error-message"></span>
       </div>
    
@@ -37,10 +37,10 @@
    <div class="form-submit">
       @@include('../../ui/ui-button/ui-btn-icon/ui-button-icon.html', {
          "text": "Оствавить отзыв",
-         "className": "btn_i_primary btn_i_action",
+         "className": "btn_i_action",
          "classNameIcon": "arrow_up_right_long"
       })
 
-      <p class="submit-text">Конфиденциальность введенных данных гарантируется</p>
+      <p class="form-submit__text">Конфиденциальность введенных данных гарантируется</p>
    </div>
 </form>

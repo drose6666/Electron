@@ -22,16 +22,16 @@
    <link rel="icon" href="../../img/favicon/fav_48.png" type="image/png" sizes="48x48">
    <link rel="icon" href="../../img/favicon/fav_128.png" type="image/png" sizes="128x128">
    
-   <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css?_v=20231109085023" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
-   <!-- <link rel="stylesheet" href="../../libs/css/bootstrap-grid.min.css?_v=20231109085023"> -->
+   <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css?_v=20231109204349" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+   <!-- <link rel="stylesheet" href="../../libs/css/bootstrap-grid.min.css?_v=20231109204349"> -->
 
-   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css?_v=20231109085023" />
-   <script defer src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js?_v=20231109085023"></script>
-   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js?_v=20231109085023" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-   <link rel="stylesheet" href="../../libs/css/reset.min.css?_v=20231109085023">
-   <link rel="stylesheet" as="font" href="../../fonts/fonts.css?_v=20231109085023">
-   <link rel="stylesheet" as="font" href="../../fonts/icon-font.css?_v=20231109085023">
-   <link rel="stylesheet" href="./pages/index/css/index.min.css?_v=20231109085023">
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css?_v=20231109204349" />
+   <script defer src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js?_v=20231109204349"></script>
+   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js?_v=20231109204349" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+   <link rel="stylesheet" href="../../libs/css/reset.min.css?_v=20231109204349">
+   <link rel="stylesheet" as="font" href="../../fonts/fonts.css?_v=20231109204349">
+   <link rel="stylesheet" as="font" href="../../fonts/icon-font.css?_v=20231109204349">
+   <link rel="stylesheet" href="./pages/index/css/index.min.css?_v=20231109204349">
    
    <title>Electron</title>
 </head>
@@ -1688,7 +1688,7 @@
       <div class="fade-on-side" id="fade-compare">
    <div class="fade-on-side__content compare-content">
 
-      <h2 class="fade-on-side__name">Сравнение</h2>
+      <h2 class="hidden__title title_fade-on-side">Сравнение</h2>
       
       <div class="fade-product-wrap">
          <div class="fade-product-list">
@@ -1774,7 +1774,7 @@
       <div class="fade-on-side" id="fade-cart">
    <div class="fade-on-side__content cart-content">
 
-      <h2 class="fade-on-side__name">Корзина</h2>
+      <h2 class="hidden__title title_fade-on-side">Корзина</h2>
 
       <div class="fade-product-wrap">
          <div class="fade-product-list">
@@ -1879,7 +1879,7 @@
 </div>
       <div class="fade-on-side left_side" id="fade-filters">
    <form action="" method="" class="fade-on-side__content filters-content" id="filters-form">
-      <h2 class="fade-on-side__name underline">Фильтры</h2>
+      <h2 class="hidden__title title_fade-on-side underline">Фильтры</h2>
 
       <div class="filters-form__content">
          <fieldset class="filter-item">
@@ -2202,17 +2202,17 @@
 
    <div class="form-fields">
       <div class="ui-form-item">
-         <input type="email" name="user_subscribe" inputmode="email" autocomplete="email" placeholder="Email..." class="ui-input dark_theme">
+         <input type="email" name="user_subscribe" inputmode="email" autocomplete="email" placeholder="Email..." class="ui-input_popup dark_theme">
          <span class="error-message"></span>
       </div>
    
       <div class="ui-form-item">
-         <input type="email" name="user_subscribe" inputmode="email" autocomplete="email" placeholder="Email..." class="ui-input dark_theme">
+         <input type="email" name="user_subscribe" inputmode="email" autocomplete="email" placeholder="Email..." class="ui-input_popup dark_theme">
          <span class="error-message"></span>
       </div>
    
       <div class="ui-form-item full-width">
-         <textarea type="email" name="user_subscribe" inputmode="email" autocomplete="email" placeholder="Email..." class="ui-input dark_theme">
+         <textarea name="user_review" placeholder="Отзыв" class="ui-input_popup ui-textarea dark_theme"></textarea>
          <span class="error-message"></span>
       </div>
    
@@ -2233,12 +2233,12 @@
    </div>
 
    <div class="form-submit">
-      <button class="ui-btn-icon btn_i_primary btn_i_action">
+      <button class="ui-btn-icon btn_i_action">
    Оствавить отзыв
    <div class="icon"><i class="i-arrow_up_right_long"></i></div>
 </button>
 
-      <p class="submit-text">Конфиденциальность введенных данных гарантируется</p>
+      <p class="form-submit__text">Конфиденциальность введенных данных гарантируется</p>
    </div>
 </form>
       <!-- Здесь контент -->
@@ -2251,6 +2251,6 @@
    <div class="ui-overlay popup_overlay" id="overlay-review-form"></div>
 </div>
       
-      <script type="module" src="./pages/index/js/bundle-index.min.js?_v=20231109085023"></script>
+      <script type="module" src="./pages/index/js/bundle-index.min.js?_v=20231109204349"></script>
    </body>
 </html>  

@@ -2,7 +2,7 @@
    cursor: pointer;
    
    &__icon {
-      font-size: 40px;
+      font-size: clamp(35px, 5cqi, 40px);
       color: var(--ui_dark);
       transition: all .2s ease;
    }

@@ -1,0 +1,23 @@
+.ui-star-rating-static {
+   display: flex;
+   align-items: center;
+   gap: 15px;
+
+   .stars {
+      display: inline-flex;
+      flex-flow: row-reverse;
+      align-items: center;
+      gap: 2px;
+
+      .star {
+         font-size: 18px;
+         color: var(--ui_dark);
+
+         &:hover {
+            & ~ star {
+               color: var(--active_star);
+            }
+         }
+      }
+   }
+}

@@ -38,7 +38,7 @@ const scss = (pageName) => {
       }))
       .pipe(autoprefixer({
          grid: true,
-         overrideBrowserslist: ["last 80 versions"],
+         overrideBrowserslist: ["last 20 versions"],
          cascade: true
       }))
       /* 

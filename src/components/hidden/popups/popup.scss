@@ -1,9 +1,9 @@
 .ui-popup {
    @extend %hiddenWrap;
-   padding: 20px;
+   padding: 20px clamp(10px, 3cqi, 20px);
    
    &__content {
-      padding: 50px clamp(20px, 4cqi, 50px);
+      padding: clamp(35px, 4cqi, 50px) clamp(20px, 4cqi, 50px);
       max-width: 820px;
       width: 100%;      
       background: var(--dark);
@@ -49,13 +49,6 @@
    line-height: 110%;
    color: var(--text_additional);
    max-width: 320px;
-}
-
-.popup-head {
-   display: flex;
-   align-items: flex-start;
-   justify-content: space-between;
-   gap: 15px;
 }
 
 @import './popup-review/popup-review';
