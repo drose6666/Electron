@@ -1,10 +1,10 @@
-<div class="fade-on-side" id="fade-cart">
-   <div class="fade-on-side__content cart-content">
+<div class="ui-popup fade-side" id="popup-cart">
+   <div class="ui-popup__container">
 
-      <h2 class="hidden__title title_fade-on-side">Корзина</h2>
+      <h2 class="ui-popup__title fade-side_title">Корзина</h2>
 
-      <div class="fade-product-wrap">
-         <div class="fade-product-list">
+      <div class="ui-popup-products">
+         <div class="ui-popup-products__list">
             @@loop('../../../product/product-card/product-card-cart/product-card-cart.html', [
                {
                   "img": "../../../../img/optimized/cards/card_3.webp",
@@ -24,7 +24,7 @@
 
       @@include('../../../order/cost-order/cost-order.html')
 
-      <div class="btn-group">
+      <div class="ui-popup__btns">
          @@include('../../../ui/ui-button/ui-btn-icon/ui-button-icon-link.html', {
             "text": "Перейти в корзину",
             "className": "btn_cart",
@@ -42,5 +42,5 @@
       })
    </div>
 
-   <div class="ui-overlay" id="overlay-cart"></div>
+   <div class="ui-popup__overlay" id="overlay-cart"></div>
 </div>

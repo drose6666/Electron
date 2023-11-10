@@ -1,0 +1,43 @@
+@import './ui-star';
+
+.ui-star-rating {
+   display: flex;
+
+   .ui-stars {
+      display: inline-flex;
+      align-items: center;
+      flex-flow: row-reverse;
+   }
+
+   &.star-rating_form {
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 10px;
+
+      .ui-stars {
+         gap: 7px;
+      }
+   }
+
+   &.star-rating_static {
+      align-items: center;
+      gap: 15px;
+
+      .ui-stars {
+         gap: 1px;
+      }
+   }
+
+   .rating-value {
+      font-size: 15px;
+      font-weight: 300;
+      line-height: 100%;
+      color: var(--text_additional);
+   }
+
+   &.light {
+      font-size: 17px;
+      color: var(--dark);
+   }
+}
+

@@ -1,0 +1,52 @@
+/* IMPORTANT Общие стили для звезд */
+
+.ui-star-rating {
+   .ui-star, .ui-star-form .ui-star-form__icon {
+      color: var(--ui_dark);
+   } 
+
+   &.light {
+      .ui-star, .ui-star-form .ui-star-form__icon {
+         color: var(--separating_contrast);
+      } 
+   }
+}
+
+
+/* TODO Звезды для отображения статического рейтинга */
+.ui-star {
+   font-size: 20px;
+
+   &.current, & ~ .ui-star {
+      color: var(--active_star);
+   }
+}
+
+
+/* TODO Звезды для формы */
+.ui-star-form {
+   cursor: pointer;
+   
+   &__icon {
+      font-size: clamp(35px, 5cqi, 40px);
+      transition: all .2s ease;
+   }
+
+   &__input {
+      &:checked + .ui-star-form__icon {
+         color: var(--active_star);
+      }
+   }
+
+   &:hover {
+      .ui-star-form__icon, & ~ .ui-star-form .ui-star-form__icon {
+         color: var(--active_star);
+      }
+   }
+
+   &:has(.ui-star-form__input:checked) {
+      & ~ .ui-star-form .ui-star-form__icon {
+         color: var(--active_star);
+      }
+   }
+}

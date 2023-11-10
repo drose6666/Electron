@@ -1,10 +1,10 @@
-<div class="fade-on-side" id="fade-compare">
-   <div class="fade-on-side__content compare-content">
+<div class="ui-popup fade-side" id="popup-compare">
+   <div class="ui-popup__container">
 
-      <h2 class="hidden__title title_fade-on-side">Сравнение</h2>
+      <h2 class="ui-popup__title fade-side_title">Сравнение</h2>
       
-      <div class="fade-product-wrap">
-         <div class="fade-product-list">
+      <div class="ui-popup-products">
+         <div class="ui-popup-products__list">
             @@loop('../../../product/product-card/product-card-cart/product-card-cart.html', [
                {
                   "img": "../../../../img/optimized/cards/card_3.webp",
@@ -22,7 +22,7 @@
          </div>
       </div>
 
-      <div class="link-group">
+      <div class="ui-popup__btns">
          @@include('../../../ui/ui-button/ui-btn-icon/ui-button-icon-link.html', {
             "text": "Перейти к сравнению",
             "className": "btn_cart",
@@ -41,5 +41,5 @@
       })
    </div>
 
-   <div class="ui-overlay" id="overlay-compare"></div>
+   <div class="ui-popup__overlay" id="overlay-compare"></div>
 </div>

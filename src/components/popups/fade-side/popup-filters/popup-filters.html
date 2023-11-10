@@ -1,18 +1,18 @@
-<div class="fade-on-side left_side" id="fade-filters">
-   <form action="" method="" class="fade-on-side__content filters-content" id="filters-form">
-      <h2 class="hidden__title title_fade-on-side underline">Фильтры</h2>
+<div class="ui-popup fade-side left-side" id="popup-filters">
+   <form action="" method="" class="ui-popup__container" id="form-filters">
+      <h2 class="ui-popup__title fade-side_title underline">Фильтры</h2>
 
-      <div class="filters-form__content">
+      <div class="form-filters__content">
          @@include('./fitler-price/filter-price.html')
          @@include('./filter-item/filter-item-brand.html')
          @@include('./filter-item/filter-item-resolution.html')
          @@include('./filter-item/filter-item-diagonal.html')
       </div>
 
-      <div class="filters-form__nav">
+      <div class="form-filters__nav">
          <p class="products-count">Показано товаров: <strong>257</strong></p>
       
-         <div class="btn-group">
+         <div class="ui-popup__btns">
             @@include('../../../ui/ui-button/ui-btn/ui-button.html', {
                "text": "Применить",
                "className": "btn_filter_apply",
@@ -33,5 +33,5 @@
       })
    </form>
 
-   <div class="ui-overlay" id="overlay-filters"></div>
+   <div class="ui-popup__overlay" id="overlay-filters"></div>
 </div>

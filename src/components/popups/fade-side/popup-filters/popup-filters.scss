@@ -1,0 +1,62 @@
+@import './filter-item/filter-item';
+@import './fitler-price/fitler-price';
+
+#popup-filters {
+   .ui-popup__container {
+      padding: 60px $fadePaddingX 40px $fadePaddingX;
+      max-width: 450px;
+   }
+
+   .filters-form__nav {
+      margin-top: 40px;
+   }
+
+   .products-count {
+      margin-bottom: 20px;
+      font-size: 17px;
+      font-weight: 300;
+      line-height: 100%;
+      color: var(--text_additional);
+      text-align: center;
+
+      strong {
+         color: var(--light);
+      }
+   }
+}
+
+#form-filters {
+   height: 100dvh;
+   display: grid;
+   grid-template: min-content 1fr min-content / 1fr;
+
+   .form-filters__content {
+      margin-right: -15px;
+      padding-right: 15px;
+      overflow-y: auto;
+
+      &::-webkit-scrollbar {
+         background: transparent;
+         width: 4px;
+         height: 4px;
+         display: none;
+      }
+      
+      &::-webkit-scrollbar-thumb {
+         background: var(--ui_dark);
+         border-radius: 50px;
+      }
+      
+      &::-webkit-scrollbar-corner {
+         background: transparent;
+      }
+   }
+}
+
+@container uiPopupContainer (max-height: 680px) {
+   #form-filters {
+      .form-filters__content {
+         min-height: 350px;
+      }
+   }
+}

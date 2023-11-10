@@ -22,16 +22,16 @@
    <link rel="icon" href="../../img/favicon/fav_48.png" type="image/png" sizes="48x48">
    <link rel="icon" href="../../img/favicon/fav_128.png" type="image/png" sizes="128x128">
    
-   <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css?_v=20231109204349" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
-   <!-- <link rel="stylesheet" href="../../libs/css/bootstrap-grid.min.css?_v=20231109204349"> -->
+   <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css?_v=20231110135716" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+   <!-- <link rel="stylesheet" href="../../libs/css/bootstrap-grid.min.css?_v=20231110135716"> -->
 
-   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css?_v=20231109204349" />
-   <script defer src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js?_v=20231109204349"></script>
-   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js?_v=20231109204349" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-   <link rel="stylesheet" href="../../libs/css/reset.min.css?_v=20231109204349">
-   <link rel="stylesheet" as="font" href="../../fonts/fonts.css?_v=20231109204349">
-   <link rel="stylesheet" as="font" href="../../fonts/icon-font.css?_v=20231109204349">
-   <link rel="stylesheet" href="./pages/index/css/index.min.css?_v=20231109204349">
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css?_v=20231110135716" />
+   <script defer src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js?_v=20231110135716"></script>
+   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js?_v=20231110135716" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+   <link rel="stylesheet" href="../../libs/css/reset.min.css?_v=20231110135716">
+   <link rel="stylesheet" as="font" href="../../fonts/fonts.css?_v=20231110135716">
+   <link rel="stylesheet" as="font" href="../../fonts/icon-font.css?_v=20231110135716">
+   <link rel="stylesheet" href="./pages/index/css/index.min.css?_v=20231110135716">
    
    <title>Electron</title>
 </head>
@@ -2156,8 +2156,8 @@
 
    <div class="ui-overlay" id="overlay-filters"></div>
 </div>
-      <div class="ui-popup" id="popup-review">
-   <div class="ui-popup__content">
+      <div class="ui-popup popup" id="popup-review">
+   <div class="ui-popup__container">
 
       <!-- Здесь контент -->
       <form action="" class="ui-form form_review form_grid" id="form-review">
@@ -2168,35 +2168,38 @@
       </div>
       
       <div class="review-rating-wrap">
-         <div class="ui-star-rating">
-   <label class="ui-star">
-      <input type="radio" name="product_rating" value="5.0" class="ui-star__input visually-hidden">
-      <i class="i-star ui-star__icon"></i>
-   </label>
+         <div class="ui-star-rating star-rating_form ">
+   <div class="ui-stars">
+      <label class="ui-star-form">
+         <input type="radio" name="user_rating" value="5.0" class="ui-star-form__input visually-hidden">
+         <i class="i-star ui-star-form__icon"></i>
+      </label>
+      
+      <label class="ui-star-form">
+         <input type="radio" name="user_rating" checked value="4.0" class="ui-star-form__input visually-hidden">
+         <i class="i-star ui-star-form__icon"></i>
+      </label>
    
-   <label class="ui-star">
-      <input type="radio" name="product_rating" checked value="4.0" class="ui-star__input visually-hidden">
-      <i class="i-star ui-star__icon"></i>
-   </label>
+      <label class="ui-star-form">
+         <input type="radio" name="user_rating" value="3.0" class="ui-star-form__input visually-hidden">
+         <i class="i-star ui-star-form__icon"></i>
+      </label>
+    
+      <label class="ui-star-form">
+         <input type="radio" name="user_rating" value="2.0" class="ui-star-form__input visually-hidden">
+         <i class="i-star ui-star-form__icon"></i>
+      </label>
+   
+      <label class="ui-star-form">
+         <input type="radio" name="user_rating" value="1.0" class="ui-star-form__input visually-hidden">
+         <i class="i-star ui-star-form__icon"></i>
+      </label> 
+   </div>
 
-   <label class="ui-star">
-      <input type="radio" name="product_rating" value="3.0" class="ui-star__input visually-hidden">
-      <i class="i-star ui-star__icon"></i>
-   </label>
- 
-   <label class="ui-star">
-      <input type="radio" name="product_rating" value="2.0" class="ui-star__input visually-hidden">
-      <i class="i-star ui-star__icon"></i>
-   </label>
-
-   <label class="ui-star">
-      <input type="radio" name="product_rating" value="1.0" class="ui-star__input visually-hidden">
-      <i class="i-star ui-star__icon"></i>
-   </label> 
+   <div class="ui-form-item">
+      <input type="text" name="rating" inputmode="numeric" autocomplete="off" placeholder="4.0" value="4.0" class="ui-input input_rating">
+   </div>
 </div>
-         <div class="ui-form-item">
-            <input type="text" name="rating" inputmode="numeric" autocomplete="off" placeholder="4.0" value="4.0" class="ui-input input_rating">
-         </div>
       </div>
    </div>
 
@@ -2248,9 +2251,9 @@
 </div>
    </div>
 
-   <div class="ui-overlay popup_overlay" id="overlay-review-form"></div>
+   <div class="ui-popup__overlay" id="overlay-review-form"></div>
 </div>
       
-      <script type="module" src="./pages/index/js/bundle-index.min.js?_v=20231109204349"></script>
+      <script type="module" src="./pages/index/js/bundle-index.min.js?_v=20231110135716"></script>
    </body>
 </html>  
