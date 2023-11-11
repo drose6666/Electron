@@ -19,7 +19,7 @@ function handleFileSelection() {
             
             imagePreviewContainer.insertAdjacentHTML('beforeend', createPreviewFile(previewImage))
 
-            const previewFileCloseBtn = document.querySelectorAll('.close_image-preview')
+            const previewFileCloseBtn = document.querySelectorAll('.close_input-file')
             previewFileCloseBtn.forEach(closeBtn => {
                closeBtn.addEventListener('click', function () {
                   removePreviewFile(closeBtn);
@@ -48,7 +48,7 @@ function createPreviewFile ({ name, size, url }) {
             <span class="preview__info__item size">${size}</span>
          </div>
 
-         <div class="ui-close close_image-preview">
+         <div class="ui-close close_input-file">
             <i class="i-close"></i>
          </div>
       </div>

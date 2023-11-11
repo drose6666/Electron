@@ -1,8 +1,8 @@
-import openFadeOnTheSide from '../../../../libs/js/module/openFadeOnTheSide.js'
+import PopupHandler from '../../../../libs/js/module/fadeHiddenElements/PopupHandler.js'
 
-new openFadeOnTheSide ({
-   fadeSelector: '#fade-compare',
-   close: '.ui-close.fade_compare',
-   open: '.btn_compare',
+new PopupHandler ({
+   selector: '#popup-compare',
+   btnClose: '.popup-compare-close',
+   btnOpen: '.btn_compare',
    overlay: '#overlay-compare',
 })

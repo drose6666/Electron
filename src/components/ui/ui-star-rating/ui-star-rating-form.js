@@ -1,6 +1,6 @@
-const popupReview = document.getElementById('popup-review');
-const inputRating = popupReview.querySelector('.input_rating');
-const stars = Array.from(popupReview.querySelectorAll('.ui-star-form__input'));
+const formReview = document.getElementById('form-send-review');
+const inputRating = formReview.querySelector('.input_rating');
+const stars = Array.from(formReview.querySelectorAll('.ui-star-form__input'));
 
 inputRating.addEventListener('input', function () {
    this.value = this.value.replace(/[^1-9.]/g, ''); 

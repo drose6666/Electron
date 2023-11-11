@@ -1,8 +1,8 @@
-import openFadeOnTheSide from '../../../../libs/js/module/openFadeOnTheSide.js'
+import PopupHandler from '../../../../libs/js/module/fadeHiddenElements/PopupHandler.js'
 
-new openFadeOnTheSide ({
-   fadeSelector: '#main-search',
-   close: '.ui-close.search',
-   open: '.btn_search',
+new PopupHandler ({
+   selector: '#popup-search',
+   btnClose: '.popup-search-close',
+   btnOpen: '.btn_search',
    overlay: '#overlay-search',
 })

@@ -1,9 +1,9 @@
 %uiCloseInActiveElements {
    transition: 
       background .2s ease, 
-      transform .5s ease .5s,
-      opacity .5s ease .5s,
-      visibility .5s ease .5s;
+      transform .5s ease .7s,
+      opacity .5s ease .7s,
+      visibility .5s ease .7s;
    transform: none;
    opacity: 1;
    visibility: visible;
@@ -46,7 +46,7 @@
       }
    }
 
-   &.popup {
+   &.close_popup {
       top: 23px;
       right: -23px;
       
@@ -55,7 +55,7 @@
       }
    }
 
-   &.fade-side {
+   &.close_fade-side {
       &.right_side {
          right: -20px;
          top: 45px;
@@ -68,7 +68,7 @@
       }
    }
 
-   &.product_remove {
+   &.close_product-remove {
       width: 35px;
       height: 35px;
       left: -15px;
@@ -78,35 +78,32 @@
          font-size: 15px;
       }
    }
+
+   &.close_input-file {
+      width: 30px;
+      height: 30px;
+      top: -10px;
+      right: -8px;
+
+      i {
+         font-size: 13px;
+      }
+   }
 }
 
 .ui-popup.active {
    .ui-close {
       @extend %uiCloseInActiveElements;
-   }
-}
 
-.ui-popup {
-   .ui-close {
-      top: 23px;
-      right: -23px;
-      
-      i {
-         font-size: clamp(15px, 5cqi, 19px);
-      }
-
-      &.close_image-preview {
-         width: 30px;
-         height: 30px;
-         top: -10px;
-         right: -8px;
-   
-         i {
-            font-size: 13px;
-         }
+      &.close_fade-side, 
+      &.close_popup,
+      &.close_product-remove,
+      &.close_input-file {
+         @extend %uiCloseInActiveElements;
       }
    }
 }
+
 
 // NOTE Popup close
 @include media (max-width, 900px) {
@@ -121,11 +118,12 @@
 // NOTE Fade in Side close
 @include media (max-width, 670px) {
    .ui-close {
-      &.fade_close {
-         right: 20px;
+      &.close_fade-side {
+         &.right_side {
+            right: 20px;
+         }
 
          &.left_side {
-            right: none;
             left: 20px;
          }
       }

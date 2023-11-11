@@ -1,8 +1,8 @@
-import openFadeOnTheSide from '../../../../libs/js/module/openFadeOnTheSide.js'
+import PopupHandler from '../../../../libs/js/module/fadeHiddenElements/PopupHandler.js'
 
-new openFadeOnTheSide ({
-   fadeSelector: '#fade-cart',
-   close: '.ui-close.fade_cart',
-   open: '.btn_cart',
+new PopupHandler ({
+   selector: '#popup-cart',
+   btnClose: '.popup-cart-close',
+   btnOpen: '.btn_cart',
    overlay: '#overlay-cart',
 })

@@ -17,6 +17,17 @@
       align-items: flex-start;
       justify-content: space-between;
       gap: 15px;
+
+      .ui-popup__title-wrap {
+         .text {
+            margin-top: 10px;
+            font-size: 15px;
+            font-weight: 300;
+            line-height: 110%;
+            color: var(--text_additional);
+            max-width: 320px;
+         }
+      }
    }
 
    .form-fields {

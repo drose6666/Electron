@@ -3,11 +3,13 @@ $fadePaddingX: clamp(var(--default_padding), 5cqi, var(--fade_on_the_side_paddin
 $fadePadding: 110px $fadePaddingX 40px $fadePaddingX;
 $transitionDuration: .2s ease;
 
+@import '../menu/mobile-menu/mobile-menu';
 @import '../forms/form-review/form-review';
-@import '../../../product/product-card/product-card-cart/product-card-cart';
+@import '../product/product-card/product-card-cart/product-card-cart';
 @import './fade-side/popup-filters/popup-filters';
 @import './fade-side/popup-review/popup-review';
 @import './fade-side/popup-search/popup-search';
+@import './popup-send-review/popup-send-review';
 
 .ui-popup {
    position: fixed;
@@ -33,20 +35,19 @@ $transitionDuration: .2s ease;
    &__container {
       width: 100%;      
       background: var(--dark);
-      
       position: relative;
       container-type: inline-size;
       container-name: uiPopupContainer;
       z-index: 2;
-      opacity: 0;
-      visibility: hidden;
-      
-      @extend %dynamicRadius40to25;
    }
    
    &__overlay {
+      position: fixed;
+      width: 100%;
+      height: 100%;
       background: var(--overlay);
    }
+
 
    /* TODO Стили для popup */
    &.popup {
@@ -57,8 +58,13 @@ $transitionDuration: .2s ease;
          box-shadow: var(--popup_shadow);
          align-self: center;
          justify-self: center;
-         max-width: var(--fade_on_the_side_width);
-         transform: scale(.95);
+         max-width: var(--ui_popup_container_width);
+         opacity: 0;
+         visibility: hidden;
+         transform: translateY(30px);
+         transition: all .4s ease .3s;
+
+         @extend %dynamicRadius40to25;
       }
    }
 
@@ -68,6 +74,7 @@ $transitionDuration: .2s ease;
       .ui-popup__container {
          padding: $fadePadding;
          min-height: 100dvh;
+         max-width: 630px;
          align-self: start;
          justify-self: end;
          transform: translateX(calc(30px + var(--fade_on_the_side_width)));
@@ -93,11 +100,15 @@ $transitionDuration: .2s ease;
             opacity: 1;
             visibility: visible;
             transform: none;
+            transition-delay: .2s;
         }
       }
 
       &.fade-side {
-         transform: none;
+         .ui-popup__container {
+            transform: none;
+            transition-delay: .2s;
+         }
       }
    }
 }
@@ -130,15 +141,6 @@ $transitionDuration: .2s ease;
          border-radius: var(--defaultRd);
       }
    }
-}
-
-.popup-text {
-   margin-top: 10px;
-   font-size: 15px;
-   font-weight: 300;
-   line-height: 110%;
-   color: var(--text_additional);
-   max-width: 320px;
 }
 
 

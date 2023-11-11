@@ -1,5 +1,4 @@
-@import '../../hidden/fade-on-side/fade-on-side';
-
+$transitionDuration: .2s ease;
 $allGap: clamp(30px, 10cqi, 47px);
 $padingXMenu: clamp(var(--default_padding), 5cqi, 40px);
 $transition: background-size $transitionDuration, color $transitionDuration;  

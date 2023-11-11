@@ -1,10 +1,10 @@
 import openFadeOnTheSide from '../../../libs/js/module/openFadeOnTheSide.js';
 
 new openFadeOnTheSide({
-   fadeSelector: '#fade-mobile-menu',
-   close: '.ui-close.mobile',
+   fadeSelector: '#mobile-menu',
+   close: '.mobile-close',
    open: '.ui-burger',
-   overlay: '#overlay-mobile',
+   overlay: '#overlay-mobile-menu',
    closeItems: '.menu_close'
 })
 

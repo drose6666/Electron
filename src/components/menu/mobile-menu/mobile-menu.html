@@ -1,5 +1,5 @@
-<div class="fade-on-side left_side" id="fade-mobile-menu">
-   <div class="fade-on-side__content mobile-menu">
+<div class="ui-popup fade-side left-side" id="mobile-menu">
+   <div class="ui-popup__container mobile-menu">
 
       <ul class="mobile-menu__inside parent_list" data-id="0">
          <li data-for="1" class="parent-item has-children list-title"><a class="child">Каталог</a></li>
@@ -99,10 +99,10 @@
       </ul>
 
       @@include('../../ui/ui-close/ui-close.html', {
-         "className": "fade_close right_side mobile",
+         "className": "close_fade-side right_side mobile-close",
          "classNameIcon": "angle_left"
       })
    </div>
 
-   <div class="ui-overlay" id="overlay-mobile"></div>
+   <div class="ui-popup__overlay" id="overlay-mobile-menu"></div>
 </div>

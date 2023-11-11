@@ -1,9 +1,9 @@
-import openFadeOnTheSide from '../../../../libs/js/module/openFadeOnTheSide.js'
+import PopupHandler from '../../../../libs/js/module/fadeHiddenElements/PopupHandler.js'
 
-new openFadeOnTheSide ({
-   fadeSelector: '#fade-filters',
-   close: '.ui-close.fade_filters',
-   open: '.btn_favourites',
+new PopupHandler ({
+   selector: '#popup-filters',
+   btnClose: '.popup-filters-close',
+   btnOpen: '.btn_favourites',
    overlay: '#overlay-filters',
 })
 
