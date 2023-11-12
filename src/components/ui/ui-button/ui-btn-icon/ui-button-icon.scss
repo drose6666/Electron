@@ -1,91 +1,22 @@
-@mixin buttonIcon (
-   $paddingLeft: 20px,
-   $gap: 20px,
+@mixin buttonIconTheme (
    $color: var(--light),
    $bg: var(--dark),
-   $iconSize: 41px,
-   $iconBg: var(--action),
-   $iconFSize: 20px,
    $iconColor: var(--light),
-   $transition: all .2s ease,
-   $freeWidth: false,
+   $iconBg: var(--action),
    $theme: dark,
-   $type: primary,
-   $maxWidth: 100%
+   $transition: all .2s ease,
 ) {
-   padding: 2px 2px 2px $paddingLeft;
-   display: flex;
-   align-items: center;
-   justify-content: space-between;
-   gap: $gap;
-   font-family: inherit;
-   font-size: 17px;
-   font-weight: 400;
-   line-height: 100%;
-   color: $color;
-   background: $bg;
-   border-radius: var(--defaultRd);
+
    transition: $transition;
 
    .icon {
-      width: $iconSize;
-      height: $iconSize;
-      display: flex;
-      align-items: center;
-      justify-content: center;
       background: $iconBg;
-      border-radius: var(--circleRd);
       transition: $transition;
 
       i {
-         font-size: $iconFSize;
          color: $iconColor;
          transition: $transition;
       }
-   }
-
-   @if $type == primary {
-      $paddingLeft: 20px;
-      $gap: 20px;
-      $fSize: 18px;
-      $iconSize: 41px;
-      $iconFSize: 20px;
-
-      padding: 2px 2px 2px $paddingLeft;
-      gap: $gap;
-      font-size: $fSize;
-
-      .icon {
-         width: $iconSize;
-         height: $iconSize;
-
-         i {
-            font-size: $iconFSize;
-         }
-      }
-
-   } @else if $type == ui {
-      $paddingLeft: 15px;
-      $gap: 15px;
-      $fSize: 17px;
-      $iconSize: 37px;
-      $iconFSize: 20px;
-
-      padding: 2px 2px 2px $paddingLeft;
-      gap: $gap;
-      font-size: $fSize;
-
-      .icon {
-         width: $iconSize;
-         height: $iconSize;
-
-         i {
-            font-size: $iconFSize;
-         }
-      }
-
-   } @else {
-      @error "Такого типа кнопки с иконкой не существует #{$type}.";
    }
 
    @if $theme == dark {
@@ -192,6 +123,85 @@
    } @else {
       @error "Такого темы кнопки с иконкой не существует #{$theme}.";
    }
+}
+
+
+@mixin buttonIconType (
+   $paddingLeft: 20px,
+   $gap: 20px,
+   $iconSize: 41px,
+   $iconFSize: 20px,
+   $freeWidth: false,
+   $type: primary,
+   $maxWidth: 100%
+) {
+   padding: 2px 2px 2px $paddingLeft;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   gap: $gap;
+   font-family: inherit;
+   font-size: 17px;
+   font-weight: 400;
+   line-height: 100%;
+   border-radius: var(--defaultRd);
+
+   .icon {
+      width: $iconSize;
+      height: $iconSize;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: var(--circleRd);
+
+      i {
+         font-size: $iconFSize;
+      }
+   }
+
+   @if $type == primary {
+      $paddingLeft: 20px;
+      $gap: 20px;
+      $fSize: 18px;
+      $iconSize: 41px;
+      $iconFSize: 20px;
+
+      padding: 2px 2px 2px $paddingLeft;
+      gap: $gap;
+      font-size: $fSize;
+
+      .icon {
+         width: $iconSize;
+         height: $iconSize;
+
+         i {
+            font-size: $iconFSize;
+         }
+      }
+
+   } @else if $type == ui {
+      $paddingLeft: 15px;
+      $gap: 15px;
+      $fSize: 17px;
+      $iconSize: 37px;
+      $iconFSize: 20px;
+
+      padding: 2px 2px 2px $paddingLeft;
+      gap: $gap;
+      font-size: $fSize;
+
+      .icon {
+         width: $iconSize;
+         height: $iconSize;
+
+         i {
+            font-size: $iconFSize;
+         }
+      }
+
+   } @else {
+      @error "Такого типа кнопки с иконкой не существует #{$type}.";
+   }
 
    @if $freeWidth {
       max-width: $maxWidth;
@@ -201,41 +211,39 @@
 }
 
 .ui-btn-icon {
-   @include buttonIcon(
-      $type: ui,
-      $theme: light
-   )
+   @include buttonIconType( $type: ui );
+   @include buttonIconTheme( $theme: light )
 }
 
-.btn_i_helper {
-   &.btn_more {
-      margin: 50px auto 0 auto;
-      @include buttonIcon(
-         $type: ui,
-         $theme: light
-      );
-   }
+.btn_more {
+   @include buttonIconType( $type: ui );
+   @include buttonIconTheme( $theme: light );
+
+   margin: 50px auto 0 auto;
 }
 
-.btn_i_action {
-   @include buttonIcon (
-      $type: primary,
-      $theme: action,
-   );
 
-   padding-left: clamp(20px, 3cqi, 30px);
-   gap: clamp(20px, 3cqi, 30px);
-   max-width: 230px;
-}
 
-.btn_i_primary {
-   @include buttonIcon (
-      $type: primary
-   )
-}
 
-.btn_i_dark {
-   @include buttonIcon (
-      $theme: dark
-   )
-}
+// .btn_i_action {
+//    @include buttonIcon (
+//       $type: primary,
+//       $theme: action,
+//    );
+
+//    padding-left: clamp(20px, 3cqi, 30px);
+//    gap: clamp(20px, 3cqi, 30px);
+//    max-width: 230px;
+// }
+
+// .btn_i_primary {
+//    @include buttonIcon (
+//       $type: primary
+//    )
+// }
+
+// .btn_i_dark {
+//    @include buttonIcon (
+//       $theme: dark
+//    )
+// }

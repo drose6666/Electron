@@ -247,12 +247,8 @@ footer, .information-links {
           box-sizing: content-box;
 }
 
-/* 
-   * NOTE По умолчанию (.primary)
-   * h: 45px
-*/
+/* NOTE Черная кнопка primary (45px) - по умолчанию */
 .ui-btn {
-  padding: 5px 40px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -269,13 +265,14 @@ footer, .information-links {
   line-height: 100%;
   border-radius: var(--defaultRd);
   white-space: nowrap;
-  -webkit-transition: all 0.2s ease;
-  -o-transition: all 0.2s ease;
-  transition: all 0.2s ease;
+  padding: 5px 40px;
   padding: 5px 40px;
   font-size: 17px;
   font-weight: 400;
   height: 45px;
+  -webkit-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
   color: var(--light);
   background: var(--dark);
 }
@@ -283,122 +280,8 @@ footer, .information-links {
   background: var(--action);
 }
 
-.btn_outlines_default {
-  padding: 5px 40px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  height: 45px;
-  font-family: inherit;
-  font-size: 17px;
-  font-weight: 400;
-  line-height: 100%;
-  border-radius: var(--defaultRd);
-  white-space: nowrap;
-  -webkit-transition: all 0.2s ease;
-  -o-transition: all 0.2s ease;
-  transition: all 0.2s ease;
-  padding: 5px 40px;
-  font-size: 17px;
-  font-weight: 400;
-  height: 45px;
-  color: var(--dark);
-  background: transparent;
-  border: 1px solid var(--border);
-  color: var(--dark);
-  background: transparent;
-  border: 1px solid var(--border);
-}
-.btn_outlines_default:hover {
-  background: var(--dark);
-  color: var(--light);
-  border-color: var(--dark);
-}
-
-.btn_primary {
-  padding: 5px 40px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  height: 45px;
-  font-family: inherit;
-  font-size: 17px;
-  font-weight: 400;
-  line-height: 100%;
-  border-radius: var(--defaultRd);
-  white-space: nowrap;
-  -webkit-transition: all 0.2s ease;
-  -o-transition: all 0.2s ease;
-  transition: all 0.2s ease;
-  padding: 5px 40px;
-  font-size: 17px;
-  font-weight: 400;
-  height: 45px;
-  color: var(--light);
-  background: var(--dark);
-}
-.btn_primary:hover {
-  background: var(--action);
-}
-
-.btn_reg {
-  padding: 5px 40px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  height: 45px;
-  font-family: inherit;
-  font-size: 17px;
-  font-weight: 400;
-  line-height: 100%;
-  border-radius: var(--defaultRd);
-  white-space: nowrap;
-  -webkit-transition: all 0.2s ease;
-  -o-transition: all 0.2s ease;
-  transition: all 0.2s ease;
-  padding: 5px 20px;
-  font-size: 17px;
-  font-weight: 400;
-  height: 39px;
-  color: var(--dark);
-  background: transparent;
-  border: 1px solid var(--border);
-  color: var(--dark);
-  background: transparent;
-  border: 1px solid var(--border);
-  padding: 11px clamp(20px, 3cqi, 30px);
-}
-.btn_reg:hover {
-  background: var(--dark);
-  color: var(--light);
-  border-color: var(--dark);
-}
-.btn_reg:hover {
-  color: var(--dark);
-  background: var(--border);
-  border-color: transparent;
-}
-
+/* NOTE Кнопка входа в top-menu */
 .btn_enter {
-  padding: 5px 40px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -415,13 +298,14 @@ footer, .information-links {
   line-height: 100%;
   border-radius: var(--defaultRd);
   white-space: nowrap;
-  -webkit-transition: all 0.2s ease;
-  -o-transition: all 0.2s ease;
-  transition: all 0.2s ease;
+  padding: 5px 40px;
   padding: 5px 20px;
   font-size: 17px;
   font-weight: 400;
   height: 39px;
+  -webkit-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
   color: var(--light);
   background: var(--action);
   padding: 11px clamp(20px, 3cqi, 30px);
@@ -430,8 +314,7 @@ footer, .information-links {
   background: var(--dark);
 }
 
-.btn_subscribe {
-  padding: 5px 25px;
+.btn_inside-input {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -448,50 +331,20 @@ footer, .information-links {
   line-height: 100%;
   border-radius: var(--defaultRd);
   white-space: nowrap;
+  padding: 5px 40px;
+  padding: 5px 40px;
+  font-size: 17px;
+  font-weight: 400;
+  height: 45px;
   -webkit-transition: all 0.2s ease;
   -o-transition: all 0.2s ease;
   transition: all 0.2s ease;
-  padding: 5px 40px;
-  font-size: 17px;
-  font-weight: 400;
-  height: 45px;
   color: var(--light);
   background: var(--action);
+  padding-left: 25px;
+  padding-right: 25px;
 }
-.btn_subscribe:hover {
-  background: var(--dark);
-}
-
-.btn_search-main {
-  padding: 5px 40px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  height: 45px;
-  font-family: inherit;
-  font-size: 17px;
-  font-weight: 400;
-  line-height: 100%;
-  border-radius: var(--defaultRd);
-  white-space: nowrap;
-  -webkit-transition: all 0.2s ease;
-  -o-transition: all 0.2s ease;
-  transition: all 0.2s ease;
-  padding: 5px 40px;
-  font-size: 17px;
-  font-weight: 400;
-  height: 45px;
-  color: var(--light);
-  background: var(--action);
-  padding: 5px 25px;
-}
-.btn_search-main:hover {
+.btn_inside-input:hover {
   background: var(--dark);
 }
 
@@ -511,15 +364,13 @@ footer, .information-links {
   font-size: 17px;
   font-weight: 400;
   line-height: 100%;
-  color: var(--light);
-  background: var(--dark);
   border-radius: var(--defaultRd);
-  -webkit-transition: all 0.2s ease;
-  -o-transition: all 0.2s ease;
-  transition: all 0.2s ease;
   padding: 2px 2px 2px 15px;
   gap: 15px;
   font-size: 17px;
+  -webkit-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
   color: var(--dark);
   background: var(--separating_contrast);
 }
@@ -535,18 +386,10 @@ footer, .information-links {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background: var(--action);
   border-radius: var(--circleRd);
-  -webkit-transition: all 0.2s ease;
-  -o-transition: all 0.2s ease;
-  transition: all 0.2s ease;
 }
 .ui-btn-icon .icon i {
   font-size: 20px;
-  color: var(--light);
-  -webkit-transition: all 0.2s ease;
-  -o-transition: all 0.2s ease;
-  transition: all 0.2s ease;
 }
 .ui-btn-icon .icon {
   width: 37px;
@@ -554,6 +397,18 @@ footer, .information-links {
 }
 .ui-btn-icon .icon i {
   font-size: 20px;
+}
+.ui-btn-icon .icon {
+  background: var(--action);
+  -webkit-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+.ui-btn-icon .icon i {
+  color: var(--light);
+  -webkit-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
 }
 .ui-btn-icon .icon {
   background: var(--dark);
@@ -571,8 +426,7 @@ footer, .information-links {
   color: var(--light);
 }
 
-.btn_i_helper.btn_more {
-  margin: 50px auto 0 auto;
+.btn_more {
   padding: 2px 2px 2px 20px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -588,19 +442,18 @@ footer, .information-links {
   font-size: 17px;
   font-weight: 400;
   line-height: 100%;
-  color: var(--light);
-  background: var(--dark);
   border-radius: var(--defaultRd);
-  -webkit-transition: all 0.2s ease;
-  -o-transition: all 0.2s ease;
-  transition: all 0.2s ease;
   padding: 2px 2px 2px 15px;
   gap: 15px;
   font-size: 17px;
+  -webkit-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
   color: var(--dark);
   background: var(--separating_contrast);
+  margin: 50px auto 0 auto;
 }
-.btn_i_helper.btn_more .icon {
+.btn_more .icon {
   width: 41px;
   height: 41px;
   display: -webkit-box;
@@ -612,266 +465,44 @@ footer, .information-links {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background: var(--action);
   border-radius: var(--circleRd);
-  -webkit-transition: all 0.2s ease;
-  -o-transition: all 0.2s ease;
-  transition: all 0.2s ease;
 }
-.btn_i_helper.btn_more .icon i {
+.btn_more .icon i {
   font-size: 20px;
-  color: var(--light);
-  -webkit-transition: all 0.2s ease;
-  -o-transition: all 0.2s ease;
-  transition: all 0.2s ease;
 }
-.btn_i_helper.btn_more .icon {
+.btn_more .icon {
   width: 37px;
   height: 37px;
 }
-.btn_i_helper.btn_more .icon i {
+.btn_more .icon i {
   font-size: 20px;
 }
-.btn_i_helper.btn_more .icon {
+.btn_more .icon {
+  background: var(--action);
+  -webkit-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+.btn_more .icon i {
+  color: var(--light);
+  -webkit-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+.btn_more .icon {
   background: var(--dark);
 }
-.btn_i_helper.btn_more .icon i {
+.btn_more .icon i {
   color: var(--light);
 }
-.btn_i_helper.btn_more:hover {
+.btn_more:hover {
   background: var(--separating);
 }
-.btn_i_helper.btn_more:hover .icon {
+.btn_more:hover .icon {
   background: var(--action);
 }
-.btn_i_helper.btn_more:hover .icon i {
+.btn_more:hover .icon i {
   color: var(--light);
-}
-
-.btn_i_action {
-  padding: 2px 2px 2px 20px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  gap: 20px;
-  font-family: inherit;
-  font-size: 17px;
-  font-weight: 400;
-  line-height: 100%;
-  color: var(--light);
-  background: var(--dark);
-  border-radius: var(--defaultRd);
-  -webkit-transition: all 0.2s ease;
-  -o-transition: all 0.2s ease;
-  transition: all 0.2s ease;
-  padding: 2px 2px 2px 20px;
-  gap: 20px;
-  font-size: 18px;
-  color: var(--light);
-  background: var(--action);
-  padding-left: clamp(20px, 3cqi, 30px);
-  gap: clamp(20px, 3cqi, 30px);
-  max-width: 230px;
-}
-.btn_i_action .icon {
-  width: 41px;
-  height: 41px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  background: var(--action);
-  border-radius: var(--circleRd);
-  -webkit-transition: all 0.2s ease;
-  -o-transition: all 0.2s ease;
-  transition: all 0.2s ease;
-}
-.btn_i_action .icon i {
-  font-size: 20px;
-  color: var(--light);
-  -webkit-transition: all 0.2s ease;
-  -o-transition: all 0.2s ease;
-  transition: all 0.2s ease;
-}
-.btn_i_action .icon {
-  width: 41px;
-  height: 41px;
-}
-.btn_i_action .icon i {
-  font-size: 20px;
-}
-.btn_i_action .icon {
-  background: var(--dark);
-}
-.btn_i_action .icon i {
-  color: var(--light);
-}
-.btn_i_action:hover {
-  background: var(--dark);
-  color: var(--light);
-}
-.btn_i_action:hover .icon {
-  background: var(--action);
-}
-.btn_i_action:hover .icon i {
-  color: var(--light);
-}
-
-.btn_i_primary {
-  padding: 2px 2px 2px 20px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  gap: 20px;
-  font-family: inherit;
-  font-size: 17px;
-  font-weight: 400;
-  line-height: 100%;
-  color: var(--light);
-  background: var(--dark);
-  border-radius: var(--defaultRd);
-  -webkit-transition: all 0.2s ease;
-  -o-transition: all 0.2s ease;
-  transition: all 0.2s ease;
-  padding: 2px 2px 2px 20px;
-  gap: 20px;
-  font-size: 18px;
-  color: var(--light);
-  background: var(--dark);
-}
-.btn_i_primary .icon {
-  width: 41px;
-  height: 41px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  background: var(--action);
-  border-radius: var(--circleRd);
-  -webkit-transition: all 0.2s ease;
-  -o-transition: all 0.2s ease;
-  transition: all 0.2s ease;
-}
-.btn_i_primary .icon i {
-  font-size: 20px;
-  color: var(--light);
-  -webkit-transition: all 0.2s ease;
-  -o-transition: all 0.2s ease;
-  transition: all 0.2s ease;
-}
-.btn_i_primary .icon {
-  width: 41px;
-  height: 41px;
-}
-.btn_i_primary .icon i {
-  font-size: 20px;
-}
-.btn_i_primary .icon {
-  background: var(--action);
-}
-.btn_i_primary .icon i {
-  color: var(--light);
-}
-.btn_i_primary:hover {
-  background: var(--action);
-}
-.btn_i_primary:hover .icon {
-  background: var(--dark);
-}
-
-.btn_i_dark {
-  padding: 2px 2px 2px 20px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  gap: 20px;
-  font-family: inherit;
-  font-size: 17px;
-  font-weight: 400;
-  line-height: 100%;
-  color: var(--light);
-  background: var(--dark);
-  border-radius: var(--defaultRd);
-  -webkit-transition: all 0.2s ease;
-  -o-transition: all 0.2s ease;
-  transition: all 0.2s ease;
-  padding: 2px 2px 2px 20px;
-  gap: 20px;
-  font-size: 18px;
-  color: var(--light);
-  background: var(--dark);
-}
-.btn_i_dark .icon {
-  width: 41px;
-  height: 41px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  background: var(--action);
-  border-radius: var(--circleRd);
-  -webkit-transition: all 0.2s ease;
-  -o-transition: all 0.2s ease;
-  transition: all 0.2s ease;
-}
-.btn_i_dark .icon i {
-  font-size: 20px;
-  color: var(--light);
-  -webkit-transition: all 0.2s ease;
-  -o-transition: all 0.2s ease;
-  transition: all 0.2s ease;
-}
-.btn_i_dark .icon {
-  width: 41px;
-  height: 41px;
-}
-.btn_i_dark .icon i {
-  font-size: 20px;
-}
-.btn_i_dark .icon {
-  background: var(--action);
-}
-.btn_i_dark .icon i {
-  color: var(--light);
-}
-.btn_i_dark:hover {
-  background: var(--action);
-}
-.btn_i_dark:hover .icon {
-  background: var(--dark);
 }
 
 .ui-btn-icon {
@@ -890,15 +521,13 @@ footer, .information-links {
   font-size: 17px;
   font-weight: 400;
   line-height: 100%;
-  color: var(--light);
-  background: var(--dark);
   border-radius: var(--defaultRd);
-  -webkit-transition: all 0.2s ease;
-  -o-transition: all 0.2s ease;
-  transition: all 0.2s ease;
   padding: 2px 2px 2px 15px;
   gap: 15px;
   font-size: 17px;
+  -webkit-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
   color: var(--dark);
   background: var(--separating_contrast);
 }
@@ -914,18 +543,10 @@ footer, .information-links {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background: var(--action);
   border-radius: var(--circleRd);
-  -webkit-transition: all 0.2s ease;
-  -o-transition: all 0.2s ease;
-  transition: all 0.2s ease;
 }
 .ui-btn-icon .icon i {
   font-size: 20px;
-  color: var(--light);
-  -webkit-transition: all 0.2s ease;
-  -o-transition: all 0.2s ease;
-  transition: all 0.2s ease;
 }
 .ui-btn-icon .icon {
   width: 37px;
@@ -933,6 +554,18 @@ footer, .information-links {
 }
 .ui-btn-icon .icon i {
   font-size: 20px;
+}
+.ui-btn-icon .icon {
+  background: var(--action);
+  -webkit-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+.ui-btn-icon .icon i {
+  color: var(--light);
+  -webkit-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
 }
 .ui-btn-icon .icon {
   background: var(--dark);
@@ -950,8 +583,7 @@ footer, .information-links {
   color: var(--light);
 }
 
-.btn_i_helper.btn_more {
-  margin: 50px auto 0 auto;
+.btn_more {
   padding: 2px 2px 2px 20px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -967,19 +599,18 @@ footer, .information-links {
   font-size: 17px;
   font-weight: 400;
   line-height: 100%;
-  color: var(--light);
-  background: var(--dark);
   border-radius: var(--defaultRd);
-  -webkit-transition: all 0.2s ease;
-  -o-transition: all 0.2s ease;
-  transition: all 0.2s ease;
   padding: 2px 2px 2px 15px;
   gap: 15px;
   font-size: 17px;
+  -webkit-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
   color: var(--dark);
   background: var(--separating_contrast);
+  margin: 50px auto 0 auto;
 }
-.btn_i_helper.btn_more .icon {
+.btn_more .icon {
   width: 41px;
   height: 41px;
   display: -webkit-box;
@@ -991,266 +622,44 @@ footer, .information-links {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background: var(--action);
   border-radius: var(--circleRd);
-  -webkit-transition: all 0.2s ease;
-  -o-transition: all 0.2s ease;
-  transition: all 0.2s ease;
 }
-.btn_i_helper.btn_more .icon i {
+.btn_more .icon i {
   font-size: 20px;
-  color: var(--light);
-  -webkit-transition: all 0.2s ease;
-  -o-transition: all 0.2s ease;
-  transition: all 0.2s ease;
 }
-.btn_i_helper.btn_more .icon {
+.btn_more .icon {
   width: 37px;
   height: 37px;
 }
-.btn_i_helper.btn_more .icon i {
+.btn_more .icon i {
   font-size: 20px;
 }
-.btn_i_helper.btn_more .icon {
+.btn_more .icon {
+  background: var(--action);
+  -webkit-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+.btn_more .icon i {
+  color: var(--light);
+  -webkit-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+.btn_more .icon {
   background: var(--dark);
 }
-.btn_i_helper.btn_more .icon i {
+.btn_more .icon i {
   color: var(--light);
 }
-.btn_i_helper.btn_more:hover {
+.btn_more:hover {
   background: var(--separating);
 }
-.btn_i_helper.btn_more:hover .icon {
+.btn_more:hover .icon {
   background: var(--action);
 }
-.btn_i_helper.btn_more:hover .icon i {
+.btn_more:hover .icon i {
   color: var(--light);
-}
-
-.btn_i_action {
-  padding: 2px 2px 2px 20px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  gap: 20px;
-  font-family: inherit;
-  font-size: 17px;
-  font-weight: 400;
-  line-height: 100%;
-  color: var(--light);
-  background: var(--dark);
-  border-radius: var(--defaultRd);
-  -webkit-transition: all 0.2s ease;
-  -o-transition: all 0.2s ease;
-  transition: all 0.2s ease;
-  padding: 2px 2px 2px 20px;
-  gap: 20px;
-  font-size: 18px;
-  color: var(--light);
-  background: var(--action);
-  padding-left: clamp(20px, 3cqi, 30px);
-  gap: clamp(20px, 3cqi, 30px);
-  max-width: 230px;
-}
-.btn_i_action .icon {
-  width: 41px;
-  height: 41px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  background: var(--action);
-  border-radius: var(--circleRd);
-  -webkit-transition: all 0.2s ease;
-  -o-transition: all 0.2s ease;
-  transition: all 0.2s ease;
-}
-.btn_i_action .icon i {
-  font-size: 20px;
-  color: var(--light);
-  -webkit-transition: all 0.2s ease;
-  -o-transition: all 0.2s ease;
-  transition: all 0.2s ease;
-}
-.btn_i_action .icon {
-  width: 41px;
-  height: 41px;
-}
-.btn_i_action .icon i {
-  font-size: 20px;
-}
-.btn_i_action .icon {
-  background: var(--dark);
-}
-.btn_i_action .icon i {
-  color: var(--light);
-}
-.btn_i_action:hover {
-  background: var(--dark);
-  color: var(--light);
-}
-.btn_i_action:hover .icon {
-  background: var(--action);
-}
-.btn_i_action:hover .icon i {
-  color: var(--light);
-}
-
-.btn_i_primary {
-  padding: 2px 2px 2px 20px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  gap: 20px;
-  font-family: inherit;
-  font-size: 17px;
-  font-weight: 400;
-  line-height: 100%;
-  color: var(--light);
-  background: var(--dark);
-  border-radius: var(--defaultRd);
-  -webkit-transition: all 0.2s ease;
-  -o-transition: all 0.2s ease;
-  transition: all 0.2s ease;
-  padding: 2px 2px 2px 20px;
-  gap: 20px;
-  font-size: 18px;
-  color: var(--light);
-  background: var(--dark);
-}
-.btn_i_primary .icon {
-  width: 41px;
-  height: 41px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  background: var(--action);
-  border-radius: var(--circleRd);
-  -webkit-transition: all 0.2s ease;
-  -o-transition: all 0.2s ease;
-  transition: all 0.2s ease;
-}
-.btn_i_primary .icon i {
-  font-size: 20px;
-  color: var(--light);
-  -webkit-transition: all 0.2s ease;
-  -o-transition: all 0.2s ease;
-  transition: all 0.2s ease;
-}
-.btn_i_primary .icon {
-  width: 41px;
-  height: 41px;
-}
-.btn_i_primary .icon i {
-  font-size: 20px;
-}
-.btn_i_primary .icon {
-  background: var(--action);
-}
-.btn_i_primary .icon i {
-  color: var(--light);
-}
-.btn_i_primary:hover {
-  background: var(--action);
-}
-.btn_i_primary:hover .icon {
-  background: var(--dark);
-}
-
-.btn_i_dark {
-  padding: 2px 2px 2px 20px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  gap: 20px;
-  font-family: inherit;
-  font-size: 17px;
-  font-weight: 400;
-  line-height: 100%;
-  color: var(--light);
-  background: var(--dark);
-  border-radius: var(--defaultRd);
-  -webkit-transition: all 0.2s ease;
-  -o-transition: all 0.2s ease;
-  transition: all 0.2s ease;
-  padding: 2px 2px 2px 20px;
-  gap: 20px;
-  font-size: 18px;
-  color: var(--light);
-  background: var(--dark);
-}
-.btn_i_dark .icon {
-  width: 41px;
-  height: 41px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  background: var(--action);
-  border-radius: var(--circleRd);
-  -webkit-transition: all 0.2s ease;
-  -o-transition: all 0.2s ease;
-  transition: all 0.2s ease;
-}
-.btn_i_dark .icon i {
-  font-size: 20px;
-  color: var(--light);
-  -webkit-transition: all 0.2s ease;
-  -o-transition: all 0.2s ease;
-  transition: all 0.2s ease;
-}
-.btn_i_dark .icon {
-  width: 41px;
-  height: 41px;
-}
-.btn_i_dark .icon i {
-  font-size: 20px;
-}
-.btn_i_dark .icon {
-  background: var(--action);
-}
-.btn_i_dark .icon i {
-  color: var(--light);
-}
-.btn_i_dark:hover {
-  background: var(--action);
-}
-.btn_i_dark:hover .icon {
-  background: var(--dark);
 }
 
 .ui-circle-icon {

@@ -1,131 +1,17 @@
-/* 
-   * NOTE По умолчанию (.primary)
-   * h: 45px
-*/
 
-@mixin button (
-   $maxWidth: auto,
-   $paddingX: 40px,
-   $height: 45px,
-   $fSize: 17px,
-   $fWeight: 400,
+
+@mixin uiBtnTheme (
    $color: var(--light),
    $bg: var(--dark),
+   $shadow: none,
    $borderColor: var(--border),
    $border: 1px solid $borderColor,
-   $shadow: none,
-   $transition: all .2s ease,
-   $type: primary,
-   $freeWidth: false,
    $theme: dark,
    $childTheme: none,
+   $transition: all .2s ease,
 ) {
-   padding: 5px $paddingX;
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   height: $height;
-   font-family: inherit;
-   font-size: $fSize;
-   font-weight: $fWeight;
-   line-height: 100%;
-   border-radius: var(--defaultRd);
-   white-space: nowrap;
+
    transition: $transition;
-
-   @if $type == target {
-      $height: 55px;
-      $paddingX: 20px;
-      $fSize: 20px;
-      $fWeight: 400;
-      $freeWidth: true;
-      
-      padding: 5px $paddingX;
-      font-size: $fSize;
-      font-weight: $fWeight;
-      height: $height;
-      max-width: $maxWidth;
-      width: 100%;
-
-   } @else if $type == secondary {
-      $height: 50px;
-      $paddingX: 40px;
-      $fSize: 19px;
-      $fWeight: 400;
-
-      padding: 5px $paddingX;
-      font-size: $fSize;
-      font-weight: $fWeight;
-      height: $height;
-
-   } @else if $type == primary {
-      $height: 45px;
-      $paddingX: 40px;
-      $fSize: 17px;
-      $fWeight: 400;
-
-      padding: 5px $paddingX;
-      font-size: $fSize;
-      font-weight: $fWeight;
-      height: $height;
-
-   } @else if $type == ui {
-      $height: 41px;
-      $paddingX: 20px;
-      $fSize: 17px;
-      $fWeight: 400;
-
-      padding: 5px $paddingX;
-      font-size: $fSize;
-      font-weight: $fWeight;
-      height: $height;
-
-   } @else if $type == uiSmall {
-      $height: 39px;
-      $paddingX: 20px;
-      $fSize: 17px;
-      $fWeight: 400;
-
-      padding: 5px $paddingX;
-      font-size: $fSize;
-      font-weight: $fWeight;
-      height: $height;
-
-   } @else if $type == optionals {
-      $height: 39px;
-      $paddingX: 30px;
-      $fSize: 17px;
-      $fWeight: 400;
-
-      padding: 5px $paddingX;
-      font-size: $fSize;
-      font-weight: $fWeight;
-      height: $height;
-   
-   } @else if $type == helper {
-      $height: 37px;
-      $paddingX: 20px;
-      $fSize: 15px;
-      $fWeight: 400;
-
-      padding: 5px $paddingX;
-      font-size: $fSize;
-      font-weight: $fWeight;
-      height: $height;
-
-   } @else if $type == sticker {
-      $height: 30px;
-      $paddingX: 15px;
-      $fSize: 16px;
-      $fWeight: 400;
-
-      padding: 5px $paddingX;
-      font-size: $fSize;
-      font-weight: $fWeight;
-      height: $height;
-   } @else {
-      @error "Такого типа кнопки нет #{$type}.";
-   }
 
    @if $theme == dark {
       $color: var(--light);
@@ -280,6 +166,124 @@
          color: var(--light);
       }
    }
+}
+
+@mixin uiBtnType (
+   $type: primary,
+   $maxWidth: auto,
+   $paddingX: 40px,
+   $height: 45px,
+   $fSize: 17px,
+   $fWeight: 400,
+   $freeWidth: false,
+   
+) {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   height: $height;
+   font-family: inherit;
+   font-size: $fSize;
+   font-weight: $fWeight;
+   line-height: 100%;
+   border-radius: var(--defaultRd);
+   white-space: nowrap;
+   padding: 5px $paddingX;
+   
+
+   @if $type == target {
+      $height: 55px;
+      $paddingX: 20px;
+      $fSize: 20px;
+      $fWeight: 400;
+      $freeWidth: true;
+      
+      padding: 5px $paddingX;
+      font-size: $fSize;
+      font-weight: $fWeight;
+      height: $height;
+      max-width: $maxWidth;
+      width: 100%;
+
+   } @else if $type == secondary {
+      $height: 50px;
+      $paddingX: 40px;
+      $fSize: 19px;
+      $fWeight: 400;
+
+      padding: 5px $paddingX;
+      font-size: $fSize;
+      font-weight: $fWeight;
+      height: $height;
+
+   } @else if $type == primary {
+      $height: 45px;
+      $paddingX: 40px;
+      $fSize: 17px;
+      $fWeight: 400;
+
+      padding: 5px $paddingX;
+      font-size: $fSize;
+      font-weight: $fWeight;
+      height: $height;
+
+   } @else if $type == ui {
+      $height: 41px;
+      $paddingX: 20px;
+      $fSize: 17px;
+      $fWeight: 400;
+
+      padding: 5px $paddingX;
+      font-size: $fSize;
+      font-weight: $fWeight;
+      height: $height;
+
+   } @else if $type == uiSmall {
+      $height: 39px;
+      $paddingX: 20px;
+      $fSize: 17px;
+      $fWeight: 400;
+
+      padding: 5px $paddingX;
+      font-size: $fSize;
+      font-weight: $fWeight;
+      height: $height;
+
+   } @else if $type == optionals {
+      $height: 39px;
+      $paddingX: 30px;
+      $fSize: 17px;
+      $fWeight: 400;
+
+      padding: 5px $paddingX;
+      font-size: $fSize;
+      font-weight: $fWeight;
+      height: $height;
+   
+   } @else if $type == helper {
+      $height: 37px;
+      $paddingX: 20px;
+      $fSize: 15px;
+      $fWeight: 400;
+
+      padding: 5px $paddingX;
+      font-size: $fSize;
+      font-weight: $fWeight;
+      height: $height;
+
+   } @else if $type == sticker {
+      $height: 30px;
+      $paddingX: 15px;
+      $fSize: 16px;
+      $fWeight: 400;
+
+      padding: 5px $paddingX;
+      font-size: $fSize;
+      font-weight: $fWeight;
+      height: $height;
+   } @else {
+      @error "Такого типа кнопки нет #{$type}.";
+   }
 
    @if $freeWidth {
       max-width: $maxWidth;
@@ -287,64 +291,40 @@
    }
 }
 
+/* NOTE Черная кнопка primary (45px) - по умолчанию */
 .ui-btn {
-   @include button (
-      $type: primary,
-      $theme: dark
-   );
+   @include uiBtnType( $type: primary );
+   @include uiBtnTheme( $theme: dark );
 }
 
-.btn_outlines_default {
-   @include button (
-      $theme: outlines,
-      $childTheme: outlinesDefault
-   )
-}
 
-.btn_primary {
-   @include button (
-      $type: primary
-   )
-}
-
-.btn_reg {
-   @include button (
-      $type: uiSmall,
-      $theme: outlines,
-      $childTheme: outlinesDefault
-   );
-   padding: 11px clamp(20px, 3cqi, 30px);
-
-   &:hover {
-      color: var(--dark);
-      background: var(--border);
-      border-color: transparent;
-   }
-}
-
+/* NOTE Кнопка входа в top-menu */
 .btn_enter {
-   @include button (
-      $type: uiSmall,
-      $theme: action,
-   );
+   @include uiBtnType( $type: uiSmall );
+   @include uiBtnTheme( $theme: action );
+
    padding: 11px clamp(20px, 3cqi, 30px);
 }
 
-.btn_subscribe {
-   @include button (
-      $type: primary,
-      $theme: action,
-      $paddingX: 25px
-   );
+
+/* NOTE Кнопка входа в top-menu */
+.btn_inside-input {
+   @include uiBtnType( $type: primary  );
+   @include uiBtnTheme( $theme: action );
+
+   padding-left: 25px;
+   padding-right: 25px;
 }
 
-.btn_search-main {
-   @include button (
-      $type: primary,
-      $theme: action,
-   );
-   padding: 5px 25px;
+
+/* NOTE Кнопка "Поазать еще" - кнопка еще */
+.btn_enter {
+   @include uiBtnType( $type: uiSmall );
+   @include uiBtnTheme( $theme: action );
+
+   padding: 11px clamp(20px, 3cqi, 30px);
 }
+
 
 
 
