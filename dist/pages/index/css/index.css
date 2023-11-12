@@ -314,6 +314,7 @@ footer, .information-links {
   background: var(--dark);
 }
 
+/* NOTE Кнопка входа в top-menu */
 .btn_inside-input {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -345,6 +346,40 @@ footer, .information-links {
   padding-right: 25px;
 }
 .btn_inside-input:hover {
+  background: var(--dark);
+}
+
+/* NOTE Кнопка "Поазать еще" - кнопка еще */
+.btn_enter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 45px;
+  font-family: inherit;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 100%;
+  border-radius: var(--defaultRd);
+  white-space: nowrap;
+  padding: 5px 40px;
+  padding: 5px 20px;
+  font-size: 17px;
+  font-weight: 400;
+  height: 39px;
+  -webkit-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  color: var(--light);
+  background: var(--action);
+  padding: 11px clamp(20px, 3cqi, 30px);
+}
+.btn_enter:hover {
   background: var(--dark);
 }
 
