@@ -1,7 +1,8 @@
 .filter-item {
+   border-bottom: 1px solid var(--border_dark);
+
    &:not(:last-child) {
       margin-bottom: 40px;
-      border-bottom: 1px solid var(--border_dark);
       opacity: 1;
       visibility: visible;
       transition: all .5s ease;

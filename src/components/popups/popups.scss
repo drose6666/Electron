@@ -115,6 +115,7 @@ $transitionDuration: .2s ease;
 
 // NOTE Заголовок (название компонента fade-on-side)
 .ui-popup__title {
+   margin-bottom: 60px;
    font-size: 40px;
    font-weight: 400;
    line-height: 100%;
@@ -127,6 +128,7 @@ $transitionDuration: .2s ease;
    }
 
    &.underline {
+
       padding-bottom: 10px;
       position: relative;
 
@@ -166,7 +168,29 @@ $transitionDuration: .2s ease;
 
 /* TODO Группа кнопок/ссылок в popup */
 .ui-popup__btns {
+   margin-top: 80px;
    display: grid;
    grid-template: auto / repeat(auto-fill, minmax(230px, 1fr));
-   gap: 20px;
+   column-gap: 20px;
+   row-gap: 10px;
+
+   &.links {
+      grid-template: auto / max-content 1fr;
+   }
+}
+
+@container uiPopupContainer (max-width: 550px) {
+   .ui-popup__btns, .ui-popup__btns.links {
+      margin: 80px auto 0 auto;
+      grid-template: auto / 1fr;
+      max-width: 350px;
+
+      .ui-move-link {
+         justify-self: center;
+      }
+   }
+
+   .ui-popup__btns.links {
+      row-gap: 15px;
+   }
 }

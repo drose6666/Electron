@@ -222,28 +222,26 @@
    margin: 50px auto 0 auto;
 }
 
+.btn_i_popup_primary {
+   @include buttonIconType( $type: primary );
+   @include buttonIconTheme( $theme: action );
+}
 
+.btn_i_primary_dark {
+   @include buttonIconType( $type: primary );
+   @include buttonIconTheme( $theme: dark );
+}
 
+.btn_i_primary_action {
+   @include buttonIconType( $type: primary );
+   @include buttonIconTheme( $theme: action );
+}
 
-// .btn_i_action {
-//    @include buttonIcon (
-//       $type: primary,
-//       $theme: action,
-//    );
+.btn_footer-enter {
+   @include buttonIconType( $type: primary );
+   @include buttonIconTheme( $theme: action );
 
-//    padding-left: clamp(20px, 3cqi, 30px);
-//    gap: clamp(20px, 3cqi, 30px);
-//    max-width: 230px;
-// }
-
-// .btn_i_primary {
-//    @include buttonIcon (
-//       $type: primary
-//    )
-// }
-
-// .btn_i_dark {
-//    @include buttonIcon (
-//       $theme: dark
-//    )
-// }
+   padding-left: 30px;
+   gap: 30px;
+   display: inline-flex;
+}

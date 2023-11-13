@@ -13,7 +13,7 @@
       color: var(--light);
       position: relative;
       white-space: nowrap;
-      transition: background-size .2s;
+      transition: background-size .2s ease,  color .2s ease;
    }
 
    &:after {
@@ -61,6 +61,10 @@
       }
 
       &:hover {
+         span {
+            color: var(--light);
+         }
+
          &:after {
             color: var(--action);
          }

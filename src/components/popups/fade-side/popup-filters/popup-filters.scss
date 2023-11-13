@@ -12,7 +12,7 @@
    }
 
    .products-count {
-      margin-bottom: 20px;
+      margin: 40px 0 20px 0;
       font-size: 17px;
       font-weight: 300;
       line-height: 100%;
@@ -22,6 +22,25 @@
       strong {
          color: var(--light);
       }
+   }
+
+   .btn_filter_apply {
+      @include uiBtnType( $type: ui );
+      @include uiBtnTheme( $theme: action, );
+   }
+
+   .ui-popup__btns {
+      margin-top: 0;
+      grid-template: auto / repeat(auto-fill, minmax(140px, 1fr));
+   }
+   
+   .ui-popup__title {
+      margin-bottom: 75px;
+   }
+
+   .btn_filter_cancel {
+      @include uiBtnType( $type: ui );
+      @include uiBtnTheme( $theme: outlines, $childTheme: outlinesDefaultLight );
    }
 }
 

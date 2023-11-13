@@ -79,6 +79,12 @@
          background: $bg;
          border: $border;
 
+         &:hover {
+            background: var(--dark);
+            color: var(--light);
+            border-color: var(--dark);
+         }
+
       } @else if $childTheme == outlinesDark {
          $color: var(--dark);
          $bg: transparent;
@@ -88,6 +94,13 @@
          color: $color;
          background: $bg;
          border: $border;
+
+         &:hover {
+            background: var(--dark);
+            color: var(--light);
+            border-color: var(--dark);
+         }
+
       } @else if $childTheme == outlinesDefault {
          $color: var(--dark);
          $bg: transparent;
@@ -97,14 +110,28 @@
          color: $color;
          background: $bg;
          border: $border;
+
+         &:hover {
+            background: var(--dark);
+            color: var(--light);
+            border-color: var(--dark);
+         }
+         
+      } @else if $childTheme == outlinesDefaultLight {
+         $color: var(--light);
+         $bg: transparent;
+         $borderColor: var(--text_additional);
+         $border: 1px solid $borderColor;
+
+         color: $color;
+         background: $bg;
+         border: $border;
+
+         &:hover {
+            background: $borderColor;
+         }
       } @else {
          @error "Такой дочерней темы не существует #{$childTheme}.";
-      }
-
-      &:hover {
-         background: var(--dark);
-         color: var(--light);
-         border-color: var(--dark);
       }
 
    } @else if $theme == option {
@@ -326,5 +353,13 @@
 }
 
 
+.btn_primary_outlines_def {
+   @include uiBtnType( $type: primary );
+   @include uiBtnTheme( $theme: outlines, $childTheme: outlinesDefault );
+}
 
+.btn_primary_outlines_deflight {
+   @include uiBtnType( $type: primary );
+   @include uiBtnTheme( $theme: outlines, $childTheme: outlinesDefaultLight);
+}
 
