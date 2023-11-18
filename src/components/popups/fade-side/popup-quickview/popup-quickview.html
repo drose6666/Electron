@@ -1,0 +1,57 @@
+<div class="ui-popup fade-side popup-with-images" id="popup-quickview">
+   <div class="ui-popup__container">
+
+      <!-- Здесь контент -->
+      <div class="ui-popup__images-wrap">
+         <div class="ui-popup__images">
+            <div class="img"><img src="../../../../img/optimized/cards/card_16.webp" alt=""></div>
+            <div class="img"><img src="../../../../img/optimized/cards/card_7.webp" alt=""></div>
+            <div class="img"><img src="../../../../img/optimized/cards/card_3.webp" alt=""></div>
+            <div class="img"><img src="../../../../img/optimized/cards/card_4.webp" alt=""></div>
+            <div class="img"><img src="../../../../img/optimized/cards/card_5.webp" alt=""></div>
+            <div class="img"><img src="../../../../img/optimized/cards/card_6.webp" alt=""></div>
+            <div class="img"><img src="../../../../img/optimized/cards/card_10.webp" alt=""></div>
+            <div class="img"><img src="../../../../img/optimized/cards/card_11.webp" alt=""></div>
+            <div class="img"><img src="../../../../img/optimized/cards/card_13.webp" alt=""></div>
+         </div>
+      </div>
+
+      <div class="ui-popup__content-wrap">
+         <div class="quickview-product__head">
+            <span class="product-brand"></span>
+            <h2 class="ui-popup__title popup-quickview_title">VivoBook 15 M1502IA-BQ011W</h2>
+
+            <div class="product-additional-wrap">
+               <div class="product-rating-wrap">
+                  @@include('../../../ui/ui-star-rating/ui-star-rating-static.html')
+                  <span class="reviews-count"></span>
+               </div>
+
+               <div class="product-additional">
+                  <button><i class="i-compare"></i></button>
+                  <button><i class="i-heart"></i></button>
+               </div>
+            </div>
+
+            <div class="product-price">150 970 ₽</div>
+         </div>
+
+         <div class="quickview-product__options">
+            
+         </div>
+         
+         <div class="quickview-product__control"></div>
+
+         
+      </div>
+      
+      @@include('../../../ui/ui-close/ui-close.html', {
+         "className": "close_fade-side left_side popup-quickview-close",
+         "classNameIcon": "angle_right"
+      })
+   </div>
+
+   <!-- Здесь контент -->
+
+   <div class="ui-popup__overlay" id="overlay-quickview"></div>
+</div>

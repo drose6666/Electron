@@ -1,11 +1,12 @@
-.ui-move-link {
+.ui-more {
    display: flex;
    align-items: center;
    gap: 15px;
    width: max-content;
+   cursor: pointer;
    transition: all .3s ease;
 
-   span {
+   .child {
       padding: 3px 0;
       font-size: 17px;
       font-weight: 400;
@@ -49,7 +50,7 @@
       }
 
       &:hover {
-         &:after {
+         span {
             color: var(--action);
          }
       }

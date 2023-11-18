@@ -1,13 +1,39 @@
-<div class="ui-popup fade-side" id="popup-review">
+<div class="ui-popup fade-side popup-with-images" id="popup-review">
    <div class="ui-popup__container">
 
-      <h2 class="ui-popup__title fade-side_title">Отзыв</h2>
+      <!-- Здесь контент -->
+      <div class="ui-popup__images-wrap">
+         <div class="ui-popup__images">
+            <div class="img"><img src="../../../../img/optimized/review/review-img_1.webp" alt=""></div>
+            <div class="img"><img src="../../../../img/optimized/review/review-img_2.webp" alt=""></div>
+            <div class="img"><img src="../../../../img/optimized/review/review-img_9.webp" alt=""></div>
+            <div class="img"><img src="../../../../img/optimized/review/review-img_10.webp" alt=""></div>
+            <div class="img"><img src="../../../../img/optimized/review/review-img_11.webp" alt=""></div>
+            <div class="img"><img src="../../../../img/optimized/review/review-img_12.webp" alt=""></div>
+         </div>
+      </div>
+
+      <div class="ui-popup__content-wrap">
+         <h2 class="ui-popup__title fade-side_title">Отзыв</h2>
+
+         <div class="review-info">
+            <time class="review-info__date">Ноябрь 30, 2022</time>
+            @@include('../../../ui/ui-star-rating/ui-star-rating-static.html', { "className": "" })
+         </div>
+
+         <p class="review-content">
+            <h4 class="review-content__title">Константин Константинополевский</h4>
+            <p class="review-content__text">Имеется спорная точка зрения, гласящая примерно следующее: стремящиеся вытеснить традиционное производство, нанотехнологии заблокированы в рамках своих собственных рациональных ограничений. Принимая во внимание показатели успешности, постоянный количественный рост и сфера нашей активности в значительной степени обусловливает важность дальнейших направлений развития. Для современного мира новая модель организационной деятельности обеспечивает широкому кругу (специалистов) участие в формировании своевременного выполнения сверхзадачи. В своём стремлении повысить качество жизни, они забывают, что социально-экономическое развитие говорит о возможностях новых принципов формирования материально-технической и кадровой базы. Приятно, граждане, наблюдать, как стремящиеся вытеснить традиционное производство, нанотехнологии призывают нас к новым свершениям, которые, в свою очередь, должны быть разоблачены!</p>
+         </p>
+      </div>
       
       @@include('../../../ui/ui-close/ui-close.html', {
-         "className": "fade_close left_side fade_compare",
+         "className": "close_fade-side left_side popup-review-close",
          "classNameIcon": "angle_right"
       })
    </div>
+
+   <!-- Здесь контент -->
 
    <div class="ui-popup__overlay" id="overlay-review"></div>
 </div>

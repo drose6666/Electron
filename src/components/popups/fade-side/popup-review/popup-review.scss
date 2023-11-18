@@ -1,0 +1,97 @@
+#popup-review {
+   .ui-popup__container {
+      max-width: 840px;
+      grid-template: auto / minmax(170px, 220px) 1fr;
+      transform: translateX(840px);
+   }
+
+   &.active {
+      .ui-popup__container {
+         transform: none;
+      }
+   }
+   
+   .ui-popup__images-wrap {
+      .ui-popup__images {
+         .img {
+            max-width: 100%;
+            aspect-ratio: 1 / 1;
+         }
+      }
+   }
+
+   .review-info {
+      margin-bottom: 50px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid var(--border_dark);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+
+      &__date {
+         font-size: 15px;
+         font-weight: 400;
+         line-height: 100%;
+         color: var(--text_additional);
+      }
+   }
+
+   .review-content {
+      &__title {
+         margin-bottom: 20px;
+         font-size: 25px;
+         font-weight: 400;
+         line-height: 110%;
+         color: var(--light);
+      }
+
+      &__text {
+         font-size: 17px;
+         font-weight: 300;
+         line-height: 150%;
+         color: var(--text_additional);
+      }
+   }
+}
+
+@include media (max-width, 860px) {
+   #popup-review {
+      .ui-close {
+         left: 20px;
+      }
+   }
+} 
+ 
+@include media (max-width, 650px) {
+   #popup-review {
+      .ui-popup__container {
+         grid-template: auto / 1fr;
+         max-width: var(--fade_on_the_side_width);
+      }
+
+      .ui-popup__images-wrap {
+         padding: 0 clamp(var(--default_padding),5cqi,var(--fade_on_the_side_padding)); 
+         padding-bottom: 60px;
+         order: 2;
+
+         .ui-popup__images {
+            padding: 0;
+            position: static;
+            display: grid;
+            grid-template: auto / repeat(auto-fill, minmax(150px, 1fr));
+            gap: var(--small_btn_padding);
+   
+            .img:not(:last-child) {
+               margin-bottom: 0;
+            }
+         }
+      }
+
+      .review-wrap {
+         padding: 110px clamp(var(--default_padding),5cqi,var(--fade_on_the_side_padding)) 60px;
+         order: 1;
+      } 
+   }
+}
+

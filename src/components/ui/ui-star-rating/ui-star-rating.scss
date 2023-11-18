@@ -24,7 +24,7 @@
       gap: 15px;
 
       .ui-stars {
-         gap: 1px;
+         gap: 3px;
       }
    }
 
@@ -36,8 +36,10 @@
    }
 
    &.light {
-      font-size: 17px;
-      color: var(--dark);
+      .rating-value {
+         font-size: 17px;
+         color: var(--dark);
+      }
    }
 }
 
