@@ -41,6 +41,12 @@
          color: var(--dark);
       }
    }
+
+   &.light_value {
+      .rating-value {
+         color: var(--light);
+      }
+   }
 }
 
 @container uiPopupContainer (max-width: 500px) {

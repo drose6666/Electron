@@ -1,3 +1,11 @@
+%optionTitle {
+   font-size: 17px;
+   font-weight: 400;
+   line-height: 100%;
+   color: var(--text_selected_on_dark);
+   align-self: center;
+}
+
 #popup-quickview {
    .ui-popup__container {
       padding: 0;
@@ -35,20 +43,418 @@
       }
    }
 
+   /* IMPORTANT Стили кнопки закрытия */
+   .ui-close {
+      z-index: 1;
+   }
+
+   /* TODO Изображения */
    .ui-popup__images-wrap {
+
+      /* IMPORTANT Стили стрелок слайдера */
+      .swiper-button-prev,
+      .swiper-button-next {
+         display: none;
+         top: 50%;
+      }
+
+      .swiper-button-prev {
+         left: 7px;
+      }
+
+      .swiper-button-next {
+         right: 7px;
+      }
+
       .ui-popup__images {
+         .swiper-wrapper {
+            height: auto;
+            display: block;
+         }
          .img {
             background: var(--ui_dark);
             max-width: 100%;
+            position: relative;
             transition: 
                transform .2s ease, 
                opacity .2s ease,
                visibility .2s ease,
                background-color .2s ease;
 
-            &:hover {
-               background: var(--border_dark);
+            .btn_image-scale {
+               width: 35px;
+               height: 35px;
+               background: rgba(144, 149, 162, .6);
+               border-radius: var(--circleRd);
+               position: absolute;
+               top: 15px;
+               right: 15px;
+               display: flex;
+               align-items: center;
+               justify-content: center;
+               opacity: 0;
+               visibility: hidden;
+               transform: translateY(10px);
+               transition: 
+                  opacity .3s ease,
+                  visibility .3s ease,
+                  transform .3s ease,
+                  background-color .2s ease;
+
+               i {
+                  font-size: 15px;
+                  color: var(--light);
+                  transition: all .2s ease;
+               }
+
+               &:hover {
+                  background: var(--dark);
+                  
+                  i {
+                     color: var(--action);
+                  }
+               }
             }
+
+            &:hover {
+               .btn_image-scale {
+                  opacity: 1;
+                  visibility: visible;
+                  transform: none;
+               }
+            }
+         }
+      }
+   }
+
+   /* TODO Заголвок, блок с рейтингом и сравнение, избранное */
+   .quickview-product__head {
+      // margin-bottom: var(--popups_block_gutter);
+   }
+
+   .product-brand {
+      margin-bottom: 20px;
+      font-size: 20px;
+      font-weight: 300;
+      line-height: 100%;
+      display: block;
+      color: var(--text_additional);
+   }
+
+   // блок с рейтингом и иконками (сравнение, избранное)
+   .product-additional-wrap {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 15px;
+
+      // блок с иконками (сравнение, избранное)
+      .product-additional {
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         gap: 20px;
+
+         .btn-add {
+            padding: 0;
+            transition: all .2s ease;
+
+            &:hover {
+               transform: translateY(-3px);
+
+               i {
+                  color: var(--light);
+               }
+            }
+
+            i {
+               font-size: 15px;
+               color: var(--text_additional);
+               transition: all .2s ease;
+            }
+
+            &.active {
+               i {
+                  color: var(--action);
+               }
+            }
+         }
+      }
+   }
+
+   // блок с рейтингом и кол-вом отзывов
+   .product-rating-wrap {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 15px;
+
+      .reviews-count {
+         font-size: 15px;
+         font-weight: 300;
+         line-height: 100%;
+         color: var(--text_additional);
+      }
+   }
+
+
+   /* TODO Цена */
+   .product-price {
+      margin: var(--popups_block_gutter) 0;
+      font-size: 35px;
+      font-weight: 600;
+      line-height: 100%;
+      color: var(--separating_contrast);
+   }
+
+
+   /* TODO Опции */
+   .quickview-product__options {
+      margin-bottom: var(--popups_block_gutter);
+   }
+
+   .options-item {
+      display: grid;
+      grid-template: auto / 100px 1fr;
+      gap: 15px;
+
+      &:not(:last-child) {
+         margin-bottom: 30px;
+      }
+
+      &__title {
+         @extend %optionTitle;
+
+         margin-top: 10px;
+         align-self: start;
+      }
+
+      &__list {
+         display: flex;
+         flex-wrap: wrap;
+         gap: 12px;
+
+         .option-item {
+            padding: 12px 20px;
+            background: var(--ui_dark);
+            border-radius: var(--defaultRd);
+            outline: 1px solid transparent;
+            // outline-offset: -3px;
+            font-size: 15px;
+            font-weight: 500;
+            line-height: 100%;
+            color: var(--text_selected_on_dark);
+            cursor: pointer;
+            user-select: none;
+            transition: all .2s ease;
+
+            &:hover {
+               color: var(--light);
+               transform: translateY(-2px);
+               outline-offset: 0;
+               outline-color: var(--text_additional);
+            }
+
+            &.active {
+               color: var(--light);
+               background: transparent;
+               outline-offset: 0;
+               outline-color: var(--action);
+            }
+
+            &.disabled {
+               color: var(--border_dark);
+               background: transparent;
+               outline-offset: 0;
+               outline-color: transparent;
+               transform: none;
+               cursor: not-allowed;
+            }
+         }
+      }
+
+      // color list
+      &.color_list {
+         .options-item__list {
+            gap: 20px;
+
+            .option-item {
+               padding: 0;
+               border-radius: 50%;
+               width: 37px;
+               height: 37px;
+               transition: 
+                  transform .2s ease, 
+                  outline-offset .1s ease, 
+                  outline-color .1s ease;
+
+               @each $i, $color in (1, #4A4846),
+                                    (2, #516956),
+                                    (3, #F4F2EE),
+                                    (4, #82A7C8),
+                                    (5, #FDE8CF),
+                                    (6, #DE8E86) {
+                  &:nth-child(#{$i}) {
+                     background: $color;
+                  }           
+               }
+
+               &:hover {
+                  outline-offset: 4px;
+                  outline-color: var(--text_additional);
+               }
+
+               &.active {
+                  outline-offset: 4px;
+                  outline-color: var(--action);
+               }
+
+               &.disabled {
+                  outline-offset: 4px;
+                  outline-color: var(--ui_dark);
+                  background: var(--ui_dark);
+                  opacity: 0.5;
+               }
+            }
+         }
+      }
+   }
+
+
+   /* TODO Количество + кнопки */
+   .quickview-product__control {
+      padding-top: 30px;
+      border-top: 1px solid var(--border_dark);
+
+      .product-count-wrap {
+         display: flex;
+         align-items: center;
+         justify-content: space-between;
+         gap: 15px;
+
+         .product-count-title {
+            @extend %optionTitle;
+         }
+      }
+   }
+
+   .ui-popup__btns {
+      grid-template: auto / repeat(auto-fill, minmax(185px, 1fr));
+      margin-top: 30px;
+      max-width: 100%;
+   }
+
+   .btn-quickview-cart {
+      // @include buttonIconType( $type: primary, $freeWidth: true, $maxWidth: 100% );
+      // @include buttonIconTheme( $theme: action );
+      @include uiBtnType( $type: primary, $freeWidth: true, $maxWidth: 100% );
+      @include uiBtnTheme( $theme: action );
+   }
+
+   .btn-quickview-buy {
+      @include uiBtnType( $type: primary, $freeWidth: true, $maxWidth: 100% );
+      @include uiBtnTheme( $theme: outlines, $childTheme: outlinesDefaultLight );
+   }
+
+   .btn-quickview-more {
+      @include uiBtnType( $type: primary, $freeWidth: true, $maxWidth: 100% );
+      @include uiBtnTheme( $theme: uiDark );
+
+      grid-column: 1 / 3;
+   }
+}
+
+@include media (max-width, 1000px) {
+   #popup-quickview {
+      .ui-close {
+         left: 20px;
+      }
+   }
+}
+
+@include media (max-width, 830px) {
+   #popup-quickview {
+      .ui-close {
+         background: var(--border_dark);
+      }
+
+      .ui-popup__container {
+         grid-template: auto / 1fr;
+         max-width: var(--fade_on_the_side_width);
+      }
+
+      .ui-popup__content-wrap {
+         padding: 30px clamp(var(--default_padding), 5cqi, var(--fade_on_the_side_padding)); 
+         padding-bottom: 60px;
+         order: 1;
+      }
+
+      .ui-popup__images-wrap {
+         padding: 0;
+         padding-bottom: 30px;
+         // padding: 30px clamp(var(--default_padding), 5cqi, var(--fade_on_the_side_padding)); 
+         order: 1;
+
+         .swiper-button-prev,
+         .swiper-button-next {
+            display: flex;
+         }
+
+         .ui-popup__images {
+            padding: 0;
+            position: static;
+            display: grid;
+            grid-template: auto / minmax(200px, 1fr);
+            gap: var(--small_btn_padding);
+
+            .swiper-wrapper {
+               height: 100%;
+               display: flex;
+            }
+
+            .img {
+               // border-top-right-radius: 0;
+               // border-top-left-radius: 0;
+               border-radius: 0;
+               // background: var(--dark);
+            }
+   
+            .img:not(:last-child) {
+               margin-bottom: 0;
+            }
+         }
+      }
+   }
+}
+
+@include media (max-width, 550px) {
+   #popup-quickview {
+      .quickview-product__options {
+         .options-item {
+            grid-template: auto / 1fr;
+            gap: 15px;
+
+            &:not(:last-child) {
+               margin-bottom: 30px;
+            }
+         }
+      }
+   }
+}
+
+@include media (max-width, 460px) {
+   #popup-quickview {
+      .product-price {
+         margin: 50px 0;
+      }
+
+      .ui-popup__btns {
+         margin: 30px auto 0 auto;
+         grid-template: auto / 1fr;
+         gap: 10px;
+
+         .btn-quickview-more {
+            grid-column: 1 / 2;
          }
       }
    }

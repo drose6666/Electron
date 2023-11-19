@@ -98,7 +98,7 @@ $transitionDuration: .2s ease;
       }
 
       .ui-popup__title {
-         margin-bottom: 10px;
+         margin-bottom: 12px;
       }
    }
 
@@ -212,7 +212,7 @@ $transitionDuration: .2s ease;
    }
 
    &.popup-quickview_title {
-      font-size: 35px;
+      font-size: 32px;
       font-weight: 600;
       line-height: 110%;
    }
@@ -260,8 +260,9 @@ $transitionDuration: .2s ease;
    margin-top: 80px;
    display: grid;
    grid-template: auto / repeat(auto-fill, minmax(230px, 1fr));
-   column-gap: 20px;
-   row-gap: 10px;
+   // column-gap: 20px;
+   // row-gap: 10px;
+   gap: 20px;
 
    &.links {
       grid-template: auto / max-content 1fr;

@@ -1,48 +1,187 @@
 <div class="ui-popup fade-side popup-with-images" id="popup-quickview">
-   <div class="ui-popup__container">
+   <div class="ui-popup__container"> 
 
       <!-- Здесь контент -->
-      <div class="ui-popup__images-wrap">
-         <div class="ui-popup__images">
-            <div class="img"><img src="../../../../img/optimized/cards/card_16.webp" alt=""></div>
-            <div class="img"><img src="../../../../img/optimized/cards/card_7.webp" alt=""></div>
-            <div class="img"><img src="../../../../img/optimized/cards/card_3.webp" alt=""></div>
-            <div class="img"><img src="../../../../img/optimized/cards/card_4.webp" alt=""></div>
-            <div class="img"><img src="../../../../img/optimized/cards/card_5.webp" alt=""></div>
-            <div class="img"><img src="../../../../img/optimized/cards/card_6.webp" alt=""></div>
-            <div class="img"><img src="../../../../img/optimized/cards/card_10.webp" alt=""></div>
-            <div class="img"><img src="../../../../img/optimized/cards/card_11.webp" alt=""></div>
-            <div class="img"><img src="../../../../img/optimized/cards/card_13.webp" alt=""></div>
+      <div class="ui-popup__images-wrap swiper-container">
+         <div class="ui-popup__images swiper" id="quickview-product-swiper">
+            <div class="swiper-wrapper">
+               <div class="swiper-slide img">
+                  <img src="../../../../img/optimized/cards/card_16.webp" alt="">
+                  @@include('../../../ui/ui-button/ui-circle-icon/ui-circle-icon.html', {
+                     "classNameIcon": "search",
+                     "className": "btn_image-scale"
+                  })
+               </div>
+
+               <div class="swiper-slide img">
+                  <img src="../../../../img/optimized/cards/card_7.webp" alt="">
+                  @@include('../../../ui/ui-button/ui-circle-icon/ui-circle-icon.html', {
+                     "classNameIcon": "search",
+                     "className": "btn_image-scale"
+                  })
+               </div>
+
+               <div class="swiper-slide img">
+                  <img src="../../../../img/optimized/cards/card_3.webp" alt="">
+                  @@include('../../../ui/ui-button/ui-circle-icon/ui-circle-icon.html', {
+                     "classNameIcon": "search",
+                     "className": "btn_image-scale"
+                  })
+               </div>
+
+               <div class="swiper-slide img">
+                  <img src="../../../../img/optimized/cards/card_4.webp" alt="">
+                  @@include('../../../ui/ui-button/ui-circle-icon/ui-circle-icon.html', {
+                     "classNameIcon": "search",
+                     "className": "btn_image-scale"
+                  })
+               </div>
+
+               <div class="swiper-slide img">
+                  <img src="../../../../img/optimized/cards/card_5.webp" alt="">
+                  @@include('../../../ui/ui-button/ui-circle-icon/ui-circle-icon.html', {
+                     "classNameIcon": "search",
+                     "className": "btn_image-scale"
+                  })
+               </div>
+
+               <div class="swiper-slide img">
+                  <img src="../../../../img/optimized/cards/card_6.webp" alt="">
+                  @@include('../../../ui/ui-button/ui-circle-icon/ui-circle-icon.html', {
+                     "classNameIcon": "search",
+                     "className": "btn_image-scale"
+                  })
+               </div>
+
+               <div class="swiper-slide img">
+                  <img src="../../../../img/optimized/cards/card_10.webp" alt="">
+                  @@include('../../../ui/ui-button/ui-circle-icon/ui-circle-icon.html', {
+                     "classNameIcon": "search",
+                     "className": "btn_image-scale"
+                  })
+               </div>
+
+               <div class="swiper-slide img">
+                  <img src="../../../../img/optimized/cards/card_11.webp" alt="">
+                  @@include('../../../ui/ui-button/ui-circle-icon/ui-circle-icon.html', {
+                     "classNameIcon": "search",
+                     "className": "btn_image-scale"
+                  })
+               </div>
+               
+               <div class="swiper-slide img">
+                  <img src="../../../../img/optimized/cards/card_13.webp" alt="">
+                  @@include('../../../ui/ui-button/ui-circle-icon/ui-circle-icon.html', {
+                     "classNameIcon": "search",
+                     "className": "btn_image-scale"
+                  })
+               </div>
+            </div>
          </div>
+
+         <div class="swiper-button-prev quickview-product-prev"></div>
+         <div class="swiper-button-next quickview-product-next"></div>
       </div>
 
       <div class="ui-popup__content-wrap">
+         <!-- Заголовок + рейтинг -->
          <div class="quickview-product__head">
-            <span class="product-brand"></span>
+            <span class="product-brand">ASUS</span>
             <h2 class="ui-popup__title popup-quickview_title">VivoBook 15 M1502IA-BQ011W</h2>
 
             <div class="product-additional-wrap">
                <div class="product-rating-wrap">
-                  @@include('../../../ui/ui-star-rating/ui-star-rating-static.html')
-                  <span class="reviews-count"></span>
+                  @@include('../../../ui/ui-star-rating/ui-star-rating-static.html', { "className": "light_value" })
+                  <span class="reviews-count">(132)</span>
                </div>
 
                <div class="product-additional">
-                  <button><i class="i-compare"></i></button>
-                  <button><i class="i-heart"></i></button>
+                  <button class="btn-add"><i class="i-compare"></i></button>
+                  <button class="btn-add active"><i class="i-heart"></i></button>
                </div>
             </div>
 
             <div class="product-price">150 970 ₽</div>
          </div>
 
-         <div class="quickview-product__options">
-            
-         </div>
-         
-         <div class="quickview-product__control"></div>
+         <!-- Опции -->
+         <ul class="quickview-product__options"> 
+            <li class="options-item color_list">
+               <h6 class="options-item__title">Цвет</h6>
+               <ul class="options-item__list">
+                  <li class="option-item"></li>
+                  <li class="option-item active"></li>
+                  <li class="option-item"></li>
+                  <li class="option-item"></li>
+                  <li class="option-item"></li>
+                  <li class="option-item disabled"></li>
+               </ul>
+            </li>
 
+            <li class="options-item">
+               <h6 class="options-item__title">Память</h6>
+               <ul class="options-item__list color_list">
+                  <li class="option-item">16/256 Gb</li>
+                  <li class="option-item active">32/512 Gb</li>
+                  <li class="option-item">64/1 Tb</li>
+                  <li class="option-item">128/2 Tb</li>
+               </ul>
+            </li>
+
+            <li class="options-item">
+               <h6 class="options-item__title">SSD</h6>
+               <ul class="options-item__list">
+                  <li class="option-item active">256 Gb</li>
+                  <li class="option-item">512 Gb</li>
+                  <li class="option-item">1 Tb</li>
+                  <li class="option-item disabled">2 Tb</li>
+               </ul>
+            </li>
+
+            <li class="options-item">
+               <h6 class="options-item__title">Диагональ</h6>
+               <ul class="options-item__list">
+                  <li class="option-item">14"</li>
+                  <li class="option-item active">15"</li>
+                  <li class="option-item">15.6"</li>
+               </ul>
+            </li>
+         </ul>
          
+         <!-- Количество + кнопки -->
+         <div class="quickview-product__control">
+            <div class="product-count-wrap">
+               <h6 class="product-count-title">Количество</h6>
+               @@include('../../../ui/ui-product-counter/ui-product-counter.html', { "className": "quickview" })
+            </div>
+
+            <div class="ui-popup__btns">
+               <!-- @@include('../../../ui/ui-button/ui-btn-icon/ui-button-icon-link.html', {
+                  "link": "#",
+                  "className": "btn-quickview-cart",
+                  "classNameIcon": "cart_1",
+                  "text": "Добавить в корзину"
+               }) -->
+
+               @@loop('../../../ui/ui-button/ui-btn/ui-button-link.html', [
+                  {
+                     "link": "#",
+                     "className": "btn-quickview-cart",
+                     "text": "Добавить в корзину"
+                  },
+                  {
+                     "link": "#",
+                     "className": "btn-quickview-buy",
+                     "text": "Купить сейчас"
+                  },
+                  {
+                     "link": "#",
+                     "className": "btn-quickview-more",
+                     "text": "Перейти к товару"
+                  }
+               ])
+            </div>
+         </div>
       </div>
       
       @@include('../../../ui/ui-close/ui-close.html', {
