@@ -6,4 +6,4 @@ new PopupHandler ({
    btnClose: '.popup-send-review-close',
    btnOpen: '.btn_send-review',
    overlay: '#overlay-send-review',
-})
+});

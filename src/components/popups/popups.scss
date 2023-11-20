@@ -11,6 +11,7 @@ $transitionDuration: .2s ease;
 @import './fade-side/popup-search/popup-search';
 @import './popup-send-review/popup-send-review';
 @import './fade-side/popup-quickview/popup-quickview';
+@import './popup-image-preview/popup-image-preview';
 
 .ui-popup {
    position: fixed;
