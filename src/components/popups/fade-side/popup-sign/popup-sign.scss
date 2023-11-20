@@ -1,0 +1,11 @@
+#popup-sign {
+   .ui-popup__title {
+      &::after {
+         left: 50%;
+         bottom: -5px;
+         width: 100px;
+         transform: translateX(-50%);
+         background: var(--action);
+      }
+   }
+}

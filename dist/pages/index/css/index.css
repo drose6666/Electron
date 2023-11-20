@@ -282,7 +282,7 @@ footer, .information-links {
 }
 
 /* NOTE Кнопка входа в top-menu */
-.btn_enter {
+.btn_sign {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -311,7 +311,7 @@ footer, .information-links {
   background: var(--action);
   padding: 11px clamp(20px, 3cqi, 30px);
 }
-.btn_enter:hover {
+.btn_sign:hover {
   background: var(--dark);
 }
 
@@ -6231,6 +6231,16 @@ footer .footer-col.contact .contact-inside a.contact-inside__item:hover {
   margin-bottom: 10px;
 }
 
+#popup-sign .ui-popup__title::after {
+  left: 50%;
+  bottom: -5px;
+  width: 100px;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+  background: var(--action);
+}
+
 .ui-popup {
   position: fixed;
   top: 0;
@@ -6634,6 +6644,9 @@ footer .footer-col.contact .contact-inside a.contact-inside__item:hover {
   height: 2px;
   background: var(--light);
   border-radius: var(--defaultRd);
+}
+.ui-popup__title.center {
+  text-align: center;
 }
 
 /* TODO Список с товарами в корзине/сравнении */

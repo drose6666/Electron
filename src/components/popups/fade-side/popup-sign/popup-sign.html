@@ -1,0 +1,26 @@
+<div class="ui-popup fade-side" id="popup-sign">
+   <div class="ui-popup__container">
+
+      <!-- Здесь контент -->
+      <div class="sign-wrap">
+         <div class="sign-wrap__item sign-in">
+            <h2 class="ui-popup__title fade-side_title center underline">Вход</h2>
+            <p class="popup-sogn-nav-text">Еще нет аккаунта?<strong>Создайте его</strong>
+         </div>
+
+         <div class="sign-wrap__item sign-up">
+            <h2 class="ui-popup__title fade-side_title center underline">Регистрация</h2>
+            <p class="popup-sogn-nav-text">Уже есть аккаунт?<strong>Войти</strong>
+            </p>
+         </div>
+      </div>
+
+      @@include('../../../ui/ui-close/ui-close.html', {
+         "className": "close_fade-side left_side popup-sign-close",
+         "classNameIcon": "angle_right"
+      })
+      <!-- Здесь контент -->
+   </div>
+
+   <div class="ui-popup__overlay" id="overlay-sign"></div>
+</div>

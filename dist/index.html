@@ -22,16 +22,16 @@
    <link rel="icon" href="../../img/favicon/fav_48.png" type="image/png" sizes="48x48">
    <link rel="icon" href="../../img/favicon/fav_128.png" type="image/png" sizes="128x128">
    
-   <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css?_v=20231120213703" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
-   <!-- <link rel="stylesheet" href="../../libs/css/bootstrap-grid.min.css?_v=20231120213703"> -->
+   <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css?_v=20231121001648" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+   <!-- <link rel="stylesheet" href="../../libs/css/bootstrap-grid.min.css?_v=20231121001648"> -->
 
-   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css?_v=20231120213703" />
-   <script defer src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js?_v=20231120213703"></script>
-   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js?_v=20231120213703" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-   <link rel="stylesheet" href="../../libs/css/reset.min.css?_v=20231120213703">
-   <link rel="stylesheet" as="font" href="../../fonts/fonts.css?_v=20231120213703">
-   <link rel="stylesheet" as="font" href="../../fonts/icon-font.css?_v=20231120213703">
-   <link rel="stylesheet" href="./pages/index/css/index.min.css?_v=20231120213703">
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css?_v=20231121001648" />
+   <script defer src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js?_v=20231121001648"></script>
+   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js?_v=20231121001648" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+   <link rel="stylesheet" href="../../libs/css/reset.min.css?_v=20231121001648">
+   <link rel="stylesheet" as="font" href="../../fonts/fonts.css?_v=20231121001648">
+   <link rel="stylesheet" as="font" href="../../fonts/icon-font.css?_v=20231121001648">
+   <link rel="stylesheet" href="./pages/index/css/index.min.css?_v=20231121001648">
    
    <title>Electron</title>
 </head>
@@ -71,7 +71,7 @@
       <div class="btn-group">
          
 
-         <button type="@@type" class="ui-btn btn_enter">Вход/Регистрация</button>
+         <button type="@@type" class="ui-btn btn_sign">Вход/Регистрация</button>
       </div>
    </div>
 </div>
@@ -2528,7 +2528,32 @@
 
    <div class="ui-popup__overlay" id="overlay-image-preview"></div>
 </div>
+      <div class="ui-popup fade-side" id="popup-sign">
+   <div class="ui-popup__container">
+
+      <!-- Здесь контент -->
+      <div class="sign-wrap">
+         <div class="sign-wrap__item sign-in">
+            <h2 class="ui-popup__title fade-side_title center underline">Вход</h2>
+            <p class="popup-sogn-nav-text">Еще нет аккаунта?<strong>Создайте его</strong>
+         </div>
+
+         <div class="sign-wrap__item sign-up">
+            <h2 class="ui-popup__title fade-side_title center underline">Регистрация</h2>
+            <p class="popup-sogn-nav-text">Уже есть аккаунт?<strong>Войти</strong>
+            </p>
+         </div>
+      </div>
+
+      <div class="ui-close close_fade-side left_side popup-sign-close">
+   <i class="i-angle_right"></i>
+</div>
+      <!-- Здесь контент -->
+   </div>
+
+   <div class="ui-popup__overlay" id="overlay-sign"></div>
+</div>
       
-      <script type="module" src="./pages/index/js/bundle-index.min.js?_v=20231120213703"></script>
+      <script type="module" src="./pages/index/js/bundle-index.min.js?_v=20231121001648"></script>
    </body>
 </html>  

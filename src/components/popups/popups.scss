@@ -12,6 +12,7 @@ $transitionDuration: .2s ease;
 @import './popup-send-review/popup-send-review';
 @import './fade-side/popup-quickview/popup-quickview';
 @import './popup-image-preview/popup-image-preview';
+@import './fade-side/popup-sign/popup-sign';
 
 .ui-popup {
    position: fixed;
@@ -232,6 +233,10 @@ $transitionDuration: .2s ease;
          background: var(--light);
          border-radius: var(--defaultRd);
       }
+   }
+
+   &.center {
+      text-align: center;
    }
 }
 
