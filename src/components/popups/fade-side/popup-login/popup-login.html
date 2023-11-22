@@ -1,0 +1,43 @@
+<div class="ui-popup fade-side" id="popup-login">
+   <div class="ui-popup__container popup-login__container">
+
+      <!-- Здесь контент -->
+      <div class="sign-wrap">
+         <!-- Вход -->
+         <div class="sign-wrap__item sign-in" data-id="start-screen">
+            <h2 class="ui-popup__title fade-side_title center"><span>Вход</span></h2>
+            
+            @@include('../../../login-reminder/login-methods/login-methods.html')
+            <div class="login-separator"><span>или</span></div>
+            @@include('../../../forms/forms-login/form-sign-in.html')
+
+            <p class="popup-sign-text">Еще нет аккаунта? <strong data-for="sign-up" class="sign-nav">Создайте его</strong></p>
+         </div>
+
+         <!-- Регистрация -->
+         <div class="sign-wrap__item sign-up hidden" data-id="sign-up">
+            <h2 class="ui-popup__title fade-side_title center"><span>Регистрация</span></h2>
+            
+            @@include('../../../login-reminder/login-methods/login-methods.html')
+            <div class="login-separator"><span>или</span></div>
+            @@include('../../../forms/forms-login/form-sign-up.html')
+         </div>
+
+         <!-- Забыли пароль -->
+         <div class="sign-wrap__item sign-up hidden" data-id="forgot-password">
+            <h2 class="ui-popup__title fade-side_title center"><span>Забыли пароль?</span></h2>
+            <p class="help-text">Введите ниже адрес электронной почты, на который создавался аккаунт. Мы отправим ссылку для сброса пароля</p>
+         
+            @@include('../../../forms/forms-login/form-forgot-password.html')
+         </div>
+      </div>
+
+      @@include('../../../ui/ui-close/ui-close.html', {
+         "className": "close_fade-side left_side popup-login-close",
+         "classNameIcon": "angle_right"
+      })
+      <!-- Здесь контент -->
+   </div>
+
+   <div class="ui-popup__overlay" id="overlay-login"></div>
+</div>

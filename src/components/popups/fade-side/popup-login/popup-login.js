@@ -1,15 +1,16 @@
 import PopupHandler from '../../../../libs/js/module/fadeHiddenElements/PopupHandler.js'
+import '../../../forms/forms-login/forms-login.js';
 
 new PopupHandler ({
-   selector: '#popup-sign',
-   btnClose: '.popup-sign-close',
-   btnOpen: '.btn_sign',
-   overlay: '#overlay-sign',
+   selector: '#popup-login',
+   btnClose: '.popup-login-close',
+   btnOpen: '.btn_login',
+   overlay: '#overlay-login',
 })
 
-const popupSign = document.getElementById('popup-sign');
-const dataFor = popupSign.querySelectorAll('[data-for]');
-const dataId = popupSign.querySelectorAll('[data-id]');
+const popupLogin = document.querySelector('#popup-login .sign-wrap');
+const dataFor = popupLogin.querySelectorAll('[data-for]');
+const dataId = popupLogin.querySelectorAll('[data-id]');
 
 dataFor.forEach(item => {
    item.addEventListener('click', function () {
@@ -21,5 +22,8 @@ dataFor.forEach(item => {
       }
 
       currentDataId.classList.remove('hidden')
+      popupLogin.style.height = `${currentDataId.clientHeight}px`
+
+      if (currentDataForAttr === 'start-screen') popupLogin.style.height = 'auto' 
    })
 })

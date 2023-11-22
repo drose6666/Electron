@@ -1,0 +1,24 @@
+<form action="" class="ui-form_login" id="form-sign-in">
+   <div class="ui-form-item">
+      <input type="email" name="user_email" inputmode="email" autocomplete="email" placeholder="Email" class="ui-input_popup">
+      <span class="error-message"></span>
+   </div>
+
+   <div class="ui-form-item">
+      <input type="password" inputmode="text" name="user_password" autocomplete="current-password" placeholder="Пароль" class="ui-input_popup input_password">
+      @@include('../../ui/ui-password-control/ui-password-control.html')
+      <span class="error-message"></span>
+   </div>
+
+   <div class="ui-form-submit">
+      @@include('../../ui/ui-button/ui-btn-icon/ui-button-icon.html', {
+         "className": "btn_submit",
+         "classNameIcon": "arrow_up_right_long",
+         "text": "Войти",
+         "type": "submit"
+      })
+
+      <div class="forgot-password-link hoverLinks" data-for="forgot-password">Забыли пароль?</div>
+   </div>
+</form>
+

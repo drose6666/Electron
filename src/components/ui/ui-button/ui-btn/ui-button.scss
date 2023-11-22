@@ -326,7 +326,7 @@
 
 
 /* NOTE Кнопка входа в top-menu */
-.btn_sign {
+.btn_login {
    @include uiBtnType( $type: uiSmall );
    @include uiBtnTheme( $theme: action );
 

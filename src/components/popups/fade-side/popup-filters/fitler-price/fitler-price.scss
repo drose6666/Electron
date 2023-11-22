@@ -5,7 +5,9 @@
    gap: clamp(10px, 5cqi, 25px);
 
    .input_filter-price {
-      @include input ($type: primary, $theme: dark);
+      @include uiInput ( $height: 45px );
+      @include uiInputTheme ( $theme: dark);
+
       padding: 5px;
       text-align: center;
    }

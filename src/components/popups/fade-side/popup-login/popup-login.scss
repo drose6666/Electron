@@ -1,24 +1,34 @@
-@import '../../../forms/forms-sign/forms-sign';
+@import '../../../forms/forms-login/forms-login';
 
 $fadePaddingX: clamp(var(--default_padding), 5cqi, 50px);
 
-#popup-sign {
+#popup-login {
    .ui-popup__container {
       padding: 110px $fadePaddingX 40px $fadePaddingX;
    }
 
    .ui-popup__title {
-      &::after {
-         left: 50%;
-         bottom: -5px;
-         width: 100px;
-         transform: translateX(-50%);
-         background: var(--action);
+      font-weight: 300;
+
+      span {
+         position: relative;
+
+         &::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            bottom: -12px;
+            width: 70%;
+            height: 2px;
+            transform: translateX(-50%);
+            background: var(--action);
+         }
       }
    }
    
    .sign-wrap {
       position: relative;
+      width: 100%;
 
       &__item {
          position: absolute;
@@ -26,6 +36,7 @@ $fadePaddingX: clamp(var(--default_padding), 5cqi, 50px);
          left: 50%;
          transform: none;
          translate: -50%;
+         width: 100%;
          transition: all .3s ease .2s;
 
          .popup-sign-text {
@@ -89,7 +100,53 @@ $fadePaddingX: clamp(var(--default_padding), 5cqi, 50px);
             transform: translateY(15px);
             transition-delay: 0s;
          }
-
       }
    }
+
+   .login-separator {
+      margin: 40px 0;
+      position: relative;
+      text-align: center;
+
+      span {
+         padding: 0 30px;
+         font-size: 17px;
+         font-weight: 300;
+         line-height: 70%;
+         color: var(--text_additional);
+         position: relative;
+         z-index: 1;
+         background: var(--dark);
+      }
+
+      &:before {
+         content: '';
+         position: absolute;
+         left: 0;
+         top: 50%;
+         transform: translateY(-50%);
+         width: 100%;
+         height: 1px;
+         background: var(--text_additional);
+         z-index: 0;
+      }
+   }
+
+   .help-text {
+      margin: 0 auto 40px auto;
+      font-size: 18px;
+      font-weight: 300;
+      line-height: 120%;
+      color: var(--text_additional);
+      max-width: 450px;
+      text-align: center;
+   }
+}
+
+@include media (max-width, 450px) {
+   #popup-login {
+      .login-separator {
+         margin: 30px 0;
+      }
+   }   
 }

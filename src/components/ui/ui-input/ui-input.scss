@@ -1,16 +1,22 @@
-@mixin input (
+%hidePasswordIcons {
+   opacity: 0;
+   visibility: hidden;
+   // transform: translate(-120%, -50%);
+}
+
+%showPasswordIcons {
+   opacity: 1;
+   visibility: visible;
+   // transform: translate(-50%, -50%);
+}
+
+@mixin uiInput (
    $paddingY: 5px,
    $paddingLeft: 20px,
    $paddingRight: 10px,
-   $height: 45px,
+   $height: 50px,
    $fSize: 17px,
    $fWeight: 300,
-   $color: var(--dark),
-   $bg: var(--separating),
-   $borderColor: transparent,
-   $border: 1px solid $borderColor,
-   $type: primary,
-   $theme: light
 ) {
    padding: $paddingY $paddingRight $paddingY $paddingLeft;
    display: flex;
@@ -20,62 +26,25 @@
    font-size: $fSize;
    font-weight: $fWeight;
    line-height: 100%;
-   color: $color;
-   background: $bg;
    border-radius: var(--defaultRd);
-   outline: none;
-   border: $border;
    width: 100%;
 
+}
+
+@mixin uiInputTheme (
+   $color: var(--dark),
+   $bg: var(--separating),
+   $borderColor: transparent,
+   $border: 1px solid $borderColor,
+   $theme: light
+) {
+   color: $color;
+   background: $bg;
+   outline: none;
+   border: $border;
+   
    &::placeholder {
       color: var(--text_additional);
-   }
-
-   @if $type == primary {
-      height: $height;
-   } @else if $type == phone {
-      $paddingLeft: 85px;
-   
-      padding: $paddingY $paddingRight $paddingY $paddingLeft;
-
-   } @else if $type == search {
-      $paddingRight: 117px;
-
-      padding: $paddingY $paddingRight $paddingY $paddingLeft; 
-
-   } @else if $type == mainSearch {
-      $paddingRight: 117px;
-      $fSize: 19px;
-      $fWeight: 500;
-      $height: 49px;
-
-      padding: $paddingY $paddingRight $paddingY $paddingLeft;
-      font-size: $fSize;
-      font-weight: $fWeight;
-      height: $height;
-
-      &::placeholder {
-         font-weight: 300;
-      }
-      
-   } @else if $type == promocode {
-      $paddingRight: 57px;
-      $fWeight: 400;
-      $height: 49px;
-
-      padding: $paddingY $paddingRight $paddingY $paddingLeft;
-      font-weight: $fWeight;
-      height: $height;
-
-   } @else if $type == subscribe {
-      $paddingRight: 180px;
-      $height: 49px;
-
-      padding: $paddingY $paddingRight $paddingY $paddingLeft;
-      height: $height;
-
-   } @else {
-      @error "Такого типа input не существует #{$type}.";
    }
 
    @if $theme == light {
@@ -101,21 +70,19 @@
    // }
 }
 
-.dark_theme {
-   @include input ( $theme: dark )
+.theme_dark {
+   @include uiInputTheme ( $theme: dark )
 }
 
 
-
-.ui-input_popup {
-   @include input (
-      $height: 50px,
-      $theme: dark,
-   )
+.ui-input {
+   @include uiInput;
 }
 
 
 .ui-textarea {
+   @include uiInput ( $paddingY: 16px, $height: auto );
+
    padding-top: 16px;
    border-radius: var(--mdRd);
    min-height: 120px;
@@ -124,37 +91,92 @@
 
 // NOTE input числового значения рейтинга в форме отзыва
 .input_rating {
-   @include input ( 
+   @include uiInput ( 
       $paddingLeft: 5px,
       $paddingRight: 5px,
-      $theme: dark 
+      $height: 36px
    );
+   @include uiInputTheme( $theme: dark);
 
    text-align: center;
-   height: 36px;
    width: 90px;
 }
 
+
 // NOTE Инпут Подписки на уведомления
 .input_subscribe {
-   @include input (
-      $type: subscribe,
-      $theme: dark
-   )
+   @include uiInput ( $paddingRight: 180px, $height: 49px );
+   @include uiInputTheme ( $theme: dark );
 }
+
 
 // NOTE Инпут главноего поиска
 .input_search-main {
-   @include input (
-      $type: mainSearch,
-      $theme: dark
-   )
+   @include uiInput (
+      $paddingRight: 117px,
+      $fSize: 19px,
+      $fWeight: 500,
+      $height: 49px,
+   );
+   @include uiInputTheme ( $theme: dark );
+
+   &::placeholder {
+      font-weight: 300;
+   }
+}
+
+.input_password {
+   & + .password-control {
+      display: inline-block;
+      width: 46px;
+      height: 46px;
+      background: transparent;
+      border-radius: var(--circleRd);
+      position: absolute;
+      top: 2px;
+      right: 2px;
+      cursor: pointer;
+      transition: all .3s ease;
+
+      i {
+         font-size: 22px;
+         color: var(--text_additional);
+         position: absolute;
+         top: 50%;
+         left: 50%;
+         transition: inherit;
+         transform: translate(-50%, -50%);
+
+         &.password_show {
+            @extend %showPasswordIcons;
+         }
+
+         &.password_hide {
+            @extend %hidePasswordIcons;
+         }
+      }
+
+      &:has(.password-control__input:checked) {
+         background: var(--border_dark);
+
+         .password_show {
+            @extend %hidePasswordIcons;
+         }
+            
+         .password_hide {
+            @extend %showPasswordIcons;
+
+            color: var(--action);
+         }
+      }
+   }
 }
 
 
 .element-inside-input {
    position: absolute;
    top: 2px;
+   cursor: pointer;
 
    &.left {
       left: 2px;
@@ -162,6 +184,36 @@
 
    &.right {
       right: 2px;
+   }
+}
+
+.ui-form-item {
+   &:has(.input_icon) {
+      .element-inside-input {
+         width: 46px;
+         height: 46px;
+         background: var(--border_dark);
+         border-radius: var(--circleRd);
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         overflow: hidden;
+         transition: all .2s ease;
+
+         i {
+            font-size: 22px;
+            color: var(--text_additional);
+            transition: inherit;
+         }
+
+         &:hover {
+            background: var(--dark);
+
+            i {
+               color: var(--action);
+            }
+         }
+      }
    }
 }
 
@@ -203,4 +255,7 @@
    }
 }
 
-
+.ui-input_popup {
+   @include uiInput;
+   @include uiInputTheme( $theme: dark )
+}

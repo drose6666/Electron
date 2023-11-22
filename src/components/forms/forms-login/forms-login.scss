@@ -1,0 +1,76 @@
+.ui-form_login {
+   display: grid;
+   grid-template: auto / 1fr;
+   gap: 15px;
+
+   .ui-form-submit {
+      margin-top: 35px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 30px;
+   }
+
+   .btn_submit {
+      @include buttonIconType( $type: primary );
+      @include buttonIconTheme( $theme: action );
+   }
+
+   .forgot-password-link {
+      padding: 4px 0;
+      font-size: 17px;
+      font-weight: 400;
+      line-height: 100%;
+      color: var(--light);
+      cursor: pointer;
+      transition: background-size .2s ease, color .2s ease;
+
+      &:hover {
+         color: var(--action);
+      }
+   }
+
+   .warning-text {
+      margin: 25px auto 0 auto;
+      font-size: 16px;
+      font-weight: 300;
+      line-height: 110%;
+      color: var(--text_additional);
+      text-align: center;
+      max-width: 360px;
+
+      strong {
+         color: var(--light);
+         cursor: pointer;
+         transition: all .2s ease;
+
+         &:hover {
+            color: var(--action);
+         }
+      }
+   }
+}
+
+#form-forgot-password {
+   .ui-form-submit {
+      margin-top: 35px;
+      display: inline-flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 30px;
+   }
+}
+
+@include media (max-width, 450px) {
+   .ui-form_login {
+      .warning-text {
+         margin: 15px auto 0 auto;
+      }
+
+      .ui-form-submit  {
+         margin-top: 25px;
+      }
+   }   
+}

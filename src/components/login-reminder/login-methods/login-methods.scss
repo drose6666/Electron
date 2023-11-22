@@ -1,0 +1,21 @@
+.login-methods {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   gap: 30px;
+
+   li {
+      cursor: pointer;
+      
+      img {
+         display: inline-block;
+         transition: all .2s ease;
+      }
+
+      &:hover {
+         img {
+            transform: translateY(-3px);
+         }
+      }
+   }
+}
