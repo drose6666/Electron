@@ -4,7 +4,7 @@
    gap: 15px;
 
    .ui-form-submit {
-      margin-top: 35px;
+      margin-top: 25px;
       display: inline-flex;
       align-items: center;
       justify-content: center;
@@ -32,7 +32,7 @@
    }
 
    .warning-text {
-      margin: 25px auto 0 auto;
+      margin: 20px auto 0 auto;
       font-size: 16px;
       font-weight: 300;
       line-height: 110%;
@@ -67,10 +67,6 @@
    .ui-form_login {
       .warning-text {
          margin: 15px auto 0 auto;
-      }
-
-      .ui-form-submit  {
-         margin-top: 25px;
       }
    }   
 }

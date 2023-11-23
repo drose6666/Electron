@@ -22,16 +22,16 @@
    <link rel="icon" href="../../img/favicon/fav_48.png" type="image/png" sizes="48x48">
    <link rel="icon" href="../../img/favicon/fav_128.png" type="image/png" sizes="128x128">
    
-   <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css?_v=20231122234959" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
-   <!-- <link rel="stylesheet" href="../../libs/css/bootstrap-grid.min.css?_v=20231122234959"> -->
+   <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css?_v=20231123105046" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+   <!-- <link rel="stylesheet" href="../../libs/css/bootstrap-grid.min.css?_v=20231123105046"> -->
 
-   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css?_v=20231122234959" />
-   <script defer src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js?_v=20231122234959"></script>
-   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js?_v=20231122234959" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-   <link rel="stylesheet" href="../../libs/css/reset.min.css?_v=20231122234959">
-   <link rel="stylesheet" as="font" href="../../fonts/fonts.css?_v=20231122234959">
-   <link rel="stylesheet" as="font" href="../../fonts/icon-font.css?_v=20231122234959">
-   <link rel="stylesheet" href="./pages/index/css/index.min.css?_v=20231122234959">
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css?_v=20231123105046" />
+   <script defer src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js?_v=20231123105046"></script>
+   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js?_v=20231123105046" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+   <link rel="stylesheet" href="../../libs/css/reset.min.css?_v=20231123105046">
+   <link rel="stylesheet" as="font" href="../../fonts/fonts.css?_v=20231123105046">
+   <link rel="stylesheet" as="font" href="../../fonts/icon-font.css?_v=20231123105046">
+   <link rel="stylesheet" href="./pages/index/css/index.min.css?_v=20231123105046">
    
    <title>Electron</title>
 </head>
@@ -2533,10 +2533,13 @@
 
       <!-- Здесь контент -->
       <div class="sign-wrap">
-         <!-- Вход -->
+         <!-- IMPORTANT Вход -->
          <div class="sign-wrap__item sign-in" data-id="start-screen">
+
+            <!-- <img src="../../../../img/optimized/congrates.gif" alt=""> -->
             <h2 class="ui-popup__title fade-side_title center"><span>Вход</span></h2>
-            
+            <p class="popup-sign-text">Еще нет аккаунта? <strong data-for="sign-up" class="sign-nav">Создайте его</strong></p>
+
             <ul class="login-methods">
    <li><img src="../../../img/login/login_google.svg" alt=""></li>
    <li><img src="../../../img/login/login_yandex.svg" alt=""></li>
@@ -2550,7 +2553,7 @@
    </div>
 
    <div class="ui-form-item">
-      <input type="password" inputmode="text" name="user_password" autocomplete="current-password" placeholder="Пароль" class="ui-input_popup input_password">
+      <input type="password" inputmode="text" name="user_password" autocomplete="off" placeholder="Пароль" class="ui-input_popup input_password">
       <label class="password-control">
    <input type="checkbox" name="password" class="password-control__input visually-hidden">
    <i class="i-eye password_show"></i>
@@ -2570,13 +2573,12 @@
 </form>
 
 
-
-            <p class="popup-sign-text">Еще нет аккаунта? <strong data-for="sign-up" class="sign-nav">Создайте его</strong></p>
          </div>
 
-         <!-- Регистрация -->
+         <!-- IMPORTANT Регистрация -->
          <div class="sign-wrap__item sign-up hidden" data-id="sign-up">
             <h2 class="ui-popup__title fade-side_title center"><span>Регистрация</span></h2>
+            <p class="popup-sign-text">Уже есть аккаунт? <strong data-for="start-screen" class="sign-nav">Войти</strong></p>
             
             <ul class="login-methods">
    <li><img src="../../../img/login/login_google.svg" alt=""></li>
@@ -2585,10 +2587,10 @@
 </ul>
             <div class="login-separator"><span>или</span></div>
             <form action="" class="ui-form_login" id="form-sign-up">
-   <div class="ui-form-item">
+   <!-- <div class="ui-form-item">
       <input type="text" name="user_name" inputmode="text" autocomplete="name" placeholder="Имя" class="ui-input_popup dark_theme">
       <span class="error-message"></span>
-   </div>
+   </div> -->
 
    <div class="ui-form-item">
       <input type="email" name="user_email" inputmode="email" autocomplete="email" placeholder="Email" class="ui-input_popup">
@@ -2622,15 +2624,13 @@
    Создать аккаунт
    <div class="icon"><i class="i-arrow_up_right_long"></i></div>
 </button>
-
-      <p class="popup-sign-text">Уже есть аккаунт? <strong data-for="start-screen" class="sign-nav">Войти</strong></p>
    </div>
 </form>
 
 
          </div>
 
-         <!-- Забыли пароль -->
+         <!-- IMPORTANT Забыли пароль -->
          <div class="sign-wrap__item sign-up hidden" data-id="forgot-password">
             <h2 class="ui-popup__title fade-side_title center"><span>Забыли пароль?</span></h2>
             <p class="help-text">Введите ниже адрес электронной почты, на который создавался аккаунт. Мы отправим ссылку для сброса пароля</p>
@@ -2664,6 +2664,6 @@
    <div class="ui-popup__overlay" id="overlay-login"></div>
 </div>
       
-      <script type="module" src="./pages/index/js/bundle-index.min.js?_v=20231122234959"></script>
+      <script type="module" src="./pages/index/js/bundle-index.min.js?_v=20231123105046"></script>
    </body>
 </html>  
