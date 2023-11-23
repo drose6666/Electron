@@ -22,16 +22,16 @@
    <link rel="icon" href="../../img/favicon/fav_48.png" type="image/png" sizes="48x48">
    <link rel="icon" href="../../img/favicon/fav_128.png" type="image/png" sizes="128x128">
    
-   <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css?_v=20231123105046" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
-   <!-- <link rel="stylesheet" href="../../libs/css/bootstrap-grid.min.css?_v=20231123105046"> -->
+   <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css?_v=20231123174345" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+   <!-- <link rel="stylesheet" href="../../libs/css/bootstrap-grid.min.css?_v=20231123174345"> -->
 
-   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css?_v=20231123105046" />
-   <script defer src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js?_v=20231123105046"></script>
-   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js?_v=20231123105046" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-   <link rel="stylesheet" href="../../libs/css/reset.min.css?_v=20231123105046">
-   <link rel="stylesheet" as="font" href="../../fonts/fonts.css?_v=20231123105046">
-   <link rel="stylesheet" as="font" href="../../fonts/icon-font.css?_v=20231123105046">
-   <link rel="stylesheet" href="./pages/index/css/index.min.css?_v=20231123105046">
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css?_v=20231123174345" />
+   <script defer src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js?_v=20231123174345"></script>
+   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js?_v=20231123174345" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+   <link rel="stylesheet" href="../../libs/css/reset.min.css?_v=20231123174345">
+   <link rel="stylesheet" as="font" href="../../fonts/fonts.css?_v=20231123174345">
+   <link rel="stylesheet" as="font" href="../../fonts/icon-font.css?_v=20231123174345">
+   <link rel="stylesheet" href="./pages/index/css/index.min.css?_v=20231123174345">
    
    <title>Electron</title>
 </head>
@@ -2533,9 +2533,9 @@
 
       <!-- Здесь контент -->
       <div class="sign-wrap">
+
          <!-- IMPORTANT Вход -->
          <div class="sign-wrap__item sign-in" data-id="start-screen">
-
             <!-- <img src="../../../../img/optimized/congrates.gif" alt=""> -->
             <h2 class="ui-popup__title fade-side_title center"><span>Вход</span></h2>
             <p class="popup-sign-text">Еще нет аккаунта? <strong data-for="sign-up" class="sign-nav">Создайте его</strong></p>
@@ -2574,6 +2574,7 @@
 
 
          </div>
+
 
          <!-- IMPORTANT Регистрация -->
          <div class="sign-wrap__item sign-up hidden" data-id="sign-up">
@@ -2630,10 +2631,13 @@
 
          </div>
 
+
          <!-- IMPORTANT Забыли пароль -->
-         <div class="sign-wrap__item sign-up hidden" data-id="forgot-password">
+         <div class="sign-wrap__item forgot-password hidden" data-id="forgot-password">
             <h2 class="ui-popup__title fade-side_title center"><span>Забыли пароль?</span></h2>
-            <p class="help-text">Введите ниже адрес электронной почты, на который создавался аккаунт. Мы отправим ссылку для сброса пароля</p>
+            <p class="popup-sign-text">Уже вспомнили? <strong data-for="start-screen" class="sign-nav">Войти</strong></p>
+
+            <p class="help-text">Введите ниже адрес электронной почты, на который создавался аккаунт. На него будет отправлена ссылка для сброса пароля</p>
          
             <form action="" class="ui-form_login" id="form-forgot-password">
    <div class="ui-form-item">
@@ -2646,12 +2650,8 @@
    Отправить
    <div class="icon"><i class="i-arrow_up_right_long"></i></div>
 </button>
-
-      <p class="popup-sign-text">Нет необходимости. <strong data-for="start-screen" class="sign-nav">Вернуться назад</strong></p>
    </div>
 </form>
-
-
          </div>
       </div>
 
@@ -2664,6 +2664,6 @@
    <div class="ui-popup__overlay" id="overlay-login"></div>
 </div>
       
-      <script type="module" src="./pages/index/js/bundle-index.min.js?_v=20231123105046"></script>
+      <script type="module" src="./pages/index/js/bundle-index.min.js?_v=20231123174345"></script>
    </body>
 </html>  
