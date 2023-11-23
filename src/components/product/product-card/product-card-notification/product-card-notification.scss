@@ -1,0 +1,35 @@
+.product-card-notification {
+   display: grid;
+   grid-template: auto / 90px 1fr;
+   gap: 15px;
+
+   .img {
+      border-radius: var(--smRd);
+      background: var(--separating);
+      overflow: hidden;
+
+      img {
+         max-width: 100%;
+         height: auto;
+      }
+   }
+
+   .info {
+      align-self: center;
+      
+      .title {
+         margin-bottom: 10px;
+         font-size: 18px;
+         font-weight: 300;
+         line-height: 103%;
+         color: var(--dark);
+      }
+
+      .price {
+         font-size: 15px;
+         font-weight: 600;
+         line-height: 100%;
+         color: var(--dark);
+      }
+   }
+}

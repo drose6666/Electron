@@ -6,3 +6,4 @@ import '../../components/popups/popups.js';
 import '../../components/ui/ui-preloader/ui-preloader.js';
 
 // NOTE Временные импорты (для теста). Потом сделать каждый в нужном файле
+import '../../components/notifications/ui-notification.js';

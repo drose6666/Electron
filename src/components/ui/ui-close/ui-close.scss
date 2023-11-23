@@ -89,6 +89,23 @@
          font-size: 13px;
       }
    }
+
+   &.close_notification {
+      width: 35px;
+      height: 35px;
+      top: -8px;
+      right: -8px;
+      background: var(--light);
+      box-shadow: var(--light_btn_shadow);
+      opacity: 1;
+      visibility: visible;
+      transform: none;
+
+      i {
+         font-size: 15px;
+         color: var(--dark)
+      }
+   }
 }
 
 .ui-popup.active {

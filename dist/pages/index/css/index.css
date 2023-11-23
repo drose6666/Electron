@@ -42,6 +42,7 @@ a, a:active, a:focus, a:hover {
   --circe_light_shadow: 0px 0px 0px 12px rgba(255, 255, 255, 0.30);
   --ui_close_shadow: 0px 7px 15px rgba(0, 0, 0, 0.40);
   --popup_shadow: 0px 10px 40px 0px rgba(0, 0, 0, 0.40);
+  --notification_shadow: 0px 10px 35px 0px rgba(0, 0, 0, 0.14);
   --circleRd: 50%;
   --defaultRd: 40px;
   --xlRd: 50px;
@@ -2368,6 +2369,24 @@ footer, .information-links {
 .ui-close.close_input-file i {
   font-size: 13px;
 }
+.ui-close.close_notification {
+  width: 35px;
+  height: 35px;
+  top: -8px;
+  right: -8px;
+  background: var(--light);
+  -webkit-box-shadow: var(--light_btn_shadow);
+          box-shadow: var(--light_btn_shadow);
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: none;
+      -ms-transform: none;
+          transform: none;
+}
+.ui-close.close_notification i {
+  font-size: 15px;
+  color: var(--dark);
+}
 
 @media all and (max-width: 900px) {
   .ui-popup .ui-close {
@@ -2429,6 +2448,83 @@ footer, .information-links {
 }
 .ui-product-counter.quickview .count {
   font-size: 20px;
+}
+
+.product-card-notification {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: auto;
+  -ms-grid-columns: 90px 15px 1fr;
+      grid-template: auto/90px 1fr;
+  gap: 15px;
+}
+.product-card-notification .img {
+  border-radius: var(--smRd);
+  background: var(--separating);
+  overflow: hidden;
+}
+.product-card-notification .img img {
+  max-width: 100%;
+  height: auto;
+}
+.product-card-notification .info {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+.product-card-notification .info .title {
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 103%;
+  color: var(--dark);
+}
+.product-card-notification .info .price {
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 100%;
+  color: var(--dark);
+}
+
+.ui-notification__title {
+  margin-bottom: 20px;
+  font-size: 19px;
+  font-weight: 500;
+  line-height: 100%;
+  color: var(--dark);
+  z-index: 4;
+}
+.ui-notification.notification_adding {
+  padding: 15px 20px 15px 15px;
+  position: fixed;
+  bottom: 30px;
+  left: 30px;
+  width: 315px;
+  background: var(--light);
+  border-radius: var(--mdRd);
+  -webkit-box-shadow: var(--notification_shadow);
+          box-shadow: var(--notification_shadow);
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transform: translateY(20px);
+      -ms-transform: translateY(20px);
+          transform: translateY(20px);
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.ui-notification.notification_adding.active {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: none;
+      -ms-transform: none;
+          transform: none;
+}
+
+.notification-adding-list {
+  position: fixed;
+  bottom: 30px;
+  left: 30px;
 }
 
 .top-navigation {
@@ -8103,4 +8199,80 @@ i {
             align-items: center;
     gap: 15px;
   }
+}
+.product-card-notification {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: auto;
+  -ms-grid-columns: 90px 15px 1fr;
+      grid-template: auto/90px 1fr;
+  gap: 15px;
+}
+.product-card-notification .img {
+  border-radius: var(--smRd);
+  background: var(--separating);
+  overflow: hidden;
+}
+.product-card-notification .img img {
+  max-width: 100%;
+  height: auto;
+}
+.product-card-notification .info {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+.product-card-notification .info .title {
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 103%;
+  color: var(--dark);
+}
+.product-card-notification .info .price {
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 100%;
+  color: var(--dark);
+}
+
+.ui-notification__title {
+  margin-bottom: 20px;
+  font-size: 19px;
+  font-weight: 500;
+  line-height: 100%;
+  color: var(--dark);
+  z-index: 4;
+}
+.ui-notification.notification_adding {
+  padding: 15px 20px 15px 15px;
+  position: fixed;
+  bottom: 30px;
+  left: 30px;
+  width: 315px;
+  background: var(--light);
+  border-radius: var(--mdRd);
+  -webkit-box-shadow: var(--notification_shadow);
+          box-shadow: var(--notification_shadow);
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transform: translateY(20px);
+      -ms-transform: translateY(20px);
+          transform: translateY(20px);
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.ui-notification.notification_adding.active {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: none;
+      -ms-transform: none;
+          transform: none;
+}
+
+.notification-adding-list {
+  position: fixed;
+  bottom: 30px;
+  left: 30px;
 }
