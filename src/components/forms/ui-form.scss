@@ -1,0 +1,64 @@
+.ui-popup-form {
+   display: grid;
+   grid-template: auto / 1fr;
+   gap: 60px;
+
+   &.three-fields,
+   .three-fields {
+      display: grid;
+      grid-template: auto / 1fr 1fr;
+      gap: 20px;
+
+      .ui-form-submit {
+         margin-top: 40px;
+         display: flex;
+         align-items: center;
+         justify-content: space-between;
+         gap: 15px;
+         grid-column: 1 / 3;
+   
+         &__text {
+            font-size: 15px;
+            font-weight: 300;
+            line-height: 100%;
+            color: var(--text_additional);
+            max-width: 200px;
+         }
+      }
+
+      .ui-form-item.full-width {
+         grid-column: 1 / 3;
+      }
+   }
+}
+
+@container uiPopupContainer (max-width: 500px) {
+   .ui-popup-form {
+      gap: 50px;
+      
+      &.three-fields,
+      .three-fields {
+         grid-template: auto / 1fr;
+   
+         .ui-form-submit {
+            margin-top: 30px;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+   
+            &__text {
+               text-align: center;
+               max-width: 400px;
+            }
+         }
+
+         .ui-form-item.full-width,
+         .ui-form-submit {
+            grid-column: 1 / 2;
+         }
+      }
+   }
+
+   
+   
+}

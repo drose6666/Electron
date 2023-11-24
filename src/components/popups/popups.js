@@ -8,3 +8,4 @@ import './fade-side/popup-quickview/popup-quickview.js';
 import './popup-image-preview/popup-image-preview.js';
 import './popup-send-review/popup-send-review.js';
 import './fade-side/popup-login/popup-login.js';
+import './popup-answer/popup-answer.js';

@@ -22,16 +22,16 @@
    <link rel="icon" href="../../img/favicon/fav_48.png" type="image/png" sizes="48x48">
    <link rel="icon" href="../../img/favicon/fav_128.png" type="image/png" sizes="128x128">
    
-   <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css?_v=20231123222616" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
-   <!-- <link rel="stylesheet" href="../../libs/css/bootstrap-grid.min.css?_v=20231123222616"> -->
+   <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css?_v=20231124170021" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+   <!-- <link rel="stylesheet" href="../../libs/css/bootstrap-grid.min.css?_v=20231124170021"> -->
 
-   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css?_v=20231123222616" />
-   <script defer src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js?_v=20231123222616"></script>
-   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js?_v=20231123222616" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-   <link rel="stylesheet" href="../../libs/css/reset.min.css?_v=20231123222616">
-   <link rel="stylesheet" as="font" href="../../fonts/fonts.css?_v=20231123222616">
-   <link rel="stylesheet" as="font" href="../../fonts/icon-font.css?_v=20231123222616">
-   <link rel="stylesheet" href="./pages/index/css/index.min.css?_v=20231123222616">
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css?_v=20231124170021" />
+   <script defer src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js?_v=20231124170021"></script>
+   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js?_v=20231124170021" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+   <link rel="stylesheet" href="../../libs/css/reset.min.css?_v=20231124170021">
+   <link rel="stylesheet" as="font" href="../../fonts/fonts.css?_v=20231124170021">
+   <link rel="stylesheet" as="font" href="../../fonts/icon-font.css?_v=20231124170021">
+   <link rel="stylesheet" href="./pages/index/css/index.min.css?_v=20231124170021">
    
    <title>Electron</title>
 </head>
@@ -734,7 +734,7 @@
 </a>
 </div>
 
-      <button type="@@type" class="btn_more">
+      <button type="@@type" class="btn_more btn_answer">
    Смотреть все
    <div class="icon"><i class="i-arrow_up_long"></i></div>
 </button>
@@ -2208,7 +2208,7 @@
    <div class="ui-popup__container">
 
       <!-- Здесь контент -->
-      <form action="" class="ui-form form_review form_grid" id="form-send-review">
+      <form action="" class="ui-popup-form" id="form-send-review">
    <div class="form-head">
       <div class="ui-popup__title-wrap">
          <h3 class="ui-popup__title popup">Рейтинг</h3>
@@ -2251,7 +2251,7 @@
       </div>
    </div>
 
-   <div class="form-fields">
+   <div class="form-fields three-fields">
       <div class="ui-form-item">
          <input type="text" name="user_name" inputmode="text" autocomplete="name" placeholder="Имя" class="ui-input_popup ">
          <span class="error-message"></span>
@@ -2281,15 +2281,15 @@
 
 
       </div>
-   </div>
 
-   <div class="form-submit">
-      <button type="@@type" class="btn_i_primary_action">
+      <div class="ui-form-submit">
+         <button type="@@type" class="btn_i_primary_action">
    Оствавить отзыв
    <div class="icon"><i class="i-arrow_up_right_long"></i></div>
 </button>
-
-      <p class="form-submit__text">Конфиденциальность введенных данных гарантируется</p>
+   
+         <p class="ui-form-submit__text">Конфиденциальность введенных данных гарантируется</p>
+      </div>
    </div>
 </form>
       <!-- Здесь контент -->
@@ -2686,8 +2686,46 @@
 
    <div class="ui-popup__overlay" id="overlay-login"></div>
 </div>
+      <div class="ui-popup popup" id="popup-answer">
+   <div class="ui-popup__container">
+
+      <!-- Здесь контент -->
+      <form action="" class="ui-popup-form three-fields" id="form-answer">
+   <div class="ui-form-item">
+      <input type="text" name="user_name" inputmode="text" autocomplete="name" placeholder="Имя" class="ui-input_popup ">
+      <span class="error-message"></span>
+   </div>
+   
+   <div class="ui-form-item">
+      <input type="email" name="user_email" inputmode="email" autocomplete="email" placeholder="Email" class="ui-input_popup ">
+      <span class="error-message"></span>
+   </div>
+   
+   <div class="ui-form-item full-width">
+      <textarea name="user_review" placeholder="Ответ" class="ui-textarea theme_dark"></textarea>
+      <span class="error-message"></span>
+   </div>
+   
+   <div class="ui-form-submit">
+      <button type="@@type" class="btn_i_primary_action">
+   Оствавить отзыв
+   <div class="icon"><i class="i-arrow_up_right_long"></i></div>
+</button>
+      
+      <p class="ui-form-submit__text">Конфиденциальность введенных данных гарантируется</p>
+   </div>
+</form>
+      <!-- Здесь контент -->
+
+      <div class="ui-close close_popup popup-answer-close">
+   <i class="i-close"></i>
+</div>
+   </div>
+
+   <div class="ui-popup__overlay" id="overlay-answer"></div>
+</div>
       
       
-      <script type="module" src="./pages/index/js/bundle-index.min.js?_v=20231123222616"></script>
+      <script type="module" src="./pages/index/js/bundle-index.min.js?_v=20231124170021"></script>
    </body>
 </html>  

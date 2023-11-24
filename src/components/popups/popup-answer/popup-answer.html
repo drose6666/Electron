@@ -1,0 +1,15 @@
+<div class="ui-popup popup" id="popup-answer">
+   <div class="ui-popup__container">
+
+      <!-- Здесь контент -->
+      @@include('../../forms/form-answer/form-answer.html')
+      <!-- Здесь контент -->
+
+      @@include('../../ui/ui-close/ui-close.html', {
+         "className": "close_popup popup-answer-close",
+         "classNameIcon": "close"
+      })
+   </div>
+
+   <div class="ui-popup__overlay" id="overlay-answer"></div>
+</div>

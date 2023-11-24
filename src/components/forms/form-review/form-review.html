@@ -1,4 +1,4 @@
-<form action="" class="ui-form form_review form_grid" id="form-send-review">
+<form action="" class="ui-popup-form" id="form-send-review">
    <div class="form-head">
       <div class="ui-popup__title-wrap">
          <h3 class="ui-popup__title popup">Рейтинг</h3>
@@ -10,7 +10,7 @@
       </div>
    </div>
 
-   <div class="form-fields">
+   <div class="form-fields three-fields">
       <div class="ui-form-item">
          <input type="text" name="user_name" inputmode="text" autocomplete="name" placeholder="Имя" class="ui-input_popup ">
          <span class="error-message"></span>
@@ -29,15 +29,15 @@
       <div class="ui-form-item full-width">
          @@include('../../ui/ui-input-file/ui-input-file.html')
       </div>
-   </div>
 
-   <div class="form-submit">
-      @@include('../../ui/ui-button/ui-btn-icon/ui-button-icon.html', {
-         "text": "Оствавить отзыв",
-         "className": "btn_i_primary_action",
-         "classNameIcon": "arrow_up_right_long"
-      })
-
-      <p class="form-submit__text">Конфиденциальность введенных данных гарантируется</p>
+      <div class="ui-form-submit">
+         @@include('../../ui/ui-button/ui-btn-icon/ui-button-icon.html', {
+            "text": "Оствавить отзыв",
+            "className": "btn_i_primary_action",
+            "classNameIcon": "arrow_up_right_long"
+         })
+   
+         <p class="ui-form-submit__text">Конфиденциальность введенных данных гарантируется</p>
+      </div>
    </div>
 </form>

@@ -4,12 +4,6 @@
    .ui-popup__title {
       margin-bottom: 10px;
    }
-}
-
-.form_grid {
-   display: grid;
-   grid-template: auto / 1fr;
-   gap: 60px;
 
    .review-rating-wrap {
       .ui-form-item {
@@ -17,13 +11,13 @@
          justify-content: flex-end;
       }
    }
-
+   
    .form-head {
       display: flex;
       align-items: flex-start;
       justify-content: space-between;
       gap: 15px;
-
+   
       .ui-popup__title-wrap {
          .text {
             margin-top: 10px;
@@ -35,63 +29,18 @@
          }
       }
    }
-
-   .form-fields {
-      display: grid;
-      grid-template: auto / 1fr 1fr;
-      gap: 20px;
-   }
-
-   .form-submit {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 15px;
-
-      &__text {
-         font-size: 15px;
-         font-weight: 300;
-         line-height: 100%;
-         color: var(--text_additional);
-         max-width: 200px;
-      }
-   }
-
-   .full-width {
-      display: grid;
-      grid-column: 1 / 3;
-      gap: 20px;
-   }
 }
 
+
 @container uiPopupContainer (max-width: 500px) {
-   .form_grid {
+   #form-send-review {
       gap: 50px;
-
-      .form-fields {
-         grid-template: auto / 1fr;
-      }
-
-      .full-width {
-         grid-column: 1 / 2;
-      }
 
       .form-head {
          flex-direction: column;
          align-items: center;
          justify-content: center;
          gap: 25px;
-      }
-
-      .form-submit {
-         flex-direction: column;
-         align-items: center;
-         gap: 15px;
-
-         &__text {
-            text-align: center;
-            max-width: 400px;
-         }
       }
 
       .ui-popup__title, .ui-popup__title-wrap .text {

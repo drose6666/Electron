@@ -115,6 +115,7 @@
       &.close_fade-side, 
       &.close_popup,
       &.close_product-remove,
+      
       &.close_input-file {
          @extend %uiCloseInActiveElements;
       }
