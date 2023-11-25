@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'Electron';
-  src:  url('fonts/Electron.eot?jgnm0u');
-  src:  url('fonts/Electron.eot?jgnm0u#iefix') format('embedded-opentype'),
-    url('fonts/Electron.ttf?jgnm0u') format('truetype'),
-    url('fonts/Electron.woff?jgnm0u') format('woff'),
-    url('fonts/Electron.svg?jgnm0u#Electron') format('svg');
+  src:  url('fonts/Electron.eot?f9gykg');
+  src:  url('fonts/Electron.eot?f9gykg#iefix') format('embedded-opentype'),
+    url('fonts/Electron.ttf?f9gykg') format('truetype'),
+    url('fonts/Electron.woff?f9gykg') format('woff'),
+    url('fonts/Electron.svg?f9gykg#Electron') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -25,11 +25,14 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.i-angle_left:before {
-  content: "\e92c";
+.i-user_avatar:before {
+  content: "\e92f";
 }
 .i-arrow_up_right_long:before {
   content: "\e92d";
+}
+.i-angle_left:before {
+  content: "\e92c";
 }
 .i-star:before {
   content: "\e92e";

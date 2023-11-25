@@ -1,74 +1,130 @@
-.ui-more {
-   display: flex;
+@mixin uiMore (
+   $gutter: 15px,
+   $padding: 3px 0,
+   $fSize: 17px,
+   $fWeight: 400,
+   $icon: '\e905',
+   $iconFSize: 14px,
+   $iconHoverMove: translate(3px),
+   $iconHoverColor: var(--action),
+   
+   $theme,
+   $color: null,
+   $iconColor: null,
+) {
+   display: inline-flex;
    align-items: center;
-   gap: 15px;
-   width: max-content;
+   gap: $gutter;
    cursor: pointer;
    transition: all .3s ease;
 
    .child {
-      padding: 3px 0;
-      font-size: 17px;
-      font-weight: 400;
+      padding: $padding;
+      font-size: $fSize;
+      font-weight: $fWeight;
       line-height: 100%;
-      color: var(--light);
       position: relative;
       white-space: nowrap;
       transition: background-size .2s ease,  color .2s ease;
    }
 
    &:after {
-      content: '\e905';
+      content: $icon;
       font-family: var(--icon_font);
-      font-size: 14px;
-      color: var(--light);
-      display: block;
+      font-size: $iconFSize;
+      display: inline-block;
       transition: inherit;
    }
 
    &:hover {
       &:after {
-         translate: 3px;
+         color: $iconHoverColor;
+         transform: $iconHoverMove;
+      }
+   }
+
+   @if $theme == dark {
+      $color: var(--dark);
+      $iconColor: var(--dark);
+
+      .child {
+         color: $color;
+
+         &:after { color: $iconColor; }
+      }
+
+   } @else if $theme == slowDark {
+      $color: var(--text_selected_on_dark);
+      $iconColor: var(--text_selected_on_dark);
+
+      .child {
+         color: $color;
+
+         &:after { color: $iconColor; }
+      }
+
+      &:hover {
+         .child {
+            color: var(--light);
+         }
+      }
+
+   } @else if $theme == light {
+      $color: var(--light);
+      $iconColor: var(--light);
+
+      .child, &:after {
+         color: $color;
+      }
+
+
+      &:hover {
+         .child {
+            color: var(--light);
+         }
+      }
+   }
+}
+
+
+/* USE default */
+.ui-more {
+   @include uiMore( $theme: dark );
+}
+
+
+/* USE small */
+.ui-more_small {
+   @include uiMore( 
+      $padding: 2px 0,  
+      $fSize: 15px,
+      $iconFSize: 13px,
+      $theme: dark 
+   );
+}
+
+
+/* USE small */
+.ui-more_slow-dark {
+   @include uiMore( $theme: slowDark );
+}
+
+
+/* USE показать скрытые элементы */
+.ui-more_show-collapse {
+   @include uiMore( 
+      $fSize: 14px,
+      $iconFSize: 13px,
+      $theme: light,
+      $icon: "\e901"
+   );
+
+   &.active {
+      &:after {
+         transform: rotate(180deg);
          color: var(--action);
       }
    }
 
-   &.small {
-      span {
-         padding: 2px 0;
-         font-size: 15px;
-      }
-
-      &:after {
-         font-size: 13px;
-      }
-   }
-
-   &.dark {
-      span, &:after {
-         color: var(--dark);
-      }
-
-      &:hover {
-         span {
-            color: var(--action);
-         }
-      }
-   }
-
-   &.slow_dark {
-      span, &:after {
-         color: var(--text_selected_on_dark);
-      }
-
-      &:hover {
-         span {
-            color: var(--light);
-         }
-
-         &:after {
-            color: var(--action);
-         }
-      }
-   }
+   
 }
