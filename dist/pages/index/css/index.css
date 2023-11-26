@@ -1738,7 +1738,7 @@ footer, .information-links {
   color: var(--dark);
 }
 
-/* USE small */
+/* USE используется как ссылка в popup-ах */
 .ui-more_slow-dark {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -4428,6 +4428,15 @@ footer .footer-col.contact .contact-inside a.contact-inside__item:hover {
   color: var(--text_additional);
 }
 
+:root {
+  --ui_popup_gutter: 60px;
+}
+@media all and (max-width: 550px) {
+  :root {
+    --ui_popup_gutter: 50px;
+  }
+}
+
 .parent-item.has-children {
   position: relative;
 }
@@ -4863,10 +4872,7 @@ footer .footer-col.contact .contact-inside a.contact-inside__item:hover {
   max-width: 320px;
 }
 
-@container uiPopupContainer (max-width: 500px) {
-  #form-send-review {
-    gap: 50px;
-  }
+@media all and (max-width: 550px) {
   #form-send-review .form-head {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -6769,21 +6775,12 @@ footer .footer-col.contact .contact-inside a.contact-inside__item:hover {
   }
 }
 .answer {
-  margin-bottom: var(--popups_block_gutter);
-  padding-left: 43px;
+  margin-bottom: var(--ui_popup_gutter);
   position: relative;
 }
-.answer:before {
-  content: "\e921";
-  position: absolute;
-  top: 0;
-  left: 0;
-  font-family: var(--icon_font);
-  font-size: 23px;
-  color: var(--light);
-}
 .answer__head {
-  margin-bottom: 10px;
+  margin-bottom: 15px;
+  padding-left: 43px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -6792,43 +6789,65 @@ footer .footer-col.contact .contact-inside a.contact-inside__item:hover {
           align-items: center;
   gap: 20px;
 }
-.answer__head .author {
+.answer__head:before {
+  content: "\e921";
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-family: var(--icon_font);
+  font-size: 23px;
+  color: var(--light);
+}
+.answer__head .author-avatar i {
+  font-size: 30px;
+  color: var(--text_additional);
+}
+.answer__head .answer-info {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 15px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 8px;
+}
+.answer__head .answer-info .author-name {
+  margin-right: 12px;
+  padding-right: 20px;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 110%;
+  color: var(--light);
   position: relative;
 }
-.answer__head .author::after {
+.answer__head .answer-info .author-name::after {
   content: "";
-  position: relative;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
   right: -2px;
   width: 4px;
   height: 4px;
   border-radius: var(--circleRd);
   background: var(--action);
+  display: inline-block;
 }
-.answer__head .author__avatar i {
-  font-size: 30px;
-  color: var(--text_additional);
-}
-.answer__head .author__name {
-  font-size: 20px;
-  font-weight: 400;
-  line-height: 110%;
-  color: var(--text_selected_on_dark);
-}
-.answer__head .date {
+.answer__head .answer-info .date {
   font-size: 15px;
   font-weight: 300;
   line-height: 100%;
-  color: var(--text_additional);
+  color: var(--text_selected_on_dark);
+  white-space: nowrap;
+}
+.answer__body {
+  padding-left: 43px;
 }
 .answer__body .answer-text {
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 300;
   line-height: 140%;
   color: var(--text_additional);
@@ -6837,6 +6856,31 @@ footer .footer-col.contact .contact-inside a.contact-inside__item:hover {
   margin-top: 10px;
 }
 
+@media all and (max-width: 550px) {
+  .answer__head {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .answer__head .answer-info {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .answer__head .answer-info .author-name {
+    margin-right: 0;
+  }
+  .answer__head .answer-info .author-name:after {
+    display: none;
+  }
+  .answer__body {
+    padding-left: 0;
+  }
+}
 .ui-popup {
   position: fixed;
   top: 0;
@@ -7211,14 +7255,13 @@ footer .footer-col.contact .contact-inside a.contact-inside__item:hover {
 }
 
 .ui-popup__title {
-  margin-bottom: 60px;
+  margin-bottom: var(--ui_popup_gutter);
   font-size: 40px;
   font-weight: 400;
   line-height: 100%;
   color: var(--light);
 }
 .ui-popup__title.fade-side_title {
-  margin-bottom: 60px;
   font-weight: 500;
   line-height: 110%;
 }
@@ -7281,7 +7324,7 @@ footer .footer-col.contact .contact-inside a.contact-inside__item:hover {
 }
 
 /* TODO Картинки в popup-review и popup-quickview */
-@container uiPopupContainer (max-width: 550px) {
+@media all and (max-width: 550px) {
   .ui-popup__btns, .ui-popup__btns.links {
     margin: 80px auto 0 auto;
     -ms-grid-rows: auto;
@@ -7295,6 +7338,12 @@ footer .footer-col.contact .contact-inside a.contact-inside__item:hover {
   }
   .ui-popup__btns.links {
     row-gap: 15px;
+  }
+  .ui-popup__title {
+    font-size: 35px;
+  }
+  .ui-popup__title.popup {
+    line-height: 90%;
   }
 }
 .login-methods {
@@ -7330,16 +7379,16 @@ footer .footer-col.contact .contact-inside a.contact-inside__item:hover {
   -ms-grid-rows: auto;
   -ms-grid-columns: 1fr;
       grid-template: auto/1fr;
-  gap: 60px;
+  gap: var(--ui_popup_gutter);
 }
 .ui-popup-form.three-fields,
 .ui-popup-form .three-fields {
   display: -ms-grid;
   display: grid;
   -ms-grid-rows: auto;
-  -ms-grid-columns: 1fr 20px 1fr;
+  -ms-grid-columns: 1fr 15px 1fr;
       grid-template: auto/1fr 1fr;
-  gap: 20px;
+  gap: 15px;
 }
 .ui-popup-form.three-fields .ui-form-submit,
 .ui-popup-form .three-fields .ui-form-submit {
@@ -7373,10 +7422,7 @@ footer .footer-col.contact .contact-inside a.contact-inside__item:hover {
   grid-column: 1/3;
 }
 
-@container uiPopupContainer (max-width: 500px) {
-  .ui-popup-form {
-    gap: 50px;
-  }
+@media all and (max-width: 550px) {
   .ui-popup-form.three-fields,
   .ui-popup-form .three-fields {
     -ms-grid-rows: auto;

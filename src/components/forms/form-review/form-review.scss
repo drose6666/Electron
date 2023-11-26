@@ -32,10 +32,8 @@
 }
 
 
-@container uiPopupContainer (max-width: 500px) {
+@include media (max-width, 550px) {
    #form-send-review {
-      gap: 50px;
-
       .form-head {
          flex-direction: column;
          align-items: center;

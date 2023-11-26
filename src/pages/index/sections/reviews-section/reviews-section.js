@@ -45,8 +45,8 @@ const optionsReviews = {
 window.addEventListener('load', () => {
    const reviewsSwiper = new Swiper('#reviews-swiper', optionsReviews)
 
-   document.querySelectorAll('.review .text').forEach(text => {
-      text.style['-webkit-box-orient'] = 'vertical'
-   })
+   // document.querySelectorAll('.review .text').forEach(text => {
+   //    text.style['-webkit-box-orient'] = 'vertical'
+   // })
 })
 

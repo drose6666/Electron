@@ -1,13 +1,13 @@
 .ui-popup-form {
    display: grid;
    grid-template: auto / 1fr;
-   gap: 60px;
+   gap: var(--ui_popup_gutter);
 
    &.three-fields,
    .three-fields {
       display: grid;
       grid-template: auto / 1fr 1fr;
-      gap: 20px;
+      gap: 15px;
 
       .ui-form-submit {
          margin-top: 40px;
@@ -32,10 +32,8 @@
    }
 }
 
-@container uiPopupContainer (max-width: 500px) {
+@include media (max-width, 550px) {
    .ui-popup-form {
-      gap: 50px;
-      
       &.three-fields,
       .three-fields {
          grid-template: auto / 1fr;
@@ -58,7 +56,4 @@
          }
       }
    }
-
-   
-   
 }

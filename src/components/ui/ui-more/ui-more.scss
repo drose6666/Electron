@@ -104,7 +104,7 @@
 }
 
 
-/* USE small */
+/* USE используется как ссылка в popup-ах */
 .ui-more_slow-dark {
    @include uiMore( $theme: slowDark );
 }

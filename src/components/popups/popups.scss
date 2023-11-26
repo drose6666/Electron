@@ -3,6 +3,14 @@ $fadePaddingX: clamp(var(--default_padding), 5cqi, var(--fade_on_the_side_paddin
 $fadePadding: 110px $fadePaddingX 40px $fadePaddingX;
 $transitionDuration: .2s ease;
 
+:root {
+   --ui_popup_gutter: 60px;
+
+   @include media (max-width, 550px) {
+      --ui_popup_gutter: 50px;
+   }
+}
+
 @import '../menu/mobile-menu/mobile-menu';
 @import '../forms/form-review/form-review';
 @import '../product/product-card/product-card-cart/product-card-cart';
@@ -200,16 +208,15 @@ $transitionDuration: .2s ease;
    }
 }
 
-// NOTE Заголовок (название компонента fade-on-side)
+// TODO Заголовок (название компонента fade-on-side)
 .ui-popup__title {
-   margin-bottom: 60px;
+   margin-bottom: var(--ui_popup_gutter);
    font-size: 40px;
    font-weight: 400;
    line-height: 100%;
    color: var(--light);
 
    &.fade-side_title {
-      margin-bottom: 60px;
       font-weight: 500;
       line-height: 110%;
    }
@@ -278,7 +285,7 @@ $transitionDuration: .2s ease;
 
 /* TODO Картинки в popup-review и popup-quickview */
 
-@container uiPopupContainer (max-width: 550px) {
+@include media (max-width, 550px) {
    .ui-popup__btns, .ui-popup__btns.links {
       margin: 80px auto 0 auto;
       grid-template: auto / 1fr;
@@ -291,5 +298,13 @@ $transitionDuration: .2s ease;
 
    .ui-popup__btns.links {
       row-gap: 15px;
+   }
+
+   .ui-popup__title {
+      font-size: 35px;
+
+      &.popup {
+         line-height: 90%;
+      }
    }
 }
