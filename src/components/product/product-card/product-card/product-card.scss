@@ -38,6 +38,11 @@
                font-size: clamp(19px, 6cqi, 22px);
             }
          }
+
+         .btn_card-order {
+            @include uiBtnType( $type: helper );
+            @include uiBtnTheme( $theme: light );
+         }
       }
 
       .quick-nav {

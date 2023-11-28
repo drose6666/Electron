@@ -6062,7 +6062,7 @@ footer .footer-col.contact .contact-inside a.contact-inside__item:hover {
   gap: 15px;
 }
 #popup-quickview .ui-popup__btns {
-  grid-template: auto/repeat(auto-fill, minmax(185px, 1fr));
+  grid-template: auto/repeat(auto-fit, minmax(185px, 1fr));
   margin-top: 30px;
   max-width: 100%;
 }
@@ -7625,6 +7625,40 @@ i {
 }
 .product-card .img .action-wrap .btn_product_cart i {
   font-size: clamp(19px, 6cqi, 22px);
+}
+.product-card .img .action-wrap .btn_card-order {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 45px;
+  font-family: inherit;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 100%;
+  border-radius: var(--defaultRd);
+  white-space: nowrap;
+  padding: 5px 40px;
+  padding: 5px 20px;
+  font-size: 15px;
+  font-weight: 400;
+  height: 37px;
+  -webkit-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  color: var(--dark);
+  background: var(--light);
+  -webkit-box-shadow: var(--light_btn_shadow);
+          box-shadow: var(--light_btn_shadow);
+}
+.product-card .img .action-wrap .btn_card-order:hover {
+  background: var(--action);
+  color: var(--light);
 }
 .product-card .img .quick-nav {
   position: absolute;

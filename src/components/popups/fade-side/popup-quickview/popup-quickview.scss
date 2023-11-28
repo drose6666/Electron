@@ -337,7 +337,7 @@
    }
 
    .ui-popup__btns {
-      grid-template: auto / repeat(auto-fill, minmax(185px, 1fr));
+      grid-template: auto / repeat(auto-fit, minmax(185px, 1fr));
       margin-top: 30px;
       max-width: 100%;
    }

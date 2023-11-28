@@ -39,8 +39,6 @@ const setOptions = (id) => {
    return options;
 }
 
-
-
 window.addEventListener('load', () => {
    const newProducts1 = new Swiper('#new-product-swiper-1', setOptions(1))
    const newProducts2 = new Swiper('#new-product-swiper-2', setOptions(2))
