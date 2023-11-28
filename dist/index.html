@@ -22,16 +22,16 @@
    <link rel="icon" href="../../img/favicon/fav_48.png" type="image/png" sizes="48x48">
    <link rel="icon" href="../../img/favicon/fav_128.png" type="image/png" sizes="128x128">
    
-   <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css?_v=20231128175243" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
-   <!-- <link rel="stylesheet" href="../../libs/css/bootstrap-grid.min.css?_v=20231128175243"> -->
+   <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css?_v=20231128193509" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+   <!-- <link rel="stylesheet" href="../../libs/css/bootstrap-grid.min.css?_v=20231128193509"> -->
 
-   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css?_v=20231128175243" />
-   <script defer src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js?_v=20231128175243"></script>
-   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js?_v=20231128175243" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-   <link rel="stylesheet" href="../../libs/css/reset.min.css?_v=20231128175243">
-   <link rel="stylesheet" as="font" href="../../fonts/fonts.css?_v=20231128175243">
-   <link rel="stylesheet" as="font" href="../../fonts/icon-font.css?_v=20231128175243">
-   <link rel="stylesheet" href="./pages/index/css/index.min.css?_v=20231128175243">
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css?_v=20231128193509" />
+   <script defer src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js?_v=20231128193509"></script>
+   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js?_v=20231128193509" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+   <link rel="stylesheet" href="../../libs/css/reset.min.css?_v=20231128193509">
+   <link rel="stylesheet" as="font" href="../../fonts/fonts.css?_v=20231128193509">
+   <link rel="stylesheet" as="font" href="../../fonts/icon-font.css?_v=20231128193509">
+   <link rel="stylesheet" href="./pages/index/css/index.min.css?_v=20231128193509">
    
    <title>Electron</title>
 </head>
@@ -1432,8 +1432,8 @@
    <div class="ui-popup__container mobile-menu">
 
       <ul class="mobile-menu__inside parent_list" data-id="0">
-         <li data-for="1" class="parent-item has-children list-title"><a class="child">Каталог</a></li>
-         <li data-for="2" class="parent-item has-children list-title"><a class="child">Личный кабинет</a></li>
+         <li data-for="1" class="parent-item has-children"><span class="child">Каталог</span></li>
+         <li data-for="2" class="parent-item has-children"><a href="" class="child">Личный кабинет</a></li>
          <li class="parent-item"><a href="" class="child">Акции</a></li>
          <li class="parent-item"><a href="" class="child">Блог</a></li>
          
@@ -1485,13 +1485,13 @@
                <li class="child-item"><a href="" class="child">Ноутбуки и ПК</a></li>
                <li class="child-item"><a href="" class="child">Смартфоны</a></li>
                <li class="child-item"><a href="" class="child">Аксессуары</a></li>
-               <li data-for="3" class="child-item has-children list-title"><span class="child">Комплектующие</span></li>
+               <li data-for="3" class="child-item has-children"><a href="" class="child">Комплектующие</a></li>
             </ul>
          </li>
       </ul>
 
       <ul data-id="2" class="mobile-menu__inside child_list hidden">
-         <li data-for="0" class="back-item has-children"><span class="child">Личный кабинет</span></li>
+         <li data-for="0" class="back-item has-children"><a href="" class="child">Личный кабинет</a></li>
          <li>
             <ul class="child-list">
                <li class="child-item"><a href="" class="child">Мои заказы</a></li>
@@ -1502,7 +1502,7 @@
       </ul>
 
       <ul data-id="3" class="mobile-menu__inside child_list hidden">
-         <li data-for="1" class="back-item has-children"><span class="child">Комплектующие</span></li>
+         <li data-for="1" class="back-item has-children"><a href="" class="child">Комплектующие</a></li>
          <li>
             <ul class="child-list">
                <li class="child-item"><a href="" class="child">Материннские платы</a></li>
@@ -2815,6 +2815,6 @@
 </div>
       
       
-      <script type="module" src="./pages/index/js/bundle-index.min.js?_v=20231128175243"></script>
+      <script type="module" src="./pages/index/js/bundle-index.min.js?_v=20231128193509"></script>
    </body>
 </html>  

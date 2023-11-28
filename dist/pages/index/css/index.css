@@ -2531,6 +2531,9 @@ footer, .information-links {
   right: -20px;
   top: 45px;
 }
+.ui-close.close_fade-side.right_side i {
+  margin-right: 3px;
+}
 .ui-close.close_fade-side.left_side {
   left: -20px;
   top: 45px;
@@ -2872,72 +2875,6 @@ footer, .information-links {
   margin-bottom: 0;
 }
 
-.parent-item.has-children {
-  position: relative;
-}
-.parent-item.has-children:after {
-  content: "\e907";
-  position: absolute;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
-          transform: translateY(-50%);
-  right: 0;
-  font-family: var(--icon_font);
-  font-size: clamp(18px, 8cqi, 30px);
-  color: var(--light);
-  -webkit-transition: 0.2s ease;
-  -o-transition: 0.2s ease;
-  transition: 0.2s ease;
-}
-.parent-item.has-children:hover:after {
-  color: var(--action);
-}
-
-.child-item.has-children {
-  position: relative;
-}
-.child-item.has-children:after {
-  content: "\e901";
-  position: absolute;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
-          transform: translateY(-50%);
-  right: 0;
-  font-family: var(--icon_font);
-  font-size: 20px;
-  color: var(--light);
-  -webkit-transition: 0.2s ease;
-  -o-transition: 0.2s ease;
-  transition: 0.2s ease;
-}
-.child-item.has-children:hover:after {
-  color: var(--action);
-}
-
-.back-item.has-children {
-  position: relative;
-}
-.back-item.has-children:after {
-  content: "\e903";
-  position: absolute;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
-          transform: translateY(-50%);
-  right: 0;
-  font-family: var(--icon_font);
-  font-size: clamp(18px, 8cqi, 30px);
-  color: var(--light);
-  -webkit-transition: 0.2s ease;
-  -o-transition: 0.2s ease;
-  transition: 0.2s ease;
-}
-.back-item.has-children:hover:after {
-  color: var(--action);
-}
-
 .mobile-menu .gap-item.child-item-wrap {
   display: -ms-grid;
   display: grid;
@@ -2947,6 +2884,50 @@ footer, .information-links {
   gap: clamp(30px, 10cqi, 47px);
 }
 
+/* TODO Стили для стрелок навигации у .has-children */
+.parent-item.has-children .arrow_mobile-menu,
+.back-item.has-children .arrow_mobile-menu {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  font-family: var(--icon_font);
+  font-size: clamp(18px, 8cqi, 30px);
+  color: var(--light);
+  display: inline-block;
+  cursor: pointer;
+  -webkit-transition: 0.2s ease;
+  -o-transition: 0.2s ease;
+  transition: 0.2s ease;
+}
+.parent-item.has-children .arrow_mobile-menu:hover,
+.back-item.has-children .arrow_mobile-menu:hover {
+  color: var(--action);
+}
+
+.child-item.has-children .arrow_mobile-menu {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  font-family: var(--icon_font);
+  font-size: 20px;
+  color: var(--light);
+  display: inline-block;
+  cursor: pointer;
+  -webkit-transition: 0.2s ease;
+  -o-transition: 0.2s ease;
+  transition: 0.2s ease;
+}
+.child-item.has-children .arrow_mobile-menu:hover {
+  color: var(--action);
+}
+
+/* TODO Стили меню */
 .mobile-menu {
   padding: 110px clamp(var(--default_padding), 5cqi, 40px) 60px clamp(var(--default_padding), 5cqi, 40px);
 }
@@ -2978,16 +2959,6 @@ footer, .information-links {
 .mobile-menu .parent-item, .mobile-menu .back-item {
   padding: clamp(4.5px, 3cqi, 7px) 0;
 }
-.mobile-menu .parent-item > .child, .mobile-menu .back-item > .child {
-  background: -webkit-gradient(linear, left top, left bottom, from(var(--action)));
-  background-size: 0% 1px;
-  background-position: right 0% bottom;
-  background-repeat: no-repeat;
-}
-.mobile-menu .parent-item:hover > .child, .mobile-menu .back-item:hover > .child {
-  background-position: left 0% bottom;
-  background-size: 100% 1px;
-}
 .mobile-menu .parent-item .child, .mobile-menu .back-item .child {
   margin: clamp(4.5px, 3cqi, 7px) 0;
   padding: 3px 0;
@@ -2999,25 +2970,26 @@ footer, .information-links {
   -webkit-transition: background-size 0.2s ease, color 0.2s ease;
   -o-transition: background-size 0.2s ease, color 0.2s ease;
   transition: background-size 0.2s ease, color 0.2s ease;
+  background: -webkit-gradient(linear, left top, left bottom, from(var(--action)));
+  background-size: 0% 1px;
+  background-position: right 0% bottom;
+  background-repeat: no-repeat;
 }
-.mobile-menu .parent-item:hover .child, .mobile-menu .back-item:hover .child {
+.mobile-menu .parent-item .child:hover, .mobile-menu .back-item .child:hover {
+  background-position: left 0% bottom;
+  background-size: 100% 1px;
+}
+.mobile-menu .parent-item .child:hover, .mobile-menu .back-item .child:hover {
   color: var(--action);
+}
+.mobile-menu .parent-item.has-children, .mobile-menu .back-item.has-children {
+  position: relative;
 }
 .mobile-menu .back-item {
   margin-bottom: clamp(30px, 10cqi, 47px);
 }
 .mobile-menu .child-item {
   padding: clamp(5px, 3cqi, 9.5px) 0;
-}
-.mobile-menu .child-item > .child {
-  background: -webkit-gradient(linear, left top, left bottom, from(var(--action)));
-  background-size: 0% 1px;
-  background-position: right 0% bottom;
-  background-repeat: no-repeat;
-}
-.mobile-menu .child-item:hover > .child {
-  background-position: left 0% bottom;
-  background-size: 100% 1px;
 }
 .mobile-menu .child-item .child {
   margin: clamp(5px, 3cqi, 9.5px) 0;
@@ -3030,9 +3002,20 @@ footer, .information-links {
   -webkit-transition: background-size 0.2s ease, color 0.2s ease;
   -o-transition: background-size 0.2s ease, color 0.2s ease;
   transition: background-size 0.2s ease, color 0.2s ease;
+  background: -webkit-gradient(linear, left top, left bottom, from(var(--action)));
+  background-size: 0% 1px;
+  background-position: right 0% bottom;
+  background-repeat: no-repeat;
 }
-.mobile-menu .child-item:hover .child {
+.mobile-menu .child-item .child:hover {
+  background-position: left 0% bottom;
+  background-size: 100% 1px;
+}
+.mobile-menu .child-item .child:hover {
   color: var(--action);
+}
+.mobile-menu .child-item.has-children {
+  position: relative;
 }
 .mobile-menu .gap-item {
   margin-top: clamp(30px, 10cqi, 47px);
@@ -3041,16 +3024,6 @@ footer, .information-links {
 }
 .mobile-menu .additional-item {
   padding: clamp(1.5px, 1cqi, 4.5px) 0;
-}
-.mobile-menu .additional-item > .child {
-  background: -webkit-gradient(linear, left top, left bottom, from(var(--action)));
-  background-size: 0% 1px;
-  background-position: right 0% bottom;
-  background-repeat: no-repeat;
-}
-.mobile-menu .additional-item:hover > .child {
-  background-position: left 0% bottom;
-  background-size: 100% 1px;
 }
 .mobile-menu .additional-item .child {
   margin: clamp(1.5px, 1cqi, 4.5px) 0;
@@ -3063,9 +3036,20 @@ footer, .information-links {
   -webkit-transition: background-size 0.2s ease, color 0.2s ease;
   -o-transition: background-size 0.2s ease, color 0.2s ease;
   transition: background-size 0.2s ease, color 0.2s ease;
+  background: -webkit-gradient(linear, left top, left bottom, from(var(--action)));
+  background-size: 0% 1px;
+  background-position: right 0% bottom;
+  background-repeat: no-repeat;
 }
-.mobile-menu .additional-item:hover .child {
+.mobile-menu .additional-item .child:hover {
+  background-position: left 0% bottom;
+  background-size: 100% 1px;
+}
+.mobile-menu .additional-item .child:hover {
   color: var(--light);
+}
+.mobile-menu .additional-item.has-children {
+  position: relative;
 }
 .mobile-menu .additional-list {
   display: -webkit-box;
@@ -4489,72 +4473,6 @@ footer .footer-col.contact .contact-inside a.contact-inside__item:hover {
   color: var(--text_additional);
 }
 
-.parent-item.has-children {
-  position: relative;
-}
-.parent-item.has-children:after {
-  content: "\e907";
-  position: absolute;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
-          transform: translateY(-50%);
-  right: 0;
-  font-family: var(--icon_font);
-  font-size: clamp(18px, 8cqi, 30px);
-  color: var(--light);
-  -webkit-transition: 0.2s ease;
-  -o-transition: 0.2s ease;
-  transition: 0.2s ease;
-}
-.parent-item.has-children:hover:after {
-  color: var(--action);
-}
-
-.child-item.has-children {
-  position: relative;
-}
-.child-item.has-children:after {
-  content: "\e901";
-  position: absolute;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
-          transform: translateY(-50%);
-  right: 0;
-  font-family: var(--icon_font);
-  font-size: 20px;
-  color: var(--light);
-  -webkit-transition: 0.2s ease;
-  -o-transition: 0.2s ease;
-  transition: 0.2s ease;
-}
-.child-item.has-children:hover:after {
-  color: var(--action);
-}
-
-.back-item.has-children {
-  position: relative;
-}
-.back-item.has-children:after {
-  content: "\e903";
-  position: absolute;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
-          transform: translateY(-50%);
-  right: 0;
-  font-family: var(--icon_font);
-  font-size: clamp(18px, 8cqi, 30px);
-  color: var(--light);
-  -webkit-transition: 0.2s ease;
-  -o-transition: 0.2s ease;
-  transition: 0.2s ease;
-}
-.back-item.has-children:hover:after {
-  color: var(--action);
-}
-
 .mobile-menu .gap-item.child-item-wrap {
   display: -ms-grid;
   display: grid;
@@ -4564,6 +4482,50 @@ footer .footer-col.contact .contact-inside a.contact-inside__item:hover {
   gap: clamp(30px, 10cqi, 47px);
 }
 
+/* TODO Стили для стрелок навигации у .has-children */
+.parent-item.has-children .arrow_mobile-menu,
+.back-item.has-children .arrow_mobile-menu {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  font-family: var(--icon_font);
+  font-size: clamp(18px, 8cqi, 30px);
+  color: var(--light);
+  display: inline-block;
+  cursor: pointer;
+  -webkit-transition: 0.2s ease;
+  -o-transition: 0.2s ease;
+  transition: 0.2s ease;
+}
+.parent-item.has-children .arrow_mobile-menu:hover,
+.back-item.has-children .arrow_mobile-menu:hover {
+  color: var(--action);
+}
+
+.child-item.has-children .arrow_mobile-menu {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  font-family: var(--icon_font);
+  font-size: 20px;
+  color: var(--light);
+  display: inline-block;
+  cursor: pointer;
+  -webkit-transition: 0.2s ease;
+  -o-transition: 0.2s ease;
+  transition: 0.2s ease;
+}
+.child-item.has-children .arrow_mobile-menu:hover {
+  color: var(--action);
+}
+
+/* TODO Стили меню */
 .mobile-menu {
   padding: 110px clamp(var(--default_padding), 5cqi, 40px) 60px clamp(var(--default_padding), 5cqi, 40px);
 }
@@ -4595,16 +4557,6 @@ footer .footer-col.contact .contact-inside a.contact-inside__item:hover {
 .mobile-menu .parent-item, .mobile-menu .back-item {
   padding: clamp(4.5px, 3cqi, 7px) 0;
 }
-.mobile-menu .parent-item > .child, .mobile-menu .back-item > .child {
-  background: -webkit-gradient(linear, left top, left bottom, from(var(--action)));
-  background-size: 0% 1px;
-  background-position: right 0% bottom;
-  background-repeat: no-repeat;
-}
-.mobile-menu .parent-item:hover > .child, .mobile-menu .back-item:hover > .child {
-  background-position: left 0% bottom;
-  background-size: 100% 1px;
-}
 .mobile-menu .parent-item .child, .mobile-menu .back-item .child {
   margin: clamp(4.5px, 3cqi, 7px) 0;
   padding: 3px 0;
@@ -4616,25 +4568,26 @@ footer .footer-col.contact .contact-inside a.contact-inside__item:hover {
   -webkit-transition: background-size 0.2s ease, color 0.2s ease;
   -o-transition: background-size 0.2s ease, color 0.2s ease;
   transition: background-size 0.2s ease, color 0.2s ease;
+  background: -webkit-gradient(linear, left top, left bottom, from(var(--action)));
+  background-size: 0% 1px;
+  background-position: right 0% bottom;
+  background-repeat: no-repeat;
 }
-.mobile-menu .parent-item:hover .child, .mobile-menu .back-item:hover .child {
+.mobile-menu .parent-item .child:hover, .mobile-menu .back-item .child:hover {
+  background-position: left 0% bottom;
+  background-size: 100% 1px;
+}
+.mobile-menu .parent-item .child:hover, .mobile-menu .back-item .child:hover {
   color: var(--action);
+}
+.mobile-menu .parent-item.has-children, .mobile-menu .back-item.has-children {
+  position: relative;
 }
 .mobile-menu .back-item {
   margin-bottom: clamp(30px, 10cqi, 47px);
 }
 .mobile-menu .child-item {
   padding: clamp(5px, 3cqi, 9.5px) 0;
-}
-.mobile-menu .child-item > .child {
-  background: -webkit-gradient(linear, left top, left bottom, from(var(--action)));
-  background-size: 0% 1px;
-  background-position: right 0% bottom;
-  background-repeat: no-repeat;
-}
-.mobile-menu .child-item:hover > .child {
-  background-position: left 0% bottom;
-  background-size: 100% 1px;
 }
 .mobile-menu .child-item .child {
   margin: clamp(5px, 3cqi, 9.5px) 0;
@@ -4647,9 +4600,20 @@ footer .footer-col.contact .contact-inside a.contact-inside__item:hover {
   -webkit-transition: background-size 0.2s ease, color 0.2s ease;
   -o-transition: background-size 0.2s ease, color 0.2s ease;
   transition: background-size 0.2s ease, color 0.2s ease;
+  background: -webkit-gradient(linear, left top, left bottom, from(var(--action)));
+  background-size: 0% 1px;
+  background-position: right 0% bottom;
+  background-repeat: no-repeat;
 }
-.mobile-menu .child-item:hover .child {
+.mobile-menu .child-item .child:hover {
+  background-position: left 0% bottom;
+  background-size: 100% 1px;
+}
+.mobile-menu .child-item .child:hover {
   color: var(--action);
+}
+.mobile-menu .child-item.has-children {
+  position: relative;
 }
 .mobile-menu .gap-item {
   margin-top: clamp(30px, 10cqi, 47px);
@@ -4658,16 +4622,6 @@ footer .footer-col.contact .contact-inside a.contact-inside__item:hover {
 }
 .mobile-menu .additional-item {
   padding: clamp(1.5px, 1cqi, 4.5px) 0;
-}
-.mobile-menu .additional-item > .child {
-  background: -webkit-gradient(linear, left top, left bottom, from(var(--action)));
-  background-size: 0% 1px;
-  background-position: right 0% bottom;
-  background-repeat: no-repeat;
-}
-.mobile-menu .additional-item:hover > .child {
-  background-position: left 0% bottom;
-  background-size: 100% 1px;
 }
 .mobile-menu .additional-item .child {
   margin: clamp(1.5px, 1cqi, 4.5px) 0;
@@ -4680,9 +4634,20 @@ footer .footer-col.contact .contact-inside a.contact-inside__item:hover {
   -webkit-transition: background-size 0.2s ease, color 0.2s ease;
   -o-transition: background-size 0.2s ease, color 0.2s ease;
   transition: background-size 0.2s ease, color 0.2s ease;
+  background: -webkit-gradient(linear, left top, left bottom, from(var(--action)));
+  background-size: 0% 1px;
+  background-position: right 0% bottom;
+  background-repeat: no-repeat;
 }
-.mobile-menu .additional-item:hover .child {
+.mobile-menu .additional-item .child:hover {
+  background-position: left 0% bottom;
+  background-size: 100% 1px;
+}
+.mobile-menu .additional-item .child:hover {
   color: var(--light);
+}
+.mobile-menu .additional-item.has-children {
+  position: relative;
 }
 .mobile-menu .additional-list {
   display: -webkit-box;

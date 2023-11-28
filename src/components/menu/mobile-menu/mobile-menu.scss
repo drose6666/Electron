@@ -4,29 +4,25 @@ $padingXMenu: clamp(var(--default_padding), 5cqi, 40px);
 $transition: background-size $transitionDuration, color $transitionDuration;  
 $paddingMenu: 110px $padingXMenu 60px $padingXMenu;
 
-@mixin hasChildren (
-   $content: '\e907',
+
+
+@mixin hasChildrenArrow (
    $fSize: 30px,
    $color: var(--light),
 ) {
-   position: relative;
-
-   &:after {
-      content: $content;
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      right: 0;
-      font-family: var(--icon_font);
-      font-size: $fSize;
-      color: $color;
-      transition: $transitionDuration;
-   }
-
+   position: absolute;
+   top: 50%;
+   right: 0;
+   transform: translateY(-50%);
+   font-family: var(--icon_font);
+   font-size: $fSize;
+   color: $color;
+   display: inline-block;
+   cursor: pointer;
+   transition: $transitionDuration;
+   
    &:hover {
-      &:after {
-         color: var(--action);
-      }
+      color: var(--action);
    }
 }
 
@@ -39,31 +35,9 @@ $paddingMenu: 110px $padingXMenu 60px $padingXMenu;
    $color: var(--light),
    $hoverColor: var(--action),
    $trans: $transition,
-   $hasChild: true,
 ) {
-   @if $hasChild {
-      @include hoverLinks( $hoverChild: true );
 
-      .child {
-         margin: $margin;
-         padding: $padding;
-         font-size: $fSize;
-         font-weight: $fWeight;
-         line-height: $lHeight;
-         color: $color;
-         cursor: pointer;
-         transition: $trans;               
-      }
-
-      &:hover {
-         .child {
-            color: $hoverColor;
-         }
-      }
-
-   } @else {
-      @include hoverLinks( $hoverChild: false );
-
+   .child {
       margin: $margin;
       padding: $padding;
       font-size: $fSize;
@@ -71,34 +45,18 @@ $paddingMenu: 110px $padingXMenu 60px $padingXMenu;
       line-height: $lHeight;
       color: $color;
       cursor: pointer;
-      transition: $trans; 
-
+      transition: $trans;    
+      
+      @include hoverLinks( $hoverChild: false );
+      
       &:hover {
-         .child {
-            color: $hoverColor;
-         }
+         color: $hoverColor;
       }
    }
-}
-
-.parent-item.has-children {
-   @include hasChildren(
-      $fSize: clamp(18px, 8cqi, 30px)
-   );
-}
-
-.child-item.has-children {
-   @include hasChildren(
-      $content: '\e901',
-      $fSize: 20px
-   );
-}
-
-.back-item.has-children {
-   @include hasChildren(
-      $content: '\e903',
-      $fSize: clamp(18px, 8cqi, 30px),
-   );
+   
+   &.has-children {
+      position: relative;
+   }
 }
 
 %gridTemplateMenu {
@@ -108,6 +66,22 @@ $paddingMenu: 110px $padingXMenu 60px $padingXMenu;
 }
 
 
+/* TODO Стили для стрелок навигации у .has-children */
+.parent-item.has-children,
+.back-item.has-children {
+   .arrow_mobile-menu {
+      @include hasChildrenArrow( $fSize: clamp(18px, 8cqi, 30px) )
+   }
+}
+
+.child-item.has-children {
+   .arrow_mobile-menu {
+      @include hasChildrenArrow( $fSize: 20px )
+   }
+}
+
+
+/* TODO Стили меню */
 .mobile-menu {
    padding: $paddingMenu;
 

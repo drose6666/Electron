@@ -31,3 +31,18 @@ listItems.forEach(item => {
    })
 })
 
+/**
+ * TODO Добавление стрелок к .has-children
+ */
+const mobileMenuHasChildrenItems = mobileMenu.querySelectorAll('.has-children')
+
+for (let i = 0; i < mobileMenuHasChildrenItems.length; i++) {
+   if (mobileMenuHasChildrenItems[i].classList.contains('parent-item')) insertArrow(mobileMenuHasChildrenItems[i], 'arrow_right_wide')
+   else if (mobileMenuHasChildrenItems[i].classList.contains('child-item')) insertArrow(mobileMenuHasChildrenItems[i], 'arrow_down_wide')
+   else if (mobileMenuHasChildrenItems[i].classList.contains('back-item')) insertArrow(mobileMenuHasChildrenItems[i], 'arrow_left_wide')
+}
+
+function insertArrow (parentEl, className) {
+   const iconArrow = `<i class="i-${className} arrow_mobile-menu"></i>`
+   parentEl.insertAdjacentHTML('beforeend', iconArrow)
+}
