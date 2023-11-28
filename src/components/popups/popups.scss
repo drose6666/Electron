@@ -3,13 +3,6 @@ $fadePaddingX: clamp(var(--default_padding), 5cqi, var(--fade_on_the_side_paddin
 $fadePadding: 110px $fadePaddingX 40px $fadePaddingX;
 $transitionDuration: .2s ease;
 
-:root {
-   --ui_popup_gutter: 60px;
-
-   @include media (max-width, 550px) {
-      --ui_popup_gutter: 50px;
-   }
-}
 
 @import '../menu/mobile-menu/mobile-menu';
 @import '../forms/form-review/form-review';
@@ -22,6 +15,7 @@ $transitionDuration: .2s ease;
 @import './popup-image-preview/popup-image-preview';
 @import './fade-side/popup-login/popup-login';
 @import './popup-answer/popup-answer';
+@import './fade-side/popup-delivery/popup-delivery';
 
 .ui-popup {
    position: fixed;
@@ -80,7 +74,7 @@ $transitionDuration: .2s ease;
    }
 
 
-   /* TODO Стили для popup, котоыре появляются сбоку */
+   /* TODO Стили для popup, которые появляются сбоку */
    &.fade-side {
       .ui-popup__container {
          padding: $fadePadding;
@@ -112,6 +106,7 @@ $transitionDuration: .2s ease;
          margin-bottom: 12px;
       }
    }
+
 
    &.active {
       opacity: 1; 
@@ -213,17 +208,25 @@ $transitionDuration: .2s ease;
    margin-bottom: var(--ui_popup_gutter);
    font-size: 40px;
    font-weight: 400;
-   line-height: 100%;
+   line-height: 90%;
    color: var(--light);
 
-   &.fade-side_title {
+   &.title_part-of-block {
+      margin-bottom: 10px;
+      font-weight: 400;
+   }
+
+   &.title_quickview {
+      margin-bottom: 10px;
+      font-size: 35px;
       font-weight: 500;
       line-height: 110%;
    }
 
-   &.popup-quickview_title {
-      font-size: 32px;
-      font-weight: 600;
+   &.title_md {
+      margin-bottom: 20px;
+      font-size: 30px;
+      font-weight: 500;
       line-height: 110%;
    }
 
@@ -246,6 +249,16 @@ $transitionDuration: .2s ease;
    &.center {
       text-align: center;
    }
+}
+
+
+/* TODO базовый текст (объясняющий текст) */
+.ui-popup__text {
+   font-size: 17px;
+   font-weight: 300;
+   line-height: 135%;
+   color: var(--text_additional);
+   max-width: 480px;
 }
 
 
@@ -276,7 +289,7 @@ $transitionDuration: .2s ease;
    grid-template: auto / repeat(auto-fill, minmax(230px, 1fr));
    // column-gap: 20px;
    // row-gap: 10px;
-   gap: 20px;
+   gap: var(--fields_gutter);
 
    &.links {
       grid-template: auto / max-content 1fr;

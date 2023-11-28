@@ -363,3 +363,8 @@
    @include uiBtnTheme( $theme: outlines, $childTheme: outlinesDefaultLight);
 }
 
+.btn_ui-action {
+   @include uiBtnType( $type: ui );
+   @include uiBtnTheme( $theme: action );
+}
+

@@ -1,5 +1,5 @@
 %optionTitle {
-   font-size: 17px;
+   font-size: 18px;
    font-weight: 400;
    line-height: 100%;
    color: var(--text_selected_on_dark);
@@ -129,9 +129,6 @@
    }
 
    /* TODO Заголвок, блок с рейтингом и сравнение, избранное */
-   .quickview-product__head {
-      // margin-bottom: var(--popups_block_gutter);
-   }
 
    .product-brand {
       margin-bottom: 20px;
@@ -201,7 +198,7 @@
 
    /* TODO Цена */
    .product-price {
-      margin: var(--popups_block_gutter) 0;
+      margin: var(--ui_popup_gutter) 0;
       font-size: 35px;
       font-weight: 600;
       line-height: 100%;
@@ -211,12 +208,12 @@
 
    /* TODO Опции */
    .quickview-product__options {
-      margin-bottom: var(--popups_block_gutter);
+      margin-bottom: var(--ui_popup_gutter);
    }
 
    .options-item {
       display: grid;
-      grid-template: auto / 100px 1fr;
+      grid-template: auto / 110px 1fr;
       gap: 15px;
 
       &:not(:last-child) {
@@ -441,14 +438,9 @@
 
 @include media (max-width, 460px) {
    #popup-quickview {
-      .product-price {
-         margin: 50px 0;
-      }
-
       .ui-popup__btns {
          margin: 30px auto 0 auto;
          grid-template: auto / 1fr;
-         gap: 15px;
 
          .btn-quickview-more {
             grid-column: 1 / 2;

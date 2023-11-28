@@ -6,27 +6,6 @@ $fadePaddingX: clamp(var(--default_padding), 5cqi, 50px);
    .ui-popup__container {
       padding: 110px $fadePaddingX 40px $fadePaddingX;
    }
-
-   .ui-popup__title {
-      margin-bottom: 15px;
-      font-size: 45px;
-      font-weight: 300;
-
-      span {
-         position: relative;
-
-         // &::after {
-         //    content: '';
-         //    position: absolute;
-         //    left: 50%;
-         //    bottom: -8px;
-         //    width: 70%;
-         //    height: 1px;
-         //    transform: translateX(-50%);
-         //    background: var(--action);
-         // }
-      }
-   }
    
    .sign-wrap {
       position: relative;
@@ -106,9 +85,9 @@ $fadePaddingX: clamp(var(--default_padding), 5cqi, 50px);
       text-align: center;
    }
 
-   .popup-sign-text {
+   .popup-login-text {
       margin-bottom: 60px;
-      font-size: 17px;
+      font-size: 18px;
       font-weight: 300;
       line-height: 100%;
       color: var(--text_selected_on_dark);

@@ -1,7 +1,7 @@
 <div class="ui-popup fade-side" id="popup-cart">
    <div class="ui-popup__container">
 
-      <h2 class="ui-popup__title fade-side_title">Корзина</h2>
+      <h2 class="ui-popup__title">Корзина</h2>
 
       <div class="ui-popup-products">
          <div class="ui-popup-products__list">
@@ -22,7 +22,9 @@
          </div>
       </div>
 
-      @@include('../../../order/cost-order/cost-order.html')
+      @@include('../../../order/cost-order/cost-order.html', {
+         "deliveryText": "Раcчет в корзине"
+      })
 
       <div class="ui-popup__btns">
          @@include('../../../ui/ui-button/ui-btn-icon/ui-button-icon-link.html', {

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
    @@include('./components/head/head.html', {
-      "mainCss": "./pages/index/css/index.css",
+      "mainCss": "./pages/index/css/index.min.css",
       "title": "Electron"
    })
    <body>
@@ -20,7 +20,6 @@
          @@include('./pages/index/sections/blog-section/blog-section.html')
          @@include('./components/subscribe/subscribe.html')
          @@include('./components/information-links/information-links.html')
-
       </main>
       
       @@include('./components/footer/footer.html')
@@ -35,6 +34,7 @@
       @@include('./components/popups/popup-image-preview/popup-image-preview.html')
       @@include('./components/popups/fade-side/popup-login/popup-login.html')
       @@include('./components/popups/popup-answer/popup-answer.html')
+      @@include('./components/popups/fade-side/popup-delivery/popup-delivery.html')
       <!-- @@include('./components/notifications/notification-adding/notification-adding.html') -->
       
       <script type="module" src="./pages/index/js/bundle-index.min.js"></script>

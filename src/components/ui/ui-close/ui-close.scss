@@ -126,12 +126,15 @@
 // NOTE Popup close
 @include media (max-width, 900px) {
    .ui-popup {
-      .ui-close {
-         top: -15px;
-         right: 15px;
+      &.popup {
+         .ui-close:not(.ui-close.close_input-file) {
+            top: -15px;
+            right: 15px;
+         }
       }
    }
 }
+
 
 // NOTE Fade in Side close
 @include media (max-width, 670px) {

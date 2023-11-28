@@ -53,7 +53,12 @@
    --small_tabs_padding: 15px;
    --small_btn_padding: 10px;
    --section_padding: 160px;
-   --popups_block_gutter: 60px;
+   --fields_gutter: 15px;
+   --ui_popup_gutter: 60px;
+
+   @media all and (max-width: 550px) {
+      --ui_popup_gutter: 50px;
+   }
 
    // Sizes
    --full_container_width: 1540px;

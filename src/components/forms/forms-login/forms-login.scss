@@ -1,7 +1,7 @@
 .ui-form_login {
    display: grid;
    grid-template: auto / 1fr;
-   gap: 15px;
+   gap: var(--fields_gutter);
 
    .ui-form-submit {
       margin-top: 25px;

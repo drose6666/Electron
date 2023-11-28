@@ -1,0 +1,38 @@
+<form action="" class="ui-form" id="form-calc-delivery">
+   <div class="grid-item two">
+      <div class="ui-form__item">
+         <input type="text" name="user_country" inputmode="text" autocomplete="country-name" placeholder="Страна" value="Россия" readonly class="ui-input_popup ">
+         <span class="error-message"></span>
+      </div>
+      
+      <div class="ui-form__item">
+         <input type="text" name="user_city" inputmode="text" autocomplete="address-level2" placeholder="Город" class="ui-input_popup ">
+         <span class="error-message"></span>
+      </div>
+   </div>
+
+   <div class="grid-item unequal">
+      <div class="ui-form__item">
+         <input type="text" name="user_address" inputmode="text" autocomplete="shipping street-address" placeholder="Адрес доставки" class="ui-input_popup ">
+         <span class="error-message"></span>
+      </div>
+   
+      <div class="ui-form__item">
+         <input type="text" name="user_postal_code" inputmode="numeric" autocomplete="postal-code" placeholder="Почтовый индекс" class="ui-input_popup ">
+         <span class="error-message"></span>
+      </div>
+   </div>
+
+   <div class="ui-form__submit">
+      @@include('../../ui/ui-checkbox/ui-checkbox.html', {
+         "name": "save_delivery_data",
+         "value": "Сохранить введенные данные"
+      })
+
+      @@include('../../ui/ui-button/ui-btn/ui-button.html', {
+         "type": "submit",
+         "className": "btn_ui-action",
+         "text": "Рассчитать"
+      })
+   </div>
+</form>

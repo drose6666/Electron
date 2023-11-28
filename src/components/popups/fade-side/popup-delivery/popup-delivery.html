@@ -1,0 +1,21 @@
+<div class="ui-popup fade-side" id="popup-delivery">
+   <div class="ui-popup__container">
+
+      <h2 class="ui-popup__title title_md">Расчет доставки</h2>
+      <p class="ui-popup__text">Данные расчеты несут информационный характер для Вашего удобства. Непосредственный выбор способа доставки происходит на этапе оформления заказа</p>
+
+      @@include('../../../forms/form-calc-delivery/form-calc-delivery.html')
+
+      @@include('../../../order/cost-order/cost-order.html', {
+         "deliveryText": "Заполните форму",
+         "className": "mb-0"
+      })
+
+      @@include('../../../ui/ui-close/ui-close.html', {
+         "className": "close_fade-side left_side popup-delivery-close",
+         "classNameIcon": "angle_right"
+      })
+   </div>
+
+   <div class="ui-popup__overlay" id="overlay-delivery"></div>
+</div>

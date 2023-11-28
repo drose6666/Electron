@@ -1,6 +1,7 @@
 $transition: all .2s ease;
 
 .ui-file {
+   margin-top: 15px;
    padding: 23px 15px;
    border-radius: var(--mdRd);
    background: transparent;
@@ -64,7 +65,7 @@ $transition: all .2s ease;
    .preview {
       position: relative;
       width: 100%;
-      height: 190px;
+      height: 210px;
       border-radius: var(--slRd);
 
       img {

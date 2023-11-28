@@ -60,5 +60,6 @@ export default class MobilePopupHandler {
          for(let el of element) {  
             el.addEventListener(handler, callback)
          }
+      
    }
 }
