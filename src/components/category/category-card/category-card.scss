@@ -1,257 +1,51 @@
-.decor-circle {
-   $bg: #E0CDD1;
-   $afterSize: 160%;
-   $afterColor: #E6E8EE;
-
-   position: absolute;
-   width: clamp(150px, 35cqw, 220px);
-   height: clamp(150px, 35cqw, 220px);
-   background: $bg;
-   border-radius: var(--circleRd);
-   z-index: 0;
-   transition: all 1s ease;
-
-   &:after {
-      content: '';
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: $afterSize;
-      height: $afterSize;
-      border: 1px solid $afterColor;
-      border-radius: var(--circleRd);
-   }
-
-   &.right {
-      bottom: -15%;
-      right: -10%;
-   }
-
-   &.left {
-      top: -15%;
-      left: -10%;
-      display: none;
-   }
-}
-
 .category-card {
    container-type: inline-size;
+   overflow: hidden;
+   position: relative;
    transition: all .4s ease;
 
-   &__inside {
+   &__container {
       position: relative;
-      overflow: hidden;
       border-radius: clamp(var(--optionalRd), 11cqi, var(--defaultRd));
       background: #F3F5F7;
+      height: 300px;
       display: flex;
       align-items: flex-end;
-      justify-content: flex-start;
-      min-height: clamp(310px, 75cqi, 380px);
       cursor: pointer;
       
-      .content {
-         padding: 0 15px 25px clamp(15px, 7cqi, 30px);
-         display: flex;
-         flex-direction: column;
-         gap: 10px;
+      .name {
+         padding: 10px clamp(15px, 7cqi, 30px);
+         font-size: clamp(23px, 7cqi, 30px);
+         font-weight: 500;
+         line-height: 100%;
+         color: var(--dark);
+         background: var(--light);
+         border-top-right-radius: var(--optionalRd);
          position: relative;
-         z-index: 2;
-   
-         .title {
-            font-size: clamp(26px, 7cqi, 50px);
-            font-weight: 600;
-            line-height: 100%;
-            color: var(--dark);
-         }
-      }
-   
-      .img {
-         position: absolute;
-         top: 0;
-         right: 0;
-         max-width: clamp(150px, 85cqi, 910px);
-         width: 100%;
-         height: auto;
-         object-fit: contain;
-         object-position: right center;
+         max-width: 80%;
          z-index: 1;
+
+         @include uiInsideRadiusPseudo(
+            $sizeB: 40px,
+            $topB: -40px,
+            $leftB: 0,
+            $sizeA: clamp(22px, 3cqi, 32px),
+            $rightA: calc(-1 * clamp(22px, 3cqi, 32px)),
+            $bottomA: 0,
+            $transform: rotate(180deg)
+         )
       }
    }
 
-   &.pc {
-      grid-column: 1 / 4;
-
-      .category-card__inside {
-         background: #F3F5F7;
-
-         .img {
-            top: 10px;
-            max-width: clamp(150px, 70cqi, 950px);
-         }
-
-         .decor-circle  {
-            $bg: #E6E8EE;
-            $afterColor: #E6E8EE;
-            
-            &.left {
-               display: block;
-               background: #E6E8EE;
-               width: clamp(100px,18cqw,480px);
-               top: -6cqi;
-               left: -4cqi;
-
-               &:after {
-                  border-color: $afterColor;
-               }
-            }
-
-            &.right {
-               display: block;
-               background: #E6E8EE;
-               bottom: -15%;
-               right: -20%;
-               width: clamp(160px,32cqw,720px);
-               height: clamp(160px,32cqw,720px);
-               opacity: .6;
-
-               &:after {
-                  border-color: $afterColor;
-               }
-            }
-         }
-      }
-
-      @include media (max-width, 1000px) {
-         grid-column: 1 / 2;
-
-         .category-card__inside {
-            .img {
-               max-width: 100cqi;
-               right: -5cqi;
-            }
-
-            .icon-left {
-               display: none;
-            }
-
-            .icon-right {
-               bottom: -15%;
-               right: -10%;
-               width: clamp(150px, 35cqw, 220px);
-               height: clamp(150px, 35cqw, 220px);
-               opacity: 1;
-            }
-         }
-      }
-   }
-
-   &.smartphones {
-      .category-card__inside {
-         background: #EDDDE0;
-
-         .decor-circle  {
-            $bg: #E0CDD1;
-            
-            background: $bg;
-
-            &:after {
-               border-color: $bg;
-            }
-         }
-      }
-   }
-
-   &.complect {
-      .category-card__inside {
-         background: #FFF7EF;
-
-         .img {
-            max-width: 90cqi;
-         }
-
-         .decor-circle  {
-            $bg: #FFEFE2;
-            
-            background: $bg;
-
-            &:after {
-               border-color: $bg;
-            }
-         }
-      }
-   }
-
-   &.accessories {
-      .category-card__inside {
-         background: #F5F5FF;
-
-         .img {
-            top: -7cqi;
-            max-width: 100cqi;
-         }
-
-         .decor-circle  {
-            $bg: #EAEAF9;
-            
-            background: $bg;
-
-            &:after {
-               border-color: $bg;
-            }
-         }
-      }
-   }
-
-   &:hover {
-      transform: translateY(-3px);
-
-      .category-card__inside {
-         .decor-circle.right {
-            transform: translate(-20%, -20%) scale(7);
-         }
-      }
+   .img {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      border-radius: clamp(var(--optionalRd), 11cqi, var(--defaultRd));
+      z-index: 0;
    }
 }
-
-.category-card {
-   &.card_search {
-      width: 150px;
-      height: 80px;
-
-      .category-card__inside {
-         min-height: 80px;
-         border-radius: var(--smRd);
-
-         .img {
-            max-width: clamp(120px, 85cqi, 910px);
-         }
-         
-         .ui-more-link,
-         .title, 
-         .category-card.search.pc .decor-left {
-            display: none;
-         }
-   
-         .decor-circle.right {
-            $size: 100px;
-   
-            width: $size;
-            height: $size;
-            bottom: -45px;
-            right: -15px;
-         }    
-      }
-
-      &:hover {
-         .category-card__inside {
-            .decor-circle {
-               transform: scale(3);
-            }
-         }
-      }
-   }
-}
-
-
-

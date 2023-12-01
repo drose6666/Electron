@@ -1,4 +1,4 @@
-let products = [
+const products = [
    {
       id: 1,
       name: 'iPhone 15',
@@ -15,7 +15,7 @@ let products = [
       name: 'MacBook Pro (M2 Pro, 2023)',
       price: '300 990 ₽',
       img: '../../../img/optimized/cards/card_1.webp',
-      imgHidden: '../../../img/optimized/cards/card_11.webp',
+      imgHidden: '../../../img/optimized/cards/card_1.webp',
       isFavourites: true,
       isCompare: false,
       soldOut: false 
@@ -26,7 +26,7 @@ let products = [
       name: 'Samsung Galaxy S23 Ultra в комплекте с Buds 2 Pro',
       price: '170 990 ₽',
       img: '../../../img/optimized/cards/card_2.webp',
-      imgHidden: '../../../img/optimized/cards/card_6.webp',
+      imgHidden: '../../../img/optimized/cards/card_2.webp',
       isFavourites: true,
       isCompare: false,
       soldOut: false 
@@ -37,7 +37,7 @@ let products = [
       name: 'iPad Pro (6th Gen, 2022)',
       price: '300 990 ₽',
       img: '.../../../img/optimized/cards/card_4.webp',
-      imgHidden: '../../../img/optimized/cards/card_3.webp',
+      imgHidden: '../../../img/optimized/cards/card_4.webp',
       isFavourites: true,
       isCompare: false,
       soldOut: false 
@@ -59,7 +59,7 @@ let products = [
       name: 'MacBook Air 15',
       price: '300 990 ₽',
       img: '../../../img/optimized/cards/card_6.webp',
-      imgHidden: '../../../img/optimized/cards/card_9.webp',
+      imgHidden: '../../../img/optimized/cards/card_6.webp',
       isFavourites: true,
       isCompare: false,
       soldOut: false 
@@ -70,7 +70,7 @@ let products = [
       name: 'Mac Mini',
       price: '300 990 ₽',
       img: '../../../img/optimized/cards/card_7.webp',
-      imgHidden: '../../../img/optimized/cards/card_11.webp',
+      imgHidden: '../../../img/optimized/cards/card_7.webp',
       isFavourites: true,
       isCompare: false,
       soldOut: false 
@@ -81,7 +81,7 @@ let products = [
       name: 'ASUS VivoBook 15 M1502IA-BQ011W',
       price: '270 990 ₽',
       img: '../../../img/optimized/cards/card_16.webp',
-      imgHidden: '../../../img/optimized/cards/card_15.webp',
+      imgHidden: '../../../img/optimized/cards/card_16.webp',
       isFavourites: true,
       isCompare: false,
       soldOut: false 
@@ -99,30 +99,36 @@ productsLists.forEach(item => {
 })
 
 function renderProductList (productsList) {
+   // NOTE Иконка корзины, когда товар есть в наличии
    const cartIcon = `
       <div class="ui-circle-icon circle-icon_cart">
          <i class="i-cart"></i>
       </div>
    `;
 
+   // NOTE Кнопка заказа, когда товара нет в наличии
    const orderBtn = `
       <a href="#" class="btn_card-order">Заказать</a>
    `
 
+   // NOTE Стикер "Нет в наличии" - товара нет в наличии
    const stickerSoldOut = `
-   
+      <div class="ui-sticker sticker_sold ">Нет в наличии</div>
    `
 
+   // TODO Вывод списка товаров
    let products = productsList.map(product => {
       return `
-         <div class="product-card swiper-slide card ${product.soldOut ? 'soldOut' : ''}">
+         <div class="product-card swiper-slide">
             <div class="img">
                <a href="#">
                   <img src="${product.img}" alt="">
                   <img src="${product.imgHidden}" alt="" class="hover-img">
                </a>
                
-               <div class="sticker-wrap"></div>
+               <div class="sticker-wrap">
+                  ${product.soldOut ? stickerSoldOut : ''}
+               </div>
          
                <div class="quick-nav">
                   <div class="ui-circle-icon circle-icon_card btn_quickview">

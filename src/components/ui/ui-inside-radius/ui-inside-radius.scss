@@ -1,0 +1,85 @@
+:root {
+   --inside_radius_height: 60px;
+   --pseudo_size: 22px;
+   --negative_position: calc(-1 * var(--pseudo_size));
+}
+
+.ui-inside-radius-el {
+   position: absolute;
+   top: 0;
+   right: 0;
+   background: var(--light);
+   border-bottom-left-radius: var(--defaultRd);
+   width: 70px;
+   height: var(--inside_radius_height);
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   z-index: 3;
+
+   i {
+      font-size: 25px;
+      color: var(--dark);
+   }
+
+   &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: var(--negative_position);
+      background: url('../../../img/inside_radius.svg') no-repeat center / cover;
+      width: var(--pseudo_size);
+      height: var(--pseudo_size);
+   }
+
+   &:after {
+      content: '';
+      position: absolute;
+      bottom: var(--negative_position);
+      right: 0;
+      background: url('../../../img/inside_radius.svg') no-repeat center / cover;
+      width: var(--pseudo_size);
+      height: var(--pseudo_size);
+   }
+}
+
+
+/* TODO Миксин для углов (svg)  */
+@mixin uiInsideRadiusPseudo (
+   $sizeB: var(--pseudo_size),
+   $sizeA: var(--pseudo_size),
+   $topB: auto,
+   $rightB: auto,
+   $bottomB: auto,
+   $leftB: auto,
+   $topA: auto,
+   $rightA: auto,
+   $bottomA: auto,
+   $leftA: auto,
+   $transform: none,
+) {
+   &:before, &:after {
+      content: '';
+      position: absolute;
+      background: url('../../../img/inside_radius.svg') no-repeat center / cover;
+      transform: $transform;
+   }
+
+   &:before {
+      width: $sizeB;
+      height: $sizeB;
+      top: $topB;
+      right: $rightB;
+      bottom: $bottomB;
+      left: $leftB;
+   }
+
+   &:after {
+      width: $sizeA;
+      height: $sizeA;
+      top: $topA;
+      right: $rightA;
+      bottom: $bottomA;
+      left: $leftA;
+   }
+}

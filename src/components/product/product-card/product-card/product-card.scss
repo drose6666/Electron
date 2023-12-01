@@ -1,3 +1,16 @@
+$positionHiddenEls: clamp(12px, 5cqi, 20px);
+
+// TODO Stickers
+.ui-sticker {
+   @include uiBtnType( $type: sticker );
+}
+.sticker_sold {
+   color: var(--light);
+   background: rgba(155, 187, 216, 0.70);
+   box-shadow: var(--light_btn_shadow);
+   backdrop-filter: blur(2px);
+}
+
 .product-card {
    user-select: none;
    container-type: inline-size;
@@ -27,8 +40,8 @@
 
       .action-wrap {
          position: absolute;
-         bottom: clamp(12px, 5cqi, 20px);
-         right: clamp(12px, 5cqi, 20px);
+         bottom: $positionHiddenEls;
+         right: $positionHiddenEls;
 
          .btn_product_cart {
             width: clamp(38px, 15cqw, 46px);
@@ -43,6 +56,12 @@
             @include uiBtnType( $type: helper );
             @include uiBtnTheme( $theme: light );
          }
+      }
+
+      .sticker-wrap {
+         position: absolute;
+         top: $positionHiddenEls;
+         left: $positionHiddenEls;
       }
 
       .quick-nav {

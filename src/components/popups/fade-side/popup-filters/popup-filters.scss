@@ -3,16 +3,16 @@
 
 #popup-filters {
    .ui-popup__container {
-      padding: 60px $fadePaddingX 40px $fadePaddingX;
+      padding: 40px $fadePaddingX 40px $fadePaddingX;
       max-width: 450px;
    }
 
-   .filters-form__nav {
-      margin-top: 40px;
+   .form-filters__nav {
+      margin-top: 20px;
    }
 
    .products-count {
-      margin: 40px 0 20px 0;
+      margin-bottom: 20px;
       font-size: 17px;
       font-weight: 300;
       line-height: 100%;
@@ -32,10 +32,6 @@
    .ui-popup__btns {
       margin-top: 0;
       grid-template: auto / repeat(auto-fill, minmax(140px, 1fr));
-   }
-   
-   .ui-popup__title {
-      margin-bottom: 75px;
    }
 
    .btn_filter_cancel {

@@ -1,17 +1,8 @@
-<div class="category-card @@className">
-   <div class="category-card__inside">
-      <div class="content">
-         <h3 class="title">@@title</h3>
-         @@include('../../ui/ui-more/ui-more-link.html', {
-            "className": "ui-more",
-            "text": "Смотреть полностью",
-            "link": "#"
-         })
-      </div>
-      
-      <img src="@@img" alt="" class="img">
+<a href="#" class="category-card @@className">
+   <div class="category-card__container">
+      <h3 class="name">@@name</h3>
    
-      <div class="decor-circle left"></div>
-      <div class="decor-circle right"></div>
+      @@include('../../ui/ui-inside-radius/ui-inside-radius-el.html')
    </div>
-</div> 
+   <img src="@@img" alt="" class="img">
+</a> 

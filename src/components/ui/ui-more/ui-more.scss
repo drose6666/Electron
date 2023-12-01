@@ -9,8 +9,8 @@
    $iconHoverColor: var(--action),
    
    $theme,
-   $color: null,
-   $iconColor: null,
+   $color: var(--dark),
+   $iconColor: var(--dark),
 ) {
    display: inline-flex;
    align-items: center;
@@ -23,6 +23,7 @@
       font-size: $fSize;
       font-weight: $fWeight;
       line-height: 100%;
+      color: $color;
       position: relative;
       white-space: nowrap;
       transition: background-size .2s ease,  color .2s ease;
@@ -32,11 +33,16 @@
       content: $icon;
       font-family: var(--icon_font);
       font-size: $iconFSize;
+      color: $iconColor;
       display: inline-block;
       transition: inherit;
    }
 
    &:hover {
+      .child {
+         color: var(--action);
+      }
+
       &:after {
          color: $iconHoverColor;
          transform: $iconHoverMove;

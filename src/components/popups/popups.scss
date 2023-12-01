@@ -230,6 +230,11 @@ $transitionDuration: .2s ease;
       line-height: 110%;
    }
 
+   &.title_filter {
+      margin-bottom: 40px;
+      font-weight: 500;
+   }
+
    &.underline {
       padding-bottom: 10px;
       position: relative;

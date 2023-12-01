@@ -1,5 +1,11 @@
 #popup-image-preview {
-
+   .ui-popup__container {
+      padding: 20px;
+      background: var(--dark);
+      max-width: 3000px;
+      box-shadow: none;
+   }
+   
    &.active {
       .image-preview-list {
          .image-preview-item {
@@ -25,12 +31,7 @@
       z-index: 2;
    }
 
-   .ui-popup__container {
-      padding: 0;
-      max-width: 3000px;
-      background: transparent;
-      box-shadow: none;
-   }
+   
 
    .image-preview-list {
       // padding: 10px;
