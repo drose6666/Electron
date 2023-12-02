@@ -2,9 +2,10 @@
    container-type: inline-size;
 
    .review-inside {
-      padding: clamp(20px, 8cqi, 40px);
+      padding: 40px clamp(20px, 8cqi, 40px);
       border-radius: clamp(var(--optionalRd),11cqi,var(--defaultRd));
       background: var(--separating);
+      position: relative;
 
       .author {
          margin-bottom: 25px;
@@ -26,7 +27,7 @@
       }
 
       .text {
-         margin-bottom: 40px;
+         margin-bottom: 25px;
          font-size: clamp(16px, 4cqi, 17px);
          font-weight: 300;
          line-height: 140%;
@@ -37,42 +38,79 @@
          overflow: hidden;
       }
 
-      .info {
+      .rating {
+         padding: 10px 15px;
+         position: absolute;
+         top: 0;
+         right: 0;
          display: flex;
          align-items: center;
-         justify-content: space-between;
-         gap: 15px;
+         justify-content: center;
+         gap: 8px;
+         border-bottom-left-radius: var(--mdRd);
+         background: var(--light);
 
-         .rating {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-   
-            .rating {
-               &__status {
-                  img {
-                     max-width: 100%;
-                  }
-               }
-
-               &__number {
-                  font-size: 17px;
-                  font-weight: 300;
-                  line-height: 100%;
-                  color: var(--dark);
-               }
-            }
+         .count {
+            margin-top: 2px;
+            display: inline-block;
+            font-size: 16px;
+            font-weight: 300;
+            line-height: 100%;
+            color: var(--dark);
          }
+
+         i {
+            font-size: 18px;
+            color: var(--active_star);
+         }
+
+         @include uiInsideRadiusPseudo(
+            $sizeB: 17px,
+            $topB: 0,
+            $leftB: -17px,
+            $sizeA: 17px,
+            $rightA: 0,
+            $bottomA: -17px,
+         )
+      }
+
+      .show-more {
+         padding: 10px 20px;
+         display: inline-flex;
+         align-content: center;
+         gap: 15px;
+         background: var(--light);
+         border-top-left-radius: var(--mdRd);
+         position: absolute;
+         bottom: 0;
+         right: 0;
+         cursor: pointer;
+         transition: all .2s ease;
+
+         @include uiInsideRadiusPseudo(
+            $sizeB: 17px,
+            $topB: -17px,
+            $rightB: 0,
+            $sizeA: 17px,
+            $leftA: -17px,
+            $bottomA: 0,
+            $transform: rotate(90deg)
+         );
+
+         // &:hover {
+         //    background-color: var(--dark);
+         //    .child, i {
+         //       color: var(--dark);
+         //    }
+
+         //    &:before, &:after {
+
+         //    }
+         // }
       }
    }
 
    @container (max-width: 290px) {
-      .review-inside {
-         .info {
-            flex-direction: column;
-            align-items: flex-start;
-            gap: 10px;
-         }
-      }
+
    }
 }
