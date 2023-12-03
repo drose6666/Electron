@@ -1,5 +1,6 @@
-@import './header-nav-menu/header-nav-menu';
-@import './header-ui/header-ui';
+@import './header-menu/header-menu';
+@import './header-menu/submenu/submenu';
+@import './header-additional/header-additional';
 
 header {
    margin: 0 var(--default_padding);
@@ -12,10 +13,13 @@ header {
       justify-content: space-between;
    }
 
-   .nav-wrap {
-      display: flex;
-      align-items: center;
-      gap: 70px;
+   .logo {
+      max-width: 190px;
+
+      img {
+         max-width: 100%;
+         height: auto;
+      }
    }
 
    

@@ -1,0 +1,48 @@
+.submenu-wrapper {
+   padding: 40px;
+   position: absolute;
+   top: 102%;
+   left: 0;
+   display: grid;
+   grid-template: auto / 1fr 1fr;
+   gap: 60px;
+   background: var(--separating);
+   border-radius: var(--optionalRd);
+   z-index: 2;
+
+   .submenu-links-container {
+      min-width: 480px;
+   }
+
+   .submenu-category-container {
+      width: 360px;
+   }
+
+   .ui-tabs {
+      margin-bottom: 35px;
+      justify-content: flex-start;
+   }
+
+   .submenu {
+      &-list {
+         display: grid;
+         grid-template: auto / 1fr 1fr;
+         column-gap: 30px;
+         row-gap: 20px;
+         width: 100%;
+
+         &__item {
+            align-self: start;  
+            max-width: 250px;
+            width: 100%;
+            
+            a {
+               font-size: 17px;
+               font-weight: 300;
+               line-height: 104%;
+               color: var(--dark);
+            }
+         }
+      }
+   }
+}

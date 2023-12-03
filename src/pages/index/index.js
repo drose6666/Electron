@@ -8,3 +8,4 @@ import '../../components/ui/ui-preloader/ui-preloader.js';
 
 // NOTE Временные импорты (для теста). Потом сделать каждый в нужном файле
 import '../../components/notifications/ui-notification.js';
+import '../../components/header/header-menu/submenu/submenu.js';

@@ -1,18 +1,20 @@
-.header-navigation {
-   ul {
+.menu {
+   &-list {
       display: flex;
       align-items: center;
-      gap: clamp(17px, 3.2cqi, 45px);
+      justify-content: center;
+      gap: clamp(15px, 1.5cqi, 25px);
+      position: relative;
 
-      li {
-         position: relative;
+      &__item {
          @include hoverLinks($hoverChild: true, $height: 3px);
 
-         a {
+         & > a {
             padding: 34px 0;
-            font-size: clamp(18px, 1.9cqi, 22px);
-            font-weight: 500;
+            font-size: clamp(14px, 1cqi, 16px);
+            font-weight: 600;
             line-height: 100%;
+            text-transform: uppercase;
             color: var(--dark);
             display: inline-block;
             transition: background-size .2s ease, color .2s ease;
@@ -25,12 +27,12 @@
    }
 
    @include media(max-width, 1200px) {
-      ul > li > a {
+      &-list > &__item > a {
          font-size: clamp(17px, 1.8cqi, 22px);
       }
    }
 
-   @include media(max-width, 1000px) {
+   @include media(max-width, 1050px) {
       display: none;
    }
 }

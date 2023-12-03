@@ -22,16 +22,16 @@
    <link rel="icon" href="../../img/favicon/fav_48.png" type="image/png" sizes="48x48">
    <link rel="icon" href="../../img/favicon/fav_128.png" type="image/png" sizes="128x128">
    
-   <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css?_v=20231203115824" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
-   <!-- <link rel="stylesheet" href="../../libs/css/bootstrap-grid.min.css?_v=20231203115824"> -->
+   <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css?_v=20231203231211" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+   <!-- <link rel="stylesheet" href="../../libs/css/bootstrap-grid.min.css?_v=20231203231211"> -->
 
-   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css?_v=20231203115824" />
-   <script defer src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js?_v=20231203115824"></script>
-   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js?_v=20231203115824" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-   <link rel="stylesheet" href="../../libs/css/reset.min.css?_v=20231203115824">
-   <link rel="stylesheet" as="font" href="../../fonts/fonts.css?_v=20231203115824">
-   <link rel="stylesheet" as="font" href="../../fonts/icon-font.css?_v=20231203115824">
-   <link rel="stylesheet" href="./pages/index/css/index.min.css?_v=20231203115824">
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css?_v=20231203231211" />
+   <script defer src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js?_v=20231203231211"></script>
+   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js?_v=20231203231211" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+   <link rel="stylesheet" href="../../libs/css/reset.min.css?_v=20231203231211">
+   <link rel="stylesheet" as="font" href="../../fonts/fonts.css?_v=20231203231211">
+   <link rel="stylesheet" as="font" href="../../fonts/icon-font.css?_v=20231203231211">
+   <link rel="stylesheet" href="./pages/index/css/index.min.css?_v=20231203231211">
    
    <title>Electron</title>
 </head>
@@ -55,8 +55,7 @@
          <nav class="top-navigation">
    <ul>
       <li><a href="">Отследить заказ</a></li>
-      <li><a href="">Доставка</a></li>
-      <li><a href="">Сервис</a></li>
+      <li><a href="">Информация</a></li>
    </ul>
 
    <ul>
@@ -77,21 +76,68 @@
 </div>
       <header>
    <div class="ui-container">
-      <div class="nav-wrap">
-         <a href="#" class="logo"></a>
-         <nav class="header-navigation">
-   <ul>
-      <li>
+      <a href="#" class="logo"><img src="../../img/logo/logo_dark.svg" alt=""></a>
+      <nav class="menu" id="header-nav">
+   <ul class="menu-list">
+      <li class="menu-list__item">
          <a class="child" href="">Ноутбуки и ПК</a>
-         
+         <div class="submenu-wrapper">
+   <div class="submenu-links-container">
+      <div class="ui-tabs">
+         <button class="ui-tab header-submenu__tab active">Для ноутбуков и ПК</button><button class="ui-tab header-submenu__tab">Для смартфонов</button>
+      </div>
+
+      <div class="submenu">
+         <ul class="submenu-list">
+            <li class="submenu-list__item"><a href="" class="child">Материнские платы</a></li>
+            <li class="submenu-list__item"><a href="" class="child">Процессоры</a></li>
+            <li class="submenu-list__item"><a href="" class="child">Оптические приводы</a></li>
+            <li class="submenu-list__item"><a href="" class="child">Жесткие диски (HDD-накопители)</a></li>
+            <li class="submenu-list__item"><a href="" class="child">Звуковые карты</a></li>
+            <li class="submenu-list__item"><a href="" class="child">Блоки питания</a></li>
+            <li class="submenu-list__item"><a href="" class="child">Накопитель SSD</a></li>
+            <li class="submenu-list__item"><a href="" class="child">Корпуса</a></li>
+            <li class="submenu-list__item"><a href="" class="child">Видеокарты</a></li>
+            <li class="submenu-list__item"><a href="" class="child">Системы охлаждения</a></li>
+            <li class="submenu-list__item"><a href="" class="child">Модули памяти</a></li>
+            <li class="submenu-list__item"><a href="" class="child">Термопасты</a></li>
+         </ul>
+
+         <ul class="submenu-list">
+            <li class="submenu-list__item"><a href="" class="child">Материнские платы</a></li>
+            <li class="submenu-list__item"><a href="" class="child">Процессоры</a></li>
+            <li class="submenu-list__item"><a href="" class="child">Оптические приводы</a></li>
+            <li class="submenu-list__item"><a href="" class="child">Жесткие диски (HDD-накопители)</a></li>
+            <li class="submenu-list__item"><a href="" class="child">Звуковые карты</a></li>
+            <li class="submenu-list__item"><a href="" class="child">Блоки питания</a></li>
+            <li class="submenu-list__item"><a href="" class="child">Накопитель SSD</a></li>
+            
+         </ul>
+      </div>
+   </div>
+   
+   <div class="submenu-category-container">
+      <a href="" class="category-card complect card_submenu">
+   <div class="category-card__container">
+      <h3 class="name">Комплектующие</h3>
+      <p class="description">Смартфоны, флагманские новинки и еще много интересного</p>
+
+      <div class="category-more">
+         <span class="child">Смотреть все</span>
+      </div>
+
+      <img src="../../img/optimized/categories/complect_full_1.5x.webp" alt="" class="img">
+   </div>
+</a>
+   </div>
+</div>
       </li>
-      <li><a class="child" href="">Смартфоны</a></li>
-      <li><a class="child" href="">Комплектующие</a></li>
-      <li><a class="child" href="">Аксессуары</a></li>
+      <li class="menu-list__item"><a class="child" href="">Смартфоны</a></li>
+      <li class="menu-list__item"><a class="child" href="">Комплектующие</a></li>
+      <li class="menu-list__item"><a class="child" href="">Аксессуары</a></li>
    </ul>
 </nav>
-      </div>
-      <div class="header-ui">
+      <div class="header-additional">
    <div class="ui-circle-icon circle-icon_transparent btn_search">
    <i class="i-search"></i>
 </div>
@@ -167,7 +213,7 @@
          <section class="category-brands-section">
    <div class="ui-container">
       <div class="category-list">
-   <a href="" class="category-card laptop">
+   <a href="" class="category-card laptop card_main">
    <div class="category-card__container">
       <h3 class="name">Ноутбуки <br> и Компьютеры</h3>
       <p class="description">Смартфоны, флагманские новинки и еще много интересного</p>
@@ -178,7 +224,7 @@
 
       <img src="../../img/optimized/categories/laptop_full_1.5x.webp" alt="" class="img">
    </div>
-</a><a href="" class="category-card complect">
+</a><a href="" class="category-card complect card_main">
    <div class="category-card__container">
       <h3 class="name">Комплектующие</h3>
       <p class="description">Смартфоны, флагманские новинки и еще много интересного</p>
@@ -189,7 +235,7 @@
 
       <img src="../../img/optimized/categories/complect_full_1.5x.webp" alt="" class="img">
    </div>
-</a><a href="" class="category-card accessories">
+</a><a href="" class="category-card accessories card_main">
    <div class="category-card__container">
       <h3 class="name">Аксессуары</h3>
       <p class="description">Смартфоны, флагманские новинки и еще много интересного</p>
@@ -200,7 +246,7 @@
 
       <img src="../../img/optimized/categories/accessories_full_1.5x.webp" alt="" class="img">
    </div>
-</a><a href="" class="category-card smartphone">
+</a><a href="" class="category-card smartphone card_main">
    <div class="category-card__container">
       <h3 class="name">Смартфоны</h3>
       <p class="description">Смартфоны, флагманские новинки и еще много интересного</p>
@@ -2100,6 +2146,6 @@
 </div>
       
       
-      <script type="module" src="./pages/index/js/bundle-index.min.js?_v=20231203115824"></script>
+      <script type="module" src="./pages/index/js/bundle-index.min.js?_v=20231203231211"></script>
    </body>
 </html>  

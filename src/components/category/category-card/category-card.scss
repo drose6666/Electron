@@ -5,21 +5,21 @@
    transition: all .4s ease;
 
    &__container {
-      padding: 10px 10px 10px clamp(25px, 3.4dvw, 50px);
+      padding: 10px 10px 10px clamp(15px, 9cqi, 50px);
       position: relative;
       background: var(--separating);
-      min-height: clamp(300px, 33dvw, 340px);
+      min-height: clamp(280px, 80cqi, 340px);
       display: flex;
       flex-direction: column;
       justify-content: center;
-      gap: clamp(30px, 3.4dvw, 40px);
+      gap: clamp(30px, 9cqi, 40px);
       cursor: pointer;
       overflow: hidden;
 
       @extend %dynamicRadius40to25;
       
       .name {
-         font-size: clamp(30px, 3.4dvw, 47px);
+         font-size: clamp(26px, 11cqi, 50px);
          font-weight: 500;
          line-height: 100%;
          color: var(--dark);
@@ -28,11 +28,11 @@
       }
 
       .description {
-         font-size: clamp(17px, 1.7dvw, 20px);
+         font-size: clamp(17px, 5cqi, 20px);
          font-weight: 300;
          line-height: 120%;
          color: var(--text_additional);
-         max-width: clamp(200px, 24dvw, 280px);
+         max-width: clamp(200px, 66cqi, 280px);
          position: relative;
          z-index: 1;
       }
@@ -46,11 +46,12 @@
          // max-width: 500px;
          // max-height: 470px;
          object-fit: cover;
-         object-position: center;
+         object-position: 55% center;
          z-index: 0;
       }
 
       .category-more {
+         padding-bottom: 8px;
          display: inline-flex;
          align-items: center;
          gap: 15px;
@@ -76,19 +77,52 @@
          &:before {
             content: '';
             position: absolute;
-            bottom: -8px;
+            bottom: 0;
             left: 0;
             height: 1px;
-            // width: 100%;
             background: var(--dark);
-            animation: moveBorder 1s ease backwards;
+            animation: moveBorderRev .3s ease forwards;
          }
 
-         &.hover {
+         &:hover {
             &:before {
-               // animation: none;
-               animation: moveBorder 1s ease forwards;
+               animation: moveBorder .3s ease forwards;
             }
+         }
+      }
+   }
+
+   &.card_main {
+      .category-card__container {
+         padding: 10px 10px 10px clamp(25px, 3.2dvw, 50px);
+         min-height: clamp(300px, 33dvw, 340px);
+         gap: clamp(30px, 3.4dvw, 40px);
+         
+         .name {
+            font-size: clamp(30px, 3.4dvw, 47px);
+         }
+   
+         .description {
+            font-size: clamp(17px, 1.7dvw, 20px);
+            max-width: clamp(200px, 24dvw, 280px);
+         }
+      }
+   }
+
+   &.card_submenu {
+      .category-card__container {
+         padding: 10px 10px 10px 30px;
+         min-height: 270px;
+         background: var(--light);
+         gap: 25px;
+
+         .name {
+            font-size: 30px;
+         }
+
+         .description {
+            font-size: 17px;
+            max-width: 250px;
          }
       }
    }
@@ -96,44 +130,31 @@
 
 @keyframes moveBorder {
    from{ width: 100%; }
-   to { width: 0;  }
+   to { width: 0; }
 }
 
 @keyframes moveBorderRev {
    from{ width: 0; }
-   to { width: 100%;  }
+   to { width: 100%; }
 }
 
 @include media (max-width, 930px) {
    .category-card {
-      &__container {
-         padding: 10px 10px 10px clamp(15px, 9cqi, 50px);
-         min-height: clamp(280px, 80cqi, 340px);
-         gap: clamp(30px, 9cqi, 40px);
-
-         .name {
-            font-size: clamp(26px, 11cqi, 50px);
-         }
-
-         .description {
-            font-size: clamp(17px, 5cqi, 20px);
-            max-width: clamp(200px, 66cqi, 280px);
+      &.main {
+         &__container {
+            padding: 10px 10px 10px clamp(15px, 9cqi, 50px);
+            min-height: clamp(280px, 80cqi, 340px);
+            gap: clamp(30px, 9cqi, 40px);
+   
+            .name {
+               font-size: clamp(26px, 11cqi, 50px);
+            }
+   
+            .description {
+               font-size: clamp(17px, 5cqi, 20px);
+               max-width: clamp(200px, 66cqi, 280px);
+            }
          }
       }
    }
 }
-
-
-
-// @keyframes moveBg {
-//    0% {
-//       background-size: 100% 1px;
-//       background-position: left 0% bottom;
-//    }
-
-//    100% {
-//       background-position: right 0% bottom;
-//       background-size: 0% 1px;
-//    }
-// }
-

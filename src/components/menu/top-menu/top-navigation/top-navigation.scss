@@ -6,7 +6,7 @@
    ul {
       display: flex;
       align-items: center;
-      gap: 25px;
+      gap: 20px;
 
       &:last-child {
          position: relative;
@@ -28,7 +28,7 @@
             padding: 3px 0;
             color: var(--dark);
             font-size: 15px;
-            font-weight: 400;
+            font-weight: 300;
             line-height: 100%;
             transition: background-size .2s ease, color .2s ease;
             @include hoverLinks($height: 1px);
@@ -40,7 +40,7 @@
       }
    }
 
-   @include media(max-width, 1000px) {
+   @include media(max-width, 930px) {
       ul:nth-child(2) {
          display: none;
       }

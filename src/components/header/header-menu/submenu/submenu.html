@@ -1,0 +1,53 @@
+<div class="submenu-wrapper">
+   <div class="submenu-links-container">
+      <div class="ui-tabs">
+         @@loop('../../../ui/ui-tab/ui-tab.html', [
+            {
+               "text": "Для ноутбуков и ПК",
+               "className": "header-submenu__tab active"
+            },
+            {
+               "text": "Для смартфонов",
+               "className": "header-submenu__tab"
+            },
+         ])
+      </div>
+
+      <div class="submenu">
+         <ul class="submenu-list">
+            <li class="submenu-list__item"><a href="" class="child">Материнские платы</a></li>
+            <li class="submenu-list__item"><a href="" class="child">Процессоры</a></li>
+            <li class="submenu-list__item"><a href="" class="child">Оптические приводы</a></li>
+            <li class="submenu-list__item"><a href="" class="child">Жесткие диски (HDD-накопители)</a></li>
+            <li class="submenu-list__item"><a href="" class="child">Звуковые карты</a></li>
+            <li class="submenu-list__item"><a href="" class="child">Блоки питания</a></li>
+            <li class="submenu-list__item"><a href="" class="child">Накопитель SSD</a></li>
+            <li class="submenu-list__item"><a href="" class="child">Корпуса</a></li>
+            <li class="submenu-list__item"><a href="" class="child">Видеокарты</a></li>
+            <li class="submenu-list__item"><a href="" class="child">Системы охлаждения</a></li>
+            <li class="submenu-list__item"><a href="" class="child">Модули памяти</a></li>
+            <li class="submenu-list__item"><a href="" class="child">Термопасты</a></li>
+         </ul>
+
+         <ul class="submenu-list">
+            <li class="submenu-list__item"><a href="" class="child">Материнские платы</a></li>
+            <li class="submenu-list__item"><a href="" class="child">Процессоры</a></li>
+            <li class="submenu-list__item"><a href="" class="child">Оптические приводы</a></li>
+            <li class="submenu-list__item"><a href="" class="child">Жесткие диски (HDD-накопители)</a></li>
+            <li class="submenu-list__item"><a href="" class="child">Звуковые карты</a></li>
+            <li class="submenu-list__item"><a href="" class="child">Блоки питания</a></li>
+            <li class="submenu-list__item"><a href="" class="child">Накопитель SSD</a></li>
+            
+         </ul>
+      </div>
+   </div>
+   
+   <div class="submenu-category-container">
+      @@include('../../../category/category-card/category-card.html', {
+         "img": "../../img/optimized/categories/complect_full_1.5x.webp",
+         "name": "Комплектующие",
+         "description": "Смартфоны, флагманские новинки и еще много интересного",
+         "className": "complect card_submenu"
+      })
+   </div>
+</div>
