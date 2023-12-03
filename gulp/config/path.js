@@ -51,6 +51,7 @@ export const path = {
       other: `${distFolder}/other/`,
       images: `${distFolder}/img/optimized/`,
       svg: `${distFolder}/img/`,
+      imgNewer: `${distFolder}/img/`,
    }, 
 
 

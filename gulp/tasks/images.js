@@ -14,12 +14,12 @@ export const images = () => {
          })
       ))
 
-      .pipe(app.plugins.newer(app.path.src.images))
+      .pipe(app.plugins.newer(app.path.dist.imgNewer))
       .pipe(webp()) // create .webp images
       .pipe(app.gulp.dest(app.path.src.imagesOptimizedDist)) // put .webp in the folder with the result
  
       .pipe(app.gulp.src(app.path.src.images))
-      .pipe(app.plugins.newer(app.path.src.images))
+      .pipe(app.plugins.newer(app.path.dist.imgNewer))
       
       // optimize images
       .pipe(imagemin({ 

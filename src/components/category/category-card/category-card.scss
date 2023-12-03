@@ -41,18 +41,20 @@
          position: absolute;
          right: 0;
          width: 100%;
-         height: auto;
-         max-width: 500px;
-         max-height: 470px;
+         height: 100%;
+         // height: auto;
+         // max-width: 500px;
+         // max-height: 470px;
          object-fit: cover;
          object-position: center;
          z-index: 0;
       }
 
       .category-more {
-         display: flex;
+         display: inline-flex;
          align-items: center;
          gap: 15px;
+         width: max-content;
          position: relative;
          z-index: 1;
 
@@ -75,59 +77,31 @@
             content: '';
             position: absolute;
             bottom: -8px;
-            width: 100%;
+            left: 0;
             height: 1px;
+            // width: 100%;
             background: var(--dark);
-            animation: moveBorder .2s ease both; 
+            animation: moveBorder 1s ease backwards;
          }
 
-         &:hover {
+         &.hover {
             &:before {
-               animation: moveBorder .2s ease forwards; 
+               // animation: none;
+               animation: moveBorder 1s ease forwards;
             }
          }
       }
    }
+}
 
-   &.laptop {
-      .category-card__container {
-         .img {
-            top: 0;
-            right: -20cqi;
-            max-width: 402px;
-         }
-      }
-   }
+@keyframes moveBorder {
+   from{ width: 100%; }
+   to { width: 0;  }
+}
 
-   &.accessories {
-      .category-card__container {
-         .img {
-            bottom: 70px;
-            right: -90px;
-            max-width: 300px;
-         }
-      }
-   }
-
-   &.complect {
-      .category-card__container {
-         .img {
-            bottom: -60px;
-            right: -90px;
-            max-width: 250px;
-         }
-      }
-   }
-
-   &.smartphone {
-      .category-card__container {
-         .img {
-            bottom: 0;
-            right: 0;
-            max-width: 430px;
-         }
-      }
-   }
+@keyframes moveBorderRev {
+   from{ width: 0; }
+   to { width: 100%;  }
 }
 
 @include media (max-width, 930px) {
@@ -149,17 +123,7 @@
    }
 }
 
-@keyframes moveBorder {
-   0% {
-      left: 0;
-      width: 100%;
-   }
-   
-   100% {
-      right: 0;
-      width: 0;
-   }
-}
+
 
 // @keyframes moveBg {
 //    0% {
