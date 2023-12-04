@@ -4,23 +4,35 @@
       align-items: center;
       justify-content: center;
       gap: clamp(15px, 1.5cqi, 25px);
-      position: relative;
 
       &__item {
-         @include hoverLinks($hoverChild: true, $height: 3px);
+         @include hoverLinkUnderline ( 
+            $bgColorStart: var(--action),
+            $bgYSize: 2px,
+            $duration: .2s,
+            $hoverChild: true
+         );
 
          & > a {
             padding: 34px 0;
             font-size: clamp(14px, 1cqi, 16px);
-            font-weight: 600;
+            font-weight: 500;
             line-height: 100%;
             text-transform: uppercase;
             color: var(--dark);
             display: inline-block;
-            transition: background-size .2s ease, color .2s ease;
+         }
 
-            &:hover {
+         &:hover {
+            & > a {
                color: var(--action);
+            }
+
+            .submenu-wrapper {
+               opacity: 1;
+               visibility: visible;
+               translate: none;
+               transition-delay: .2s;
             }
          }
       }

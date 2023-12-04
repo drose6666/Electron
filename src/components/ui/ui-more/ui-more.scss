@@ -1,136 +1,175 @@
+@mixin hoverLinkUnderline (
+   $bgColorStart: var(--dark),
+   $bgColorEnd: var(--dark),
+   $bgPositionStart: right bottom,
+   $bgPositionEnd: left bottom,
+   $bgYSize: 1px,
+   $duration: .3s,
+   $fromEmptiness: true,
+   $hoverChild: false,
+) {
+   @if $hoverChild {
+      & > .child {
+         background: -webkit-gradient(linear,left top,left bottom,from($bgColorStart));
+         background-repeat: no-repeat;
+         transition: 
+            background-size $duration ease,
+            color $duration ease,
+            transform $duration ease;
+      }
+
+      @if $fromEmptiness {
+         & > .child {
+            background-position: right bottom;
+            background-size: 0% $bgYSize;
+         }
+
+         &:hover {
+            & > .child {
+               background-position: left bottom;
+               background-size: 100% $bgYSize;
+            }
+         }
+   
+      } @else {
+         & > .child {
+            background-position: left bottom;
+            background-size: 100% $bgYSize;
+         }
+
+         &:hover {
+            & > .child {
+               background-position: right bottom;
+               background-size: 0% $bgYSize;
+            }
+         }
+      }
+
+   } @else {
+      background: -webkit-gradient(linear,left top,left bottom,from($bgColorStart));
+      background-repeat: no-repeat;
+      transition: 
+            background-size $duration ease,
+            color $duration ease,
+            transform $duration ease;
+
+      .child {
+         transition: all $duration ease;
+      }
+
+      @if $fromEmptiness {
+         background-position: right bottom;
+         background-size: 0% $bgYSize;
+   
+         &:hover {
+            background-position: left bottom;
+            background-size: 100% $bgYSize;
+         }
+   
+      } @else {
+         background-position: left bottom;
+         background-size: 100% $bgYSize;
+   
+         &:hover {
+            background-position: right bottom;
+            background-size: 0% $bgYSize;
+         }
+      }
+   }
+}
+
+.basicHoverUnderline {
+   @include hoverLinkUnderline ( 
+      $bgColorStart: var(--action), 
+      $duration: .2s,
+      $bgYSize: 1px,
+      $hoverChild: true
+   );
+}
+
+.linkHoverFullToEmptiness {
+   @include hoverLinkUnderline ( $fromEmptiness: false, $bgYSize: 1px, );
+
+   padding-bottom: 8px;
+}
+
+
+/* TODO Ссылки с иконками */
 @mixin uiMore (
-   $gutter: 15px,
-   $padding: 3px 0,
    $fSize: 17px,
    $fWeight: 400,
-   $icon: '\e905',
-   $iconFSize: 14px,
-   $iconHoverMove: translate(3px),
-   $iconHoverColor: var(--action),
-   
-   $theme,
    $color: var(--dark),
    $iconColor: var(--dark),
+   $iconHoverColor: var(--action),
+   $iconSize: 13px,
+   $gap: 15px,
+   $transform: translateX(5px),
+   $duration: .3s,
+   $theme: dark,
+
 ) {
    display: inline-flex;
    align-items: center;
-   gap: $gutter;
+   width: max-content;
+   gap: $gap;
    cursor: pointer;
-   transition: all .3s ease;
 
    .child {
-      padding: $padding;
-      font-size: $fSize;
-      font-weight: $fWeight;
+      font-size: 17px;
+      font-weight: 400;
       line-height: 100%;
-      color: $color;
-      position: relative;
-      white-space: nowrap;
-      transition: background-size .2s ease,  color .2s ease;
+      color: var(--dark);
    }
 
    &:after {
-      content: $icon;
+      content: '\e905';
       font-family: var(--icon_font);
-      font-size: $iconFSize;
-      color: $iconColor;
+      font-size: 13px;
+      color: var(--dark);
       display: inline-block;
-      transition: inherit;
+      transition: 
+         transform $duration ease,
+         color $duration ease;
    }
 
    &:hover {
-      .child {
-         color: var(--action);
-      }
-
       &:after {
-         color: $iconHoverColor;
-         transform: $iconHoverMove;
+         transform: $transform;
       }
    }
 
    @if $theme == dark {
-      $color: var(--dark);
-      $iconColor: var(--dark);
+      .child { color: var(--dark); }
+      &:after { color: var(--dark); }
 
-      .child {
-         color: $color;
-
-         &:after { color: $iconColor; }
+      &:hover {
+         .child, &:after {
+            color: var(--action);
+         }
       }
 
    } @else if $theme == slowDark {
-      $color: var(--text_selected_on_dark);
-      $iconColor: var(--text_selected_on_dark);
-
-      .child {
-         color: $color;
-
-         &:after { color: $iconColor; }
-      }
+      .child { color: var(--text_additional); }
+      &:after { color: var(--text_additional); }
 
       &:hover {
-         .child {
-            color: var(--light);
+         .child, &:after {
+            color: var(--action);
          }
       }
 
    } @else if $theme == light {
-      $color: var(--light);
-      $iconColor: var(--light);
-
-      .child, &:after {
-         color: $color;
-      }
-
+      .child { color: var(--light); }
+      &:after { color: var(--light); }
 
       &:hover {
-         .child {
-            color: var(--light);
+         .child, &:after {
+            color: var(--action);
          }
       }
    }
 }
 
-
-/* USE default */
-.ui-more {
-   @include uiMore( $theme: dark );
-}
-
-
-/* USE small */
-.ui-more_small {
-   @include uiMore( 
-      $padding: 2px 0,  
-      $fSize: 15px,
-      $iconFSize: 13px,
-      $theme: dark 
-   );
-}
-
-
-/* USE используется как ссылка в popup-ах */
-.ui-more_slow-dark {
-   @include uiMore( $theme: slowDark );
-}
-
-
-/* USE показать скрытые элементы */
-.ui-more_show-collapse {
-   @include uiMore( 
-      $fSize: 14px,
-      $iconFSize: 13px,
-      $theme: light,
-      $icon: "\e901"
-   );
-
-   &.active {
-      &:after {
-         transform: rotate(180deg);
-         color: var(--action);
-      }
-   }
-
-   
+.ui-more_basic {
+   @include uiMore;
 }

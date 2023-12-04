@@ -31,7 +31,8 @@
             font-weight: 300;
             line-height: 100%;
             transition: background-size .2s ease, color .2s ease;
-            @include hoverLinks($height: 1px);
+            @include hoverLinkUnderline ( 
+      $bgColorStart: var(--action), $bgYSize: 1px, );
 
             &:hover {
                color: var(--action);
