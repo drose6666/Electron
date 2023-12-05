@@ -1,0 +1,36 @@
+.header-user-menu {
+   padding: var(--fade_on_the_side_padding);
+   display: grid;
+   grid-template: auto / 1fr;
+   gap: 20px;
+   border-radius: var(--lgRd);
+   box-shadow: var(--header_user_menu_shadow);
+   min-width: 300px;
+
+   .user-menu-item {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      color: var(--dark);
+      
+      i {
+         font-size: 21px;
+         color: inherit;
+         transition: all .2s ease;
+      }
+
+      .child {
+         padding: 2px 0;
+         font-size: 18px;
+         font-weight: 300;
+         line-height: 100%;
+         color: inherit;
+      }
+
+      &:hover {
+         i, .child {
+            color: var(--action);
+         }
+      }
+   }
+}

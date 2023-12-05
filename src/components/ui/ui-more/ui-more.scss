@@ -1,10 +1,11 @@
+/* TODO Подчеркивание ссылок */
 @mixin hoverLinkUnderline (
    $bgColorStart: var(--dark),
    $bgColorEnd: var(--dark),
    $bgPositionStart: right bottom,
    $bgPositionEnd: left bottom,
    $bgYSize: 1px,
-   $duration: .3s,
+   $duration: .2s,
    $fromEmptiness: true,
    $hoverChild: false,
 ) {
@@ -80,17 +81,10 @@
 
 .basicHoverUnderline {
    @include hoverLinkUnderline ( 
-      $bgColorStart: var(--action), 
-      $duration: .2s,
+      $bgColorStart: var(--action),
       $bgYSize: 1px,
       $hoverChild: true
    );
-}
-
-.linkHoverFullToEmptiness {
-   @include hoverLinkUnderline ( $fromEmptiness: false, $bgYSize: 1px, );
-
-   padding-bottom: 8px;
 }
 
 
@@ -99,12 +93,13 @@
    $fSize: 17px,
    $fWeight: 400,
    $color: var(--dark),
+   $icon: '\e905',
    $iconColor: var(--dark),
    $iconHoverColor: var(--action),
    $iconSize: 13px,
    $gap: 15px,
    $transform: translateX(5px),
-   $duration: .3s,
+   $duration: .2s,
    $theme: dark,
 
 ) {
@@ -115,17 +110,17 @@
    cursor: pointer;
 
    .child {
-      font-size: 17px;
-      font-weight: 400;
+      font-size: $fSize;
+      font-weight: $fWeight;
       line-height: 100%;
-      color: var(--dark);
+      color: $color;
    }
 
    &:after {
-      content: '\e905';
+      content: $icon;
       font-family: var(--icon_font);
-      font-size: 13px;
-      color: var(--dark);
+      font-size: $iconSize;
+      color: $iconColor;
       display: inline-block;
       transition: 
          transform $duration ease,
@@ -170,6 +165,38 @@
    }
 }
 
-.ui-more_basic {
-   @include uiMore;
+.ui-more_small {
+   @include uiMore( $fSize: 15px );
+   @include hoverLinkUnderline ( 
+      $bgColorStart: var(--action),
+      $bgYSize: 1px,
+      $hoverChild: true
+   );
+
+   .child {
+      padding: 2px 0;
+   }
 }
+
+.ui-more_full-hover {
+   @include uiMore;
+   @include hoverLinkUnderline ( $fromEmptiness: false, $bgYSize: 1px, );
+
+   padding-bottom: 8px;
+   position: relative;
+   z-index: 1;
+}
+
+.ui-more_basic-slow_dark {
+   @include uiMore( $theme: slowDark );
+   @include hoverLinkUnderline ( 
+      $bgColorStart: var(--action),
+      $bgYSize: 1px,
+      $hoverChild: true,
+   );
+   
+   .child {
+      padding: 5px 0;
+   }
+}
+

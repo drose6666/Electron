@@ -296,8 +296,11 @@ $transitionDuration: .2s ease;
    // row-gap: 10px;
    gap: var(--fields_gutter);
 
+
    &.links {
       grid-template: auto / max-content 1fr;
+      row-gap: var(--fields_gutter);
+      column-gap: var(--fade_on_the_side_padding);
    }
 }
 
@@ -309,7 +312,7 @@ $transitionDuration: .2s ease;
       grid-template: auto / 1fr;
       max-width: 350px;
 
-      .ui-more-link {
+      .ui-more_compare {
          justify-self: center;
       }
    }

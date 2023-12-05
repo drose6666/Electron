@@ -22,16 +22,16 @@
    <link rel="icon" href="../../img/favicon/fav_48.png" type="image/png" sizes="48x48">
    <link rel="icon" href="../../img/favicon/fav_128.png" type="image/png" sizes="128x128">
    
-   <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css?_v=20231204213818" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
-   <!-- <link rel="stylesheet" href="../../libs/css/bootstrap-grid.min.css?_v=20231204213818"> -->
+   <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css?_v=20231205184057" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+   <!-- <link rel="stylesheet" href="../../libs/css/bootstrap-grid.min.css?_v=20231205184057"> -->
 
-   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css?_v=20231204213818" />
-   <script defer src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js?_v=20231204213818"></script>
-   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js?_v=20231204213818" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-   <link rel="stylesheet" href="../../libs/css/reset.min.css?_v=20231204213818">
-   <link rel="stylesheet" as="font" href="../../fonts/fonts.css?_v=20231204213818">
-   <link rel="stylesheet" as="font" href="../../fonts/icon-font.css?_v=20231204213818">
-   <link rel="stylesheet" href="./pages/index/css/index.min.css?_v=20231204213818">
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css?_v=20231205184057" />
+   <script defer src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js?_v=20231205184057"></script>
+   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js?_v=20231205184057" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+   <link rel="stylesheet" href="../../libs/css/reset.min.css?_v=20231205184057">
+   <link rel="stylesheet" as="font" href="../../fonts/fonts.css?_v=20231205184057">
+   <link rel="stylesheet" as="font" href="../../fonts/icon-font.css?_v=20231205184057">
+   <link rel="stylesheet" href="./pages/index/css/index.min.css?_v=20231205184057">
    
    <title>Electron</title>
 </head>
@@ -44,34 +44,61 @@
       </div>
    </div>
 </div>
-      <div class="top-menu">
+      <div class="header-top">
    <div class="ui-container">
-      <div class="nav-wrap">
+      <div class="header-top__nav">
          <div class="ui-burger">
    <span></span>
    <span></span>
    <span></span>
 </div>
-         <nav class="top-navigation">
-   <ul>
-      <li><a href="">Отследить заказ</a></li>
-      <li><a href="">Информация</a></li>
-   </ul>
 
-   <ul>
-      <li><a href="">Контакты</a></li>
-      <li><a href="">Блог</a></li>
-      <li><a href="">Акции и Подборки</a></li>
-      <li><a href="">Бренды</a></li>
-   </ul>
-</nav>
+         <nav class="top-menu" id="top-nav">
+            <ul class="top-menu__list">
+               <li class="top-menu__list__item basicHoverUnderline"><a class="child" href="">Отследить заказ</a></li>
+               <li class="top-menu__list__item basicHoverUnderline"><a class="child" href="">Информация</a></li>
+            </ul>
+         
+            <ul class="top-menu__list">
+               <li class="top-menu__list__item basicHoverUnderline"><a class="child" href="">Контакты</a></li>
+               <li class="top-menu__list__item basicHoverUnderline"><a class="child" href="">Блог</a></li>
+               <li class="top-menu__list__item basicHoverUnderline"><a class="child" href="">Акции и Подборки</a></li>
+               <li class="top-menu__list__item basicHoverUnderline"><a class="child" href="">Бренды</a></li>
+            </ul>
+         </nav>
       </div>
 
       <div class="btn-group">
-         
-
          <button type="@@type" class="ui-btn btn_login">Вход/Регистрация</button>
       </div>
+      <div class="header-user-menu">
+   <a href="" class="user-menu-item basicHoverUnderline">
+      <i class="i-compare"></i>
+      <span class="child">Личный кабинет</span>
+   </a>
+
+   <a href="" class="user-menu-item basicHoverUnderline">
+      <i class="i-compare"></i>
+      <span class="child">Мои заказы</span>
+   </a>
+
+   <a href="" class="user-menu-item basicHoverUnderline">
+      <i class="i-compare"></i>
+      <span class="child">Мои отзывы</span>
+   </a>
+
+   <a href="" class="user-menu-item basicHoverUnderline">
+      <i class="i-compare"></i>
+      <span class="child">Отследить заказ</span>
+   </a>
+
+   <a href="" class="user-menu-item basicHoverUnderline">
+      <i class="i-compare"></i>
+      <span class="child">Выйти</span>
+   </a>
+
+   <a href="" class="ui-btn btn_uismall-action">Связаться с нами</a>
+</div>
    </div>
 </div>
       <header>
@@ -79,7 +106,7 @@
       <a href="#" class="logo"><img src="../../img/logo/logo_dark.svg" alt=""></a>
       <nav class="menu" id="header-nav">
    <ul class="menu-list">
-      <li class="menu-list__item"> <a class="child" href="">Ноутбуки и ПК</a></li>
+      <li class="menu-list__item"><a class="child" href="">Ноутбуки и ПК</a></li>
       <li class="menu-list__item"><a class="child" href="">Смартфоны</a></li>
       <li class="menu-list__item">
          <a class="child" href="">Комплектующие</a>
@@ -123,9 +150,9 @@
       <h3 class="name">Комплектующие</h3>
       <p class="description">Смартфоны, флагманские новинки и еще много интересного</p>
 
-      <div class="category-more linkHoverFullToEmptiness">
-         <span class="child">Смотреть все</span>
-      </div>
+      <div class="ui-more_full-hover more_category">
+   <span class="child">Смотреть все</span>
+</div>
 
       <img src="../../img/optimized/categories/complect_full_1.5x.webp" alt="" class="img">
    </div>
@@ -217,9 +244,9 @@
       <h3 class="name">Ноутбуки <br> и Компьютеры</h3>
       <p class="description">Смартфоны, флагманские новинки и еще много интересного</p>
 
-      <div class="category-more linkHoverFullToEmptiness">
-         <span class="child">Смотреть все</span>
-      </div>
+      <div class="ui-more_full-hover more_category">
+   <span class="child">Смотреть все</span>
+</div>
 
       <img src="../../img/optimized/categories/laptop_full_1.5x.webp" alt="" class="img">
    </div>
@@ -228,9 +255,9 @@
       <h3 class="name">Комплектующие</h3>
       <p class="description">Смартфоны, флагманские новинки и еще много интересного</p>
 
-      <div class="category-more linkHoverFullToEmptiness">
-         <span class="child">Смотреть все</span>
-      </div>
+      <div class="ui-more_full-hover more_category">
+   <span class="child">Смотреть все</span>
+</div>
 
       <img src="../../img/optimized/categories/complect_full_1.5x.webp" alt="" class="img">
    </div>
@@ -239,9 +266,9 @@
       <h3 class="name">Аксессуары</h3>
       <p class="description">Смартфоны, флагманские новинки и еще много интересного</p>
 
-      <div class="category-more linkHoverFullToEmptiness">
-         <span class="child">Смотреть все</span>
-      </div>
+      <div class="ui-more_full-hover more_category">
+   <span class="child">Смотреть все</span>
+</div>
 
       <img src="../../img/optimized/categories/accessories_full_1.5x.webp" alt="" class="img">
    </div>
@@ -250,9 +277,9 @@
       <h3 class="name">Смартфоны</h3>
       <p class="description">Смартфоны, флагманские новинки и еще много интересного</p>
 
-      <div class="category-more linkHoverFullToEmptiness">
-         <span class="child">Смотреть все</span>
-      </div>
+      <div class="ui-more_full-hover more_category">
+   <span class="child">Смотреть все</span>
+</div>
 
       <img src="../../img/optimized/categories/smartphone_full_1.5x.webp" alt="" class="img">
    </div>
@@ -297,7 +324,7 @@
       <div class="ui-section-title-more @@className">
    <h2 class="ui-section-title">Топ продаж</h2>
 
-   <a href="@@link" class="ui-more_basic  linkHoverFullToEmptiness">
+   <a href="@@link" class="ui-more_full-hover">
    <span class="child">Смотреть все</span>
 </a>
 </div>
@@ -403,7 +430,7 @@
       </div>
 
       <div class="show-more btn_review">
-         <div class="basicHoverUnderline ui-more_small btn_review">
+         <div class="ui-more_small btn_review">
    <span class="child">Смотреть</span>
 </div>
       </div>
@@ -429,7 +456,7 @@
       </div>
 
       <div class="show-more btn_review">
-         <div class="basicHoverUnderline ui-more_small btn_review">
+         <div class="ui-more_small btn_review">
    <span class="child">Смотреть</span>
 </div>
       </div>
@@ -455,7 +482,7 @@
       </div>
 
       <div class="show-more btn_review">
-         <div class="basicHoverUnderline ui-more_small btn_review">
+         <div class="ui-more_small btn_review">
    <span class="child">Смотреть</span>
 </div>
       </div>
@@ -481,7 +508,7 @@
       </div>
 
       <div class="show-more btn_review">
-         <div class="basicHoverUnderline ui-more_small btn_review">
+         <div class="ui-more_small btn_review">
    <span class="child">Смотреть</span>
 </div>
       </div>
@@ -507,7 +534,7 @@
       </div>
 
       <div class="show-more btn_review">
-         <div class="basicHoverUnderline ui-more_small btn_review">
+         <div class="ui-more_small btn_review">
    <span class="child">Смотреть</span>
 </div>
       </div>
@@ -525,7 +552,7 @@
       <div class="ui-section-title-more @@className">
    <h2 class="ui-section-title">Новое в блоге</h2>
 
-   <a href="@@link" class="ui-more_basic  linkHoverFullToEmptiness">
+   <a href="@@link" class="ui-more_full-hover">
    <span class="child">Смотреть все</span>
 </a>
 </div>
@@ -943,14 +970,14 @@
             <div class="visual">
                <a href="" class="category-card smartphones card_search">
    <div class="category-card__container">
-      <h3 class="name">@@name</h3>
+      <h3 class="name"></h3>
       <p class="description">@@description</p>
 
-      <div class="category-more linkHoverFullToEmptiness">
-         <span class="child">Смотреть все</span>
-      </div>
+      <div class="ui-more_full-hover more_category">
+   <span class="child">Смотреть все</span>
+</div>
 
-      <img src="../../../../img/optimized/categories/smart.webp" alt="" class="img">
+      <img src="../../../../img/optimized/categories/smartphone_full_1.5x.webp" alt="" class="img">
    </div>
 </a>
             </div>
@@ -1092,7 +1119,7 @@
    Перейти к сравнению
    <div class="icon"><i class="i-arrow_up_right_long"></i></div>
 </a>
-         <a href="#" class="slow_dark">
+         <a href="#" class="ui-more_basic-slow_dark ui-more_compare">
    <span class="child">Продолжить покупки</span>
 </a>
       </div>
@@ -2033,7 +2060,7 @@
 
    <div class="answer__body">
       <p class="answer-text">Противоположная точка зрения подразумевает, что стремящиеся вытеснить традиционное производство, нанотехнологии призывают нас к новым свершениям, которые, в свою очередь, должны быть объединены в целые кластеры себе подобных! Как принято считать, ключевые особенности структуры проекта...</p>
-      <div class="basicHoverUnderline ui-more_show-collapse">
+      <div class="ui-more_show-collapse">
    <span class="child">Смотреть полностью</span>
 </div>
    </div>
@@ -2145,6 +2172,6 @@
 </div>
       
       
-      <script type="module" src="./pages/index/js/bundle-index.min.js?_v=20231204213818"></script>
+      <script type="module" src="./pages/index/js/bundle-index.min.js?_v=20231205184057"></script>
    </body>
 </html>  

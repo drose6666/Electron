@@ -1,0 +1,29 @@
+<div class="header-top">
+   <div class="ui-container">
+      <div class="header-top__nav">
+         @@include('../../ui/ui-burger/ui-burger.html')
+
+         <nav class="top-menu" id="top-nav">
+            <ul class="top-menu__list">
+               <li class="top-menu__list__item basicHoverUnderline"><a class="child" href="">Отследить заказ</a></li>
+               <li class="top-menu__list__item basicHoverUnderline"><a class="child" href="">Информация</a></li>
+            </ul>
+         
+            <ul class="top-menu__list">
+               <li class="top-menu__list__item basicHoverUnderline"><a class="child" href="">Контакты</a></li>
+               <li class="top-menu__list__item basicHoverUnderline"><a class="child" href="">Блог</a></li>
+               <li class="top-menu__list__item basicHoverUnderline"><a class="child" href="">Акции и Подборки</a></li>
+               <li class="top-menu__list__item basicHoverUnderline"><a class="child" href="">Бренды</a></li>
+            </ul>
+         </nav>
+      </div>
+
+      <div class="btn-group">
+         @@include('../../ui/ui-button/ui-btn/ui-button.html', {
+            "text": "Вход/Регистрация",
+            "className": "btn_login"
+         })
+      </div>
+      @@include('../header-logined/header-user-menu/header-user-menu.html')
+   </div>
+</div>

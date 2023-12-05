@@ -127,6 +127,20 @@
          }
       }
    }
+
+   &.card_search {
+      .category-card__container {
+         padding: 0;
+         width: 150px;
+         height: 80px;
+         min-height: 80px;
+         border-radius: var(--smRd);
+
+         .name, .description, .more_category {
+            display: none;
+         }
+      }
+   }
 }
 
 @include media (max-width, 930px) {

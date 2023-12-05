@@ -368,3 +368,8 @@
    @include uiBtnTheme( $theme: action );
 }
 
+.btn_uismall-action {
+   @include uiBtnType( $type: uiSmall );
+   @include uiBtnTheme( $theme: action );
+}
+

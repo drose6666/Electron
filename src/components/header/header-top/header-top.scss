@@ -1,9 +1,35 @@
-.top-navigation {
+// TODO Header top
+.header-top {
+   padding: 10px 0;
+
+   .ui-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+   }
+
+   &__nav {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+   }
+
+   .btn-group {
+      display: flex;
+      align-items: center;
+      gap: var(--small_btn_padding);
+   }
+}
+
+
+
+// TODO Header top menu
+.top-menu {
    display: flex;
    align-items: center;
    gap: 25px;
 
-   ul {
+   &__list {
       display: flex;
       align-items: center;
       gap: 20px;
@@ -21,7 +47,7 @@
          }
       }
 
-      li {
+      &__item {
          position: relative;
 
          a {
@@ -31,8 +57,11 @@
             font-weight: 300;
             line-height: 100%;
             transition: background-size .2s ease, color .2s ease;
-            @include hoverLinkUnderline ( 
-      $bgColorStart: var(--action), $bgYSize: 1px, );
+
+            // @include hoverLinkUnderline ( 
+            //    $bgColorStart: var(--action), 
+            //    $bgYSize: 1px
+            // );
 
             &:hover {
                color: var(--action);
@@ -42,13 +71,13 @@
    }
 
    @include media(max-width, 930px) {
-      ul:nth-child(2) {
+      .top-menu__list:nth-child(2) {
          display: none;
       }
    }
 
    @include media(max-width, 660px) {
-      ul:nth-child(1) {
+      .top-menu__list:nth-child(1) {
          display: none;
       }
    }
