@@ -1,12 +1,12 @@
 import PopupHandler from '../../../../libs/js/module/fadeHiddenElements/PopupHandler.js'
 import '../../../forms/forms-login/forms-login.js';
 
-new PopupHandler ({
-   selector: '#popup-login',
-   btnClose: '.popup-login-close',
-   btnOpen: '.btn_login',
-   overlay: '#overlay-login',
-})
+// new PopupHandler ({
+//    selector: '#popup-login',
+//    btnClose: '.popup-login-close',
+//    btnOpen: '.btn_login',
+//    overlay: '#overlay-login',
+// })
 
 const popupLogin = document.querySelector('#popup-login .sign-wrap');
 const dataFor = popupLogin.querySelectorAll('[data-for]');

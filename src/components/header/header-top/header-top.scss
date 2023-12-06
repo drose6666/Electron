@@ -1,6 +1,8 @@
 // TODO Header top
 .header-top {
    padding: 10px 0;
+   position: relative;
+   z-index: 2;
 
    .ui-container {
       display: flex;

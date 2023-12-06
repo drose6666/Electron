@@ -9,6 +9,29 @@ header {
    background: var(--separating);
    border-radius: var(--mdRd);
 
+   &.sticky {
+      margin: 0 auto;
+      position: fixed;
+      top: 10px;
+      left: 10px;
+      background: var(--separating_contrast);
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(-20px);
+      z-index: 2;
+
+      
+      max-width: var(--full_container_width);
+      width: calc(100% - 10px * 2);
+
+      &.active {
+         transform: none;
+         opacity: 1;
+         visibility: visible;
+         transition: all 1s ease;
+      }
+   }
+
    .ui-container {
       display: flex;
       align-items: center;
@@ -24,13 +47,29 @@ header {
          height: auto;
       }
    }
-
+   
 
    @include media(max-width, 1050px) {
       padding: 10px 0;
 
+      &.sticky {
+         padding: 10px 0;
+      }
+
       .logo {
          max-width: 170px;
+      }
+   }
+
+   @include media(max-width, 500px) {
+      .ui-container {
+         gap: 15px;
+      }
+   }
+
+   @include media(max-width, 320px) {
+      .logo {
+         max-width: 60px;
       }
    }
 }

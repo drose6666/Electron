@@ -2,6 +2,7 @@
 
 .header-user {
    position: relative;
+   z-index: 2;
 
    &__avatar {
       width: 50px;

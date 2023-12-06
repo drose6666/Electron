@@ -3,10 +3,11 @@
    align-items: center;
    gap: var(--default_padding);
 
-   @include media(max-width, 460px) {
-      .btn_favourites {
+   @include media(max-width, 500px) {
+      gap: 10px;
+
+      .btn_favourites, .btn_compare {
          display: none;
       }
-      
    }
 }

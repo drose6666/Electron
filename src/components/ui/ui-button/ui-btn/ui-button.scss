@@ -246,7 +246,7 @@
    } @else if $type == primary {
       $height: 45px;
       $paddingX: 40px;
-      $fSize: 17px;
+      $fSize: 18px;
       $fWeight: 400;
 
       padding: 5px $paddingX;
@@ -368,8 +368,10 @@
    @include uiBtnTheme( $theme: action );
 }
 
-.btn_uismall-action {
-   @include uiBtnType( $type: uiSmall );
+.btn_primary-action {
+   @include uiBtnType( $type: primary );
    @include uiBtnTheme( $theme: action );
+
+   width: max-content;
 }
 

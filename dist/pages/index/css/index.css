@@ -58,6 +58,7 @@ a, a:active, a:focus, a:hover {
   --basic_font: "Futura New", sans-serif;
   --basic_font_size: 17px;
   --icon_font: "Electron";
+  --header_user_menu_gutter: 30px;
   --fade_on_the_side_padding: 30px;
   --default_padding: 20px;
   --small_tabs_padding: 15px;
@@ -278,7 +279,7 @@ footer, .information-links {
   white-space: nowrap;
   padding: 5px 40px;
   padding: 5px 40px;
-  font-size: 17px;
+  font-size: 18px;
   font-weight: 400;
   height: 45px;
   -webkit-transition: all 0.2s ease;
@@ -345,7 +346,7 @@ footer, .information-links {
   white-space: nowrap;
   padding: 5px 40px;
   padding: 5px 40px;
-  font-size: 17px;
+  font-size: 18px;
   font-weight: 400;
   height: 45px;
   -webkit-transition: all 0.2s ease;
@@ -413,7 +414,7 @@ footer, .information-links {
   white-space: nowrap;
   padding: 5px 40px;
   padding: 5px 40px;
-  font-size: 17px;
+  font-size: 18px;
   font-weight: 400;
   height: 45px;
   -webkit-transition: all 0.2s ease;
@@ -451,7 +452,7 @@ footer, .information-links {
   white-space: nowrap;
   padding: 5px 40px;
   padding: 5px 40px;
-  font-size: 17px;
+  font-size: 18px;
   font-weight: 400;
   height: 45px;
   -webkit-transition: all 0.2s ease;
@@ -500,7 +501,7 @@ footer, .information-links {
   background: var(--dark);
 }
 
-.btn_uismall-action {
+.btn_primary-action {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -518,17 +519,20 @@ footer, .information-links {
   border-radius: var(--defaultRd);
   white-space: nowrap;
   padding: 5px 40px;
-  padding: 5px 20px;
-  font-size: 17px;
+  padding: 5px 40px;
+  font-size: 18px;
   font-weight: 400;
-  height: 39px;
+  height: 45px;
   -webkit-transition: all 0.2s ease;
   -o-transition: all 0.2s ease;
   transition: all 0.2s ease;
   color: var(--light);
   background: var(--action);
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
 }
-.btn_uismall-action:hover {
+.btn_primary-action:hover {
   background: var(--dark);
 }
 
@@ -3132,6 +3136,8 @@ footer, .information-links {
 
 .header-top {
   padding: 10px 0;
+  position: relative;
+  z-index: 2;
 }
 .header-top .ui-container {
   display: -webkit-box;
@@ -3359,55 +3365,156 @@ footer, .information-links {
           align-items: center;
   gap: var(--default_padding);
 }
-@media all and (max-width: 460px) {
-  .header-additional .btn_favourites {
+@media all and (max-width: 500px) {
+  .header-additional {
+    gap: 10px;
+  }
+  .header-additional .btn_favourites, .header-additional .btn_compare {
     display: none;
   }
 }
 
 .header-user-menu {
-  padding: var(--fade_on_the_side_padding);
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-rows: auto;
-  -ms-grid-columns: 1fr;
-      grid-template: auto/1fr;
-  gap: 20px;
+  padding: var(--header_user_menu_gutter);
   border-radius: var(--lgRd);
+  width: 400px;
+  background: var(--light);
   -webkit-box-shadow: var(--header_user_menu_shadow);
           box-shadow: var(--header_user_menu_shadow);
-  min-width: 300px;
+  position: absolute;
+  right: 0;
+  top: 107%;
+  z-index: 2;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transform: translateY(5px);
+      -ms-transform: translateY(5px);
+          transform: translateY(5px);
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
-.header-user-menu .user-menu-item {
+.header-user-menu.active {
+  opacity: 1;
+  visibility: visible;
+  -webkit-transform: none;
+      -ms-transform: none;
+          transform: none;
+}
+.header-user-menu__item:not(:first-child) {
+  margin-top: var(--header_user_menu_gutter);
+  padding-top: var(--header_user_menu_gutter);
+  border-top: 1px solid var(--border);
+}
+.header-user-menu .user-info {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  gap: 15px;
+  overflow: hidden;
+}
+.header-user-menu .user-info__photo {
+  width: 64px;
+  height: 64px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 64px;
+          flex: 0 0 64px;
+  border-radius: var(--circleRd);
+  overflow: hidden;
+}
+.header-user-menu .user-info__photo img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.header-user-menu .user-info .user-name {
+  padding-bottom: 3px;
+  font-size: 25px;
+  font-weight: 500;
+  line-height: 100%;
+  color: var(--dark);
+  max-width: 260px;
+  white-space: nowrap;
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
+}
+.header-user-menu .user-info .user-email {
+  font-size: 17px;
+  font-weight: 300;
+  line-height: 100%;
+  color: var(--text_additional);
+  max-width: 260px;
+  white-space: nowrap;
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
+}
+.header-user-menu .user-menu {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: auto;
+  -ms-grid-columns: 1fr;
+      grid-template: auto/1fr;
   gap: 20px;
+}
+.header-user-menu .user-menu__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 25px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+.header-user-menu .user-menu__item .child {
+  padding: 3px 0;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 100%;
   color: var(--dark);
 }
-.header-user-menu .user-menu-item i {
+.header-user-menu .user-menu__item i {
   font-size: 21px;
-  color: inherit;
+  color: var(--dark);
   -webkit-transition: all 0.2s ease;
   -o-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
-.header-user-menu .user-menu-item .child {
-  padding: 2px 0;
-  font-size: 18px;
-  font-weight: 300;
-  line-height: 100%;
-  color: inherit;
-}
-.header-user-menu .user-menu-item:hover i, .header-user-menu .user-menu-item:hover .child {
+.header-user-menu .user-menu__item:hover .child, .header-user-menu .user-menu__item:hover i {
   color: var(--action);
+}
+.header-user-menu .user-nav .user-menu__item .child {
+  font-weight: 400;
+}
+.header-user-menu .user-nav .btn_user-menu {
+  margin-top: 20px;
+}
+@media all and (max-width: 440px) {
+  .header-user-menu {
+    width: 330px;
+  }
+}
+@media all and (max-width: 360px) {
+  .header-user-menu {
+    padding: var(--header_user_menu_gutter) 20px;
+    width: 245px;
+  }
+  .header-user-menu .user-info .user-name, .header-user-menu .user-info .user-email {
+    max-width: 130px;
+  }
 }
 
 .header-user {
   position: relative;
+  z-index: 2;
 }
 .header-user__avatar {
   width: 50px;
@@ -3452,6 +3559,31 @@ header {
   background: var(--separating);
   border-radius: var(--mdRd);
 }
+header.sticky {
+  margin: 0 auto;
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  background: var(--separating_contrast);
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transform: translateY(-20px);
+      -ms-transform: translateY(-20px);
+          transform: translateY(-20px);
+  z-index: 2;
+  max-width: var(--full_container_width);
+  width: calc(100% - 20px);
+}
+header.sticky.active {
+  -webkit-transform: none;
+      -ms-transform: none;
+          transform: none;
+  opacity: 1;
+  visibility: visible;
+  -webkit-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  transition: all 1s ease;
+}
 header .ui-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3475,8 +3607,21 @@ header .logo img {
   header {
     padding: 10px 0;
   }
+  header.sticky {
+    padding: 10px 0;
+  }
   header .logo {
     max-width: 170px;
+  }
+}
+@media all and (max-width: 500px) {
+  header .ui-container {
+    gap: 15px;
+  }
+}
+@media all and (max-width: 320px) {
+  header .logo {
+    max-width: 60px;
   }
 }
 
@@ -3505,7 +3650,7 @@ header .logo img {
           justify-content: center;
   background: var(--dark);
   overflow: hidden;
-  z-index: 2;
+  z-index: 1;
   -webkit-transition: all 0.2s ease;
   -o-transition: all 0.2s ease;
   transition: all 0.2s ease;
@@ -6300,7 +6445,7 @@ footer .footer-col.contact .contact-inside a.contact-inside__item:hover {
   white-space: nowrap;
   padding: 5px 40px;
   padding: 5px 40px;
-  font-size: 17px;
+  font-size: 18px;
   font-weight: 400;
   height: 45px;
   max-width: 100%;
@@ -6333,7 +6478,7 @@ footer .footer-col.contact .contact-inside a.contact-inside__item:hover {
   white-space: nowrap;
   padding: 5px 40px;
   padding: 5px 40px;
-  font-size: 17px;
+  font-size: 18px;
   font-weight: 400;
   height: 45px;
   max-width: 100%;
@@ -6370,7 +6515,7 @@ footer .footer-col.contact .contact-inside a.contact-inside__item:hover {
   white-space: nowrap;
   padding: 5px 40px;
   padding: 5px 40px;
-  font-size: 17px;
+  font-size: 18px;
   font-weight: 400;
   height: 45px;
   max-width: 100%;

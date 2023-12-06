@@ -1,32 +1,45 @@
 <div class="header-user-menu">
-   <a href="" class="user-menu-item basicHoverUnderline">
-      <i class="i-compare"></i>
-      <span class="child">Личный кабинет</span>
-   </a>
+   <div class="user-info">
+      <div class="user-info__photo"><img src="../../../../img/optimized/user/user_photo.webp" alt=""></div>
+      <div class="info-wrap">
+         <h4 class="user-name">Léa Seydoux</h4>
+         <div class="user-email">danila.rose.web@gmail.com</div>
+      </div>
+   </div>
 
-   <a href="" class="user-menu-item basicHoverUnderline">
-      <i class="i-compare"></i>
-      <span class="child">Мои заказы</span>
-   </a>
+   <div class="user-menu header-user-menu__item">
+      <a href="" class="user-menu__item basicHoverUnderline">
+         <i class="i-profile"></i>
+         <span class="child">Личный кабинет</span>
+      </a>
+   
+      <a href="" class="user-menu__item basicHoverUnderline">
+         <i class="i-order_list"></i>
+         <span class="child">Мои заказы</span>
+      </a>
+   
+      <a href="" class="user-menu__item basicHoverUnderline">
+         <i class="i-review_list"></i>
+         <span class="child">Мои отзывы</span>
+      </a>
+   
+      <a href="" class="user-menu__item basicHoverUnderline">
+         <i class="i-order_tracking"></i>
+         <span class="child">Отследить заказ</span>
+      </a>
 
-   <a href="" class="user-menu-item basicHoverUnderline">
-      <i class="i-compare"></i>
-      <span class="child">Мои отзывы</span>
-   </a>
+   </div>
 
-   <a href="" class="user-menu-item basicHoverUnderline">
-      <i class="i-compare"></i>
-      <span class="child">Отследить заказ</span>
-   </a>
-
-   <a href="" class="user-menu-item basicHoverUnderline">
-      <i class="i-compare"></i>
-      <span class="child">Выйти</span>
-   </a>
-
-   @@include('../../../ui/ui-button/ui-btn/ui-button-link.html', {
-      "link": "",
-      "text": "Связаться с нами",
-      "className": "btn_uismall-action"
-   })
+   <div class="user-nav header-user-menu__item">
+      <a href="" class="user-menu__item basicHoverUnderline">
+         <i class="i-logout"></i>
+         <span class="child">Выйти</span>
+      </a>
+   
+      @@include('../../../ui/ui-button/ui-btn/ui-button-link.html', {
+         "link": "",
+         "text": "Связаться с нами",
+         "className": "btn_primary-action btn_user-menu"
+      })
+   </div>
 </div>
