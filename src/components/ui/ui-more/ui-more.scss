@@ -187,6 +187,18 @@
    z-index: 1;
 }
 
+.ui-more_basic {
+   @include uiMore;
+   @include hoverLinkUnderline ( 
+      $bgColorStart: var(--action),
+      $hoverChild: true,
+   );
+   
+   .child {
+      padding: 5px 0;
+   }
+}
+
 .ui-more_basic-slow_dark {
    @include uiMore( $theme: slowDark );
    @include hoverLinkUnderline ( 

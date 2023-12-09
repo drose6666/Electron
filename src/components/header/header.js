@@ -4,28 +4,18 @@ const header = document.querySelector('header')
 
 // TODO Проверка расстояния скролла и добавения класса 'active' плавающим элементам
 function fadeInNavOnScroll(distance) {
-   console.log('fadeInNavOnScroll');
-   // let items = document.querySelectorAll(elements)
 
    if (window.scrollY >= distance) {
       header.classList.add('sticky')
-      header.classList.add('active')
+      setTimeout(() => {
+         header.classList.add('active')
+      }, 50)
    }
 
    if (window.scrollY <= 200) {
-      header.classList.remove('sticky')
       header.classList.remove('active')
+      header.classList.remove('sticky')
    } 
-
-   // for (let i = 0; i < items.length; i++) {
-   //    if (window.scrollY >= distance) {
-   //       items[i].classList.add('active')
-   //    }
-      
-   //    if (window.scrollY <= 200) {
-   //       items[i].classList.remove('active')
-   //    }   
-   // }
 }
 
 

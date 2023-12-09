@@ -2,6 +2,7 @@ const distFolder = './dist'; // the dist folder is created automatically by the 
 const srcFolder = './src'  // variable with root source folder
 
 const pagePath = (pathType, page, ext) => {
+   console.log(pathType, page, ext);
    switch (pathType) {
       case 'src':
          return `${srcFolder}/pages/${page}/${page}.${ext}`

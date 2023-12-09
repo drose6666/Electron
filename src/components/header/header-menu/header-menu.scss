@@ -48,3 +48,29 @@
       display: none;
    }
 }
+
+
+// header.sticky {
+//    .menu {
+//       &-list {
+//          &__item {
+//             @include hoverLinkUnderline ( 
+//                $bgColorStart: var(--action),
+//                $bgYSize: 2px,
+//                $duration: .2s,
+//                $hoverChild: true
+//             );
+   
+//             & > a {
+//                color: var(--light);
+//             }
+   
+//             &:hover {
+//                & > a {
+//                   color: var(--action);
+//                }
+//             }
+//          }
+//       }
+//    }
+// }

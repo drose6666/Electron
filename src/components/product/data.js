@@ -36,7 +36,7 @@ const products = [
       id: 4,
       name: 'iPad Pro (6th Gen, 2022)',
       price: '300 990 ₽',
-      img: '.../../../img/optimized/cards/card_4.webp',
+      img: '../../../img/optimized/cards/card_4.webp',
       imgHidden: '../../../img/optimized/cards/card_4.webp',
       isFavourites: true,
       isCompare: false,

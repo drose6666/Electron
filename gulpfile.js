@@ -53,16 +53,18 @@ global.app = {
  */
 function watcher() {
    gulp.watch(path.watch.html, html)
-   gulp.watch(path.watch['page-oneHTML'], () => pagesHTML('page-one'))
-   gulp.watch(path.watch['page-twoHTML'], () => pagesHTML('page-two'))
+   gulp.watch(path.watch['page-brandsHTML'], () => pagesHTML('page-brands'))
+   gulp.watch(path.watch['page-brand-singleHTML'], () => pagesHTML('page-brand-single'))
 
+   // gulp.watch(path.watch.js, js)
    gulp.watch(path.watch.indexJs, () => js('index'))
-   gulp.watch(path.watch['page-oneJs'], () => js('page-one'))
-   gulp.watch(path.watch['page-twoJs'], () => js('page-two'))
+   gulp.watch(path.watch['page-brandsJs'], () => js('page-brands'))
+   gulp.watch(path.watch['page-brand-singleJs'], () => js('page-brand-single'))
 
+   // gulp.watch(path.watch.scss, scss)
    gulp.watch(path.watch.indexScss, () => scss('index'))
-   gulp.watch(path.watch['page-oneScss'], () => scss('page-one'))
-   gulp.watch(path.watch['page-twoScss'], () => scss('page-two'))
+   gulp.watch(path.watch['page-brandsScss'], () => scss('page-brands'))
+   gulp.watch(path.watch['page-brand-singleScss'], () => scss('page-brand-single'))
 
    gulp.watch(path.watch.fonts, fonts)
    gulp.watch(path.watch.libs, copyLibs)
@@ -85,9 +87,9 @@ function watcher() {
  * ------------------------------------------------------------------
  */
 const mainTasks = gulp.parallel(
-   html, () => pagesHTML('page-one'), () => pagesHTML('page-two'), 
-   () => js('index'), () => js('page-one'), () => js('page-two'), 
-   () => scss('index'), () => scss('page-one'), () => scss('page-two'), 
+   html, () => pagesHTML('page-brands'), () => pagesHTML('page-brand-single'), 
+   () => js('index'), () => js('page-brands'), () => js('page-brand-single'), 
+   () => scss('index'), () => scss('page-brands'), () => scss('page-brand-single'), 
    fonts, copyLibs, copyOther, 
    gulp.series(cleanImages, images, svg));
 

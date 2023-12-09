@@ -296,7 +296,7 @@ $transitionDuration: .2s ease;
    // row-gap: 10px;
    gap: var(--fields_gutter);
 
-
+  
    &.links {
       grid-template: auto / max-content 1fr;
       row-gap: var(--fields_gutter);

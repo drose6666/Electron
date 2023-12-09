@@ -1,0 +1,39 @@
+.ui-breadcrumbs {
+   margin-top: 40px;
+   display: flex;
+   align-items: center;
+   flex-wrap: wrap;
+   column-gap: 20px;
+   row-gap: 7px;
+
+   &-item {
+      font-size: 17px;
+      font-weight: 300;
+      line-height: 110%;
+      color: var(--dark);
+
+      &.breadcrumbs_link {
+         display: flex;
+         align-items: center;
+         gap: 20px;
+         position: relative;
+
+         .child {
+            padding: 2px 0;
+
+            &:hover {
+               color: var(--action);
+            }
+         }
+   
+         &:after {
+            content: '';
+            width: 4px;
+            height: 4px;
+            background: var(--dark);
+            border-radius: var(--circleRd);
+            display: inline-block;
+        }
+      }
+   }
+}

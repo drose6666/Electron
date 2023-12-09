@@ -52,3 +52,24 @@
 
 
 
+/* TODO Page title */
+.ui-page-title {
+   margin-top: 80px;
+   font-size: 50px;
+   font-weight: 700;
+   line-height: 100%;
+   color: var(--dark);
+   position: relative;
+
+   &:after {
+      content: '';
+      position: absolute;
+      bottom: -15px;
+      left: 0;
+      width: 100px;
+      height: 2px;
+      border-radius: var(--defaultRd);
+      background: var(--dark);
+   }
+}
+

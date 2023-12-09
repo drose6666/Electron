@@ -1,0 +1,1 @@
+console.log('page-brand-single js');

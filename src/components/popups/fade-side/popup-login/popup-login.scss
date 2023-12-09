@@ -30,7 +30,7 @@ $fadePaddingX: clamp(var(--default_padding), 5cqi, 50px);
             visibility: hidden;
             transform: translateY(15px);
             transition-delay: 0s;
-         }
+         } 
 
          &.sign-in {
             position: static;

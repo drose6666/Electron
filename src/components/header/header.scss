@@ -9,28 +9,7 @@ header {
    background: var(--separating);
    border-radius: var(--mdRd);
 
-   &.sticky {
-      margin: 0 auto;
-      position: fixed;
-      top: 10px;
-      left: 10px;
-      background: var(--separating_contrast);
-      opacity: 0;
-      visibility: hidden;
-      transform: translateY(-20px);
-      z-index: 2;
-
-      
-      max-width: var(--full_container_width);
-      width: calc(100% - 10px * 2);
-
-      &.active {
-         transform: none;
-         opacity: 1;
-         visibility: visible;
-         transition: all 1s ease;
-      }
-   }
+   
 
    .ui-container {
       display: flex;
@@ -45,6 +24,27 @@ header {
       img {
          max-width: 100%;
          height: auto;
+      }
+   }
+
+   &.sticky {
+      margin: 0 auto;
+      position: fixed;
+      top: 10px;
+      left: 10px;
+      background: var(--separating_contrast);
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(-20px);
+      width: calc(100% - 10px * 2);
+      z-index: 2;
+      box-shadow: 0 8px 25px 0px rgba(0,0,0,.07);
+
+      &.active {
+         transform: none;
+         opacity: 1;
+         visibility: visible;
+         transition: all .5s ease;
       }
    }
    
