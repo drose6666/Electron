@@ -11,9 +11,9 @@ import gulpSass from "gulp-sass";
 import rename from "gulp-rename";
 
 // import cleanCss from "gulp-clean-css"; // CSS File Compression
-import cssNano from 'cssnano';
 import postcss from 'gulp-postcss';
 import autoprefixer from "autoprefixer"; // Adding vendor prefixes
+import cssNano from 'cssnano';
 
 import webpCss from "gulp-webpcss"; // Rendering WebP Images
 import groupCssMediaQueries from "gulp-group-css-media-queries"; // Grouping media queries
@@ -44,10 +44,7 @@ const scss = (pageName) => {
        * compressed style.min.css and uncompressed style.css
       */
       .pipe(postcss([
-         autoprefixer({
-            grid: false,
-            // overrideBrowserslist: ["last 20 versions"],
-         }),
+         autoprefixer(),
          cssNano()
       ]))
       .pipe(gulp.dest(path.dist[`${pageName}Scss`]))

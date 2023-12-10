@@ -38,7 +38,6 @@ header {
       transform: translateY(-20px);
       width: calc(100% - 10px * 2);
       z-index: 2;
-      box-shadow: 0 8px 25px 0px rgba(0,0,0,.07);
 
       &.active {
          transform: none;

@@ -10,32 +10,28 @@
       @@include('../../components/header/header.html')
 
       <main>
-         <div class="ui-container">
-            @@include('../../components/ui/ui-title/ui-page-title.html', {
-               "text": "Бренды",
-               "className": ""
-            })
-
-           <div class="ui-breadcrumbs">
-               @@include('../../components/ui/ui-breadcrumbs/ui-breadcrumbs-item-link.html', {
-                  "text": "Главная",
-                  "link": ""
-               })
-               @@include('../../components/ui/ui-breadcrumbs/ui-beadcrumbs-item.html', {
-                  "text": "Бренды"
-               })
-           </div>
-
-           @@include('../../components/subcategory/subcategory-list.html')
-         </div>
-
-         <section class="catalog-section">
+         <section class="page-head-section">
             <div class="ui-container">
-               @@include('../../components/product/product-list/product-list.html', {
-                  "className": "product-list"
+               @@include('../../components/ui/ui-title/ui-page-title.html', {
+                  "text": "Бренды",
+                  "className": ""
                })
+   
+              <div class="ui-breadcrumbs">
+                  @@include('../../components/ui/ui-breadcrumbs/ui-breadcrumbs-item-link.html', {
+                     "text": "Главная",
+                     "link": ""
+                  })
+                  @@include('../../components/ui/ui-breadcrumbs/ui-beadcrumbs-item.html', {
+                     "text": "Бренды"
+                  })
+              </div>
             </div>
          </section>
+
+         @@include('../../components/sections/subcategory-section/subcategory-section.html')
+         @@include('../../components/catalog/catalog-section/catalog-section-with-filters.html')
+         
       </main>
 
       @@include('../../components/footer/footer.html')
@@ -45,6 +41,7 @@
       @@include('../../components/popups/fade-side/popup-cart/popup-cart.html')
       @@include('../../components/popups/fade-side/popup-quickview/popup-quickview.html')
       @@include('../../components/popups/popup-image-preview/popup-image-preview.html')
+      @@include('../../components/popups/fade-side/popup-filters/popup-filters.html')
       <!-- @@include('../../components/popups/fade-side/popup-login/popup-login.html') -->
       
       <script type="module" src="js/bundle-page-brands.min.js"></script>

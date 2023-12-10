@@ -245,3 +245,8 @@
    gap: 30px;
    display: inline-flex;
 }
+
+.btn_ui_dark {
+   @include buttonIconType( $type: ui );
+   @include buttonIconTheme( $theme: dark );
+}

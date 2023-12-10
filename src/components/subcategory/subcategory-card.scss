@@ -1,9 +1,7 @@
 .subcategory-list {
-   margin-top: 100px;
    padding-bottom: 10px;
    display: grid;
-   grid-template-rows: 1fr 1fr;
-   grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+   grid-template: auto / repeat(3, 1fr);
    gap: 20px;
    overflow-x: auto;
    overflow-y: visible;
@@ -23,6 +21,8 @@
 }
 
 .subcategory-card {
+   display: block;
+
    &__container {
       padding: 5px;
       display: flex;
@@ -33,7 +33,8 @@
       background: var(--separating);
       container-type: inline-size;
       container-name: subcategoryCard;
-      transition: all .3s ease;
+      min-width: 370px;
+      transition: all .2s ease;
 
       .names {
          padding-left: 20px;
@@ -54,11 +55,10 @@
          }
 
          .more_subcategory {
-            @include uiMore( $duration: .3s );
+            @include uiMore;
             @include hoverLinkUnderline ( 
                $bgColorStart: var(--action),
                $hoverChild: true,
-               $duration: .3s
             );
             
             .child {
@@ -68,7 +68,7 @@
       }
 
       .img {
-         max-width: clamp(130px, 33cqi, 170px);
+         max-width: clamp(140px, 33cqi, 170px);
          width: 100%;
          height: auto;
          overflow: hidden;

@@ -29,7 +29,7 @@
 
    &__text {
       margin: 0 auto 50px auto;
-      font-size: 22px;
+      font-size: clamp(20px, 1.9cqi, 22px);
       font-weight: 300;
       line-height: 105%;
       color: var(--text_dark_action);

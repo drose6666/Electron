@@ -3,7 +3,7 @@ import PopupHandler from '../../../../libs/js/module/fadeHiddenElements/PopupHan
 new PopupHandler ({
    selector: '#popup-filters',
    btnClose: '.popup-filters-close',
-   btnOpen: '.btn_favourites',
+   btnOpen: '.btn_filters',
    overlay: '#overlay-filters',
 })
 
