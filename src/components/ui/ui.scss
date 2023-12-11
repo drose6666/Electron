@@ -1,0 +1,130 @@
+$uiControlSize: 20px;
+$uiFilterControlSize: 23px;
+$uiColorControlSize: 25px;
+
+.ui-control {
+   position: relative;
+   cursor: pointer;
+
+   &__custom {
+      position: absolute;
+      top: -1px;
+      left: 0;
+      width: $uiControlSize;
+      height: $uiControlSize;
+      // overflow: hidden;
+      border: 1px solid var(--text_additional);
+      transition: all .3s ease;
+
+      &:after {
+         display: block;
+         position: absolute;
+         top: 50%;
+         left: 50%;
+         transform: translate(-50%, -50%);
+         translate: 0 -13px;
+         opacity: 0;
+         visibility: hidden;
+         transition: inherit;
+      }
+   }
+
+   &__name {
+      padding-left: calc(#{$uiControlSize} + var(--small_btn_padding));
+      font-size: 16px;
+      font-weight: 300;
+      line-height: 100%;
+      color: var(--text_selected_on_dark);
+      transition: all .2s ease;
+   }
+
+   &__input:checked ~ &__custom {
+      &:after {
+         opacity: 1;
+         visibility: visible;
+         translate: none;
+      }
+   }
+
+   &__input:checked ~ &__name {
+      color: var(--light);
+   }
+
+
+
+   // TODO Radio
+   &.radio {
+      .ui-control__custom {
+         border-radius: var(--circleRd);
+
+         &:after {
+            content: '';
+            position: absolute;
+            width: 70%;
+            height: 70%;
+            border-radius: var(--circleRd);
+            background: var(--action);
+         }
+      }
+   }
+
+
+   // TODO Checkbox
+   &.checkbox {
+      .ui-control__custom {
+         border-radius: var(--xsRd);
+
+         &:after {
+            content: '\e90c';
+            font-family: var(--icon_font);
+            font-size: 14px;
+            color: var(--light);
+            
+         }
+      }
+
+      .ui-control__input:checked ~ .ui-control__custom {
+         background: var(--action);
+         border-color: var(--action);
+      }
+   }
+
+
+   // TODO Контролы в фильре каталога
+   &.filter {
+      .ui-control__custom {
+         top: -3px;
+         width: $uiFilterControlSize;
+         height: $uiFilterControlSize;
+
+         &:after {
+            
+         }
+      }
+      
+      .ui-control__name {
+         padding-left: calc(#{$uiFilterControlSize} + var(--small_tabs_padding));
+         font-size: 17px;
+         display: flex;
+         align-items: center;
+         justify-content: space-between;
+         gap: var(--small_tabs_padding);
+
+         .value {
+            color: var(--text_selected_on_dark);
+            transition: inherit;
+         }
+
+         .count {
+            color: var(--text_additional);
+            transition: inherit;
+         }
+      }
+
+      .ui-control__input:checked ~ .ui-control__name {
+         .value, .count {
+            color: var(--light);
+         }
+      }
+   }
+}

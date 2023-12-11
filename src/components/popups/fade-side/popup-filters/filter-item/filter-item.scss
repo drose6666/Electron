@@ -2,14 +2,14 @@
    border-bottom: 1px solid var(--border_dark);
 
    &:not(:last-child) {
-      margin-bottom: 40px;
+      margin-bottom: 25px;
       opacity: 1;
       visibility: visible;
       transition: all .5s ease;
    }
 
    &__title {
-      margin-bottom: 40px;
+      margin-bottom: 30px;
       font-size: 25px;
       font-weight: 400;
       line-height: 100%;

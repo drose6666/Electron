@@ -3,7 +3,7 @@
 
 #popup-filters {
    .ui-popup__container {
-      padding: 40px $fadePaddingX 40px $fadePaddingX;
+      padding: 30px $fadePaddingX 20px $fadePaddingX;
       max-width: 450px;
    }
 
@@ -65,6 +65,10 @@
       &::-webkit-scrollbar-corner {
          background: transparent;
       }
+   }
+
+   .ui-popup__btns {
+      max-width: 100%;
    }
 }
 
