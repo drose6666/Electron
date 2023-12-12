@@ -1,3 +1,5 @@
+@import './form-product-option/form-product-option';
+
 %optionTitle {
    font-size: 18px;
    font-weight: 400;
@@ -237,7 +239,6 @@
             background: var(--ui_dark);
             border-radius: var(--defaultRd);
             outline: 1px solid transparent;
-            // outline-offset: -3px;
             font-size: 15px;
             font-weight: 500;
             line-height: 100%;

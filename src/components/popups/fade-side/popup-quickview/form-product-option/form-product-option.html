@@ -1,0 +1,49 @@
+<form action="" class="ui-form form-product-options">
+   <fieldset class="product-options">
+      <legend class="product-options__title">Память</legend>
+
+      @loop('../../../../ui/ui-radio/ui-radio-product-option.html', [
+         {
+            "name": "memory",
+            "value": "16/512 Gb"
+         },
+         {
+            "name": "memory",
+            "value": "16/512 Gb"
+         },
+         {
+            "name": "memory",
+            "value": "16/512 Gb"
+         },
+         {
+            "name": "memory",
+            "value": "16/512 Gb"
+         },
+      ])
+   </fieldset>
+
+   <fieldset class="product-options">
+      <legend class="product-options__title">SSD</legend>
+
+      @loop('../../../../ui/ui-radio/ui-radio-product-option.html', [
+         {
+            "name": "ssd",
+            "value": "256 Gb"
+         },
+         {
+            "name": "ssd",
+            "value": "512 Gb"
+         },
+         {
+            "name": "ssd",
+            "value": "1 Tb"
+         },
+         {
+            "name": "ssd",
+            "value": "2 Tb"
+         },
+      ])
+   </fieldset>
+</form>
+
+
