@@ -1,3 +1,9 @@
+@import './product-info/product-info';
+@import './product-card/product-card-cart/product-card-cart';
+@import './product-card/product-card-notification/product-card-notification';
+@import './product-card/product-card/product-card';
+
+// TODO Product List
 .product-list {
    margin: 40px 0;
    display: grid;

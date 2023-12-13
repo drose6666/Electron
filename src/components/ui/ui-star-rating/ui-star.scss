@@ -1,9 +1,11 @@
 /* IMPORTANT Общие стили для звезд */
 
 .ui-star-rating {
-   .ui-star, .ui-star-form .ui-star-form__icon {
-      color: var(--border_dark);
-   } 
+   &.dark {
+      .ui-star, .ui-star-form .ui-star-form__icon {
+         color: var(--border_dark);
+      } 
+   }
 
    &.light {
       .ui-star, .ui-star-form .ui-star-form__icon {

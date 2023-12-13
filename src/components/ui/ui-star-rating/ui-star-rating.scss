@@ -29,20 +29,18 @@
    }
 
    .rating-value {
-      font-size: 15px;
+      font-size: 16px;
       font-weight: 300;
       line-height: 100%;
-      color: var(--text_additional);
    }
 
-   &.light {
+   &.dark {
       .rating-value {
-         font-size: 17px;
          color: var(--dark);
       }
    }
 
-   &.light_value {
+   &.light {
       .rating-value {
          color: var(--light);
       }

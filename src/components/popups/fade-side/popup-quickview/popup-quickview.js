@@ -48,18 +48,18 @@ new PopupHandler ({
  */
 
 const productOptions = [
-   {
-      id: 1,
-      name : 'Цвета',
-      options: [
-         { id: 1, name: 'colors', value: 'Светлый титан', color: '#F4F2EE' },
-         { id: 2, name: 'colors', value: 'Темный титан', color: '#4A4846' },
-         { id: 3, name: 'colors', value: 'Натуральный титан', color: '#FDE8CF' },
-         { id: 4, name: 'colors', value: 'Красный титан', color: '#DE8E86' },
-         { id: 5, name: 'colors', value: 'Зеленый титан', color: '#516956' },
-         { id: 6, name: 'colors', value: 'Синий титан', color: '#82A7C8' },
-      ]
-   },
+   // {
+   //    id: 1,
+   //    name : 'Цвета',
+   //    options: [
+   //       { id: 1, name: 'colors', value: 'Светлый титан', color: '#F4F2EE' },
+   //       { id: 2, name: 'colors', value: 'Темный титан', color: '#4A4846' },
+   //       { id: 3, name: 'colors', value: 'Натуральный титан', color: '#FDE8CF' },
+   //       { id: 4, name: 'colors', value: 'Красный титан', color: '#DE8E86' },
+   //       { id: 5, name: 'colors', value: 'Зеленый титан', color: '#516956' },
+   //       { id: 6, name: 'colors', value: 'Синий титан', color: '#82A7C8' },
+   //    ]
+   // },
    {
       id: 2,
       name : 'Память',
@@ -91,25 +91,31 @@ const productOptions = [
    }
 ]
 
-function renderOptions () {
-   const fieldset = `
-      <fieldset class="product-options">
-         <legend class="product-options__title">Память</legend>
+function renderOptions (productOptions) {
+  
+   const renderedFieldsets = productOptions.map(fieldset => {
+      let options = fieldset.options.map(option => {
+         return `
+            <label class="product-option">
+               <input type="text" name="${option.name}" value="${option.value}" class="product-option__input visually-hidden">
+               <span class="product-option__custom">
+                  <div class="product-option__custom__name">${option.value}</div>
+               </span>
+            </label>
+         `
+      })
 
-         <label class="ui-control product-option">
-            <input type="text" name="memory" value="16/512 Gb" class="ui-control__input visually-hidden">
-            <span class="ui-control__custom">
-               <div class="ui-control__custom__name">16/512 Gb</div>
-            </span>
-         </label>
-      </fieldset>
-   `
-
+      return `
+         <fieldset class="product-options">
+            <legend class="product-options__title">${fieldset.name}</legend>
+            <div class="product-options__list">
+               ${options.join('')}
+            </div>
+         </fieldset>
+      `
+   })
+   return renderedFieldsets.join('');
 }
 
-const formProductoptions = document.querySelectorAll('form-product-options')
-
-
-formProductoptions.forEach(item => {
-
-})
+const formProductoptions = document.querySelector('.form-product-options')
+formProductoptions.insertAdjacentHTML('afterbegin', renderOptions(productOptions))
