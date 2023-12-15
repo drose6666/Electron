@@ -131,9 +131,13 @@
          <div class="swiper-button-next quickview-product-next"></div>
       </div>
 
+      <!-- Здесь информация о товаре -->
       <div class="ui-popup__content-wrap">
-         <!-- Заголовок + рейтинг -->
-         <div class="quickview-product__head">
+
+         @@include('../../../product/product-info/product-info-quickview.html')
+
+        
+         <!-- <div class="quickview-product__head">
             <span class="product-brand">ASUS</span>
             <h2 class="ui-popup__title title_quickview">VivoBook 15 M1502IA-BQ011W</h2>
 
@@ -152,10 +156,7 @@
             <div class="product-price">150 970 ₽</div>
          </div>
 
-         
-
-         <!-- Опции -->
-         <!-- <ul class="quickview-product__options"> 
+         <ul class="quickview-product__options"> 
             <li class="options-item color_list">
                <h6 class="options-item__title">Цвет</h6>
                <ul class="options-item__list">
@@ -196,22 +197,15 @@
                   <li class="option-item">15.6"</li>
                </ul>
             </li>
-         </ul> -->
-         
-         <!-- Количество + кнопки -->
+         </ul>
+   
          <div class="quickview-product__control">
             <div class="product-count-wrap">
                <h6 class="product-count-title">Количество</h6>
-               @@include('../../../ui/ui-product-counter/ui-product-counter.html', { "className": "quickview" })
             </div>
 
             <div class="ui-popup__btns">
-               <!-- @@include('../../../ui/ui-button/ui-btn-icon/ui-button-icon-link.html', {
-                  "link": "#",
-                  "className": "btn-quickview-cart",
-                  "classNameIcon": "cart_1",
-                  "text": "Добавить в корзину"
-               }) -->
+
 
                @@loop('../../../ui/ui-button/ui-btn/ui-button-link.html', [
                   {
@@ -231,7 +225,7 @@
                   }
                ])
             </div>
-         </div>
+         </div> -->
       </div>
       
       @@include('../../../ui/ui-close/ui-close.html', {

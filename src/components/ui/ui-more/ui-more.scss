@@ -82,7 +82,6 @@
 .basicHoverUnderline {
    @include hoverLinkUnderline ( 
       $bgColorStart: var(--action),
-      $bgYSize: 1px,
       $hoverChild: true
    );
 }

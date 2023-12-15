@@ -1,2 +1,121 @@
 @import './product-info-options/product-info-options';
 
+.product-info {
+
+   &__brand {
+      margin-bottom: 20px;
+      display: inline-block;
+      font-size: 20px;
+      font-weight: 300;
+      line-height: 100%;
+      color: var(--text_additional);
+
+      &:hover {
+         color: var(--light);
+      }
+   }
+
+   &__name {
+      margin-bottom: 10px;
+      font-size: 35px;
+      font-weight: 500;
+      line-height: 110%;
+      color: var(--light);
+   }
+
+   &__rating {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 15px;
+
+      .product-rating-container {
+         display: flex;
+         align-items: center;
+         gap: 15px;
+
+         .reviews-count {
+            font-size: 16px;
+            font-weight: 300;
+            line-height: 100%;
+            color: var(--text_additional);
+         }
+      }
+
+      // TODO блок с иконками (сравнение, избранное)
+      .product-additional {
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         gap: 20px;
+
+         .btn-additional {
+            padding: 0;
+            transition: all .2s ease;
+
+            &:hover {
+               transform: translateY(-3px);
+
+               i {
+                  color: var(--light);
+               }
+            }
+
+            i {
+               font-size: 15px;
+               color: var(--text_additional);
+               transition: all .2s ease;
+            }
+
+            &.active {
+               i {
+                  color: var(--action);
+               }
+            }
+         }
+      }
+   }
+
+   &__price {
+      margin: 60px 0;
+      font-size: 35px;
+      font-weight: 600;
+      line-height: 100%;
+      color: var(--separating_contrast);
+   }
+
+   &__action {
+      margin-top: 40px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border_dark);
+
+      .product-count {
+         margin-bottom: 20px;
+         display: flex;
+         align-items: center;
+         justify-content: space-between;
+      }
+   }
+
+   .ui-popup__btns {
+      grid-template: auto / repeat(auto-fit, minmax(185px, 1fr));
+      margin-top: 30px;
+      max-width: 100%;
+   }
+
+   .btn-quickview-cart {
+      @include uiBtnType( $type: primary, $freeWidth: true, $maxWidth: 100% );
+      @include uiBtnTheme( $theme: action );
+   }
+
+   .btn-quickview-buy {
+      @include uiBtnType( $type: primary, $freeWidth: true, $maxWidth: 100% );
+      @include uiBtnTheme( $theme: outlines, $childTheme: outlinesDefaultLight );
+   }
+
+   .product-link {
+      margin-top: 10px;
+      grid-column: 1 / 3;
+      justify-self: center;
+   }
+}

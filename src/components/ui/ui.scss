@@ -49,66 +49,6 @@ $uiColorControlSize: 25px;
    &__input:checked ~ &__name {
       color: var(--light);
    }
-
-   
-   // TODO Опции товара из карточки товара и быстрого просмотра
-   &.product-option {
-      .ui-control__custom {
-         padding: 5px 20px;
-         position: static;
-         display: flex;
-         align-items: center;
-         justify-content: center;
-         height: 39px;
-         border-radius: var(--defaultRd);
-         background: var(--ui_dark);
-         outline: 1px solid transparent;
-         outline-offset: -3px;
-         user-select: none;
-         transition: all .2s ease;
-         
-         &__name {
-            font-size: 15px;
-            font-weight: 500;
-            line-height: 100%;
-            color: var(--text_selected_on_dark);
-            transition: inherit;
-         }
-      }
-
-      .ui-control__input:checked ~ .ui-control__custom {
-         background: transparent;
-         outline-offset: 0;
-         outline-color: var(--action);
-
-         &__name {
-            color: var(--light);
-         }
-      }
-
-      .ui-control__input:disabled ~ .ui-control__custom {
-         background: transparent;
-         outline-offset: 0;
-         outline-color: transparent;
-         transform: none;
-         cursor: not-allowed;
-
-         &__name {
-            color: var(--border_dark);
-         }
-      }
-
-      &:hover {
-         .ui-control__custom {
-            outline-offset: 0;
-            outline-color: var(--text_additional);
-
-            &__name {
-               color: var(--light);
-            }
-         }
-      }
-   }
    
 
    // TODO Radio

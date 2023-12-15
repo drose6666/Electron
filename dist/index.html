@@ -22,16 +22,16 @@
    <link rel="icon" href="../../img/favicon/fav_48.png" type="image/png" sizes="48x48">
    <link rel="icon" href="../../img/favicon/fav_128.png" type="image/png" sizes="128x128">
    
-   <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css?_v=20231213224842" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
-   <!-- <link rel="stylesheet" href="../../libs/css/bootstrap-grid.min.css?_v=20231213224842"> -->
+   <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css?_v=20231215112912" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+   <!-- <link rel="stylesheet" href="../../libs/css/bootstrap-grid.min.css?_v=20231215112912"> -->
 
-   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css?_v=20231213224842" />
-   <script defer src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js?_v=20231213224842"></script>
-   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js?_v=20231213224842" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-   <link rel="stylesheet" href="../../libs/css/reset.min.css?_v=20231213224842">
-   <link rel="stylesheet" as="font" href="../../fonts/fonts.css?_v=20231213224842">
-   <link rel="stylesheet" as="font" href="../../fonts/icon-font.css?_v=20231213224842">
-   <link rel="stylesheet" href="./pages/index/css/index.min.css?_v=20231213224842">
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css?_v=20231215112912" />
+   <script defer src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js?_v=20231215112912"></script>
+   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js?_v=20231215112912" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+   <link rel="stylesheet" href="../../libs/css/reset.min.css?_v=20231215112912">
+   <link rel="stylesheet" as="font" href="../../fonts/fonts.css?_v=20231215112912">
+   <link rel="stylesheet" as="font" href="../../fonts/icon-font.css?_v=20231215112912">
+   <link rel="stylesheet" href="./pages/index/css/index.min.css?_v=20231215112912">
    
    <title>Electron</title>
 </head>
@@ -1100,7 +1100,7 @@
 
       <div class="additional-info">
          <div class="price">150 970 ₽</div>
-         <div class="ui-product-counter @@className">
+         <div class="product-counter @@className">
    <i class="i-minus count-down"></i>
    <input type="text" value="1" inputmode="numeric" class="count" name="product_count">
    <i class="i-plus count-up"></i>
@@ -1129,7 +1129,7 @@
 
       <div class="additional-info">
          <div class="price">150 970 ₽</div>
-         <div class="ui-product-counter @@className">
+         <div class="product-counter @@className">
    <i class="i-minus count-down"></i>
    <input type="text" value="1" inputmode="numeric" class="count" name="product_count">
    <i class="i-plus count-up"></i>
@@ -1186,7 +1186,7 @@
 
       <div class="additional-info">
          <div class="price">150 970 ₽</div>
-         <div class="ui-product-counter @@className">
+         <div class="product-counter @@className">
    <i class="i-minus count-down"></i>
    <input type="text" value="1" inputmode="numeric" class="count" name="product_count">
    <i class="i-plus count-up"></i>
@@ -1215,7 +1215,7 @@
 
       <div class="additional-info">
          <div class="price">150 970 ₽</div>
-         <div class="ui-product-counter @@className">
+         <div class="product-counter @@className">
    <i class="i-minus count-down"></i>
    <input type="text" value="1" inputmode="numeric" class="count" name="product_count">
    <i class="i-plus count-up"></i>
@@ -1292,7 +1292,7 @@
       <i class="i-star ui-star"></i>
       <i class="i-star ui-star"></i>
       <i class="i-star ui-star"></i>
-      <i class="i-star ui-star"></i>
+      <i class="i-star ui-star current"></i>
       <i class="i-star ui-star"></i>
    </div>
 
@@ -1530,9 +1530,66 @@
          <div class="swiper-button-next quickview-product-next"></div>
       </div>
 
+      <!-- Здесь информация о товаре -->
       <div class="ui-popup__content-wrap">
-         <!-- Заголовок + рейтинг -->
-         <div class="quickview-product__head">
+
+         <div class="product-info">
+   <a href="../../../pages/page-brand-single/page-brand-single.html" class="product-info__brand basicHoverUnderline">
+      <span class="child">Asus</span>
+   </a>
+
+   <h2 class="product-info__name">VivoBook 15 M1502IA-BQ011W</h2>
+
+   <div class="product-info__rating">
+      <div class="product-rating-container">
+         <div class="ui-star-rating star-rating_static dark">
+   <div class="ui-stars">
+      <i class="i-star ui-star"></i>
+      <i class="i-star ui-star"></i>
+      <i class="i-star ui-star"></i>
+      <i class="i-star ui-star current"></i>
+      <i class="i-star ui-star"></i>
+   </div>
+
+   <span class="rating-value">4.3</span>
+</div>
+         <span class="reviews-count">(10000)</span>
+      </div>
+
+      <div class="product-additional">
+         <button class="btn-additional"><i class="i-compare"></i></button>
+         <button class="btn-additional active"><i class="i-heart"></i></button>
+      </div>
+   </div>
+
+   <h3 class="product-info__price">170 990 ₽</h3>
+
+   <form action="" class="product-info__options">
+      <!-- Здесь опции товара. Подключаются в JS (product-info.js) -->
+   </form>
+
+   <div class="product-info__action">
+      <div class="product-count">
+         <h6 class="product-count__title product-option-name">Количество</h6>
+         <div class="product-counter quickview">
+   <i class="i-minus count-down"></i>
+   <input type="text" value="1" inputmode="numeric" class="count" name="product_count">
+   <i class="i-plus count-up"></i>
+</div>
+      </div>
+
+      <div class="ui-popup__btns">
+         <a href="#" class="ui-btn btn-quickview-cart">Добавить в корзину</a><a href="#" class="ui-btn btn-quickview-buy">Купить сейчас</a>
+
+         <a href="" class="ui-more_basic-slow_dark product-link">
+   <span class="child">Перейти к товару</span>
+</a>
+      </div>
+   </div>
+</div>
+
+        
+         <!-- <div class="quickview-product__head">
             <span class="product-brand">ASUS</span>
             <h2 class="ui-popup__title title_quickview">VivoBook 15 M1502IA-BQ011W</h2>
 
@@ -1543,7 +1600,7 @@
       <i class="i-star ui-star"></i>
       <i class="i-star ui-star"></i>
       <i class="i-star ui-star"></i>
-      <i class="i-star ui-star"></i>
+      <i class="i-star ui-star current"></i>
       <i class="i-star ui-star"></i>
    </div>
 
@@ -1561,10 +1618,7 @@
             <div class="product-price">150 970 ₽</div>
          </div>
 
-         
-
-         <!-- Опции -->
-         <!-- <ul class="quickview-product__options"> 
+         <ul class="quickview-product__options"> 
             <li class="options-item color_list">
                <h6 class="options-item__title">Цвет</h6>
                <ul class="options-item__list">
@@ -1605,25 +1659,19 @@
                   <li class="option-item">15.6"</li>
                </ul>
             </li>
-         </ul> -->
-         
-         <!-- Количество + кнопки -->
+         </ul>
+   
          <div class="quickview-product__control">
             <div class="product-count-wrap">
                <h6 class="product-count-title">Количество</h6>
-               <div class="ui-product-counter quickview">
-   <i class="i-minus count-down"></i>
-   <input type="text" value="1" inputmode="numeric" class="count" name="product_count">
-   <i class="i-plus count-up"></i>
-</div>
             </div>
 
             <div class="ui-popup__btns">
-               
+
 
                <a href="#" class="ui-btn btn-quickview-cart">Добавить в корзину</a><a href="#" class="ui-btn btn-quickview-buy">Купить сейчас</a><a href="#" class="ui-btn btn-quickview-more">Перейти к товару</a>
             </div>
-         </div>
+         </div> -->
       </div>
       
       <div class="ui-close close_fade-side left_side popup-quickview-close">
@@ -1928,6 +1976,6 @@
 </div>
       
       
-      <script type="module" src="./pages/index/js/bundle-index.min.js?_v=20231213224842"></script>
+      <script type="module" src="./pages/index/js/bundle-index.min.js?_v=20231215112912"></script>
    </body>
 </html>  

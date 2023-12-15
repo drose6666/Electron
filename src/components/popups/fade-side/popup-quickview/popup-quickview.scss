@@ -342,8 +342,6 @@
    }
 
    .btn-quickview-cart {
-      // @include buttonIconType( $type: primary, $freeWidth: true, $maxWidth: 100% );
-      // @include buttonIconTheme( $theme: action );
       @include uiBtnType( $type: primary, $freeWidth: true, $maxWidth: 100% );
       @include uiBtnTheme( $theme: action );
    }
@@ -441,7 +439,7 @@
          margin: 30px auto 0 auto;
          grid-template: auto / 1fr;
 
-         .btn-quickview-more {
+         .product-link {
             grid-column: 1 / 2;
          }
       }

@@ -1,3 +1,10 @@
+.product-option-name {
+   font-size: 18px;
+   font-weight: 300;
+   line-height: 100%;
+   color: var(--text_selected_on_dark);
+}
+
 .product-info__options {
    .product-options {
       display: grid;
@@ -5,12 +12,10 @@
       gap: 15px;
 
       &:not(:last-child) {
-         margin-bottom: 25px;
+         margin-bottom: 30px;
       }
 
       &__title {
-         @extend %optionTitle;
-
          margin-top: 10px;
          align-self: start;
       }
@@ -35,43 +40,87 @@
       height: 39px;
       background: var(--ui_dark);
       border-radius: var(--defaultRd);
-      outline: 1px solid transparent;
-      outline-offset: -3px;
+      border: 1px solid transparent;
       cursor: pointer;
       transition: inherit;
 
       &__name {
          font-size: 15px;
-         font-weight: 500;
+         font-weight: 400;
          line-height: 100%;
          color: var(--text_selected_on_dark);
          transition: inherit;
       }  
-   }
-
-   &:hover {
-      &__custom {
-         outline-color: var(--border_dark);
-         outline-offset: 0;
-      }
-   }
+   } 
 
    &__input:checked ~ &__custom {
       background: transparent;
-      outline-color: var(--action);
-      outline-offset: 0;
+      border-color: var(--action);
 
-      &__name {
+      .product-option__custom__name {
          color: var(--light);
       }
+      
    }
 
    &__input:disabled ~ &__custom {
       background: transparent;
       cursor: not-allowed;
 
-      &__name {
+      .product-option__custom__name {
          color: var(--border_dark);
       }
    }
+   
+   // TODO Color option
+   &.color_option {
+      // transition: transform .2s ease, outline .15s ease;
+
+      .product-option__custom {
+         border-radius: var(--circleRd);
+         border: none;
+         outline: 1px solid transparent;
+      }
+
+      .product-option__input:checked ~ .product-option__custom {
+         outline-color: var(--action);
+         outline-offset: 3px;
+      }
+
+      .product-option__input:disabled ~ .product-option__custom {
+         opacity: .1;
+      }
+   }
+
+   &:not(:has( 
+      .product-option__input:checked, 
+      .product-option__input:disabled )) 
+      {
+      &:hover {
+         .product-option__custom {
+            transform: translateY(-2px);
+         }
+      }
+   }
 }
+
+@container uiPopupContainer (max-width: 530px) {
+   .product-info__options {
+      .product-options {
+         grid-template: auto / 1fr;
+         gap: 15px;
+
+         &__title {
+            font-size: 20px;
+         }
+      }
+   }
+
+
+   .product-option-name {
+      font-size: 20px;
+   }
+}
+
+
+  

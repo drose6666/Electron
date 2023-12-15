@@ -36,13 +36,13 @@
 
    &.dark {
       .rating-value {
-         color: var(--dark);
+         color: var(--light);
       }
    }
 
    &.light {
       .rating-value {
-         color: var(--light);
+         color: var(--dark);
       }
    }
 }
