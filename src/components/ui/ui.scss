@@ -49,7 +49,15 @@ $uiColorControlSize: 25px;
    &__input:checked ~ &__name {
       color: var(--light);
    }
-   
+
+
+   // TODO Color в фильтрах
+   &.filter_color {
+      .ui-control__custom {
+         width: 25px;
+         height: 25px;
+      }
+   }
 
    // TODO Radio
    &.radio {
@@ -123,6 +131,20 @@ $uiColorControlSize: 25px;
       .ui-control__input:checked ~ .ui-control__name {
          .value, .count {
             color: var(--light);
+         }
+      }
+
+      &.color {
+         .ui-control__custom {
+            border-radius: var(--circleRd);
+            border: none;
+            outline: 1px solid transparent;
+            outline-offset: 0;
+         }
+
+         .ui-control__input:checked ~ .ui-control__custom {
+            outline-color: var(--action);
+            outline-offset: 2px;
          }
       }
    }
