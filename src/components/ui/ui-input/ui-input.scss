@@ -110,20 +110,7 @@
 }
 
 
-// NOTE Инпут главноего поиска
-.input_search-main {
-   @include uiInput (
-      $paddingRight: 117px,
-      $fSize: 19px,
-      $fWeight: 500,
-      $height: 49px,
-   );
-   @include uiInputTheme ( $theme: dark );
 
-   &::placeholder {
-      font-weight: 300;
-   }
-}
 
 .input_password {
    & + .password-control {

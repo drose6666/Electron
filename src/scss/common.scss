@@ -22,6 +22,7 @@
 @import '../components/ui/ui';
 @import '../components/notifications/ui-notification';
 @import '../components/ui/ui-star-rating/ui-star-rating';
+@import '../components/ui/ui-dropdown/ui-dropdown';
 
 
 // Components
@@ -32,12 +33,12 @@
 @import '../components/socials/socials';
 @import '../components/product/product';
 @import '../components/category/category-card/category-card';
-@import '../components/brand/brand-card/brand-card';
 @import '../components/sections/section-footer/section-footer';
 @import '../components/product/product-card/product-card-cart/product-card-cart';
 @import '../components/popups/popups';
 @import '../components/login-reminder/login-methods/login-methods';
 @import '../components/forms/ui-form';
+@import '../components/forms/form-search/forms-search';
 
 
 // Custom scrollbar for Firefox 
@@ -92,3 +93,8 @@ i {
    font-size: var(--basic_font-size);
 }
 
+
+// TODO Page head section
+.page-head-section {
+   margin-bottom: var(--section_sm_padding);
+}

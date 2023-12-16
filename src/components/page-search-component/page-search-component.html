@@ -1,0 +1,24 @@
+<div class="page-search-component">
+   <div class="page-search-container">
+      @@include('../../components/ui/ui-button/ui-btn-icon/ui-button-icon-link.html', {
+         "text": "Продолжить покупки",
+         "className": "btn_i_primary_dark btn_page-search",
+         "classNameIcon": "arrow_up_right_long",
+         "link": ""
+      })
+   
+      @@include('../forms/form-search/form-search.html', {
+         "id": "page-search"
+      })
+   
+      @@include('../ui/ui-button/ui-btn/ui-button-link.html', {
+         "text": "Связаться с нами",
+         "className": "btn_contact"
+      })
+   </div>
+
+   <div class="page-search-texts">
+      <p class="search-hint">Вы можете упростить путешествие по брендам, введя название необходимого вам бренда в поисковой строке выше</p>
+      <p class="search-hint hint_slow">Если у Вас возникнут какие-либо вопросы или затруднения, свяжитесь с нами. Мы всегда рады помоч </p>
+   </div>
+</div>

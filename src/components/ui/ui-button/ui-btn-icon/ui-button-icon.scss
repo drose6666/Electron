@@ -145,6 +145,7 @@
    font-weight: 400;
    line-height: 100%;
    border-radius: var(--defaultRd);
+   white-space: nowrap;
 
    .icon {
       width: $iconSize;
@@ -162,7 +163,7 @@
    @if $type == primary {
       $paddingLeft: 20px;
       $gap: 20px;
-      $fSize: 18px;
+      $fSize: 17px;
       $iconSize: 41px;
       $iconFSize: 20px;
 

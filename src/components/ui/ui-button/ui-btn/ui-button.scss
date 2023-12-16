@@ -1,5 +1,3 @@
-
-
 @mixin uiBtnTheme (
    $color: var(--light),
    $bg: var(--dark),
@@ -246,7 +244,7 @@
    } @else if $type == primary {
       $height: 45px;
       $paddingX: 40px;
-      $fSize: 18px;
+      $fSize: 17px;
       $fWeight: 400;
 
       padding: 5px $paddingX;
@@ -331,6 +329,13 @@
    @include uiBtnTheme( $theme: dark );
 
    padding: 11px clamp(20px, 3cqi, 30px);
+}
+
+.btn_contact {
+   @include uiBtnType( $type: primary);
+   @include uiBtnTheme( $theme: outlines, $childTheme: outlinesDefault );
+
+   margin-left: auto;
 }
 
 

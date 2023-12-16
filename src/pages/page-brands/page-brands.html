@@ -29,8 +29,20 @@
             </div>
          </section>
 
-         @@include('../../components/sections/subcategory-section/subcategory-section.html')
-         @@include('../../components/catalog/catalog-section/catalog-section-with-filters.html')
+         <div class="ui-container">
+            @@include('../../components/page-search-component/page-search-component.html')
+         </div>
+
+         <section class="brands-section">
+            <div class="ui-container">
+               @@include('../../components/brand/brands-list.html')
+               @@include('../../components/ui/ui-button/ui-btn-icon/ui-button-icon.html', {
+                  "text": "Показать еще",
+                  "className": "btn_more",
+                  "classNameIcon": "arrow_up_long"
+               })
+            </div>
+         </section>
          
       </main>
 

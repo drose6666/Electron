@@ -1,0 +1,63 @@
+// TODO Поле главного поиска в popup
+search {
+   max-width: 630px;
+   width: 100%;
+}
+
+.search-form {
+   position: relative;
+}
+
+#main-search {
+   .ui-input {
+      @include uiInput (
+         $paddingRight: 117px,
+         $fSize: 19px,
+         $fWeight: 500,
+         $height: 49px,
+      );
+      @include uiInputTheme ( $theme: dark );
+
+      &::placeholder {
+         font-weight: 300;
+      }
+   }
+
+   .btn_search {
+      @include uiBtnType( $type: primary );
+      @include uiBtnTheme( $theme: action );
+   }
+}
+
+
+// TODO Поле поискса на страницах ()
+#page-search {
+   .ui-input {
+      @include uiInput (
+         $paddingRight: 117px,
+         $fSize: 19px,
+         $fWeight: 500,
+         $height: 45px,
+      );
+      @include uiInputTheme ( $theme: light );
+
+      &::placeholder {
+         font-weight: 300;
+      }
+   }
+
+   .btn_search {
+      @include uiBtnType( $type: ui );
+      @include uiBtnTheme( $theme: dark );
+   }
+
+   @include media (max-width, 900px) {
+      .ui-input {
+         height:  54px;
+      }
+
+      .btn_search {
+         height: 50px;
+      }
+   }
+}

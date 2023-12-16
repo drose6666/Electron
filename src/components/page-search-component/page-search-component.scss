@@ -1,0 +1,51 @@
+.page-search-component {
+   margin-bottom: var(--section_sm_padding);
+
+   .page-search-container {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      row-gap: 10px;
+   }
+
+   .btn_page-search {
+      flex: 0 0 230px;
+   }
+
+   .page-search-texts {
+      .search-hint {
+         margin-top: 40px;
+         font-size: 17px;
+         font-weight: 300;
+         line-height: 120%;
+         color: var(--dark);
+         max-width: 520px;
+
+         &.hint_slow {
+            margin-top: 15px;
+            font-size: 15px;
+            color: var(--text_additional);
+            max-width: 390px;
+         }
+      }
+
+      
+   }
+
+   @include media (max-width, 900px) {
+      .page-search-container  {
+         flex-wrap: wrap;
+      }
+      search {
+         margin-top: 15px;
+         max-width: 100%;
+         flex: 0 0 100%;
+         order: 3;
+      }
+
+      .btn_contact {
+         margin-left: 0;
+         order: 2;
+      }
+   }
+}

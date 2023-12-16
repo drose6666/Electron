@@ -1,5 +1,5 @@
 /**
- * IMPORTANT Этот файл содержитjs-файлы, которые используются на всех страницах 
+ * TODO Этот файл содержитjs-файлы, которые используются на всех страницах 
  */
 
 import '../components/ui/ui-preloader/ui-preloader.js';
@@ -10,9 +10,14 @@ import '../components/header/header-menu/submenu/submenu.js';
 import '../components/product/product.js';
 
 /**
- * IMPORTANT Popups
+ * TODO Popups
  */
 import '../components/popups/fade-side/popup-cart/popup-cart.js';
 import '../components/popups/fade-side/popup-compare/popup-compare.js';
 // import '../components/popups/fade-side/popup-login/popup-login.js';
 import '../components/popups/fade-side/popup-search/popup-search.js';
+
+/**
+ * TODO UI
+ */
+import '../components/ui/ui-dropdown/ui-dropdown.js';

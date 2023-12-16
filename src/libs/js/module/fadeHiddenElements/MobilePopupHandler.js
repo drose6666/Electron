@@ -51,7 +51,7 @@ export default class MobilePopupHandler {
     * @param {function} callback - callback-фцнкция, выполняющаяся при собитии (event)
     */
    #eventHandler (handler, element, callback) {
-      if (!element.length) element.addEventListener(handler, callback)
+      if (!element.length) element?.addEventListener(handler, callback)
       // for (let i = 0; i < element.length; i++) {
       //    console.log(element);
       //    element[i].addEventListener(handler, callback)

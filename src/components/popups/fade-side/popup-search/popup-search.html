@@ -2,7 +2,9 @@
    <div class="ui-popup__container">
 
       <h2 class="ui-popup__title">Поиск</h2>
-      @@include('../../../forms/form-search-main/form-search-main.html')
+      @@include('../../../forms/form-search/form-search.html', {
+         "id": "main-search"
+      })
 
       <ul class="search-history">
          <li class="history-item">
@@ -71,7 +73,7 @@
             </div>
 
             <div class="visual">
-               @@include('../../../brand/brand-card/brand-card.html', {
+               @@include('../../../brand/brand-card.html', {
                   "className": "card_search",
                   "img": "../../../../img/optimized/brands/brand_1.webp"
                })
@@ -85,7 +87,7 @@
             </div>
 
             <div class="visual">
-               @@include('../../../brand/brand-card/brand-card.html', {
+               @@include('../../../brand/brand-card.html', {
                   "className": "card_search",
                   "img": "../../../../img/optimized/brands/brand_10.webp"
                })
@@ -99,7 +101,7 @@
             </div>
 
             <div class="visual">
-               @@include('../../../brand/brand-card/brand-card.html', {
+               @@include('../../../brand/brand-card.html', {
                   "className": "card_search",
                   "img": "../../../../img/optimized/brands/brand_12.webp"
                })
@@ -113,7 +115,7 @@
             </div>
 
             <div class="visual">
-               @@include('../../../brand/brand-card/brand-card.html', {
+               @@include('../../../brand/brand-card.html', {
                   "className": "card_search",
                   "img": "../../../../img/optimized/brands/brand_8.webp"
                })
