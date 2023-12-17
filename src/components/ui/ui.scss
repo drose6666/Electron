@@ -2,6 +2,26 @@ $uiControlSize: 20px;
 $uiFilterControlSize: 23px;
 $uiColorControlSize: 25px;
 
+%controlName {
+   font-size: 17px;
+   font-weight: 300;
+   line-height: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   gap: var(--small_tabs_padding);
+
+   .value {
+      color: var(--text_selected_on_dark);
+      transition: inherit;
+   }
+
+   .count {
+      color: var(--text_additional);
+      transition: inherit;
+   }
+}
+
 .ui-control {
    position: relative;
    cursor: pointer;
@@ -31,11 +51,7 @@ $uiColorControlSize: 25px;
 
    &__name {
       padding-left: calc(#{$uiControlSize} + var(--small_btn_padding));
-      font-size: 16px;
-      font-weight: 300;
-      line-height: 100%;
-      color: var(--text_selected_on_dark);
-      transition: all .2s ease;
+      @extend %controlName;
    }
 
    &__input:checked ~ &__custom {
@@ -94,6 +110,19 @@ $uiColorControlSize: 25px;
          background: var(--action);
          border-color: var(--action);
       }
+
+      .ui-control__input:disabled {
+         & ~ .ui-control__custom {
+            background: transparent;
+            border-color: var(--ui_dark);
+            cursor: not-allowed;
+         }
+
+         & ~ .ui-control__name {
+            color: var(--border_dark);
+            cursor: not-allowed;
+         }
+      }
    }
 
 
@@ -103,29 +132,11 @@ $uiColorControlSize: 25px;
          top: -3px;
          width: $uiFilterControlSize;
          height: $uiFilterControlSize;
-
-         &:after {
-            
-         }
       }
       
       .ui-control__name {
          padding-left: calc(#{$uiFilterControlSize} + var(--small_tabs_padding));
-         font-size: 17px;
-         display: flex;
-         align-items: center;
-         justify-content: space-between;
-         gap: var(--small_tabs_padding);
-
-         .value {
-            color: var(--text_selected_on_dark);
-            transition: inherit;
-         }
-
-         .count {
-            color: var(--text_additional);
-            transition: inherit;
-         }
+         @extend %controlName;
       }
 
       .ui-control__input:checked ~ .ui-control__name {
@@ -134,17 +145,40 @@ $uiColorControlSize: 25px;
          }
       }
 
+      .ui-control__input:disabled {
+         & ~ .ui-control__name {
+            cursor: not-allowed;
+
+            .value, .count {
+               color: var(--border_dark);
+            }
+         }
+      }
+
       &.color {
          .ui-control__custom {
             border-radius: var(--circleRd);
-            border: none;
             outline: 1px solid transparent;
-            outline-offset: 0;
+            outline-offset: 2px;
+            border: none;
+            background: #FDE8CF;
+
+            &:after {
+               display: none;
+            }
          }
 
          .ui-control__input:checked ~ .ui-control__custom {
             outline-color: var(--action);
-            outline-offset: 2px;
+            border: none;
+            background: inherit;
+         }
+
+         .ui-control__input:disabled {
+            & ~ .ui-control__custom {
+               opacity: .1;
+               cursor: not-allowed;
+            }
          }
       }
    }

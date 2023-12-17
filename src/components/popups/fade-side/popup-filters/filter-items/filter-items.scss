@@ -30,9 +30,16 @@
          transition: all .3s ease;
       }
 
+      &:hover {
+         &:after {
+            color: var(--text_selected_on_dark);
+         }
+      }
+
       &.hide {
          &::after {
             content: '\e91f';
+            color: var(--border_dark);
          }
       }
    }

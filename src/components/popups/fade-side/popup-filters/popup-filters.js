@@ -1,4 +1,5 @@
 import PopupHandler from '../../../../libs/js/module/fadeHiddenElements/PopupHandler.js'
+import './filter-items/filter-items.js';
 
 new PopupHandler ({
    selector: '#popup-filters',
@@ -7,7 +8,6 @@ new PopupHandler ({
    overlay: '#overlay-filters',
 })
 
-const filterItem = document.querySelectorAll('.filter-collapse');
 const filterTitle = document.querySelectorAll('.filter-item__title')
 
 filterTitle.forEach(item => {

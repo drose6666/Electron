@@ -4,10 +4,6 @@
 
       <div class="form-filters__content">
          @@include('./fitler-price/filter-price.html')
-         @@include('./filter-item/filter-item-brand.html')
-         @@include('./filter-item/filter-item-color.html')
-         @@include('./filter-item/filter-item-resolution.html')
-         @@include('./filter-item/filter-item-diagonal.html')
       </div>
 
       <div class="form-filters__nav">
@@ -22,7 +18,7 @@
             @@include('../../../ui/ui-button/ui-btn/ui-button.html', {
                "text": "Сбросить",
                "className": "btn_filter_cancel",
-               "type": "submit"
+               "type": "button"
             })
          </div>
       </div>
@@ -35,3 +31,4 @@
 
    <div class="ui-popup__overlay" id="overlay-filters"></div>
 </div>
+
