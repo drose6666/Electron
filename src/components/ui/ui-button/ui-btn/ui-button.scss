@@ -322,6 +322,11 @@
    @include uiBtnTheme( $theme: dark );
 }
 
+.ui-btn_light {
+   @include uiBtnType( $type: primary );
+   @include uiBtnTheme( $theme: light );
+}
+
 
 /* NOTE Кнопка входа в top-menu */
 .btn_login {

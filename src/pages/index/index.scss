@@ -4,10 +4,10 @@
 @import './sections/new-products-section/new-products-section';
 @import './sections/category-brands-section/category-brands-section';
 @import './sections/top-sale-section/top-sale-section';
-@import './sections/collections-section/collections-section';
 @import './sections/about-section/about-section';
 @import './sections/reviews-section/reviews-section';
 @import './sections/blog-section/blog-section';
+@import '../../components/collection/collection';
 
 // IMPORTANT Эти стили здесь только для тестирования эдементов - потом удалить
 @import '../../components/ui/ui-star-rating/ui-star-rating';

@@ -10,6 +10,7 @@ footer {
    @extend %dynamicRadius40to25;
 
    .footer-inside {
+      padding: 0 40px;
       display: grid;
       grid-template: auto / minmax(250px, 350px) 1fr min-content;
       align-items: flex-start;
@@ -132,7 +133,7 @@ footer {
       .footer-inside {
          grid-template: auto / 1fr 1fr;
          gap: 50px;
-         max-width: 1030px;
+         max-width: 950px;
       }
 
       .footer-col {

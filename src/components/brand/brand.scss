@@ -1,16 +1,15 @@
 .brand-card {
-   padding: 15px 5px;
-   min-height: 100px;
    display: flex;
    align-items: center;
    justify-content: center;
    border-radius: clamp(var(--slRd), 3cqi, var(--mdRd));
    background: var(--separating);
    container-type: inline-size;
+   overflow: hidden;
    transition: all .3s ease;
    
    img {
-      max-width: 80cqi;
+      max-width: 100%;
       height: auto;
       filter: grayscale(1);
       display: inline-block;
@@ -28,19 +27,12 @@
    }
 
    &.card_search {
-      padding: 8px;
       width: 97px;
-      height: 39px;
-      min-height: 39px;
       background: var(--separating_contrast);
       border-radius: var(--xsRd);
 
       img {
-         max-width: 100%;
-         height: 100%;
          filter: grayscale(0);
-         width: 100%;
-         object-fit: contain;
       }
 
       &:hover {
