@@ -336,6 +336,11 @@
    padding: 11px clamp(20px, 3cqi, 30px);
 }
 
+.btn_primary-otlines-default {
+   @include uiBtnType( $type: primary);
+   @include uiBtnTheme( $theme: outlines, $childTheme: outlinesDefault );
+}
+
 .btn_contact {
    @include uiBtnType( $type: primary);
    @include uiBtnTheme( $theme: outlines, $childTheme: outlinesDefault );

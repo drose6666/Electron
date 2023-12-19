@@ -1,37 +1,31 @@
 <section class="about-section">
-   <div class="content">
-      @@include('../../../../components/ui/ui-title/ui-section-title.html', {
-         "text": "Несколько слов о нас"
-      })
-      <p class="text">Мы - твоя платформа для воплощения идей в цифровую реальность. С нами ты обретешь силу инноваций, удобства онлайн-покупок и качественной техники. Наша цель - сделать технологии доступными для каждого, воплощая твои потребности в каждом устройстве и аксессуаре. Присоединяйся к нашей электронной революции!</p>
-      
-      <div class="btn-group">
-         @@include('../../../../components/ui/ui-button/ui-btn-icon/ui-button-icon-link.html', {
-            "className": "btn_i_primary_dark",
-            "text": "Наши контакты",
-            "classNameIcon": "arrow_up_right_long"
+   <div class="about-section__container">
+      <div class="ui-container">
+         @@icnlude('../../../../components/ui/ui-title/ui-section-title.html', {
+            "className": "title_about",
+            "text": "Несколько слов о нас"
          })
 
-         @@include('../../../../components/ui/ui-button/ui-btn/ui-button.html', {
-            "text": "Оставить отзыв",
-            "className": "btn_primary_outlines_def btn_send-review"
-         })
-      </div>
+         <p class="about-text"></p>
 
-      @@include('../../../../components/socials/socials.html')
-   </div>
+         <div class="btn-group">
+            @@include('../../../../components/ui/ui-button/ui-btn/ui-button-link.html', {
+               "text": "Наши контакты",
+               "link": "",
+               "className": "ui-btn"
+            })
 
-   <div class="img">
-      <picture>
-         <source media="(max-width:1063px)" srcset="../../../../img/optimized/about/about_1063.webp">
-         <img src="../../../../img/optimized/about/about.webp" alt="">
-       </picture>
-
-      <div class="video-open">
-         <div class="icon">
-            <i class="i-play"></i>
+            @@include('../../../../components/ui/ui-button/ui-btn/ui-button.html', {
+               "text": "Оставить отзыв",
+               "type": "button",
+               "className": "btn_primary-otlines-default"
+            })
          </div>
-         <p class="video-text">Лучше один <br> раз увидеть!</p>
+
+         @@include('../../../../components/socials/socials.html', {
+            "className": "socials_about"
+         })
+         <video src="" class="about-bg-video"></video>
       </div>
    </div>
 </section>
