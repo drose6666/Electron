@@ -73,6 +73,25 @@
          }
       }
    }
+
+   &.socials_about {
+      a {
+         border-color: transparent;
+         background: var(--light);
+
+         i {
+            color: var(--dark);
+         }
+
+         &:hover {
+            background: var(--dark);
+
+            i {
+               color: var(--action);
+            }
+         }
+      }
+   }
 }
 
 @container mobileMenu (max-width: 300px) {

@@ -1,31 +1,32 @@
 <section class="about-section">
    <div class="about-section__container">
       <div class="ui-container">
-         @@icnlude('../../../../components/ui/ui-title/ui-section-title.html', {
+         @@include('../../../../components/ui/ui-title/ui-section-title.html', {
             "className": "title_about",
             "text": "Несколько слов о нас"
          })
 
-         <p class="about-text"></p>
+         <p class="about-text">Мы - твоя платформа для воплощения идей в цифровую реальность. С нами ты обретешь силу инноваций, удобства онлайн-покупок и качественной техники. Наша цель - сделать технологии доступными для каждого, воплощая твои потребности в каждом устройстве и аксессуаре. Присоединяйся к нашей электронной революции!</p>
 
          <div class="btn-group">
             @@include('../../../../components/ui/ui-button/ui-btn/ui-button-link.html', {
                "text": "Наши контакты",
                "link": "",
-               "className": "ui-btn"
+               "className": "btn_about btn_primary-action"
             })
 
             @@include('../../../../components/ui/ui-button/ui-btn/ui-button.html', {
                "text": "Оставить отзыв",
                "type": "button",
-               "className": "btn_primary-otlines-default"
+               "className": "btn_about ui-btn btn_send-review"
             })
          </div>
 
          @@include('../../../../components/socials/socials.html', {
             "className": "socials_about"
          })
-         <video src="" class="about-bg-video"></video>
       </div>
+
+      <video src="../../../../libs/about_2.mp4" autoplay loop class="about-bg-video"></video>
    </div>
 </section>
