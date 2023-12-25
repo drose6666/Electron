@@ -1,0 +1,109 @@
+.subcategory-section {
+   margin-top: var(--section_sm_padding);
+   margin-bottom: calc(var(--section_md_padding) - 10px);
+
+   .ui-tabs {
+      margin-bottom: 60px;
+      justify-content: flex-start;
+   }
+}
+
+.subcategory-list {
+   padding-bottom: 10px;
+   display: grid;
+   grid-template: auto / repeat(3, 1fr);
+   gap: 20px;
+   overflow-x: auto;
+   overflow-y: visible;
+   grid-auto-rows: minmax(0, 1fr);
+   grid-auto-flow: row dense;
+
+   &::-webkit-scrollbar {
+      background: var(--separating);
+      width: 5px;
+      height: 5px;
+   }
+   
+   &::-webkit-scrollbar-thumb {
+      background: var(--border);
+      border-radius: 50px;
+   }
+}
+
+.subcategory-card {
+   display: block;
+
+   &__container {
+      padding: 5px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 15px;
+      border-radius: var(--lgRd);
+      background: var(--separating);
+      container-type: inline-size;
+      container-name: subcategoryCard;
+      min-width: 370px;
+      transition: all .2s ease;
+
+      .names {
+         padding-left: 20px;
+         align-self: center;
+
+         .name {
+            margin-bottom: 15px;
+            font-size: clamp(20px, 5cqi, 25px);
+            font-weight: 500;
+            line-height: 100%;
+            color: var(--dark);
+            max-width: 205px;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            transition: inherit;
+         }
+
+         .more_subcategory {
+            @include uiMore;
+            @include hoverLinkUnderline ( 
+               $bgColorStart: var(--action),
+               $hoverChild: true,
+            );
+            
+            .child {
+               padding: 5px 0;
+            }
+         }
+      }
+
+      .img {
+         max-width: clamp(140px, 33cqi, 170px);
+         width: 100%;
+         height: auto;
+         overflow: hidden;
+         border-radius: var(--optionalRd);
+         transition: inherit;
+
+         img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+         }
+      }
+
+      &:hover {
+         background: var(--dark);
+
+         .name {
+            color: var(--light);
+         }
+         
+         .more_subcategory {
+            .child, &:after {
+               color: var(--text_additional);
+            }
+         }
+      }
+   }
+}

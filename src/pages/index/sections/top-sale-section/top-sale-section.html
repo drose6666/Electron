@@ -1,8 +1,16 @@
 <section class="top-sale-section">
    <div class="ui-container">
-      @@include('../../../../components/ui/ui-title/ui-section-title-more.html', {
-         "text": "Топ продаж"
-      })
+      <div class="ui-section-title-more">
+         @@include('../../../../components/ui/ui-title/ui-section-title.html', {
+            "text": "Топ продаж",
+            "className": ""
+         })
+         @@include('../../../../components/ui/ui-more/ui-more-link.html', {
+            "link": "../../../../pages/page-category/page-category.html",
+            "text": "Смотреть все",
+            "className": "ui-more_full-hover"
+         })
+      </div>
 
       @@include('../../../../components/product/product-list/product-list.html', {
          "className": "product-list"

@@ -32,21 +32,19 @@
       </div>
 
       <div class="ui-popup__btns">
-         @@loop('../../ui/ui-button/ui-btn/ui-button-link.html', [
-            {
-               "link": "#",
-               "className": "btn-quickview-cart",
-               "text": "Добавить в корзину"
-            },
-            {
+         @@include('../../ui/ui-button/ui-btn/ui-button.html', {
+               "className": "btn_primary-action",
+               "text": "Купить сейчас"
+            })
+
+         @@include('../../ui/ui-button/ui-btn/ui-button-link.html', {
                "link": "#",
                "className": "btn-quickview-buy",
                "text": "Купить сейчас"
-            },
-         ])
+            })
 
          @@include('../../ui/ui-more/ui-more-link.html', {
-            "link": "",
+            "link": "../../../pages/page-product/page-product.html",
             "text": "Перейти к товару",
             "className": "ui-more_basic-slow_dark product-link"
          })

@@ -1,0 +1,114 @@
+.hero-section {
+   margin-top: 80px;
+   container-name: heroContainer;
+   container-type: inline-size;
+
+   @extend %fullWidthElement;
+}
+
+// TODO Hero слайдер
+#hero-swiper {
+   width: 100%;
+   height: 600px;
+   
+   @extend %dynamicRadius40to25;
+
+   .slide {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: flex-end;
+      position: relative;
+      height: 600px;
+
+      .slide-text-wrap {
+         padding: 0 40px 185px clamp(10px, 5cqi, 80px);
+         position: relative;
+         z-index: 1;
+      }
+
+      .hero-color {
+         font-size: 16px;
+         font-weight: 300;
+         line-height: 100%;
+         text-transform: uppercase;
+         letter-spacing: 20%;
+         color: var(--dark);
+         position: absolute;
+         top: 70px;
+         left: clamp(10px, 5cqi, 80px);
+         z-index: 1;
+      }
+
+      .additional-text {
+         font-size: 25px;
+         font-weight: 300;
+         line-height: 100%;
+         color: #0075CF;
+         text-align: right;
+         // text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+      }
+
+      .hero-title {
+         font-size: clamp(42px, 15.5cqi, 65px);
+         font-weight: 500;
+         line-height: 85%;
+         color: var(--dark);
+         position: relative;
+
+         .hero-title__mark {
+            white-space: nowrap;
+            
+            &.thin {
+               font-weight: 200;
+            }
+
+            &.colored {
+               color: #A9A399;
+            }
+         }
+      }
+
+      .hero-slogan {
+         margin-top: 15px;
+         margin-bottom: 60px;
+         font-size: 25px;
+         font-weight: 300;
+         line-height: 100%;
+         color: var(--dark);
+      }
+
+      .ui-btn {
+         @include uiBtnType( $type: secondary );
+         @include uiBtnTheme( $theme: dark );
+
+         display: inline-flex;
+      }
+
+      .hero-img {
+         position: absolute;
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+         object-position: left center;
+      }
+   }
+}
+
+
+
+@container heroContainer (max-width: 1060px) {
+   #hero-swiper {
+      .slide {
+         height: 500px;
+      }
+   }
+}
+
+@container heroContainer (max-width: 360px) {
+   #hero-swiper {
+      .slide {
+         height: 400px;
+      }
+   }
+}

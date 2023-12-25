@@ -1,8 +1,16 @@
 <section class="blog-section">
    <div class="ui-container">
-      @@include('../../../../components/ui/ui-title/ui-section-title-more.html', {
-         "text": "Новое в блоге"
-      })
+      <div class="ui-section-title-more">
+         @@include('../../../../components/ui/ui-title/ui-section-title.html', {
+            "text": "Блог",
+            "className": ""
+         })
+         @@include('../../../../components/ui/ui-more/ui-more-link.html', {
+            "link": "",
+            "text": "Смотреть все",
+            "className": "ui-more_full-hover"
+         })
+      </div>
 
       @@include('../../../../components/post/post-list/post-list.html')
    </div>

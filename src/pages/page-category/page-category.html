@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+   @@include('../../components/head/head.html', {
+      "mainCss": "css/page-category.css",
+      "title": "Категории"
+   })
+   <body>
+      @@include('../../components/ui/ui-preloader/ui-preloader.html')
+      @@include('../../components/header/header-top/header-top.html')
+      @@include('../../components/header/header.html')
+
+      <main>
+         <section class="page-head-section">
+            <div class="ui-container">
+               @@include('../../components/ui/ui-title/ui-page-title.html', {
+                  "text": "Комплектующие",
+                  "className": ""
+               })
+   
+              <div class="ui-breadcrumbs">
+                  @@include('../../components/ui/ui-breadcrumbs/ui-breadcrumbs-item-link.html', {
+                     "text": "Главная",
+                     "link": "/"
+                  })
+                  @@include('../../components/ui/ui-breadcrumbs/ui-beadcrumbs-item.html', {
+                     "text": "Комплектующие"
+                  })
+              </div>
+            </div>
+         </section>
+
+         <section class="subcategory-section">
+            <div class="ui-container">
+               <div class="ui-tabs">
+                  @@loop('../../components/ui/ui-tab/ui-tab.html', [
+                     {
+                        "text": "Для ноутбуков и ПК",
+                        "className": "active"
+                     },
+                     {
+                        "text": "Для смартфонов",
+                        "className": ""
+                     }
+                  ])
+               </div>
+
+               @@include('../../components/subcategory/subcategory-list.html')
+            </div>
+         </section>
+
+         @@include('../../components/catalog/catalog-section/catalog-section-with-filters.html')
+         
+      </main>
+
+      @@include('../../components/footer/footer.html')
+      @@include('../../components/menu/mobile-menu/mobile-menu.html')
+      @@include('../../components/popups/fade-side/popup-search/popup-search.html')
+      @@include('../../components/popups/fade-side/popup-compare/popup-compare.html')
+      @@include('../../components/popups/fade-side/popup-cart/popup-cart.html')
+      @@include('../../components/popups/fade-side/popup-quickview/popup-quickview.html')
+      @@include('../../components/popups/popup-image-preview/popup-image-preview.html')
+      @@include('../../components/popups/fade-side/popup-filters/popup-filters.html')
+      @@include('../../components/popups/popup-send-review/popup-send-review.html')
+      <!-- @@include('../../components/popups/fade-side/popup-login/popup-login.html') -->
+      
+      <script type="module" src="js/bundle-page-category.min.js"></script>
+   </body>
+</html>  

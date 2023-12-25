@@ -386,7 +386,5 @@
 .btn_primary-action {
    @include uiBtnType( $type: primary );
    @include uiBtnTheme( $theme: action );
-
-   width: max-content;
 }
 

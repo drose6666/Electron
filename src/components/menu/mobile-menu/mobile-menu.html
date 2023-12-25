@@ -1,6 +1,7 @@
 <div class="ui-popup fade-side left-side" id="mobile-menu">
    <div class="ui-popup__container mobile-menu">
 
+      <!-- Основной список (уровень 1) -->
       <ul class="mobile-menu__inside parent_list" data-id="0">
          <li data-for="1" class="parent-item has-children"><span class="child">Каталог</span></li>
          <li data-for="2" class="parent-item has-children"><a href="" class="child">Личный кабинет</a></li>
@@ -42,18 +43,20 @@
          </li>
       </ul>
 
+      <!-- Вложенный список (уровень 2 - каталог) -->
       <ul data-id="1" class="mobile-menu__inside child_list hidden">
          <li data-for="0" class="back-item has-children"><span class="child">Каталог</span></li>
          <li>
             <ul class="child-list">
-               <li class="child-item"><a href="" class="child">Ноутбуки и ПК</a></li>
-               <li class="child-item"><a href="" class="child">Смартфоны</a></li>
-               <li class="child-item"><a href="" class="child">Аксессуары</a></li>
-               <li data-for="3" class="child-item has-children"><a href="" class="child">Комплектующие</a></li>
+               <li class="child-item"><a href="../../../pages/page-category/page-category.html" class="child">Ноутбуки и ПК</a></li>
+               <li class="child-item"><a href="../../../pages/page-category/page-category.html" class="child">Смартфоны</a></li>
+               <li class="child-item"><a href="../../../pages/page-category/page-category.html" class="child">Аксессуары</a></li>
+               <li data-for="3" class="child-item has-children"><a href="../../../pages/page-category/page-category.html" class="child">Комплектующие</a></li>
             </ul>
          </li>
       </ul>
 
+      <!-- Вложенный список (уровень 2 - личный каюинет) -->
       <ul data-id="2" class="mobile-menu__inside child_list hidden">
          <li data-for="0" class="back-item has-children"><a href="" class="child">Личный кабинет</a></li>
          <li>
@@ -65,6 +68,7 @@
          </li>
       </ul>
 
+      <!-- Вложенный список (уровень 3 - комплектующие) -->
       <ul data-id="3" class="mobile-menu__inside child_list hidden">
          <li data-for="1" class="back-item has-children"><a href="" class="child">Комплектующие</a></li>
          <li>

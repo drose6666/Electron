@@ -1,6 +1,7 @@
 import '../../js/common.js';
 
 /* TODO Sections */
+import './sections/hero-section/hero-section.js';
 import './sections/new-products-section/new-products-section.js';
 import './sections/reviews-section/reviews-section.js';
 

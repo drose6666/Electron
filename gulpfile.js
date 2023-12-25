@@ -19,6 +19,7 @@ import { html, pagesHTML } from "./gulp/tasks/html.js"
 import { scss } from "./gulp/tasks/scss.js"
 import { js } from "./gulp/tasks/js.js";
 import { images } from "./gulp/tasks/images.js";
+import { copyImg } from './gulp/tasks/copyImg.js';
 import { cleanImages } from "./gulp/tasks/cleanImages.js";
 import { fonts } from "./gulp/tasks/fonts.js";
 import { svg } from "./gulp/tasks/svg.js";
@@ -55,22 +56,29 @@ function watcher() {
    gulp.watch(path.watch.html, html)
    gulp.watch(path.watch['page-brandsHTML'], () => pagesHTML('page-brands'))
    gulp.watch(path.watch['page-brand-singleHTML'], () => pagesHTML('page-brand-single'))
+   gulp.watch(path.watch['page-categoryHTML'], () => pagesHTML('page-category'))
+   gulp.watch(path.watch['page-productHTML'], () => pagesHTML('page-product'))
 
    // gulp.watch(path.watch.js, js)
    gulp.watch(path.watch.indexJs, () => js('index'))
    gulp.watch(path.watch['page-brandsJs'], () => js('page-brands'))
    gulp.watch(path.watch['page-brand-singleJs'], () => js('page-brand-single'))
+   gulp.watch(path.watch['page-categoryJs'], () => js('page-category'))
+   gulp.watch(path.watch['page-productJs'], () => js('page-product'))
 
    // gulp.watch(path.watch.scss, scss)
    gulp.watch(path.watch.indexScss, () => scss('index'))
    gulp.watch(path.watch['page-brandsScss'], () => scss('page-brands'))
    gulp.watch(path.watch['page-brand-singleScss'], () => scss('page-brand-single'))
+   gulp.watch(path.watch['page-categoryScss'], () => scss('page-category'))
+   gulp.watch(path.watch['page-productScss'], () => scss('page-product'))
 
    gulp.watch(path.watch.fonts, fonts)
    gulp.watch(path.watch.libs, copyLibs)
    gulp.watch(path.watch.other, copyOther)
    
    gulp.watch(path.watch.images, gulp.series(cleanImages, images))
+   gulp.watch(path.watch.copyImg, copyImg)
    gulp.watch(path.watch.svg, svg)
 
    /**
@@ -87,11 +95,10 @@ function watcher() {
  * ------------------------------------------------------------------
  */
 const mainTasks = gulp.parallel(
-   html, () => pagesHTML('page-brands'), () => pagesHTML('page-brand-single'), 
-   () => js('index'), () => js('page-brands'), () => js('page-brand-single'), 
-   () => scss('index'), () => scss('page-brands'), () => scss('page-brand-single'), 
-   fonts, copyLibs, copyOther, 
-   gulp.series(cleanImages, images, svg));
+   html, () => pagesHTML('page-brands'), () => pagesHTML('page-brand-single'), () => pagesHTML('page-category'), () => pagesHTML('page-product'), 
+   () => js('index'), () => js('page-brands'), () => js('page-brand-single'), () => js('page-category'), () => js('page-product'), 
+   () => scss('index'), () => scss('page-brands'), () => scss('page-brand-single'), () => scss('page-category'), () => scss('page-product'), 
+   fonts, copyLibs, copyOther, copyImg);
 
 
 

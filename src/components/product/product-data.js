@@ -3,8 +3,8 @@ const products = [
       id: 1,
       name: 'iPhone 15',
       price: '190 990 ₽',
-      img: '../../../img/optimized/cards/card_3.webp',
-      imgHidden: '../../../img/optimized/cards/card_3_2.webp',
+      img: '../../../img/cards/card_3.webp',
+      imgHidden: '../../../img/cards/card_3_2.webp',
       isFavourites: true,
       isCompare: true,
       soldOut: true 
@@ -14,8 +14,8 @@ const products = [
       id: 2,
       name: 'MacBook Pro (M2 Pro, 2023)',
       price: '300 990 ₽',
-      img: '../../../img/optimized/cards/card_1.webp',
-      imgHidden: '../../../img/optimized/cards/card_1.webp',
+      img: '../../../img/cards/card_1.webp',
+      imgHidden: '../../../img/cards/card_1.webp',
       isFavourites: true,
       isCompare: false,
       soldOut: false 
@@ -25,8 +25,8 @@ const products = [
       id: 3,
       name: 'Samsung Galaxy S23 Ultra в комплекте с Buds 2 Pro',
       price: '170 990 ₽',
-      img: '../../../img/optimized/cards/card_2.webp',
-      imgHidden: '../../../img/optimized/cards/card_2.webp',
+      img: '../../../img/cards/card_2.webp',
+      imgHidden: '../../../img/cards/card_2.webp',
       isFavourites: true,
       isCompare: false,
       soldOut: false 
@@ -36,8 +36,8 @@ const products = [
       id: 4,
       name: 'iPad Pro (6th Gen, 2022)',
       price: '300 990 ₽',
-      img: '../../../img/optimized/cards/card_4.webp',
-      imgHidden: '../../../img/optimized/cards/card_4.webp',
+      img: '../../../img/cards/card_4.webp',
+      imgHidden: '../../../img/cards/card_4.webp',
       isFavourites: true,
       isCompare: false,
       soldOut: false 
@@ -46,8 +46,8 @@ const products = [
       id: 5,
       name: 'iPhone 15 Pro Max',
       price: '210 990 ₽',
-      img: '../../../img/optimized/cards/card_5.webp',
-      imgHidden: '../../../img/optimized/cards/card_5_2.webp',
+      img: '../../../img/cards/card_5.webp',
+      imgHidden: '../../../img/cards/card_5_2.webp',
       isFavourites: true,
       isCompare: false,
       soldOut: false 
@@ -57,8 +57,8 @@ const products = [
       id: 6,
       name: 'MacBook Air 15',
       price: '300 990 ₽',
-      img: '../../../img/optimized/cards/card_6.webp',
-      imgHidden: '../../../img/optimized/cards/card_6.webp',
+      img: '../../../img/cards/card_6.webp',
+      imgHidden: '../../../img/cards/card_6.webp',
       isFavourites: true,
       isCompare: false,
       soldOut: false 
@@ -68,8 +68,8 @@ const products = [
       id: 7,
       name: 'Mac Mini',
       price: '300 990 ₽',
-      img: '../../../img/optimized/cards/card_7.webp',
-      imgHidden: '../../../img/optimized/cards/card_7.webp',
+      img: '../../../img/cards/card_7.webp',
+      imgHidden: '../../../img/cards/card_7.webp',
       isFavourites: true,
       isCompare: false,
       soldOut: false 
@@ -79,8 +79,8 @@ const products = [
       id: 8,
       name: 'ASUS VivoBook 15 M1502IA-BQ011W',
       price: '270 990 ₽',
-      img: '../../../img/optimized/cards/card_16.webp',
-      imgHidden: '../../../img/optimized/cards/card_16.webp',
+      img: '../../../img/cards/card_16.webp',
+      imgHidden: '../../../img/cards/card_16.webp',
       isFavourites: true,
       isCompare: false,
       soldOut: false 
@@ -89,8 +89,8 @@ const products = [
       id: 9,
       name: 'iPhone 15 Pro Max',
       price: '210 990 ₽',
-      img: '../../../img/optimized/cards/card_5.webp',
-      imgHidden: '../../../img/optimized/cards/card_5_2.webp',
+      img: '../../../img/cards/card_5.webp',
+      imgHidden: '../../../img/cards/card_5_2.webp',
       isFavourites: true,
       isCompare: false,
       soldOut: false 
@@ -100,8 +100,8 @@ const products = [
       id: 10,
       name: 'MacBook Air 15',
       price: '300 990 ₽',
-      img: '../../../img/optimized/cards/card_6.webp',
-      imgHidden: '../../../img/optimized/cards/card_6.webp',
+      img: '../../../img/cards/card_6.webp',
+      imgHidden: '../../../img/cards/card_6.webp',
       isFavourites: true,
       isCompare: false,
       soldOut: false 
@@ -111,8 +111,8 @@ const products = [
       id: 11,
       name: 'Mac Mini',
       price: '300 990 ₽',
-      img: '../../../img/optimized/cards/card_7.webp',
-      imgHidden: '../../../img/optimized/cards/card_7.webp',
+      img: '../../../img/cards/card_7.webp',
+      imgHidden: '../../../img/cards/card_7.webp',
       isFavourites: true,
       isCompare: false,
       soldOut: false 
@@ -122,52 +122,8 @@ const products = [
       id: 12,
       name: 'ASUS VivoBook 15 M1502IA-BQ011W',
       price: '270 990 ₽',
-      img: '../../../img/optimized/cards/card_16.webp',
-      imgHidden: '../../../img/optimized/cards/card_16.webp',
-      isFavourites: true,
-      isCompare: false,
-      soldOut: false 
-   },
-
-   {
-      id: 3,
-      name: 'iPhone 15',
-      price: '190 990 ₽',
-      img: '../../../img/optimized/cards/card_3.webp',
-      imgHidden: '../../../img/optimized/cards/card_3_2.webp',
-      isFavourites: true,
-      isCompare: true,
-      soldOut: true 
-   },
-
-   {
-      id: 14,
-      name: 'MacBook Pro (M2 Pro, 2023)',
-      price: '300 990 ₽',
-      img: '../../../img/optimized/cards/card_1.webp',
-      imgHidden: '../../../img/optimized/cards/card_1.webp',
-      isFavourites: true,
-      isCompare: false,
-      soldOut: false 
-   },
-
-   {
-      id: 15,
-      name: 'Samsung Galaxy S23 Ultra в комплекте с Buds 2 Pro',
-      price: '170 990 ₽',
-      img: '../../../img/optimized/cards/card_2.webp',
-      imgHidden: '../../../img/optimized/cards/card_2.webp',
-      isFavourites: true,
-      isCompare: false,
-      soldOut: false 
-   },
-
-   {
-      id: 16,
-      name: 'iPad Pro (6th Gen, 2022)',
-      price: '300 990 ₽',
-      img: '../../../img/optimized/cards/card_4.webp',
-      imgHidden: '../../../img/optimized/cards/card_4.webp',
+      img: '../../../img/cards/card_16.webp',
+      imgHidden: '../../../img/cards/card_16.webp',
       isFavourites: true,
       isCompare: false,
       soldOut: false 
