@@ -55,7 +55,7 @@
 /* TODO Page title */
 .ui-page-title {
    margin-top: 80px;
-   font-size: 50px;
+   font-size: clamp(32px, 10cqi, 50px);
    font-weight: 700;
    line-height: 100%;
    color: var(--dark);
