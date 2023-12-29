@@ -1,0 +1,103 @@
+.product-presentation-section {
+
+   .product-presentation {
+      display: grid;
+      grid-template: auto / minmax(500px, 1.1fr) minmax(400px, 1fr);
+      gap: clamp(25px, 5cqi, 50px);
+   }
+}
+
+
+// TODO Слайдер Produuct images
+.product-images-container {
+   position: sticky;
+   top: 100px;
+   align-self: start;
+   height: auto;
+
+   .product-images {
+      transition: all .3s ease;
+   
+      .swiper-slide {
+         background: var(--separating);
+         position: relative;
+         transition: all .2s ease;
+   
+         img {
+            max-width: 100%;
+            height: auto;
+         }
+      }
+   
+      &.product-images1 {
+         position: absolute;
+         bottom: -40px;
+         left: 50%;
+         transform: translateX(-50%);
+         max-width: 435px;
+         
+   
+         .swiper-slide {
+            max-width: 130px;
+            width: 100%;
+            border-radius: var(--mdRd);
+            border: 1.5px solid var(--light);
+            cursor: pointer;
+   
+            &.swiper-slide-thumb-active {
+               border-color: var(--action);
+               background: var(--separating_contrast);
+            }
+   
+            &:hover {
+               background: var(--separating_contrast);
+            }
+         }
+      }
+   
+      &.product-images2 {
+         width: 100%;
+   
+         .swiper-slide {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: var(--defaultRd);
+            
+         }
+      }
+   }
+   
+   &:hover {
+      .product-images1 {
+         transform: translateX(-50%) translateY(20px);
+      }
+   }
+}
+
+@include media (max-width, 950px) {
+   .product-presentation-section {
+      .product-presentation {
+         display: block;
+      }
+   }
+
+   .product-images-container {
+      margin-bottom: 60px;
+      position: relative;
+      top: 0;
+
+
+      .product-images {
+         &.product-images1 {
+            display: none;
+         }
+
+         &.product-images2 {
+            width: 100%;
+         }
+      }
+   }
+}

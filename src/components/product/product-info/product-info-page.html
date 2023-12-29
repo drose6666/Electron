@@ -1,8 +1,7 @@
-<div class="product-info">
+<div class="product-info page-product">
    <a href="../../../pages/page-brand-single/page-brand-single.html" class="product-info__brand basicHoverUnderline">
       <span class="child">Asus</span>
    </a>
-   <h2 class="product-info__name">VivoBook 15 M1502IA-BQ011W</h2>
 
    <div class="product-info__rating">
       <div class="product-rating-container">
@@ -18,36 +17,31 @@
       </div>
    </div>
 
+   <p class="product-info__text">Однозначно, независимые государства представляют собой не что иное, как квинтэссенцию победы маркетинга над разумом и должны быть в равной степени предоставлены сами себе. Также как высококачественный прототип будущего проекта представляет собой интересный эксперимент проверки существующих финансовых и административных условий</p>
+
    <h3 class="product-info__price">170 990 ₽</h3>
 
-   <form action="" class="product-info__options">
+   <form action="" class="product-info__options page-product">
       <!-- Здесь опции товара. Подключаются в JS (product-info.js) -->
    </form>
 
    <div class="product-info__action">
       <div class="product-count">
          <h6 class="product-count__title product-option-name">Количество</h6>
-         @@include('../product-counter/product-counter.html', { "className": "quickview" })
+         @@include('../product-counter/product-counter.html', { "className": "page-product" })
       </div>
 
       <div class="ui-popup__btns">
-         @@loop('../../ui/ui-button/ui-btn/ui-button-link.html', [
-            {
-               "link": "#",
-               "className": "btn-quickview-cart",
-               "text": "Добавить в корзину"
-            },
-            {
-               "link": "#",
-               "className": "btn-quickview-buy",
-               "text": "Купить сейчас"
-            },
-         ])
+         @@include('../../ui/ui-button/ui-btn/ui-button.html', {
+            "type": "button",
+            "className": "btn_target-action",
+            "text": "Добавить в корзину"
+         })
 
-         @@include('../../ui/ui-more/ui-more-link.html', {
-            "link": "",
-            "text": "Перейти к товару",
-            "className": "ui-more_basic-slow_dark product-link"
+         @@include('../../ui/ui-button/ui-btn/ui-button-link.html', {
+            "link": "#",
+            "className": "btn_target-dark",
+            "text": "Купить сейчас"
          })
       </div>
    </div>

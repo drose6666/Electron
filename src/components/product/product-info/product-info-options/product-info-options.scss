@@ -5,6 +5,14 @@
    color: var(--text_selected_on_dark);
 }
 
+.product-info.page-product {
+   .product-option-name {
+      font-size: 17px;
+      font-weight: 400;
+      color: var(--dark);
+   }
+}
+
 .product-info__options {
    .product-options {
       display: grid;
@@ -74,9 +82,9 @@
    
    // TODO Color option
    &.color_option {
-      // transition: transform .2s ease, outline .15s ease;
 
       .product-option__custom {
+         padding: 0;
          border-radius: var(--circleRd);
          border: none;
          outline: 1px solid transparent;
@@ -104,6 +112,50 @@
    }
 }
 
+
+// TODO Стили для product-info на странице товара v
+.product-info__options.page-product {
+
+   .product-option {
+      .product-option__custom {
+         background: var(--separating);
+         height: 41px;
+
+         &__name {
+            font-size: 16px;
+            font-weight: 400;
+            color: var(--dark);
+         }
+      }
+
+      .product-option__input:checked ~ .product-option__custom {
+         background: var(--action_slow);
+         border-color: var(--action);
+   
+         .product-option__custom__name {
+            color: var(--dark);
+         }
+      }
+   
+      .product-option__input:disabled ~ .product-option__custom {
+         background: transparent;
+         cursor: not-allowed;
+   
+         .product-option__custom__name {
+            color: var(--border);
+         }
+      }
+
+      &.color_option {
+         .product-option__custom {
+            width: 35px;
+            height: 35px;
+         }
+      }
+   }
+}
+
+
 @container uiPopupContainer (max-width: 530px) {
    .product-info__options {
       .product-options {
@@ -116,11 +168,10 @@
       }
    }
 
-
    .product-option-name {
       font-size: 20px;
    }
 }
 
 
-  
+

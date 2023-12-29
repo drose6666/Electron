@@ -1,9 +1,5 @@
-$positionHiddenEls: clamp(12px, 5cqi, 20px);
+$positionHiddenEls: clamp(12px, 5cqi, 15px);
 
-// TODO Stickers
-.ui-sticker {
-   @include uiBtnType( $type: sticker );
-}
 .sticker_sold {
    color: var(--light);
    background: rgba(155, 187, 216, 0.70);
@@ -16,9 +12,10 @@ $positionHiddenEls: clamp(12px, 5cqi, 20px);
    container-type: inline-size;
 
    .img {
-      @extend %dynamicRadius40to25;
+      // @extend %dynamicRadius40to25;
       
       background: var(--separating);
+      border-radius: var(--mdRd);
       position: relative;
       overflow: hidden;
       cursor: pointer;
@@ -34,7 +31,10 @@ $positionHiddenEls: clamp(12px, 5cqi, 20px);
          position: absolute;
          top: 0;
          right: 0;
-         transform: translateX(100%);
+         // transform: translateX(100%);
+         opacity: 0;
+         visibility: hidden;
+         transform: scale(1.2);
          transition: all .5s ease;
       }
 
@@ -43,18 +43,77 @@ $positionHiddenEls: clamp(12px, 5cqi, 20px);
          bottom: $positionHiddenEls;
          right: $positionHiddenEls;
 
-         .btn_product_cart {
+         .btn-cart {
             width: clamp(38px, 15cqw, 46px);
             height: clamp(38px, 15cqw, 46px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: var(--circleRd);
+            background: var(--light);
+            box-shadow: var(--light_btn_shadow);
+            position: relative;
+            transition: all .2s ease;
 
             i {
                font-size: clamp(19px, 6cqi, 22px);
+               color: var(--dark);
+               transition: inherit;
             }
-         }
 
-         .btn_card-order {
-            @include uiBtnType( $type: helper );
-            @include uiBtnTheme( $theme: light );
+            .in-cart {
+               width: 25px;
+               height: 25px;
+               border-radius: var(--circleRd);
+               background: var(--success);
+               box-shadow: var(--light_btn_shadow);
+               position: absolute;
+               top: -9px;
+               right: -6px;
+               opacity: 0;
+               visibility: hidden;
+               transform: translateY(-10px);
+               transition: all .3s ease;
+
+               &:after {
+                  content: '\e90c';
+                  display: block;
+                  font-family: var(--icon_font);
+                  font-size: 14px;
+                  color: var(--dark);
+                  position: absolute;
+                  top: 50%;
+                  left: 50%;
+                  transform: translate(-50%, -50%);
+               }
+            }
+
+            &:hover {
+               background: var(--action);
+               box-shadow: var(--card_btn_action_hover_shadow);
+
+               i {
+                  color: var(--light);
+               }
+
+               &.inCart {
+                  box-shadow: var(--light_btn_shadow);
+               }
+            }
+
+            &.inCart {
+               background: var(--dark);
+               
+               i {
+                  color: var(--light);
+               }
+
+               .in-cart {
+                  opacity: 1;
+                  visibility: visible;
+                  transform: none;
+               }
+            }
          }
       }
 
@@ -83,11 +142,27 @@ $positionHiddenEls: clamp(12px, 5cqi, 20px);
       align-items: center;
       gap: 10px;
 
+      .colors {
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         gap: 5px;
+
+         &__item {
+            width: 20px;
+            height: 20px;
+            border-radius: var(--circleRd);
+            border: 1px solid var(--light);
+            box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.02);
+         }
+      }
+
       .title {
-         font-size: clamp(18px, 8cqi, 23px);
+         font-size: clamp(18px, 8cqi, 20px);
          font-weight: 300;
          line-height: clamp(105%, 8cqi, 110%);
          text-align: center;
+         max-width: 320px;
          transition: all .2s ease;
    
          a {
@@ -99,15 +174,13 @@ $positionHiddenEls: clamp(12px, 5cqi, 20px);
       .price {
          color: var(--dark);
          font-size: clamp(18px, 5cqi, 20px);
-         font-weight: 600;
+         font-weight: 500;
          line-height: 100%;
       }
    }
 
    &:hover {
       .img {
-         background: var(--separating_contrast);
-
          .quick-nav {
             .circle-icon_card {
                transform: none;
@@ -122,6 +195,8 @@ $positionHiddenEls: clamp(12px, 5cqi, 20px);
       }
 
       .hover-img {
+         opacity: 1;
+         visibility: visible;
          transform: none;
       }
 

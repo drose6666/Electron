@@ -61,6 +61,10 @@
    color: var(--dark);
    position: relative;
 
+   &.title_product-page {
+      font-weight: 500;
+   }
+
    &:after {
       content: '';
       position: absolute;

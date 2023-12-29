@@ -22,16 +22,16 @@
    <link rel="icon" href="../../img/favicon/fav_48.png" type="image/png" sizes="48x48">
    <link rel="icon" href="../../img/favicon/fav_128.png" type="image/png" sizes="128x128">
    
-   <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css?_v=20231226090131" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
-   <!-- <link rel="stylesheet" href="../../libs/css/bootstrap-grid.min.css?_v=20231226090131"> -->
+   <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css?_v=20231229141900" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+   <!-- <link rel="stylesheet" href="../../libs/css/bootstrap-grid.min.css?_v=20231229141900"> -->
 
-   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css?_v=20231226090131" />
-   <script defer src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js?_v=20231226090131"></script>
-   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js?_v=20231226090131" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-   <link rel="stylesheet" href="../../libs/css/reset.min.css?_v=20231226090131">
-   <link rel="stylesheet" as="font" href="../../fonts/fonts.css?_v=20231226090131">
-   <link rel="stylesheet" as="font" href="../../fonts/icon-font.css?_v=20231226090131">
-   <link rel="stylesheet" href="css/page-brands.min.css?_v=20231226090131">
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css?_v=20231229141900" />
+   <script defer src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js?_v=20231229141900"></script>
+   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js?_v=20231229141900" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+   <link rel="stylesheet" href="../../libs/css/reset.min.css?_v=20231229141900">
+   <link rel="stylesheet" as="font" href="../../fonts/fonts.css?_v=20231229141900">
+   <link rel="stylesheet" as="font" href="../../fonts/icon-font.css?_v=20231229141900">
+   <link rel="stylesheet" href="css/page-brands.min.css?_v=20231229141900">
    
    <title>Brands Page</title>
 </head>
@@ -68,9 +68,15 @@
          </nav>
       </div>
 
+      <!-- Заглушка, пока не готовы личный кабинет и авторизация -->
       <a href="tel:+7 911 149 05 05" class="contact-link basicHoverUnderline">
          <span class="child">+7 911 149 05 05</span>
       </a>
+
+      <!-- Меню авторизованных пользователей -->
+      
+
+      <!-- Кнопка входа для не авторизованных пользователей -->
       
    </div>
 </div>
@@ -88,15 +94,14 @@
    <ul class="menu-list">
       <li class="menu-list__item"><a class="child" href="../../../pages/page-category/page-category.html">Ноутбуки и ПК</a></li>
       <li class="menu-list__item"><a class="child" href="../../../pages/page-category/page-category.html">Смартфоны</a></li>
+     
       <li class="menu-list__item">
          <a class="child" href="../../../pages/page-category/page-category.html">Комплектующие</a>
          <div class="submenu-wrapper">
-   <div class="submenu-links-container">
-      <div class="ui-tabs">
-         <button class="ui-tab header-submenu__tab active">Для ноутбуков и ПК</button><button class="ui-tab header-submenu__tab">Для смартфонов</button>
-      </div>
+   <div class="submenu">
+      <div class="submenu-list-wrap">
+         <h4 class="submenu-list-name">Для ноутбуков и ПК</h4>
 
-      <div class="submenu">
          <ul class="submenu-list">
             <li class="submenu-list__item basicHoverUnderline"><a href="" class="child">Материнские платы</a></li>
             <li class="submenu-list__item basicHoverUnderline"><a href="" class="child">Процессоры</a></li>
@@ -105,12 +110,11 @@
             <li class="submenu-list__item basicHoverUnderline"><a href="" class="child">Звуковые карты</a></li>
             <li class="submenu-list__item basicHoverUnderline"><a href="" class="child">Блоки питания</a></li>
             <li class="submenu-list__item basicHoverUnderline"><a href="" class="child">Накопитель SSD</a></li>
-            <li class="submenu-list__item basicHoverUnderline"><a href="" class="child">Корпуса</a></li>
-            <li class="submenu-list__item basicHoverUnderline"><a href="" class="child">Видеокарты</a></li>
-            <li class="submenu-list__item basicHoverUnderline"><a href="" class="child">Системы охлаждения</a></li>
-            <li class="submenu-list__item basicHoverUnderline"><a href="" class="child">Модули памяти</a></li>
-            <li class="submenu-list__item basicHoverUnderline"><a href="" class="child">Термопасты</a></li>
          </ul>
+      </div>
+
+      <div class="submenu-list-wrap">
+         <h4 class="submenu-list-name">Для смартфонов</h4>
 
          <ul class="submenu-list">
             <li class="submenu-list__item basicHoverUnderline"><a href="" class="child">Материнские платы</a></li>
@@ -140,7 +144,56 @@
    </div>
 </div>
       </li>
-      <li class="menu-list__item"><a class="child" href="../../../pages/page-category/page-category.html">Аксессуары</a></li>
+
+      <li class="menu-list__item">
+         <a class="child" href="../../../pages/page-category/page-category.html">Аксессуары</a>
+         <div class="submenu-wrapper">
+   <div class="submenu">
+      <div class="submenu-list-wrap">
+         <h4 class="submenu-list-name">Для ноутбуков и ПК</h4>
+
+         <ul class="submenu-list">
+            <li class="submenu-list__item basicHoverUnderline"><a href="" class="child">Материнские платы</a></li>
+            <li class="submenu-list__item basicHoverUnderline"><a href="" class="child">Процессоры</a></li>
+            <li class="submenu-list__item basicHoverUnderline"><a href="" class="child">Оптические приводы</a></li>
+            <li class="submenu-list__item basicHoverUnderline"><a href="" class="child">Жесткие диски</a></li>
+            <li class="submenu-list__item basicHoverUnderline"><a href="" class="child">Звуковые карты</a></li>
+            <li class="submenu-list__item basicHoverUnderline"><a href="" class="child">Блоки питания</a></li>
+            <li class="submenu-list__item basicHoverUnderline"><a href="" class="child">Накопитель SSD</a></li>
+         </ul>
+      </div>
+
+      <div class="submenu-list-wrap">
+         <h4 class="submenu-list-name">Для смартфонов</h4>
+
+         <ul class="submenu-list">
+            <li class="submenu-list__item basicHoverUnderline"><a href="" class="child">Материнские платы</a></li>
+            <li class="submenu-list__item basicHoverUnderline"><a href="" class="child">Процессоры</a></li>
+            <li class="submenu-list__item basicHoverUnderline"><a href="" class="child">Оптические приводы</a></li>
+            <li class="submenu-list__item basicHoverUnderline"><a href="" class="child">Жесткие диски</a></li>
+            <li class="submenu-list__item basicHoverUnderline"><a href="" class="child">Звуковые карты</a></li>
+            <li class="submenu-list__item basicHoverUnderline"><a href="" class="child">Блоки питания</a></li>
+            <li class="submenu-list__item basicHoverUnderline"><a href="" class="child">Накопитель SSD</a></li>
+         </ul>
+      </div>
+   </div>
+   
+   <div class="submenu-category-container">
+      <a href="../../../pages/page-category/page-category.html" class="category-card complect card_submenu">
+   <div class="category-card__container">
+      <h3 class="name">Комплектующие</h3>
+      <p class="description">Смартфоны, флагманские новинки и еще много интересного</p>
+
+      <div class="ui-more_full-hover more_category">
+   <span class="child">Смотреть все</span>
+</div>
+
+      <img src="../../img/categories/complect_full_1.5x.webp" alt="" class="img">
+   </div>
+</a>
+   </div>
+</div>
+      </li>
    </ul>
 </nav>
       <div class="header-additional">
@@ -173,20 +226,17 @@
          <div class="ui-container">
             <div class="page-search-component">
    <div class="page-search-container">
-      <a href="" class="btn_i_primary_dark btn_page-search">
-   Продолжить покупки
-   <div class="icon"><i class="i-arrow_up_right_long"></i></div>
-</a>
+      <a href="/" class="btn_primary-action">Продолжить покупки</a>
    
       <search role="search">
    <form class="search-form page-search" action="" method="" id="page-search">
       <input type="text" name="search" inputmode="search" autocomplete="on" placeholder="Поиск..." class="ui-input">
       
-      <button type="submit" class="ui-btn element-inside-input right btn_search">Найти</button>
+      <button type="submit" class="btn_primary-action">Найти</button>
    </form>
 </search>
    
-      <a href="@@link" class="ui-btn btn_contact">Связаться с нами</a>
+      <a href="#" class="btn_contact">Связаться с нами</a>
    </div>
 
    <div class="page-search-texts">
@@ -225,10 +275,7 @@
    <img src="../../../img/brands/brand_12.webp" alt="">
 </a>
 </div>
-               <button type="@@type" class="btn_more btn_send-review">
-   Показать еще
-   <div class="icon"><i class="i-arrow_up_long"></i></div>
-</button>
+               <button type="button" class="btn_ui-option">Показать еще</button>
             </div>
          </section>
          
@@ -242,7 +289,7 @@
       <form class="ui-form" action="" method="" id="form-subscribe">
    <div class="ui-form-item">
       <input type="email" name="user_subscribe" inputmode="email" autocomplete="email" placeholder="Email..." class="ui-input input_subscribe ">
-      <button type="@@type" class="ui-btn btn_inside-input element-inside-input right">Подписаться</button>
+      <button type="submit" class="btn_primary-action">Подписаться</button>
    </div>
 </form>
 
@@ -365,10 +412,7 @@
             <div class="contact-inside__item">График: <strong>Пн-Вс: 09:00-20:00</strong></div>
          </div>
 
-         <a href="#" class="btn_footer-enter">
-   Личный кабинет
-   <div class="icon"><i class="i-arrow_right"></i></div>
-</a>
+         <a href="#" class="btn_primary-action">Личный кабинет</a>
       </div>
    </div>
 
@@ -521,7 +565,7 @@
    <form class="search-form main-search" action="" method="" id="main-search">
       <input type="text" name="search" inputmode="search" autocomplete="on" placeholder="Поиск..." class="ui-input">
       
-      <button type="submit" class="ui-btn element-inside-input right btn_search">Найти</button>
+      <button type="submit" class="btn_primary-action">Найти</button>
    </form>
 </search>
 
@@ -652,92 +696,7 @@
 
    <div class="ui-popup__overlay" id="overlay-search"></div>
 </div>
-      <div class="ui-popup fade-side" id="popup-compare">
-   <div class="ui-popup__container">
-
-      <h2 class="ui-popup__title">Сравнение</h2>
       
-      <div class="ui-popup-products">
-         <div class="ui-popup-products__list">
-            <div class="product-card-cart fade-compare-card">
-   <a href="#" class="img">
-      <img src="../../../../img/cards/card_3.webp" alt="">
-   </a>
-
-   <div class="content">
-      <div class="main-info">
-         <h4 class="product-name"><a href="#">MacBook Pro (M2 Pro, 2023)</a></h4>
-         <ul class="product-options">
-            <li class="color-item"></li>
-            <li class="option-item">16/512 Gb</li>
-            <li class="option-item">256 Gb</li>
-            <li class="option-item">16/512 Gb</li>
-         </ul>
-      </div>
-
-      <div class="additional-info">
-         <div class="price">150 970 ₽</div>
-         <div class="product-counter @@className">
-   <i class="i-minus count-down"></i>
-   <input type="text" value="1" inputmode="numeric" class="count" name="product_count">
-   <i class="i-plus count-up"></i>
-</div>
-      </div>
-   </div>
-
-   <div class="ui-close close_product-remove">
-   <i class="i-close"></i>
-</div>
-</div><div class="product-card-cart fade-compare-card">
-   <a href="#" class="img">
-      <img src="../../../../img/cards/card_2.webp" alt="">
-   </a>
-
-   <div class="content">
-      <div class="main-info">
-         <h4 class="product-name"><a href="#">Samsung Galaxy S23 Ultra в комплекте с Buds 2 Pro</a></h4>
-         <ul class="product-options">
-            <li class="color-item"></li>
-            <li class="option-item">16/512 Gb</li>
-            <li class="option-item">256 Gb</li>
-            <li class="option-item">16/512 Gb</li>
-         </ul>
-      </div>
-
-      <div class="additional-info">
-         <div class="price">150 970 ₽</div>
-         <div class="product-counter @@className">
-   <i class="i-minus count-down"></i>
-   <input type="text" value="1" inputmode="numeric" class="count" name="product_count">
-   <i class="i-plus count-up"></i>
-</div>
-      </div>
-   </div>
-
-   <div class="ui-close close_product-remove">
-   <i class="i-close"></i>
-</div>
-</div>
-         </div>
-      </div>
-
-      <div class="ui-popup__btns links">
-         <a href="#" class="btn_i_popup_primary">
-   Перейти к сравнению
-   <div class="icon"><i class="i-arrow_up_right_long"></i></div>
-</a>
-         <a href="#" class="ui-more_basic-slow_dark ui-more_compare">
-   <span class="child">Продолжить покупки</span>
-</a>
-      </div>
-
-      <div class="ui-close close_fade-side left_side popup-compare-close">
-   <i class="i-angle_right"></i>
-</div>
-   </div>
-
-   <div class="ui-popup__overlay" id="overlay-compare"></div>
-</div>
       <div class="ui-popup fade-side" id="popup-cart">
    <div class="ui-popup__container">
 
@@ -746,7 +705,7 @@
       <div class="ui-popup-products">
          <div class="ui-popup-products__list">
             <div class="product-card-cart ">
-   <a href="#" class="img">
+   <a href="../../../../pages/page-product/page-product.html" class="img">
       <img src="../../../../img/cards/card_3.webp" alt="">
    </a>
 
@@ -775,7 +734,7 @@
    <i class="i-close"></i>
 </div>
 </div><div class="product-card-cart ">
-   <a href="#" class="img">
+   <a href="../../../../pages/page-product/page-product.html" class="img">
       <img src="../../../../img/cards/card_2.webp" alt="">
    </a>
 
@@ -830,11 +789,8 @@
 </ul>
 
       <div class="ui-popup__btns">
-         <a href="#" class="btn_i_popup_primary">
-   Перейти в корзину
-   <div class="icon"><i class="i-cart"></i></div>
-</a>
-         <a href="#" class="ui-btn btn_primary_outlines_deflight">Оформить заказ</a>
+         <a href="#" class="btn_primary-action ">Перейти в корзину</a>
+         <a href="#" class="btn_primary-outlineLight">Оформить заказ</a>
       </div>
 
       <div class="ui-close close_fade-side left_side popup-cart-close">
@@ -844,360 +800,8 @@
 
    <div class="ui-popup__overlay" id="overlay-cart"></div>
 </div>
-      <div class="ui-popup fade-side popup-with-images" id="popup-quickview">
-   <div class="ui-popup__container"> 
-
-      <!-- Здесь контент -->
-      <div class="ui-popup__images-wrap swiper-container">
-         <div class="ui-popup__images swiper" id="quickview-product-swiper">
-            <div class="swiper-wrapper">
-               <div class="swiper-slide img">
-                  <img loading="lazy" src="../../../../img/cards/card_16.webp" alt="">
-                  <div class="ui-circle-icon btn_image-preview">
-   <i class="i-search"></i>
-</div>
-               </div>
-
-               <div class="swiper-slide img">
-                  <img loading="lazy" src="../../../../img/cards/card_7.webp" alt="">
-                  <div class="ui-circle-icon btn_image-preview">
-   <i class="i-search"></i>
-</div>
-               </div>
-
-               <div class="swiper-slide img">
-                  <img loading="lazy" src="../../../../img/cards/card_3.webp" alt="">
-                  <div class="ui-circle-icon btn_image-preview">
-   <i class="i-search"></i>
-</div>
-               </div>
-
-               <div class="swiper-slide img">
-                  <img loading="lazy" src="../../../../img/review/review-img_1.webp" alt="">
-                  <div class="ui-circle-icon btn_image-preview">
-   <i class="i-search"></i>
-</div>
-               </div>
-
-               <div class="swiper-slide img">
-                  <img loading="lazy" src="../../../../img/review/review-img_10.webp" alt="">
-                  <div class="ui-circle-icon btn_image-preview">
-   <i class="i-search"></i>
-</div>
-               </div>
-
-               <div class="swiper-slide img">
-                  <img loading="lazy" src="../../../../img/review/review_13.webp" alt="">
-                  <div class="ui-circle-icon btn_image-preview">
-   <i class="i-search"></i>
-</div>
-               </div>
-
-               <div class="swiper-slide img">
-                  <img loading="lazy" src="../../../../img/review/review_14.webp" alt="">
-                  <div class="ui-circle-icon btn_image-preview">
-   <i class="i-search"></i>
-</div>
-               </div>
-
-               <div class="swiper-slide img">
-                  <img loading="lazy" src="../../../../img/review/review_16.webp" alt="">
-                  <div class="ui-circle-icon btn_image-preview">
-   <i class="i-search"></i>
-</div>
-               </div>
-
-               <div class="swiper-slide img">
-                  <img loading="lazy" src="../../../../img/cards/card_17.webp" alt="">
-                  <div class="ui-circle-icon btn_image-preview">
-   <i class="i-search"></i>
-</div>
-               </div>
-
-               <div class="swiper-slide img">
-                  <img loading="lazy" src="../../../../img/cards/card_4.webp" alt="">
-                  <div class="ui-circle-icon btn_image-preview">
-   <i class="i-search"></i>
-</div>
-               </div>
-
-               <div class="swiper-slide img">
-                  <img loading="lazy" src="../../../../img/cards/card_5.webp" alt="">
-                  <div class="ui-circle-icon btn_image-preview">
-   <i class="i-search"></i>
-</div>
-               </div>
-
-               <div class="swiper-slide img">
-                  <img loading="lazy" src="../../../../img/cards/card_6.webp" alt="">
-                  <div class="ui-circle-icon btn_image-preview">
-   <i class="i-search"></i>
-</div>
-               </div>
-
-               <div class="swiper-slide img">
-                  <img loading="lazy" src="../../../../img/cards/card_10.webp" alt="">
-                  <div class="ui-circle-icon btn_image-preview">
-   <i class="i-search"></i>
-</div>
-               </div>
-
-               <div class="swiper-slide img">
-                  <img loading="lazy" src="../../../../img/cards/card_11.webp" alt="">
-                  <div class="ui-circle-icon btn_image-preview">
-   <i class="i-search"></i>
-</div>
-               </div>
-               
-               <div class="swiper-slide img">
-                  <img loading="lazy" src="../../../../img/cards/card_13.webp" alt="">
-                  <div class="ui-circle-icon btn_image-preview">
-   <i class="i-search"></i>
-</div>
-               </div>
-            </div>
-         </div>
-
-         <div class="swiper-button-prev quickview-product-prev"></div>
-         <div class="swiper-button-next quickview-product-next"></div>
-      </div>
-
-      <!-- Здесь информация о товаре -->
-      <div class="ui-popup__content-wrap">
-         <div class="product-info">
-   <a href="../../../pages/page-brand-single/page-brand-single.html" class="product-info__brand basicHoverUnderline">
-      <span class="child">Asus</span>
-   </a>
-
-   <h2 class="product-info__name">VivoBook 15 M1502IA-BQ011W</h2>
-
-   <div class="product-info__rating">
-      <div class="product-rating-container">
-         <div class="ui-star-rating star-rating_static dark">
-   <div class="ui-stars">
-      <i class="i-star ui-star"></i>
-      <i class="i-star ui-star"></i>
-      <i class="i-star ui-star"></i>
-      <i class="i-star ui-star current"></i>
-      <i class="i-star ui-star"></i>
-   </div>
-
-   <span class="rating-value">4.3</span>
-</div>
-         <span class="reviews-count">(10000)</span>
-      </div>
-
-      <div class="product-additional">
-         <button class="btn-additional"><i class="i-compare"></i></button>
-         <button class="btn-additional active"><i class="i-heart"></i></button>
-      </div>
-   </div>
-
-   <h3 class="product-info__price">170 990 ₽</h3>
-
-   <form action="" class="product-info__options">
-      <!-- Здесь опции товара. Подключаются в JS (product-info.js) -->
-   </form>
-
-   <div class="product-info__action">
-      <div class="product-count">
-         <h6 class="product-count__title product-option-name">Количество</h6>
-         <div class="product-counter quickview">
-   <i class="i-minus count-down"></i>
-   <input type="text" value="1" inputmode="numeric" class="count" name="product_count">
-   <i class="i-plus count-up"></i>
-</div>
-      </div>
-
-      <div class="ui-popup__btns">
-         <button type="@@type" class="ui-btn btn_primary-action">Купить сейчас</button>
-
-         <a href="#" class="ui-btn btn-quickview-buy">Купить сейчас</a>
-
-         <a href="../../../pages/page-product/page-product.html" class="ui-more_basic-slow_dark product-link">
-   <span class="child">Перейти к товару</span>
-</a>
-      </div>
-   </div>
-</div>
-      </div>
-      
-      <div class="ui-close close_fade-side left_side popup-quickview-close">
-   <i class="i-angle_right"></i>
-</div>
-   </div>
-
-   <!-- Здесь контент -->
-
-   <div class="ui-popup__overlay" id="overlay-quickview"></div>
-</div>
-      <div class="ui-popup popup" id="popup-image-preview">
-   <div class="ui-popup__container">
-
-      <!-- Здесь контент -->
-      <ul class="image-preview-list">
-         <li class="image-preview-item"><img src="../../../img/cards/cards_large/card_1.webp" alt=""></li>
-         <li class="image-preview-item"><img src="../../../img/cards/cards_large/card_2.webp" alt=""></li>
-         <li class="image-preview-item"><img src="../../../img/cards/cards_large/card_3.webp" alt=""></li>
-         <li class="image-preview-item"><img src="../../../img/cards/cards_large/card_4.webp" alt=""></li>
-         <li class="image-preview-item"><img src="../../../img/cards/cards_large/card_5.webp" alt=""></li>
-         <li class="image-preview-item"><img src="../../../img/review/review_13.webp" alt=""></li>
-         <li class="image-preview-item"><img src="../../../img/review/review-img_12.webp" alt=""></li>
-         <li class="image-preview-item"><img src="../../../img/review/review_14.webp" alt=""></li>
-         <li class="image-preview-item"><img src="../../../img/review/review_16.webp" alt=""></li>
-         <li class="image-preview-item"><img src="../../../img/cards/cards_large/card_7.webp" alt=""></li>
-         <li class="image-preview-item"><img src="../../../img/cards/cards_large/card_17.webp" alt=""></li>
-      </ul>
-      <!-- Здесь контент -->
-   </div>
-
-   <div class="ui-close close_popup popup-image-preview-close">
-   <i class="i-close"></i>
-</div>
-
-   <div class="ui-popup__overlay" id="overlay-image-preview"></div>
-</div>
-      <div class="ui-popup fade-side left-side" id="popup-filters">
-   <form action="" method="" class="ui-popup__container" id="form-filters">
-      <h2 class="ui-popup__title title_filter underline">Фильтры</h2>
-
-      <div class="form-filters__content">
-         <fieldset class="filter-item price">
-   <legend class="filter-item__title">Цена</legend>
-
-   <div class="price-range filter-collapse">
-      <div class="ui-form-item">
-         <span class="label">от</span>
-         <input type="text" name="filter_start_price" inputmode="numeric" autocomplete="off" value="500" class="input_filter-price">
-      </div>
-
-      <i class="i-minus separate"></i>
-
-      <div class="ui-form-item">
-         <span class="label">до</span>
-         <input type="text" name="filter_end_price" inputmode="numeric" autocomplete="off" value="500 000" class="input_filter-price">
-      </div>
-   </div>
-</fieldset>
-      </div>
-
-      <div class="form-filters__nav">
-         <p class="products-count">Показано товаров: <strong>257</strong></p>
-      
-         <div class="ui-popup__btns">
-            <button type="submit" class="ui-btn btn_filter_apply">Применить</button>
-            <button type="button" class="ui-btn btn_filter_cancel">Сбросить</button>
-         </div>
-      </div>
-
-      <div class="ui-close close_fade-side right_side popup-filters-close">
-   <i class="i-angle_left"></i>
-</div>
-   </form>
-
-   <div class="ui-popup__overlay" id="overlay-filters"></div>
-</div>
-
-
-      <div class="ui-popup popup" id="popup-send-review">
-   <div class="ui-popup__container">
-
-      <!-- Здесь контент -->
-      <form action="" class="ui-form" id="form-send-review">
-   <div class="form-head">
-      <div class="ui-popup__title-wrap">
-         <h3 class="ui-popup__title title_part-of-block ">Рейтинг</h3>
-         <p class="text">Укажите рейтинг от 1 до 5 (можно использовать десятичные значения)</p>
-      </div>
-      
-      <div class="review-rating-wrap">
-         <div class="ui-star-rating star-rating_form ">
-   <div class="ui-stars">
-      <label class="ui-star-form">
-         <input type="radio" name="user_rating" value="5.0" class="ui-star-form__input visually-hidden">
-         <i class="i-star ui-star-form__icon"></i>
-      </label>
-      
-      <label class="ui-star-form">
-         <input type="radio" name="user_rating" checked value="4.0" class="ui-star-form__input visually-hidden">
-         <i class="i-star ui-star-form__icon"></i>
-      </label>
-   
-      <label class="ui-star-form">
-         <input type="radio" name="user_rating" value="3.0" class="ui-star-form__input visually-hidden">
-         <i class="i-star ui-star-form__icon"></i>
-      </label>
-    
-      <label class="ui-star-form">
-         <input type="radio" name="user_rating" value="2.0" class="ui-star-form__input visually-hidden">
-         <i class="i-star ui-star-form__icon"></i>
-      </label>
-   
-      <label class="ui-star-form">
-         <input type="radio" name="user_rating" value="1.0" class="ui-star-form__input visually-hidden">
-         <i class="i-star ui-star-form__icon"></i>
-      </label> 
-   </div>
-
-   <div class="ui-form-item">
-      <input type="text" name="rating" inputmode="decimal" autocomplete="off" placeholder="4.0" value="4.0" class="ui-input input_rating">
-   </div>
-</div>
-      </div>
-   </div>
-
-   <div class="form-fields three-fields">
-      <div class="ui-form-item">
-         <input type="text" name="user_name" inputmode="text" autocomplete="name" placeholder="Имя" class="ui-input_popup ">
-         <span class="error-message"></span>
-      </div>
-   
-      <div class="ui-form-item">
-         <input type="email" name="user_email" inputmode="email" autocomplete="email" placeholder="Email" class="ui-input_popup ">
-         <span class="error-message"></span>
-      </div>
-   
-      <div class="ui-form-item full-width">
-         <textarea name="user_review" placeholder="Отзыв" class="ui-textarea theme_dark"></textarea>
-         <span class="error-message"></span>
-      </div>
-   
-      <div class="ui-form-item full-width">
-         <div class="ui-file-previews"></div>
-
-<label class="ui-file">
-   <input class="ui-file__input visually-hidden" type="file" id="ui-file__input" accept=".jpg, .jpeg, .png, .webp" multiple>
-   <h5 class="ui-file__title">
-      <i class="i-arrow_upload"></i> Выберите файл
-   </h5>
-   <p class="ui-file__text">Вы можете загрузить <strong>не более 6</strong> изображений в форматах <strong>.jpeg, .jpg, .png, .webp</strong>. Размер каждого не должен превышать <strong>5Мб</strong></p>
-</label> 
-
-
-
-      </div>
-
-      <div class="ui-form-submit">
-         <button type="@@type" class="btn_i_primary_action">
-   Оствавить отзыв
-   <div class="icon"><i class="i-arrow_up_right_long"></i></div>
-</button>
-   
-         <p class="ui-form-submit__text">Конфиденциальность введенных данных гарантируется</p>
-      </div>
-   </div>
-</form>
-      <!-- Здесь контент -->
-
-      <div class="ui-close close_popup popup-send-review-close">
-   <i class="i-close"></i>
-</div>
-   </div>
-
-   <div class="ui-popup__overlay" id="overlay-send-review"></div>
-</div>
       
       
-      <script type="module" src="js/bundle-page-brands.min.js?_v=20231226090131"></script>
+      <script type="module" src="js/bundle-page-brands.min.js?_v=20231229141900"></script>
    </body>
 </html>  

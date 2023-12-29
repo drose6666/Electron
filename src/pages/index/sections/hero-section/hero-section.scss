@@ -1,114 +1,173 @@
-.hero-section {
-   margin-top: 80px;
-   container-name: heroContainer;
-   container-type: inline-size;
-
-   @extend %fullWidthElement;
+// TODO 
+%fadeOnContent {
+   opacity: 1;
+   visibility: visible;
+   transform: none;
 }
 
-// TODO Hero слайдер
-#hero-swiper {
-   width: 100%;
-   height: 600px;
-   
-   @extend %dynamicRadius40to25;
+%fadeInContent {
+   opacity: 0;
+   visibility: hidden;
+   transform: translateY(-15px);
+   transition: 
+      opacity .5s ease,
+      visibility .5s ease,
+      transform .5s ease,
+      background-color .2s ease,
+      color .2s ease;
+}
 
-   .slide {
+
+
+
+.container_hero-swiper {
+   margin-top: 60px;
+   container-type: inline-size;
+   container-name: heroContainer;
+
+   @extend %fullWidthElement;
+
+   .hero-swiper {
       width: 100%;
-      height: 100%;
-      display: flex;
-      align-items: flex-end;
-      position: relative;
-      height: 600px;
 
-      .slide-text-wrap {
-         padding: 0 40px 185px clamp(10px, 5cqi, 80px);
+      @extend %dynamicRadius40to25;
+
+      .hero-slide {
+         padding-left: clamp(20px, 5cqi, 90px);
+         padding-right: 20px;
+         width: 100%;
+         height: clamp(560px, 40cqi, 700px);
          position: relative;
-         z-index: 1;
-      }
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         overflow: hidden;
 
-      .hero-color {
-         font-size: 16px;
-         font-weight: 300;
-         line-height: 100%;
-         text-transform: uppercase;
-         letter-spacing: 20%;
-         color: var(--dark);
-         position: absolute;
-         top: 70px;
-         left: clamp(10px, 5cqi, 80px);
-         z-index: 1;
-      }
+         @extend %dynamicRadius40to25;
 
-      .additional-text {
-         font-size: 25px;
-         font-weight: 300;
-         line-height: 100%;
-         color: #0075CF;
-         text-align: right;
-         // text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
-      }
+         &__img {
+            display: inline-block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 0;
+            transform: scale(1.3);
+            transition: all .8s ease;
+         }
 
-      .hero-title {
-         font-size: clamp(42px, 15.5cqi, 65px);
-         font-weight: 500;
-         line-height: 85%;
-         color: var(--dark);
-         position: relative;
-
-         .hero-title__mark {
-            white-space: nowrap;
+         &__title {
+            font-size: clamp(40px, 14cqi, 75px);
+            font-weight: 600;
+            line-height: 100%;
+            color: var(--light);
+            letter-spacing: -2.25px;
+            position: relative;
+            z-index: 1;
             
-            &.thin {
-               font-weight: 200;
+            @extend %fadeInContent;
+
+            strong {
+               white-space: nowrap;
+            }
+         }
+
+         &__subtitle {
+            margin-top: 20px;
+            margin-bottom: 70px;
+            font-size: clamp(30px, 5cqi, 35px);
+            font-weight: 300;
+            line-height: 100%;
+            color: var(--light);
+            position: relative;
+            z-index: 1;
+
+            @extend %fadeInContent;
+         }
+
+         .hero_btn {
+            display: inline-flex;
+            max-width: max-content;
+            position: relative;
+            z-index: 1;
+
+            @extend %fadeInContent;
+         }
+
+
+         &.swiper-slide-active {
+            .hero-slide__img {
+               transform: none;
             }
 
-            &.colored {
-               color: #A9A399;
+            .hero-slide__title {
+               @extend %fadeOnContent;
+
+               transition-delay: .2s;
+            }
+
+            .hero-slide__subtitle {
+               @extend %fadeOnContent;
+
+               transition-delay: .3s;
+            }
+
+            .hero_btn {
+               @extend %fadeOnContent;
+
+               transition: 
+                  opacity .5s ease .4s,
+                  visibility .5s ease .4s,
+                  transform .5s ease .4s,
+                  background-color .2s ease 0s,
+                  color .2s ease 0s;
             }
          }
       }
 
-      .hero-slogan {
-         margin-top: 15px;
-         margin-bottom: 60px;
-         font-size: 25px;
-         font-weight: 300;
-         line-height: 100%;
-         color: var(--dark);
-      }
+      
+   }
 
-      .ui-btn {
-         @include uiBtnType( $type: secondary );
-         @include uiBtnTheme( $theme: dark );
+   // TODO Навигация слайлера
+   .hero-swiper-arrows {
+      position: absolute;
+      right: 20px;
+      bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      z-index: 1;
 
-         display: inline-flex;
-      }
+      .hero_arrow {
+         position: static;
+         transform: none;
+         width: 40px;
+         height: 40px;
 
-      .hero-img {
-         position: absolute;
-         width: 100%;
-         height: 100%;
-         object-fit: cover;
-         object-position: left center;
+         &:after {
+            font-size: 19px;
+         }
       }
    }
-}
 
+   @container (max-width: 600px) {
+      // border-radius: 25px;
 
-
-@container heroContainer (max-width: 1060px) {
-   #hero-swiper {
-      .slide {
-         height: 500px;
+      .hero-swiper {
+         .hero-slide {
+            .hero-slide__title {
+               font-weight: 500;
+               letter-spacing: 0;
+            }
+         }
       }
-   }
-}
 
-@container heroContainer (max-width: 360px) {
-   #hero-swiper {
-      .slide {
-         height: 400px;
+      .hero-swiper-arrows {
+         bottom: 20px;
+         right: 20px;
+         gap: 10px;
       }
    }
 }

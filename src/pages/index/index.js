@@ -4,6 +4,8 @@ import '../../js/common.js';
 import './sections/hero-section/hero-section.js';
 import './sections/new-products-section/new-products-section.js';
 import './sections/reviews-section/reviews-section.js';
+import '../../components/product/product.js';
+
 
 /* TODO Components */
 import '../../components/popups/fade-side/popup-quickview/popup-quickview.js';

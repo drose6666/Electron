@@ -1,7 +1,9 @@
 @import './product-info-options/product-info-options';
 
 .product-info {
+   container-type: inline-size;
 
+   // TODO Стили для popup-quickview
    &__brand {
       margin-bottom: 20px;
       display: inline-block;
@@ -76,6 +78,20 @@
       }
    }
 
+   &__text {
+      margin-top: 20px;
+      padding-top: 30px;
+      font-size: 17px;  
+      font-weight: 300;
+      line-height: 150%;
+      color: var(--dark);
+      border-top: 1px solid var(--border_slow);
+      -webkit-line-clamp: 4;
+      -webkit-box-orient: vertical;
+      display: -webkit-box;
+      overflow: hidden;
+   }
+
    &__price {
       margin: 60px 0;
       font-size: 35px;
@@ -104,18 +120,75 @@
    }
 
    .btn-quickview-cart {
-      @include uiBtnType( $type: primary, $freeWidth: true, $maxWidth: 100% );
-      @include uiBtnTheme( $theme: action );
+      @include btnType( $type: primary );
+      @include btnTheme( $theme: action );
+
+      display: flex;
    }
 
    .btn-quickview-buy {
-      @include uiBtnType( $type: primary, $freeWidth: true, $maxWidth: 100% );
-      @include uiBtnTheme( $theme: outlines, $childTheme: outlinesDefaultLight );
+      @include btnType( $type: primary );
+      @include btnTheme( $theme: outlineLight );
+
+      display: flex;
    }
 
    .product-link {
       margin-top: 10px;
       grid-column: 1 / 3;
       justify-self: center;
+   }
+
+   // TODO Стили для страницы товара
+   &.page-product {
+      .product-info__brand {
+         color: var(--dark);
+      }
+
+      .product-info__rating {
+         .product-additional {
+            .btn-additional {
+               i {
+                  color: var(--dark);
+               }
+
+               &:hover {
+                  i {
+                     color: var(--action);
+                  }
+               }
+
+               &.active {
+                  i {
+                     color: var(--action);
+                  }
+               }
+            }
+         }
+      }
+
+      .product-info__price {
+         font-size: 40px;
+         font-weight: 700;
+         color: var(--dark);
+      }
+
+      .product-info__action {
+         border-top: 1px solid var(--border_slow);
+      }
+
+      .ui-popup__btns {
+         grid-template: auto / repeat(auto-fit, minmax(200px, 1fr));
+      }
+
+      // .btn-quickview-cart {
+      //    @include uiBtnType( $type: secondary, $freeWidth: true, $maxWidth: 100% );
+      //    @include uiBtnTheme( $theme: action );
+      // }
+   
+      // .btn-quickview-buy {
+      //    @include uiBtnType( $type: secondary, $freeWidth: true, $maxWidth: 100% );
+      //    @include uiBtnTheme( $theme: outlines, $childTheme: outlinesDark );
+      // }
    }
 }

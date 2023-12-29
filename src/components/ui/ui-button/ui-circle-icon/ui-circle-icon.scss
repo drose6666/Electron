@@ -36,29 +36,6 @@
       }
    }
 
-   // NOTE Кнопка корзины в карточке товара
-   &.circle-icon_cart {
-      width: 46px;
-      height: 46px;
-      box-shadow: var(--light_btn_shadow);
-
-      i {
-         margin-top: -1px;
-         // margin-left: 2px;
-         font-size: 22px;
-      }
-
-      &:hover {
-         background: var(--action);
-         box-shadow: var(--card_btn_action_hover_shadow);
-         translate: 0 -3px;
-
-         i {
-            color: var(--light);
-         }
-      }
-   }
-
    // NOTE Дополнительные кнопки в каточках товара, поста (сравнение, избранное, быстрый просмотр и т.д.)
    &.circle-icon_card {
       width: clamp( 26px, 12cqw, 35px);
@@ -91,8 +68,8 @@
             background-color .2s ease;
       }
 
-      &.active, &:hover {
-         background: var(--ui_dark);
+      &.active {
+         background: var(--light);
          
          i {
             color: var(--action);
@@ -100,8 +77,12 @@
       }
       
       &:hover {
-         background: var(--light);
+         background: var(--separating_contrast);
          translate: 0 -2px;
+
+         i {
+            color: var(--dark);
+         }
       }
 
       &.dark {

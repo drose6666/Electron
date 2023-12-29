@@ -1,21 +1,38 @@
-<section class="hero-section swiper-container">
-   <div class="swiper" id="hero-swiper">
+<div class="swiper-container container_hero-swiper">
+   <div class="swiper hero-swiper">
       <div class="swiper-wrapper">
 
-         <div class="slide">
-            <picture class="hero-img">
-               <source media="(max-width: 280px)" srcset="../../../../img/home/hero-slider/slide_1_260_3x.webp">
-               <source media="(max-width: 360px)" srcset="../../../../img/home/hero-slider/slide_1_360_3x.webp">
-               <source media="(max-width: 560px)" srcset="../../../../img/home/hero-slider/slide_1_520_3x.webp">
-               <source media="(max-width: 760px)" srcset="../../../../img/home/hero-slider/slide_1_720_3x.webp">
-               <source media="(max-width: 1060px)" srcset="../../../../img/home/hero-slider/slide_1_1020_3x.webp">
-               <img src="../../../../img/home/hero-slider/slide_1_full_3x.webp" alt="iphone 15 pro max" class="hero-img">
-            </picture>
+         <div class="swiper-slide hero-slide">
+            <h2 class="hero-slide__title">HONOR <strong>MagicBook 16</strong></h2>
+            <h4 class="hero-slide__subtitle">Совершенный. Невероятный. Твой.</h4>
+            
+            @@include('../../../../components/ui/ui-button/ui-btn/ui-button-link.html', {
+               "link": "../../../page-product/page-product.html",
+               "className": "btn_target-light hero_btn",
+               "text": "Подробнее"
+            })
+
+            <img src="../../../../img/home/hero-slider/hero_slide_2_1.5x.webp" alt="" class="hero-slide__img">
+         </div>
+
+         <div class="swiper-slide hero-slide">
+            <h2 class="hero-slide__title">HUAWEI <strong>MateBook</strong> <strong>D16 SE</strong></h2>
+            <h4 class="hero-slide__subtitle">Совершенный. Невероятный. Твой.</h4>
+            
+            @@include('../../../../components/ui/ui-button/ui-btn/ui-button-link.html', {
+               "link": "../../../page-product/page-product.html",
+               "className": "btn_target-light hero_btn",
+               "text": "Подробнее"
+            })
+
+            <img src="../../../../img/home/hero-slider/hero_slide_1_1.5x.webp" alt="" class="hero-slide__img">
          </div>
 
       </div>
    </div>
-<!-- 
-   <div class="swiper-button-prev hero-prev"></div>
-   <div class="swiper-button-next hero-next"></div> -->
-</section>
+
+   <div class="hero-swiper-arrows">
+      <div class="swiper-arrow light prev hero_arrow"></div>
+      <div class="swiper-arrow light next hero_arrow"></div>
+   </div>
+</div>

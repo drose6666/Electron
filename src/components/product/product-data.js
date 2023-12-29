@@ -3,11 +3,17 @@ const products = [
       id: 1,
       name: 'iPhone 15',
       price: '190 990 ₽',
+      colors: [
+         { id: 1, name: 'Темный титан', color: "#4A4846" },
+         { id: 2, name: 'Светлый титан', color: "#F4F2EE" },
+         { id: 3, name: 'Натуральный титан', color: "#FDE8CF" },
+      ],
       img: '../../../img/cards/card_3.webp',
       imgHidden: '../../../img/cards/card_3_2.webp',
       isFavourites: true,
       isCompare: true,
-      soldOut: true 
+      soldOut: true,
+      inCart: false
    },
 
    {
@@ -15,42 +21,64 @@ const products = [
       name: 'MacBook Pro (M2 Pro, 2023)',
       price: '300 990 ₽',
       img: '../../../img/cards/card_1.webp',
-      imgHidden: '../../../img/cards/card_1.webp',
+      imgHidden: '../../../img/cards/cards_large/card_17.webp',
       isFavourites: true,
       isCompare: false,
-      soldOut: false 
+      soldOut: false,
+      inCart: false
    },
 
    {
       id: 3,
       name: 'Samsung Galaxy S23 Ultra в комплекте с Buds 2 Pro',
       price: '170 990 ₽',
+      colors: [
+         { id: 1, name: 'Темный титан', color: "#4A4846" },
+         { id: 2, name: 'Светлый титан', color: "#F4F2EE" },
+         { id: 3, name: 'Натуральный титан', color: "#FDE8CF" },
+         { id: 4, name: 'Зеленый титан', color: "#516956" },
+         { id: 5, name: 'Красный титан', color: "#DE8E86" },
+         { id: 6, name: 'Синий титан', color: "#82A7C8" },
+      ],
       img: '../../../img/cards/card_2.webp',
       imgHidden: '../../../img/cards/card_2.webp',
       isFavourites: true,
       isCompare: false,
-      soldOut: false 
+      soldOut: false,
+      inCart: false
    },
 
    {
       id: 4,
       name: 'iPad Pro (6th Gen, 2022)',
       price: '300 990 ₽',
+      colors: [
+         { id: 1, name: 'Темный титан', color: "#4A4846" },
+         { id: 2, name: 'Светлый титан', color: "#F4F2EE" },
+         { id: 3, name: 'Натуральный титан', color: "#FDE8CF" },
+      ],
       img: '../../../img/cards/card_4.webp',
       imgHidden: '../../../img/cards/card_4.webp',
       isFavourites: true,
       isCompare: false,
-      soldOut: false 
+      soldOut: false,
+      inCart: true
    },
    {
       id: 5,
       name: 'iPhone 15 Pro Max',
       price: '210 990 ₽',
+      colors: [
+         { id: 1, name: 'Темный титан', color: "#4A4846" },
+         { id: 2, name: 'Светлый титан', color: "#F4F2EE" },
+         { id: 3, name: 'Натуральный титан', color: "#FDE8CF" },
+      ],
       img: '../../../img/cards/card_5.webp',
       imgHidden: '../../../img/cards/card_5_2.webp',
       isFavourites: true,
       isCompare: false,
-      soldOut: false 
+      soldOut: false ,
+      inCart: false
    },
 
    {
@@ -61,72 +89,42 @@ const products = [
       imgHidden: '../../../img/cards/card_6.webp',
       isFavourites: true,
       isCompare: false,
-      soldOut: false 
+      soldOut: false,
+      inCart: true
    },
 
    {
       id: 7,
       name: 'Mac Mini',
       price: '300 990 ₽',
+      colors: [
+         { id: 1, name: 'Темный титан', color: "#4A4846" },
+         { id: 2, name: 'Светлый титан', color: "#F4F2EE" },
+         { id: 3, name: 'Натуральный титан', color: "#FDE8CF" },
+      ],
       img: '../../../img/cards/card_7.webp',
       imgHidden: '../../../img/cards/card_7.webp',
       isFavourites: true,
       isCompare: false,
-      soldOut: false 
+      soldOut: false,
+      inCart: false
    },
 
    {
       id: 8,
       name: 'ASUS VivoBook 15 M1502IA-BQ011W',
       price: '270 990 ₽',
+      colors: [
+         { id: 1, name: 'Темный титан', color: "#4A4846" },
+         { id: 2, name: 'Светлый титан', color: "#F4F2EE" },
+         { id: 3, name: 'Натуральный титан', color: "#FDE8CF" },
+      ],
       img: '../../../img/cards/card_16.webp',
       imgHidden: '../../../img/cards/card_16.webp',
       isFavourites: true,
       isCompare: false,
-      soldOut: false 
-   },
-   {
-      id: 9,
-      name: 'iPhone 15 Pro Max',
-      price: '210 990 ₽',
-      img: '../../../img/cards/card_5.webp',
-      imgHidden: '../../../img/cards/card_5_2.webp',
-      isFavourites: true,
-      isCompare: false,
-      soldOut: false 
-   },
-
-   {
-      id: 10,
-      name: 'MacBook Air 15',
-      price: '300 990 ₽',
-      img: '../../../img/cards/card_6.webp',
-      imgHidden: '../../../img/cards/card_6.webp',
-      isFavourites: true,
-      isCompare: false,
-      soldOut: false 
-   },
-
-   {
-      id: 11,
-      name: 'Mac Mini',
-      price: '300 990 ₽',
-      img: '../../../img/cards/card_7.webp',
-      imgHidden: '../../../img/cards/card_7.webp',
-      isFavourites: true,
-      isCompare: false,
-      soldOut: false 
-   },
-
-   {
-      id: 12,
-      name: 'ASUS VivoBook 15 M1502IA-BQ011W',
-      price: '270 990 ₽',
-      img: '../../../img/cards/card_16.webp',
-      imgHidden: '../../../img/cards/card_16.webp',
-      isFavourites: true,
-      isCompare: false,
-      soldOut: false 
+      soldOut: false,
+      inCart: false
    },
 ]
 
@@ -141,18 +139,6 @@ productsLists.forEach(item => {
 })
 
 function renderProductList (productsList) {
-   // NOTE Иконка корзины, когда товар есть в наличии
-   const cartIcon = `
-      <div class="ui-circle-icon circle-icon_cart">
-         <i class="i-cart"></i>
-      </div>
-   `;
-
-   // NOTE Кнопка заказа, когда товара нет в наличии
-   const orderBtn = `
-      <a href="#" class="btn_card-order">Заказать</a>
-   `
-
    // NOTE Стикер "Нет в наличии" - товара нет в наличии
    const stickerSoldOut = `
       <div class="ui-sticker sticker_sold ">Нет в наличии</div>
@@ -160,10 +146,11 @@ function renderProductList (productsList) {
 
    // TODO Вывод списка товаров
    let products = productsList.map(product => {
+
       return `
          <div class="product-card swiper-slide">
             <div class="img">
-               <a href="#">
+               <a href="../../../../pages/page-product/page-product.html">
                   <img src="${product.img}" alt="">
                   <img src="${product.imgHidden}" alt="" class="hover-img">
                </a>
@@ -187,12 +174,13 @@ function renderProductList (productsList) {
                </div>
          
                <div class="action-wrap">
-                  ${product.soldOut ? orderBtn : cartIcon}
+                  ${ renderCartBtn(product.soldOut, product.inCart) }
                </div>
             </div>
          
             <div class="info">
-               <h4 class="title"><a href="#">${product.name}</a></h4>
+               ${ product.colors ? renderColors(product.colors) : '' }
+               <h4 class="title"><a href="../../../../pages/page-product/page-product.html">${product.name}</a></h4>
                <span class="price">${product.price}</span>
             </div>
          </div>
@@ -200,4 +188,48 @@ function renderProductList (productsList) {
    })
 
    return products.join('')
+}
+
+// TODO Создание HTML цветов в карточке товара
+function renderColors(arr) {
+   let colors = arr.map(item => {
+      return `<li class="colors__item" style="background: ${item.color};" title="${item.name}"></li>`
+   })
+
+   const colorsListHTML = `
+      <ul class="colors">
+         ${ colors ? colors.join('') : '' }
+      </ul>
+   `
+
+   return colorsListHTML
+}
+
+// TODO Создание HTML для кнопки корзины и "Заказать"
+function renderCartBtn(availability, statusCart) {
+   const defaultCartBtn = `
+      <div class="btn-cart ${statusCart ? 'inCart' : ''}">
+         <div class="in-cart"></div>
+         <i class="i-cart"></i>
+      </div>
+   `
+   const orderCartBtn = `
+      <a href="../../../../pages/page-product/page-product.html" class="btn_card-order">Заказать</a>
+   `
+   return availability ? orderCartBtn : defaultCartBtn
+}
+
+
+// TODO ПРи клике на кнопку корзины товар будет удаляться/добавляться в корину
+// Код наже описывает визиуальную часть кнопки корзины в карточке товара 
+
+const cartBtns = document.querySelectorAll('.product-card .btn-cart')
+for (let i = 0; i < cartBtns.length; i++) {
+   cartBtns[i].addEventListener('click', () => changeStatusCartOfProduct(cartBtns[i]))
+}
+
+function changeStatusCartOfProduct(btn) {
+   btn.classList.contains('inCart')
+      ? btn.classList.remove('inCart')
+      : btn.classList.add('inCart')
 }

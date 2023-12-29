@@ -1,9 +1,8 @@
-@mixin uiBtnTheme (
+@mixin btnTheme (
    $color: var(--light),
    $bg: var(--dark),
    $shadow: none,
    $borderColor: var(--border),
-   $border: 1px solid $borderColor,
    $theme: dark,
    $childTheme: none,
    $transition: all .2s ease,
@@ -42,7 +41,7 @@
       background: $bg;
 
       &:hover {
-         background: var(--dark);
+         background: var(--action_dark);
       }
 
    } @else if $theme == light {
@@ -59,151 +58,102 @@
          color: var(--light);
       }
 
-   } @else if $theme == outlines {
+   } @else if $theme == outlineGrey {
       $color: var(--dark);
       $bg: transparent;
+      $borderColor: var(--border);
+
+      color: $color;
+      background: $bg;
+      border: 1px solid $borderColor;
+   
+      &:hover {
+         background: var(--text_selected_on_dark);
+         color: var(--dark);
+         border-color: var(--text_selected_on_dark);
+      }
+
+   } @else if $theme == outlineLight {
+      $color: var(--light);
+      $bg: transparent;
+      $borderColor: var(--light);
+
+      color: $color;
+      background: $bg;
+      border: 1px solid $borderColor;
+   
+      &:hover {
+         background: var(--light);
+         color: var(--dark);
+         border-color: var(--light);
+      }
+
+   } @else if $theme == outlineDark {
+      $color: var(--dark);
+      $bg: transparent;
+      $borderColor: var(--dark);
+
+      color: $color;
+      background: $bg;
+      border: 1px solid $borderColor;
+   
+      &:hover {
+         background: var(--dark);
+         color: var(--light);
+         border-color: var(--dark);
+      }
+   } @else if $theme == outlineOnDark {
+      $color: var(--light);
+      $bg: transparent;
+      $borderColor: var(--border);
+
+      color: $color;
+      background: $bg;
+      border: 1px solid $borderColor;
+   
+      &:hover {
+         background: var(--text_selected_on_dark);
+         color: var(--dark);
+         border-color: var(--text_selected_on_dark);
+      }
+
+   } @else if $theme == light {
+      $color: var(--dark);
+      $bg: var(--light);
+      $shadow: var(--light_btn_shadow);
       
       color: $color;
       background: $bg;
-      border: $border;
+      box-shadow: $shadow;
 
-      @if $childTheme == outlinesLight {
-         $color: var(--light);
-         $bg: transparent;
-         $borderColor: var(--light);
-         $border: 1px solid $borderColor;
-
-         color: $color;
-         background: $bg;
-         border: $border;
-
-         &:hover {
-            background: var(--dark);
-            color: var(--light);
-            border-color: var(--dark);
-         }
-
-      } @else if $childTheme == outlinesDark {
-         $color: var(--dark);
-         $bg: transparent;
-         $borderColor: var(--dark);
-         $border: 1px solid $borderColor;
-
-         color: $color;
-         background: $bg;
-         border: $border;
-
-         &:hover {
-            background: var(--dark);
-            color: var(--light);
-            border-color: var(--dark);
-         }
-
-      } @else if $childTheme == outlinesDefault {
-         $color: var(--dark);
-         $bg: transparent;
-         $borderColor: var(--border);
-         $border: 1px solid $borderColor;
-
-         color: $color;
-         background: $bg;
-         border: $border;
-
-         &:hover {
-            background: var(--dark);
-            color: var(--light);
-            border-color: var(--dark);
-         }
-         
-      } @else if $childTheme == outlinesDefaultLight {
-         $color: var(--light);
-         $bg: transparent;
-         $borderColor: var(--text_additional);
-         $border: 1px solid $borderColor;
-
-         color: $color;
-         background: $bg;
-         border: $border;
-
-         &:hover {
-            background: $borderColor;
-         }
-      } @else {
-         @error "Такой дочерней темы не существует #{$childTheme}.";
+      &:hover {
+         background: var(--action);
+         color: var(--light);
       }
-
    } @else if $theme == option {
       $color: var(--dark);
       $bg: var(--separating);
-      $borderColor: transparent;
-      $border: 1px solid $borderColor;
       
       color: $color;
       background: $bg;
-      border: $border;
 
       &:hover {
-         color: var(--light);
-         background: var(--text_additional);
-         border-color: var(--text_additional);
-      }
-
-      &.active {
+         background: var(--separating_contrast);
          color: var(--dark);
-         background: var(--action_slow);
-         border-color: var(--action_slow);
-      }
-
-      @if $childTheme == optionDark {
-         $color: var(--text_additional);
-         $bg: var(--ui_dark);
-         $borderColor: transparent;
-         $border: 1px solid $borderColor;
-         
-         color: $color;
-         background: $bg;
-         border: $border;
-
-         &:hover {
-            color: var(--light);
-            background: var(--text_additional);
-            border-color: var(--text_additional);
-         }
-
-         &.active {
-            color: var(--light);
-            background: var(--dark);
-            border-color: var(--action);
-         }
-      }
-
-   } @else if $theme == light {
-      $color: var(--dark);
-      $bg: var(--light);
-      $shadow: var(--light_btn_shadow);
-      
-      color: $color;
-      background: $bg;
-      box-shadow: $shadow;
-
-      &:hover {
-         background: var(--action);
-         color: var(--light);
       }
    }
 }
 
-@mixin uiBtnType (
+@mixin btnType (
    $type: primary,
    $maxWidth: auto,
    $paddingX: 40px,
    $height: 45px,
    $fSize: 17px,
    $fWeight: 400,
-   $freeWidth: false,
    
 ) {
-   display: flex;
+   display: inline-flex;
    align-items: center;
    justify-content: center;
    height: $height;
@@ -217,23 +167,21 @@
    
 
    @if $type == target {
-      $height: 55px;
-      $paddingX: 20px;
-      $fSize: 20px;
+      $height: 60px;
+      $paddingX: 40px;
+      $fSize: 19px;
       $fWeight: 400;
-      $freeWidth: true;
       
       padding: 5px $paddingX;
       font-size: $fSize;
       font-weight: $fWeight;
       height: $height;
-      max-width: $maxWidth;
-      width: 100%;
+      display: flex;
 
-   } @else if $type == secondary {
+   } @else if $type == primary {
       $height: 50px;
       $paddingX: 40px;
-      $fSize: 19px;
+      $fSize: 18px;
       $fWeight: 400;
 
       padding: 5px $paddingX;
@@ -241,7 +189,7 @@
       font-weight: $fWeight;
       height: $height;
 
-   } @else if $type == primary {
+   } @else if $type == secondary {
       $height: 45px;
       $paddingX: 40px;
       $fSize: 17px;
@@ -254,8 +202,8 @@
 
    } @else if $type == ui {
       $height: 41px;
-      $paddingX: 20px;
-      $fSize: 17px;
+      $paddingX: 25px;
+      $fSize: 16px;
       $fWeight: 400;
 
       padding: 5px $paddingX;
@@ -263,32 +211,10 @@
       font-weight: $fWeight;
       height: $height;
 
-   } @else if $type == uiSmall {
+   } @else if $type == small {
       $height: 39px;
       $paddingX: 20px;
-      $fSize: 17px;
-      $fWeight: 400;
-
-      padding: 5px $paddingX;
-      font-size: $fSize;
-      font-weight: $fWeight;
-      height: $height;
-
-   } @else if $type == optionals {
-      $height: 39px;
-      $paddingX: 30px;
-      $fSize: 17px;
-      $fWeight: 400;
-
-      padding: 5px $paddingX;
-      font-size: $fSize;
-      font-weight: $fWeight;
-      height: $height;
-   
-   } @else if $type == helper {
-      $height: 37px;
-      $paddingX: 20px;
-      $fSize: 15px;
+      $fSize: 16px;
       $fWeight: 400;
 
       padding: 5px $paddingX;
@@ -300,91 +226,124 @@
       $height: 30px;
       $paddingX: 15px;
       $fSize: 16px;
-      $fWeight: 400;
+      $fWeight: 300;
 
       padding: 5px $paddingX;
       font-size: $fSize;
       font-weight: $fWeight;
       height: $height;
-   } @else {
-      @error "Такого типа кнопки нет #{$type}.";
-   }
-
-   @if $freeWidth {
-      max-width: $maxWidth;
-      width: 100%;
-   }
+   } 
 }
 
-/* NOTE Черная кнопка primary (45px) - по умолчанию */
-.ui-btn {
-   @include uiBtnType( $type: primary );
-   @include uiBtnTheme( $theme: dark );
+// TODO primary
+.btn_primary-dark {
+   @include btnType( $type: primary );
+   @include btnTheme( $theme: dark );
 }
 
-.ui-btn_light {
-   @include uiBtnType( $type: primary );
-   @include uiBtnTheme( $theme: light );
-}
-
-
-/* NOTE Кнопка входа в top-menu */
-.btn_login {
-   @include uiBtnType( $type: uiSmall );
-   @include uiBtnTheme( $theme: dark );
-
-   padding: 11px clamp(20px, 3cqi, 30px);
-}
-
-.btn_primary-otlines-default {
-   @include uiBtnType( $type: primary);
-   @include uiBtnTheme( $theme: outlines, $childTheme: outlinesDefault );
-}
-
-.btn_contact {
-   @include uiBtnType( $type: primary);
-   @include uiBtnTheme( $theme: outlines, $childTheme: outlinesDefault );
-
-   margin-left: auto;
-}
-
-
-/* NOTE Кнопка входа в top-menu */
-.btn_inside-input {
-   @include uiBtnType( $type: primary  );
-   @include uiBtnTheme( $theme: action );
-
-   padding-left: 25px;
-   padding-right: 25px;
-}
-
-
-/* NOTE Кнопка "Поазать еще" - кнопка еще */
-.btn_enter {
-   @include uiBtnType( $type: uiSmall );
-   @include uiBtnTheme( $theme: action );
-
-   padding: 11px clamp(20px, 3cqi, 30px);
-}
-
-
-.btn_primary_outlines_def {
-   @include uiBtnType( $type: primary );
-   @include uiBtnTheme( $theme: outlines, $childTheme: outlinesDefault );
-}
-
-.btn_primary_outlines_deflight {
-   @include uiBtnType( $type: primary );
-   @include uiBtnTheme( $theme: outlines, $childTheme: outlinesDefaultLight);
-}
-
-.btn_ui-action {
-   @include uiBtnType( $type: ui );
-   @include uiBtnTheme( $theme: action );
+.btn_primary-uiDark {
+   @include btnType( $type: primary );
+   @include btnTheme( $theme: uiDark );
 }
 
 .btn_primary-action {
-   @include uiBtnType( $type: primary );
-   @include uiBtnTheme( $theme: action );
+   @include btnType( $type: primary );
+   @include btnTheme( $theme: action );
 }
 
+.btn_primary-light {
+   @include btnType( $type: primary );
+   @include btnTheme( $theme: light );
+}
+
+.btn_primary-outlineGrey {
+   @include btnType( $type: primary );
+   @include btnTheme( $theme: outlineGrey );
+}
+
+.btn_primary-outlineLight {
+   @include btnType( $type: primary );
+   @include btnTheme( $theme: outlineLight );
+}
+
+
+
+// TODO target
+.btn_target-dark {
+   @include btnType( $type: target );
+   @include btnTheme( $theme: dark );
+}
+
+.btn_target-light {
+   @include btnType( $type: target );
+   @include btnTheme( $theme: light );
+}
+
+.btn_target-action {
+   @include btnType( $type: target );
+   @include btnTheme( $theme: action );
+}
+
+
+
+// TODO ui
+.btn_ui-dark {
+   @include btnType( $type: ui );
+   @include btnTheme( $theme: dark );
+}
+
+.btn_ui-action {
+   @include btnType( $type: ui );
+   @include btnTheme( $theme: action );
+}
+
+.btn_ui-outlineGrey {
+   @include btnType( $type: ui );
+   @include btnTheme( $theme: outlineGrey );
+}
+
+.btn_ui-outlineOnDark {
+   @include btnType( $type: ui );
+   @include btnTheme( $theme: outlineOnDark );
+}
+
+.btn_ui-option {
+   @include btnType( $type: ui );
+   @include btnTheme( $theme: option );
+}
+
+
+
+// TODO small
+.btn_small-action {
+   @include btnType( $type: small );
+   @include btnTheme( $theme: action );
+}
+
+.btn_small-dark {
+   @include btnType( $type: small );
+   @include btnTheme( $theme: dark );
+}
+
+
+
+// TODO sticker
+.sticker_sold {
+   @include btnType( $type: sticker );
+   
+   color: var(--light);
+   background: rgba(155, 187, 216, 0.70);
+   box-shadow: var(--light_btn_shadow);
+   backdrop-filter: blur(2px);
+}
+
+.btn_card-order {
+   @include btnType( $type: small );
+   @include btnTheme( $theme: light );
+
+   &:hover {
+      color: var(--light);
+      background: var(--action);
+      box-shadow: var(--card_btn_action_hover_shadow);
+   }
+}

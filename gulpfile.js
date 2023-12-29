@@ -18,9 +18,10 @@ import { server } from "./gulp/tasks/server.js";
 import { html, pagesHTML } from "./gulp/tasks/html.js"
 import { scss } from "./gulp/tasks/scss.js"
 import { js } from "./gulp/tasks/js.js";
-import { images } from "./gulp/tasks/images.js";
+// import { images } from "./gulp/tasks/images.js";
+import { cleanImg } from './gulp/tasks/cleanImg.js';
 import { copyImg } from './gulp/tasks/copyImg.js';
-import { cleanImages } from "./gulp/tasks/cleanImages.js";
+// import { cleanImages } from "./gulp/tasks/cleanImages.js";
 import { fonts } from "./gulp/tasks/fonts.js";
 import { svg } from "./gulp/tasks/svg.js";
 import { zip } from "./gulp/tasks/zip.js";
@@ -77,7 +78,7 @@ function watcher() {
    gulp.watch(path.watch.libs, copyLibs)
    gulp.watch(path.watch.other, copyOther)
    
-   gulp.watch(path.watch.images, gulp.series(cleanImages, images))
+   // gulp.watch(path.watch.images, gulp.series(cleanImages, images))
    gulp.watch(path.watch.copyImg, copyImg)
    gulp.watch(path.watch.svg, svg)
 
@@ -98,7 +99,7 @@ const mainTasks = gulp.parallel(
    html, () => pagesHTML('page-brands'), () => pagesHTML('page-brand-single'), () => pagesHTML('page-category'), () => pagesHTML('page-product'), 
    () => js('index'), () => js('page-brands'), () => js('page-brand-single'), () => js('page-category'), () => js('page-product'), 
    () => scss('index'), () => scss('page-brands'), () => scss('page-brand-single'), () => scss('page-category'), () => scss('page-product'), 
-   fonts, copyLibs, copyOther, copyImg);
+   fonts, copyLibs, copyOther, gulp.parallel(cleanImg, copyImg));
 
 
 

@@ -22,16 +22,16 @@
    <link rel="icon" href="../../img/favicon/fav_48.png" type="image/png" sizes="48x48">
    <link rel="icon" href="../../img/favicon/fav_128.png" type="image/png" sizes="128x128">
    
-   <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css?_v=20231226090131" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
-   <!-- <link rel="stylesheet" href="../../libs/css/bootstrap-grid.min.css?_v=20231226090131"> -->
+   <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css?_v=20231229141900" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+   <!-- <link rel="stylesheet" href="../../libs/css/bootstrap-grid.min.css?_v=20231229141900"> -->
 
-   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css?_v=20231226090131" />
-   <script defer src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js?_v=20231226090131"></script>
-   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js?_v=20231226090131" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-   <link rel="stylesheet" href="../../libs/css/reset.min.css?_v=20231226090131">
-   <link rel="stylesheet" as="font" href="../../fonts/fonts.css?_v=20231226090131">
-   <link rel="stylesheet" as="font" href="../../fonts/icon-font.css?_v=20231226090131">
-   <link rel="stylesheet" href="./pages/index/css/index.min.css?_v=20231226090131">
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css?_v=20231229141900" />
+   <script defer src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js?_v=20231229141900"></script>
+   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js?_v=20231229141900" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+   <link rel="stylesheet" href="../../libs/css/reset.min.css?_v=20231229141900">
+   <link rel="stylesheet" as="font" href="../../fonts/fonts.css?_v=20231229141900">
+   <link rel="stylesheet" as="font" href="../../fonts/icon-font.css?_v=20231229141900">
+   <link rel="stylesheet" href="./pages/index/css/index.min.css?_v=20231229141900">
    
    <title>Electron</title>
 </head>
@@ -68,9 +68,15 @@
          </nav>
       </div>
 
+      <!-- Заглушка, пока не готовы личный кабинет и авторизация -->
       <a href="tel:+7 911 149 05 05" class="contact-link basicHoverUnderline">
          <span class="child">+7 911 149 05 05</span>
       </a>
+
+      <!-- Меню авторизованных пользователей -->
+      
+
+      <!-- Кнопка входа для не авторизованных пользователей -->
       
    </div>
 </div>
@@ -88,15 +94,14 @@
    <ul class="menu-list">
       <li class="menu-list__item"><a class="child" href="../../../pages/page-category/page-category.html">Ноутбуки и ПК</a></li>
       <li class="menu-list__item"><a class="child" href="../../../pages/page-category/page-category.html">Смартфоны</a></li>
+     
       <li class="menu-list__item">
          <a class="child" href="../../../pages/page-category/page-category.html">Комплектующие</a>
          <div class="submenu-wrapper">
-   <div class="submenu-links-container">
-      <div class="ui-tabs">
-         <button class="ui-tab header-submenu__tab active">Для ноутбуков и ПК</button><button class="ui-tab header-submenu__tab">Для смартфонов</button>
-      </div>
+   <div class="submenu">
+      <div class="submenu-list-wrap">
+         <h4 class="submenu-list-name">Для ноутбуков и ПК</h4>
 
-      <div class="submenu">
          <ul class="submenu-list">
             <li class="submenu-list__item basicHoverUnderline"><a href="" class="child">Материнские платы</a></li>
             <li class="submenu-list__item basicHoverUnderline"><a href="" class="child">Процессоры</a></li>
@@ -105,12 +110,11 @@
             <li class="submenu-list__item basicHoverUnderline"><a href="" class="child">Звуковые карты</a></li>
             <li class="submenu-list__item basicHoverUnderline"><a href="" class="child">Блоки питания</a></li>
             <li class="submenu-list__item basicHoverUnderline"><a href="" class="child">Накопитель SSD</a></li>
-            <li class="submenu-list__item basicHoverUnderline"><a href="" class="child">Корпуса</a></li>
-            <li class="submenu-list__item basicHoverUnderline"><a href="" class="child">Видеокарты</a></li>
-            <li class="submenu-list__item basicHoverUnderline"><a href="" class="child">Системы охлаждения</a></li>
-            <li class="submenu-list__item basicHoverUnderline"><a href="" class="child">Модули памяти</a></li>
-            <li class="submenu-list__item basicHoverUnderline"><a href="" class="child">Термопасты</a></li>
          </ul>
+      </div>
+
+      <div class="submenu-list-wrap">
+         <h4 class="submenu-list-name">Для смартфонов</h4>
 
          <ul class="submenu-list">
             <li class="submenu-list__item basicHoverUnderline"><a href="" class="child">Материнские платы</a></li>
@@ -140,7 +144,56 @@
    </div>
 </div>
       </li>
-      <li class="menu-list__item"><a class="child" href="../../../pages/page-category/page-category.html">Аксессуары</a></li>
+
+      <li class="menu-list__item">
+         <a class="child" href="../../../pages/page-category/page-category.html">Аксессуары</a>
+         <div class="submenu-wrapper">
+   <div class="submenu">
+      <div class="submenu-list-wrap">
+         <h4 class="submenu-list-name">Для ноутбуков и ПК</h4>
+
+         <ul class="submenu-list">
+            <li class="submenu-list__item basicHoverUnderline"><a href="" class="child">Материнские платы</a></li>
+            <li class="submenu-list__item basicHoverUnderline"><a href="" class="child">Процессоры</a></li>
+            <li class="submenu-list__item basicHoverUnderline"><a href="" class="child">Оптические приводы</a></li>
+            <li class="submenu-list__item basicHoverUnderline"><a href="" class="child">Жесткие диски</a></li>
+            <li class="submenu-list__item basicHoverUnderline"><a href="" class="child">Звуковые карты</a></li>
+            <li class="submenu-list__item basicHoverUnderline"><a href="" class="child">Блоки питания</a></li>
+            <li class="submenu-list__item basicHoverUnderline"><a href="" class="child">Накопитель SSD</a></li>
+         </ul>
+      </div>
+
+      <div class="submenu-list-wrap">
+         <h4 class="submenu-list-name">Для смартфонов</h4>
+
+         <ul class="submenu-list">
+            <li class="submenu-list__item basicHoverUnderline"><a href="" class="child">Материнские платы</a></li>
+            <li class="submenu-list__item basicHoverUnderline"><a href="" class="child">Процессоры</a></li>
+            <li class="submenu-list__item basicHoverUnderline"><a href="" class="child">Оптические приводы</a></li>
+            <li class="submenu-list__item basicHoverUnderline"><a href="" class="child">Жесткие диски</a></li>
+            <li class="submenu-list__item basicHoverUnderline"><a href="" class="child">Звуковые карты</a></li>
+            <li class="submenu-list__item basicHoverUnderline"><a href="" class="child">Блоки питания</a></li>
+            <li class="submenu-list__item basicHoverUnderline"><a href="" class="child">Накопитель SSD</a></li>
+         </ul>
+      </div>
+   </div>
+   
+   <div class="submenu-category-container">
+      <a href="../../../pages/page-category/page-category.html" class="category-card complect card_submenu">
+   <div class="category-card__container">
+      <h3 class="name">Комплектующие</h3>
+      <p class="description">Смартфоны, флагманские новинки и еще много интересного</p>
+
+      <div class="ui-more_full-hover more_category">
+   <span class="child">Смотреть все</span>
+</div>
+
+      <img src="../../img/categories/complect_full_1.5x.webp" alt="" class="img">
+   </div>
+</a>
+   </div>
+</div>
+      </li>
    </ul>
 </nav>
       <div class="header-additional">
@@ -158,27 +211,36 @@
       
       
       <main>
-         <section class="hero-section swiper-container">
-   <div class="swiper" id="hero-swiper">
+         <div class="swiper-container container_hero-swiper">
+   <div class="swiper hero-swiper">
       <div class="swiper-wrapper">
 
-         <div class="slide">
-            <picture class="hero-img">
-               <source media="(max-width: 280px)" srcset="../../../../img/home/hero-slider/slide_1_260_3x.webp">
-               <source media="(max-width: 360px)" srcset="../../../../img/home/hero-slider/slide_1_360_3x.webp">
-               <source media="(max-width: 560px)" srcset="../../../../img/home/hero-slider/slide_1_520_3x.webp">
-               <source media="(max-width: 760px)" srcset="../../../../img/home/hero-slider/slide_1_720_3x.webp">
-               <source media="(max-width: 1060px)" srcset="../../../../img/home/hero-slider/slide_1_1020_3x.webp">
-               <img src="../../../../img/home/hero-slider/slide_1_full_3x.webp" alt="iphone 15 pro max" class="hero-img">
-            </picture>
+         <div class="swiper-slide hero-slide">
+            <h2 class="hero-slide__title">HONOR <strong>MagicBook 16</strong></h2>
+            <h4 class="hero-slide__subtitle">Совершенный. Невероятный. Твой.</h4>
+            
+            <a href="../../../page-product/page-product.html" class="btn_target-light hero_btn">Подробнее</a>
+
+            <img src="../../../../img/home/hero-slider/hero_slide_2_1.5x.webp" alt="" class="hero-slide__img">
+         </div>
+
+         <div class="swiper-slide hero-slide">
+            <h2 class="hero-slide__title">HUAWEI <strong>MateBook</strong> <strong>D16 SE</strong></h2>
+            <h4 class="hero-slide__subtitle">Совершенный. Невероятный. Твой.</h4>
+            
+            <a href="../../../page-product/page-product.html" class="btn_target-light hero_btn">Подробнее</a>
+
+            <img src="../../../../img/home/hero-slider/hero_slide_1_1.5x.webp" alt="" class="hero-slide__img">
          </div>
 
       </div>
    </div>
-<!-- 
-   <div class="swiper-button-prev hero-prev"></div>
-   <div class="swiper-button-next hero-next"></div> -->
-</section>
+
+   <div class="hero-swiper-arrows">
+      <div class="swiper-arrow light prev hero_arrow"></div>
+      <div class="swiper-arrow light next hero_arrow"></div>
+   </div>
+</div>
          <section class="new-products-section">
    <div class="ui-container">
       <h2 class="ui-section-title sm-mt center">Новинки</h2>
@@ -195,8 +257,8 @@
 </div>
    </div>
 
-   <div class="swiper-button-prev new-products-prev prev-1"></div>
-   <div class="swiper-button-next new-products-next next-1"></div>
+   <div class="swiper-arrow prev new-products-prev prev-1"></div>
+   <div class="swiper-arrow next new-products-next next-1"></div>
 </div>
          <div class="swiper-container new-products-container">
    <div class="swiper" id="new-product-swiper-2">
@@ -205,8 +267,8 @@
 </div>
    </div>
 
-   <div class="swiper-button-prev new-products-prev prev-2"></div>
-   <div class="swiper-button-next new-products-next next-2"></div>
+   <div class="swiper-arrow prev new-products-prev prev-2"></div>
+   <div class="swiper-arrow next new-products-next next-2"></div>
 </div>
          <div class="swiper-container new-products-container">
    <div class="swiper" id="new-product-swiper-3">
@@ -215,8 +277,8 @@
 </div>
    </div>
 
-   <div class="swiper-button-prev new-products-prev prev-3"></div>
-   <div class="swiper-button-next new-products-next next-3"></div>
+   <div class="swiper-arrow prev new-products-prev prev-3"></div>
+   <div class="swiper-arrow next new-products-next next-3"></div>
 </div>
          <div class="swiper-container new-products-container">
    <div class="swiper" id="new-product-swiper-4">
@@ -225,8 +287,8 @@
 </div>
    </div>
 
-   <div class="swiper-button-prev new-products-prev prev-4"></div>
-   <div class="swiper-button-next new-products-next next-4"></div>
+   <div class="swiper-arrow prev new-products-prev prev-4"></div>
+   <div class="swiper-arrow next new-products-next next-4"></div>
 </div>
       </div>
    </div>
@@ -308,10 +370,7 @@
 </a>
 </div>
 
-      <button type="@@type" class="btn_more">
-   Смотреть все
-   <div class="icon"><i class="i-arrow_up_long"></i></div>
-</button>
+      <button type="button" class="btn_ui-option">Смотреть все</button>
    </div>
 </section>
          <section class="top-sale-section">
@@ -343,7 +402,7 @@
       <p class="text-decor">Все, что нужно - в одной покупке</p>
       <h3 class="collection-name">Готовые решения</h3>
 
-      <button type="@@type" class="ui-btn ui-btn_light">Подробнее</button>
+      <button type="button" class="btn_primary-light">Подробнее</button>
    </div>
 
    <img loading="lazy" src="../../../img/collections/collection_1.webp" alt="" class="collection-card__img">
@@ -352,7 +411,7 @@
       <p class="text-decor">Побеждай вместе с OMATECH</p>
       <h3 class="collection-name">Gaming Setup</h3>
 
-      <button type="@@type" class="ui-btn ui-btn_light">Подробнее</button>
+      <button type="button" class="btn_primary-light">Подробнее</button>
    </div>
 
    <img loading="lazy" src="../../../img/collections/collection_2.webp" alt="" class="collection-card__img">
@@ -368,9 +427,9 @@
          <p class="about-text">Мы - твоя платформа для воплощения идей в цифровую реальность. С нами ты обретешь силу инноваций, удобства онлайн-покупок и качественной техники. Наша цель - сделать технологии доступными для каждого, воплощая твои потребности в каждом устройстве и аксессуаре. Присоединяйся к нашей электронной революции!</p>
 
          <div class="btn-group">
-            <a href="" class="ui-btn btn_about btn_primary-action">Наши контакты</a>
+            <a href="#" class="btn_primary-action">Наши контакты</a>
 
-            <button type="button" class="ui-btn btn_about btn_primary_outlines_deflight btn_send-review">Оставить отзыв</button>
+            <button type="button" class="btn_primary-outlineGrey btn_send-review">Оставить отзыв</button>
          </div>
 
          <div class="socials socials_about">
@@ -391,8 +450,8 @@
 
       <div class="swiper-container reviews-container">
          <div class="reviews-arrows">
-            <div class="swiper-button-prev reviews-prev"></div>
-            <div class="swiper-button-next reviews-next"></div>
+            <div class="swiper-arrow prev reviews-prev"></div>
+            <div class="swiper-arrow next reviews-next"></div>
          </div>
 
          <div class="swiper" id="reviews-swiper">
@@ -625,7 +684,7 @@
       <form class="ui-form" action="" method="" id="form-subscribe">
    <div class="ui-form-item">
       <input type="email" name="user_subscribe" inputmode="email" autocomplete="email" placeholder="Email..." class="ui-input input_subscribe ">
-      <button type="@@type" class="ui-btn btn_inside-input element-inside-input right">Подписаться</button>
+      <button type="submit" class="btn_primary-action">Подписаться</button>
    </div>
 </form>
 
@@ -748,10 +807,7 @@
             <div class="contact-inside__item">График: <strong>Пн-Вс: 09:00-20:00</strong></div>
          </div>
 
-         <a href="#" class="btn_footer-enter">
-   Личный кабинет
-   <div class="icon"><i class="i-arrow_right"></i></div>
-</a>
+         <a href="#" class="btn_primary-action">Личный кабинет</a>
       </div>
    </div>
 
@@ -904,7 +960,7 @@
    <form class="search-form main-search" action="" method="" id="main-search">
       <input type="text" name="search" inputmode="search" autocomplete="on" placeholder="Поиск..." class="ui-input">
       
-      <button type="submit" class="ui-btn element-inside-input right btn_search">Найти</button>
+      <button type="submit" class="btn_primary-action">Найти</button>
    </form>
 </search>
 
@@ -1044,7 +1100,7 @@
       <div class="ui-popup-products">
          <div class="ui-popup-products__list">
             <div class="product-card-cart ">
-   <a href="#" class="img">
+   <a href="../../../../pages/page-product/page-product.html" class="img">
       <img src="../../../../img/cards/card_3.webp" alt="">
    </a>
 
@@ -1073,7 +1129,7 @@
    <i class="i-close"></i>
 </div>
 </div><div class="product-card-cart ">
-   <a href="#" class="img">
+   <a href="../../../../pages/page-product/page-product.html" class="img">
       <img src="../../../../img/cards/card_2.webp" alt="">
    </a>
 
@@ -1128,11 +1184,8 @@
 </ul>
 
       <div class="ui-popup__btns">
-         <a href="#" class="btn_i_popup_primary">
-   Перейти в корзину
-   <div class="icon"><i class="i-cart"></i></div>
-</a>
-         <a href="#" class="ui-btn btn_primary_outlines_deflight">Оформить заказ</a>
+         <a href="#" class="btn_primary-action ">Перейти в корзину</a>
+         <a href="#" class="btn_primary-outlineLight">Оформить заказ</a>
       </div>
 
       <div class="ui-close close_fade-side left_side popup-cart-close">
@@ -1269,10 +1322,7 @@
       </div>
 
       <div class="ui-form-submit">
-         <button type="@@type" class="btn_i_primary_action">
-   Оствавить отзыв
-   <div class="icon"><i class="i-arrow_up_right_long"></i></div>
-</button>
+         <button type="submit" class="btn_primary-action">Оставить отзыв</button>
    
          <p class="ui-form-submit__text">Конфиденциальность введенных данных гарантируется</p>
       </div>
@@ -1453,9 +1503,9 @@
       </div>
 
       <div class="ui-popup__btns">
-         <button type="@@type" class="ui-btn btn_primary-action">Купить сейчас</button>
+         <button type="button" class="btn_primary-action">Добавить в корзину</button>
 
-         <a href="#" class="ui-btn btn-quickview-buy">Купить сейчас</a>
+         <a href="#" class="btn_primary-uiDark">Купить сейчас</a>
 
          <a href="../../../pages/page-product/page-product.html" class="ui-more_basic-slow_dark product-link">
    <span class="child">Перейти к товару</span>
@@ -1505,6 +1555,6 @@
       
       
       
-      <script type="module" src="./pages/index/js/bundle-index.min.js?_v=20231226090131"></script>
+      <script type="module" src="./pages/index/js/bundle-index.min.js?_v=20231229141900"></script>
    </body>
 </html>  

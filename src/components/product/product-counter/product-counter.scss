@@ -52,4 +52,21 @@ $transition: all .2s ease;
          font-size: 20px;
       }
    }
+
+   &.page-product {
+      i {
+         font-size: 16px;
+         color: var(--text_additional);
+
+         &:hover {
+            color: var(--dark);
+         }
+      }
+
+      .count {
+         font-size: 20px;
+         color: var(--dark);
+         height: 20px;
+      }
+   }
 }

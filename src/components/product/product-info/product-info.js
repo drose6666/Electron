@@ -79,5 +79,7 @@ function renderOptions (productOptions) {
    return renderedFieldsets.join('');
 }
 
-const formProductoptions = document.querySelector('.product-info__options')
-formProductoptions.insertAdjacentHTML('afterbegin', renderOptions(productOptions))
+const formProductoptions = document.querySelectorAll('.product-info__options')
+formProductoptions.forEach(item => {
+   item.insertAdjacentHTML('afterbegin', renderOptions(productOptions))
+})

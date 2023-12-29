@@ -12,8 +12,8 @@
   "author": "Danila Rose <danila.rose.web@gmail.com>",
   "license": "ISC",
   "browserslist": [
-    "last 20 version",
-    "> 10%",
+    "last 60 version",
+    "> 30%",
     "not dead"
   ],
   "devDependencies": {

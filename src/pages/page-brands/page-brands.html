@@ -36,10 +36,10 @@
          <section class="brands-section">
             <div class="ui-container">
                @@include('../../components/brand/brands-list.html')
-               @@include('../../components/ui/ui-button/ui-btn-icon/ui-button-icon.html', {
+               @@include('../../components/ui/ui-button/ui-btn/ui-button.html', {
                   "text": "Показать еще",
-                  "className": "btn_more btn_send-review",
-                  "classNameIcon": "arrow_up_long"
+                  "className": "btn_ui-option",
+                  "type": "button"
                })
             </div>
          </section>
@@ -49,12 +49,8 @@
       @@include('../../components/footer/footer.html')
       @@include('../../components/menu/mobile-menu/mobile-menu.html')
       @@include('../../components/popups/fade-side/popup-search/popup-search.html')
-      @@include('../../components/popups/fade-side/popup-compare/popup-compare.html')
+      <!-- @@include('../../components/popups/fade-side/popup-compare/popup-compare.html') -->
       @@include('../../components/popups/fade-side/popup-cart/popup-cart.html')
-      @@include('../../components/popups/fade-side/popup-quickview/popup-quickview.html')
-      @@include('../../components/popups/popup-image-preview/popup-image-preview.html')
-      @@include('../../components/popups/fade-side/popup-filters/popup-filters.html')
-      @@include('../../components/popups/popup-send-review/popup-send-review.html')
       <!-- @@include('../../components/popups/fade-side/popup-login/popup-login.html') -->
       
       <script type="module" src="js/bundle-page-brands.min.js"></script>

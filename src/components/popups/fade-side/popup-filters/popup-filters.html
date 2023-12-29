@@ -10,16 +10,18 @@
          <p class="products-count">Показано товаров: <strong>257</strong></p>
       
          <div class="ui-popup__btns">
-            @@include('../../../ui/ui-button/ui-btn/ui-button.html', {
-               "text": "Применить",
-               "className": "btn_filter_apply",
-               "type": "submit"
-            })
-            @@include('../../../ui/ui-button/ui-btn/ui-button.html', {
-               "text": "Сбросить",
-               "className": "btn_filter_cancel",
-               "type": "button"
-            })
+            @@loop('../../../ui/ui-button/ui-btn/ui-button.html', [
+               {
+                  "text": "Применить",
+                  "className": "btn_ui-action",
+                  "type": "submit"
+               },
+               {
+                  "text": "Сбросить",
+                  "className": "btn_ui-outlineOnDark",
+                  "type": "button"
+               }
+            ])
          </div>
       </div>
 

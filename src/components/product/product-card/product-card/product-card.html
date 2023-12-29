@@ -1,12 +1,12 @@
 <div class="product-card swiper-slide">
    <div class="img">
-      <a href="#">
+      <a href="../../../../pages/page-product/page-product.html">
          <img src="@@img" alt="">
          <img src="@@imgHover" alt="" class="hover-img">
       </a>
       
       <div class="sticker-wrap">
-         <div class="ui-sticker sticker_sold ">Нет в наличии</div>
+         <div class="sticker_sold">Нет в наличии</div>
       </div>
 
       <div class="quick-nav">
@@ -27,14 +27,22 @@
       </div>
 
       <div class="action-wrap">
-         @@include('../../../ui/ui-button/ui-circle-icon/ui-circle-icon.html', {
-            "classNameIcon": "cart",
-            "className": "circle-icon_cart"
-         })
+         <div class="btn-cart">
+            <div class="in-cart"></div>
+            <i class="i-cart"></i>
+         </div>
+
+         <a href="../../../../pages/page-product/page-product.html" class="btn_card-order">Заказать</a>
       </div>
    </div>
 
    <div class="info">
+      <ul class="colors">
+         <li class="colors__item"></li>
+         <li class="colors__item"></li>
+         <li class="colors__item"></li>
+      </ul>
+
       <h4 class="title"><a href="#">@@title</a></h4>
       <span class="price">@@price</span>
    </div>

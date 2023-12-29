@@ -8,8 +8,10 @@ header {
    margin: 0 var(--default_padding);
    background: var(--separating);
    border-radius: var(--mdRd);
-
-   
+   position: sticky;
+   top: 0;
+   z-index: 2;
+   transition: all .2s ease;
 
    .ui-container {
       display: flex;
@@ -20,6 +22,7 @@ header {
 
    .logo {
       max-width: 190px;
+      transition: all .2s ease;
 
       img {
          max-width: 100%;
@@ -29,21 +32,12 @@ header {
 
    &.sticky {
       margin: 0 auto;
-      position: fixed;
-      top: 10px;
-      left: 10px;
-      background: var(--separating_contrast);
-      opacity: 0;
-      visibility: hidden;
-      transform: translateY(-20px);
-      width: calc(100% - 10px * 2);
-      z-index: 2;
+      width: 100%;
+      border-radius: 0;
+      transition: all .2s ease;
 
-      &.active {
-         transform: none;
-         opacity: 1;
-         visibility: visible;
-         transition: all .5s ease;
+      .logo {
+         max-width: 160px;
       }
    }
    

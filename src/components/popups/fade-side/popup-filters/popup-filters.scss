@@ -24,19 +24,9 @@
       }
    }
 
-   .btn_filter_apply {
-      @include uiBtnType( $type: ui );
-      @include uiBtnTheme( $theme: action, );
-   }
-
    .ui-popup__btns {
       margin-top: 0;
       grid-template: auto / repeat(auto-fill, minmax(140px, 1fr));
-   }
-
-   .btn_filter_cancel {
-      @include uiBtnType( $type: ui );
-      @include uiBtnTheme( $theme: outlines, $childTheme: outlinesDefaultLight );
    }
 }
 

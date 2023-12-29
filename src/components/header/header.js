@@ -7,22 +7,16 @@ function fadeInNavOnScroll(distance) {
 
    if (window.scrollY >= distance) {
       header.classList.add('sticky')
-      setTimeout(() => {
-         header.classList.add('active')
-      }, 50)
-   }
-
-   if (window.scrollY <= 200) {
-      header.classList.remove('active')
+   } else {
       header.classList.remove('sticky')
-   } 
+   }
 }
 
 
 window.addEventListener('load', () => {
-   fadeInNavOnScroll(200) 
+   fadeInNavOnScroll(40) 
 
    window.addEventListener('scroll', () => {
-      fadeInNavOnScroll(200) 
+      fadeInNavOnScroll(40) 
    })
 })
