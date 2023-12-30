@@ -216,12 +216,12 @@
    @include buttonIconTheme( $theme: light )
 }
 
-.btn_more {
-   @include buttonIconType( $type: ui );
-   @include buttonIconTheme( $theme: light );
+// .btn_more {
+//    @include buttonIconType( $type: ui );
+//    @include buttonIconTheme( $theme: light );
 
-   margin: 50px auto 0 auto;
-}
+//    margin: 50px auto 0 auto;
+// }
 
 .btn_i_popup_primary {
    @include buttonIconType( $type: primary );

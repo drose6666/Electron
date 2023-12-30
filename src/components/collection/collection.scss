@@ -54,5 +54,12 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
+      transition: all .5s ease;
+   }
+
+   &:hover {
+      .collection-card__img {
+         transform: scale(1.1);
+      }
    }
 }

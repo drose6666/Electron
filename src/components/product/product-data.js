@@ -149,10 +149,10 @@ function renderProductList (productsList) {
 
       return `
          <div class="product-card swiper-slide">
-            <div class="img">
-               <a href="../../../../pages/page-product/page-product.html">
-                  <img src="${product.img}" alt="">
-                  <img src="${product.imgHidden}" alt="" class="hover-img">
+            <div class="product-img">
+               <a class="img-wrap" href="../../../../pages/page-product/page-product.html">
+                  <img loading="lazy" class="img" src="${product.img}" alt="">
+                  <img loading="lazy" class="img img_hover" src="${product.imgHidden}" alt="">
                </a>
                
                <div class="sticker-wrap">
@@ -208,10 +208,10 @@ function renderColors(arr) {
 // TODO Создание HTML для кнопки корзины и "Заказать"
 function renderCartBtn(availability, statusCart) {
    const defaultCartBtn = `
-      <div class="btn-cart ${statusCart ? 'inCart' : ''}">
-         <div class="in-cart"></div>
+      <button class="btn-cart ${statusCart ? 'inCart' : ''}">
+         <span class="in-cart"></span>
          <i class="i-cart"></i>
-      </div>
+      </button>
    `
    const orderCartBtn = `
       <a href="../../../../pages/page-product/page-product.html" class="btn_card-order">Заказать</a>
@@ -220,8 +220,9 @@ function renderCartBtn(availability, statusCart) {
 }
 
 
-// TODO ПРи клике на кнопку корзины товар будет удаляться/добавляться в корину
+// TODO ПРи клике на кнопку корзины товар будет удаляться/добавляться в корзину
 // Код наже описывает визиуальную часть кнопки корзины в карточке товара 
+// без связи с массивом товаров
 
 const cartBtns = document.querySelectorAll('.product-card .btn-cart')
 for (let i = 0; i < cartBtns.length; i++) {

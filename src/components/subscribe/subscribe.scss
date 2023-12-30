@@ -2,13 +2,15 @@
 
 .subscribe {
    margin-top: 160px;
-   @extend %fullContainerWidth;
+   position: relative;
    
    container-name: subscribe;
    container-type: inline-size;
 
-   &__inside {
-      padding: 60px 20px;
+   @extend %fullWidthElement;
+
+   &__container {
+      padding: 70px 0;
       background: var(--action_slow);
       position: relative;
       overflow: hidden;
@@ -16,43 +18,51 @@
       @extend %dynamicRadius40to25;
    }
 
+   &__bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: right 28% top 50%;
+   }
+
    &__title {
-      margin-bottom: 15px;
-      font-size: 45px;
+      margin-bottom: 25px;
+      font-size: 50px;
       font-weight: 500;
       line-height: 100%;
-      color: var(--dark);
-      text-align: center;
+      color: var(--light);
       position: relative;
       z-index: 1;
    }
 
    &__text {
-      margin: 0 auto 50px auto;
-      font-size: clamp(20px, 1.9cqi, 22px);
+      margin-bottom: 70px;
+      font-size: clamp(20px, 5cqi, 23px);
       font-weight: 300;
-      line-height: 105%;
-      color: var(--text_dark_action);
-      text-align: center;
-      max-width: 585px;
+      line-height: 115%;
+      color: var(--light);
+      max-width: 600px;
       position: relative;
       z-index: 1;
    }
 
    .warning-text {
-      margin: 10px auto 0 auto;
-      font-size: 15px;
+      margin-top: 15px;
+      margin-left: 20px;
+      font-size: 16px;
       font-weight: 300;
-      line-height: 115%;
-      color: var(--text_slow_action);
-      text-align: center;
+      line-height: 110%;
+      color: var(--text_additional);
       max-width: 410px;
       text-wrap: balance;
       position: relative;
       z-index: 1;
 
       strong {
-         color: var(--dark);
+         color: var(--light);
          cursor: pointer;
          user-select: none;
          transition: background-size .2s ease, color .2s ease;
@@ -82,28 +92,16 @@
       right: -30cqi;
    }
 
-   @container subscribe (max-width: 750px) {
-      .decor-left, .decor-right {
-         $size: 500px;
-
-         width: $size;
-      }
-
-      .decor-left {
-         top: -220px;
-         left: -220px;
-      }
-   
-      .decor-right {
-         bottom: -220px;
-         right: -220px;
+   @include media (max-width, 1650px)  {
+      .ui-container {
+         padding-left: clamp(15px, 5cqi, 60px);
       }
    }
 
-   @container subscribe (max-width: 440px) {
+   @container subscribe (max-width: 500px) {
       &__title {
          margin-bottom: 25px;
-         font-size: clamp(30px, 11cqi, 45px);
+         font-size: clamp(33px, 12cqi, 45px);
       }
 
       &__text {
@@ -112,6 +110,7 @@
 
       .warning-text {
          margin: 15px auto 0 auto;
+         text-align: center;
       }
    }
 }

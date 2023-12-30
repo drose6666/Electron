@@ -1,6 +1,5 @@
 #form-subscribe {
-   margin: 0 auto;
-   max-width: 500px;
+   max-width: clamp(400px, 90cqi, 600px);
    width: 100%;
    position: relative;
    z-index: 1;
@@ -8,20 +7,23 @@
    .ui-form-item {
       width: 100%;
    }
+
+   .btn_subscribe {
+      padding: 5px 25px;
+   }
 }
 
-@container subscribe (max-width: 440px) {
+@container subscribe (max-width: 500px) {
    #form-subscribe {
       .ui-form-item {
          .input_subscribe {
             padding-right: 10px;
          }
 
-         .element-inside-input {
+         .btn_subscribe {
             margin: 5px auto 0 auto;
+            display: flex;
             position: relative;
-            // max-width: 100%;
-            // width: 100%;
          }
       }
    }

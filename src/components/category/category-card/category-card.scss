@@ -107,6 +107,7 @@
          min-height: 270px;
          background: var(--light);
          gap: 25px;
+         border-radius: var(--optionalRd);
 
          .name {
             font-size: 30px;

@@ -307,6 +307,11 @@
    @include btnTheme( $theme: outlineOnDark );
 }
 
+.btn_ui-outlineOnLight {
+   @include btnType( $type: ui );
+   @include btnTheme( $theme: outlineOnLight );
+}
+
 .btn_ui-option {
    @include btnType( $type: ui );
    @include btnTheme( $theme: option );
@@ -346,4 +351,22 @@
       background: var(--action);
       box-shadow: var(--card_btn_action_hover_shadow);
    }
+}
+
+
+// TODO Кнопки внутри полей ввода
+.inside_field {
+   position: absolute;
+   right: 2px;
+   top: 2px;
+}
+
+
+// TODO Кнопка "Показать еще" (btn_more)
+.btn_more {
+   @include btnType( $type: ui );
+   @include btnTheme( $theme: option );
+
+   margin: 50px auto 0 auto;
+   display: flex;
 }
