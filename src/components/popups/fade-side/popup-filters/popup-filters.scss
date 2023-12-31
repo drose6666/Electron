@@ -60,12 +60,15 @@
    .ui-popup__btns {
       max-width: 100%;
    }
-}
 
-@container uiPopupContainer (max-height: 680px) {
-   #form-filters {
+   @include media (max-height, 680px) {
+      min-height: 100dvh;
+      height: auto;
+   
       .form-filters__content {
-         min-height: 350px;
+         min-height: 450px;
       }
+      
    }
 }
+

@@ -1,8 +1,8 @@
-<div class="ui-popup fade-side" id="popup-compare">
+<div class="ui-popup fade-side popup_fixed-content" id="popup-compare">
    <div class="ui-popup__container">
 
-      <h2 class="ui-popup__title">Сравнение</h2>
-      
+      <h2 class="ui-popup__title">Сравнение <strong class="count">(2)</strong></h2>
+
       <div class="ui-popup-products">
          <div class="ui-popup-products__list">
             @@loop('../../../product/product-card/product-card-cart/product-card-cart.html', [
@@ -10,29 +10,67 @@
                   "img": "../../../../img/cards/card_3.webp",
                   "name": "MacBook Pro (M2 Pro, 2023)",
                   "price": "150 970 ₽",
-                  "className": "fade-compare-card"
+                  "className": "product_compare"
                },
                {
                   "img": "../../../../img/cards/card_2.webp",
                   "name": "Samsung Galaxy S23 Ultra в комплекте с Buds 2 Pro",
                   "price": "150 970 ₽",
-                  "className": "fade-compare-card"
+                  "className": "product_compare"
+               },
+               {
+                  "img": "../../../../img/cards/card_3.webp",
+                  "name": "MacBook Pro (M2 Pro, 2023)",
+                  "price": "150 970 ₽",
+                  "className": "product_compare"
+               },
+               {
+                  "img": "../../../../img/cards/card_2.webp",
+                  "name": "Samsung Galaxy S23 Ultra в комплекте с Buds 2 Pro",
+                  "price": "150 970 ₽",
+                  "className": "product_compare"
+               },
+               {
+                  "img": "../../../../img/cards/card_3.webp",
+                  "name": "MacBook Pro (M2 Pro, 2023)",
+                  "price": "150 970 ₽",
+                  "className": "product_compare"
+               },
+               {
+                  "img": "../../../../img/cards/card_2.webp",
+                  "name": "Samsung Galaxy S23 Ultra в комплекте с Buds 2 Pro",
+                  "price": "150 970 ₽",
+                  "className": "product_compare"
+               },
+               {
+                  "img": "../../../../img/cards/card_3.webp",
+                  "name": "MacBook Pro (M2 Pro, 2023)",
+                  "price": "150 970 ₽",
+                  "className": "product_compare"
+               },
+               {
+                  "img": "../../../../img/cards/card_2.webp",
+                  "name": "Samsung Galaxy S23 Ultra в комплекте с Buds 2 Pro",
+                  "price": "150 970 ₽",
+                  "className": "product_compare"
                },
             ])
          </div>
       </div>
 
-      <div class="ui-popup__btns links">
-         @@include('../../../ui/ui-button/ui-btn/ui-button-link.html', {
-            "text": "Перейти к сравнению",
-            "className": "btn_primary-action",
-            "link": "#"
-         })
-         @@include('../../../ui/ui-more/ui-more-link.html', {
-            "text": "Продолжить покупки",
-            "link": "#",
-            "className": "ui-more_basic-slow_dark ui-more_compare"
-         })
+      <div class="ui-popup__action">
+         <div class="ui-popup__btns links">
+            @@include('../../../ui/ui-button/ui-btn/ui-button-link.html', {
+               "text": "Перейти к сравнению",
+               "className": "btn_primary-action",
+               "link": "#"
+            })
+            @@include('../../../ui/ui-more/ui-more-link.html', {
+               "text": "Продолжить покупки",
+               "link": "#",
+               "className": "ui-more_basic-slow_dark ui-more_compare"
+            })
+         </div>
       </div>
 
       @@include('../../../ui/ui-close/ui-close.html', {

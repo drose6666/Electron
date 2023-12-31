@@ -32,10 +32,8 @@
          font-weight: 300;
          line-height: 140%;
          color: var(--dark);
-         display: -webkit-box;
-         -webkit-line-clamp: 6;
-         -webkit-box-orient: vertical; 
-         overflow: hidden;
+         
+         @include textCropping( $stringCount: 6 );
       }
 
       .rating {

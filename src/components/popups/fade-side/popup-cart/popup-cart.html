@@ -1,7 +1,7 @@
-<div class="ui-popup fade-side" id="popup-cart">
+<div class="ui-popup fade-side popup_fixed-content" id="popup-cart">
    <div class="ui-popup__container">
 
-      <h2 class="ui-popup__title">Корзина</h2>
+      <h2 class="ui-popup__title">Корзина <strong class="count">(2)</strong></h2>
 
       <div class="ui-popup-products">
          <div class="ui-popup-products__list">
@@ -18,26 +18,71 @@
                   "price": "150 970 ₽",
                   "className": ""
                },
+               {
+                  "img": "../../../../img/cards/card_3.webp",
+                  "name": "MacBook Pro (M2 Pro, 2023)",
+                  "price": "150 970 ₽",
+                  "className": ""
+               },
+               {
+                  "img": "../../../../img/cards/card_2.webp",
+                  "name": "Samsung Galaxy S23 Ultra в комплекте с Buds 2 Pro",
+                  "price": "150 970 ₽",
+                  "className": ""
+               },
+               {
+                  "img": "../../../../img/cards/card_3.webp",
+                  "name": "MacBook Pro (M2 Pro, 2023)",
+                  "price": "150 970 ₽",
+                  "className": ""
+               },
+               {
+                  "img": "../../../../img/cards/card_2.webp",
+                  "name": "Samsung Galaxy S23 Ultra в комплекте с Buds 2 Pro",
+                  "price": "150 970 ₽",
+                  "className": ""
+               },
+               {
+                  "img": "../../../../img/cards/card_3.webp",
+                  "name": "MacBook Pro (M2 Pro, 2023)",
+                  "price": "150 970 ₽",
+                  "className": ""
+               },
+               {
+                  "img": "../../../../img/cards/card_2.webp",
+                  "name": "Samsung Galaxy S23 Ultra в комплекте с Buds 2 Pro",
+                  "price": "150 970 ₽",
+                  "className": ""
+               },
             ])
          </div>
       </div>
 
-      @@include('../../../order/cost-order/cost-order.html', {
-         "deliveryText": "Раcчет в корзине"
-      })
+      <div class="ui-popup__action">
+         @@include('../../../order/cost-order/cost-order-cart.html', {
+            "className": "product_cart"
+         })
 
-      <div class="ui-popup__btns">
-         @@include('../../../ui/ui-button/ui-btn/ui-button-link.html', {
-            "text": "Перейти в корзину",
-            "className": "btn_primary-action ",
-            "link": "#"
-         })
-         @@include('../../../ui/ui-button/ui-btn/ui-button-link.html', {
-            "text": "Оформить заказ",
-            "className": "btn_primary-outlineLight",
-            "link": "#"
-         })
+         <div class="ui-popup__btns">
+            @@include('../../../ui/ui-button/ui-btn/ui-button-link.html', {
+               "text": "Оформить заказ",
+               "className": "btn_primary-action",
+               "link": "#"
+            })
+            @@include('../../../ui/ui-button/ui-btn/ui-button-link.html', {
+               "text": "Перейти в корзину",
+               "className": "btn_primary-outlineOnDark",
+               "link": "#"
+            })
+            
+         </div>
+
+         <p class="delivery-text">Доставка расчитывается на этапе оформления заказа</p>
       </div>
+
+      
+
+      
 
       @@include('../../../ui/ui-close/ui-close.html', {
          "className": "close_fade-side left_side popup-cart-close",

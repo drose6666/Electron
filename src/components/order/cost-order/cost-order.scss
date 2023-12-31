@@ -1,5 +1,4 @@
 .cost-order {
-   margin: 80px 0;
    width: 100%;
 
    .cost-item {
@@ -49,6 +48,28 @@
             color: var(--light);
          }
       }
+   }
+
+   &.product_cart {
+      margin-bottom: 40px;
+
+      .cost-item {
+         .key, .value {
+            font-size: 25px;
+            font-weight: 500;
+            line-height: 100%;
+            color: var(--light);
+            text-transform: none;
+
+            strong {
+               font-weight: 300;
+            }
+         }
+      }
+   }
+
+   &.product_page {
+      margin: 80px 0;
    }
 
    &.mb-0 {

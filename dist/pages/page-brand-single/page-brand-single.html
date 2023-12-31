@@ -22,16 +22,16 @@
    <link rel="icon" href="../../img/favicon/fav_48.png" type="image/png" sizes="48x48">
    <link rel="icon" href="../../img/favicon/fav_128.png" type="image/png" sizes="128x128">
    
-   <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css?_v=20231230125156" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
-   <!-- <link rel="stylesheet" href="../../libs/css/bootstrap-grid.min.css?_v=20231230125156"> -->
+   <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css?_v=20231231095303" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+   <!-- <link rel="stylesheet" href="../../libs/css/bootstrap-grid.min.css?_v=20231231095303"> -->
 
-   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css?_v=20231230125156" />
-   <script defer src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js?_v=20231230125156"></script>
-   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js?_v=20231230125156" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-   <link rel="stylesheet" href="../../libs/css/reset.min.css?_v=20231230125156">
-   <link rel="stylesheet" as="font" href="../../fonts/fonts.css?_v=20231230125156">
-   <link rel="stylesheet" as="font" href="../../fonts/icon-font.css?_v=20231230125156">
-   <link rel="stylesheet" href="css/page-brand-single.min.css?_v=20231230125156">
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css?_v=20231231095303" />
+   <script defer src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js?_v=20231231095303"></script>
+   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js?_v=20231231095303" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+   <link rel="stylesheet" href="../../libs/css/reset.min.css?_v=20231231095303">
+   <link rel="stylesheet" as="font" href="../../fonts/fonts.css?_v=20231231095303">
+   <link rel="stylesheet" as="font" href="../../fonts/icon-font.css?_v=20231231095303">
+   <link rel="stylesheet" href="css/page-brand-single.min.css?_v=20231231095303">
    
    <title>Apple</title>
 </head>
@@ -201,7 +201,10 @@
    <i class="i-search"></i>
 </div>
 
-   <div class="ui-circle-icon-menu btn_cart header-icon">
+   <div class="ui-circle-icon-menu btn_compare header-icon ">
+   <i class="i-compare"></i>
+   <div class="counter"><span>56</span></div>
+</div><div class="ui-circle-icon-menu btn_cart header-icon">
    <i class="i-cart"></i>
    <div class="counter"><span>56</span></div>
 </div>
@@ -718,32 +721,26 @@
 
    <div class="ui-popup__overlay" id="overlay-search"></div>
 </div>
-      <div class="ui-popup fade-side" id="popup-compare">
+      <div class="ui-popup fade-side popup_fixed-content" id="popup-compare">
    <div class="ui-popup__container">
 
-      <h2 class="ui-popup__title">Сравнение</h2>
-      
+      <h2 class="ui-popup__title">Сравнение <strong class="count">(2)</strong></h2>
+
       <div class="ui-popup-products">
          <div class="ui-popup-products__list">
-            <div class="product-card-cart fade-compare-card">
-   <a href="../../../../pages/page-product/page-product.html" class="img">
+            <div class="product-cart product_compare">
+   <a class="product-cart__img" href="../../../../pages/page-product/page-product.html">
       <img src="../../../../img/cards/card_3.webp" alt="">
    </a>
 
-   <div class="content">
-      <div class="main-info">
-         <h4 class="product-name"><a href="#">MacBook Pro (M2 Pro, 2023)</a></h4>
-         <ul class="product-options">
-            <li class="color-item"></li>
-            <li class="option-item">16/512 Gb</li>
-            <li class="option-item">256 Gb</li>
-            <li class="option-item">16/512 Gb</li>
-         </ul>
+   <div class="product-cart__content">
+      <div class="wrapper">
+         <h4 class="product-cart__name"><a href="#">MacBook Pro (M2 Pro, 2023)</a></h4>
+         <span class="product-cart__price">150 970 ₽</span>
       </div>
 
-      <div class="additional-info">
-         <div class="price">150 970 ₽</div>
-         <div class="product-counter @@className">
+      <div class="product-cart__counter">
+         <div class="product-counter product_cart">
    <i class="i-minus count-down"></i>
    <input type="text" value="1" inputmode="numeric" class="count" name="product_count">
    <i class="i-plus count-up"></i>
@@ -754,25 +751,157 @@
    <div class="ui-close close_product-remove">
    <i class="i-close"></i>
 </div>
-</div><div class="product-card-cart fade-compare-card">
-   <a href="../../../../pages/page-product/page-product.html" class="img">
+</div><div class="product-cart product_compare">
+   <a class="product-cart__img" href="../../../../pages/page-product/page-product.html">
       <img src="../../../../img/cards/card_2.webp" alt="">
    </a>
 
-   <div class="content">
-      <div class="main-info">
-         <h4 class="product-name"><a href="#">Samsung Galaxy S23 Ultra в комплекте с Buds 2 Pro</a></h4>
-         <ul class="product-options">
-            <li class="color-item"></li>
-            <li class="option-item">16/512 Gb</li>
-            <li class="option-item">256 Gb</li>
-            <li class="option-item">16/512 Gb</li>
-         </ul>
+   <div class="product-cart__content">
+      <div class="wrapper">
+         <h4 class="product-cart__name"><a href="#">Samsung Galaxy S23 Ultra в комплекте с Buds 2 Pro</a></h4>
+         <span class="product-cart__price">150 970 ₽</span>
       </div>
 
-      <div class="additional-info">
-         <div class="price">150 970 ₽</div>
-         <div class="product-counter @@className">
+      <div class="product-cart__counter">
+         <div class="product-counter product_cart">
+   <i class="i-minus count-down"></i>
+   <input type="text" value="1" inputmode="numeric" class="count" name="product_count">
+   <i class="i-plus count-up"></i>
+</div>
+      </div>
+   </div>
+
+   <div class="ui-close close_product-remove">
+   <i class="i-close"></i>
+</div>
+</div><div class="product-cart product_compare">
+   <a class="product-cart__img" href="../../../../pages/page-product/page-product.html">
+      <img src="../../../../img/cards/card_3.webp" alt="">
+   </a>
+
+   <div class="product-cart__content">
+      <div class="wrapper">
+         <h4 class="product-cart__name"><a href="#">MacBook Pro (M2 Pro, 2023)</a></h4>
+         <span class="product-cart__price">150 970 ₽</span>
+      </div>
+
+      <div class="product-cart__counter">
+         <div class="product-counter product_cart">
+   <i class="i-minus count-down"></i>
+   <input type="text" value="1" inputmode="numeric" class="count" name="product_count">
+   <i class="i-plus count-up"></i>
+</div>
+      </div>
+   </div>
+
+   <div class="ui-close close_product-remove">
+   <i class="i-close"></i>
+</div>
+</div><div class="product-cart product_compare">
+   <a class="product-cart__img" href="../../../../pages/page-product/page-product.html">
+      <img src="../../../../img/cards/card_2.webp" alt="">
+   </a>
+
+   <div class="product-cart__content">
+      <div class="wrapper">
+         <h4 class="product-cart__name"><a href="#">Samsung Galaxy S23 Ultra в комплекте с Buds 2 Pro</a></h4>
+         <span class="product-cart__price">150 970 ₽</span>
+      </div>
+
+      <div class="product-cart__counter">
+         <div class="product-counter product_cart">
+   <i class="i-minus count-down"></i>
+   <input type="text" value="1" inputmode="numeric" class="count" name="product_count">
+   <i class="i-plus count-up"></i>
+</div>
+      </div>
+   </div>
+
+   <div class="ui-close close_product-remove">
+   <i class="i-close"></i>
+</div>
+</div><div class="product-cart product_compare">
+   <a class="product-cart__img" href="../../../../pages/page-product/page-product.html">
+      <img src="../../../../img/cards/card_3.webp" alt="">
+   </a>
+
+   <div class="product-cart__content">
+      <div class="wrapper">
+         <h4 class="product-cart__name"><a href="#">MacBook Pro (M2 Pro, 2023)</a></h4>
+         <span class="product-cart__price">150 970 ₽</span>
+      </div>
+
+      <div class="product-cart__counter">
+         <div class="product-counter product_cart">
+   <i class="i-minus count-down"></i>
+   <input type="text" value="1" inputmode="numeric" class="count" name="product_count">
+   <i class="i-plus count-up"></i>
+</div>
+      </div>
+   </div>
+
+   <div class="ui-close close_product-remove">
+   <i class="i-close"></i>
+</div>
+</div><div class="product-cart product_compare">
+   <a class="product-cart__img" href="../../../../pages/page-product/page-product.html">
+      <img src="../../../../img/cards/card_2.webp" alt="">
+   </a>
+
+   <div class="product-cart__content">
+      <div class="wrapper">
+         <h4 class="product-cart__name"><a href="#">Samsung Galaxy S23 Ultra в комплекте с Buds 2 Pro</a></h4>
+         <span class="product-cart__price">150 970 ₽</span>
+      </div>
+
+      <div class="product-cart__counter">
+         <div class="product-counter product_cart">
+   <i class="i-minus count-down"></i>
+   <input type="text" value="1" inputmode="numeric" class="count" name="product_count">
+   <i class="i-plus count-up"></i>
+</div>
+      </div>
+   </div>
+
+   <div class="ui-close close_product-remove">
+   <i class="i-close"></i>
+</div>
+</div><div class="product-cart product_compare">
+   <a class="product-cart__img" href="../../../../pages/page-product/page-product.html">
+      <img src="../../../../img/cards/card_3.webp" alt="">
+   </a>
+
+   <div class="product-cart__content">
+      <div class="wrapper">
+         <h4 class="product-cart__name"><a href="#">MacBook Pro (M2 Pro, 2023)</a></h4>
+         <span class="product-cart__price">150 970 ₽</span>
+      </div>
+
+      <div class="product-cart__counter">
+         <div class="product-counter product_cart">
+   <i class="i-minus count-down"></i>
+   <input type="text" value="1" inputmode="numeric" class="count" name="product_count">
+   <i class="i-plus count-up"></i>
+</div>
+      </div>
+   </div>
+
+   <div class="ui-close close_product-remove">
+   <i class="i-close"></i>
+</div>
+</div><div class="product-cart product_compare">
+   <a class="product-cart__img" href="../../../../pages/page-product/page-product.html">
+      <img src="../../../../img/cards/card_2.webp" alt="">
+   </a>
+
+   <div class="product-cart__content">
+      <div class="wrapper">
+         <h4 class="product-cart__name"><a href="#">Samsung Galaxy S23 Ultra в комплекте с Buds 2 Pro</a></h4>
+         <span class="product-cart__price">150 970 ₽</span>
+      </div>
+
+      <div class="product-cart__counter">
+         <div class="product-counter product_cart">
    <i class="i-minus count-down"></i>
    <input type="text" value="1" inputmode="numeric" class="count" name="product_count">
    <i class="i-plus count-up"></i>
@@ -787,11 +916,13 @@
          </div>
       </div>
 
-      <div class="ui-popup__btns links">
-         <a href="#" class="btn_primary-action">Перейти к сравнению</a>
-         <a href="#" class="ui-more_basic-slow_dark ui-more_compare">
+      <div class="ui-popup__action">
+         <div class="ui-popup__btns links">
+            <a href="#" class="btn_primary-action">Перейти к сравнению</a>
+            <a href="#" class="ui-more_basic-slow_dark ui-more_compare">
    <span class="child">Продолжить покупки</span>
 </a>
+         </div>
       </div>
 
       <div class="ui-close close_fade-side left_side popup-compare-close">
@@ -801,32 +932,26 @@
 
    <div class="ui-popup__overlay" id="overlay-compare"></div>
 </div>
-      <div class="ui-popup fade-side" id="popup-cart">
+      <div class="ui-popup fade-side popup_fixed-content" id="popup-cart">
    <div class="ui-popup__container">
 
-      <h2 class="ui-popup__title">Корзина</h2>
+      <h2 class="ui-popup__title">Корзина <strong class="count">(2)</strong></h2>
 
       <div class="ui-popup-products">
          <div class="ui-popup-products__list">
-            <div class="product-card-cart ">
-   <a href="../../../../pages/page-product/page-product.html" class="img">
+            <div class="product-cart ">
+   <a class="product-cart__img" href="../../../../pages/page-product/page-product.html">
       <img src="../../../../img/cards/card_3.webp" alt="">
    </a>
 
-   <div class="content">
-      <div class="main-info">
-         <h4 class="product-name"><a href="#">MacBook Pro (M2 Pro, 2023)</a></h4>
-         <ul class="product-options">
-            <li class="color-item"></li>
-            <li class="option-item">16/512 Gb</li>
-            <li class="option-item">256 Gb</li>
-            <li class="option-item">16/512 Gb</li>
-         </ul>
+   <div class="product-cart__content">
+      <div class="wrapper">
+         <h4 class="product-cart__name"><a href="#">MacBook Pro (M2 Pro, 2023)</a></h4>
+         <span class="product-cart__price">150 970 ₽</span>
       </div>
 
-      <div class="additional-info">
-         <div class="price">150 970 ₽</div>
-         <div class="product-counter @@className">
+      <div class="product-cart__counter">
+         <div class="product-counter product_cart">
    <i class="i-minus count-down"></i>
    <input type="text" value="1" inputmode="numeric" class="count" name="product_count">
    <i class="i-plus count-up"></i>
@@ -837,25 +962,157 @@
    <div class="ui-close close_product-remove">
    <i class="i-close"></i>
 </div>
-</div><div class="product-card-cart ">
-   <a href="../../../../pages/page-product/page-product.html" class="img">
+</div><div class="product-cart ">
+   <a class="product-cart__img" href="../../../../pages/page-product/page-product.html">
       <img src="../../../../img/cards/card_2.webp" alt="">
    </a>
 
-   <div class="content">
-      <div class="main-info">
-         <h4 class="product-name"><a href="#">Samsung Galaxy S23 Ultra в комплекте с Buds 2 Pro</a></h4>
-         <ul class="product-options">
-            <li class="color-item"></li>
-            <li class="option-item">16/512 Gb</li>
-            <li class="option-item">256 Gb</li>
-            <li class="option-item">16/512 Gb</li>
-         </ul>
+   <div class="product-cart__content">
+      <div class="wrapper">
+         <h4 class="product-cart__name"><a href="#">Samsung Galaxy S23 Ultra в комплекте с Buds 2 Pro</a></h4>
+         <span class="product-cart__price">150 970 ₽</span>
       </div>
 
-      <div class="additional-info">
-         <div class="price">150 970 ₽</div>
-         <div class="product-counter @@className">
+      <div class="product-cart__counter">
+         <div class="product-counter product_cart">
+   <i class="i-minus count-down"></i>
+   <input type="text" value="1" inputmode="numeric" class="count" name="product_count">
+   <i class="i-plus count-up"></i>
+</div>
+      </div>
+   </div>
+
+   <div class="ui-close close_product-remove">
+   <i class="i-close"></i>
+</div>
+</div><div class="product-cart ">
+   <a class="product-cart__img" href="../../../../pages/page-product/page-product.html">
+      <img src="../../../../img/cards/card_3.webp" alt="">
+   </a>
+
+   <div class="product-cart__content">
+      <div class="wrapper">
+         <h4 class="product-cart__name"><a href="#">MacBook Pro (M2 Pro, 2023)</a></h4>
+         <span class="product-cart__price">150 970 ₽</span>
+      </div>
+
+      <div class="product-cart__counter">
+         <div class="product-counter product_cart">
+   <i class="i-minus count-down"></i>
+   <input type="text" value="1" inputmode="numeric" class="count" name="product_count">
+   <i class="i-plus count-up"></i>
+</div>
+      </div>
+   </div>
+
+   <div class="ui-close close_product-remove">
+   <i class="i-close"></i>
+</div>
+</div><div class="product-cart ">
+   <a class="product-cart__img" href="../../../../pages/page-product/page-product.html">
+      <img src="../../../../img/cards/card_2.webp" alt="">
+   </a>
+
+   <div class="product-cart__content">
+      <div class="wrapper">
+         <h4 class="product-cart__name"><a href="#">Samsung Galaxy S23 Ultra в комплекте с Buds 2 Pro</a></h4>
+         <span class="product-cart__price">150 970 ₽</span>
+      </div>
+
+      <div class="product-cart__counter">
+         <div class="product-counter product_cart">
+   <i class="i-minus count-down"></i>
+   <input type="text" value="1" inputmode="numeric" class="count" name="product_count">
+   <i class="i-plus count-up"></i>
+</div>
+      </div>
+   </div>
+
+   <div class="ui-close close_product-remove">
+   <i class="i-close"></i>
+</div>
+</div><div class="product-cart ">
+   <a class="product-cart__img" href="../../../../pages/page-product/page-product.html">
+      <img src="../../../../img/cards/card_3.webp" alt="">
+   </a>
+
+   <div class="product-cart__content">
+      <div class="wrapper">
+         <h4 class="product-cart__name"><a href="#">MacBook Pro (M2 Pro, 2023)</a></h4>
+         <span class="product-cart__price">150 970 ₽</span>
+      </div>
+
+      <div class="product-cart__counter">
+         <div class="product-counter product_cart">
+   <i class="i-minus count-down"></i>
+   <input type="text" value="1" inputmode="numeric" class="count" name="product_count">
+   <i class="i-plus count-up"></i>
+</div>
+      </div>
+   </div>
+
+   <div class="ui-close close_product-remove">
+   <i class="i-close"></i>
+</div>
+</div><div class="product-cart ">
+   <a class="product-cart__img" href="../../../../pages/page-product/page-product.html">
+      <img src="../../../../img/cards/card_2.webp" alt="">
+   </a>
+
+   <div class="product-cart__content">
+      <div class="wrapper">
+         <h4 class="product-cart__name"><a href="#">Samsung Galaxy S23 Ultra в комплекте с Buds 2 Pro</a></h4>
+         <span class="product-cart__price">150 970 ₽</span>
+      </div>
+
+      <div class="product-cart__counter">
+         <div class="product-counter product_cart">
+   <i class="i-minus count-down"></i>
+   <input type="text" value="1" inputmode="numeric" class="count" name="product_count">
+   <i class="i-plus count-up"></i>
+</div>
+      </div>
+   </div>
+
+   <div class="ui-close close_product-remove">
+   <i class="i-close"></i>
+</div>
+</div><div class="product-cart ">
+   <a class="product-cart__img" href="../../../../pages/page-product/page-product.html">
+      <img src="../../../../img/cards/card_3.webp" alt="">
+   </a>
+
+   <div class="product-cart__content">
+      <div class="wrapper">
+         <h4 class="product-cart__name"><a href="#">MacBook Pro (M2 Pro, 2023)</a></h4>
+         <span class="product-cart__price">150 970 ₽</span>
+      </div>
+
+      <div class="product-cart__counter">
+         <div class="product-counter product_cart">
+   <i class="i-minus count-down"></i>
+   <input type="text" value="1" inputmode="numeric" class="count" name="product_count">
+   <i class="i-plus count-up"></i>
+</div>
+      </div>
+   </div>
+
+   <div class="ui-close close_product-remove">
+   <i class="i-close"></i>
+</div>
+</div><div class="product-cart ">
+   <a class="product-cart__img" href="../../../../pages/page-product/page-product.html">
+      <img src="../../../../img/cards/card_2.webp" alt="">
+   </a>
+
+   <div class="product-cart__content">
+      <div class="wrapper">
+         <h4 class="product-cart__name"><a href="#">Samsung Galaxy S23 Ultra в комплекте с Buds 2 Pro</a></h4>
+         <span class="product-cart__price">150 970 ₽</span>
+      </div>
+
+      <div class="product-cart__counter">
+         <div class="product-counter product_cart">
    <i class="i-minus count-down"></i>
    <input type="text" value="1" inputmode="numeric" class="count" name="product_count">
    <i class="i-plus count-up"></i>
@@ -870,32 +1127,26 @@
          </div>
       </div>
 
-      <ul class="cost-order @@className">
+      <div class="ui-popup__action">
+         <ul class="cost-order product_cart">
    <li class="cost-item">
-      <div class="key">В корзине:</div>
-      <div class="value thin">товара (ов): <strong>336</strong></div>
-   </li>
-
-   <li class="cost-item">
-      <div class="key">Доставка:</div>
-      <div class="value thin">Раcчет в корзине</div>
-   </li>
-
-   <li class="cost-item">
-      <div class="key">Сумма (3):</div>
-      <div class="value">652 970 ₽</div>
-   </li>
-
-   <li class="cost-item total-cost">
-      <div class="key">Итого:</div>
-      <div class="value">652 970 565 646 ₽</div>
+      <div class="key">Сумма:</div>
+      <div class="value">652 970 999 ₽</div>
    </li>
 </ul>
 
-      <div class="ui-popup__btns">
-         <a href="#" class="btn_primary-action ">Перейти в корзину</a>
-         <a href="#" class="btn_primary-outlineLight">Оформить заказ</a>
+         <div class="ui-popup__btns">
+            <a href="#" class="btn_primary-action">Оформить заказ</a>
+            <a href="#" class="btn_primary-outlineOnDark">Перейти в корзину</a>
+            
+         </div>
+
+         <p class="delivery-text">Доставка расчитывается на этапе оформления заказа</p>
       </div>
+
+      
+
+      
 
       <div class="ui-close close_fade-side left_side popup-cart-close">
    <i class="i-angle_right"></i>
@@ -1145,7 +1396,7 @@
          <p class="products-count">Показано товаров: <strong>257</strong></p>
       
          <div class="ui-popup__btns">
-            <button type="submit" class="btn_ui-action">Применить</button><button type="button" class="btn_ui-outlineOnDark">Сбросить</button>
+            <button type="submit" class="btn_ui-action">Применить</button><button type="button" class="btn_ui-outlineOnDark btn_filter_cancel">Сбросить</button>
          </div>
       </div>
 
@@ -1254,6 +1505,6 @@
 </div>
       
       
-      <script type="module" src="js/bundle-page-brand-single.min.js?_v=20231230125156"></script>
+      <script type="module" src="js/bundle-page-brand-single.min.js?_v=20231231095303"></script>
    </body>
 </html>  

@@ -43,6 +43,15 @@
 };
 
 
+// TODO Обрезка текста по количетсву строк
+@mixin textCropping( $stringCount: 2 ) {
+   -webkit-line-clamp: $stringCount;
+   -webkit-box-orient: vertical;
+   display: -webkit-box;
+   overflow: hidden;
+}
+
+
 
 // NOTE Extends
 // TODO Стили для широкоформатных блоков

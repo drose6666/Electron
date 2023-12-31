@@ -1,22 +1,18 @@
-<div class="product-card-cart @@className">
-   <a href="../../../../pages/page-product/page-product.html" class="img">
+<div class="product-cart @@className">
+   <a class="product-cart__img" href="../../../../pages/page-product/page-product.html">
       <img src="@@img" alt="">
    </a>
 
-   <div class="content">
-      <div class="main-info">
-         <h4 class="product-name"><a href="#">@@name</a></h4>
-         <ul class="product-options">
-            <li class="color-item"></li>
-            <li class="option-item">16/512 Gb</li>
-            <li class="option-item">256 Gb</li>
-            <li class="option-item">16/512 Gb</li>
-         </ul>
+   <div class="product-cart__content">
+      <div class="wrapper">
+         <h4 class="product-cart__name"><a href="#">@@name</a></h4>
+         <span class="product-cart__price">@@price</span>
       </div>
 
-      <div class="additional-info">
-         <div class="price">@@price</div>
-         @@include('../../product-counter/product-counter.html')
+      <div class="product-cart__counter">
+         @@include('../../product-counter/product-counter.html', {
+            "className": "product_cart"
+         })
       </div>
    </div>
 

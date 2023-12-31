@@ -105,7 +105,7 @@
    } @else if $theme == outlineOnDark {
       $color: var(--light);
       $bg: transparent;
-      $borderColor: var(--border);
+      $borderColor: var(--text_additional);
 
       color: $color;
       background: $bg;
@@ -264,6 +264,11 @@
 .btn_primary-outlineLight {
    @include btnType( $type: primary );
    @include btnTheme( $theme: outlineLight );
+}
+
+.btn_primary-outlineOnDark {
+   @include btnType( $type: primary );
+   @include btnTheme( $theme: outlineOnDark );
 }
 
 
