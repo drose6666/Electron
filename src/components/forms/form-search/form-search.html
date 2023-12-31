@@ -1,11 +1,16 @@
 <search role="search">
    <form class="search-form @@id" action="" method="" id="@@id">
-      <input type="text" name="search" inputmode="search" autocomplete="on" placeholder="Поиск..." class="ui-input">
+      <input type="text" name="search" inputmode="search" autocomplete="on" placeholder="Найти..." class="input_search">
       
-      @@include('../../ui/ui-button/ui-btn/ui-button.html', {
+      <!-- @@include('../../ui/ui-button/ui-btn/ui-button.html', {
          "text": "Найти",
-         "className": "btn_primary-action inside_field",
+         "className": "btn_primary-action inside_field btn-search",
          "type": "submit"
+      }) -->
+
+      @@include('../../ui/ui-button/ui-circle-icon/ui-circle-icon.html', {
+         "className": "btn-circle_search",
+         "classNameIcon": "search"
       })
    </form>
 </search>

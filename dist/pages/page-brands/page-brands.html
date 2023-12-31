@@ -22,16 +22,16 @@
    <link rel="icon" href="../../img/favicon/fav_48.png" type="image/png" sizes="48x48">
    <link rel="icon" href="../../img/favicon/fav_128.png" type="image/png" sizes="128x128">
    
-   <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css?_v=20231231095302" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
-   <!-- <link rel="stylesheet" href="../../libs/css/bootstrap-grid.min.css?_v=20231231095302"> -->
+   <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css?_v=20231231113406" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+   <!-- <link rel="stylesheet" href="../../libs/css/bootstrap-grid.min.css?_v=20231231113406"> -->
 
-   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css?_v=20231231095302" />
-   <script defer src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js?_v=20231231095302"></script>
-   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js?_v=20231231095302" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-   <link rel="stylesheet" href="../../libs/css/reset.min.css?_v=20231231095302">
-   <link rel="stylesheet" as="font" href="../../fonts/fonts.css?_v=20231231095302">
-   <link rel="stylesheet" as="font" href="../../fonts/icon-font.css?_v=20231231095302">
-   <link rel="stylesheet" href="css/page-brands.min.css?_v=20231231095302">
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css?_v=20231231113406" />
+   <script defer src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js?_v=20231231113406"></script>
+   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js?_v=20231231113406" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+   <link rel="stylesheet" href="../../libs/css/reset.min.css?_v=20231231113406">
+   <link rel="stylesheet" as="font" href="../../fonts/fonts.css?_v=20231231113406">
+   <link rel="stylesheet" as="font" href="../../fonts/icon-font.css?_v=20231231113406">
+   <link rel="stylesheet" href="css/page-brands.min.css?_v=20231231113406">
    
    <title>Brands Page</title>
 </head>
@@ -201,7 +201,11 @@
    <i class="i-search"></i>
 </div>
 
-   <div class="ui-circle-icon-menu btn_compare header-icon ">
+   <a href="" class="ui-circle-icon-menu btn_favourites">
+   <i class="i-heart"></i>
+   <div class="counter"><span>56</span></div>
+</a>
+   <div class="ui-circle-icon-menu btn_compare header-icon">
    <i class="i-compare"></i>
    <div class="counter"><span>56</span></div>
 </div><div class="ui-circle-icon-menu btn_cart header-icon">
@@ -233,9 +237,13 @@
    
       <search role="search">
    <form class="search-form page-search" action="" method="" id="page-search">
-      <input type="text" name="search" inputmode="search" autocomplete="on" placeholder="Поиск..." class="ui-input">
+      <input type="text" name="search" inputmode="search" autocomplete="on" placeholder="Найти..." class="input_search">
       
-      <button type="submit" class="btn_primary-action inside_field">Найти</button>
+      
+
+      <div class="ui-circle-icon btn-circle_search">
+   <i class="i-search"></i>
+</div>
    </form>
 </search>
    
@@ -292,7 +300,7 @@
          
          <form class="ui-form" action="" method="" id="form-subscribe">
    <div class="ui-form-item">
-      <input type="email" name="user_subscribe" inputmode="email" autocomplete="email" placeholder="Email..." class="ui-input input_subscribe">
+      <input type="email" name="user_subscribe" inputmode="email" autocomplete="email" placeholder="Email..." class="input_subscribeSearch">
       <button type="submit" class="btn_primary-action inside_field btn_subscribe">Подписаться</button>
    </div>
 </form>
@@ -567,9 +575,13 @@
       <h2 class="ui-popup__title">Поиск</h2>
       <search role="search">
    <form class="search-form main-search" action="" method="" id="main-search">
-      <input type="text" name="search" inputmode="search" autocomplete="on" placeholder="Поиск..." class="ui-input">
+      <input type="text" name="search" inputmode="search" autocomplete="on" placeholder="Найти..." class="input_search">
       
-      <button type="submit" class="btn_primary-action inside_field">Найти</button>
+      
+
+      <div class="ui-circle-icon btn-circle_search">
+   <i class="i-search"></i>
+</div>
    </form>
 </search>
 
@@ -926,6 +938,6 @@
 </div>
       
       
-      <script type="module" src="js/bundle-page-brands.min.js?_v=20231231095302"></script>
+      <script type="module" src="js/bundle-page-brands.min.js?_v=20231231113406"></script>
    </body>
 </html>  

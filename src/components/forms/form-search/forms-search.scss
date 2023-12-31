@@ -9,17 +9,49 @@ search {
 }
 
 #main-search {
-   .ui-input {
+   .input_search {
       @include uiInput (
-         $paddingRight: 117px,
+         $paddingRight: 65px,
          $fSize: 19px,
          $fWeight: 500,
-         $height: 49px,
+         $height: 54px,
       );
       @include uiInputTheme ( $theme: dark );
 
       &::placeholder {
          font-weight: 300;
+      }
+   }
+
+   .btn-search {
+      padding: 5px 25px;
+   }
+
+   .btn-circle_search {
+      width: 50px;
+      height: 50px;
+      border-radius: var(--circleRd);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      top: 2px;
+      right: 2px;
+      background: var(--action);
+      transition: all .2s ease;
+
+      i {
+         font-size: 22px;
+         color: var(--light);
+         transition: all .2s ease;
+      }
+
+      &:hover {
+         background: var(--light);
+
+         i {
+            color: var(--dark);
+         }
       }
    }
 }

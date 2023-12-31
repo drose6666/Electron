@@ -48,7 +48,7 @@ $transition: all .2s ease;
          font-size: 19px;
          font-weight: 300;
          line-height: 110%;
-         color: var(--light);
+         color: var(--text_selected_on_dark);
          max-width: 280px;
          transition: $transition;
          
@@ -99,7 +99,7 @@ $transition: all .2s ease;
       .product-cart__content {
          display: block;
       }
-      
+
       .product-cart__counter {
          display: none;
       }

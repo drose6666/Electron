@@ -104,7 +104,7 @@
 
 
 // NOTE Инпут Подписки на уведомления
-.input_subscribe {
+.input_subscribeSearch {
    @include uiInput ( $paddingRight: 180px, $height: 54px );
    @include uiInputTheme ( $theme: dark );
 }

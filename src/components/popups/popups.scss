@@ -127,7 +127,7 @@ $transitionDuration: .2s ease;
          font-size: 16px;
          font-weight: 200;
          line-height: 100%;
-         color: var(--text_selected_on_dark);
+         color: var(--light);
          text-align: center;
       }
 
@@ -324,6 +324,7 @@ $transitionDuration: .2s ease;
    }
 
    &__list {
+      margin-bottom: 60px;
       display: grid;
       grid-template: auto / 1fr;
       gap: 15px;
