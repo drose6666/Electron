@@ -1,41 +1,55 @@
-.product-option-name {
-   font-size: 18px;
-   font-weight: 300;
-   line-height: 100%;
-   color: var(--text_selected_on_dark);
-}
-
-.product-info.page-product {
-   .product-option-name {
-      font-size: 17px;
-      font-weight: 400;
-      color: var(--dark);
-   }
-}
-
 .product-info__options {
+   margin-top: 40px;
+   border-top: 1px solid;
+
+   // TODO Список опций (память, ssd и т.д)
    .product-options {
+      padding: 40px 0;
       display: grid;
       grid-template: auto / 110px 1fr;
-      gap: 15px;
+      gap: 30px;
 
       &:not(:last-child) {
          margin-bottom: 30px;
       }
 
       &__title {
-         margin-top: 10px;
-         align-self: start;
+         font-size: 16px;
+         font-weight: 400;
+         line-height: 100%;
       }
 
       &__list {
          display: flex;
          flex-wrap: wrap;
-         gap: 12px;
+         gap: 10px;
+      }
+   }
+
+   &.product_page {
+      border-color: var(--border_slow);
+
+      .product-options {
+         &__title {
+            color: var(--dark);
+         }
+      }
+   }
+
+   &.quickview {
+      border-color: var(--ui_dark);
+
+      .product-options {
+         &__title {
+            color: var(--light);
+         }
       }
    }
 }
 
+
+
+// TODO Опции товара в popup-quickview
 .product-option {
    position: relative;
    transition: all .2s ease;
@@ -113,9 +127,8 @@
 }
 
 
-// TODO Стили для product-info на странице товара v
-.product-info__options.page-product {
-
+// TODO Опции товара в popup-quickview
+.info_page-product {
    .product-option {
       .product-option__custom {
          background: var(--separating);

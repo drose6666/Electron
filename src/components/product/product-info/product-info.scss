@@ -1,148 +1,66 @@
 @import './product-info-options/product-info-options';
 
 .product-info {
+   container-name: productInfo;
    container-type: inline-size;
 
    // TODO Стили для popup-quickview
    &__brand {
-      margin-bottom: 20px;
+      margin-bottom: 15px;
       display: inline-block;
       font-size: 20px;
       font-weight: 300;
       line-height: 100%;
       color: var(--text_additional);
-
-      &:hover {
-         color: var(--light);
-      }
    }
 
    &__name {
-      margin-bottom: 10px;
-      font-size: 35px;
-      font-weight: 500;
-      line-height: 110%;
-      color: var(--light);
+      margin-bottom: 20px;
+      line-height: 100%;
    }
 
-   &__rating {
+   // Обертка flex для цены и рейтинга
+   &__price-wrap {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 15px;
-
-      .product-rating-container {
-         display: flex;
-         align-items: center;
-         gap: 15px;
-
-         .reviews-count {
-            font-size: 16px;
-            font-weight: 300;
-            line-height: 100%;
-            color: var(--text_additional);
-         }
-      }
-
-      // TODO блок с иконками (сравнение, избранное)
-      .product-additional {
-         display: flex;
-         align-items: center;
-         justify-content: center;
-         gap: 20px;
-
-         .btn-additional {
-            padding: 0;
-            transition: all .2s ease;
-
-            &:hover {
-               transform: translateY(-3px);
-
-               i {
-                  color: var(--light);
-               }
-            }
-
-            i {
-               font-size: 15px;
-               color: var(--text_additional);
-               transition: all .2s ease;
-            }
-
-            &.active {
-               i {
-                  color: var(--action);
-               }
-            }
-         }
-      }
-   }
-
-   &__text {
-      margin-top: 20px;
-      padding-top: 30px;
-      font-size: 17px;  
-      font-weight: 300;
-      line-height: 150%;
-      color: var(--dark);
-      border-top: 1px solid var(--border_slow);
-      -webkit-line-clamp: 4;
-      -webkit-box-orient: vertical;
-      display: -webkit-box;
-      overflow: hidden;
+      gap: 20px;
    }
 
    &__price {
-      margin: 60px 0;
-      font-size: 35px;
-      font-weight: 600;
+      font-weight: 300;
       line-height: 100%;
-      color: var(--separating_contrast);
    }
 
-   &__action {
-      margin-top: 40px;
-      padding-top: 20px;
-      border-top: 1px solid var(--border_dark);
+   &__inviting-text {
+      margin-top: 35px;
+      font-size: 17px;
+      font-weight: 300;
+      line-height: 150%;
+      color: var(--dark);
+      max-width: 680px;
 
-      .product-count {
-         margin-bottom: 20px;
-         display: flex;
-         align-items: center;
-         justify-content: space-between;
-      }
+      @include textCropping( $stringCount: 4 )
    }
 
-   .ui-popup__btns {
-      grid-template: auto / repeat(auto-fit, minmax(185px, 1fr));
-      margin-top: 30px;
-      max-width: 100%;
-   }
-
-   .btn-quickview-cart {
-      @include btnType( $type: primary );
-      @include btnTheme( $theme: action );
-
-      display: flex;
-   }
-
-   .btn-quickview-buy {
-      @include btnType( $type: primary );
-      @include btnTheme( $theme: outlineLight );
-
-      display: flex;
-   }
-
-   .product-link {
-      margin-top: 10px;
-      grid-column: 1 / 3;
-      justify-self: center;
-   }
-
-   // TODO Стили для страницы товара
-   &.page-product {
+  
+   // TODO Стили для popup-quickview
+   &.quickview {
       .product-info__brand {
-         color: var(--dark);
+         &:hover {
+            color: var(--light);
+         }
+
+         .product-info__name {
+            font-size: 35px;
+            font-weight: 500;
+            color: var(--light);
+         }
+
+         .product-info__price {
+            font-size: 27px;
+            color: var(--light);
+         }
       }
 
       .product-info__rating {

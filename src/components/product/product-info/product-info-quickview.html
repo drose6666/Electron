@@ -1,37 +1,32 @@
-<div class="product-info">
+<div class="product-info quickview">
    <a href="../../../pages/page-brand-single/page-brand-single.html" class="product-info__brand basicHoverUnderline">
       <span class="child">Asus</span>
    </a>
 
    <h2 class="product-info__name">VivoBook 15 M1502IA-BQ011W</h2>
 
-   <div class="product-info__rating">
-      <div class="product-rating-container">
+   <div class="product-info__price-wrap">
+      <h3 class="product-info__price">170 990 ₽</h3>
+
+      <!-- <div class="product-rating-container">
          @@include('../../ui/ui-star-rating/ui-star-rating-static.html', {
             "className": "dark"
          })
          <span class="reviews-count">(10000)</span>
-      </div>
-
-      <div class="product-additional">
-         <button class="btn-additional"><i class="i-compare"></i></button>
-         <button class="btn-additional active"><i class="i-heart"></i></button>
-      </div>
+      </div> -->
    </div>
 
-   <h3 class="product-info__price">170 990 ₽</h3>
+   <p class="product-info__inviting-text"></p>
 
-   <form action="" class="product-info__options">
+   <!-- Опции товара + кнопки -->
+   <form action="" class="product-info__options form-options">
       <!-- Здесь опции товара. Подключаются в JS (product-info.js) -->
-   </form>
+   
+      <div class="ui-form-submit">
+         <div class="product-info__counter">
+            @@include('../product-counter/product-counter.html', { "className": "quickview" })
+         </div>
 
-   <div class="product-info__action">
-      <div class="product-count">
-         <h6 class="product-count__title product-option-name">Количество</h6>
-         @@include('../product-counter/product-counter.html', { "className": "quickview" })
-      </div>
-
-      <div class="ui-popup__btns">
          @@include('../../ui/ui-button/ui-btn/ui-button.html', {
             "className": "btn_primary-action",
             "text": "Добавить в корзину",
@@ -50,5 +45,5 @@
             "className": "ui-more_basic-slow_dark product-link"
          })
       </div>
-   </div>
+   </form>
 </div>

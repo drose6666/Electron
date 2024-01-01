@@ -47,36 +47,42 @@ const productOptions = [
 
 function renderOptions (productOptions) {
    const renderedFieldsets = productOptions.map(fieldset => {
-      let options = fieldset.options.map(option => {
-         if (fieldset.id === 1) {
-            return `
-               <label class="product-option color_option" title="${option.value}">
-                  <input type="radio" name="${option.name}" value="${option.value}" ${option.disabled && 'disabled'} ${option.selected && 'checked'} class="product-option__input visually-hidden">
-                  <div class="product-option__custom" style="background: ${option.color}"></div>
-               </label>
-            `
-         } else {
-            return `
-               <label class="product-option">
-                  <input type="radio" name="${option.name}" value="${option.value}" ${option.disabled && 'disabled'} ${option.selected && 'checked'} class="product-option__input visually-hidden">
-                  <div class="product-option__custom">
-                     <h6 class="product-option__custom__name">${option.value}</h6>
-                  </div>
-               </label>
-            `
-         }
-      })
-
       return `
          <fieldset class="product-options">
-            <h2 class="product-options__title product-option-name">${fieldset.name}</h2>
+            <h2 class="product-options__title">${fieldset.name}</h2>
             <div class="product-options__list">
-               ${options.join('')}
+               ${createHTMLOptions(fieldset.options)}
             </div>
          </fieldset>
       `
    })
+
    return renderedFieldsets.join('');
+}
+
+// TODO Создание HTML-структуры списка элементов опции для каждого fieldset
+function createHTMLOptions (arr) {
+   let options = arr.map(option => {
+      if (fieldset.id === 1) {
+         return `
+            <label class="product-option color_option" title="${option.value}">
+               <input type="radio" name="${option.name}" value="${option.value}" ${option.disabled && 'disabled'} ${option.selected && 'checked'} class="product-option__input visually-hidden">
+               <div class="product-option__custom" style="background: ${option.color}"></div>
+            </label>
+         `
+      } else {
+         return `
+            <label class="product-option">
+               <input type="radio" name="${option.name}" value="${option.value}" ${option.disabled && 'disabled'} ${option.selected && 'checked'} class="product-option__input visually-hidden">
+               <div class="product-option__custom">
+                  <h6 class="product-option__custom__name">${option.value}</h6>
+               </div>
+            </label>
+         `
+      }
+   })
+
+   return options.join('')
 }
 
 const formProductoptions = document.querySelectorAll('.product-info__options')
