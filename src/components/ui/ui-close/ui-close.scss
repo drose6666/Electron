@@ -88,15 +88,39 @@
       height: 35px;
       top: -8px;
       right: -8px;
-      background: var(--light);
-      box-shadow: var(--light_btn_shadow);
+      background: var(--ui_dark);
       opacity: 1;
       visibility: visible;
       transform: none;
 
       i {
          font-size: 15px;
-         color: var(--dark)
+         color: var(--light)
+      }
+   }
+
+   &.close_remove {
+      width: 30px;
+      height: 30px;
+      top: -7px;
+      left: -7px;
+      background: var(--border_dark);
+
+      i {
+         font-size: 12px;
+      }
+
+      &.right {
+         left: auto;
+         right: -7px;
+      }
+
+      &:hover {
+         background: var(--btn_close);
+
+         i {
+            color: var(--dark);
+         }
       }
    }
 }
@@ -107,13 +131,14 @@
 
       &.close_fade-side, 
       &.close_popup,
-      &.close_product-remove,
+      &.close_remove,
       
       &.close_input-file {
          @extend %uiCloseInActiveElements;
       }
    }
 }
+
 
 
 // NOTE Popup close

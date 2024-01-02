@@ -5,7 +5,6 @@
 import '../components/ui/ui-preloader/ui-preloader.js';
 import '../components/header/header.js';
 import '../components/menu/mobile-menu/mobile-menu.js';
-import '../components/notifications/ui-notification.js';
 
 /**
  * TODO Popups

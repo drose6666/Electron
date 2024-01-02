@@ -1,55 +1,4 @@
-.product-info__options {
-   margin-top: 40px;
-   border-top: 1px solid;
-
-   // TODO Список опций (память, ssd и т.д)
-   .product-options {
-      padding: 40px 0;
-      display: grid;
-      grid-template: auto / 110px 1fr;
-      gap: 30px;
-
-      &:not(:last-child) {
-         margin-bottom: 30px;
-      }
-
-      &__title {
-         font-size: 16px;
-         font-weight: 400;
-         line-height: 100%;
-      }
-
-      &__list {
-         display: flex;
-         flex-wrap: wrap;
-         gap: 10px;
-      }
-   }
-
-   &.product_page {
-      border-color: var(--border_slow);
-
-      .product-options {
-         &__title {
-            color: var(--dark);
-         }
-      }
-   }
-
-   &.quickview {
-      border-color: var(--ui_dark);
-
-      .product-options {
-         &__title {
-            color: var(--light);
-         }
-      }
-   }
-}
-
-
-
-// TODO Опции товара в popup-quickview
+// TODO опция (inpit:radio) в fieldset
 .product-option {
    position: relative;
    transition: all .2s ease;
@@ -60,9 +9,6 @@
       align-items: center;
       justify-content: center;
       height: 39px;
-      background: var(--ui_dark);
-      border-radius: var(--defaultRd);
-      border: 1px solid transparent;
       cursor: pointer;
       transition: inherit;
 
@@ -70,28 +16,12 @@
          font-size: 15px;
          font-weight: 400;
          line-height: 100%;
-         color: var(--text_selected_on_dark);
          transition: inherit;
       }  
    } 
 
-   &__input:checked ~ &__custom {
-      background: transparent;
-      border-color: var(--action);
-
-      .product-option__custom__name {
-         color: var(--light);
-      }
-      
-   }
-
    &__input:disabled ~ &__custom {
-      background: transparent;
       cursor: not-allowed;
-
-      .product-option__custom__name {
-         color: var(--border_dark);
-      }
    }
    
    // TODO Color option
@@ -99,13 +29,16 @@
 
       .product-option__custom {
          padding: 0;
+         width: 34px;
+         height: 34px;
          border-radius: var(--circleRd);
          border: none;
          outline: 1px solid transparent;
       }
 
-      .product-option__input:checked ~ .product-option__custom {
-         outline-color: var(--action);
+      .product-option__input:checked ~ .product-option__custom { 
+         width: 34px;
+         height: 34px;
          outline-offset: 3px;
       }
 
@@ -127,62 +60,166 @@
 }
 
 
-// TODO Опции товара в popup-quickview
-.info_page-product {
-   .product-option {
-      .product-option__custom {
-         background: var(--separating);
-         height: 41px;
+// TODO форма с опциями товара в product-page и popup-quickview
+.product-info__options {
+   margin-top: 40px;
+   padding-top: 40px;
+   border-top: 1px solid;
 
-         &__name {
-            font-size: 16px;
-            font-weight: 400;
-            color: var(--dark);
+   // TODO Список опций (память, ssd и т.д)
+   .product-options {
+      display: grid;
+      grid-template: auto / 110px 1fr;
+      gap: 30px;
+
+      &:not(:last-child) {
+         margin-bottom: 30px;
+      }
+
+      &__title {
+         margin-top: 10px;
+         font-size: 16px;
+         font-weight: 400;
+         line-height: 100%;
+
+         .color-name {
+            font-weight: 300;
+            color: var(--text_additional);
          }
       }
 
-      .product-option__input:checked ~ .product-option__custom {
-         background: var(--action_slow);
-         border-color: var(--action);
-   
-         .product-option__custom__name {
-            color: var(--dark);
-         }
-      }
-   
-      .product-option__input:disabled ~ .product-option__custom {
-         background: transparent;
-         cursor: not-allowed;
-   
-         .product-option__custom__name {
-            color: var(--border);
-         }
+      &__list {
+         display: flex;
+         flex-wrap: wrap;
+         align-items: center;
+         gap: 10px;
       }
 
-      &.color_option {
-         .product-option__custom {
-            width: 35px;
-            height: 35px;
+      &.color_options {
+         grid-template: auto / 1fr;
+         gap: 15px;
+
+         .product-options__title {
+            margin-top: 0;
          }
       }
    }
-}
 
+   // TODO Кнопки + количество
+   .ui-form-submit {
+      margin-top: 40px;
+      padding-top: 40px;
+      border-top: 1px solid;
+      display: grid;
+      grid-template: auto / repeat(auto-fit, minmax(185px, 1fr));
+      column-gap: 20px;
+      row-gap: 15px;
+
+      .submit_item {
+         display: flex;
+
+         &:nth-child(3),
+         &:nth-child(4) {
+            grid-column: 1 / 3;
+            width: 100%;
+            justify-self: center;
+         }
+
+         &:nth-child(4) {
+            margin-top: 20px;
+            width: max-content;
+         }
+      }
+   }
+
+
+   // TODO Для product-options в popup-quickview
+   &.product_page {
+      border-color: var(--border_slow);
+
+      .product-options {
+         &__title {
+            color: var(--dark);
+         }
+      }
+   }
+
+   
+   // TODO Для product-options в popup-quickview
+   &.quickview {
+      border-color: var(--ui_dark);
+
+      .product-options {
+         .product-options__title {
+            color: var(--light);
+         }
+      }
+
+      .product-option {
+         .product-option__custom {
+            background: var(--ui_dark);
+            border-radius: var(--defaultRd);
+            border: 1px solid transparent;
+
+            &__name {
+               color: var(--text_selected_on_dark);
+            }
+         }
+
+         .product-option__input:checked ~ .product-option__custom {
+            background: transparent;
+            border-color: var(--action);
+      
+            .product-option__custom__name {
+               color: var(--light);
+            }
+            
+         }
+      
+         .product-option__input:disabled ~ .product-option__custom {
+            background: transparent;
+      
+            .product-option__custom__name {
+               color: var(--border_dark);
+            }
+         }
+
+         &.color_option {
+            .product-option__input:checked ~ .product-option__custom {
+               border: none;
+               outline-color: var(--action);
+            }
+         }
+      }
+
+      .ui-form-submit {
+         border-color: var(--ui_dark);
+      }
+   }
+}
 
 @container uiPopupContainer (max-width: 530px) {
    .product-info__options {
       .product-options {
          grid-template: auto / 1fr;
          gap: 15px;
+      }
 
-         &__title {
-            font-size: 20px;
+      &.quickview {
+         .ui-form-submit {
+            grid-template: auto / 1fr;
+            row-gap: 10px;
+
+            .submit_item:nth-child(3), 
+            .submit_item:nth-child(4) {
+               grid-column: 1 / 2;
+            }
+         }
+
+         .product-info__counter {
+            margin-bottom: 20px;
          }
       }
-   }
-
-   .product-option-name {
-      font-size: 20px;
    }
 }
 

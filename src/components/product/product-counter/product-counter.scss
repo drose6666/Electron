@@ -9,11 +9,14 @@ $transition: all .2s ease;
    gap: 20px;
 
    i {
+      color: var(--text_additional);
       cursor: pointer;
       transition: $transition;
    }
 
    .count {
+      font-weight: 400;
+      line-height: 70%;
       text-align: center;
       border: none;
       outline: none;
@@ -29,8 +32,6 @@ $transition: all .2s ease;
 
       .count {
          font-size: 19px;
-         font-weight: 400;
-         line-height: 70%;
          color: var(--light);
          max-width: 35px;
          width: 100%;
@@ -39,7 +40,6 @@ $transition: all .2s ease;
 
       i {
          font-size: 14px;
-         color: var(--text_additional);
 
          &:hover {
             color: var(--light);
@@ -47,7 +47,34 @@ $transition: all .2s ease;
       }
    }
 
-   &.product_page {
+   &.product_info {
+      padding: 0 20px;
+      width: 100%;
 
+      .count {
+         font-size: 21px;
+         max-width: clamp(35px, 3cqi, 70px);
+      }
+
+      i {
+         font-size: 16px;
+      }
+
+      &.product_page {
+         height: 60px;
+      }
+   
+      &.quickview {
+         background: var(--ui_dark);
+         height: 50px;
+   
+         .count {
+            color: var(--light);
+         }
+   
+         i:hover {
+            color: var(--light);
+         }
+      }
    }
 }

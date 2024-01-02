@@ -1,12 +1,5 @@
 $positionHiddenEls: clamp(12px, 5cqi, 15px);
 
-.sticker_sold {
-   color: var(--light);
-   background: rgba(155, 187, 216, 0.70);
-   box-shadow: var(--light_btn_shadow);
-   backdrop-filter: blur(2px);
-}
-
 .product-card {
    user-select: none;
    container-type: inline-size;
@@ -32,7 +25,7 @@ $positionHiddenEls: clamp(12px, 5cqi, 15px);
             transition: all .2s ease;
 
             i {
-               font-size: clamp(19px, 6cqi, 22px);
+               font-size: clamp(19px, 7cqi, 22px);
                color: var(--dark);
                transition: inherit;
             }
@@ -122,6 +115,7 @@ $positionHiddenEls: clamp(12px, 5cqi, 15px);
       .img {
          max-width: 100%;
          height: auto;
+         transition: all .8s ease;
 
          &.img_hover {
             position: absolute;
@@ -129,8 +123,13 @@ $positionHiddenEls: clamp(12px, 5cqi, 15px);
             right: 0;
             opacity: 0;
             visibility: hidden;
-            transform: scale(1.2);
-            transition: all .5s ease;
+            transform: scale(1.17);
+         }
+
+         &.img_main {
+            transform: none;
+            opacity: 1;
+            visibility: visible;
          }
       }
    }
@@ -200,10 +199,18 @@ $positionHiddenEls: clamp(12px, 5cqi, 15px);
             }
          }
 
-         .img.img_hover {
-            opacity: 1;
-            visibility: visible;
-            transform: none;
+         .img {
+            &.img_hover {
+               opacity: 1;
+               visibility: visible;
+               transform: none;
+            } 
+
+            &.img_main {
+               transform: scale(1.17);
+               opacity: 0;
+               visibility: hidden;
+            }
          }
       }
    }

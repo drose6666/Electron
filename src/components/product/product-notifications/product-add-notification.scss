@@ -1,0 +1,112 @@
+.product-add-notification {
+   padding: 30px 25px 20px 25px;
+   position: fixed;
+   top: 15px;
+   right: 15px;
+   z-index: 2;
+   background: var(--dark);
+   border-radius: var(--lgRd);
+   opacity: 0;
+   visibility: hidden;
+   transform: translateY(20px);
+   transition: all .3s ease;
+
+   &.active {
+      opacity: 1;
+      visibility: visible;
+      transform: none;
+
+      .ui-close {
+         @extend %uiCloseInActiveElements;
+      }
+   }
+
+   .notification-title {
+      margin-bottom: 30px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 21px;
+      font-weight: 500;
+      line-height: 100%;
+      color: var(--success);
+
+      img {
+         $size: 30px;
+
+         width: $size;
+         height: $size;
+         flex: 0 0 $size;
+      }
+   }
+
+   .notification-nav {
+      margin-top: 40px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+   }
+
+   .btn_notification {
+      display: flex;
+      width: 100%;
+   }
+
+   .notification_more {
+      @include uiMore( 
+         $fSize: 15px, 
+         $iconSize: 11px, 
+         $theme: slowDark 
+      );
+      @include hoverLinkUnderline( 
+         $bgColorStart: var(--action),
+         $bgYSize: 1px,
+         $hoverChild: true,
+      );
+
+      .child, &:after {
+         color: var(--text_additional);
+      }
+
+      .child {
+         padding: 3px 0;
+      }
+      
+      &:hover {
+         .child, &:after {
+            color: var(--action);
+         }
+      }
+   }
+
+   @include media (max-width, 450px) {
+      padding: 25px 20px 20px 20px;
+      right: 10px;
+      border-radius: var(--mdRd);
+      width: calc(100% - 20px);
+      max-width: 260px;
+
+      .notification-title {
+         font-size: 19px;
+
+         img {
+            $size: 20px;
+   
+            width: $size;
+            height: $size;
+            flex: 0 0 $size;
+         }
+      }
+
+      .notification-nav {
+         margin-top: 30px;
+      }
+   }
+
+   @include media (max-width, 350px) {
+      .notification-title {
+         font-size: 18px;
+      }
+   }
+}

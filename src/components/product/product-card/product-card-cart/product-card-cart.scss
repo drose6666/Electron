@@ -75,26 +75,6 @@ $transition: all .2s ease;
       justify-self: flex-start;
    }
 
-   .close_product-remove {
-      width: 30px;
-      height: 30px;
-      top: -7px;
-      left: -7px;
-      background: var(--border_dark);
-
-      i {
-         font-size: 12px;
-      }
-
-      &:hover {
-         background: var(--btn_close);
-
-         i {
-            color: var(--dark);
-         }
-      }
-   }
-
    &.product_compare {
       .product-cart__content {
          display: block;
@@ -106,13 +86,13 @@ $transition: all .2s ease;
    }
 
    @include media (max-width, 650px) {
-      padding: 0;
+      padding: 5px;
       grid-template: auto / 1fr;
       gap: 15px;
       background: transparent;
 
       .product-cart__img {
-         padding: 5px;
+         padding: 0;
       }
 
       .product-cart__content {

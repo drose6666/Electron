@@ -1,0 +1,26 @@
+<div class="product-add-notification">
+   <h3 class="notification-title">
+      <img src="../../../img/check_notification.svg" alt=""> Добавлено в корзину
+   </h3>
+
+   @@include('../product-card/product-card-notification/product-card-notification.html')
+
+   <div class="notification-nav">
+      @@include('../../ui/ui-button/ui-btn/ui-button-link.html', {
+         "link": "#",
+         "className": "btn_ui-action btn_notification",
+         "text": "Оформить заказ"
+      })
+
+      @@include('../../ui/ui-more/ui-more-link.html', {
+         "link": "#",
+         "text": "Перейти в корзину",
+         "className": "notification_more"
+      })
+   </div>
+
+   @@include('../../ui/ui-close/ui-close.html', {
+      "className": "ui-close close_remove right",
+      "classNameIcon": "close"
+   })
+</div>

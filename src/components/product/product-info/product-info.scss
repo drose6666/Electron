@@ -43,6 +43,8 @@
       @include textCropping( $stringCount: 4 )
    }
 
+   
+
   
    // TODO Стили для popup-quickview
    &.quickview {
@@ -50,63 +52,17 @@
          &:hover {
             color: var(--light);
          }
-
-         .product-info__name {
-            font-size: 35px;
-            font-weight: 500;
-            color: var(--light);
-         }
-
-         .product-info__price {
-            font-size: 27px;
-            color: var(--light);
-         }
       }
 
-      .product-info__rating {
-         .product-additional {
-            .btn-additional {
-               i {
-                  color: var(--dark);
-               }
-
-               &:hover {
-                  i {
-                     color: var(--action);
-                  }
-               }
-
-               &.active {
-                  i {
-                     color: var(--action);
-                  }
-               }
-            }
-         }
+      .product-info__name {
+         font-size: 35px;
+         font-weight: 500;
+         color: var(--light);
       }
 
       .product-info__price {
-         font-size: 40px;
-         font-weight: 700;
-         color: var(--dark);
+         font-size: 27px;
+         color: var(--light);
       }
-
-      .product-info__action {
-         border-top: 1px solid var(--border_slow);
-      }
-
-      .ui-popup__btns {
-         grid-template: auto / repeat(auto-fit, minmax(200px, 1fr));
-      }
-
-      // .btn-quickview-cart {
-      //    @include uiBtnType( $type: secondary, $freeWidth: true, $maxWidth: 100% );
-      //    @include uiBtnTheme( $theme: action );
-      // }
-   
-      // .btn-quickview-buy {
-      //    @include uiBtnType( $type: secondary, $freeWidth: true, $maxWidth: 100% );
-      //    @include uiBtnTheme( $theme: outlines, $childTheme: outlinesDark );
-      // }
    }
 }

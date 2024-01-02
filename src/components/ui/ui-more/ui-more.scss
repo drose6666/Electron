@@ -186,6 +186,14 @@
    z-index: 1;
 }
 
+.ui-more_small_full-hover {
+   @include uiMore( $fSize: 15px, $iconSize: 11px );
+   @include hoverLinkUnderline ( $fromEmptiness: false, $bgYSize: 1px, );
+
+   padding-bottom: 5px;
+}
+
+
 .ui-more_basic {
    @include uiMore;
    @include hoverLinkUnderline ( 

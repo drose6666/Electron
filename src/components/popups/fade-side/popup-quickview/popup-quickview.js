@@ -4,8 +4,9 @@ const options = {
    slidesPerView: 1,
    slidesPerGroup: 1,
    spaceBetween: 5,
-   speed: 400,
+   // speed: 400,
    pauseOnMouseEnter: true,
+   loop: true,
    observer: true,
    keyboard: {
       enabled: true,

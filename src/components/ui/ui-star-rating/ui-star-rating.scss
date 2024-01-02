@@ -1,14 +1,18 @@
 @import './ui-star';
 
+
 .ui-star-rating {
    display: flex;
 
+   // TODO Сисок звезд
    .ui-stars {
       display: inline-flex;
       align-items: center;
       flex-flow: row-reverse;
    }
 
+
+   // TODO Рейтинг-форма, для взаимодействия с пользователем
    &.star-rating_form {
       flex-direction: column;
       align-items: flex-end;
@@ -19,6 +23,8 @@
       }
    }
 
+
+   // TODO визуальный рейтинг, для отображения инормации
    &.star-rating_static {
       align-items: center;
       gap: 15px;
@@ -46,6 +52,38 @@
       }
    }
 }
+
+
+// TODO Рейтинг с одной звездой для визуального отобрадения рейтинга
+.ui-one-star-rating {
+   display: flex;
+   align-items: center;
+   gap: 10px;
+
+   .ui-star {
+      font-size: 20px;
+      color: var(--active_star);
+   }
+
+   .rating-value {
+      font-size: 17px;
+      font-weight: 300;
+      line-height: 100%;
+   }
+
+   &.dark {
+      .rating-value {
+         color: var(--dark);
+      }
+   }
+
+   &.light {
+      .rating-value {
+         color: var(--light);
+      }
+   }
+}
+
 
 @container uiPopupContainer (max-width: 500px) {
    .ui-star-rating.star-rating_form  {

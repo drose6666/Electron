@@ -1,35 +1,57 @@
-.product-card-notification {
+.notification-card {
    display: grid;
-   grid-template: auto / 90px 1fr;
+   grid-template: auto / 120px 1fr;
    gap: 15px;
 
-   .img {
-      border-radius: var(--smRd);
-      background: var(--separating);
+   &__img {
+      border-radius: var(--slRd);
+      background: var(--ui_dark);
       overflow: hidden;
-
+      
       img {
          max-width: 100%;
          height: auto;
       }
    }
 
-   .info {
-      align-self: center;
-      
-      .title {
-         margin-bottom: 10px;
-         font-size: 18px;
-         font-weight: 300;
-         line-height: 103%;
-         color: var(--dark);
+   &__info {
+      padding: 7px 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+   }
+
+   &__title {
+      font-size: 17px;
+      font-weight: 400;
+      line-height: 110%;
+      color: var(--light);
+      max-width: 210px;
+
+      @include textCropping( $stringCount: 2 );
+   }
+
+   &__price {
+      font-size: 17px;
+      font-weight: 300;
+      line-height: 100%;
+      color: var(--light);
+   }
+
+   @include media (max-width, 450px) {
+      grid-template: auto / 1fr;
+      gap: 5px;
+
+      .notification-card__info {
+         gap: 15px;
       }
 
-      .price {
-         font-size: 15px;
-         font-weight: 600;
-         line-height: 100%;
-         color: var(--dark);
+      .notification-card__title {
+         font-size: 16px;
+      }
+
+      .notification-card__price {
+         font-size: 17px;
       }
    }
 }

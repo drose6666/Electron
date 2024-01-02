@@ -1,122 +1,129 @@
-.information-links {
-   margin-top: 80px;
-   padding: 50px 0;
-   container-type: inline-size;
-   background: var(--separating);
+.info-links {
+   margin-top: 40px;
+   margin-bottom: 40px;
+   padding: 10px 0;
+   display: flex;
+   flex-wrap: nowrap;
+   gap: 20px;
+   overflow-x: auto;
 
-   @extend %dynamicRadius40to25;
    @extend %fullWidthElement;
 
-   .ui-container {
-      display: grid;
-      grid-template: auto / repeat(4, 1fr);
-      column-gap: var(--small_tabs_padding);
-      row-gap: 40px;
+   &::-webkit-scrollbar {
+      background: transparent;
+      display: none;
    }
 
-   &__item {
+   &::-webkit-scrollbar-corner {
+      background: transparent;
+   }
+
+   .info-link {
+      width: 100%;
+      min-width: 250px;
       display: flex;
-      align-items: center;
-      align-self: center;
-      gap: var(--default_padding);
+      container-name: infoLink;
+      container-type: inline-size;
 
-      .icon {
-         $size: 60px;
+      &__container {
+         padding: 30px clamp(20px, 10cqi, 30px);
+         border-radius: var(--mdRd);
+         background: var(--separating);
+         display: flex;
+         gap: 20px;
+         width: 100%;
+         transition: all .2s ease;
+      }
 
+      &__icon {
+         $size: clamp(55px, 16cqi, 70px);
+
+         margin-top: -5px;
          width: $size;
          height: $size;
          flex: 0 0 $size;
+         border-radius: var(--circleRd);
          display: flex;
          align-items: center;
          justify-content: center;
-         background: transparent;
-         border-radius: var(--circleRd);
          border: 1px solid var(--dark);
-         transition: all .2s ease;
+         transition: inherit;
 
-         img {
-            width: 30px;
+         i {
+            font-size: clamp(30px, 6cqi, 35px);
+            color: var(--dark);
+            transition: inherit;
          }
       }
 
-      .info {
-         .title {
-            margin-bottom: 5px;
-            font-size: 21px;
-            font-weight: 500;
-            line-height: 100%;
-            color: var(--dark);
-            transition: all .2s ease;
+      &__title {
+         margin-bottom: 10px;
+         font-size: clamp(20px, 7cqi, 24px);
+         font-weight: 500;
+         line-height: 100%;
+         color: var(--dark);
+         transition: all .2s ease;
+      }
+
+      &__more {
+         @include uiMore( $fSize: 15px, $iconSize: 11px );
+         @include hoverLinkUnderline ( $fromEmptiness: false, $bgYSize: 1px, );
+
+         padding-bottom: 5px;
+      }
+
+      &:hover {
+         .info-link__container {
+            background: var(--dark);
          }
 
-         .link {
-            display: flex;
-            align-items: center;
-            gap: var(--small_btn_padding);
-
-            .child {
-               padding: 2px 0;
-               font-size: 16px;
-               font-weight: 400;
-               line-height: 100%;
-               color: var(--text_additional);
-               transition: background-size .2s ease, color .2s ease;
-            }
+         .info-link__icon {
+            border-color: transparent;
+            background: var(--border_dark);
 
             i {
-               font-size: 11px;
-               color: var(--text_additional);
-               transition: all .2s ease;
+               color: var(--action);
             }
+         }
 
+         .info-link__title {
+            color: var(--light);
+         }
+
+         .info-link__more {
+            @include hoverLinkUnderline ( $bgColorStart: var(--light), $fromEmptiness: false, $bgYSize: 1px, );
+            padding-bottom: 5px;
+
+            .child, &:after {
+               color: var(--light);
+            }
+           
             &:hover {
-               i {
+               .child, &:after {
                   color: var(--action);
-                  transform: translateX(3px);
                }
             }
          }
       }
 
-      &:hover {
-         .icon {
-            background: var(--light);
-            border-color: var(--separating_contrast);
-            box-shadow: var(--light_btn_shadow);
-         }
-
-         .info {
-            .title {
-               color: var(--action);
-            }
-         }
-      }
-   }
-
-   @container (max-width: 1000px) {
-      .ui-container {
-         grid-template: auto / repeat(2, 1fr);
-      }
-   }
-
-   @container (max-width: 520px) {
-      .ui-container {
-         grid-template: auto / 1fr;
-         row-gap: 50px;
-      }
-
-      &__item {
-         flex-direction: column;
-         align-items: center;
-         gap: var(--small_tabs_padding);
-
-         .info {
-            display: flex;
+      @container (max-width: 350px) {
+         .info-link__container {
             flex-direction: column;
-            align-items: center;
+         }
 
-            .title {
-               text-align: center;
+         .info-link__title {
+            font-size: 24px;
+         }
+
+         .info-link__icon {
+            $size: 70px;
+
+            width: $size;
+            height:$size;
+            flex: 0 0 $size;
+
+            i {
+               font-size: 30px;
             }
          }
       }

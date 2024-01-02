@@ -1,51 +1,27 @@
-<div class="information-links">
-   <div class="ui-container">
-      <a href="#" class="information-links__item">
-         <div class="icon"><img src="../../img/information-links/info_link_1.svg" alt=""></div>
-         
-         <div class="info">
-            <div class="title">Удобная доставка</div>
-            <div class="link hoverLinksChild">
-               <span class="child">Подробнее</span>
-               <i class="i-angle_right"></i>
-            </div>
-         </div>
-      </a>
+<div class="info-links">
+   @@loop('./information-link.html', [
+      {
+         "link": "",
+         "title": "Удобная доставка",
+         "classNameIcon": "delivery"
+      },
 
-      <a href="#" class="information-links__item">
-         <div class="icon"><img src="../../img/information-links/info_link_2.svg" alt=""></div>
-         
-         <div class="info">
-            <div class="title">Гарантия на все товары</div>
-            <div class="link hoverLinksChild">
-               <span class="child">Подробнее</span>
-               <i class="i-angle_right"></i>
-            </div>
-         </div>
-      </a>
+      {
+         "link": "",
+         "title": "Гарантия на все товары",
+         "classNameIcon": "warranty"
+      },
 
-      <a href="#" class="information-links__item">
-         <div class="icon"><img src="../../img/information-links/info_link_3.svg" alt=""></div>
-         
-         <div class="info">
-            <div class="title">Ремонт и обслуживание</div>
-            <div class="link hoverLinksChild">
-               <span class="child">Подробнее</span>
-               <i class="i-angle_right"></i>
-            </div>
-         </div>
-      </a>
+      {
+         "link": "",
+         "title": "Ремонт и обслуживание",
+         "classNameIcon": "service"
+      },
 
-      <a href="#" class="information-links__item">
-         <div class="icon"><img src="../../img/information-links/info_link_4.svg" alt=""></div>
-         
-         <div class="info">
-            <div class="title">Гарантия возврата</div>
-            <div class="link hoverLinksChild">
-               <span class="child">Подробнее</span>
-               <i class="i-angle_right"></i>
-            </div>
-         </div>
-      </a>
-   </div>
+      {
+         "link": "",
+         "title": "Гарантия возврата",
+         "classNameIcon": "returns"
+      },
+   ])
 </div>

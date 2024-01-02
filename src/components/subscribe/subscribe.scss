@@ -73,25 +73,6 @@
       }
    }
 
-   .decor-left, .decor-right {
-      $size: clamp(70cqmax, 70cqi, 1000px);
-
-      position: absolute;
-      width: $size;
-      object-fit: contain;
-      z-index: 0;
-   }
-
-   .decor-left {
-      top: -30cqi;
-      left: -30cqi;
-   }
-
-   .decor-right {
-      bottom: -30cqi;
-      right: -30cqi;
-   }
-
    @include media (max-width, 1650px)  {
       .ui-container {
          padding-left: clamp(15px, 5cqi, 60px);
@@ -110,6 +91,8 @@
 
       .warning-text {
          margin: 15px auto 0 auto;
+         font-size: 15px;
+         font-weight: 400;
          text-align: center;
       }
    }

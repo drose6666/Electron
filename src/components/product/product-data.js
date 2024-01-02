@@ -151,7 +151,7 @@ function renderProductList (productsList) {
          <div class="product-card swiper-slide">
             <div class="product-img">
                <a class="img-wrap" href="../../../../pages/page-product/page-product.html">
-                  <img loading="lazy" class="img" src="${product.img}" alt="">
+                  <img loading="lazy" class="img img_main" src="${product.img}" alt="">
                   <img loading="lazy" class="img img_hover" src="${product.imgHidden}" alt="">
                </a>
                
@@ -208,7 +208,7 @@ function renderColors(arr) {
 // TODO Создание HTML для кнопки корзины и "Заказать"
 function renderCartBtn(availability, statusCart) {
    const defaultCartBtn = `
-      <button class="btn-cart ${statusCart ? 'inCart' : ''}">
+      <button class="btn-cart btn_cart-add ${statusCart ? 'inCart' : ''}">
          <span class="in-cart"></span>
          <i class="i-cart"></i>
       </button>
