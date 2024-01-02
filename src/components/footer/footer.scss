@@ -17,11 +17,10 @@ footer {
    }
 
    .footer-col {
-      align-self: center;
       &.main {
          .logo {
             display: inline-block;
-            max-width: clamp(200px, 30cqi, 260px);
+            max-width: 200px;
 
             img {
                max-width: 100%;
@@ -31,11 +30,11 @@ footer {
 
          .text {
             margin: 50px 0;
-            font-size: 25px;
+            font-size: 23px;
             font-weight: 300;
             line-height: 140%;
             color: var(--light);
-            max-width: 460px;
+            max-width: 320px;
          }
       }
 
@@ -149,7 +148,7 @@ footer {
             justify-self: end;
 
             .phone {
-               font-size: clamp(28px, 5.5cqi, 45px);
+               font-size: clamp(28px, 5.5cqi, 40px);
             }
          }
 
