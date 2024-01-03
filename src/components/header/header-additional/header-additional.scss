@@ -6,28 +6,8 @@
    @include media(max-width, 500px) {
       gap: 10px;
 
-      .btn_favourites, .btn_compare {
+      .btn_header-favourites, .btn_header-compare {
          display: none;
       }
    }
 }
-
-// header.sticky {
-//    .header-additional {
-//       .header-icon {
-//          background: var(--ui_dark);
-
-//          i {
-//             color: var(--light);
-//          }
-
-//          &:hover {
-//             background: var(--border_dark);
-
-//             i {
-//                color: var(--action_slow);
-//             }
-//          }
-//       }
-//    }
-// }

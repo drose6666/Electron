@@ -14,7 +14,7 @@
          );
 
          & > a {
-            padding: 28px 0;
+            padding: 34px 0;
             font-size: clamp(14px, 1cqi, 16px);
             font-weight: 600;
             line-height: 100%;
@@ -50,27 +50,16 @@
 }
 
 
-// header.sticky {
-//    .menu {
-//       &-list {
-//          &__item {
-//             @include hoverLinkUnderline ( 
-//                $bgColorStart: var(--action),
-//                $bgYSize: 2px,
-//                $duration: .2s,
-//                $hoverChild: true
-//             );
-   
-//             & > a {
-//                color: var(--light);
-//             }
-   
-//             &:hover {
-//                & > a {
-//                   color: var(--action);
-//                }
-//             }
-//          }
-//       }
-//    }
-// }
+
+
+header.sticky {
+   .menu {
+      &-list {
+         &__item {
+            & > a {
+               padding: 28px 0;
+            }
+         }
+      }
+   }
+}

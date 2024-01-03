@@ -10,28 +10,6 @@
       @@include('../../components/header/header.html')
 
       <main>
-         <section class="page-head-section">
-            <div class="ui-container">
-               @@include('../../components/ui/ui-title/ui-page-title.html', {
-                  "text": "ASUS VivoBook 15 M1502IA-BQ011W",
-                  "className": "title_product-page"
-               })
-   
-              <!-- <div class="ui-breadcrumbs">
-                  @@include('../../components/ui/ui-breadcrumbs/ui-breadcrumbs-item-link.html', {
-                     "text": "Главная",
-                     "link": "/"
-                  })
-                  @@include('../../components/ui/ui-breadcrumbs/ui-breadcrumbs-item-link.html', {
-                     "text": "Ноутбуки и ПК",
-                     "link": "/"
-                  })
-                  @@include('../../components/ui/ui-breadcrumbs/ui-beadcrumbs-item.html', {
-                     "text": "HUAWEI MateBook D16"
-                  })
-              </div> -->
-            </div>
-         </section>
 
          @@include('./sections/product-presenation-section/product-presenation-section.html')
 
@@ -42,12 +20,13 @@
       @@include('../../components/footer/footer.html')
       @@include('../../components/menu/mobile-menu/mobile-menu.html')
       @@include('../../components/popups/fade-side/popup-search/popup-search.html')
-      <!-- @@include('../../components/popups/fade-side/popup-compare/popup-compare.html') -->
+      @@include('../../components/popups/fade-side/popup-compare/popup-compare.html')
       @@include('../../components/popups/fade-side/popup-cart/popup-cart.html')
       @@include('../../components/popups/fade-side/popup-quickview/popup-quickview.html')
       @@include('../../components/popups/popup-image-preview/popup-image-preview.html')
       @@include('../../components/popups/popup-send-review/popup-send-review.html')
-      <!-- @@include('../../components/popups/fade-side/popup-login/popup-login.html') -->
+      @@include('../../components/product/product-notifications/product-add-notification.html')
+      @@include('../../components/popups/fade-side/popup-login/popup-login.html')
       
       <script type="module" src="js/bundle-page-product.min.js"></script>
    </body>

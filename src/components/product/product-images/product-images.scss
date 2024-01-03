@@ -1,21 +1,28 @@
-.product-presentation-section {
+.product-presentation {
+   margin-top: 40px;
+   container-name: presentationContainer;
+   container-type: inline-size;
 
-   .product-presentation {
+   @extend %fullWidthElement;
+
+   &__container {
       display: grid;
-      grid-template: auto / minmax(500px, 1.1fr) minmax(400px, 1fr);
-      gap: clamp(25px, 5cqi, 50px);
+      grid-template: auto / minmax(600px, 1fr) minmax(500px, 1fr);
+      gap: 20px;
    }
 }
 
 
 // TODO Слайдер Produuct images
-.product-images-container {
+.product-img-container {
    position: sticky;
    top: 100px;
    align-self: start;
    height: auto;
+   container-name: imgContainer;
+   container-type: inline-size;
 
-   .product-images {
+   .product-img {
       transition: all .3s ease;
    
       .swiper-slide {
@@ -29,24 +36,23 @@
          }
       }
    
-      &.product-images1 {
+      &__thumbs {
          position: absolute;
-         bottom: -40px;
+         bottom: -10%;
          left: 50%;
          transform: translateX(-50%);
-         max-width: 435px;
-         
+         max-width: clamp(350px, 63cqi, 520px);
+         width: 100%;
    
          .swiper-slide {
-            max-width: 130px;
+            max-width: 170px;
             width: 100%;
-            border-radius: var(--mdRd);
-            border: 1.5px solid var(--light);
+            border-radius: var(--slRd);
+            border: 2px solid var(--light);
             cursor: pointer;
    
             &.swiper-slide-thumb-active {
-               border-color: var(--action);
-               background: var(--separating_contrast);
+               border-color: var(--dark);
             }
    
             &:hover {
@@ -55,8 +61,10 @@
          }
       }
    
-      &.product-images2 {
+      &__main {
          width: 100%;
+         
+         @extend %dynamicRadius40to25;
    
          .swiper-slide {
             width: 100%;
@@ -64,39 +72,59 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            border-radius: var(--defaultRd);
-            
+            overflow: hidden;
+
+            @extend %dynamicRadius40to25;
          }
       }
    }
    
    &:hover {
-      .product-images1 {
+      .product-img__thumbs {
          transform: translateX(-50%) translateY(20px);
       }
    }
 }
 
-@include media (max-width, 950px) {
-   .product-presentation-section {
-      .product-presentation {
-         display: block;
+@include media (max-width, 1150px) {
+   .product-presentation {
+      &__container {
+         grid-template: auto / minmax(200px, 1fr);
+         gap: 80px;
       }
    }
 
-   .product-images-container {
-      margin-bottom: 60px;
+   .product-img-container {
       position: relative;
       top: 0;
 
+      &:hover {
+         .product-img {
+            &.product-img__thumbs {
+               transform: translateX(-50%);
+            }
+         }
+      }
+   }
+}
 
-      .product-images {
-         &.product-images1 {
+@include media (max-width, 530px) {
+   .product-presentation {
+      width: 100%;
+
+      &__container {
+         gap: 20px;
+      }
+   }
+
+   .product-img-container {
+      .product-img {
+         &__thumbs {
             display: none;
          }
 
-         &.product-images2 {
-            width: 100%;
+         &__main {
+            border-radius: 0;
          }
       }
    }

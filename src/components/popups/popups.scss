@@ -1,6 +1,6 @@
 $gapDefault: 40px;
 $fadePaddingX: clamp(var(--default_padding), 5cqi, var(--fade_on_the_side_padding));
-$fadePadding: 110px $fadePaddingX 40px $fadePaddingX;
+$fadePadding: 110px $fadePaddingX 30px $fadePaddingX;
 $transitionDuration: .2s ease;
 
 
@@ -117,7 +117,6 @@ $transitionDuration: .2s ease;
             30px 
             clamp(var(--default_padding),5cqi,var(--fade_on_the_side_padding));
          display: grid;
-         grid-template: -webkit-min-content 1fr min-content/1fr;
          grid-template: min-content 1fr min-content/1fr;
          height: 100dvh;
       }
@@ -143,6 +142,7 @@ $transitionDuration: .2s ease;
          .ui-popup__container {
             min-height: 100dvh;
             height: auto;
+            max-height: auto;
          }
       }
    }
@@ -197,7 +197,7 @@ $transitionDuration: .2s ease;
 
 /* TODO Блок с инфой (правая колонка) в popup-with-images */
 .ui-popup__content-wrap {
-   padding: 110px clamp(var(--default_padding), 5cqi, var(--fade_on_the_side_padding)) 40px;
+   padding: 110px clamp(var(--default_padding), 5cqi, var(--fade_on_the_side_padding)) 30px;
 }
 
 /* TODO Блок с картинками (левая колонка) в popup-with-images */

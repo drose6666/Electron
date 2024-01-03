@@ -9,6 +9,7 @@
       align-items: center;
       justify-content: center;
       height: 39px;
+      border-radius: var(--defaultRd);
       cursor: pointer;
       transition: inherit;
 
@@ -16,6 +17,7 @@
          font-size: 15px;
          font-weight: 400;
          line-height: 100%;
+         white-space: nowrap;
          transition: inherit;
       }  
    } 
@@ -73,7 +75,7 @@
       gap: 30px;
 
       &:not(:last-child) {
-         margin-bottom: 30px;
+         margin-bottom: 25px;
       }
 
       &__title {
@@ -110,10 +112,13 @@
       margin-top: 40px;
       padding-top: 40px;
       border-top: 1px solid;
-      display: grid;
-      grid-template: auto / repeat(auto-fit, minmax(185px, 1fr));
-      column-gap: 20px;
-      row-gap: 15px;
+
+      &__container {
+         display: grid;
+         // grid-template: auto / repeat(auto-fit, minmax(185px, 1fr));
+         column-gap: 10px;
+         row-gap: 15px;
+      }
 
       .submit_item {
          display: flex;
@@ -133,19 +138,62 @@
    }
 
 
-   // TODO Для product-options в popup-quickview
+   // ADDITIONAL Для product-options на странице товара
    &.product_page {
-      border-color: var(--border_slow);
+      border-color: var(--border);
 
       .product-options {
-         &__title {
+         .product-options__title {
             color: var(--dark);
+         }
+      }
+
+      .product-option {
+         .product-option__custom {
+            background: var(--separating);
+
+            &__name {
+               color: var(--dark);
+            }
+         }
+
+         .product-option__input:checked ~ .product-option__custom {
+            background: var(--dark);
+      
+            .product-option__custom__name {
+               color: var(--light);
+            }
+            
+         }
+      
+         .product-option__input:disabled ~ .product-option__custom {
+            background: transparent;
+      
+            .product-option__custom__name {
+               color: var(--border);
+            }
+         }
+
+         &.color_option {
+            .product-option__input:checked ~ .product-option__custom {
+               border: none;
+               outline-color: var(--dark);
+            }
+         }
+      }
+
+      .ui-form-submit {
+         border-color: var(--border);
+
+         .ui-form-submit__container {
+            max-width: 500px;
+            width: 100%;
          }
       }
    }
 
    
-   // TODO Для product-options в popup-quickview
+   // ADDITIONAL Для product-options в popup-quickview
    &.quickview {
       border-color: var(--ui_dark);
 
@@ -158,7 +206,6 @@
       .product-option {
          .product-option__custom {
             background: var(--ui_dark);
-            border-radius: var(--defaultRd);
             border: 1px solid transparent;
 
             &__name {
@@ -198,28 +245,28 @@
    }
 }
 
-@container uiPopupContainer (max-width: 530px) {
+@include media (max-width, 530px) {
+   
+}
+
+@container productInfo (max-width: 530px) {
    .product-info__options {
       .product-options {
          grid-template: auto / 1fr;
          gap: 15px;
       }
 
-      &.quickview {
-         .ui-form-submit {
+      .ui-form-submit {
+         &__container {
             grid-template: auto / 1fr;
-            row-gap: 10px;
-
-            .submit_item:nth-child(3), 
-            .submit_item:nth-child(4) {
-               grid-column: 1 / 2;
-            }
+            row-gap: 7px;
          }
 
-         .product-info__counter {
-            margin-bottom: 20px;
+         .submit_item:nth-child(3), 
+         .submit_item:nth-child(4) {
+            grid-column: 1 / 2;
          }
-      }
+      } 
    }
 }
 

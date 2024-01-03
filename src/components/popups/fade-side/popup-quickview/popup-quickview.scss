@@ -65,6 +65,7 @@
             height: auto;
             display: block;
          }
+
          .img {
             background: var(--ui_darker);
             max-width: 100%;
@@ -143,7 +144,9 @@
       }
 
       .ui-popup__content-wrap {
-         padding: 40px clamp(var(--default_padding), 5cqi, var(--fade_on_the_side_padding)); 
+         $paddingX: clamp(var(--default_padding), 5cqi, var(--fade_on_the_side_padding));
+         
+         padding: 40px $paddingX 30px $paddingX; 
          order: 1;
       }
 

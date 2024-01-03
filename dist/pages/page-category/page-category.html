@@ -22,16 +22,16 @@
    <link rel="icon" href="../../img/favicon/fav_48.png" type="image/png" sizes="48x48">
    <link rel="icon" href="../../img/favicon/fav_128.png" type="image/png" sizes="128x128">
    
-   <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css?_v=20240102220913" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
-   <!-- <link rel="stylesheet" href="../../libs/css/bootstrap-grid.min.css?_v=20240102220913"> -->
+   <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css?_v=20240103221343" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+   <!-- <link rel="stylesheet" href="../../libs/css/bootstrap-grid.min.css?_v=20240103221343"> -->
 
-   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css?_v=20240102220913" />
-   <script defer src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js?_v=20240102220913"></script>
-   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js?_v=20240102220913" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-   <link rel="stylesheet" href="../../libs/css/reset.min.css?_v=20240102220913">
-   <link rel="stylesheet" as="font" href="../../fonts/fonts.css?_v=20240102220913">
-   <link rel="stylesheet" as="font" href="../../fonts/icon-font.css?_v=20240102220913">
-   <link rel="stylesheet" href="css/page-category.css?_v=20240102220913">
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css?_v=20240103221343" />
+   <script defer src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js?_v=20240103221343"></script>
+   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js?_v=20240103221343" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+   <link rel="stylesheet" href="../../libs/css/reset.min.css?_v=20240103221343">
+   <link rel="stylesheet" as="font" href="../../fonts/fonts.css?_v=20240103221343">
+   <link rel="stylesheet" as="font" href="../../fonts/icon-font.css?_v=20240103221343">
+   <link rel="stylesheet" href="css/page-category.css?_v=20240103221343">
    
    <title>Категории</title>
 </head>
@@ -69,15 +69,15 @@
       </div>
 
       <!-- Заглушка, пока не готовы личный кабинет и авторизация -->
-      <a href="tel:+7 911 149 05 05" class="contact-link basicHoverUnderline">
+      <!-- <a href="tel:+7 911 149 05 05" class="contact-link basicHoverUnderline">
          <span class="child">+7 911 149 05 05</span>
-      </a>
+      </a> -->
 
       <!-- Меню авторизованных пользователей -->
       
 
       <!-- Кнопка входа для не авторизованных пользователей -->
-      
+      <button type="@@type" class="btn_small-dark btn_login">Личный кабинет</button>
    </div>
 </div>
       <header>
@@ -197,21 +197,21 @@
    </ul>
 </nav>
       <div class="header-additional">
-   <div class="ui-circle-icon circle-icon_transparent btn_search header-icon">
+   <button class="btn_circle btn_search">
    <i class="i-search"></i>
-</div>
+</button>
 
-   <a href="" class="ui-circle-icon-menu btn_favourites">
+   <a href="" class="btn_circle-header btn_circle btn_header-favourites">
    <i class="i-heart"></i>
-   <div class="counter"><span>56</span></div>
+   <div class="counter btn_circle"><span>56</span></div>
 </a>
-   <div class="ui-circle-icon-menu btn_compare header-icon">
+   <button class="btn_circle-header btn_circle btn_header-compare">
    <i class="i-compare"></i>
-   <div class="counter"><span>56</span></div>
-</div><div class="ui-circle-icon-menu btn_cart header-icon">
+   <div class="counter btn_circle"><span>1</span></div>
+</button><button class="btn_circle-header btn_circle btn_header-cart">
    <i class="i-cart"></i>
-   <div class="counter"><span>56</span></div>
-</div>
+   <div class="counter btn_circle"><span>56</span></div>
+</button>
 </div>
    </div>
 </header>
@@ -593,9 +593,9 @@
       
       
 
-      <div class="ui-circle-icon btn-circle_search">
+      <button type="submit" class="btn_circle btn_search-submit btn_main-search">
    <i class="i-search"></i>
-</div>
+</button>
    </form>
 </search>
 
@@ -754,7 +754,7 @@
       </div>
    </div>
 
-   <div class="ui-close ui-close close_-remove">
+   <div class="ui-close ui-close close_remove">
    <i class="i-close"></i>
 </div>
 </div><div class="product-cart ">
@@ -777,7 +777,7 @@
       </div>
    </div>
 
-   <div class="ui-close ui-close close_-remove">
+   <div class="ui-close ui-close close_remove">
    <i class="i-close"></i>
 </div>
 </div><div class="product-cart ">
@@ -800,7 +800,7 @@
       </div>
    </div>
 
-   <div class="ui-close ui-close close_-remove">
+   <div class="ui-close ui-close close_remove">
    <i class="i-close"></i>
 </div>
 </div><div class="product-cart ">
@@ -823,7 +823,7 @@
       </div>
    </div>
 
-   <div class="ui-close ui-close close_-remove">
+   <div class="ui-close ui-close close_remove">
    <i class="i-close"></i>
 </div>
 </div><div class="product-cart ">
@@ -846,7 +846,7 @@
       </div>
    </div>
 
-   <div class="ui-close ui-close close_-remove">
+   <div class="ui-close ui-close close_remove">
    <i class="i-close"></i>
 </div>
 </div><div class="product-cart ">
@@ -869,7 +869,7 @@
       </div>
    </div>
 
-   <div class="ui-close ui-close close_-remove">
+   <div class="ui-close ui-close close_remove">
    <i class="i-close"></i>
 </div>
 </div><div class="product-cart ">
@@ -892,7 +892,7 @@
       </div>
    </div>
 
-   <div class="ui-close ui-close close_-remove">
+   <div class="ui-close ui-close close_remove">
    <i class="i-close"></i>
 </div>
 </div><div class="product-cart ">
@@ -915,7 +915,7 @@
       </div>
    </div>
 
-   <div class="ui-close ui-close close_-remove">
+   <div class="ui-close ui-close close_remove">
    <i class="i-close"></i>
 </div>
 </div>
@@ -1048,21 +1048,23 @@
       <!-- Здесь опции товара. Подключаются в JS (product-info.js) -->
    
       <div class="ui-form-submit">
-         <div class="product-info__counter submit_item">
-            <div class="product-counter product_info quickview">
+         <div class="ui-form-submit__container">
+            <div class="product-info__counter submit_item">
+               <div class="product-counter product_info quickview">
    <i class="i-minus count-down"></i>
    <input type="text" value="1" inputmode="numeric" class="count" name="product_count">
    <i class="i-plus count-up"></i>
 </div>
-         </div>
+            </div>
 
-         <a href="#" class="btn_primary-outlineOnDark submit_item">Купить сейчас</a>
-
-         <button type="button" class="btn_primary-action submit_item">Добавить в корзину</button>
-
-         <a href="../../../pages/page-product/page-product.html" class="ui-more_basic-slow_dark submit_item">
+            <button type="button" class="btn_primary-outlineOnDark submit_item btn_cart-add">Добавить в корзину</button>
+   
+            <a href="#" class="btn_primary-action submit_item">Купить сейчас</a>
+   
+            <a href="../../../pages/page-product/page-product.html" class="ui-more_basic-slow_dark submit_item">
    <span class="child">Перейти к товару</span>
 </a>
+         </div>
       </div>
    </form>
 </div>
@@ -1146,6 +1148,6 @@
 
       
       
-      <script type="module" src="js/bundle-page-category.min.js?_v=20240102220913"></script>
+      <script type="module" src="js/bundle-page-category.min.js?_v=20240103221343"></script>
    </body>
 </html>  

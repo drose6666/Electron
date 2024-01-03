@@ -22,15 +22,14 @@
       }
 
    } @else if $theme == uiDark {
-      $color: var(--text_selected_on_dark);
+      $color: var(--light);
       $bg: var(--ui_dark);
       
       color: $color;
       background: $bg;
 
       &:hover {
-         background: var(--text_additional);
-         color: var(--light);
+         background: var(--dark);
       }
 
    } @else if $theme == action {
@@ -287,6 +286,11 @@
 .btn_target-action {
    @include btnType( $type: target );
    @include btnTheme( $theme: action );
+}
+
+.btn_target-uiDark {
+   @include btnType( $type: target );
+   @include btnTheme( $theme: uiDark );
 }
 
 

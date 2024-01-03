@@ -1,0 +1,402 @@
+@mixin uiBtnCircle (
+   $size, 
+   $bgColor,
+   $iconColor,
+   $iconSize,
+) {
+   width: $size;
+   height: $size;
+   background: $bgColor;
+
+   i {
+      font-size: $iconSize;
+      color: $iconColor;
+   }
+}
+
+// TODO Стандартные стили для всех ui-btn-circle
+.btn_circle {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   border-radius: var(--circleRd);
+   cursor: pointer;
+   transition: all .2s ease;
+
+   i {
+      transition: inherit;
+   }
+}
+
+
+// TODO корзина/избранное/сравнение
+.btn_circle-header {
+   @include uiBtnCircle(
+      $size: 40px,
+      $bgColor: var(--separating_contrast),
+      $iconSize: 18px,
+      $iconColor: var(--dark)
+   );
+
+   position: relative;
+
+   .counter {
+      position: absolute;
+      top: -5px;
+      right: -8px;
+      width: 22px;
+      height: 22px;
+      background: var(--action);
+
+      span {
+         display: inline-block;
+         margin-top: 1px;
+         font-size: 14px;
+         font-weight: 400;
+         line-height: 70%;
+         color: var(--light);
+      }
+   }
+
+   &:hover {
+      background: var(--dark);
+
+      i {
+         color: var(--light);
+      }
+   }
+}
+
+// TODO Конпка Отправка запроса поиска 
+.btn_search-submit {
+   position: absolute;
+   top: 2px;
+   right: 2px;
+
+   &.btn_main-search {
+      @include uiBtnCircle(
+         $size: 50px,
+         $bgColor: var(--action),
+         $iconSize: 21px,
+         $iconColor: var(--light)
+      );
+
+      &:hover {
+         background: var(--light);
+
+         i {
+            color: var(--dark);
+         }
+      }
+   }
+
+   &.btn_page-search {
+      @include uiBtnCircle(
+         $size: 46px,
+         $bgColor: var(--dark),
+         $iconSize: 19px,
+         $iconColor: var(--light)
+      );
+   }
+
+   &:hover {
+      background: var(--action);
+   }
+}
+
+// TODO Кнопка поиска в header, которая открывает popup-search
+.btn_search {
+   @include uiBtnCircle(
+      $size: 40px,
+      $bgColor: transparent,
+      $iconSize: 18px,
+      $iconColor: var(--dark)
+   );
+
+   &:hover {
+      background: var(--dark);
+
+      i {
+         color: var(--light);
+      }
+   }
+}
+
+// TODO Кнопка корзины в карточке товара
+.btn_cart {
+   @include uiBtnCircle(
+      $size: clamp(40px, 15cqw, 50px),
+      $bgColor: var(--light),
+      $iconSize: clamp(18px, 7cqi, 22px),
+      $iconColor: var(--dark)
+   );
+
+   box-shadow: var(--light_btn_shadow);
+   position: relative;
+
+   img {
+      position: absolute;
+      top: -9px;
+      right: -6px;
+      width: 25px;
+      height: 25px;
+      border-radius: var(--circleRd);
+      display: inline-block;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(-10px);
+      transition: all .3s ease;
+   }
+
+   &:hover {
+      background: var(--action);
+      box-shadow: var(--card_btn_action_hover_shadow);
+
+      i {
+         color: var(--light);
+      }
+   }
+
+   &.inCart {
+      background: var(--dark);
+
+      i {
+         color: var(--light);
+      }
+
+      img {
+         opacity: 1;
+         visibility: visible;
+         transform: none;
+      }
+
+      &:hover {
+         box-shadow: var(--light_btn_shadow);
+      }
+   }
+}
+
+// TODO Стрелки слайдера (swiper-arrow)
+.swiper-arrow {
+   margin: 0;
+   padding: 0;
+   cursor: pointer;
+   z-index: 1;
+
+   &:after {
+      font-family: var(--icon_font);
+      transition: inherit;
+   }
+
+   &.next {
+      &:after {
+         content: '\e905';
+      }
+
+      &.swiper-button-disabled {
+         opacity: 0;
+         visibility: hidden;
+         translate: -10px;
+      }
+   }
+
+   &.prev {
+      &:after {
+         content: '\e902';
+      }
+
+      &.swiper-button-disabled {
+         opacity: 0;
+         visibility: hidden;
+         translate: 10px;
+      }
+   }
+
+   &.dark {
+      background: var(--dark);
+
+      &:after {
+         color: var(--light);
+      }
+
+      &:hover {
+         background: var(--ui_dark);
+
+         &:after {
+            color: var(--action);
+         }
+      }
+   }
+
+   &.light {
+      background: var(--light);
+      box-shadow: var(--light_btn_shadow);
+
+      &:after {
+         color: var(--dark);
+      }
+
+      &:hover {
+         background: var(--separating);
+
+         &:after {
+            color: var(--action);
+         }
+      }
+   }
+
+   // ADDITIONAL Стрелки в слайдере на главной странице
+   &.hero_arrow {
+      $size: 40px;
+      $iconSize: 19px;
+
+      width: $size;
+      height: $size;
+      position: relative;
+      top: 0;
+
+      &:after {
+         font-size: $iconSize;
+      }
+   }
+
+   // ADDITIONAL Основной размер и расположение стрелок слайдера
+   &.basic-swiper_arrow {
+      $size: clamp(35px, 7cqw, 45px);
+      $iconSize: clamp(12px, 4cqi, 20px);
+
+      width: $size;
+      height: $size;
+
+      &:after {
+         $iconSize: clamp(12px, 4cqi, 20px);
+      }
+
+      position: absolute;
+      top: 35%;
+      transform: translateY(-50%);
+
+      &.prev {
+         left: -15px;
+      }
+
+      &.next {
+         right: -15px;
+      }
+   }
+
+   // ADDITIONAL Стрелки в слайдере с отзвыами
+   &.reviews_arrow {
+      position: relative;
+      top: 0;
+
+      &.prev {
+         left: 0;
+      }
+
+      &.next {
+         right: 0;
+      }
+   }
+
+   // ADDITIONAL Стрелки в слайдере с фотками товара в popup-quickview
+   &.quickview_arrow {
+      &.prev {
+         left: 10px;
+      }
+
+      &.next {
+         right: 10px;
+      }
+   } 
+
+
+}
+
+// TODO Кнопки 
+.btn_save-product-page {
+   @include uiBtnCircle(
+      $size: clamp(35px, 15cqw, 50px),
+      $bgColor: var(--light),
+      $iconSize: clamp(15px, 7cqi, 18px),
+      $iconColor: var(--text_additional)
+   );
+   
+   box-shadow: var(--light_btn_shadow);
+
+   &:hover {
+      translate: 0 -3px;
+
+      i {
+         color: var(--dark);
+      }
+   }
+
+   &.active {
+      i {
+         color: var(--action);
+      }
+   }
+}
+
+.btn_save-product-card {
+   @include uiBtnCircle(
+      $size: clamp(25px, 12cqw, 40px),
+      $bgColor: var(--light),
+      $iconSize: clamp(14px, 5cqi, 16px),
+      $iconColor: var(--text_additional)
+   );
+   
+   box-shadow: var(--light_btn_shadow);
+   opacity: 0;
+   visibility: hidden;
+   transform: translateX(10px);
+   transition: 
+      opacity .25s ease,
+      visibility .25s ease,
+      transform .25s ease,
+      background-color .2s ease,
+      translate .2s ease;
+
+   i {
+      transition: all .2s ease;
+   }
+
+   &:hover {
+      translate: 0 -3px;
+
+      i {
+         color: var(--dark);
+      }
+   }
+
+   &.active {
+      i {
+         color: var(--action);
+      }
+   }
+}
+
+.product-card {
+   &:hover {
+      .btn_save-product-card {
+         $j: 0.1s;
+
+         @for $i from 1 through 3 {
+            $j: $j + 0.12s;
+
+            &:nth-child(#{$i}) {
+               opacity: 1;
+               visibility: visible;
+               transform: none;
+               transition: 
+                  opacity .25s ease $j,
+                  visibility .25s ease $j,
+                  transform .25s ease $j,
+                  background-color .2s ease 0s,
+                  translate .2s ease 0s;
+            }
+         }
+      }
+   }
+}

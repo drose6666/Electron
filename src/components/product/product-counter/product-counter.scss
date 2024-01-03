@@ -61,7 +61,16 @@ $transition: all .2s ease;
       }
 
       &.product_page {
+         background: var(--separating_contrast);
          height: 60px;
+
+         .count {
+            color: var(--dark);
+         }
+
+         i:hover {
+            color: var(--dark);
+         }
       }
    
       &.quickview {

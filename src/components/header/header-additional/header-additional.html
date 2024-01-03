@@ -1,24 +1,25 @@
 <div class="header-additional">
-   @@include('../../ui/ui-button/ui-circle-icon/ui-circle-icon.html', {
-      "classNameIcon": "search",
-      "className": "circle-icon_transparent btn_search header-icon"
+   @@include('../../ui/ui-button/ui-btn-circle/ui-btn-circle.html', {
+      "icon": "search",
+      "className": "btn_search"
    })
 
-   @@include('../../ui/ui-button/ui-circle-icon/ui-circle-icon-link.html', {
-      "classNameIcon": "heart",
-      "counter": "56",
-      "className": "btn_favourites"
+   @@include('../../ui/ui-button/ui-btn-circle/link-circle-header.html', {
+      "icon": "heart",
+      "count": "56",
+      "className": "btn_header-favourites",
+      "link": ""
    })
-   @@loop('../../ui/ui-button/ui-circle-icon/ui-circle-icon-menu.html', [
+   @@loop('../../ui/ui-button/ui-btn-circle/btn-circle-header.html', [
       {
-         "classNameIcon": "compare",
-         "counter": "56",
-         "className": "btn_compare header-icon"
+         "icon": "compare",
+         "count": "1",
+         "className": "btn_header-compare"
       },
       {
-         "classNameIcon": "cart",
-         "counter": "56",
-         "className": "btn_cart header-icon"
+         "icon": "cart",
+         "count": "56",
+         "className": "btn_header-cart"
       }
    ])
 </div>

@@ -1,15 +1,15 @@
-const productImagesThumbs = new Swiper(".product-images1", {
-   spaceBetween: 15,
+const productImgThumbs = new Swiper(".product-img__thumbs", {
+   spaceBetween: 5,
    slidesPerView: 3,
    slidesPerGroup: 1,
    freeMode: true,
    watchSlidesProgress: true,
 });
 
-const productImages = new Swiper(".product-images2", {
+const productImgMain = new Swiper(".product-img__main", {
    slidesPerView: 1,
    slidesPerGroup: 1,
-   spaceBetween: 10,
+   spaceBetween: 5,
    pauseOnMouseEnter: true,
    observer: true,
    // navigation: {
@@ -17,6 +17,6 @@ const productImages = new Swiper(".product-images2", {
    //    prevEl: ".swiper-button-prev",
    // },
    thumbs: {
-      swiper: productImagesThumbs,
+      swiper: productImgThumbs,
    },
 });

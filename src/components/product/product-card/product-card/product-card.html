@@ -9,26 +9,25 @@
          <div class="sticker_sold">Нет в наличии</div>
       </div>
 
-      <div class="quick-nav">
-         @@loop('../../../ui/ui-button/ui-circle-icon/ui-circle-icon.html', [
+      <div class="product-controls">
+         @@loop('../../../ui/ui-button/ui-btn-circle/ui-btn-circle.html', [
             {
-               "classNameIcon": "eye",
-               "className": "circle-icon_card btn_quickview"
+               "icon": "eye",
+               "className": "btn_save-product-card btn_quickview"
             },
             {
-               "classNameIcon": "compare",
-               "className": "circle-icon_card"
-            },s
+               "icon": "compare",
+               "className": "btn_save-product-card"
+            },
             {
-               "classNameIcon": "heart",
-               "className": "circle-icon_card"
-            }
+               "icon": "heart",
+               "className": "btn_save-product-card"
+            },
          ])
       </div>
 
       <div class="action-wrap">
          <button class="btn-cart">
-            <span class="in-cart"></span>
             <i class="i-cart"></i>
          </button>
 

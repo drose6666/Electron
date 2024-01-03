@@ -6,102 +6,6 @@ $positionHiddenEls: clamp(12px, 5cqi, 15px);
 
    .product-img {
       position: relative;
-
-      .action-wrap {
-         position: absolute;
-         bottom: $positionHiddenEls;
-         right: $positionHiddenEls;
-
-         .btn-cart {
-            width: clamp(38px, 15cqw, 46px);
-            height: clamp(38px, 15cqw, 46px);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: var(--circleRd);
-            background: var(--light);
-            box-shadow: var(--light_btn_shadow);
-            position: relative;
-            transition: all .2s ease;
-
-            i {
-               font-size: clamp(19px, 7cqi, 22px);
-               color: var(--dark);
-               transition: inherit;
-            }
-
-            .in-cart {
-               width: 25px;
-               height: 25px;
-               border-radius: var(--circleRd);
-               background: var(--success);
-               box-shadow: var(--light_btn_shadow);
-               position: absolute;
-               top: -9px;
-               right: -6px;
-               opacity: 0;
-               visibility: hidden;
-               transform: translateY(-10px);
-               transition: all .3s ease;
-
-               &:after {
-                  content: '\e90c';
-                  display: block;
-                  font-family: var(--icon_font);
-                  font-size: 14px;
-                  color: var(--dark);
-                  position: absolute;
-                  top: 50%;
-                  left: 50%;
-                  transform: translate(-50%, -50%);
-               }
-            }
-
-            &:hover {
-               background: var(--action);
-               box-shadow: var(--card_btn_action_hover_shadow);
-
-               i {
-                  color: var(--light);
-               }
-
-               &.inCart {
-                  box-shadow: var(--light_btn_shadow);
-               }
-            }
-
-            &.inCart {
-               background: var(--dark);
-               
-               i {
-                  color: var(--light);
-               }
-
-               .in-cart {
-                  opacity: 1;
-                  visibility: visible;
-                  transform: none;
-               }
-            }
-         }
-      }
-
-      .sticker-wrap {
-         position: absolute;
-         top: $positionHiddenEls;
-         left: $positionHiddenEls;
-      }
-
-      .quick-nav {
-         position: absolute;
-         top: clamp(12px, 5cqi, 20px);
-         right: clamp(12px, 5cqi, 20px);
-         display: flex;
-         flex-direction: column;
-         gap: clamp(6px, 3cqi, 10px);
-         transition: all .2s ease;
-      }
-
       .img-wrap {
          border-radius: var(--mdRd);
          position: relative;
@@ -132,6 +36,28 @@ $positionHiddenEls: clamp(12px, 5cqi, 15px);
             visibility: visible;
          }
       }
+   }
+
+   .action-wrap {
+      position: absolute;
+      bottom: $positionHiddenEls;
+      right: $positionHiddenEls;
+   }
+
+   .sticker-wrap {
+      position: absolute;
+      top: $positionHiddenEls;
+      left: $positionHiddenEls;
+   }
+
+   .product-controls {
+      position: absolute;
+      top: $positionHiddenEls;
+      right: $positionHiddenEls;
+      display: flex;
+      flex-direction: column;
+      gap: clamp(6px, 3cqi, 10px);
+      transition: all .2s ease;
    }
 
    .info {
@@ -187,18 +113,6 @@ $positionHiddenEls: clamp(12px, 5cqi, 15px);
 
    &:hover {
       .product-img {
-         .quick-nav {
-            .circle-icon_card {
-               transform: none;
-               opacity: 1;
-               visibility: visible;
-   
-               &:hover {
-                  translate: 0 -2px;
-               }
-            }
-         }
-
          .img {
             &.img_hover {
                opacity: 1;

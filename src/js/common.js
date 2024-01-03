@@ -10,8 +10,8 @@ import '../components/menu/mobile-menu/mobile-menu.js';
  * TODO Popups
  */
 import '../components/popups/fade-side/popup-cart/popup-cart.js';
-// import '../components/popups/fade-side/popup-compare/popup-compare.js';
-// import '../components/popups/fade-side/popup-login/popup-login.js';
+import '../components/popups/fade-side/popup-compare/popup-compare.js';
+import '../components/popups/fade-side/popup-login/popup-login.js';
 import '../components/popups/fade-side/popup-search/popup-search.js';
 
 /**

@@ -3,6 +3,6 @@ import PopupHandler from '../../../../libs/js/module/fadeHiddenElements/PopupHan
 new PopupHandler ({
    selector: '#popup-cart',
    btnClose: '.popup-cart-close',
-   btnOpen: '.btn_cart',
+   btnOpen: '.btn_header-cart',
    overlay: '#overlay-cart',
 })

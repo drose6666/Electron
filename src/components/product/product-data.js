@@ -151,24 +151,24 @@ function renderProductList (productsList) {
          <div class="product-card swiper-slide">
             <div class="product-img">
                <a class="img-wrap" href="../../../../pages/page-product/page-product.html">
-                  <img loading="lazy" class="img img_main" src="${product.img}" alt="">
-                  <img loading="lazy" class="img img_hover" src="${product.imgHidden}" alt="">
+                  <img class="img img_main" src="${product.img}" alt="">
+                  <img class="img img_hover" src="${product.imgHidden}" alt="">
                </a>
                
                <div class="sticker-wrap">
                   ${product.soldOut ? stickerSoldOut : ''}
                </div>
          
-               <div class="quick-nav">
-                  <div class="ui-circle-icon circle-icon_card btn_quickview">
+               <div class="product-controls">
+                  <div class="btn_circle btn_save-product-card btn_quickview">
                      <i class="i-eye"></i>
                   </div>
          
-                  <div class="ui-circle-icon circle-icon_card ${product.isCompare ? 'active' : ''}">
+                  <div class="btn_circle btn_save-product-card ${product.isCompare ? 'active' : ''}">
                      <i class="i-compare"></i>
                   </div>
          
-                  <div class="ui-circle-icon circle-icon_card ${product.isFavourites ? 'active' : ''}">
+                  <div class="btn_circle btn_save-product-card ${product.isFavourites ? 'active' : ''}">
                      <i class="i-heart"></i>
                   </div>
                </div>
@@ -208,9 +208,9 @@ function renderColors(arr) {
 // TODO Создание HTML для кнопки корзины и "Заказать"
 function renderCartBtn(availability, statusCart) {
    const defaultCartBtn = `
-      <button class="btn-cart btn_cart-add ${statusCart ? 'inCart' : ''}">
-         <span class="in-cart"></span>
-         <i class="i-cart"></i>
+      <button class="btn_circle btn_cart btn_cart-add ${statusCart ? 'inCart' : ''}">
+      <img src="../../../../img/check_notification.svg" />
+      <i class="i-cart"></i>
       </button>
    `
    const orderCartBtn = `

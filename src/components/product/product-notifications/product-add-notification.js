@@ -5,7 +5,7 @@ const btnClose = document.querySelector('.product-add-notification .ui-close')
 btnCartAdd.forEach(btnCart => {
    btnCart.addEventListener('click', function() {
 
-      if (btnCart.classList.contains('inCart')) {
+      if (!btnCart.classList.contains('inCart')) {
          handlerNotification('open')
       }
 
