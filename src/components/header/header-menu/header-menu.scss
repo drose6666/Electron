@@ -13,7 +13,7 @@
             $hoverChild: true
          );
 
-         & > a {
+         & > .child {
             padding: 34px 0;
             font-size: clamp(14px, 1cqi, 16px);
             font-weight: 600;
@@ -21,10 +21,11 @@
             text-transform: uppercase;
             color: var(--dark);
             display: inline-block;
+            cursor: pointer;
          }
 
          &:hover {
-            & > a {
+            & > .child {
                color: var(--action);
             }
 
@@ -39,7 +40,7 @@
    }
 
    @include media(max-width, 1200px) {
-      &-list > &__item > a {
+      &-list > &__item > .child {
          font-size: clamp(17px, 1.8cqi, 22px);
       }
    }
@@ -56,7 +57,7 @@ header.sticky {
    .menu {
       &-list {
          &__item {
-            & > a {
+            & > .child {
                padding: 28px 0;
             }
          }

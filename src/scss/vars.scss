@@ -23,6 +23,7 @@
    --overlay: rgba(9, 9, 9, .5);
    --active_star: #FFC700;
    --btn_close: #FF5F5F;
+   --sticker_sold: rgba(249, 102, 102, .6);
 
    
    // Shadows
@@ -38,6 +39,7 @@
    --submenu_shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
    --category_card_hover_shadow: 0px 10px 35px 0px rgba(0, 0, 0, 0.04);
    --header_user_menu_shadow: 0px 10px 30px 0px rgba(0, 0, 0, 0.04);
+   --sticker_shadow: 0px 10px 16px 0px rgba(0, 0, 0, 0.12);
 
 
    // Border radius
@@ -65,7 +67,7 @@
    --small_tabs_padding: 15px;
    --small_btn_padding: 10px;
    --section_padding: 140px;
-   --section_sm_padding: 100px;
+   --section_sm_padding: 80px;
    --section_md_padding: 140px;
    --fields_gutter: 15px;
    --ui_popup_gutter: 60px;

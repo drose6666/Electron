@@ -1,45 +1,43 @@
-const fileComponent = document.querySelector('.ui-file')
+const fileComponent = document.querySelector('.ui-file');
 const fileInput = document.getElementById("ui-file__input");
 const imagePreviewContainer = document.querySelector(".ui-file-previews");
-
-let previewImage = {}
 
 fileInput.addEventListener("change", handleFileSelection);
 
 function handleFileSelection() {
-   const selectedFiles = Array.from(this.files);
+  const selectedFiles = Array.from(this.files);
 
-   selectedFiles.forEach((file) => {
-      if (file.type.match(/image.*/) && selectedFiles.length <= 6) {
-         if (file.size <= 5 * 1024 * 1024) {
+  selectedFiles.forEach((file) => {
+    if (file.type.match(/image.*/) && imagePreviewContainer.childElementCount <= 5) {
+      if (file.size <= 5 * 1024 * 1024) {
+        const previewImage = {
+          name: file.name,
+          size: formatBytes(file.size),
+          url: URL.createObjectURL(file)
+        };
 
-            previewImage.name = file.name,
-            previewImage.size = formatBytes(file.size),
-            previewImage.url = URL.createObjectURL(file)
-            
-            imagePreviewContainer.insertAdjacentHTML('beforeend', createPreviewFile(previewImage))
+        imagePreviewContainer.insertAdjacentHTML('beforeend', createPreviewFile(previewImage));
 
-            const previewFileCloseBtn = document.querySelectorAll('.close_input-file')
-            previewFileCloseBtn.forEach(closeBtn => {
-               closeBtn.addEventListener('click', function () {
-                  removePreviewFile(closeBtn);
-                  hideFileInput()
-               })
-            })
+        const previewFileCloseBtn = document.querySelectorAll('.close_input-file');
+        previewFileCloseBtn.forEach(closeBtn => {
+          closeBtn.addEventListener('click', function () {
+            removePreviewFile(closeBtn);
+            hideFileInput();
+          });
+        });
 
-            hideFileInput()
-            
-         } else {
-            console.log("Размер изображения превышает 5 Мб");
-         }
+        hideFileInput();
       } else {
-         console.log("Файл не является изображением (.jpg, .jpeg, .png, .webp)");
+        alert("Размер изображения превышает 5 Мб");
       }
-   });
+    } else {
+      alert("Файл не является изображением (.jpg, .jpeg, .png, .webp) или превышено ограничение по количеству файлов");
+    }
+  });
 }
 
-function createPreviewFile ({ name, size, url }) {
-   return `
+function createPreviewFile({ name, size, url }) {
+  return `
       <div class="preview">
          <img src="${url}" alt="">
 
@@ -52,13 +50,13 @@ function createPreviewFile ({ name, size, url }) {
             <i class="i-close"></i>
          </div>
       </div>
-   `
+   `;
 }
 
-function removePreviewFile (currentBtnClose) {
-   let parent = currentBtnClose.parentNode;
-   parent.remove();
-   fileInput.value = '';
+function removePreviewFile(currentBtnClose) {
+  let parent = currentBtnClose.parentNode;
+  parent.remove();
+  fileInput.value = '';
 }
 
 function formatBytes(bytes, decimals = 1) {
@@ -72,7 +70,7 @@ function formatBytes(bytes, decimals = 1) {
 }
 
 function hideFileInput() {
-   imagePreviewContainer.childElementCount >= 6 
-      ? fileComponent.classList.add('hidden')
-      : fileComponent.classList.remove('hidden')
+  imagePreviewContainer.childElementCount >= 6
+    ? fileComponent.classList.add('hidden')
+    : fileComponent.classList.remove('hidden');
 }

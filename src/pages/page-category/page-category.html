@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
    @@include('../../components/head/head.html', {
-      "mainCss": "css/page-category.css",
+      "mainCss": "css/page-category.min.css",
       "title": "Категории"
    })
    <body>
@@ -35,15 +35,16 @@
                   @@loop('../../components/ui/ui-tab/ui-tab.html', [
                      {
                         "text": "Для ноутбуков и ПК",
-                        "className": "active"
+                        "className": "tab_category active"
                      },
                      {
                         "text": "Для смартфонов",
-                        "className": ""
+                        "className": "tab_category"
                      }
                   ])
                </div>
 
+               @@include('../../components/subcategory/subcategory-list.html')
                @@include('../../components/subcategory/subcategory-list.html')
             </div>
          </section>
@@ -55,12 +56,13 @@
       @@include('../../components/footer/footer.html')
       @@include('../../components/menu/mobile-menu/mobile-menu.html')
       @@include('../../components/popups/fade-side/popup-search/popup-search.html')
-      <!-- @@include('../../components/popups/fade-side/popup-compare/popup-compare.html') -->
+      @@include('../../components/popups/fade-side/popup-compare/popup-compare.html')
       @@include('../../components/popups/fade-side/popup-cart/popup-cart.html')
       @@include('../../components/popups/fade-side/popup-quickview/popup-quickview.html')
       @@include('../../components/popups/popup-image-preview/popup-image-preview.html')
       @@include('../../components/popups/fade-side/popup-filters/popup-filters.html')
-      <!-- @@include('../../components/popups/fade-side/popup-login/popup-login.html') -->
+      @@include('../../components/popups/fade-side/popup-login/popup-login.html')
+      @@include('../../components/product/product-notifications/product-add-notification.html')
       
       <script type="module" src="js/bundle-page-category.min.js"></script>
    </body>

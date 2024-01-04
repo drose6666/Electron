@@ -22,49 +22,17 @@ search {
          font-weight: 300;
       }
    }
-
-   .btn-search {
-      padding: 5px 25px;
-   }
-
-   .btn-circle_search {
-      width: 50px;
-      height: 50px;
-      border-radius: var(--circleRd);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      position: absolute;
-      top: 2px;
-      right: 2px;
-      background: var(--action);
-      transition: all .2s ease;
-
-      i {
-         font-size: 22px;
-         color: var(--light);
-         transition: all .2s ease;
-      }
-
-      &:hover {
-         background: var(--light);
-
-         i {
-            color: var(--dark);
-         }
-      }
-   }
 }
 
 
 // TODO Поле поискса на страницах ()
 #page-search {
-   .ui-input {
+   .input_search {
       @include uiInput (
-         $paddingRight: 117px,
+         $paddingRight: 65px,
          $fSize: 19px,
          $fWeight: 500,
-         $height: 45px,
+         $height: 54px,
       );
       @include uiInputTheme ( $theme: light );
 
@@ -73,13 +41,15 @@ search {
       }
    }
 
-   @include media (max-width, 900px) {
-      .ui-input {
-         height:  54px;
+   .btn_main-search {
+      background: var(--dark);
+
+      i {
+         color: var(--light);
       }
 
-      .btn_search {
-         height: 50px;
+      &:hover {
+         background: var(--action);
       }
    }
 }

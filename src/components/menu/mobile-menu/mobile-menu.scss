@@ -80,6 +80,14 @@ $paddingMenu: 110px $padingXMenu 60px $padingXMenu;
    }
 }
 
+#mobile-menu {
+   .mobile-menu {
+      position: absolute;
+      top: 0;
+      left: 0;
+   }
+}
+
 
 /* TODO Стили меню */
 .mobile-menu {

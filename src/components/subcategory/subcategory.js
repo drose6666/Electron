@@ -1,7 +1,9 @@
 window.addEventListener('load', function () {
-   const subcategoryList = document.getElementById('subcategory-list')
-   let childsCount = subcategoryList.children.length
+   const subcategoryList = document.querySelectorAll('.subcategory-list')
+   subcategoryList.forEach(item => {
+      let childsCount = item.children.length
 
-   if (childsCount > 6) 
-      subcategoryList.style.gridTemplate = `1fr 1fr / repeat(${Math.ceil(childsCount / 2)}, 1fr)`
+      if (childsCount > 6) 
+         item.style.gridTemplate = `1fr 1fr / repeat(${Math.ceil(childsCount / 2)}, 1fr)`
+      })
 })

@@ -1,7 +1,19 @@
 <div class="product-info product_page">
-   <a href="../../../pages/page-brand-single/page-brand-single.html" class="product-info__brand basicHoverUnderline">
-      <span class="child">Asus</span>
-   </a>
+   <div class="product-info__brand-wrap">
+      <a href="../../../pages/page-brand-single/page-brand-single.html" class="product-info__brand basicHoverUnderline">
+         <span class="child">Asus</span>
+      </a>
+
+      <div class="product-info__controls">
+         <button class="product-controls-btn">
+            <i class="i-compare"></i>
+         </button>
+
+         <button class="product-controls-btn active">
+            <i class="i-heart"></i>
+         </button>
+      </div>
+   </div>
 
    <h2 class="product-info__name">VivoBook 15 M1502IA-BQ011W</h2>
 
@@ -10,6 +22,13 @@
 
       @@include('../../ui/ui-star-rating/ui-one-star-rating.html', {
          "className": "dark"
+      })
+   </div>
+
+   <div class="product-info__stickers">
+      @@include('../../ui/ui-button/ui-btn/ui-sticker.html', {
+         "className": "sticker_sold",
+         "text": "Нет в наличии"
       })
    </div>
 

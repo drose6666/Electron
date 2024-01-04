@@ -5,6 +5,9 @@
    .ui-tabs {
       margin-bottom: 30px;
       justify-content: flex-start;
+      flex-wrap: wrap;
+      column-gap: 15px;
+      row-gap: 5px;
    }
 }
 

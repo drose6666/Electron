@@ -42,24 +42,6 @@
 
    /* TODO Изображения */
    .ui-popup__images-wrap {
-
-      /* IMPORTANT Стили стрелок слайдера */
-      .swiper-arrow,
-      .swiper-arrow {
-         display: none;
-         top: 50%;
-      }
-
-      .swiper-arrow {
-         &.prev {
-            left: 7px;
-         }
-
-         &.next {
-            right: 7px;
-         }
-      }
-
       .ui-popup__images {
          .swiper-wrapper {
             height: auto;
@@ -153,13 +135,6 @@
       .ui-popup__images-wrap {
          padding: 0;
          order: 1;
-
-         .swiper-arrow,
-         .swiper-arrow {
-            display: flex;
-            background: rgba(9, 9, 9, .3);
-            backdrop-filter: blur(10px);
-         }
 
          .ui-popup__images {
             padding: 0;

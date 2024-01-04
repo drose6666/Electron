@@ -7,3 +7,11 @@ import '../../components/product/product.js';
 import '../../components/popups/fade-side/popup-filters/popup-filters.js';
 import '../../components/popups/fade-side/popup-quickview/popup-quickview.js';
 import '../../components/popups/popup-image-preview/popup-image-preview.js';
+import Tabs from '../../libs/js/module/tabs.js';
+
+
+// TODO Вкладки подкатегорий (Для смартфонов/Для ноутбуков)
+new Tabs({
+   visible: '.tab_category',
+   collapse: '.subcategory-list'
+})

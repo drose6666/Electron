@@ -17,8 +17,8 @@ const setOptions = (id) => {
          onlyInViewport: false,
       },
       navigation: {
-         nextEl: `.new-products-next.next-${id}`,
-         prevEl: `.new-products-prev.prev-${id}`
+         nextEl: `.new-products-container .swiper-arrow.next-${id}`,
+         prevEl: `.new-products-container .swiper-arrow.prev-${id}`
       },
       breakpoints: {
          500: {

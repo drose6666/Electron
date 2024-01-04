@@ -252,8 +252,7 @@
 
       width: $size;
       height: $size;
-      position: relative;
-      top: 0;
+      position: static;
 
       &:after {
          font-size: $iconSize;
@@ -263,13 +262,13 @@
    // ADDITIONAL Основной размер и расположение стрелок слайдера
    &.basic-swiper_arrow {
       $size: clamp(35px, 7cqw, 45px);
-      $iconSize: clamp(12px, 4cqi, 20px);
+      $iconSize: clamp(13px, 3cqi, 20px);
 
       width: $size;
       height: $size;
 
       &:after {
-         $iconSize: clamp(12px, 4cqi, 20px);
+         font-size: $iconSize;
       }
 
       position: absolute;
@@ -287,8 +286,8 @@
 
    // ADDITIONAL Стрелки в слайдере с отзвыами
    &.reviews_arrow {
-      position: relative;
-      top: 0;
+      position: static;
+      transform: none;
 
       &.prev {
          left: 0;
@@ -297,16 +296,47 @@
       &.next {
          right: 0;
       }
+      
+      @include media (max-width, 600px) {
+         position: relative;
+
+         &.prev {
+            left: -15px;
+         }
+
+         &.next {
+            right: -15px;
+         }
+      }
    }
 
    // ADDITIONAL Стрелки в слайдере с фотками товара в popup-quickview
    &.quickview_arrow {
+      $size: clamp(35px, 7cqw, 45px);
+      $iconSize: clamp(13px, 3cqi, 20px);
+
+      width: $size;
+      height: $size;
+      background: rgba(9, 9, 9, .3);
+      backdrop-filter: blur(10px);
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+
+      &:after {
+         font-size: $iconSize;
+      }
+      
       &.prev {
          left: 10px;
       }
 
       &.next {
          right: 10px;
+      }
+
+      @include media (min-width, 831px) {
+         display: none;
       }
    } 
 
@@ -316,9 +346,9 @@
 // TODO Кнопки 
 .btn_save-product-page {
    @include uiBtnCircle(
-      $size: clamp(35px, 15cqw, 50px),
+      $size: clamp(35px, 10cqw, 50px),
       $bgColor: var(--light),
-      $iconSize: clamp(15px, 7cqi, 18px),
+      $iconSize: clamp(15px, 4.5cqi, 18px),
       $iconColor: var(--text_additional)
    );
    

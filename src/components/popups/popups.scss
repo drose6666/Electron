@@ -21,14 +21,13 @@ $transitionDuration: .2s ease;
    position: fixed;
    top: 0;
    left: 0;
+   display: grid;
    z-index: 2;
    width: 100%;
    height: 100%;
    min-height: 100%;
-   display: grid;
-   grid-template: 1fr / 1fr;
-   overflow-y: auto;
    overflow-x: hidden;
+   overflow: auto;
    opacity: 0;
    visibility: hidden;
    transition: all .2s ease .45s;
@@ -48,6 +47,8 @@ $transitionDuration: .2s ease;
    
    &__overlay {
       position: fixed;
+      top: 0;
+      left: 0;
       width: 100%;
       height: 100%;
       background: var(--overlay);
@@ -56,9 +57,11 @@ $transitionDuration: .2s ease;
 
    /* TODO Стили для popup */
    &.popup {
+      display: grid;
       padding: 20px clamp(10px, 3cqi, 20px);
 
       .ui-popup__container {
+         margin: 0 auto;
          padding: clamp(35px, 4cqi, 50px) clamp(20px, 4cqi, 50px);
          box-shadow: var(--popup_shadow);
          align-self: center;
@@ -195,10 +198,12 @@ $transitionDuration: .2s ease;
    }
 }
 
+
 /* TODO Блок с инфой (правая колонка) в popup-with-images */
 .ui-popup__content-wrap {
    padding: 110px clamp(var(--default_padding), 5cqi, var(--fade_on_the_side_padding)) 30px;
 }
+
 
 /* TODO Блок с картинками (левая колонка) в popup-with-images */
 .ui-popup__images-wrap {
@@ -242,6 +247,7 @@ $transitionDuration: .2s ease;
       }
    }
 }
+
 
 // TODO Заголовок (название компонента fade-on-side)
 .ui-popup__title {
@@ -331,6 +337,7 @@ $transitionDuration: .2s ease;
    }
 }
 
+
 @include media (max-width, 650px) {
    .ui-popup-products {
       &__list {
@@ -357,8 +364,8 @@ $transitionDuration: .2s ease;
    }
 }
 
-/* TODO Картинки в popup-review и popup-quickview */
 
+/* TODO Картинки в popup-review и popup-quickview */
 @include media (max-width, 550px) {
    .ui-popup__btns, .ui-popup__btns.links {
       margin: 80px auto 0 auto;

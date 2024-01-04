@@ -168,7 +168,7 @@ footer {
       
       .footer-inside {
          grid-template: auto / 1fr;
-         gap: 100px;
+         gap: 70px;
       }
 
       .footer-col {
@@ -205,7 +205,7 @@ footer {
             }
 
             .phone {
-               font-size: clamp(28px, 11cqi, 45px);
+               font-size: clamp(28px, 11cqi, 40px);
             }
          }
 

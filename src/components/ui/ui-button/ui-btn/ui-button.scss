@@ -270,6 +270,20 @@
    @include btnTheme( $theme: outlineOnDark );
 }
 
+.btn_contact {
+   @include btnType( $type: primary );
+   @include btnTheme( $theme: outlineGrey );
+}
+
+@include media (max-width, 900px) {
+   .page-search-component {
+      .btn_contact {
+         margin-left: 0;
+         order: 2;
+      }
+   }
+   
+}
 
 
 // TODO target
@@ -346,7 +360,7 @@
    @include btnType( $type: sticker );
    
    color: var(--light);
-   background: rgba(155, 187, 216, 0.70);
+   background: var(--sticker_sold);
    box-shadow: var(--light_btn_shadow);
    backdrop-filter: blur(2px);
 }

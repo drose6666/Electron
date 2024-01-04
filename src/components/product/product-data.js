@@ -223,14 +223,3 @@ function renderCartBtn(availability, statusCart) {
 // TODO ПРи клике на кнопку корзины товар будет удаляться/добавляться в корзину
 // Код наже описывает визиуальную часть кнопки корзины в карточке товара 
 // без связи с массивом товаров
-
-const cartBtns = document.querySelectorAll('.product-card .btn-cart')
-for (let i = 0; i < cartBtns.length; i++) {
-   cartBtns[i].addEventListener('click', () => changeStatusCartOfProduct(cartBtns[i]))
-}
-
-function changeStatusCartOfProduct(btn) {
-   btn.classList.contains('inCart')
-      ? btn.classList.remove('inCart')
-      : btn.classList.add('inCart')
-}

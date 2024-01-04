@@ -13,8 +13,8 @@ const options = {
       onlyInViewport: false,
    },
    navigation: {
-      nextEl: '.quickview-product-next',
-      prevEl: '.quickview-product-prev'
+      nextEl: '.quickview_arrow.next',
+      prevEl: '.quickview_arrow.prev'
    },
 }
 

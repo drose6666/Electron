@@ -4,9 +4,45 @@
    container-name: productInfo;
    container-type: inline-size;
 
-   // TODO Стили для popup-quickview
-   &__brand {
+   &__brand-wrap {
       margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+   }
+
+   &__controls {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+
+      .product-controls-btn {
+         padding: 0;
+         transition: all .2s ease;
+
+         i {
+            font-size: 16px;
+            color: var(--text_additional);
+            transition: inherit;
+         }
+
+         &:hover {
+            transform: translateY(-3px);
+
+            i {
+               color: var(--dark);
+            }
+         }
+
+         &.active {
+            i {
+               color: var(--action);
+            }
+         }
+      }
+   }
+
+   &__brand {
       display: inline-block;
       font-size: 20px;
       font-weight: 300;
@@ -32,6 +68,18 @@
       line-height: 100%;
    }
 
+   &__stickers {
+      margin: 30px 0;
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+
+      .ui-sticker {
+         box-shadow: none;
+      }
+   }
+
    &__inviting-text {
       margin-top: 35px;
       font-size: 17px;
@@ -43,12 +91,28 @@
       @include textCropping( $stringCount: 4 )
    }
 
+   &:has(.product-info__stickers) {
+      .product-info__inviting-text {
+         margin-top: 0;
+      }
+   }
+
   
    // ADDITIONAL Инфа о товаре в быстром просмотре
    &.quickview {
       .product-info__brand {
          &:hover {
             color: var(--light);
+         }
+      }
+
+      .product-info__controls {
+         .product-controls-btn {
+            &:hover {
+               i {
+                  color: var(--light);
+               }
+            }
          }
       }
 
@@ -62,6 +126,10 @@
          font-size: 27px;
          color: var(--light);
       }
+
+      .product-info__stickers {
+         margin: 40px 0;
+      } 
    }
 
 
@@ -73,6 +141,16 @@
       .product-info__brand {
          &:hover {
             color: var(--dark);
+         }
+      }
+
+      .product-info__controls {
+         .product-controls-btn {
+            &:hover {
+               i {
+                  color: var(--dark);
+               }
+            }
          }
       }
 

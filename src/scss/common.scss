@@ -70,13 +70,14 @@
 
 html,body {
    scrollbar-gutter: stable;
-   position: relative;
    // all: unset; // сбрасывыает все стили до значений по умолчанию
 }
 
 body {
    margin-bottom: 20px;
+   position: relative;
    font-family: var(--basic_font);
+   
 
    &.no-scroll {
       overflow: hidden;
@@ -84,7 +85,7 @@ body {
 }
    
 html, body, main {
-   width: 100%;
+   // width: 100%;
 }
 
 i {

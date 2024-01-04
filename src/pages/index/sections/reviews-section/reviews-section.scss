@@ -8,13 +8,27 @@
       max-width: 340px;
    }
 
-   @include media (max-width, 1063px) {
-      padding-top: 160px;
+   .reviews-container {
+      .swiper-arrows {
+         position: absolute;
+         top: -70px;
+         right: 0;
+         display: flex;
+         gap: 10px;
+         z-index: 2;
+      }
    }
 
-   @include media (max-width, 370px) {
-      .reviews-container .reviews-arrows {
-         top: -15px;
+   @include media (max-width, 600px) {
+      .reviews-container {
+         .swiper-arrows {
+            top: 50%;
+            left: 0;
+            right: auto;
+            transform: translateY(-50%);
+            width: 100%;
+            justify-content: space-between;
+         }
       }
    }
 }

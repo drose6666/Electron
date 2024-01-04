@@ -38,7 +38,7 @@
                @@include('../../components/brand/brands-list.html')
                @@include('../../components/ui/ui-button/ui-btn/ui-button.html', {
                   "text": "Показать еще",
-                  "className": "btn_ui-option",
+                  "className": "btn_more",
                   "type": "button"
                })
             </div>
@@ -49,9 +49,10 @@
       @@include('../../components/footer/footer.html')
       @@include('../../components/menu/mobile-menu/mobile-menu.html')
       @@include('../../components/popups/fade-side/popup-search/popup-search.html')
-      <!-- @@include('../../components/popups/fade-side/popup-compare/popup-compare.html') -->
+      @@include('../../components/popups/fade-side/popup-compare/popup-compare.html')
       @@include('../../components/popups/fade-side/popup-cart/popup-cart.html')
-      <!-- @@include('../../components/popups/fade-side/popup-login/popup-login.html') -->
+      @@include('../../components/popups/fade-side/popup-login/popup-login.html')
+      @@include('../../components/product/product-notifications/product-add-notification.html')
       
       <script type="module" src="js/bundle-page-brands.min.js"></script>
    </body>

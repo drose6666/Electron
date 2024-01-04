@@ -17,15 +17,10 @@ const optionsReviews = {
       onlyInViewport: false,
    },
    navigation: {
-      nextEl: `.reviews-next`,
-      prevEl: `.reviews-prev`
+      nextEl: `.reviews_arrow.next`,
+      prevEl: `.reviews_arrow.prev`
    },
-   // pagination: {
-   //    el: '.reviews-pagination',
-   //    clickable: true,
-   //    type: 'bullets',
-   //    dynamicBullets: true
-   // },
+
    breakpoints: {
       600: {
          slidesPerView: 2,
@@ -44,9 +39,5 @@ const optionsReviews = {
 
 window.addEventListener('load', () => {
    const reviewsSwiper = new Swiper('#reviews-swiper', optionsReviews)
-
-   // document.querySelectorAll('.review .text').forEach(text => {
-   //    text.style['-webkit-box-orient'] = 'vertical'
-   // })
 })
 
