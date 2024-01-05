@@ -1,5 +1,5 @@
 .ui-section-title {
-   margin-bottom: 60px;
+   margin-bottom: 40px;
    font-size: 40px;
    font-weight: 600;
    line-height: 100%;
@@ -7,7 +7,7 @@
    text-wrap: balance;
 
    &.sm-mt {
-      margin-bottom: 40px;
+      margin-bottom: 20px;
    }
 
    &.center {
@@ -16,8 +16,12 @@
 
    &.md {
       font-size: 35px;
-      font-weight: 400;
+      font-weight: 500;
       line-height: 90%;
+   }
+
+   &.lg {
+      font-size: 50px;
    }
 
    @include media (max-width, 830px) {
@@ -30,7 +34,7 @@
 }
 
 .ui-section-title-more {
-   margin-bottom: 60px;
+   margin-bottom: 40px;
    display: flex;
    align-items: center;
    justify-content: space-between;

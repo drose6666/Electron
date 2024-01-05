@@ -77,9 +77,35 @@
    &.socials_about {
       a {
          border-color: transparent;
-         background: var(--light);
+         background: transparent;
 
          i {
+            color: var(--light);
+         }
+
+         &:hover {
+            background: var(--dark);
+            border-color: var(--dark);
+
+            i {
+               color: var(--action);
+            }
+         }
+      }
+   }
+
+   &.socials_header {
+      gap: 5px;
+
+      a {
+         border-color: transparent;
+         background: transparent;
+         width: 30px;
+         height: 30px;
+         transition: all .2s ease;
+
+         i {
+            font-size: 15px;
             color: var(--dark);
          }
 

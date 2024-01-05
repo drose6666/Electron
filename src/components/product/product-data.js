@@ -62,7 +62,7 @@ const products = [
       isFavourites: true,
       isCompare: false,
       soldOut: false,
-      inCart: true
+      inCart: false
    },
    {
       id: 5,
@@ -70,8 +70,6 @@ const products = [
       price: '210 990 ₽',
       colors: [
          { id: 1, name: 'Темный титан', color: "#4A4846" },
-         { id: 2, name: 'Светлый титан', color: "#F4F2EE" },
-         { id: 3, name: 'Натуральный титан', color: "#FDE8CF" },
       ],
       img: '../../../img/cards/card_5.webp',
       imgHidden: '../../../img/cards/card_5_2.webp',
@@ -90,7 +88,7 @@ const products = [
       isFavourites: true,
       isCompare: false,
       soldOut: false,
-      inCart: true
+      inCart: false
    },
 
    {
@@ -151,10 +149,10 @@ function renderProductList (productsList) {
          <div class="product-card swiper-slide">
             <div class="product-img">
                <a class="img-wrap" href="../../../../pages/page-product/page-product.html">
-                  <img class="img img_main" src="${product.img}" alt="">
-                  <img class="img img_hover" src="${product.imgHidden}" alt="">
+                  <div class="img img_main"><img src="${product.img}" alt=""></div>
+                  <div class="img img_hover"><img loading="lazy" src="${product.imgHidden}" alt=""></div>
                </a>
-               
+
                <div class="sticker-wrap">
                   ${product.soldOut ? stickerSoldOut : ''}
                </div>
@@ -162,14 +160,6 @@ function renderProductList (productsList) {
                <div class="product-controls">
                   <div class="btn_circle btn_save-product-card btn_quickview">
                      <i class="i-eye"></i>
-                  </div>
-         
-                  <div class="btn_circle btn_save-product-card ${product.isCompare ? 'active' : ''}">
-                     <i class="i-compare"></i>
-                  </div>
-         
-                  <div class="btn_circle btn_save-product-card ${product.isFavourites ? 'active' : ''}">
-                     <i class="i-heart"></i>
                   </div>
                </div>
          
@@ -208,9 +198,9 @@ function renderColors(arr) {
 // TODO Создание HTML для кнопки корзины и "Заказать"
 function renderCartBtn(availability, statusCart) {
    const defaultCartBtn = `
-      <button class="btn_circle btn_cart btn_cart-add ${statusCart ? 'inCart' : ''}">
-      <img src="../../../../img/check_notification.svg" />
-      <i class="i-cart"></i>
+      <button class="btn_circle btn_cart btn_header-cart btn_cart-add ${statusCart ? 'inCart' : ''}">
+         <img src="../../../../img/check_notification.svg" />
+         <i class="i-cart"></i>
       </button>
    `
    const orderCartBtn = `

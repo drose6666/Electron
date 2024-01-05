@@ -273,6 +273,8 @@
 .btn_contact {
    @include btnType( $type: primary );
    @include btnTheme( $theme: outlineGrey );
+
+   margin-left: auto;
 }
 
 @include media (max-width, 900px) {

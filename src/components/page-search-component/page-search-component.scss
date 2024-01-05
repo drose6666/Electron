@@ -1,15 +1,11 @@
 .page-search-component {
-   margin-bottom: var(--section_sm_padding);
+   margin-bottom: var(--section_sm_gutter);
 
    .page-search-container {
       display: flex;
       align-items: center;
       gap: 20px;
       row-gap: 10px;
-   }
-
-   .btn_page-search {
-      flex: 0 0 230px;
    }
 
    .page-search-texts {
@@ -28,24 +24,18 @@
             max-width: 390px;
          }
       }
-
-      
    }
 
    @include media (max-width, 900px) {
       .page-search-container  {
          flex-wrap: wrap;
       }
+
       search {
          margin-top: 15px;
          max-width: 100%;
          flex: 0 0 100%;
          order: 3;
-      }
-
-      .btn_contact {
-         margin-left: 0;
-         order: 2;
       }
    }
 }

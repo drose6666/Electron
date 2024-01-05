@@ -1,4 +1,8 @@
 .menu {
+   display: flex;
+   align-items: center;
+   gap: clamp(30px, 2cqi, 70px);
+
    &-list {
       display: flex;
       align-items: center;
@@ -14,8 +18,8 @@
          );
 
          & > .child {
-            padding: 34px 0;
-            font-size: clamp(14px, 1cqi, 16px);
+            padding: 28px 0;
+            font-size: clamp(14px, 1.2cqi, 16px);
             font-weight: 600;
             line-height: 100%;
             text-transform: uppercase;
@@ -45,8 +49,10 @@
       }
    }
 
-   @include media(max-width, 1050px) {
-      display: none;
+   @include media(max-width, 990px) {
+      .menu-list {
+         display: none;
+      }
    }
 }
 

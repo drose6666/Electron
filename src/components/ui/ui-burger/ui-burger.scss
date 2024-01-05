@@ -42,7 +42,6 @@
       span {
          &:after {
             width: 100%;
-            // background: var(--action);
          }
 
          &:nth-child(2) {
@@ -53,7 +52,7 @@
       }
    }
 
-   @include media(max-width, 1000px) {
+   @include media(max-width, 990px) {
       display: flex;
    }
 }

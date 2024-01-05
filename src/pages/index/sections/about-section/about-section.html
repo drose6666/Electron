@@ -2,7 +2,7 @@
    <div class="about-section__container">
       <div class="ui-container">
          @@include('../../../../components/ui/ui-title/ui-section-title.html', {
-            "className": "title_about",
+            "className": "title_about lg center",
             "text": "Несколько слов о нас"
          })
 
@@ -12,13 +12,13 @@
             @@include('../../../../components/ui/ui-button/ui-btn/ui-button-link.html', {
                "text": "Наши контакты",
                "link": "#",
-               "className": "btn_primary-action"
+               "className": "btn_primary-action btn_about"
             })
 
             @@include('../../../../components/ui/ui-button/ui-btn/ui-button.html', {
                "text": "Оставить отзыв",
                "type": "button",
-               "className": "btn_primary-outlineLight btn_send-review"
+               "className": "btn_primary-outlineLight btn_about btn_send-review"
             })
          </div>
 
@@ -27,6 +27,6 @@
          })
       </div>
 
-      <video loading="lazy" src="../../../../img/about/about_2.mp4" autoplay muted loop class="about-bg-video"></video>
+      <video loading="lazy" src="../../../../img/about/about_3.mp4" autoplay muted loop class="about-bg-video"></video>
    </div>
 </section>

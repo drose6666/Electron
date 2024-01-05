@@ -5,31 +5,18 @@
 
          <nav class="top-menu" id="top-nav">
             <ul class="top-menu__list">
-               <!-- <li class="top-menu__list__item basicHoverUnderline"><a class="child" href="">Отследить заказ</a></li> -->
                <li class="top-menu__list__item basicHoverUnderline"><a class="child" href="">Информация</a></li>
             </ul>
          
             <ul class="top-menu__list">
                <li class="top-menu__list__item basicHoverUnderline"><a class="child" href="">Контакты</a></li>
-               <!-- <li class="top-menu__list__item basicHoverUnderline"><a class="child" href="">Блог</a></li> -->
-               <li class="top-menu__list__item basicHoverUnderline"><a class="child" href="">Подборки</a></li>
-               <li class="top-menu__list__item basicHoverUnderline"><a class="child" href="../../../pages/page-brands/page-brands.html">Бренды</a></li>
             </ul>
          </nav>
       </div>
 
       <!-- Заглушка, пока не готовы личный кабинет и авторизация -->
-      <!-- <a href="tel:+7 911 149 05 05" class="contact-link basicHoverUnderline">
-         <span class="child">+7 911 149 05 05</span>
-      </a> -->
-
-      <!-- Меню авторизованных пользователей -->
-      <!-- @@include('../header-logined/header-user.html') -->
-
-      <!-- Кнопка входа для не авторизованных пользователей -->
-      @@include('../../ui/ui-button/ui-btn/ui-button.html', {
-         "text": "Личный кабинет",
-         "className": "btn_small-dark btn_login"
+      @@include('../../socials/socials.html', {
+         "className": "socials_header"
       })
    </div>
 </div>

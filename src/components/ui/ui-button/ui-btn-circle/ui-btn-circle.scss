@@ -371,7 +371,7 @@
 
 .btn_save-product-card {
    @include uiBtnCircle(
-      $size: clamp(25px, 12cqw, 40px),
+      $size: clamp(25px, 12cqw, 45px),
       $bgColor: var(--light),
       $iconSize: clamp(14px, 5cqi, 16px),
       $iconColor: var(--text_additional)

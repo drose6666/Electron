@@ -1,6 +1,8 @@
 // TODO Collectino section (index)
 .collections-section {
-   padding-top: var(--section_padding);
+   padding-bottom: var(--section_gutter);
+
+   @extend %fullWidthElement;
 }
 
 
@@ -18,11 +20,11 @@
 
 // TODO Карточка коллекции (подборки)
 .collection-card {
-   padding: clamp(60px, 10cqi, 80px) clamp(20px, 5cqi, 40px) 0 clamp(20px, 5cqi, 40px);
+   padding: clamp(60px, 10cqi, 100px) clamp(20px, 5cqi, 40px) 0 clamp(20px, 5cqi, 40px);
    position: relative;
    overflow: hidden;
    border-radius: clamp(var(--optionalRd), 11cqi, var(--defaultRd));
-   min-height: clamp(380px, 50cqi, 400px);
+   min-height: clamp(380px, 50cqi, 450px);
    container-type: inline-size;
    transition: all .3s ease;
 

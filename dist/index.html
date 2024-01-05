@@ -22,16 +22,16 @@
    <link rel="icon" href="../../img/favicon/fav_48.png" type="image/png" sizes="48x48">
    <link rel="icon" href="../../img/favicon/fav_128.png" type="image/png" sizes="128x128">
    
-   <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css?_v=20240104202229" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
-   <!-- <link rel="stylesheet" href="../../libs/css/bootstrap-grid.min.css?_v=20240104202229"> -->
+   <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css?_v=20240105200412" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+   <!-- <link rel="stylesheet" href="../../libs/css/bootstrap-grid.min.css?_v=20240105200412"> -->
 
-   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css?_v=20240104202229" />
-   <script defer src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js?_v=20240104202229"></script>
-   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js?_v=20240104202229" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-   <link rel="stylesheet" href="../../libs/css/reset.min.css?_v=20240104202229">
-   <link rel="stylesheet" as="font" href="../../fonts/fonts.css?_v=20240104202229">
-   <link rel="stylesheet" as="font" href="../../fonts/icon-font.css?_v=20240104202229">
-   <link rel="stylesheet" href="./pages/index/css/index.min.css?_v=20240104202229">
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css?_v=20240105200412" />
+   <script defer src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js?_v=20240105200412"></script>
+   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js?_v=20240105200412" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+   <link rel="stylesheet" href="../../libs/css/reset.min.css?_v=20240105200412">
+   <link rel="stylesheet" as="font" href="../../fonts/fonts.css?_v=20240105200412">
+   <link rel="stylesheet" as="font" href="../../fonts/icon-font.css?_v=20240105200412">
+   <link rel="stylesheet" href="./pages/index/css/index.min.css?_v=20240105200412">
    
    <title>Electron</title>
 </head>
@@ -55,46 +55,34 @@
 
          <nav class="top-menu" id="top-nav">
             <ul class="top-menu__list">
-               <!-- <li class="top-menu__list__item basicHoverUnderline"><a class="child" href="">Отследить заказ</a></li> -->
                <li class="top-menu__list__item basicHoverUnderline"><a class="child" href="">Информация</a></li>
             </ul>
          
             <ul class="top-menu__list">
                <li class="top-menu__list__item basicHoverUnderline"><a class="child" href="">Контакты</a></li>
-               <!-- <li class="top-menu__list__item basicHoverUnderline"><a class="child" href="">Блог</a></li> -->
-               <li class="top-menu__list__item basicHoverUnderline"><a class="child" href="">Подборки</a></li>
-               <li class="top-menu__list__item basicHoverUnderline"><a class="child" href="../../../pages/page-brands/page-brands.html">Бренды</a></li>
             </ul>
          </nav>
       </div>
 
       <!-- Заглушка, пока не готовы личный кабинет и авторизация -->
-      <!-- <a href="tel:+7 911 149 05 05" class="contact-link basicHoverUnderline">
-         <span class="child">+7 911 149 05 05</span>
-      </a> -->
-
-      <!-- Меню авторизованных пользователей -->
-      
-
-      <!-- Кнопка входа для не авторизованных пользователей -->
-      <button type="@@type" class="btn_small-dark btn_login">Личный кабинет</button>
+      <div class="socials socials_header">
+   <a href="#"><i class="i-telegram"></i></a>
+   <a href="#"><i class="i-vk"></i></a>
+   <a href="#"><i class="i-facebook"></i></a>
+   <a href="#"><i class="i-instagram"></i></a>
+   <a href="#"><i class="i-whatsapp"></i></a>
+</div>
    </div>
 </div>
       <header>
    <div class="ui-container">
+      <button class="btn_circle btn_search">
+   <i class="i-search"></i>
+</button>
       
-      <a href="/" class="logo">
-         <picture>
-            <source media="(max-width: 320px)" srcset="../../img/logo/logo_dark_short.svg">
-            <img src="../../img/logo/logo_dark.svg" alt="OMATECH Logo">
-         </picture>
-         
-      </a>
       <nav class="menu" id="header-nav">
    <ul class="menu-list">
-      <li class="menu-list__item"><a class="child" href="../../../pages/page-category/page-category.html">Ноутбуки и ПК</a></li>
-      <li class="menu-list__item"><a class="child" href="../../../pages/page-category/page-category.html">Смартфоны</a></li>
-     
+      <li class="menu-list__item"><a class="child" href="../../../pages/page-category/page-category.html">Ноутбуки</a></li>
       <li class="menu-list__item">
          <span class="child">Комплектующие</span>
          <div class="submenu-wrapper">
@@ -144,7 +132,18 @@
    </div>
 </div>
       </li>
+   </ul>
 
+   <a href="/" class="logo">
+      <picture>
+         <source media="(max-width: 400px)" srcset="../../img/logo/logo_dark_short.svg">
+         <img src="../../img/logo/logo_dark.svg" alt="OMATECH Logo">
+      </picture>
+      
+   </a>
+   
+   <ul class="menu-list">
+      <li class="menu-list__item"><a class="child" href="../../../pages/page-category/page-category.html">Смартфоны</a></li>
       <li class="menu-list__item">
          <span class="child">Аксессуары</span>
          <div class="submenu-wrapper">
@@ -195,27 +194,23 @@
 </div>
       </li>
    </ul>
+   
 </nav>
-      <div class="header-additional">
-   <button class="btn_circle btn_search">
-   <i class="i-search"></i>
-</button>
 
-   <a href="" class="btn_circle-header btn_circle btn_header-favourites">
-   <i class="i-heart"></i>
+      <div class="header-controls">
+         <button class="btn_circle-header btn_circle btn_header-favourites">
+   <i class="i-cart"></i>
    <div class="counter btn_circle"><span>56</span></div>
-</a>
-   <button class="btn_circle-header btn_circle btn_header-compare">
-   <i class="i-compare"></i>
-   <div class="counter btn_circle"><span>1</span></div>
+</button><button class="btn_circle-header btn_circle btn_header-compare">
+   <i class="i-cart"></i>
+   <div class="counter btn_circle"><span>56</span></div>
 </button><button class="btn_circle-header btn_circle btn_header-cart">
    <i class="i-cart"></i>
    <div class="counter btn_circle"><span>56</span></div>
 </button>
-</div>
+      </div>
    </div>
 </header>
-      
       
       <main>
          <div class="swiper-container container_hero-swiper">
@@ -226,7 +221,7 @@
             <h2 class="hero-slide__title">HONOR <strong>MagicBook 16</strong></h2>
             <h4 class="hero-slide__subtitle">Совершенный. Невероятный. Твой.</h4>
             
-            <a href="../../../page-product/page-product.html" class="btn_target-light hero_btn">Подробнее</a>
+            <a href="../../../../pages/page-product/page-product.html" class="btn_target-light hero_btn">Подробнее</a>
 
             <img src="../../../../img/home/hero-slider/hero_slide_2_1.5x.webp" alt="" class="hero-slide__img">
          </div>
@@ -235,7 +230,7 @@
             <h2 class="hero-slide__title">HUAWEI <strong>MateBook</strong> <strong>D16 SE</strong></h2>
             <h4 class="hero-slide__subtitle">Совершенный. Невероятный. Твой.</h4>
             
-            <a href="../../../page-product/page-product.html" class="btn_target-light hero_btn">Подробнее</a>
+            <a href="../../../../pages/page-product/page-product.html" class="btn_target-light hero_btn">Подробнее</a>
 
             <img src="../../../../img/home/hero-slider/hero_slide_1_1.5x.webp" alt="" class="hero-slide__img">
          </div>
@@ -250,54 +245,19 @@
 </div>
          <section class="new-products-section">
    <div class="ui-container">
-      <h2 class="ui-section-title sm-mt center">Новинки</h2>
-
-      <div class="ui-tabs">
-         <button class="ui-tab active">Ноутбуки и ПК</button><button class="ui-tab @@className">Смартфоны</button><button class="ui-tab @@className">Комплектующие</button><button class="ui-tab @@className">Аксессуары</button>
-      </div>
+      <h2 class="ui-section-title lg center">Новинки</h2>
       
       <div class="content">
          <div class="swiper-container new-products-container">
-   <div class="swiper" id="new-product-swiper-1">
+   <div class="swiper" id="new-product-swiper">
       <div class="swiper-wrapper " data-products="product-list">
    
 </div>
    </div>
 
-   <div class="btn_circle swiper-arrow dark basic-swiper_arrow prev prev-1"></div>
-   <div class="btn_circle swiper-arrow dark basic-swiper_arrow next next-1"></div>
-</div>
-         <div class="swiper-container new-products-container">
-   <div class="swiper" id="new-product-swiper-2">
-      <div class="swiper-wrapper " data-products="product-list">
-   
-</div>
-   </div>
-
-   <div class="btn_circle swiper-arrow dark basic-swiper_arrow prev prev-2"></div>
-   <div class="btn_circle swiper-arrow dark basic-swiper_arrow next next-2"></div>
-</div>
-         <div class="swiper-container new-products-container">
-   <div class="swiper" id="new-product-swiper-3">
-      <div class="swiper-wrapper " data-products="product-list">
-   
-</div>
-   </div>
-
-   <div class="btn_circle swiper-arrow dark basic-swiper_arrow prev prev-3"></div>
-   <div class="btn_circle swiper-arrow dark basic-swiper_arrow next next-3"></div>
-</div>
-         <div class="swiper-container new-products-container">
-   <div class="swiper" id="new-product-swiper-4">
-      <div class="swiper-wrapper " data-products="product-list">
-   
-</div>
-   </div>
-
-   <div class="btn_circle swiper-arrow dark basic-swiper_arrow prev prev-4"></div>
-   <div class="btn_circle swiper-arrow dark basic-swiper_arrow next next-4"></div>
-</div>
-      </div>
+   <div class="btn_circle swiper-arrow dark basic-swiper_arrow prev"></div>
+   <div class="btn_circle swiper-arrow dark basic-swiper_arrow next"></div>
+</div>    
    </div>
 </section>
          <section class="category-brands-section">
@@ -349,41 +309,16 @@
    </div>
 </a>
 </div>
-      <div class="brands-list">
-   <a href="../../pages/page-brand-single/page-brand-single.html" class="brand-card @@className">
-   <img src="../../../img/brands/brand_1.webp" alt="">
-</a><a href="../../pages/page-brand-single/page-brand-single.html" class="brand-card @@className">
-   <img src="../../../img/brands/brand_2.webp" alt="">
-</a><a href="../../pages/page-brand-single/page-brand-single.html" class="brand-card @@className">
-   <img src="../../../img/brands/brand_3.webp" alt="">
-</a><a href="../../pages/page-brand-single/page-brand-single.html" class="brand-card @@className">
-   <img src="../../../img/brands/brand_4.webp" alt="">
-</a><a href="../../pages/page-brand-single/page-brand-single.html" class="brand-card @@className">
-   <img src="../../../img/brands/brand_5.webp" alt="">
-</a><a href="../../pages/page-brand-single/page-brand-single.html" class="brand-card @@className">
-   <img src="../../../img/brands/brand_6.webp" alt="">
-</a><a href="../../pages/page-brand-single/page-brand-single.html" class="brand-card @@className">
-   <img src="../../../img/brands/brand_7.webp" alt="">
-</a><a href="../../pages/page-brand-single/page-brand-single.html" class="brand-card @@className">
-   <img src="../../../img/brands/brand_8.webp" alt="">
-</a><a href="../../pages/page-brand-single/page-brand-single.html" class="brand-card @@className">
-   <img src="../../../img/brands/brand_9.webp" alt="">
-</a><a href="../../pages/page-brand-single/page-brand-single.html" class="brand-card @@className">
-   <img src="../../../img/brands/brand_10.webp" alt="">
-</a><a href="../../pages/page-brand-single/page-brand-single.html" class="brand-card @@className">
-   <img src="../../../img/brands/brand_11.webp" alt="">
-</a><a href="../../pages/page-brand-single/page-brand-single.html" class="brand-card @@className">
-   <img src="../../../img/brands/brand_12.webp" alt="">
-</a>
-</div>
+      
 
-      <button type="button" class="btn_more">Смотреть все</button>
+      
    </div>
 </section>
-         <section class="top-sale-section">
+         <section class="category-products-section">
    <div class="ui-container">
       <div class="ui-section-title-more">
-         <h2 class="ui-section-title ">Топ продаж</h2>
+         <h2 class="ui-section-title">Ноутбуки</h2>
+
          <a href="../../../../pages/page-category/page-category.html" class="ui-more_full-hover">
    <span class="child">Смотреть все</span>
 </a>
@@ -395,14 +330,6 @@
    </div>
 </section>
          <section class="collections-section">
-   <div class="ui-container">
-      <div class="ui-section-title-more">
-         <h2 class="ui-section-title ">Подборки</h2>
-         <a href="" class="ui-more_full-hover">
-   <span class="child">Смотреть все</span>
-</a>
-      </div>
-
       <div class="collection-list">
    <a href="#" class="collection-card">
    <div class="collection-card__container">
@@ -426,17 +353,32 @@
 </div>
    </div>
 </section>
+         <section class="category-products-section">
+   <div class="ui-container">
+      <div class="ui-section-title-more">
+         <h2 class="ui-section-title">Смартфоны</h2>
+
+         <a href="../../../../pages/page-category/page-category.html" class="ui-more_full-hover">
+   <span class="child">Смотреть все</span>
+</a>
+      </div>
+
+      <div class="swiper-wrapper product-list" data-products="product-list">
+   
+</div>
+   </div>
+</section>
          <section class="about-section">
    <div class="about-section__container">
       <div class="ui-container">
-         <h2 class="ui-section-title title_about">Несколько слов о нас</h2>
+         <h2 class="ui-section-title title_about lg center">Несколько слов о нас</h2>
 
          <p class="about-text">Мы - твоя платформа для воплощения идей в цифровую реальность. С нами ты обретешь силу инноваций, удобства онлайн-покупок и качественной техники. Наша цель - сделать технологии доступными для каждого, воплощая твои потребности в каждом устройстве и аксессуаре. Присоединяйся к нашей электронной революции!</p>
 
          <div class="btn-group">
-            <a href="#" class="btn_primary-action">Наши контакты</a>
+            <a href="#" class="btn_primary-action btn_about">Наши контакты</a>
 
-            <button type="button" class="btn_primary-outlineLight btn_send-review">Оставить отзыв</button>
+            <button type="button" class="btn_primary-outlineLight btn_about btn_send-review">Оставить отзыв</button>
          </div>
 
          <div class="socials socials_about">
@@ -448,7 +390,7 @@
 </div>
       </div>
 
-      <video loading="lazy" src="../../../../img/about/about_2.mp4" autoplay muted loop class="about-bg-video"></video>
+      <video loading="lazy" src="../../../../img/about/about_3.mp4" autoplay muted loop class="about-bg-video"></video>
    </div>
 </section>
          <section class="reviews-section">
@@ -598,75 +540,7 @@
       </div>
    </div>
 </section>
-         <section class="blog-section">
-   <div class="ui-container">
-      <div class="ui-section-title-more">
-         <h2 class="ui-section-title ">Блог</h2>
-         <a href="" class="ui-more_full-hover">
-   <span class="child">Смотреть все</span>
-</a>
-      </div>
-
-      <div class="post-list">
-   <article class="post-card card">
-   <div class="post-inside">
-      <div class="quick-nav">
-
-      </div>
-
-      <a href="#" class="content">
-         <div class="category-post-list">
-            <div class="category-post card">
-   Новости
-</div><div class="category-post card">
-   Starship
-</div><div class="category-post card">
-   Илон Маск
-</div>
-         </div>
-   
-         <h3 class="title">Илон Маск запускает «Starship» — крупнейшую ракету в истории</h3>
-         <div class="post-info">
-            <time class="post-info__item">Апрель 17, 2023</time>
-            <div class="post-info__item"><i class="i-comment"></i> <span>2 234</span></div>
-            <div class="post-info__item"><i class="i-like"></i> <span>2 234</span></div>
-         </div>
-      </a>
-
-      <img src="../../../img/posts/post_1.webp" alt="" class="img">
-   </div>
-</article>
-   <article class="post-card card">
-   <div class="post-inside">
-      <div class="quick-nav">
-
-      </div>
-
-      <a href="#" class="content">
-         <div class="category-post-list">
-            <div class="category-post card">
-   Новости
-</div><div class="category-post card">
-   Starship
-</div><div class="category-post card">
-   Илон Маск
-</div>
-         </div>
-   
-         <h3 class="title">Илон Маск запускает «Starship» — крупнейшую ракету в истории</h3>
-         <div class="post-info">
-            <time class="post-info__item">Апрель 17, 2023</time>
-            <div class="post-info__item"><i class="i-comment"></i> <span>2 234</span></div>
-            <div class="post-info__item"><i class="i-like"></i> <span>2 234</span></div>
-         </div>
-      </a>
-
-      <img src="../../../img/posts/post_1.webp" alt="" class="img">
-   </div>
-</article>
-</div>
-   </div>
-</section>
+         
       </main>
       
       <div class="subscribe">
@@ -779,14 +653,14 @@
             </ul>
          </div>
 
-         <div class="navigation-col">
+         <!-- <div class="navigation-col">
             <h5 class="navigation-title">Личный кабинет</h5>
             <ul class="navigation-list">
                <li><a href="" class="hoverLinks">История заказов</a></li>
                <li><a href="" class="hoverLinks">Отследить заказ</a></li>
                <li><a href="" class="hoverLinks">Избранное</a></li>
             </ul>
-         </div>
+         </div> -->
       </div>
 
       <div class="footer-col contact">
@@ -797,7 +671,7 @@
             <div class="contact-inside__item">График: <strong>Пн-Вс: 09:00-20:00</strong></div>
          </div>
 
-         <a href="#" class="btn_primary-action">Личный кабинет</a>
+         
       </div>
    </div>
 
@@ -831,20 +705,14 @@
       <!-- Основной список (уровень 1) -->
       <ul class="mobile-menu__inside parent_list" data-id="0">
          <li data-for="1" class="parent-item has-children"><span class="child">Каталог</span></li>
-         <li data-for="2" class="parent-item has-children"><a href="" class="child">Личный кабинет</a></li>
-         <li class="parent-item"><a href="" class="child">Акции</a></li>
-         <li class="parent-item"><a href="" class="child">Блог</a></li>
-         <li class="parent-item"><a href="../../../pages/page-brands/page-brands.html" class="child">Бренды</a></li>
+         <li class="parent-item"><a href="../../../pages/page-brands/page-brands.html" class="child">Контакты</a></li>
          
          <li class="gap-item child-item-wrap">
             <ul class="child-list">
-               <li class="child-item"><a href="" class="child">Избранное</a></li>
-               <li class="child-item"><a href="" class="child">Сравнение</a></li>
                <li class="child-item"><a href="" class="child">Сервис</a></li>
                <li class="child-item"><a href="" class="child">Доставка</a></li>
                <li class="child-item"><a href="" class="child">Гарантия</a></li>
                <li class="child-item"><a href="" class="child">Условия возврата</a></li>
-               <li class="child-item"><a href="" class="child">Контакты</a></li>
             </ul>
 
             <ul class="additional-list menu_close">
@@ -886,18 +754,6 @@
                <li class="child-item"><a href="../../../pages/page-category/page-category.html" class="child">Смартфоны</a></li>
                <li class="child-item"><a href="../../../pages/page-category/page-category.html" class="child">Аксессуары</a></li>
                <li data-for="3" class="child-item has-children"><a href="../../../pages/page-category/page-category.html" class="child">Комплектующие</a></li>
-            </ul>
-         </li>
-      </ul>
-
-      <!-- Вложенный список (уровень 2 - личный каюинет) -->
-      <ul data-id="2" class="mobile-menu__inside child_list hidden">
-         <li data-for="0" class="back-item has-children"><a href="" class="child">Личный кабинет</a></li>
-         <li>
-            <ul class="child-list">
-               <li class="child-item"><a href="" class="child">Мои заказы</a></li>
-               <li class="child-item"><a href="" class="child">История заказов</a></li>
-               <li class="child-item"><a href="" class="child">Отследить заказ</a></li>
             </ul>
          </li>
       </ul>
@@ -1597,7 +1453,7 @@
       <a href="../../../pages/page-brand-single/page-brand-single.html" class="product-info__brand basicHoverUnderline">
          <span class="child">Asus</span>
       </a>
-
+<!-- 
       <div class="product-info__controls">
          <button class="product-controls-btn">
             <i class="i-compare"></i>
@@ -1606,7 +1462,7 @@
          <button class="product-controls-btn active">
             <i class="i-heart"></i>
          </button>
-      </div>
+      </div> -->
    </div>
 
    <h2 class="product-info__name">VivoBook 15 M1502IA-BQ011W</h2>
@@ -1686,163 +1542,11 @@
 
    <div class="ui-popup__overlay" id="overlay-image-preview"></div>
 </div>
-      <div class="product-add-notification">
-   <h3 class="notification-title">
-      <img src="../../../img/check_notification.svg" alt=""> Добавлено в корзину
-   </h3>
-
-   <div class="notification-card">
-   <div class="notification-card__img">
-      <img src="../../../img/cards/card_3.webp" alt="">
-   </div>
-
-   <div class="notification-card__info">
-      <h4 class="notification-card__title">Samsung Galaxy S23 Ultra в комплекте с Buds 2 Pro</h4>
-      <span class="notification-card__price">156 999 ₽</span>
-   </div>
-</div>
-
-   <div class="notification-nav">
-      <a href="#" class="btn_ui-action btn_notification">Оформить заказ</a>
-
-      <a href="#" class="notification_more">
-   <span class="child">Перейти в корзину</span>
-</a>
-   </div>
-
-   <div class="ui-close ui-close close_remove right">
-   <i class="i-close"></i>
-</div>
-</div>
-      <div class="ui-popup fade-side" id="popup-login">
-   <div class="ui-popup__container popup-login__container">
-
-      <!-- Здесь контент -->
-      <div class="sign-wrap">
-
-         <!-- IMPORTANT Вход -->
-         <div class="sign-wrap__item sign-in" data-id="start-screen">
-            <!-- <img src="../../../../img/congrates.gif" alt=""> -->
-            <h2 class="ui-popup__title title_part-of-block center"><span>Вход</span></h2>
-            <p class="popup-login-text">Еще нет аккаунта? <strong data-for="sign-up" class="sign-nav">Создайте его</strong></p>
-
-            <ul class="login-methods">
-   <li><img src="../../../img/login/login_google.svg" alt=""></li>
-   <li><img src="../../../img/login/login_yandex.svg" alt=""></li>
-   <li><img src="../../../img/login/login_vk.svg" alt=""></li>
-</ul>
-            <div class="login-separator"><span>или</span></div>
-            <form action="" class="ui-form_login" id="form-sign-in">
-   <div class="ui-form-item">
-      <input type="email" name="user_email" inputmode="email" autocomplete="email" placeholder="Email" class="ui-input_popup">
-      <span class="error-message"></span>
-   </div>
-
-   <div class="ui-form-item">
-      <input type="password" inputmode="text" name="user_password" autocomplete="off" placeholder="Пароль" class="ui-input_popup input_password">
-      <label class="password-control">
-   <input type="checkbox" name="password" class="password-control__input visually-hidden">
-   <i class="i-eye password_show"></i>
-   <i class="i-eye_slash password_hide"></i>
-</label>
-      <span class="error-message"></span>
-   </div>
-
-   <div class="ui-form-submit">
-      <button type="submit" class="btn_primary-action">Войти</button>
-
-      <div class="forgot-password-link hoverLinks" data-for="forgot-password">Забыли пароль?</div>
-   </div>
-</form>
-
-
-         </div>
-
-
-         <!-- IMPORTANT Регистрация -->
-         <div class="sign-wrap__item sign-up hidden" data-id="sign-up">
-            <h2 class="ui-popup__title title_part-of-block center"><span>Регистрация</span></h2>
-            <p class="popup-login-text">Уже есть аккаунт? <strong data-for="start-screen" class="sign-nav">Войти</strong></p>
-            
-            <ul class="login-methods">
-   <li><img src="../../../img/login/login_google.svg" alt=""></li>
-   <li><img src="../../../img/login/login_yandex.svg" alt=""></li>
-   <li><img src="../../../img/login/login_vk.svg" alt=""></li>
-</ul>
-            <div class="login-separator"><span>или</span></div>
-            <form action="" class="ui-form_login" id="form-sign-up">
-   <!-- <div class="ui-form-item">
-      <input type="text" name="user_name" inputmode="text" autocomplete="name" placeholder="Имя" class="ui-input_popup dark_theme">
-      <span class="error-message"></span>
-   </div> -->
-
-   <div class="ui-form-item">
-      <input type="email" name="user_email" inputmode="email" autocomplete="email" placeholder="Email" class="ui-input_popup">
-      <span class="error-message"></span>
-   </div>
-
-   <div class="ui-form-item">
-      <input type="password" inputmode="text" name="user_password" autocomplete="new-password" placeholder="Пароль" class="ui-input_popup input_password">
-      <label class="password-control">
-   <input type="checkbox" name="password" class="password-control__input visually-hidden">
-   <i class="i-eye password_show"></i>
-   <i class="i-eye_slash password_hide"></i>
-</label>
-      <span class="error-message"></span>
-   </div>
-
-   <div class="ui-form-item">
-      <input type="password" inputmode="text" name="user_password" autocomplete="new-password" placeholder="Повторите пароль" class="ui-input_popup input_password">
-      <label class="password-control">
-   <input type="checkbox" name="password" class="password-control__input visually-hidden">
-   <i class="i-eye password_show"></i>
-   <i class="i-eye_slash password_hide"></i>
-</label>
-      <span class="error-message"></span>
-   </div>
-
-   <p class="warning-text">Нажимая кнопку ниже, вы соглашаетесь с условиями <strong class="btn_privacy-policy">политики конфиденциальности</strong></p>
-
-   <div class="ui-form-submit">
-      <button type="submit" class="btn_primary-action">Создать аккаунт</button>
-   </div>
-</form>
-
-
-         </div>
-
-
-         <!-- IMPORTANT Забыли пароль -->
-         <div class="sign-wrap__item forgot-password hidden" data-id="forgot-password">
-            <h2 class="ui-popup__title title_part-of-block center"><span>Забыли пароль?</span></h2>
-            <p class="popup-login-text">Уже вспомнили? <strong data-for="start-screen" class="sign-nav">Войти</strong></p>
-
-            <p class="help-text">Введите ниже адрес электронной почты, на который создавался аккаунт. На него будет отправлена ссылка для сброса пароля</p>
-         
-            <form action="" class="ui-form_login" id="form-forgot-password">
-   <div class="ui-form-item">
-      <input type="email" name="user_email" inputmode="email" autocomplete="email" placeholder="Email" class="ui-input_popup">
-      <span class="error-message"></span>
-   </div>
-
-   <div class="ui-form-submit">
-      <button type="submit" class="btn_primary-action">Отправить</button>
-   </div>
-</form>
-         </div>
-      </div>
-
-      <div class="ui-close close_fade-side left_side popup-login-close">
-   <i class="i-angle_right"></i>
-</div>
-      <!-- Здесь контент -->
-   </div>
-
-   <div class="ui-popup__overlay" id="overlay-login"></div>
-</div>
       
       
       
-      <script type="module" src="./pages/index/js/bundle-index.min.js?_v=20240104202229"></script>
+      
+      
+      <script type="module" src="./pages/index/js/bundle-index.min.js?_v=20240105200412"></script>
    </body>
 </html>  

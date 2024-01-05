@@ -6,6 +6,7 @@ $positionHiddenEls: clamp(12px, 5cqi, 15px);
 
    .product-img {
       position: relative;
+
       .img-wrap {
          border-radius: var(--mdRd);
          position: relative;
@@ -17,23 +18,21 @@ $positionHiddenEls: clamp(12px, 5cqi, 15px);
       }
 
       .img {
-         max-width: 100%;
-         height: auto;
-         transition: all .8s ease;
+         background: var(--separating);
+         border-radius: var(--mdRd);
+         overflow: hidden;
+         transition: all .6s ease;
+
+         img {
+            max-width: 100%;
+            height: auto;
+         }
 
          &.img_hover {
             position: absolute;
             top: 0;
             right: 0;
-            opacity: 0;
-            visibility: hidden;
-            transform: scale(1.17);
-         }
-
-         &.img_main {
-            transform: none;
-            opacity: 1;
-            visibility: visible;
+            transform: translateX(100%);
          }
       }
    }
@@ -115,16 +114,8 @@ $positionHiddenEls: clamp(12px, 5cqi, 15px);
       .product-img {
          .img {
             &.img_hover {
-               opacity: 1;
-               visibility: visible;
                transform: none;
             } 
-
-            &.img_main {
-               transform: scale(1.17);
-               opacity: 0;
-               visibility: hidden;
-            }
          }
       }
    }

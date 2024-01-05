@@ -22,6 +22,7 @@
 
 .container_hero-swiper {
    margin-top: 60px;
+   margin-bottom: var(--section_gutter);
    container-type: inline-size;
    container-name: heroContainer;
 
@@ -36,7 +37,7 @@
          padding-left: clamp(20px, 5cqi, 90px);
          padding-right: 20px;
          width: 100%;
-         height: clamp(560px, 40cqi, 700px);
+         height: clamp(560px, 40cqi, 650px);
          position: relative;
          display: flex;
          flex-direction: column;

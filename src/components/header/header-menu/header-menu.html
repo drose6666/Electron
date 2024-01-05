@@ -1,16 +1,26 @@
 <nav class="menu" id="header-nav">
    <ul class="menu-list">
-      <li class="menu-list__item"><a class="child" href="../../../pages/page-category/page-category.html">Ноутбуки и ПК</a></li>
-      <li class="menu-list__item"><a class="child" href="../../../pages/page-category/page-category.html">Смартфоны</a></li>
-     
+      <li class="menu-list__item"><a class="child" href="../../../pages/page-category/page-category.html">Ноутбуки</a></li>
       <li class="menu-list__item">
          <span class="child">Комплектующие</span>
          @@include('./submenu/submenu.html')
       </li>
+   </ul>
 
+   <a href="/" class="logo">
+      <picture>
+         <source media="(max-width: 400px)" srcset="../../img/logo/logo_dark_short.svg">
+         <img src="../../img/logo/logo_dark.svg" alt="OMATECH Logo">
+      </picture>
+      
+   </a>
+   
+   <ul class="menu-list">
+      <li class="menu-list__item"><a class="child" href="../../../pages/page-category/page-category.html">Смартфоны</a></li>
       <li class="menu-list__item">
          <span class="child">Аксессуары</span>
          @@include('./submenu/submenu.html')
       </li>
    </ul>
+   
 </nav>

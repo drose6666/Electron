@@ -82,7 +82,7 @@ footer {
       &.contact {
          .phone {
             padding-bottom: 5px;
-            font-size: clamp(35px, 4cqi, 40px);
+            font-size: clamp(35px, 4cqi, 35px);
             font-weight: 500;
             line-height: 100%;
             color: var(--light);
@@ -127,7 +127,7 @@ footer {
       }
    }
 
-   @container footer (max-width: 1250px) {
+   @container footer (max-width: 1030px) {
       .footer-inside {
          grid-template: auto / 1fr 1fr;
          gap: 50px;
@@ -159,6 +159,7 @@ footer {
             justify-content: space-between;
             width: 100%;
             gap: clamp(30px, 7cqi, 100px);
+            max-width: 400px;
          }
       }
    }
