@@ -42,7 +42,7 @@ header {
    }
    
 
-   @include media(max-width, 1050px) {
+   @include media(max-width, 990px) {
       padding: 10px 0;
 
       &.sticky {

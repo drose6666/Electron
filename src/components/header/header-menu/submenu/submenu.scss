@@ -17,7 +17,7 @@
 
    .submenu {
       display: grid;
-      grid-template: auto / repeat(2, 250px);
+      grid-template: auto / repeat(2, 245px);
       gap: 70px;
 
       .submenu-list-name {
@@ -57,4 +57,12 @@
       }
    }
    
+   @include media (max-width, 1050px) {
+      padding: 40px 20px;
+      gap: 50px;
+
+      .submenu {
+         grid-template: auto / repeat(2, 230px);
+      }
+   }
 }

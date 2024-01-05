@@ -14,7 +14,6 @@
 @import '../components/ui/ui-burger/ui-burger';
 @import '../components/ui/ui-more/ui-more';
 @import '../components/ui/ui-title/ui-title';
-@import '../components/ui/ui-tab/ui-tab';
 @import '../components/ui/ui-input/ui-input';
 @import '../components/ui/ui-close/ui-close';
 @import '../components/ui/ui-password-control/ui-password-control';
@@ -54,13 +53,13 @@
 
 // Custom scrollbar for webKit
 ::-webkit-scrollbar {
-   background: var(--ui_dark);
+   background: var(--separating);
    width: 5px;
    height: 5px;
 }
 
 ::-webkit-scrollbar-thumb {
-   background: var(--action);
+   background: var(--border);
    border-radius: 50px;
 }
 
@@ -97,5 +96,46 @@ i {
 
 // TODO Page head section
 .page-head-section {
+   margin-top: 40px;
    margin-bottom: var(--section_sm_gutter);
+   overflow: hidden;
+   position: relative;
+   container-name: pageHeadContainer;
+   container-type: inline-size;
+ 
+   @extend %fullWidthElement;
+
+   .ui-container {
+      padding: clamp(100px, 30cqi, 135px) 20px;
+      position: relative;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      z-index: 1;
+
+      @extend %dynamicRadius40to25;
+   }
+
+   .page-head__bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: right 30% center;
+
+      @extend %dynamicRadius40to25;
+   }
+
+   @include media (max-width, 330px) {
+      width: 100%;
+      max-width: 100%;
+
+      .ui-container {
+         border-radius: 0;
+      }
+   }
 }

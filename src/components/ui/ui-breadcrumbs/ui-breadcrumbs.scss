@@ -5,6 +5,8 @@
    flex-wrap: wrap;
    column-gap: 20px;
    row-gap: 7px;
+   position: relative;
+   z-index: 1;
 
    &-item {
       font-size: 17px;
@@ -20,10 +22,6 @@
 
          .child {
             padding: 2px 0;
-
-            &:hover {
-               color: var(--action);
-            }
          }
    
          &:after {
@@ -33,7 +31,33 @@
             background: var(--dark);
             border-radius: var(--circleRd);
             display: inline-block;
-        }
+         }
+
+         &:hover {
+            .child {
+               color: var(--action);
+            }
+         }
+      }
+   }
+}
+
+.page-head-section {
+   .ui-breadcrumbs {
+      &-item {
+         color: var(--light);
+
+         &.breadcrumbs_link {
+            &:after {
+               background: var(--light);
+            }
+
+            &:hover {
+               .child {
+                  color: var(--light);
+               }
+            }
+         }
       }
    }
 }
