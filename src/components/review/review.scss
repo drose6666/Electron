@@ -1,7 +1,7 @@
 .review {
    container-type: inline-size;
 
-   .review-inside {
+   &-inside {
       padding: 40px clamp(20px, 8cqi, 40px);
       border-radius: clamp(var(--optionalRd),11cqi,var(--defaultRd));
       background: var(--separating);
@@ -94,6 +94,28 @@
             $bottomA: 0,
             $transform: rotate(90deg)
          );
+      }
+   }
+}
+
+.product-reviews-list {
+   .review {
+
+      &:not(:last-child) {
+         margin-bottom: 15px;
+      }
+
+      &-inside {
+         padding: 30px clamp(20px, 8cqi, 30px);
+         border-radius: clamp(var(--slRd),11cqi,var(--optionalRd));
+
+         .author {
+            margin-bottom: 20px;
+         }
+
+         .text {
+            font-size: clamp(15px, 4cqi, 16px);
+         }
       }
    }
 }

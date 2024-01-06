@@ -397,21 +397,43 @@
 }
 
 
-// TODO ui-tab
+// TODO ui-tab средние
 .ui-tab {
    @include btnType( $type: secondary );
    @include btnTheme( $theme: outlineGrey );
 
+   cursor: pointer;
+
    &:hover {
-      background: var(--separating);
+      background: var(--separating_contrast);
+      border-color: var(--separating_contrast);
    }
 
    &.active {
       background: var(--dark);
-
       color: var(--light);
    }
+
+   &.tab_lg {
+      font-size: 18px;
+      height: 50px;
+   }
+
+   &.tab_filter {
+      padding: 5px 20px;
+      font-size: 16px;
+      height: 39px;
+      gap: 3px;
+      
+      .count {
+         font-weight: 300;
+         color: var(--text_additional);
+      }
+   }
 }
+
+// TODO Большие вкладки
+
 
 .ui-tabs {
    margin-bottom: 30px;
@@ -422,6 +444,15 @@
    row-gap: 5px;
    overflow-x: auto;
    overflow-y: visible;
+
+   &.product-reviews_filters {
+      margin-bottom: 20px;
+      column-gap: 10px;
+   }
+
+   &.product_tabs {
+      margin-bottom: 60px;
+   }
 
    &::-webkit-scrollbar {
       background: var(--separating);

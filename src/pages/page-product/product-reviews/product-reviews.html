@@ -1,0 +1,60 @@
+<div class="product-reviews">
+   <div class="overall-rating">
+      <div class="overall-rating__count">
+         <div class="rating-count-info">Отзывов: <span class="value">345</span></div>
+         @@include('../../../components/ui/ui-button/ui-btn/ui-button.html', {
+            "text": "Оставить отзыв",
+            "type": "button",
+            "className": "btn_primary-action btn_send-review maxw900"
+         })
+      </div>
+
+      <div class="overall-rating__info">
+         <div class="rating-value">
+            <strong class="current">4.3</strong>/5.0
+         </div>
+       
+         <div class="ui-star-rating light star-rating_product-reviews">
+            <div class="ui-stars">
+               <i class="i-star ui-star"></i>
+               <i class="i-star ui-star"></i>
+               <i class="i-star ui-star"></i>
+               <i class="i-star ui-star current"></i>
+               <i class="i-star ui-star"></i>
+            </div>
+         </div>
+      </div>
+      
+      @@include('../../../components/ui/ui-button/ui-btn/ui-button.html', {
+         "text": "Оставить отзыв",
+         "type": "button",
+         "className": "btn_primary-action btn_send-review minw900"
+      })
+   </div>
+
+   <div class="product-reviews__content">
+      <div class="reviews-filter-wrap">
+         <ul class="ui-tabs product-reviews_filters">
+            <li class="ui-tab tab_filter active">Все <span class="count">(645)</span></li>
+            <li class="ui-tab tab_filter">Отлично <span class="count">(645)</span></li>
+            <li class="ui-tab tab_filter">Хорошо <span class="count">(645)</span></li>
+            <li class="ui-tab tab_filter">Средне <span class="count">(645)</span></li>
+            <li class="ui-tab tab_filter">Плохо <span class="count">(645)</span></li>
+            <li class="ui-tab tab_filter">Очень плохо <span class="count">(645)</span></li>
+         </ul>
+      
+         <div class="dropdown-sort">
+            <h6 class="dropdown-sort__label"><i class="i-filter"></i> Сортировка</h6>
+            <div class="ui-dropdown dropdown_sort reviews_sort"></div>
+         </div>
+      </div>
+
+      <div class="product-reviews-list"></div>
+
+      <div class="ui-pagination">
+         <button class="btn_dynamic-loading">
+            <i class="i-arrow_more"></i>
+         </button>
+      </div>
+   </div>
+</div>

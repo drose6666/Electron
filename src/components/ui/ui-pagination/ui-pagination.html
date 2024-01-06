@@ -1,9 +1,7 @@
-<div class="ui-pagination">
-   @@include('../ui-button/ui-btn/ui-button.html', {
-      "text": "Посмотреть еще",
-      "className": "btn_ui-option",
-      "type": "button"
-   })
+<div class="ui-pagination @@className">
+   <button class="btn_dynamic-loading">
+      <i class="i-arrow_more"></i>
+   </button>
 
    <div class="pagination">
       <a href="" class="pagination__item back disabled"></a>
@@ -12,6 +10,4 @@
       <a href="" class="pagination__item">3</a>
       <a href="" class="pagination__item forward"></a>
    </div>
-   
-   <div class="pagination-count">Показано товаров: <span class="count">20</span></div>
 </div>

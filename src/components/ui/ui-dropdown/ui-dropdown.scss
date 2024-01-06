@@ -86,9 +86,109 @@
       }
    }
 
-   &.catalog_sort {
+   &.dropdown_sort {
       .selected {
-         width: clamp(230px, 50cqw, 270px);
+         padding: 0;
+         background: transparent;
+         border-radius: 0;
+         display: flex;
+         align-items: center;
+         gap: 15px;
+
+         &:after {
+            margin-bottom: -2px;
+            position: static;
+            display: block;
+            translate: none;
+         }
+
+         .selected__item {
+            font-size: 18px;
+         }
       }
+
+      .options {
+         padding: 10px;
+         top: 140%;
+         background: var(--light);
+         border-radius: var(--smRd);
+         box-shadow: var(--light_btn_shadow);
+         width: 270px;
+
+         .options__item {
+            padding: 5px 20px;
+            min-height: 35px;
+            border-radius: var(--xsRd);
+
+            &:not(:last-child) {
+               margin-bottom: 5px;
+            }
+
+            &:hover {
+               background: var(--separating_contrast);
+            }
+
+            &.current {
+               &:hover {
+                  background: var(--separating_contrast);
+                  color: var(--dark);
+               }
+            }
+         }
+      }
+
+      @include media (max-width, 580px) {
+         .options {
+            width: 230px;
+         }
+      }
+
+      @include media (max-width, 385px) {
+         .options {
+            width: 260px;
+         }
+      }
+   }
+}
+
+.dropdown-sort-wrap {
+   margin-bottom: 50px;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   flex-wrap: wrap;
+   column-gap: 20px;
+   row-gap: 15px;
+}
+
+.dropdown-sort {
+   display: flex;
+   align-items: center;
+   flex-wrap: wrap;
+   column-gap: 10px;
+   row-gap: 5px;
+
+   &__label {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 18px;
+      font-weight: 300;
+      line-height: 100%;
+      color: var(--dark);
+
+      i {
+         font-size: 20px;
+         color: var(--dark);
+      }
+   }
+}
+
+
+@include media (max-width, 385px) {
+   .catalog-sort-wrap,
+   .catalog-sort {
+      flex-direction: column;
+      align-items: flex-start;
    }
 }

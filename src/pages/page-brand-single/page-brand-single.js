@@ -1,6 +1,4 @@
 import '../../js/common.js';
-import '../../components/subcategory/subcategory.js';
-import '../../components/catalog/catalog-filters/catalog-filters.js';
 import '../../components/product/product.js';
 
 // TODO Popups

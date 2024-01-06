@@ -12,7 +12,7 @@ const productOptions = [
          { id: 3, name: 'colors', value: 'Натуральный титан', color: '#FDE8CF', disabled: false, selected: false},
          { id: 4, name: 'colors', value: 'Красный титан', color: '#DE8E86', disabled: false, selected: false},
          { id: 5, name: 'colors', value: 'Зеленый титан', color: '#516956', disabled: false, selected: false},
-         { id: 6, name: 'colors', value: 'Синий титан', color: '#82A7C8', disabled: true, selected: false},
+         { id: 6, name: 'colors', value: 'Синий титан', color: '#82A7C8', disabled: false, selected: false},
       ]
    },
    {
@@ -20,7 +20,7 @@ const productOptions = [
       name : 'Память',
       options: [
          { id: 1, name: 'memory', value: '16/512 Gb', disabled: false, selected: true },
-         { id: 2, name: 'memory', value: '32/512 Gb', disabled: true, selected: false },
+         { id: 2, name: 'memory', value: '32/512 Gb', disabled: false, selected: false },
          { id: 3, name: 'memory', value: '128/512 Gb', disabled: false, selected: false },
       ]
    },
@@ -31,7 +31,7 @@ const productOptions = [
          { id: 1, name: 'ssd', value: '256 Gb', disabled: false, selected: false },
          { id: 2, name: 'ssd', value: '512 Gb', disabled: false, selected: false },
          { id: 3, name: 'ssd', value: '1 Tb', disabled: false, selected: true },
-         { id: 4, name: 'ssd', value: '2 Tb', disabled: true, selected: false },
+         { id: 4, name: 'ssd', value: '2 Tb', disabled: false, selected: false },
       ]
    },
    {
@@ -40,7 +40,7 @@ const productOptions = [
       options: [
          { id: 1, name: 'diagonal', value: '14.3”', disabled: false, selected: false },
          { id: 2, name: 'diagonal', value: '15.3”', disabled: false, selected: true },
-         { id: 3, name: 'diagonal', value: '15.6”', disabled: true, selected: false },
+         { id: 3, name: 'diagonal', value: '15.6”', disabled: false, selected: false },
       ]
    }
 ]

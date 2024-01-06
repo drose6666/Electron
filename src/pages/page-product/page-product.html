@@ -11,22 +11,37 @@
 
       <main>
 
-         @@include('./sections/product-presenation-section/product-presenation-section.html')
+         @@include('./product-presenation/product-presenation.html')
 
-        
-         
+         <section class="product-description-section">
+            <div class="ui-container">
+               <ul class="ui-tabs product_tabs">
+                  <li class="ui-tab tab_lg product-tab active">Описание</li>
+                  <li class="ui-tab tab_lg product-tab">Характеристики</li>
+                  <li class="ui-tab tab_lg product-tab">Отзывы</li>
+                  <li class="ui-tab tab_lg product-tab">Полезное</li>
+                  <li class="ui-tab tab_lg product-tab">Обзор</li>
+               </ul>
+      
+               <div class="product-content">
+                  @@include('./product-reviews/product-reviews.html')
+               </div>
+            </div>
+         </section>
+
       </main>
 
       @@include('../../components/footer/footer.html')
       @@include('../../components/menu/mobile-menu/mobile-menu.html')
       @@include('../../components/popups/fade-side/popup-search/popup-search.html')
-      @@include('../../components/popups/fade-side/popup-compare/popup-compare.html')
+      <!-- @@include('../../components/popups/fade-side/popup-compare/popup-compare.html') -->
       @@include('../../components/popups/fade-side/popup-cart/popup-cart.html')
       @@include('../../components/popups/fade-side/popup-quickview/popup-quickview.html')
       @@include('../../components/popups/popup-image-preview/popup-image-preview.html')
       @@include('../../components/popups/popup-send-review/popup-send-review.html')
-      @@include('../../components/product/product-notifications/product-add-notification.html')
-      @@include('../../components/popups/fade-side/popup-login/popup-login.html')
+      @@include('../../components/popups/fade-side/popup-review/popup-review.html')
+      <!-- @@include('../../components/product/product-notifications/product-add-notification.html') -->
+      <!-- @@include('../../components/popups/fade-side/popup-login/popup-login.html') -->
       
       <script type="module" src="js/bundle-page-product.min.js"></script>
    </body>

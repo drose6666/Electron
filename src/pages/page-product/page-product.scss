@@ -4,7 +4,42 @@
 @import '../../components/ui/ui-breadcrumbs/ui-breadcrumbs';
 @import '../../components/ui/ui-pagination/ui-pagination';
 
-@import '../../components/subcategory/subcategory';
-@import '../../components/catalog/catalog-filters/catalog-filters';
 @import '../../components/product/product-images/product-images';
+@import './product-reviews/product-reviews';
+@import '../../components/popups/popup-send-review/popup-send-review';
+@import '../../components/popups/fade-side/popup-review/popup-review';
 
+
+.product-presentation {
+   margin-top: 40px;
+   margin-bottom: clamp(80px, 18cqi, 200px);
+   container-name: presentationContainer;
+   container-type: inline-size;
+
+   @extend %fullWidthElement;
+
+   &__container {
+      display: grid;
+      grid-template: auto / minmax(600px, 1fr) minmax(500px, 1fr);
+      gap: 20px;
+   }
+
+   @include media (max-width, 1150px) {
+      .product-presentation__container {
+         grid-template: auto / minmax(200px, 1fr);
+         gap: 80px;
+      }
+   }
+   
+   @include media (max-width, 530px) {
+      width: 100%;
+
+      .product-presentation__container {
+         gap: 20px;
+      }
+   }
+}
+
+.product-description-section {
+   margin-bottom: var(--section_gutter);
+}

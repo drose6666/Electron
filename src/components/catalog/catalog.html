@@ -1,0 +1,22 @@
+<section class="catalog-section">
+   <div class="ui-container">
+      <div class="dropdown-sort-wrap">
+         <div class="dropdown-sort">
+            <h6 class="dropdown-sort__label"><i class="i-filter"></i> Сортировка</h6>
+            <div class="ui-dropdown dropdown_sort catalog_sort"></div>
+         </div>
+
+         <div class="catalog-count">
+            Всего товаров: <span>23</span>
+         </div>
+      </div>
+
+      @@include('../product/product-list/product-list.html', {
+         "className": "product-list"
+      })
+
+      @@include('../ui/ui-pagination/ui-pagination.html', {
+         "className": ""
+      })
+   </div>
+</section>

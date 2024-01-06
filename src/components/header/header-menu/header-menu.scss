@@ -1,7 +1,7 @@
 .menu {
    display: flex;
    align-items: center;
-   gap: clamp(30px, 2cqi, 70px);
+   gap: clamp(30px, 5cqi, 60px);
 
    &-list {
       display: flex;

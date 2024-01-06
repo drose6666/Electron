@@ -1,0 +1,15 @@
+.catalog-section {
+   margin-bottom: var(--section_gutter);
+}
+
+.catalog-count {
+   font-size: 17px;
+   font-weight: 300;
+   line-height: 100%;
+   color: var(--text_additional);
+   white-space: nowrap;
+
+   span {
+      color: var(--dark);
+   }
+}

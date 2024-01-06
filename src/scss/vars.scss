@@ -76,6 +76,10 @@
       --ui_popup_gutter: 50px;
    }
 
+   @media all and (max-width: 768px) {
+      --section_gutter: clamp(80px, 22cqi, 160px);
+   }
+
    
    // Sizes
    --full_container_width: 1540px;

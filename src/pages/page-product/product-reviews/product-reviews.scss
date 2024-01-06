@@ -1,0 +1,117 @@
+@import '../../../components/review/review';
+
+
+.product-reviews {
+   display: grid;
+   grid-template: auto / max-content minmax(400px, 1200px);
+   column-gap: clamp(40px, 10cqi, 150px);
+   row-gap: 60px;
+}
+
+.reviews-filter-wrap {
+   margin-bottom: 50px;
+}
+
+.overall-rating {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap: 20px;
+   position: sticky;
+   top: 85px;
+   height: max-content;
+
+   &__count {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+
+      .rating-count-info {
+         font-size: 30px;
+         font-weight: 300;
+         line-height: 100%;
+         color: var(--text_additional);
+
+         .value {
+            color: var(--dark);
+         }
+      }
+
+      .maxw900 {
+         display: none;
+      }
+   }
+
+   &__info {
+      margin-bottom: 5px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+
+      .rating-value {
+         font-size: 25px;
+         font-weight: 300;
+         color: var(--dark);
+
+         .current {
+            font-size: 70px;
+            font-weight: 400;
+         }
+      }
+   }
+
+   .star-rating_product-reviews {
+      .ui-stars {
+         gap: 3px;
+
+         .ui-star {
+            font-size: 25px;
+         }
+      }
+   }
+}
+
+@include media (max-width, 900px) {
+   .product-reviews {
+      display: block;
+   }
+
+   .overall-rating {
+      margin-bottom: 50px;
+      flex-direction: row;
+      justify-content: space-between;
+      gap: 40px;
+      position: static;
+
+      &__count {
+         order: 2;
+
+         .maxw900 {
+            display: flex;
+         }
+      }
+
+      &__info {
+         order: 1;
+
+         .rating-value {
+            .current {
+               font-size: clamp(50px, 8cqi, 70px);
+            }
+         }
+      }
+
+      .minw900 {
+         display: none;
+      }
+   }
+}
+
+@include media (max-width, 460px) {
+   .overall-rating {
+      flex-direction: column;
+      gap: 20px;
+   }
+}

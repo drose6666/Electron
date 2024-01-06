@@ -1,0 +1,20 @@
+<section class="recommendend-products-section">
+   <div class="ui-container">
+      @@include('../../ui/ui-title/ui-section-title.html', {
+         "text": "Вам может понравиться",
+         "className": ""
+      })
+
+
+      <div class="swiper-container container_recommendend-products">
+         <div class="swiper" id="recommendend-products-swiper">
+            @@include('../product-list/product-list.html', {
+               "className": ""
+            })
+         </div>
+      
+         <div class="btn_circle swiper-arrow dark basic-swiper_arrow prev"></div>
+         <div class="btn_circle swiper-arrow dark basic-swiper_arrow next"></div>
+      </div>
+   </div>
+</section>

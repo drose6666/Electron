@@ -1,17 +1,39 @@
 .ui-pagination {
-   margin-top: var(--section_sm_gutter);
+   margin-top: 50px;
    display: flex;
    flex-direction: column;
    align-items: center;
 
-   .btn_more {
-      margin-top: 0;
+   .btn_dynamic-loading {
+      margin-bottom: 20px;
+      width: 60px;
+      height: 60px;
+      background: var(--light);
+      box-shadow: var(--light_btn_shadow);
+      border-radius: var(--circleRd);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all .2s ease;
+
+      i {
+         font-size: 26px;
+         color: var(--dark);
+         transition: all .8s ease;
+      }
+
+      &:hover {
+         background: var(--separating_contrast);
+         box-shadow: none;
+
+         i {
+            transform: rotate(360deg);
+         }
+      }
    }
 
    // TODO pagination (страницы)
    .pagination {
-      margin-top: 25px;
-      margin-bottom: 15px;
       display: flex;
       align-items: center;
       gap: 5px;
@@ -65,15 +87,7 @@
       }
    }
 
-   // TODO количество товаров
-   .pagination-count {
-      font-size: 17px;
-      font-weight: 300;
-      line-height: 100%;
-      color: var(--text_additional);
-
-      .count {
-         color: var(--dark);
-      }
+   &.left {
+      align-items: flex-start;
    }
 }
