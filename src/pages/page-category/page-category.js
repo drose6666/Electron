@@ -1,7 +1,7 @@
 import '../../js/common.js';
 import '../../components/catalog/catalog.js';
 import '../../components/product/product.js';
-import '../../components/product/recommended-products/recommended-products.js';
+import '../../components/product/recommendend-products/recommendend-products.js';
 
 // TODO Popups
 import '../../components/popups/fade-side/popup-quickview/popup-quickview.js';

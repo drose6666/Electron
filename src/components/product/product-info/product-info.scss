@@ -86,7 +86,7 @@
       font-weight: 300;
       line-height: 150%;
       color: var(--dark);
-      max-width: 850px;
+      max-width: 720px;
 
       @include textCropping( $stringCount: 4 )
    }
@@ -169,6 +169,10 @@
    @include media (max-width, 1150px) {
       &.product_page {
          padding: 30px 0;
+
+         .product-info__inviting-text {
+            max-width: 850px;
+         }
       }
    }
 

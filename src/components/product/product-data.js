@@ -198,7 +198,7 @@ function renderColors(arr) {
 // TODO Создание HTML для кнопки корзины и "Заказать"
 function renderCartBtn(availability, statusCart) {
    const defaultCartBtn = `
-      <button class="btn_circle btn_cart btn_header-cart btn_cart-add ${statusCart ? 'inCart' : ''}">
+      <button class="btn_circle btn_cart btn_cart-add ${statusCart ? 'inCart' : ''}">
          <img src="../../../../img/check_notification.svg" />
          <i class="i-cart"></i>
       </button>

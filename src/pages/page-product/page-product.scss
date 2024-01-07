@@ -5,9 +5,11 @@
 @import '../../components/ui/ui-pagination/ui-pagination';
 
 @import '../../components/product/product-images/product-images';
-@import './product-reviews/product-reviews';
 @import '../../components/popups/popup-send-review/popup-send-review';
 @import '../../components/popups/fade-side/popup-review/popup-review';
+
+@import './product-reviews/product-reviews';
+@import './product-specifications/product-specifications';
 
 
 .product-presentation {

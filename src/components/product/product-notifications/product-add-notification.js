@@ -6,7 +6,7 @@ btnCartAdd.forEach(btnCart => {
    btnCart.addEventListener('click', function() {
 
       if (!btnCart.classList.contains('inCart')) {
-         changeStatusCartOfProduct(btnCart)
+         // changeStatusCartOfProduct(btnCart)
          handlerNotification('open')
       }
 
@@ -30,8 +30,8 @@ function handlerNotification(handler) {
 }
 
 
-function changeStatusCartOfProduct(btn) {
-   btn.classList.contains('inCart')
-      ? btn.classList.remove('inCart')
-      : btn.classList.add('inCart')
-}
+// function changeStatusCartOfProduct(btn) {
+//    btn.classList.contains('inCart')
+//       ? btn.classList.remove('inCart')
+//       : btn.classList.add('inCart')
+// }
