@@ -1,0 +1,10 @@
+@import '../../scss/common';
+
+// TODO UI
+@import '../../components/ui/ui-breadcrumbs/ui-breadcrumbs';
+@import '../../components/product/product-card/product-page-cart/product-page-cart';
+
+
+.cart-product-list {
+   margin-bottom: vqr(--section_md_gutter);
+}

@@ -282,6 +282,10 @@
       &.next {
          right: -15px;
       }
+
+      &.centerY {
+         top: 50%;
+      }
    }
 
    // ADDITIONAL Стрелки в слайдере с отзвыами

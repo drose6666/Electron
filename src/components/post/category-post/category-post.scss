@@ -1,3 +1,11 @@
+.category-post-list {
+   margin-bottom: clamp(15px, 3cqi, 25px);
+   display: flex;
+   align-items: center;
+   flex-wrap: wrap;
+   gap: 10px;
+}
+
 .category-post {
    padding: 10px 20px;
    display: flex;

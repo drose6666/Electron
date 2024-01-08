@@ -6,18 +6,16 @@
 
       <a href="#" class="content">
          <div class="category-post-list">
-            @@loop('../category-post/category-post-card.html', [
-               { "text": "Новости" },
-               { "text": "Starship" },
-               { "text": "Илон Маск" }
-            ])
+            <div class="category-post card">Новости</div>
+            <div class="category-post card">Starship</div>
+            <div class="category-post card">Илон Маск</div>
          </div>
    
          <h3 class="title">Илон Маск запускает «Starship» — крупнейшую ракету в истории</h3>
-         <div class="post-info">
-            <time class="post-info__item">Апрель 17, 2023</time>
-            <div class="post-info__item"><i class="i-comment"></i> <span>2 234</span></div>
-            <div class="post-info__item"><i class="i-like"></i> <span>2 234</span></div>
+         <div class="post-controls">
+            <time class="post-controls__item">Апрель 17, 2023</time>
+            <div class="post-controls__item"><i class="i-comment"></i> <span>2 234</span></div>
+            <div class="post-controls__item"><i class="i-like"></i> <span>2 234</span></div>
          </div>
       </a>
 

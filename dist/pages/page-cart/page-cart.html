@@ -1,0 +1,959 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta property="og:type" content="website">
+   <meta property="og:title" content="Electron - лучший выбор в мире электроники">
+   <meta property="og:description" content="Компьютеры, смартфоны, комплектующие и аксессуары от оригинальных производителей">
+   <meta property="og:url" content="http://danilarose.net">
+   <!-- <meta property="og:image" content="http://danilarose.net/img/og-image.jpg"> -->
+   <meta property="og:site_name" content="Electron">
+   <!-- Иконка для вкладки браузера -->
+   <link rel="icon" href="../../img/favicon/fav_32.ico" type="image/x-icon">
+
+   <!-- Иконки в разных размерах -->
+   <link rel="icon" href="../../img/favicon/fav_16.png" type="image/png" sizes="16x16">
+   <link rel="icon" href="../../img/favicon/fav_32.png" type="image/png" sizes="32x32">
+   <link rel="icon" href="../../img/favicon/fav_64.png" type="image/png" sizes="64x64">
+   
+   <!-- Дополнительные размеры или форматы иконок -->
+   <link rel="icon" href="../../img/favicon/fav_48.png" type="image/png" sizes="48x48">
+   <link rel="icon" href="../../img/favicon/fav_128.png" type="image/png" sizes="128x128">
+   
+   <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css?_v=20240108022814" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+   <!-- <link rel="stylesheet" href="../../libs/css/bootstrap-grid.min.css?_v=20240108022814"> -->
+
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css?_v=20240108022814" />
+   <script defer src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js?_v=20240108022814"></script>
+   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js?_v=20240108022814" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+   <link rel="stylesheet" href="../../libs/css/reset.min.css?_v=20240108022814">
+   <link rel="stylesheet" as="font" href="../../fonts/fonts.css?_v=20240108022814">
+   <link rel="stylesheet" as="font" href="../../fonts/icon-font.css?_v=20240108022814">
+   <link rel="stylesheet" href="css/page-cart.min.css?_v=20240108022814">
+   
+   <title>Корзина</title>
+</head>
+
+   <body>
+      <div class="ui-preloader" id="ui-preloader">
+   <div class="loadingio-spinner-eclipse-e1yqoh6tcuv">
+      <div class="ldio-q8lh4k68ww">
+         <div></div>
+      </div>
+   </div>
+</div>
+      <div class="header-top">
+   <div class="ui-container">
+      <div class="header-top__nav">
+         <div class="ui-burger">
+   <span></span>
+   <span></span>
+   <span></span>
+</div>
+
+         <nav class="top-menu" id="top-nav">
+            <ul class="top-menu__list">
+               <li class="top-menu__list__item basicHoverUnderline"><a class="child" href="">Информация</a></li>
+            </ul>
+         
+            <ul class="top-menu__list">
+               <li class="top-menu__list__item basicHoverUnderline"><a class="child" href="">Контакты</a></li>
+            </ul>
+         </nav>
+      </div>
+
+      <!-- Заглушка, пока не готовы личный кабинет и авторизация -->
+      <div class="socials socials_header">
+   <a href="#"><i class="i-telegram"></i></a>
+   <a href="#"><i class="i-vk"></i></a>
+   <a href="#"><i class="i-facebook"></i></a>
+   <a href="#"><i class="i-instagram"></i></a>
+   <a href="#"><i class="i-whatsapp"></i></a>
+</div>
+   </div>
+</div>
+      <header>
+   <div class="ui-container">
+      <button class="btn_circle btn_search">
+   <i class="i-search"></i>
+</button>
+      
+      <nav class="menu" id="header-nav">
+   <ul class="menu-list">
+      <li class="menu-list__item"><a class="child" href="../../../pages/page-category/page-category.html">Ноутбуки</a></li>
+      <li class="menu-list__item">
+         <span class="child">Комплектующие</span>
+         <div class="submenu-wrapper">
+   <div class="submenu">
+      <div class="submenu-list-wrap">
+         <h4 class="submenu-list-name">Для ноутбуков и ПК</h4>
+
+         <ul class="submenu-list">
+            <li class="submenu-list__item basicHoverUnderline"><a href="" class="child">Материнские платы</a></li>
+            <li class="submenu-list__item basicHoverUnderline"><a href="" class="child">Процессоры</a></li>
+            <li class="submenu-list__item basicHoverUnderline"><a href="" class="child">Оптические приводы</a></li>
+            <li class="submenu-list__item basicHoverUnderline"><a href="" class="child">Жесткие диски</a></li>
+            <li class="submenu-list__item basicHoverUnderline"><a href="" class="child">Звуковые карты</a></li>
+            <li class="submenu-list__item basicHoverUnderline"><a href="" class="child">Блоки питания</a></li>
+            <li class="submenu-list__item basicHoverUnderline"><a href="" class="child">Накопитель SSD</a></li>
+         </ul>
+      </div>
+
+      <div class="submenu-list-wrap">
+         <h4 class="submenu-list-name">Для смартфонов</h4>
+
+         <ul class="submenu-list">
+            <li class="submenu-list__item basicHoverUnderline"><a href="" class="child">Материнские платы</a></li>
+            <li class="submenu-list__item basicHoverUnderline"><a href="" class="child">Процессоры</a></li>
+            <li class="submenu-list__item basicHoverUnderline"><a href="" class="child">Оптические приводы</a></li>
+            <li class="submenu-list__item basicHoverUnderline"><a href="" class="child">Жесткие диски</a></li>
+            <li class="submenu-list__item basicHoverUnderline"><a href="" class="child">Звуковые карты</a></li>
+            <li class="submenu-list__item basicHoverUnderline"><a href="" class="child">Блоки питания</a></li>
+            <li class="submenu-list__item basicHoverUnderline"><a href="" class="child">Накопитель SSD</a></li>
+         </ul>
+      </div>
+   </div>
+   
+   <div class="submenu-category-container">
+      <a href="../../../pages/page-category/page-category.html" class="category-card complect card_submenu">
+   <div class="category-card__container">
+      <h3 class="name">Комплектующие</h3>
+      <p class="description">Смартфоны, флагманские новинки и еще много интересного</p>
+
+      <div class="ui-more_full-hover more_category">
+   <span class="child">Смотреть все</span>
+</div>
+
+      <img src="../../img/categories/complect_full_1.5x.webp" alt="" class="img">
+   </div>
+</a>
+   </div>
+</div>
+      </li>
+   </ul>
+
+   <a href="/" class="logo">
+      <picture>
+         <source media="(max-width: 400px)" srcset="../../img/logo/logo_dark_short.svg">
+         <img src="../../img/logo/logo_dark.svg" alt="OMATECH Logo">
+      </picture>
+      
+   </a>
+   
+   <ul class="menu-list">
+      <li class="menu-list__item"><a class="child" href="../../../pages/page-category/page-category.html">Смартфоны</a></li>
+      <li class="menu-list__item">
+         <span class="child">Аксессуары</span>
+         <div class="submenu-wrapper">
+   <div class="submenu">
+      <div class="submenu-list-wrap">
+         <h4 class="submenu-list-name">Для ноутбуков и ПК</h4>
+
+         <ul class="submenu-list">
+            <li class="submenu-list__item basicHoverUnderline"><a href="" class="child">Материнские платы</a></li>
+            <li class="submenu-list__item basicHoverUnderline"><a href="" class="child">Процессоры</a></li>
+            <li class="submenu-list__item basicHoverUnderline"><a href="" class="child">Оптические приводы</a></li>
+            <li class="submenu-list__item basicHoverUnderline"><a href="" class="child">Жесткие диски</a></li>
+            <li class="submenu-list__item basicHoverUnderline"><a href="" class="child">Звуковые карты</a></li>
+            <li class="submenu-list__item basicHoverUnderline"><a href="" class="child">Блоки питания</a></li>
+            <li class="submenu-list__item basicHoverUnderline"><a href="" class="child">Накопитель SSD</a></li>
+         </ul>
+      </div>
+
+      <div class="submenu-list-wrap">
+         <h4 class="submenu-list-name">Для смартфонов</h4>
+
+         <ul class="submenu-list">
+            <li class="submenu-list__item basicHoverUnderline"><a href="" class="child">Материнские платы</a></li>
+            <li class="submenu-list__item basicHoverUnderline"><a href="" class="child">Процессоры</a></li>
+            <li class="submenu-list__item basicHoverUnderline"><a href="" class="child">Оптические приводы</a></li>
+            <li class="submenu-list__item basicHoverUnderline"><a href="" class="child">Жесткие диски</a></li>
+            <li class="submenu-list__item basicHoverUnderline"><a href="" class="child">Звуковые карты</a></li>
+            <li class="submenu-list__item basicHoverUnderline"><a href="" class="child">Блоки питания</a></li>
+            <li class="submenu-list__item basicHoverUnderline"><a href="" class="child">Накопитель SSD</a></li>
+         </ul>
+      </div>
+   </div>
+   
+   <div class="submenu-category-container">
+      <a href="../../../pages/page-category/page-category.html" class="category-card complect card_submenu">
+   <div class="category-card__container">
+      <h3 class="name">Комплектующие</h3>
+      <p class="description">Смартфоны, флагманские новинки и еще много интересного</p>
+
+      <div class="ui-more_full-hover more_category">
+   <span class="child">Смотреть все</span>
+</div>
+
+      <img src="../../img/categories/complect_full_1.5x.webp" alt="" class="img">
+   </div>
+</a>
+   </div>
+</div>
+      </li>
+   </ul>
+   
+</nav>
+
+      <div class="header-controls">
+         <button class="btn_circle-header btn_circle btn_header-cart">
+   <i class="i-cart"></i>
+   <div class="counter btn_circle"><span>56</span></div>
+</button>
+      </div>
+   </div>
+</header>
+
+      <main>
+         <section class="page-head-section page_category">
+            <div class="ui-container">
+               <h1 class="ui-page-title ">Корзина</h1>
+   
+               <div class="ui-breadcrumbs">
+                  <a href="/" class="ui-breadcrumbs-item basicHoverUnderline breadcrumbs_link">
+   <span class="child">Главная</span>
+</a>
+                  <span class="ui-breadcrumbs-item">Корзина</span>
+               </div>
+            </div>
+
+            <img src="../../img/categories/page_category_bg_2.webp" alt="" class="page-head__bg">
+         </section>
+
+         <section class="cart-content-section">
+            <div class="ui-container">
+               <div class="cart-product-list">
+                  <div class="product-page-cart">
+   <div class="product-page-cart__container">
+      <a href="../../../../pages/page-product/page-product.html" class="product-img"><img src="../../../../img/cards/card_6_2.webp" alt=""></a>
+
+      <div class="product-details">
+         <div class="product-card-info">
+            <h3 class="product-name">
+               <a href="../../../../pages/page-product/page-product.html"> Samsung Galaxy S23 Ultra в комплекте с Buds 2 Pro</a>
+            </h3>
+            <ul class="product-options">
+               <li class="product-options__item color"></li>
+               <li class="product-options__item">16/512 Gb</li>
+               <li class="product-options__item">Dual SIM</li>
+               <li class="product-options__item">Esim + SIM</li>
+               <li class="product-options__item">16/512 Gb</li>
+               <li class="product-options__item">16/512 Gb</li>
+               <li class="product-options__item">Esim + SIM</li>
+            </ul>
+         </div>
+
+         <div class="product-controls">
+            <div class="product-counter product_page-cart">
+   <i class="i-minus count-down"></i>
+   <input type="text" value="1" inputmode="numeric" class="count" name="product_count">
+   <i class="i-plus count-up"></i>
+</div>
+   
+            <div class="product-price">9 999 999 ₽</div>
+         </div>
+      </div>
+   </div>
+</div>
+                  <div class="product-page-cart">
+   <div class="product-page-cart__container">
+      <a href="../../../../pages/page-product/page-product.html" class="product-img"><img src="../../../../img/cards/card_6_2.webp" alt=""></a>
+
+      <div class="product-details">
+         <div class="product-card-info">
+            <h3 class="product-name">
+               <a href="../../../../pages/page-product/page-product.html"> Samsung Galaxy S23 Ultra в комплекте с Buds 2 Pro</a>
+            </h3>
+            <ul class="product-options">
+               <li class="product-options__item color"></li>
+               <li class="product-options__item">16/512 Gb</li>
+               <li class="product-options__item">Dual SIM</li>
+               <li class="product-options__item">Esim + SIM</li>
+               <li class="product-options__item">16/512 Gb</li>
+               <li class="product-options__item">16/512 Gb</li>
+               <li class="product-options__item">Esim + SIM</li>
+            </ul>
+         </div>
+
+         <div class="product-controls">
+            <div class="product-counter product_page-cart">
+   <i class="i-minus count-down"></i>
+   <input type="text" value="1" inputmode="numeric" class="count" name="product_count">
+   <i class="i-plus count-up"></i>
+</div>
+   
+            <div class="product-price">9 999 999 ₽</div>
+         </div>
+      </div>
+   </div>
+</div>
+                  <div class="product-page-cart">
+   <div class="product-page-cart__container">
+      <a href="../../../../pages/page-product/page-product.html" class="product-img"><img src="../../../../img/cards/card_6_2.webp" alt=""></a>
+
+      <div class="product-details">
+         <div class="product-card-info">
+            <h3 class="product-name">
+               <a href="../../../../pages/page-product/page-product.html"> Samsung Galaxy S23 Ultra в комплекте с Buds 2 Pro</a>
+            </h3>
+            <ul class="product-options">
+               <li class="product-options__item color"></li>
+               <li class="product-options__item">16/512 Gb</li>
+               <li class="product-options__item">Dual SIM</li>
+               <li class="product-options__item">Esim + SIM</li>
+               <li class="product-options__item">16/512 Gb</li>
+               <li class="product-options__item">16/512 Gb</li>
+               <li class="product-options__item">Esim + SIM</li>
+            </ul>
+         </div>
+
+         <div class="product-controls">
+            <div class="product-counter product_page-cart">
+   <i class="i-minus count-down"></i>
+   <input type="text" value="1" inputmode="numeric" class="count" name="product_count">
+   <i class="i-plus count-up"></i>
+</div>
+   
+            <div class="product-price">9 999 999 ₽</div>
+         </div>
+      </div>
+   </div>
+</div>
+               </div>
+            </div>
+         </section>
+      </main>
+
+      <div class="subscribe">
+   <div class="subscribe__container">
+      <div class="ui-container">
+         <h2 class="subscribe__title">Подписывайтесь</h2>
+         <p class="subscribe__text">Чтобы первыми узнавать о наших новинках, событиях и акциях, а также полезных лайфхаках и новостях</p>
+         
+         <form class="ui-form" action="" method="" id="form-subscribe">
+   <div class="ui-form-item">
+      <input type="email" name="user_subscribe" inputmode="email" autocomplete="email" placeholder="Email..." class="input_subscribeSearch">
+      
+      <button type="submit" class="btn_primary-action inside_field btn_subscribe">
+         <span>Подписаться</span>
+         <i class="i-arrow_up_right_long subscribe_icon"></i>
+      </button>
+   </div>
+</form>
+
+         <p class="warning-text">
+            Подписываясь на обновления, Вы соглашаетесь с нашей <strong class="hoverLinks">политикой конфиденциальности</strong>
+         </p>
+      </div>
+
+      <img class="subscribe__bg" loading="lazy" src="../../img/subscribe/subscribe-bg.webp" alt="">
+   </div>
+</div>
+<div class="info-links">
+   <a href="" class="info-link">
+   <div class="info-link__container">
+      <div class="info-link__icon"><i class="i-delivery"></i></div>
+
+      <div class="info-link__descr">
+         <h4 class="info-link__title">Удобная доставка</h4>
+         <div class="info-link__more">
+   <span class="child">Подробнее</span>
+</div>
+      </div>
+   </div>
+</a><a href="" class="info-link">
+   <div class="info-link__container">
+      <div class="info-link__icon"><i class="i-warranty"></i></div>
+
+      <div class="info-link__descr">
+         <h4 class="info-link__title">Гарантия на все товары</h4>
+         <div class="info-link__more">
+   <span class="child">Подробнее</span>
+</div>
+      </div>
+   </div>
+</a><a href="" class="info-link">
+   <div class="info-link__container">
+      <div class="info-link__icon"><i class="i-service"></i></div>
+
+      <div class="info-link__descr">
+         <h4 class="info-link__title">Ремонт и обслуживание</h4>
+         <div class="info-link__more">
+   <span class="child">Подробнее</span>
+</div>
+      </div>
+   </div>
+</a><a href="" class="info-link">
+   <div class="info-link__container">
+      <div class="info-link__icon"><i class="i-returns"></i></div>
+
+      <div class="info-link__descr">
+         <h4 class="info-link__title">Гарантия возврата</h4>
+         <div class="info-link__more">
+   <span class="child">Подробнее</span>
+</div>
+      </div>
+   </div>
+</a>
+</div>
+
+<footer>
+   <div class="ui-container footer-inside">
+      <div class="footer-col main">
+         <a href="/" class="logo">
+            <img src="../../img/logo/logo_light.svg" alt="">
+         </a>
+
+         <p class="text">Мы поможем подобрать лучшее устройство, которое подходит именно Вам!</p>
+
+         <div class="socials only_icon">
+   <a href="#"><i class="i-telegram"></i></a>
+   <a href="#"><i class="i-vk"></i></a>
+   <a href="#"><i class="i-facebook"></i></a>
+   <a href="#"><i class="i-instagram"></i></a>
+   <a href="#"><i class="i-whatsapp"></i></a>
+</div>
+      </div>
+
+      <div class="footer-col navigation">
+         <div class="navigation-col">
+            <h5 class="navigation-title">Информация</h5>
+            <ul class="navigation-list">
+               <li><a href="" class="hoverLinks">Контакты</a></li>
+               <li><a href="" class="hoverLinks">Блог</a></li>
+               <li><a href="" class="hoverLinks">Сервис</a></li>
+               <li><a href="" class="hoverLinks">Доставка</a></li>
+               <li><a href="" class="hoverLinks">Акции</a></li>
+            </ul>
+         </div>
+
+         <div class="navigation-col">
+            <h5 class="navigation-title">Магазин</h5>
+            <ul class="navigation-list">
+               <li><a href="" class="hoverLinks">Ноутбуки</a></li>
+               <li><a href="" class="hoverLinks">Смартфоны</a></li>
+               <li><a href="" class="hoverLinks">Аксессуары</a></li>
+               <li><a href="" class="hoverLinks">Комплектующие</a></li>
+               <li><a href="" class="hoverLinks">Сравнение</a></li>
+            </ul>
+         </div>
+
+         <!-- <div class="navigation-col">
+            <h5 class="navigation-title">Личный кабинет</h5>
+            <ul class="navigation-list">
+               <li><a href="" class="hoverLinks">История заказов</a></li>
+               <li><a href="" class="hoverLinks">Отследить заказ</a></li>
+               <li><a href="" class="hoverLinks">Избранное</a></li>
+            </ul>
+         </div> -->
+      </div>
+
+      <div class="footer-col contact">
+         <a href="tel:" class="phone">+7 911 149 05 05</a>
+
+         <div class="contact-inside">
+            <a href="mailto:electronics.info@yandex.com" class="contact-inside__item">electronics.info@yandex.com</a>
+            <div class="contact-inside__item">График: <strong>Пн-Вс: 09:00-20:00</strong></div>
+         </div>
+
+         
+      </div>
+   </div>
+
+   <div class="ui-container">
+      <div class="copyright">
+   <div class="payments">
+      <img src="../../img/payments/pay_1.svg" alt="">
+      <img src="../../img/payments/pay_2.svg" alt="">
+      <img src="../../img/payments/pay_3.svg" alt="">
+      <img src="../../img/payments/pay_4.svg" alt="">
+      <img src="../../img/payments/pay_5.svg" alt="">
+      <img src="../../img/payments/pay_6.svg" alt="">
+      <img src="../../img/payments/pay_7.svg" alt="">
+      <img src="../../img/payments/pay_8.svg" alt="">
+      <img src="../../img/payments/pay_9.svg" alt="">
+      <img src="../../img/payments/pay_10.svg" alt="">
+   </div>
+
+   <div class="rules">
+      <span class="rules__link hoverLinks">Политика конфиденциальности</span>
+      <span class="rules__link hoverLinks">Правила и условия</span>
+   </div>
+
+   <p class="copyright-text">Copyright &copy; OMA. Все права защищены</p>
+</div>
+   </div>
+</footer>
+      <div class="ui-popup fade-side left-side" id="mobile-menu">
+   <div class="ui-popup__container mobile-menu">
+
+      <!-- Основной список (уровень 1) -->
+      <ul class="mobile-menu__inside parent_list" data-id="0">
+         <li data-for="1" class="parent-item has-children"><span class="child">Каталог</span></li>
+         <li class="parent-item"><a href="../../../pages/page-brands/page-brands.html" class="child">Контакты</a></li>
+         
+         <li class="gap-item child-item-wrap">
+            <ul class="child-list">
+               <li class="child-item"><a href="" class="child">Сервис</a></li>
+               <li class="child-item"><a href="" class="child">Доставка</a></li>
+               <li class="child-item"><a href="" class="child">Гарантия</a></li>
+               <li class="child-item"><a href="" class="child">Условия возврата</a></li>
+            </ul>
+
+            <ul class="additional-list menu_close">
+               <li class="additional-item"><span class="child">Правила и условия</span></li>
+               <li class="additional-item"><span class="child">Политика конфиденциальности</span></li>
+            </ul>
+         </li>
+
+         <li class="gap-item contact-item-wrap">
+            <a href="tel:" class="phone">+7 911 149 05 05</a>
+
+            <div class="contact-info">
+               <a href="" class="contact-info__item">
+                  <i class="i-mail"></i>
+                  <span class="child">electronics.infoplace@yandex.com</span>
+               </a>
+               <div class="contact-info__item">
+                  <i class="i-clock_fill"></i>
+                  <span>Пн-Пт: 09:00-20:00</span>
+               </div>
+            </div>
+
+            <div class="socials mobile_menu">
+   <a href="#"><i class="i-telegram"></i></a>
+   <a href="#"><i class="i-vk"></i></a>
+   <a href="#"><i class="i-facebook"></i></a>
+   <a href="#"><i class="i-instagram"></i></a>
+   <a href="#"><i class="i-whatsapp"></i></a>
+</div>
+         </li>
+      </ul>
+
+      <!-- Вложенный список (уровень 2 - каталог) -->
+      <ul data-id="1" class="mobile-menu__inside child_list hidden">
+         <li data-for="0" class="back-item has-children"><span class="child">Каталог</span></li>
+         <li>
+            <ul class="child-list">
+               <li class="child-item"><a href="../../../pages/page-category/page-category.html" class="child">Ноутбуки и ПК</a></li>
+               <li class="child-item"><a href="../../../pages/page-category/page-category.html" class="child">Смартфоны</a></li>
+               <li class="child-item"><a href="../../../pages/page-category/page-category.html" class="child">Аксессуары</a></li>
+               <li data-for="3" class="child-item has-children"><a href="../../../pages/page-category/page-category.html" class="child">Комплектующие</a></li>
+            </ul>
+         </li>
+      </ul>
+
+      <!-- Вложенный список (уровень 3 - комплектующие) -->
+      <ul data-id="3" class="mobile-menu__inside child_list hidden">
+         <li data-for="1" class="back-item has-children"><a href="" class="child">Комплектующие</a></li>
+         <li>
+            <ul class="child-list">
+               <li class="child-item"><a href="" class="child">Материннские платы</a></li>
+               <li class="child-item"><a href="" class="child">Процессоры</a></li>
+               <li class="child-item"><a href="" class="child">Жесткие диски (HDD-накопители)</a></li>
+               <li class="child-item"><a href="" class="child">Накопители SSD</a></li>
+               <li class="child-item"><a href="" class="child">Видеокарты</a></li>
+               <li class="child-item"><a href="" class="child">Модули памяти</a></li>
+               <li class="child-item"><a href="" class="child">Оптические приводы</a></li>
+               <li class="child-item"><a href="" class="child">Звуковые карты</a></li>
+               <li class="child-item"><a href="" class="child">Блоки питания</a></li>
+               <li class="child-item"><a href="" class="child">Корпуса</a></li>
+               <li class="child-item"><a href="" class="child">Системы охлаждения</a></li>
+               <li class="child-item"><a href="" class="child">Термопасты</a></li>
+
+               <li class="child-item"><a href="" class="child">Материннские платы</a></li>
+               <li class="child-item"><a href="" class="child">Процессоры</a></li>
+               <li class="child-item"><a href="" class="child">Жесткие диски (HDD-накопители) + SSD-накопители</a></li>
+               <li class="child-item"><a href="" class="child">Накопители SSD</a></li>
+               <li class="child-item"><a href="" class="child">Видеокарты</a></li>
+               <li class="child-item"><a href="" class="child">Модули памяти</a></li>
+               <li class="child-item"><a href="" class="child">Оптические приводы</a></li>
+               <li class="child-item"><a href="" class="child">Звуковые карты</a></li>
+               <li class="child-item"><a href="" class="child">Блоки питания</a></li>
+               <li class="child-item"><a href="" class="child">Корпуса</a></li>
+               <li class="child-item"><a href="" class="child">Системы охлаждения</a></li>
+               <li class="child-item"><a href="" class="child">Термопасты</a></li>
+            </ul>
+         </li>
+      </ul>
+
+      <div class="ui-close close_fade-side right_side mobile-close">
+   <i class="i-angle_left"></i>
+</div>
+   </div>
+
+   <div class="ui-popup__overlay" id="overlay-mobile-menu"></div>
+</div>
+      <div class="ui-popup fade-side" id="popup-search">
+   <div class="ui-popup__container">
+
+      <h2 class="ui-popup__title">Поиск</h2>
+      <search role="search">
+   <form class="search-form main-search" action="" method="" id="main-search">
+      <input type="text" name="search" inputmode="search" autocomplete="on" placeholder="Найти..." class="input_search">
+      
+      
+
+      <button type="submit" class="btn_circle btn_search-submit btn_main-search">
+   <i class="i-search"></i>
+</button>
+   </form>
+</search>
+
+      <ul class="search-history">
+         <li class="history-item">
+            <strong class="history-item__text search_query">smartphone</strong>
+            <span class="history-item__text search_proposed">iphone 14</span>
+         </li>
+
+         <li class="history-item">
+            <strong class="history-item__text search_query">smartphone</strong>
+            <span class="history-item__text search_proposed">xiaomi note 11</span>
+         </li>
+
+         <li class="history-item">
+            <strong class="history-item__text search_query">smartphone</strong>
+            <span class="history-item__text search_proposed">samsung galaxy s23</span>
+         </li>
+
+         <li class="history-item">
+            <strong class="history-item__text search_query">smartphone</strong>
+            <span class="history-item__text search_proposed">samsung galaxy s 23 mini</span>
+         </li>
+
+         <li class="history-item">
+            <strong class="history-item__text search_query">smartphone</strong>
+            <span class="history-item__text search_proposed">iphone 14</span>
+         </li>
+
+         <li class="history-item">
+            <strong class="history-item__text search_query">smartphone</strong>
+            <span class="history-item__text search_proposed">xiaomi note 11</span>
+         </li>
+
+         <li class="history-item">
+            <strong class="history-item__text search_query">smartphone</strong>
+            <span class="history-item__text search_proposed">samsung galaxy s23</span>
+         </li>
+
+         <li class="history-item">
+            <strong class="history-item__text search_query">smartphone</strong>
+            <span class="history-item__text search_proposed">samsung galaxy s 23 mini</span>
+         </li>
+      </ul>
+
+      <ul class="search-type-list search_category">
+         <li class="type-item">
+            <div class="info">
+               <h4 class="title">Смартфоны</h4>
+               <span class="type">Категория</span>
+            </div>
+            
+            <div class="visual">
+               <a href="../../../pages/page-category/page-category.html" class="category-card smartphones card_search">
+   <div class="category-card__container">
+      <h3 class="name"></h3>
+      <p class="description">@@description</p>
+
+      <div class="ui-more_full-hover more_category">
+   <span class="child">Смотреть все</span>
+</div>
+
+      <img src="../../../../img/categories/smartphone_full_1.5x.webp" alt="" class="img">
+   </div>
+</a>
+            </div>
+         </li>
+      </ul>
+
+      <ul class="search-type-list">
+         <li class="type-item">
+            <div class="info">
+               <h4 class="title">Logitech</h4>
+               <span class="type">Бренд</span>
+            </div>
+
+            
+               <a href="../../pages/page-brand-single/page-brand-single.html" class="brand-card card_search">
+   <img src="../../../../img/brands/brand_1.webp" alt="">
+</a>
+      
+         </li>
+
+         <li class="type-item">
+            <div class="info">
+               <h4 class="title">Microsoft</h4>
+               <span class="type">Бренд</span>
+            </div>
+
+           
+               <a href="../../pages/page-brand-single/page-brand-single.html" class="brand-card card_search">
+   <img src="../../../../img/brands/brand_10.webp" alt="">
+</a>
+       
+         </li>
+
+         <li class="type-item">
+            <div class="info">
+               <h4 class="title">Lenovo</h4>
+               <span class="type">Бренд</span>
+            </div>
+
+
+               <a href="../../pages/page-brand-single/page-brand-single.html" class="brand-card card_search">
+   <img src="../../../../img/brands/brand_12.webp" alt="">
+</a>
+        
+         </li>
+
+         <li class="type-item">
+            <div class="info">
+               <h4 class="title">Huawei</h4>
+               <span class="type">Бренд</span>
+            </div>
+
+       
+               <a href="../../pages/page-brand-single/page-brand-single.html" class="brand-card card_search">
+   <img src="../../../../img/brands/brand_8.webp" alt="">
+</a>
+         
+         </li>
+      </ul>
+
+      <div class="ui-close close_fade-side left_side popup-search-close">
+   <i class="i-angle_right"></i>
+</div>
+   </div>
+
+   <div class="ui-popup__overlay" id="overlay-search"></div>
+</div>
+      <div class="ui-popup fade-side popup_fixed-content" id="popup-cart">
+   <div class="ui-popup__container">
+
+      <h2 class="ui-popup__title">Корзина <strong class="count">(2)</strong></h2>
+
+      <div class="ui-popup-products">
+         <div class="ui-popup-products__list">
+            <div class="product-cart ">
+   <a class="product-cart__img" href="../../../../pages/page-product/page-product.html">
+      <img src="../../../../img/cards/card_3.webp" alt="">
+   </a>
+
+   <div class="product-cart__content">
+      <div class="wrapper">
+         <h4 class="product-cart__name"><a href="#">MacBook Pro (M2 Pro, 2023)</a></h4>
+         <span class="product-cart__price">150 970 ₽</span>
+      </div>
+
+      <div class="product-cart__counter">
+         <div class="product-counter product_cart">
+   <i class="i-minus count-down"></i>
+   <input type="text" value="1" inputmode="numeric" class="count" name="product_count">
+   <i class="i-plus count-up"></i>
+</div>
+      </div>
+   </div>
+
+   <div class="ui-close ui-close close_remove">
+   <i class="i-close"></i>
+</div>
+</div><div class="product-cart ">
+   <a class="product-cart__img" href="../../../../pages/page-product/page-product.html">
+      <img src="../../../../img/cards/card_2.webp" alt="">
+   </a>
+
+   <div class="product-cart__content">
+      <div class="wrapper">
+         <h4 class="product-cart__name"><a href="#">Samsung Galaxy S23 Ultra в комплекте с Buds 2 Pro</a></h4>
+         <span class="product-cart__price">150 970 ₽</span>
+      </div>
+
+      <div class="product-cart__counter">
+         <div class="product-counter product_cart">
+   <i class="i-minus count-down"></i>
+   <input type="text" value="1" inputmode="numeric" class="count" name="product_count">
+   <i class="i-plus count-up"></i>
+</div>
+      </div>
+   </div>
+
+   <div class="ui-close ui-close close_remove">
+   <i class="i-close"></i>
+</div>
+</div><div class="product-cart ">
+   <a class="product-cart__img" href="../../../../pages/page-product/page-product.html">
+      <img src="../../../../img/cards/card_3.webp" alt="">
+   </a>
+
+   <div class="product-cart__content">
+      <div class="wrapper">
+         <h4 class="product-cart__name"><a href="#">MacBook Pro (M2 Pro, 2023)</a></h4>
+         <span class="product-cart__price">150 970 ₽</span>
+      </div>
+
+      <div class="product-cart__counter">
+         <div class="product-counter product_cart">
+   <i class="i-minus count-down"></i>
+   <input type="text" value="1" inputmode="numeric" class="count" name="product_count">
+   <i class="i-plus count-up"></i>
+</div>
+      </div>
+   </div>
+
+   <div class="ui-close ui-close close_remove">
+   <i class="i-close"></i>
+</div>
+</div><div class="product-cart ">
+   <a class="product-cart__img" href="../../../../pages/page-product/page-product.html">
+      <img src="../../../../img/cards/card_2.webp" alt="">
+   </a>
+
+   <div class="product-cart__content">
+      <div class="wrapper">
+         <h4 class="product-cart__name"><a href="#">Samsung Galaxy S23 Ultra в комплекте с Buds 2 Pro</a></h4>
+         <span class="product-cart__price">150 970 ₽</span>
+      </div>
+
+      <div class="product-cart__counter">
+         <div class="product-counter product_cart">
+   <i class="i-minus count-down"></i>
+   <input type="text" value="1" inputmode="numeric" class="count" name="product_count">
+   <i class="i-plus count-up"></i>
+</div>
+      </div>
+   </div>
+
+   <div class="ui-close ui-close close_remove">
+   <i class="i-close"></i>
+</div>
+</div><div class="product-cart ">
+   <a class="product-cart__img" href="../../../../pages/page-product/page-product.html">
+      <img src="../../../../img/cards/card_3.webp" alt="">
+   </a>
+
+   <div class="product-cart__content">
+      <div class="wrapper">
+         <h4 class="product-cart__name"><a href="#">MacBook Pro (M2 Pro, 2023)</a></h4>
+         <span class="product-cart__price">150 970 ₽</span>
+      </div>
+
+      <div class="product-cart__counter">
+         <div class="product-counter product_cart">
+   <i class="i-minus count-down"></i>
+   <input type="text" value="1" inputmode="numeric" class="count" name="product_count">
+   <i class="i-plus count-up"></i>
+</div>
+      </div>
+   </div>
+
+   <div class="ui-close ui-close close_remove">
+   <i class="i-close"></i>
+</div>
+</div><div class="product-cart ">
+   <a class="product-cart__img" href="../../../../pages/page-product/page-product.html">
+      <img src="../../../../img/cards/card_2.webp" alt="">
+   </a>
+
+   <div class="product-cart__content">
+      <div class="wrapper">
+         <h4 class="product-cart__name"><a href="#">Samsung Galaxy S23 Ultra в комплекте с Buds 2 Pro</a></h4>
+         <span class="product-cart__price">150 970 ₽</span>
+      </div>
+
+      <div class="product-cart__counter">
+         <div class="product-counter product_cart">
+   <i class="i-minus count-down"></i>
+   <input type="text" value="1" inputmode="numeric" class="count" name="product_count">
+   <i class="i-plus count-up"></i>
+</div>
+      </div>
+   </div>
+
+   <div class="ui-close ui-close close_remove">
+   <i class="i-close"></i>
+</div>
+</div><div class="product-cart ">
+   <a class="product-cart__img" href="../../../../pages/page-product/page-product.html">
+      <img src="../../../../img/cards/card_3.webp" alt="">
+   </a>
+
+   <div class="product-cart__content">
+      <div class="wrapper">
+         <h4 class="product-cart__name"><a href="#">MacBook Pro (M2 Pro, 2023)</a></h4>
+         <span class="product-cart__price">150 970 ₽</span>
+      </div>
+
+      <div class="product-cart__counter">
+         <div class="product-counter product_cart">
+   <i class="i-minus count-down"></i>
+   <input type="text" value="1" inputmode="numeric" class="count" name="product_count">
+   <i class="i-plus count-up"></i>
+</div>
+      </div>
+   </div>
+
+   <div class="ui-close ui-close close_remove">
+   <i class="i-close"></i>
+</div>
+</div><div class="product-cart ">
+   <a class="product-cart__img" href="../../../../pages/page-product/page-product.html">
+      <img src="../../../../img/cards/card_2.webp" alt="">
+   </a>
+
+   <div class="product-cart__content">
+      <div class="wrapper">
+         <h4 class="product-cart__name"><a href="#">Samsung Galaxy S23 Ultra в комплекте с Buds 2 Pro</a></h4>
+         <span class="product-cart__price">150 970 ₽</span>
+      </div>
+
+      <div class="product-cart__counter">
+         <div class="product-counter product_cart">
+   <i class="i-minus count-down"></i>
+   <input type="text" value="1" inputmode="numeric" class="count" name="product_count">
+   <i class="i-plus count-up"></i>
+</div>
+      </div>
+   </div>
+
+   <div class="ui-close ui-close close_remove">
+   <i class="i-close"></i>
+</div>
+</div>
+         </div>
+      </div>
+
+      <div class="ui-popup__action">
+         <ul class="cost-order product_cart">
+   <li class="cost-item">
+      <div class="key">Сумма:</div>
+      <div class="value">652 970 999 ₽</div>
+   </li>
+</ul>
+
+         <div class="ui-popup__btns">
+            <a href="#" class="btn_primary-action">Оформить заказ</a>
+            <a href="../../../../pages/page-cart/page-cart.html" class="btn_primary-outlineOnDark">Перейти в корзину</a>
+            
+         </div>
+
+         <p class="delivery-text">Доставка расчитывается на этапе оформления заказа</p>
+      </div>
+
+      
+
+      
+
+      <div class="ui-close close_fade-side left_side popup-cart-close">
+   <i class="i-angle_right"></i>
+</div>
+   </div>
+
+   <div class="ui-popup__overlay" id="overlay-cart"></div>
+</div>
+      
+      
+      <script type="module" src="js/bundle-page-cart.min.js?_v=20240108022814"></script>
+   </body>
+</html>  

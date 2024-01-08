@@ -1,0 +1,232 @@
+.product-page-cart {
+   container-name: productPageCart;
+   container-type: inline-size;
+   transition: all .2s ease;
+
+   &:not(:last-child) {
+      margin-bottom: var(--default_padding);
+   }
+
+   &__container {
+      padding: 5px;
+      border-radius: var(--mdRd);
+      background: var(--separating);
+      display: grid;
+      grid-template: auto / 220px 1fr;
+      gap: 20px;
+      transition: all .2s ease;
+   }
+
+   .product-details {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      gap: 30px;
+   }
+
+   .product-img {
+      max-width: 220px;
+      border-radius: 16px;
+      background: var(--separating_contrast);
+      overflow: hidden;
+      transition: all .2s ease;
+
+      img {
+         max-width: 100%;
+         height: auto;
+      }
+   }
+
+   .product-card-info {
+      max-width: 550px;
+   }
+
+   .product-name {
+      margin-bottom: 20px;
+      font-size: 24px;
+      font-weight: 400;
+      line-height: 105%;
+      transition: all .2s ease;
+
+      a {
+         color: var(--dark);
+         transition: inherit;
+      }
+   }
+
+   .product-options {
+         display: flex;
+         align-items: center;
+         flex-wrap: wrap;
+         column-gap: 7px;
+         row-gap: 5px;
+
+         &__item {
+            padding: 5px 15px;
+            font-size: 15px;
+            font-weight: 400;
+            line-height: 100%;
+            color: var(--dark);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 32px;
+            white-space: nowrap;
+            border-radius: var(--defaultRd);
+            background: var(--separating_contrast);
+
+            &.color {
+               padding: 0;
+               width: 26px;
+               height: 26px;
+               min-height: auto;
+               border-radius: var(--circleRd);
+               background: #DE8E86;
+            }
+         }
+   }
+
+  .product-controls {
+      padding-right: 25px;
+      display: flex;
+      align-items: center;
+      gap: 40px;
+
+      .product-price {
+         font-size: clamp(20px, 3cqi, 25px);
+         font-weight: 400;
+         line-height: 100%;
+         color: var(--dark);
+         white-space: nowrap;
+      }
+   }   
+
+   &:hover {
+      transform: translateY(-3px);
+
+      .product-page-cart__container {
+         box-shadow: var(--category_card_hover_shadow);
+      }
+
+      .product-img {
+         background: var(--separating);
+      }
+
+      .product-name {
+         a {
+            color: var(--action);
+         }
+      }
+   }
+
+   @container (max-width: 1000px) {  
+      .product-controls {
+         flex-direction: column;
+         align-items: flex-end;
+         gap: 15px;
+
+         .product-price {
+            order: 1;
+         }
+
+         .product_page-cart {
+            order: 2;
+         }
+      }
+   }
+
+   @container (max-width: 830px) {
+      &__container {
+         grid-template: auto / 300px 1fr;
+      }
+
+      .product-img {
+         max-width: 300px;
+      }
+
+      .product-details {
+         padding: 15px 20px 15px 0;
+         flex-direction: column;
+         align-items: flex-start;
+         gap: 20px;
+      }
+
+      .product-controls {
+         padding-right: 0;
+         flex-direction: row;
+         align-items: center;
+         justify-content: space-between;
+         width: 100%;
+         gap: 15px;
+
+         .product-price {
+            order: 1;
+         }
+
+         .product_page-cart {
+            order: 2;
+         }
+      }
+   } 
+
+   @container (max-width: 640px) {
+      &__container {
+         grid-template: auto / 1fr;
+         gap: 10px;
+      }
+
+      .product-img {
+         max-width: 100%;
+      }
+
+      .product-details {
+         margin: 0 auto;
+         padding: 15px;
+         flex-direction: column;
+         align-items: center;
+         gap: 30px;
+      }
+
+      .product-name {
+         font-size: clamp(22px, 5cqi, 24px);
+         font-weight: 400;
+         text-align: center;
+      }
+
+      .product-options {
+         justify-content: center;
+      }
+
+      .product-controls {
+         padding-right: 0;
+         flex-direction: row;
+         align-items: center;
+         justify-content: space-between;
+         width: 100%;
+         gap: 15px;
+
+         .product-price {
+            order: 1;
+         }
+
+         .product_page-cart {
+            order: 2;
+         }
+      }
+   } 
+
+   @container (max-width: 340px) {
+      .product-controls {
+         flex-direction: column;
+         gap: 10px;
+      }
+
+      .product-details {
+         padding: 15px 10px;
+      }
+   }
+}
+
+
+// TODO Список товаров в корзине

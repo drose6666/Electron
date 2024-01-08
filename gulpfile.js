@@ -59,6 +59,7 @@ function watcher() {
    gulp.watch(path.watch['page-brand-singleHTML'], () => pagesHTML('page-brand-single'))
    gulp.watch(path.watch['page-categoryHTML'], () => pagesHTML('page-category'))
    gulp.watch(path.watch['page-productHTML'], () => pagesHTML('page-product'))
+   gulp.watch(path.watch['page-cartHTML'], () => pagesHTML('page-cart'))
 
    // gulp.watch(path.watch.js, js)
    gulp.watch(path.watch.indexJs, () => js('index'))
@@ -66,6 +67,7 @@ function watcher() {
    gulp.watch(path.watch['page-brand-singleJs'], () => js('page-brand-single'))
    gulp.watch(path.watch['page-categoryJs'], () => js('page-category'))
    gulp.watch(path.watch['page-productJs'], () => js('page-product'))
+   gulp.watch(path.watch['page-cartJs'], () => js('page-cart'))
 
    // gulp.watch(path.watch.scss, scss)
    gulp.watch(path.watch.indexScss, () => scss('index'))
@@ -73,6 +75,7 @@ function watcher() {
    gulp.watch(path.watch['page-brand-singleScss'], () => scss('page-brand-single'))
    gulp.watch(path.watch['page-categoryScss'], () => scss('page-category'))
    gulp.watch(path.watch['page-productScss'], () => scss('page-product'))
+   gulp.watch(path.watch['page-cartScss'], () => scss('page-cart'))
 
    gulp.watch(path.watch.fonts, fonts)
    gulp.watch(path.watch.libs, copyLibs)
@@ -96,9 +99,9 @@ function watcher() {
  * ------------------------------------------------------------------
  */
 const mainTasks = gulp.parallel(
-   html, () => pagesHTML('page-brands'), () => pagesHTML('page-brand-single'), () => pagesHTML('page-category'), () => pagesHTML('page-product'), 
-   () => js('index'), () => js('page-brands'), () => js('page-brand-single'), () => js('page-category'), () => js('page-product'), 
-   () => scss('index'), () => scss('page-brands'), () => scss('page-brand-single'), () => scss('page-category'), () => scss('page-product'), 
+   html, () => pagesHTML('page-brands'), () => pagesHTML('page-brand-single'), () => pagesHTML('page-category'), () => pagesHTML('page-product'), () => pagesHTML('page-cart'),
+   () => js('index'), () => js('page-brands'), () => js('page-brand-single'), () => js('page-category'), () => js('page-product'), () => js('page-cart'), 
+   () => scss('index'), () => scss('page-brands'), () => scss('page-brand-single'), () => scss('page-category'), () => scss('page-product'), () => scss('page-cart'), 
    fonts, copyLibs, copyOther, gulp.parallel(cleanImg, copyImg));
 
 

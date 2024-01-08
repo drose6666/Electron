@@ -10,6 +10,10 @@
 
    .btn_subscribe {
       padding: 5px 25px;
+
+      .subscribe_icon {
+         display: none;
+      }
    }
 }
 
@@ -17,13 +21,25 @@
    #form-subscribe {
       .ui-form-item {
          .input_subscribe {
-            padding-right: 10px;
+            padding-right: 60px;
          }
 
          .btn_subscribe {
-            margin: 5px auto 0 auto;
-            display: flex;
-            position: relative;
+            padding: 0;
+            justify-content: center;
+            border-radius: var(--circleRd);
+            width: 50px;
+            height: 50px;
+
+            span {
+               display: none;
+            }
+
+            .subscribe_icon {
+               display: block;
+               font-size: 23px;
+               color: var(--light);
+            }
          }
       }
    }

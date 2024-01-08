@@ -11,11 +11,12 @@ const productImgMain = new Swiper(".product-img__main", {
    slidesPerGroup: 1,
    spaceBetween: 5,
    pauseOnMouseEnter: true,
+   loop: true,
    observer: true,
-   // navigation: {
-   //    nextEl: ".swiper-button-next",
-   //    prevEl: ".swiper-button-prev",
-   // },
+   navigation: {
+      nextEl: ".product-img-container .next",
+      prevEl: ".product-img-container .prev",
+   },
    thumbs: {
       swiper: productImgThumbs,
    },

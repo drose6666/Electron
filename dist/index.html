@@ -22,16 +22,16 @@
    <link rel="icon" href="../../img/favicon/fav_48.png" type="image/png" sizes="48x48">
    <link rel="icon" href="../../img/favicon/fav_128.png" type="image/png" sizes="128x128">
    
-   <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css?_v=20240107132943" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
-   <!-- <link rel="stylesheet" href="../../libs/css/bootstrap-grid.min.css?_v=20240107132943"> -->
+   <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css?_v=20240108022814" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+   <!-- <link rel="stylesheet" href="../../libs/css/bootstrap-grid.min.css?_v=20240108022814"> -->
 
-   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css?_v=20240107132943" />
-   <script defer src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js?_v=20240107132943"></script>
-   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js?_v=20240107132943" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-   <link rel="stylesheet" href="../../libs/css/reset.min.css?_v=20240107132943">
-   <link rel="stylesheet" as="font" href="../../fonts/fonts.css?_v=20240107132943">
-   <link rel="stylesheet" as="font" href="../../fonts/icon-font.css?_v=20240107132943">
-   <link rel="stylesheet" href="./pages/index/css/index.min.css?_v=20240107132943">
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css?_v=20240108022814" />
+   <script defer src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js?_v=20240108022814"></script>
+   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js?_v=20240108022814" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+   <link rel="stylesheet" href="../../libs/css/reset.min.css?_v=20240108022814">
+   <link rel="stylesheet" as="font" href="../../fonts/fonts.css?_v=20240108022814">
+   <link rel="stylesheet" as="font" href="../../fonts/icon-font.css?_v=20240108022814">
+   <link rel="stylesheet" href="./pages/index/css/index.min.css?_v=20240108022814">
    
    <title>Electron</title>
 </head>
@@ -521,7 +521,11 @@
          <form class="ui-form" action="" method="" id="form-subscribe">
    <div class="ui-form-item">
       <input type="email" name="user_subscribe" inputmode="email" autocomplete="email" placeholder="Email..." class="input_subscribeSearch">
-      <button type="submit" class="btn_primary-action inside_field btn_subscribe">Подписаться</button>
+      
+      <button type="submit" class="btn_primary-action inside_field btn_subscribe">
+         <span>Подписаться</span>
+         <i class="i-arrow_up_right_long subscribe_icon"></i>
+      </button>
    </div>
 </form>
 
@@ -1189,7 +1193,7 @@
 
          <div class="ui-popup__btns">
             <a href="#" class="btn_primary-action">Оформить заказ</a>
-            <a href="#" class="btn_primary-outlineOnDark">Перейти в корзину</a>
+            <a href="../../../../pages/page-cart/page-cart.html" class="btn_primary-outlineOnDark">Перейти в корзину</a>
             
          </div>
 
@@ -1490,17 +1494,17 @@
 
       <!-- Здесь контент -->
       <ul class="image-preview-list">
-         <li class="image-preview-item"><img src="../../../img/cards/cards_large/card_1.webp" alt=""></li>
-         <li class="image-preview-item"><img src="../../../img/cards/cards_large/card_2.webp" alt=""></li>
-         <li class="image-preview-item"><img src="../../../img/cards/cards_large/card_3.webp" alt=""></li>
-         <li class="image-preview-item"><img src="../../../img/cards/cards_large/card_4.webp" alt=""></li>
-         <li class="image-preview-item"><img src="../../../img/cards/cards_large/card_5.webp" alt=""></li>
-         <li class="image-preview-item"><img src="../../../img/review/review_13.webp" alt=""></li>
-         <li class="image-preview-item"><img src="../../../img/review/review-img_12.webp" alt=""></li>
-         <li class="image-preview-item"><img src="../../../img/review/review_14.webp" alt=""></li>
-         <li class="image-preview-item"><img src="../../../img/review/review_16.webp" alt=""></li>
-         <li class="image-preview-item"><img src="../../../img/cards/cards_large/card_7.webp" alt=""></li>
-         <li class="image-preview-item"><img src="../../../img/cards/cards_large/card_17.webp" alt=""></li>
+         <li class="image-preview-item"><img loading="lazy" src="../../../img/cards/cards_large/card_1.webp" alt=""></li>
+         <li class="image-preview-item"><img loading="lazy" src="../../../img/cards/cards_large/card_2.webp" alt=""></li>
+         <li class="image-preview-item"><img loading="lazy" src="../../../img/cards/cards_large/card_3.webp" alt=""></li>
+         <li class="image-preview-item"><img loading="lazy" src="../../../img/cards/cards_large/card_4.webp" alt=""></li>
+         <li class="image-preview-item"><img loading="lazy" src="../../../img/cards/cards_large/card_5.webp" alt=""></li>
+         <li class="image-preview-item"><img loading="lazy" src="../../../img/review/review_13.webp" alt=""></li>
+         <li class="image-preview-item"><img loading="lazy" src="../../../img/review/review-img_12.webp" alt=""></li>
+         <li class="image-preview-item"><img loading="lazy" src="../../../img/review/review_14.webp" alt=""></li>
+         <li class="image-preview-item"><img loading="lazy" src="../../../img/review/review_16.webp" alt=""></li>
+         <li class="image-preview-item"><img loading="lazy" src="../../../img/cards/cards_large/card_7.webp" alt=""></li>
+         <li class="image-preview-item"><img loading="lazy" src="../../../img/cards/cards_large/card_17.webp" alt=""></li>
       </ul>
       <!-- Здесь контент -->
    </div>
@@ -1530,7 +1534,7 @@
    <div class="notification-nav">
       <a href="#" class="btn_ui-action btn_notification">Оформить заказ</a>
 
-      <a href="#" class="notification_more">
+      <a href="../../../pages/page-cart/page-cart.html" class="notification_more">
    <span class="child">Перейти в корзину</span>
 </a>
    </div>
@@ -1543,6 +1547,6 @@
       
       
       
-      <script type="module" src="./pages/index/js/bundle-index.min.js?_v=20240107132943"></script>
+      <script type="module" src="./pages/index/js/bundle-index.min.js?_v=20240108022814"></script>
    </body>
 </html>  

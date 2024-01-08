@@ -1,10 +1,10 @@
 <form class="ui-form" action="" method="" id="form-subscribe">
    <div class="ui-form-item">
       <input type="email" name="user_subscribe" inputmode="email" autocomplete="email" placeholder="Email..." class="input_subscribeSearch">
-      @@include('../../ui/ui-button/ui-btn/ui-button.html', {
-         "text": "Подписаться",
-         "className": "btn_primary-action inside_field btn_subscribe",
-         "type": "submit"
-      })
+      
+      <button type="submit" class="btn_primary-action inside_field btn_subscribe">
+         <span>Подписаться</span>
+         <i class="i-arrow_up_right_long subscribe_icon"></i>
+      </button>
    </div>
 </form>

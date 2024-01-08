@@ -78,12 +78,12 @@
 
 // TODO Уменьшение border radius
 %dynamicRadius40to25 {
-   border-radius: clamp(var(--optionalRd), 10cqi, var(--defaultRd));
+   border-radius: clamp(var(--optionalRd), 5cqi, var(--defaultRd));
 }
 
 // TODO Уменьшение border radius
 %dynamicRadius30to25 {
-   border-radius: clamp(var(--optionalRd), 10cqi, var(--lgRd));
+   border-radius: clamp(var(--optionalRd), 5cqi, var(--lgRd));
 }
 
 // TODO Скрытие браузерных ui-элементоы

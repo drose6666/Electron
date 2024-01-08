@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+   @@include('../../components/head/head.html', {
+      "mainCss": "css/page-cart.min.css",
+      "title": "Корзина"
+   })
+   <body>
+      @@include('../../components/ui/ui-preloader/ui-preloader.html')
+      @@include('../../components/header/header-top/header-top.html')
+      @@include('../../components/header/header.html')
+
+      <main>
+         <section class="page-head-section page_category">
+            <div class="ui-container">
+               @@include('../../components/ui/ui-title/ui-page-title.html', {
+                  "text": "Корзина",
+                  "className": ""
+               })
+   
+               <div class="ui-breadcrumbs">
+                  @@include('../../components/ui/ui-breadcrumbs/ui-breadcrumbs-item-link.html', {
+                     "text": "Главная",
+                     "link": "/"
+                  })
+                  @@include('../../components/ui/ui-breadcrumbs/ui-beadcrumbs-item.html', {
+                     "text": "Корзина"
+                  })
+               </div>
+            </div>
+
+            <img src="../../img/categories/page_category_bg_2.webp" alt="" class="page-head__bg">
+         </section>
+
+         <section class="cart-content-section">
+            <div class="ui-container">
+               <div class="cart-product-list">
+                  @@include('../../components/product/product-card/product-page-cart/product-page-cart.html')
+                  @@include('../../components/product/product-card/product-page-cart/product-page-cart.html')
+                  @@include('../../components/product/product-card/product-page-cart/product-page-cart.html')
+               </div>
+            </div>
+         </section>
+      </main>
+
+      @@include('../../components/footer/footer.html')
+      @@include('../../components/menu/mobile-menu/mobile-menu.html')
+      @@include('../../components/popups/fade-side/popup-search/popup-search.html')
+      @@include('../../components/popups/fade-side/popup-cart/popup-cart.html')
+      <!-- @@include('../../components/popups/fade-side/popup-login/popup-login.html') -->
+      
+      <script type="module" src="js/bundle-page-cart.min.js"></script>
+   </body>
+</html>  

@@ -9,6 +9,8 @@
    container-type: inline-size;
 
    .product-img {
+      position: relative;
+      cursor: pointer;
       transition: all .3s ease;
    
       .swiper-slide {
@@ -132,6 +134,19 @@
 
       .sticker-wrap {
          right: 10px;
+      }
+
+      .swiper-arrow {
+         background: rgba(255, 255, 255, .5);
+         backdrop-filter: blur(8px);
+         
+         &.prev {
+            left: 7px;
+         }
+
+         &.next {
+            right: 7px;
+         }
       }
    }
 }
