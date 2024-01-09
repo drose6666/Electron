@@ -38,6 +38,19 @@
                   @@include('../../components/product/product-card/product-page-cart/product-page-cart.html')
                   @@include('../../components/product/product-card/product-page-cart/product-page-cart.html')
                </div>
+
+               <div class="cart-info">
+                  <div class="delivery-list cart_delivery-list"></div>
+                  @@include('../../components/shopping-cart/shopping-cart-info.html')
+               </div>
+
+               <div class="btn-wrap">
+                  @@include('../../components/ui/ui-button/ui-btn/ui-button-link.html', {
+                     "link": "",
+                     "text": "Оформить заказ",
+                     "className": "btn_target-action btn_action-order"
+                  })
+               </div>
             </div>
          </section>
       </main>
@@ -46,6 +59,7 @@
       @@include('../../components/menu/mobile-menu/mobile-menu.html')
       @@include('../../components/popups/fade-side/popup-search/popup-search.html')
       @@include('../../components/popups/fade-side/popup-cart/popup-cart.html')
+      @@include('../../components/popups/fade-side/popup-delivery/popup-delivery.html')
       <!-- @@include('../../components/popups/fade-side/popup-login/popup-login.html') -->
       
       <script type="module" src="js/bundle-page-cart.min.js"></script>

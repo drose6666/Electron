@@ -10,6 +10,8 @@ $uiColorControlSize: 25px;
    align-items: center;
    justify-content: space-between;
    gap: var(--small_tabs_padding);
+   user-select: none;
+   transition: all .3s ease;
 
    .value {
       color: var(--text_selected_on_dark);
@@ -51,6 +53,8 @@ $uiColorControlSize: 25px;
 
    &__name {
       padding-left: calc(#{$uiControlSize} + var(--small_btn_padding));
+      color: var(--text_additional);
+
       @extend %controlName;
    }
 

@@ -1,0 +1,131 @@
+.delivery-item {
+   transition: all .2s ease;
+   container-name: delivery;
+   container-type: inline-size;
+
+   &__container {
+      border-radius: var(--mdRd);
+      background: var(--separating);
+      transition: inherit;
+   }
+
+   &__custom {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+   }
+
+   .delivery-info {
+      font-size: 16px;
+      font-weight: 300;
+      line-height: 110%;
+      color: var(--text_additional);
+      max-width: 290px;
+
+      .mark {
+         font-weight: 400;
+         color: var(--dark);
+      }
+   }
+
+   &.cart_delivery {
+      .delivery-item__container {
+         padding: clamp(15px, 5cqi, 30px);
+         background: var(--separating_contrast);
+      }
+
+      .delivery-name {
+         margin-bottom: 7px;
+         font-size: clamp(22px, 7cqi, 25px);
+         font-weight: 500;
+         line-height: 100%;
+         color: var(--dark);
+      }
+
+      .delivery-price {
+         font-size: clamp(21px, 3cqi, 23px);
+         font-weight: 600;
+         line-height: 100%;
+         color: var(--dark);
+         white-space: nowrap;
+      }
+
+      @container (max-width: 360px) {
+         .delivery-item__custom {
+            flex-direction: column;
+            align-items: center;
+         }
+
+         .delivery-name, .delivery-info {
+            text-align: center;
+         }
+
+         
+      }
+   }
+
+   &.order_delivery {
+      padding: 25px 30px;
+      border: 1px solid transparent;
+      cursor: pointer;
+      transition: all .2s ease;
+
+      .delivery-name {
+         margin-bottom: 5px;
+         font-size: 20px;
+         font-weight: 400;
+         line-height: 100%;
+         color: var(--dark);
+      }
+
+      .delivery-check {
+         width: 40px;
+         height: 40px;
+         border: 1px solid var(--text_additional);
+         border-radius: var(--circkeRd);
+         background: transparent;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         position: relative;
+         transition: all .2s ease;
+
+         &:after {
+            content: '\e90c';
+            font-family: var(--icon_font);
+            font-size: 20px;
+            color: var(--light);
+            opacity: 0;
+            transform: translateY(-10px);
+         }
+      }
+
+      &:has(.delivery-item__input:checked) {
+         border-color: var(--action);
+         background: var(--action_slow);
+
+         .delivery-check {
+            background: var(--action);
+            border-color: var(--action);
+
+            &:after {
+               opacity: 1;
+               transform: none;
+            }
+         }
+      }
+   }
+}
+
+
+// TODO Список способов доставки
+.delivery-list { 
+   display: grid;
+   grid-template: auto / 1fr;
+   gap: 5px;
+
+   &.order_delivery-list {
+      gap: 10px;
+   }
+}

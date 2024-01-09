@@ -3,8 +3,42 @@
 // TODO UI
 @import '../../components/ui/ui-breadcrumbs/ui-breadcrumbs';
 @import '../../components/product/product-card/product-page-cart/product-page-cart';
+@import '../../components/delivery/delivery';
+@import '../../components/shopping-cart/shopping-cart-info';
 
+
+.cart-content-section {
+   margin-bottom: var(--section_gutter);
+
+   .btn-wrap {
+      display: flex;
+      justify-content: flex-end;
+   }
+
+   @include media (max-width, 500px) {
+      .btn-wrap {
+         justify-content: center;
+         width: 100%;
+      }
+      
+      .btn_action-order {
+         width: 100%;
+      }
+   }
+}
 
 .cart-product-list {
-   margin-bottom: vqr(--section_md_gutter);
+   margin-bottom: var(--section_md_gutter);
+}
+
+.cart-info {
+   margin-bottom: 60px;
+   display: grid;
+   grid-template: auto / 1.3fr 1fr;
+   gap: 20px;
+
+   @include media (max-width, 1000px) {
+      grid-template: auto / 1fr;
+      gap: 20px;
+   }
 }

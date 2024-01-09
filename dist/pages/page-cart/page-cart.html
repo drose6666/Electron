@@ -22,16 +22,16 @@
    <link rel="icon" href="../../img/favicon/fav_48.png" type="image/png" sizes="48x48">
    <link rel="icon" href="../../img/favicon/fav_128.png" type="image/png" sizes="128x128">
    
-   <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css?_v=20240108022814" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
-   <!-- <link rel="stylesheet" href="../../libs/css/bootstrap-grid.min.css?_v=20240108022814"> -->
+   <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css?_v=20240109113041" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+   <!-- <link rel="stylesheet" href="../../libs/css/bootstrap-grid.min.css?_v=20240109113041"> -->
 
-   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css?_v=20240108022814" />
-   <script defer src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js?_v=20240108022814"></script>
-   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js?_v=20240108022814" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-   <link rel="stylesheet" href="../../libs/css/reset.min.css?_v=20240108022814">
-   <link rel="stylesheet" as="font" href="../../fonts/fonts.css?_v=20240108022814">
-   <link rel="stylesheet" as="font" href="../../fonts/icon-font.css?_v=20240108022814">
-   <link rel="stylesheet" href="css/page-cart.min.css?_v=20240108022814">
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css?_v=20240109113041" />
+   <script defer src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js?_v=20240109113041"></script>
+   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js?_v=20240109113041" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+   <link rel="stylesheet" href="../../libs/css/reset.min.css?_v=20240109113041">
+   <link rel="stylesheet" as="font" href="../../fonts/fonts.css?_v=20240109113041">
+   <link rel="stylesheet" as="font" href="../../fonts/icon-font.css?_v=20240109113041">
+   <link rel="stylesheet" href="css/page-cart.min.css?_v=20240109113041">
    
    <title>Корзина</title>
 </head>
@@ -321,6 +321,45 @@
       </div>
    </div>
 </div>
+               </div>
+
+               <div class="cart-info">
+                  <div class="delivery-list cart_delivery-list"></div>
+                  <div class="shopping-cart-info cart_page">
+   <div class="shopping-cart-info__container">
+      <h4 class="shopping-cart-info__title">Информация о заказе</h4>
+
+      <ul class="shopping-cart-info__list">
+         <li class="info-item">
+            <span class="key info-item__text">В корзине:</span>
+            <span class="separator"></span>
+            <span class="value info-item__text">товаров: 3</span>
+         </li>
+      
+         <li class="info-item">
+            <span class="key info-item__text">Сумма:</span>
+            <span class="separator"></span>
+            <span class="value bold info-item__text">97 950 ₽</span>
+         </li>
+      
+         <li class="info-item">
+            <span class="key info-item__text">Доставка:</span>
+            <span class="separator"></span>
+            <span class="value info-item__text">на этапе доставки</span>
+         </li>
+      
+         <li class="info-item total_item">
+            <span class="key info-item__text">Итого:</span>
+            <!-- <span class="separating"></span> -->
+            <span class="value info-item__text">97 950 ₽</span>
+         </li>
+      </ul>
+   </div>
+</div>
+               </div>
+
+               <div class="btn-wrap">
+                  <a href="" class="btn_target-action btn_action-order">Оформить заказ</a>
                </div>
             </div>
          </section>
@@ -952,8 +991,86 @@
 
    <div class="ui-popup__overlay" id="overlay-cart"></div>
 </div>
+      <div class="ui-popup fade-side" id="popup-delivery">
+   <div class="ui-popup__container">
+
+      <h2 class="ui-popup__title title_md">Расчет доставки</h2>
+      <p class="ui-popup__text">Данные расчеты несут информационный характер для Вашего удобства. Непосредственный выбор способа доставки происходит на этапе оформления заказа</p>
+
+      <form action="" class="ui-form" id="form-calc-delivery">
+   <div class="grid-item two">
+      <div class="ui-form__item">
+         <input type="text" name="user_country" inputmode="text" autocomplete="country-name" placeholder="Страна" value="Россия" readonly class="ui-input_popup ">
+         <span class="error-message"></span>
+      </div>
+      
+      <div class="ui-form__item">
+         <input type="text" name="user_city" inputmode="text" autocomplete="address-level2" placeholder="Город" class="ui-input_popup ">
+         <span class="error-message"></span>
+      </div>
+   </div>
+
+   <div class="grid-item unequal">
+      <div class="ui-form__item">
+         <input type="text" name="user_address" inputmode="text" autocomplete="shipping street-address" placeholder="Адрес доставки" class="ui-input_popup ">
+         <span class="error-message"></span>
+      </div>
+   
+      <div class="ui-form__item">
+         <input type="text" name="user_postal_code" inputmode="numeric" autocomplete="postal-code" placeholder="Почтовый индекс" class="ui-input_popup ">
+         <span class="error-message"></span>
+      </div>
+   </div>
+
+   <div class="ui-form__submit">
+      <label class="ui-control checkbox">
+   <input type="checkbox" name="save_delivery_data" value="Сохранить введенные данные" class="ui-control__input visually-hidden">
+   <span class="ui-control__custom"></span>
+
+   <div class="ui-control__name">Сохранить введенные данные</div>
+</label>
+
+
+      <button type="submit" class="btn_small-action">Рассчитать</button>
+   </div>
+</form>
+
+      <div class="shopping-cart-info calc_delivery">
+   <div class="shopping-cart-info__container">
+
+      <ul class="shopping-cart-info__list">
+         <li class="info-item">
+            <span class="key info-item__text">В корзине:</span>
+            <span class="value info-item__text">товаров: 3</span>
+         </li>
+      
+         <li class="info-item">
+            <span class="key info-item__text">Сумма:</span>
+            <span class="value bold info-item__text">97 950 ₽</span>
+         </li>
+      
+         <li class="info-item">
+            <span class="key info-item__text">Доставка:</span>
+            <span class="value info-item__text">Заполните форму</span>
+         </li>
+      
+         <li class="info-item total_item">
+            <span class="key info-item__text">Итого:</span>
+            <span class="value info-item__text">97 950 ₽</span>
+         </li>
+      </ul>
+   </div>
+</div>
+
+      <div class="ui-close close_fade-side left_side popup-delivery-close">
+   <i class="i-angle_right"></i>
+</div>
+   </div>
+
+   <div class="ui-popup__overlay" id="overlay-delivery"></div>
+</div>
       
       
-      <script type="module" src="js/bundle-page-cart.min.js?_v=20240108022814"></script>
+      <script type="module" src="js/bundle-page-cart.min.js?_v=20240109113041"></script>
    </body>
 </html>  
