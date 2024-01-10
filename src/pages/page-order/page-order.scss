@@ -6,9 +6,16 @@
 @import '../../components/shopping-cart/shopping-cart-info';
 @import '../../components/forms/form-order/form-order';
 @import './order-final/order-final';
+@import '../../components/popups/popup-success-order/popup-success-order';
 
 
 // TODO Order section
 .order-section {
-   margin-bottom: var(--section_gutter);
+   padding-bottom: var(--section_gutter);
+   overflow: hidden;
+
+   .order-content {
+      position: relative;
+
+   }
 }

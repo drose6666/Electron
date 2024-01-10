@@ -1,24 +1,24 @@
 .step-order {
    .value-list {
-      padding: 30px;
+      padding: clamp(20px, 5cqi, 25px);
       background: var(--separating);
       border-radius: var(--mdRd);
 
       &__item {
          display: grid;
-         grid-template: auto / 180px 1fr;
+         grid-template: auto / 200px 1fr;
          column-gap: clamp(20px, 7cqi, 130px);
-         row-gap: 7px;
+         row-gap: 5px;
 
          .key {
-            font-size: 17px;
+            font-size: 18px;
             font-weight: 300;
             line-height: 100%;
             color: var(--text_additional);
          }
 
          .value {
-            font-size: 17px;
+            font-size: 18px;
             font-weight: 400;
             line-height: 110%;
             color: var(--dark);
@@ -26,6 +26,32 @@
 
          &:not(:last-child) {
             margin-bottom: 16px;
+         }
+      }
+   }
+   
+   .comment {
+      padding: 16px 20px;
+      background: var(--separating);
+      border-radius: var(--mdRd);
+      min-height: 120px;
+
+      &__text {
+         font-size: 17px;
+         font-weight: 300;
+         line-height: 130%;
+         color: var(--dark);
+      }
+   }
+
+   @include media (max-width, 570px) {
+      .value-list {
+         &__item {
+            grid-template: auto / 1fr;
+
+            &:not(:last-child) {
+               margin-bottom: 20px;
+            }
          }
       }
    }

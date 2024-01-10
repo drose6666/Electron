@@ -32,26 +32,18 @@
                </div>
             </div>
 
-            <img src="../../img/categories/page_category_bg_2.webp" alt="" class="page-head__bg">
+            <img src="../../img/page_order_bg.webp" alt="" class="page-head__bg">
          </section>
 
          <section class="order-section">
             <div class="ui-container">
-               <div class="ui-tabs">
-                  @@loop('../../components/ui/ui-button/ui-btn/ui-button.html', [
-                     {
-                        "text": "1 - Контактные данные",
-                        "className": "ui-tab tab_lg tab_category active"
-                     },
-                     {
-                        "text": "2 - Доставка",
-                        "className": "ui-tab tab_lg tab_category"
-                     }
-                  ])
+               <div class="ui-tabs order_tabs" id="order_tabs">
+                  <button data-for="1" class="ui-tab tab_lg tab_order nav_order active">1 - Контактные данные</button>
+                  <button data-for="2" class="ui-tab tab_lg tab_order nav_order">2 - Доставка</button>
                </div>
 
                <div class="order-content">
-                  <!-- @@include('../../components/forms/form-order/form-order.html') -->
+                  @@include('../../components/forms/form-order/form-order.html')
                   @@include('./order-final/order-final.html')
                </div>
             </div>
@@ -62,7 +54,8 @@
       @@include('../../components/menu/mobile-menu/mobile-menu.html')
       @@include('../../components/popups/fade-side/popup-search/popup-search.html')
       @@include('../../components/popups/fade-side/popup-cart/popup-cart.html')
-      <!-- @@include('../../components/popups/fade-side/popup-login/popup-login.html') -->
+      <!-- @@include('../../components/popups/popup-success-order/popup-success-order.html') -->
+      @@include('../../components/popups/fade-side/popup-login/popup-login.html')
       
       <script type="module" src="js/bundle-page-order.min.js"></script>
    </body>

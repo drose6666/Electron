@@ -33,14 +33,16 @@
 
          <section class="subcategory-section">
             <div class="ui-container">
-               <div class="ui-tabs">
+               <div class="ui-tabs catefory_tabs">
                   @@loop('../../components/ui/ui-button/ui-btn/ui-button.html', [
                      {
                         "text": "Для ноутбуков и ПК",
+                        "type": "button",
                         "className": "ui-tab tab_category active"
                      },
                      {
                         "text": "Для смартфонов",
+                        "type": "button",
                         "className": "ui-tab tab_category"
                      }
                   ])
@@ -61,7 +63,7 @@
       @@include('../../components/popups/fade-side/popup-cart/popup-cart.html')
       @@include('../../components/popups/fade-side/popup-quickview/popup-quickview.html')
       @@include('../../components/popups/popup-image-preview/popup-image-preview.html')
-      <!-- @@include('../../components/popups/fade-side/popup-login/popup-login.html') -->
+      @@include('../../components/popups/fade-side/popup-login/popup-login.html')
       @@include('../../components/product/product-notifications/product-add-notification.html')
       
       <script type="module" src="js/bundle-page-category.min.js"></script>

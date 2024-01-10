@@ -85,10 +85,8 @@
    }
 
    &.cart_page {
-      @include media (max-width, 1000px) {
-         
-         
-      }
+      position: sticky;
+      top: 82px;
    }
 
    &.calc_delivery {

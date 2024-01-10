@@ -22,16 +22,16 @@
    <link rel="icon" href="../../img/favicon/fav_48.png" type="image/png" sizes="48x48">
    <link rel="icon" href="../../img/favicon/fav_128.png" type="image/png" sizes="128x128">
    
-   <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css?_v=20240110041919" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
-   <!-- <link rel="stylesheet" href="../../libs/css/bootstrap-grid.min.css?_v=20240110041919"> -->
+   <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css?_v=20240110222317" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+   <!-- <link rel="stylesheet" href="../../libs/css/bootstrap-grid.min.css?_v=20240110222317"> -->
 
-   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css?_v=20240110041919" />
-   <script defer src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js?_v=20240110041919"></script>
-   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js?_v=20240110041919" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-   <link rel="stylesheet" href="../../libs/css/reset.min.css?_v=20240110041919">
-   <link rel="stylesheet" as="font" href="../../fonts/fonts.css?_v=20240110041919">
-   <link rel="stylesheet" as="font" href="../../fonts/icon-font.css?_v=20240110041919">
-   <link rel="stylesheet" href="css/page-order.min.css?_v=20240110041919">
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css?_v=20240110222317" />
+   <script defer src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js?_v=20240110222317"></script>
+   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js?_v=20240110222317" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+   <link rel="stylesheet" href="../../libs/css/reset.min.css?_v=20240110222317">
+   <link rel="stylesheet" as="font" href="../../fonts/fonts.css?_v=20240110222317">
+   <link rel="stylesheet" as="font" href="../../fonts/icon-font.css?_v=20240110222317">
+   <link rel="stylesheet" href="css/page-order.min.css?_v=20240110222317">
    
    <title>Оформление заказа</title>
 </head>
@@ -65,13 +65,10 @@
       </div>
 
       <!-- Заглушка, пока не готовы личный кабинет и авторизация -->
-      <div class="socials socials_header">
-   <a href="#"><i class="i-telegram"></i></a>
-   <a href="#"><i class="i-vk"></i></a>
-   <a href="#"><i class="i-facebook"></i></a>
-   <a href="#"><i class="i-instagram"></i></a>
-   <a href="#"><i class="i-whatsapp"></i></a>
-</div>
+      
+
+      <!-- Когда будет готов личный кабинет -->
+      <button type="@@type" class="btn_small-dark btn_login">Личный кабинет</button>
    </div>
 </div>
       <!-- Header -->
@@ -234,105 +231,229 @@
                </div>
             </div>
 
-            <img src="../../img/categories/page_category_bg_2.webp" alt="" class="page-head__bg">
+            <img src="../../img/page_order_bg.webp" alt="" class="page-head__bg">
          </section>
 
          <section class="order-section">
             <div class="ui-container">
-               <div class="ui-tabs">
-                  <button type="@@type" class="ui-tab tab_lg tab_category active">1 - Контактные данные</button><button type="@@type" class="ui-tab tab_lg tab_category">2 - Доставка</button>
+               <div class="ui-tabs order_tabs" id="order_tabs">
+                  <button data-for="1" class="ui-tab tab_lg tab_order nav_order active">1 - Контактные данные</button>
+                  <button data-for="2" class="ui-tab tab_lg tab_order nav_order">2 - Доставка</button>
                </div>
 
                <div class="order-content">
-                  
-                  <div class="order-final step-order">
-   <div class="column">
-      <div class="order-fieldset">
-         <h3 class="fieldset-title">Контакты <button class="btn-edit"></button></h3>
-      
-         <ul class="value-list">
-            <li class="value-list__item">
-               <div class="key item_text">Имя:</div>
-               <div class="value item_text">Константин</div>
-            </li>
-
-            <li class="value-list__item">
-               <div class="key item_text">Фамилия:</div>
-               <div class="value item_text">Константинополевский</div>
-            </li>
-
-            <li class="value-list__item">
-               <div class="key item_text">Email:</div>
-               <div class="value item_text">example.infoplace@gmail.com</div>
-            </li>
-
-            <li class="value-list__item">
-               <div class="key item_text">Телефон:</div>
-               <div class="value item_text">+37377946969</div>
-            </li>
-         </ul>
-      </div>
-
-      <div class="order-fieldset">
-         <h3 class="fieldset-title">Способ доставки <button class="btn-edit"></button></h3>
-      
-         <div class="delivery-item cart_delivery">
-            <div class="delivery-item__container">
-               <div class="delivery-item__custom">
-                  <div class="delivery-details">
-                     <h4 class="delivery-name">Доставка круьером</h4>
-                     <p class="delivery-info">В течении 3-х дней</p>
-                  </div>
+                  <form action="" class="form-order step-order" data-id="1">
+   <div class="step-order__content">
+      <div class="form-column">
+         <!-- Контакты -->
+         <fieldset class="order-fieldset">
+            <legend class="fieldset-title">Контакты</legend>
+   
+            <div class="fields-group">
+               <div class="ui-form-item">
+                  <input type="email" name="user_email" inputmode="email" autocomplete="email" placeholder="Email" class="ui-input">
+                  <span class="error-message"></span>
+               </div>
+   
+               <div class="ui-form-item form-item_tel">
+                  <div class="ui-dropdown dropdown_tel"></div>
+                  <input type="tel" name="user_tel" inputmode="tel" autocomplete="tel" placeholder="Телефон" class="ui-input">
+                  <span class="error-message"></span>
+               </div>
+   
+               <div class="ui-form-item">
+                  <input type="text" name="user_name" inputmode="text" autocomplete="given-name" placeholder="Имя" class="ui-input ">
+                  <span class="error-message"></span>
+               </div>
+   
+               <div class="ui-form-item">
+                  <input type="text" name="user_surname" inputmode="text" autocomplete="family-name" placeholder="Фамилия" class="ui-input ">
+                  <span class="error-message"></span>
+               </div>
+            </div>
+         </fieldset>
+   
+         <!-- Способ доставки -->
+         <fieldset class="order-fieldset delivery_fieldset">
+            <legend class="fieldset-title">Способ доставки</legend>
+   
+            <div class="delivery-list order_delivery-list"></div>
             
-                  <span class="delivery-price">0.00 ₽</span>
+         </fieldset>
+   
+         <!-- Адрес доставки -->
+         <fieldset class="order-fieldset">
+            <legend class="fieldset-title">Адрес доставки</legend>
+   
+            <div class="address-delivery">
+               <div class="grid-item">
+   <div class="ui-form__item">
+      <input type="text" name="user_country" inputmode="text" autocomplete="country-name" placeholder="Страна" value="Россия" readonly class="ui-input">
+      <span class="error-message"></span>
+   </div>
+   
+   <div class="ui-form__item">
+      <input type="text" name="user_city" inputmode="text" autocomplete="address-level2" placeholder="Город" class="ui-input">
+      <span class="error-message"></span>
+   </div>
+</div>
+
+<div class="grid-item unequal">
+   <div class="ui-form__item">
+      <input type="text" name="user_address" inputmode="text" autocomplete="shipping street-address" placeholder="Адрес доставки" class="ui-input">
+      <span class="error-message"></span>
+   </div>
+
+   <div class="ui-form__item">
+      <input type="text" name="user_postal_code" inputmode="numeric" autocomplete="postal-code" placeholder="Почтовый индекс" class="ui-input">
+      <span class="error-message"></span>
+   </div>
+</div>
+            </div>
+         </fieldset>
+      </div>
+   
+      <div class="form-column">
+         <!-- Комментарий -->
+         <fieldset class="order-fieldset">
+            <legend class="fieldset-title">Комментарий</legend>
+   
+            <div class="ui-form-item full-width">
+               <textarea name="user_comment" placeholder="Комментарий" class="ui-textarea "></textarea>
+            </div>
+         </fieldset>
+   
+         <div class="shopping-cart-info cart_page">
+   <div class="shopping-cart-info__container">
+      <h4 class="shopping-cart-info__title">Информация о заказе</h4>
+
+      <ul class="shopping-cart-info__list">
+         <li class="info-item">
+            <span class="key info-item__text">В корзине:</span>
+            <span class="separator"></span>
+            <span class="value info-item__text">товаров: 3</span>
+         </li>
+      
+         <li class="info-item">
+            <span class="key info-item__text">Сумма:</span>
+            <span class="separator"></span>
+            <span class="value bold info-item__text">97 950 ₽</span>
+         </li>
+      
+         <li class="info-item">
+            <span class="key info-item__text">Доставка:</span>
+            <span class="separator"></span>
+            <span class="value bold info-item__text delivery_value">на этапе доставки</span>
+         </li>
+      
+         <li class="info-item total_item">
+            <span class="key info-item__text">Итого:</span>
+            <span class="value info-item__text">97 950 ₽</span>
+         </li>
+      </ul>
+   </div>
+</div>
+      </div>
+   </div>
+   
+   <div class="nav-wrap">
+      <div class="nav-group-links">
+         <a href="../../../pages/page-cart/page-cart.html" class="basicHoverUnderline order-nav_link">
+            <span class="child">Вернуться в корзину</span>
+         </diфv>
+
+         <a href="#order_tabs" data-for="2" class="btn_target-action btn_order nav_order">Продолжить</a>
+      </div>
+   </div>
+</form>
+                  <div class="order-final step-order" data-id="2">
+   <div class="step-order__content">
+      <div class="column">
+         <div class="order-fieldset">
+            <h3 class="fieldset-title">Контакты <button data-for="1" class="btn-edit nav_order"></button></h3>
+         
+            <ul class="value-list">
+               <li class="value-list__item">
+                  <div class="key item_text">Имя:</div>
+                  <div class="value item_text">Константин</div>
+               </li>
+   
+               <li class="value-list__item">
+                  <div class="key item_text">Фамилия:</div>
+                  <div class="value item_text">Константинополевский</div>
+               </li>
+   
+               <li class="value-list__item">
+                  <div class="key item_text">Email:</div>
+                  <div class="value item_text">example.infoplace@gmail.com</div>
+               </li>
+   
+               <li class="value-list__item">
+                  <div class="key item_text">Телефон:</div>
+                  <div class="value item_text">+37377946969</div>
+               </li>
+            </ul>
+         </div>
+   
+         <div class="order-fieldset">
+            <h3 class="fieldset-title">Способ доставки <button data-for="1" class="btn-edit nav_order"></button></h3>
+         
+            <div class="delivery-item cart_delivery order_final ">
+               <div class="delivery-item__container">
+                  <div class="delivery-item__custom">
+                     <div class="delivery-details">
+                        <h4 class="delivery-name">Доставка круьером</h4>
+                        <p class="delivery-info">В течении 3-х дней</p>
+                     </div>
+               
+                     <span class="delivery-price">0.00 ₽</span>
+                  </div>
                </div>
             </div>
          </div>
-      </div>
-
-      <div class="order-fieldset">
-         <h3 class="fieldset-title">Адрес доставки <button class="btn-edit"></button></h3>
-      
-         <ul class="value-list">
-            <li class="value-list__item">
-               <div class="key item_text">Страна:</div>
-               <div class="value item_text">Страна</div>
-            </li>
-
-            <li class="value-list__item">
-               <div class="key item_text">Город:</div>
-               <div class="value item_text">Санкт-Петербург</div>
-            </li>
-
-            <li class="value-list__item">
-               <div class="key item_text">Улица, дом:</div>
-               <div class="value item_text">улица Петропавловская 128а</div>
-            </li>
-
-            <li class="value-list__item">
-               <div class="key item_text">Квартира/аппартаменты:</div>
-               <div class="value item_text">35</div>
-            </li>
-
-            <li class="value-list__item">
-               <div class="key item_text">Почтовый индекс:</div>
-               <div class="value item_text">10001</div>
-            </li>
-         </ul>
-      </div>
-   </div>
-
-
-   <div class="column">
-      <div class="order-fieldset">
-         <h3 class="fieldset-title">Способ доставки <button class="btn-edit"></button></h3>
-      
-         <div class="comment">
-            <p class="user-comment"></p>
+   
+         <div class="order-fieldset">
+            <h3 class="fieldset-title">Адрес доставки <button data-for="1" class="btn-edit nav_order"></button></h3>
+         
+            <ul class="value-list">
+               <li class="value-list__item">
+                  <div class="key item_text">Страна:</div>
+                  <div class="value item_text">Страна</div>
+               </li>
+   
+               <li class="value-list__item">
+                  <div class="key item_text">Город:</div>
+                  <div class="value item_text">Санкт-Петербург</div>
+               </li>
+   
+               <li class="value-list__item">
+                  <div class="key item_text">Улица, дом:</div>
+                  <div class="value item_text">улица Петропавловская 128а</div>
+               </li>
+   
+               <li class="value-list__item">
+                  <div class="key item_text">Квартира/аппартаменты:</div>
+                  <div class="value item_text">35</div>
+               </li>
+   
+               <li class="value-list__item">
+                  <div class="key item_text">Почтовый индекс:</div>
+                  <div class="value item_text">10001</div>
+               </li>
+            </ul>
          </div>
       </div>
-
-      <div class="shopping-cart-info cart_page">
+   
+      <div class="column">
+         <div class="order-fieldset">
+            <h3 class="fieldset-title">Комментарий <button data-for="1" class="btn-edit nav_order"></button></h3>
+         
+            <div class="comment">
+               <p class="comment__text">Мы вынуждены отталкиваться от того, что повышение уровня гражданского сознания позволяет оценить значение распределения внутренних резервов и ресурсов.</p>
+            </div>
+         </div>
+   
+         <div class="shopping-cart-info cart_page">
    <div class="shopping-cart-info__container">
       <h4 class="shopping-cart-info__title">Информация о заказе</h4>
 
@@ -362,6 +483,17 @@
       </ul>
    </div>
 </div>
+      </div>
+   </div>
+
+   <div class="nav-wrap">
+      <div class="nav-group-links">
+         <a href="#order_tabs" class="basicHoverUnderline order-nav_link nav_order" data-for="1">
+            <span class="child">Назад</span>
+         </a>
+
+         <button class="btn_target-action btn_order btn_success-order">Оформить заказ</button>
+      </div>
    </div>
 </div>
                </div>
@@ -392,7 +524,7 @@
          </p>
       </div>
 
-      <img class="subscribe__bg" loading="lazy" src="../../img/subscribe/subscribe-bg.webp" alt="">
+      <img class="subscribe__bg" loading="lazy" src="../../img/subscribe/subscribe_bg.webp" alt="">
    </div>
 </div>
 <!-- End Module subscribe -->
@@ -470,10 +602,10 @@
             <h5 class="navigation-title">Информация</h5>
             <ul class="navigation-list">
                <li><a href="" class="hoverLinks">Контакты</a></li>
-               <li><a href="" class="hoverLinks">Блог</a></li>
+               <!-- <li><a href="" class="hoverLinks">Блог</a></li> -->
                <li><a href="" class="hoverLinks">Сервис</a></li>
                <li><a href="" class="hoverLinks">Доставка</a></li>
-               <li><a href="" class="hoverLinks">Акции</a></li>
+               <!-- <li><a href="" class="hoverLinks">Акции</a></li> -->
             </ul>
          </div>
 
@@ -484,7 +616,7 @@
                <li><a href="" class="hoverLinks">Смартфоны</a></li>
                <li><a href="" class="hoverLinks">Аксессуары</a></li>
                <li><a href="" class="hoverLinks">Комплектующие</a></li>
-               <li><a href="" class="hoverLinks">Сравнение</a></li>
+               <!-- <li><a href="" class="hoverLinks">Сравнение</a></li> -->
             </ul>
          </div>
 
@@ -1042,7 +1174,135 @@
 </div>
 <!-- End popup-cart (popup корзина) -->
       
+      <!-- popup login (popup входа/регистрации - не используется) -->
+<div class="ui-popup fade-side" id="popup-login">
+   <div class="ui-popup__container popup-login__container">
+
+      <!-- Здесь контент -->
+      <div class="sign-wrap">
+
+         <!-- IMPORTANT Вход -->
+         <div class="sign-wrap__item sign-in" data-id="start-screen">
+            <!-- <img src="../../../../img/congrates.gif" alt=""> -->
+            <h2 class="ui-popup__title title_part-of-block center"><span>Вход</span></h2>
+            <p class="popup-login-text">Еще нет аккаунта? <strong data-for="sign-up" class="sign-nav">Создайте его</strong></p>
+
+            <ul class="login-methods">
+   <li><img src="../../../img/login/login_google.svg" alt=""></li>
+   <li><img src="../../../img/login/login_yandex.svg" alt=""></li>
+   <li><img src="../../../img/login/login_vk.svg" alt=""></li>
+</ul>
+            <div class="login-separator"><span>или</span></div>
+            <form action="" class="ui-form_login" id="form-sign-in">
+   <div class="ui-form-item">
+      <input type="email" name="user_email" inputmode="email" autocomplete="email" placeholder="Email" class="ui-input_popup">
+      <span class="error-message"></span>
+   </div>
+
+   <div class="ui-form-item">
+      <input type="password" inputmode="text" name="user_password" autocomplete="off" placeholder="Пароль" class="ui-input_popup input_password">
+      <label class="password-control">
+   <input type="checkbox" name="password" class="password-control__input visually-hidden">
+   <i class="i-eye password_show"></i>
+   <i class="i-eye_slash password_hide"></i>
+</label>
+      <span class="error-message"></span>
+   </div>
+
+   <div class="ui-form-submit">
+      <button type="submit" class="btn_primary-action">Войти</button>
+
+      <div class="forgot-password-link hoverLinks" data-for="forgot-password">Забыли пароль?</div>
+   </div>
+</form>
+
+
+         </div>
+
+
+         <!-- IMPORTANT Регистрация -->
+         <div class="sign-wrap__item sign-up hidden" data-id="sign-up">
+            <h2 class="ui-popup__title title_part-of-block center"><span>Регистрация</span></h2>
+            <p class="popup-login-text">Уже есть аккаунт? <strong data-for="start-screen" class="sign-nav">Войти</strong></p>
+            
+            <ul class="login-methods">
+   <li><img src="../../../img/login/login_google.svg" alt=""></li>
+   <li><img src="../../../img/login/login_yandex.svg" alt=""></li>
+   <li><img src="../../../img/login/login_vk.svg" alt=""></li>
+</ul>
+            <div class="login-separator"><span>или</span></div>
+            <form action="" class="ui-form_login" id="form-sign-up">
+   <!-- <div class="ui-form-item">
+      <input type="text" name="user_name" inputmode="text" autocomplete="name" placeholder="Имя" class="ui-input_popup dark_theme">
+      <span class="error-message"></span>
+   </div> -->
+
+   <div class="ui-form-item">
+      <input type="email" name="user_email" inputmode="email" autocomplete="email" placeholder="Email" class="ui-input_popup">
+      <span class="error-message"></span>
+   </div>
+
+   <div class="ui-form-item">
+      <input type="password" inputmode="text" name="user_password" autocomplete="new-password" placeholder="Пароль" class="ui-input_popup input_password">
+      <label class="password-control">
+   <input type="checkbox" name="password" class="password-control__input visually-hidden">
+   <i class="i-eye password_show"></i>
+   <i class="i-eye_slash password_hide"></i>
+</label>
+      <span class="error-message"></span>
+   </div>
+
+   <div class="ui-form-item">
+      <input type="password" inputmode="text" name="user_password" autocomplete="new-password" placeholder="Повторите пароль" class="ui-input_popup input_password">
+      <label class="password-control">
+   <input type="checkbox" name="password" class="password-control__input visually-hidden">
+   <i class="i-eye password_show"></i>
+   <i class="i-eye_slash password_hide"></i>
+</label>
+      <span class="error-message"></span>
+   </div>
+
+   <p class="warning-text">Нажимая кнопку ниже, вы соглашаетесь с условиями <strong class="btn_privacy-policy">политики конфиденциальности</strong></p>
+
+   <div class="ui-form-submit">
+      <button type="submit" class="btn_primary-action">Создать аккаунт</button>
+   </div>
+</form>
+
+
+         </div>
+
+
+         <!-- IMPORTANT Забыли пароль -->
+         <div class="sign-wrap__item forgot-password hidden" data-id="forgot-password">
+            <h2 class="ui-popup__title title_part-of-block center"><span>Забыли пароль?</span></h2>
+            <p class="popup-login-text">Уже вспомнили? <strong data-for="start-screen" class="sign-nav">Войти</strong></p>
+
+            <p class="help-text">Введите ниже адрес электронной почты, на который создавался аккаунт. На него будет отправлена ссылка для сброса пароля</p>
+         
+            <form action="" class="ui-form_login" id="form-forgot-password">
+   <div class="ui-form-item">
+      <input type="email" name="user_email" inputmode="email" autocomplete="email" placeholder="Email" class="ui-input_popup">
+      <span class="error-message"></span>
+   </div>
+
+   <div class="ui-form-submit">
+      <button type="submit" class="btn_primary-action">Отправить</button>
+   </div>
+</form>
+         </div>
+      </div>
+
+      <div class="ui-close close_fade-side left_side popup-login-close">
+   <i class="i-angle_right"></i>
+</div>
+      <!-- Здесь контент -->
+   </div>
+
+   <div class="ui-popup__overlay" id="overlay-login"></div>
+</div>
+<!-- End popup login-->
       
-      <script type="module" src="js/bundle-page-order.min.js?_v=20240110041919"></script>
+      <script type="module" src="js/bundle-page-order.min.js?_v=20240110222317"></script>
    </body>
 </html>  

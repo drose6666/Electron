@@ -123,6 +123,14 @@
          }
       }
    }
+
+   &.popup-success-order-close {
+      background: var(--light);
+
+      i {
+         color: var(--dark)
+      }
+   }
 }
 
 .ui-popup.active {

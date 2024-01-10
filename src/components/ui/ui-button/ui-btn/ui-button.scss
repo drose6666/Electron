@@ -454,6 +454,26 @@
       margin-bottom: 60px;
    }
 
+   &.order_tabs {
+      margin-bottom: 60px;
+   }
+
+   @include media (max-width, 500px) {
+      &.order_tabs,
+      &.catefory_tabs {
+         flex-direction: column;
+         align-items: end;
+         row-gap: 5px;
+         width: 100%;
+
+         .tab_category,
+         .tab_order {
+            width: 100%;
+         }
+      }
+      
+   }
+
    &::-webkit-scrollbar {
       background: var(--separating);
       width: 5px;

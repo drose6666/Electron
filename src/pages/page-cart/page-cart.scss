@@ -39,6 +39,6 @@
 
    @include media (max-width, 1000px) {
       grid-template: auto / 1fr;
-      gap: 20px;
+      gap: 40px;
    }
 }
