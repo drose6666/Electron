@@ -86,6 +86,7 @@
       }
    }
 
+   // TODO Прозрачные для сортировки
    &.dropdown_sort {
       .selected {
          padding: 0;
@@ -149,6 +150,68 @@
 
          .options {
             width: 210px;
+         }
+      }
+   }
+
+   // TODO Серые в инпутах
+   &.dropdown_tel {
+      position: absolute;
+      top: 2px;
+      left: 2px;
+
+      .selected {
+         padding: 5px;
+         width: 65px;
+         height: 46px;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         border-radius: var(--defaultRd);
+         
+         &:after {
+            display: none;
+         }
+
+         &__item {
+            font-size: 16px;
+            font-weight: 500;
+         }
+      }
+
+      .options {
+         padding: 5px;
+         background: var(--separating);
+         border-radius: var(--mdRd);
+
+         &__item {
+            font-size: 15px;
+            font-weight: 400;
+            height: 35px;
+            min-height: 35px;
+            background: transparent;
+            border-radius: var(--defaultRd);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            &:not(:last-child) {
+               margin-bottom: 3px;
+            }
+
+            &:hover {
+               background: var(--separating_contrast);
+            }
+   
+            &.current {
+               color: var(--light);
+               background: var(--dark);
+            }
+   
+            &.disabled {
+               color: var(--border);
+               background: transparent;
+            }
          }
       }
    }

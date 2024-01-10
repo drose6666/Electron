@@ -17,7 +17,7 @@
    }
 
    .delivery-info {
-      font-size: 16px;
+      font-size: 17px;
       font-weight: 300;
       line-height: 110%;
       color: var(--text_additional);
@@ -66,42 +66,69 @@
    }
 
    &.order_delivery {
-      padding: 25px 30px;
-      border: 1px solid transparent;
-      cursor: pointer;
-      transition: all .2s ease;
+      .delivery-item__container {
+         padding: 0;
+         background: transparent;
+         border: none;
+      }  
+
+      .delivery-item__custom {
+         padding: 25px 30px;
+         background: var(--separating);
+         border-radius: var(--mdRd);
+         border: 1px solid transparent;
+         cursor: pointer;
+         transition: all .3s ease;
+
+         &:hover {
+            background: var(--separating_contrast);
+         }
+      }
 
       .delivery-name {
-         margin-bottom: 5px;
-         font-size: 20px;
+         margin-bottom: 7px;
+         font-size: 22px;
          font-weight: 400;
          line-height: 100%;
          color: var(--dark);
+      }
+
+      .delivery-info {
+         font-size: 16px;
+         font-weight: 300;
+         line-height: 100%;
+   
+         .mark {
+            font-weight: 400;
+            color: var(--dark);
+         }
       }
 
       .delivery-check {
          width: 40px;
          height: 40px;
          border: 1px solid var(--text_additional);
-         border-radius: var(--circkeRd);
+         border-radius: var(--circleRd);
          background: transparent;
          display: flex;
          align-items: center;
          justify-content: center;
          position: relative;
-         transition: all .2s ease;
+         transition: all .3s ease;
 
          &:after {
             content: '\e90c';
             font-family: var(--icon_font);
             font-size: 20px;
             color: var(--light);
+            display: block;
             opacity: 0;
-            transform: translateY(-10px);
+            transform: translateY(-25px);
+            transition: all .5s ease;
          }
       }
 
-      &:has(.delivery-item__input:checked) {
+      .delivery-item__input:checked ~ .delivery-item__custom {
          border-color: var(--action);
          background: var(--action_slow);
 

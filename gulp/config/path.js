@@ -17,6 +17,7 @@ export const path = {
       'page-categoryHTML': pageHTMLPath('src', 'page-category'),
       'page-productHTML': pageHTMLPath('src', 'page-product'),
       'page-cartHTML': pageHTMLPath('src', 'page-cart'),
+      'page-orderHTML': pageHTMLPath('src', 'page-order'),
 
       indexJs: pagePath('src', 'index', 'js'),
       'page-brandsJs': pagePath('src', 'page-brands', 'js'),
@@ -24,6 +25,7 @@ export const path = {
       'page-categoryJs': pagePath('src', 'page-category', 'js'),
       'page-productJs': pagePath('src', 'page-product', 'js'),
       'page-cartJs': pagePath('src', 'page-cart', 'js'),
+      'page-orderJs': pagePath('src', 'page-order', 'js'),
 
       indexScss: pagePath('src', 'index', 'scss'), 
       'page-brandsScss': pagePath('src', 'page-brands', 'scss'),
@@ -31,6 +33,7 @@ export const path = {
       'page-categoryScss': pagePath('src', 'page-category', 'scss'),
       'page-productScss': pagePath('src', 'page-product', 'scss'),
       'page-cartScss': pagePath('src', 'page-cart', 'scss'),
+      'page-orderScss': pagePath('src', 'page-order', 'scss'),
 
       fonts: `${srcFolder}/fonts/**/*.*`,
       libs: `${srcFolder}/libs/**/*.*`,
@@ -50,6 +53,7 @@ export const path = {
       'page-categoryHTML': pageHTMLPath('dist', 'page-category'),
       'page-productHTML': pageHTMLPath('dist', 'page-product'),
       'page-cartHTML': pageHTMLPath('dist', 'page-cart'),
+      'page-orderHTML': pageHTMLPath('dist', 'page-order'),
 
       indexJs: pagePath('dist', 'index', 'js'),
       'page-brandsJs': pagePath('dist', 'page-brands', 'js'),
@@ -57,6 +61,7 @@ export const path = {
       'page-categoryJs': pagePath('dist', 'page-category', 'js'),
       'page-productJs': pagePath('dist', 'page-product', 'js'),
       'page-cartJs': pagePath('dist', 'page-cart', 'js'),
+      'page-orderJs': pagePath('dist', 'page-order', 'js'),
 
       indexScss: pagePath('dist', 'index', 'css'),
       'page-brandsScss': pagePath('dist', 'page-brands', 'css'),
@@ -64,6 +69,7 @@ export const path = {
       'page-categoryScss': pagePath('dist', 'page-category', 'css'),
       'page-productScss': pagePath('dist', 'page-product', 'css'),
       'page-cartScss': pagePath('dist', 'page-cart', 'css'),
+      'page-orderScss': pagePath('dist', 'page-order', 'css'),
 
       fonts: `${distFolder}/fonts/`,
       libs: `${distFolder}/libs/`,
@@ -81,6 +87,7 @@ export const path = {
       'page-categoryHTML': pageHTMLPath('watch', 'page-category'),
       'page-productHTML': pageHTMLPath('watch', 'page-product'),
       'page-cartHTML': pageHTMLPath('watch', 'page-cart'),
+      'page-orderHTML': pageHTMLPath('watch', 'page-order'),
 
       indexJs: pagePath('watch', null, 'js'),
       'page-brandsJs': pagePath('watch', null, 'js'),
@@ -88,6 +95,7 @@ export const path = {
       'page-categoryJs': pagePath('watch', null, 'js'),
       'page-productJs': pagePath('watch', null, 'js'),
       'page-cartJs': pagePath('watch', null, 'js'),
+      'page-orderJs': pagePath('watch', null, 'js'),
       
       indexScss: pagePath('watch', null, 'scss'),
       'page-brandsScss': pagePath('watch', null, 'scss'),
@@ -95,6 +103,7 @@ export const path = {
       'page-categoryScss': pagePath('watch', null, 'scss'),
       'page-productScss': pagePath('watch', null, 'scss'),
       'page-cartScss': pagePath('watch', null, 'scss'),
+      'page-orderScss': pagePath('watch', null, 'scss'),
       
       fonts: `${srcFolder}/fonts/**/*.*`,
       libs: `${srcFolder}/libs/**/*.*`, 

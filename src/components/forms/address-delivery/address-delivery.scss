@@ -1,0 +1,42 @@
+.address-delivery {
+   display: grid;
+   grid-template: auto / 1fr;
+   gap: var(--fields_gutter);
+
+   .grid-item {
+      display: grid;
+      grid-template: auto / 1fr 1fr;
+      gap: var(--fields_gutter);
+
+      &.unequal {
+         grid-template: auto / 1fr 180px;
+      }
+   }
+
+   .ui-form__submit {
+      margin-top: 25px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: var(--fields_gutter);
+   }
+
+   &.dark {
+      .ui-input {
+         @include uiInputTheme ( $theme: dark )
+      }
+   }
+
+   @include media (max-width, 550px) {
+      .grid-item, .grid-item.unequal {
+         grid-template: auto / 1fr;
+      }
+   }
+
+   @include media (max-width, 360px) {
+      .ui-form__submit {
+         flex-direction: column;
+         justify-content: center;
+      }
+   }
+}

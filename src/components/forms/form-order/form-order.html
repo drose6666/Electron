@@ -1,0 +1,61 @@
+<form action="" class="form-order step-order">
+   <div class="form-column">
+      <!-- Контакты -->
+      <fieldset class="order-fieldset">
+         <legend class="fieldset-title">Контакты</legend>
+
+         <div class="fields-group">
+            <div class="ui-form-item">
+               <input type="email" name="user_email" inputmode="email" autocomplete="email" placeholder="Email" class="ui-input">
+               <span class="error-message"></span>
+            </div>
+
+            <div class="ui-form-item form-item_tel">
+               <div class="ui-dropdown dropdown_tel"></div>
+               <input type="tel" name="user_tel" inputmode="tel" autocomplete="tel" placeholder="Телефон" class="ui-input">
+               <span class="error-message"></span>
+            </div>
+
+            <div class="ui-form-item">
+               <input type="text" name="user_name" inputmode="text" autocomplete="given-name" placeholder="Имя" class="ui-input ">
+               <span class="error-message"></span>
+            </div>
+
+            <div class="ui-form-item">
+               <input type="text" name="user_surname" inputmode="text" autocomplete="family-name" placeholder="Фамилия" class="ui-input ">
+               <span class="error-message"></span>
+            </div>
+         </div>
+      </fieldset>
+
+      <!-- Способ доставки -->
+      <fieldset class="order-fieldset delivery_fieldset">
+         <legend class="fieldset-title">Способ доставки</legend>
+
+         <div class="delivery-list order_delivery-list"></div>
+         <!-- @@include('../../delivery/delivery-item-order.html') -->
+      </fieldset>
+
+      <!-- Адрес доставки -->
+      <fieldset class="order-fieldset">
+         <legend class="fieldset-title">Адрес доставки</legend>
+
+         <div class="address-delivery">
+            @@include('../address-delivery/address-delivery.html')
+         </div>
+      </fieldset>
+   </div>
+
+   <div class="form-column">
+      <!-- Комментарий -->
+      <fieldset class="order-fieldset">
+         <legend class="fieldset-title">Комментарий</legend>
+
+         <div class="ui-form-item full-width">
+            <textarea name="user_comment" placeholder="Комментарий" class="ui-textarea "></textarea>
+         </div>
+      </fieldset>
+
+      @@include('../../shopping-cart/shopping-cart-info.html')
+   </div>
+</form>

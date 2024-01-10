@@ -70,26 +70,31 @@
    // }
 }
 
-.theme_dark {
-   @include uiInputTheme ( $theme: dark )
-}
-
-
 .ui-input {
    @include uiInput;
+   @include uiInputTheme ( $theme: light );
+
+   &.dark {
+      @include uiInputTheme ( $theme: dark )
+   }
 }
 
 
 .ui-textarea {
    @include uiInput ( $paddingY: 16px, $height: auto );
+   @include uiInputTheme ( $theme: light );
 
    padding-top: 16px;
    border-radius: var(--mdRd);
    min-height: 120px;
+
+   &.dark {
+      @include uiInputTheme ( $theme: dark )
+   }
 }
 
 
-// NOTE input числового значения рейтинга в форме отзыва
+// TODO input числового значения рейтинга в форме отзыва
 .input_rating {
    @include uiInput ( 
       $paddingLeft: 5px,
@@ -103,15 +108,13 @@
 }
 
 
-// NOTE Инпут Подписки на уведомления
+// TODO Инпут Подписки на уведомления
 .input_subscribeSearch {
    @include uiInput ( $paddingRight: 180px, $height: 54px );
    @include uiInputTheme ( $theme: dark );
 }
 
-
-
-
+// TODO Пароль
 .input_password {
    & + .password-control {
       display: inline-block;
@@ -160,6 +163,7 @@
 }
 
 
+// TODOD
 .element-inside-input {
    position: absolute;
    top: 2px;

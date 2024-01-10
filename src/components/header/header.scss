@@ -50,7 +50,7 @@ header {
       }
 
       .logo {
-         max-width: clamp(150px, 30cqi, 190px);
+         max-width: clamp(120px, 40cqi, 190px);
       }
    }
 
@@ -60,9 +60,9 @@ header {
       }
    }
 
-   @include media(max-width, 400px) {
+   @include media(max-width, 320px) {
       .logo, &.sticky .logo {
-         max-width: 60px;
+         max-width: 50px;
       }
    }
 }
