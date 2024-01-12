@@ -1,0 +1,51 @@
+.policy-text {
+   font-size: 18px;  
+   font-weight: 300;
+   line-height: 150%;
+   color: var(--text_additional);
+}
+
+.policy-list {
+   list-style: none;
+   list-style-position: outside;
+   counter-reset: li;
+
+   .list-item:before {
+      content: counters(li, ".") ". ";
+      counter-increment: li;
+      color: var(--light);
+   }
+
+   &.list_1 {
+      margin: 40px 0;
+      padding: 40px 0;
+      border-top: 1px solid var(--border_dark);
+      border-bottom: 1px solid var(--border_dark);
+
+      & > .list-item {
+         font-size: 25px;
+         font-weight: 500;
+         line-height: 110%;
+         color: var(--light);
+
+         &:not(:last-child) {
+            margin-bottom: 30px;
+         }
+      }
+   }
+
+   &.list_2 {
+      margin-top: 15px;
+
+      & > .list-item {
+         font-size: 15px;
+         font-weight: 300;
+         line-height: 150%;
+         color: var(--text_additional);
+
+         &:not(:last-child) {
+            margin-bottom: 15px;
+         }
+      }
+   }
+}

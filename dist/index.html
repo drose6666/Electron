@@ -22,16 +22,16 @@
    <link rel="icon" href="../../img/favicon/fav_48.png" type="image/png" sizes="48x48">
    <link rel="icon" href="../../img/favicon/fav_128.png" type="image/png" sizes="128x128">
    
-   <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css?_v=20240110222317" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
-   <!-- <link rel="stylesheet" href="../../libs/css/bootstrap-grid.min.css?_v=20240110222317"> -->
+   <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css?_v=20240112201336" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+   <!-- <link rel="stylesheet" href="../../libs/css/bootstrap-grid.min.css?_v=20240112201336"> -->
 
-   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css?_v=20240110222317" />
-   <script defer src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js?_v=20240110222317"></script>
-   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js?_v=20240110222317" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-   <link rel="stylesheet" href="../../libs/css/reset.min.css?_v=20240110222317">
-   <link rel="stylesheet" as="font" href="../../fonts/fonts.css?_v=20240110222317">
-   <link rel="stylesheet" as="font" href="../../fonts/icon-font.css?_v=20240110222317">
-   <link rel="stylesheet" href="./pages/index/css/index.min.css?_v=20240110222317">
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css?_v=20240112201336" />
+   <script defer src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js?_v=20240112201336"></script>
+   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js?_v=20240112201336" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+   <link rel="stylesheet" href="../../libs/css/reset.min.css?_v=20240112201336">
+   <link rel="stylesheet" as="font" href="../../fonts/fonts.css?_v=20240112201336">
+   <link rel="stylesheet" as="font" href="../../fonts/icon-font.css?_v=20240112201336">
+   <link rel="stylesheet" href="./pages/index/css/index.min.css?_v=20240112201336">
    
    <title>Electron</title>
 </head>
@@ -572,7 +572,7 @@
 </form>
 
          <p class="warning-text">
-            Подписываясь на обновления, Вы соглашаетесь с нашей <strong class="hoverLinks">политикой конфиденциальности</strong>
+            Подписываясь на обновления, Вы соглашаетесь с нашей <strong class="hoverLinks btn_policy">политикой конфиденциальности</strong>
          </p>
       </div>
 
@@ -710,7 +710,7 @@
    </div>
 
    <div class="rules">
-      <span class="rules__link hoverLinks">Политика конфиденциальности</span>
+      <span class="rules__link hoverLinks btn_policy">Политика конфиденциальности</span>
       <span class="rules__link hoverLinks">Правила и условия</span>
    </div>
 
@@ -738,7 +738,7 @@
 
             <ul class="additional-list menu_close">
                <li class="additional-item"><span class="child">Правила и условия</span></li>
-               <li class="additional-item"><span class="child">Политика конфиденциальности</span></li>
+               <li class="additional-item btn_policy"><span class="child">Политика конфиденциальности</span></li>
             </ul>
          </li>
 
@@ -1433,7 +1433,7 @@
       <div class="ui-form-submit">
          <button type="submit" class="btn_primary-action">Оставить отзыв</button>
    
-         <p class="ui-form-submit__text">Конфиденциальность введенных данных гарантируется</p>
+         <p class="ui-form-submit__text btn_policy">Конфиденциальность введенных данных гарантируется</p>
       </div>
    </div>
 </form>
@@ -1743,7 +1743,7 @@
       <span class="error-message"></span>
    </div>
 
-   <p class="warning-text">Нажимая кнопку ниже, вы соглашаетесь с условиями <strong class="btn_privacy-policy">политики конфиденциальности</strong></p>
+   <p class="warning-text">Нажимая кнопку ниже, вы соглашаетесь с условиями <strong class="btn_privacy-policy btn_policy">политики конфиденциальности</strong></p>
 
    <div class="ui-form-submit">
       <button type="submit" class="btn_primary-action">Создать аккаунт</button>
@@ -1783,9 +1783,47 @@
    <div class="ui-popup__overlay" id="overlay-login"></div>
 </div>
 <!-- End popup login-->
+      <!-- popup send-review (popup оставить отзыв товару/магазину) -->
+<div class="ui-popup popup" id="popup-policy">
+   <div class="ui-popup__container">
+
+      <!-- Здесь контент -->
+      <h2 class="ui-popup__title">Политика конфиденциальности</h2>
+
+      <p class="policy-text">Настоящая Политика конфиденциальности устанавливает порядок сбора, использования, раскрытия и защиты информации, предоставляемой пользователями во время использования нашего интернет-магазина электроники. Мы стремимся обеспечить максимальную прозрачность и безопасность в обработке ваших персональных данных.</p>
+
+      <ol class="policy-list list_1">
+         <li class="list-item">
+            Сбор и использование информации
+            <ol class="policy-list list_2">
+               <li class="list-item">При посещении нашего сайта автоматически записываются данные, включая IP-адрес, браузер, время доступа и просмотренные страницы. Эти данные используются для анализа статистики посещения и улучшения работы сайта.</li>
+               <li class="list-item">При регистрации и оформлении заказа мы запрашиваем ваши персональные данные, такие как имя, адрес электронной почты, телефон и адрес доставки. Эти данные используются для обработки заказов и связи с вами.</li>
+            </ol>
+         </li>
+
+         <li class="list-item">
+            Защита информации
+            <ol class="policy-list list_2">
+               <li class="list-item">Мы предпринимаем все необходимые меры для обеспечения безопасности ваших данных, используя современные технологии шифрования и защиты.</li>
+               <li class="list-item">При регистрации и оформлении заказа мы запрашиваем ваши персональные данные, такие как имя, адрес электронной почты, телефон и адрес доставки. Эти данные используются для обработки заказов и связи с вами.</li>
+            </ol>
+         </li>
+      </ol>
+
+      <p class="policy-text">Эта Политика конфиденциальности регулируется законодательством Российской Федерации и может быть пересмотрена и обновлена без предварительного уведомления. Пожалуйста, периодически проверяйте эту страницу для получения актуальной информации.</p>
+      <!-- Здесь контент -->
+
+      <div class="ui-close close_popup popup-policy-close">
+   <i class="i-close"></i>
+</div>
+   </div>
+
+   <div class="ui-popup__overlay" id="overlay-policy"></div>
+</div>
+<!-- End popup send-review -->
       
       
       
-      <script type="module" src="./pages/index/js/bundle-index.min.js?_v=20240110222317"></script>
+      <script type="module" src="./pages/index/js/bundle-index.min.js?_v=20240112201336"></script>
    </body>
 </html>  
