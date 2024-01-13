@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+   @@include('../../components/head/head.html', {
+      "mainCss": "css/page-contact.min.css",
+      "title": "Контакты"
+   })
+   <body>
+      @@include('../../components/ui/ui-preloader/ui-preloader.html')
+      @@include('../../components/header/header-top/header-top.html')
+      @@include('../../components/header/header.html')
+
+      <main>
+         <section class="contact-section">
+            <div class="ui-container contact-section__container">
+               <div class="contact">
+                  <div class="contact__wrap">
+                     <div class="contact__info">
+                        <h1 class="contact__info__title">Мы ждем вас!</h1>
+                        <p class="contact__info__text">Мы всегда рады сотрудничеству! Оказываем своевременную поддержку и хорошо относимся к конструктивной критике. Постоянно совершенствуемся и ищем новые подходы для того, чтобы становиться лучше для Вас!</p>
+                        @@include('../../components/socials/socials.html', {
+                           "className": "socials_contact"
+                        })
+                     </div>
+
+                     @@include('../../components/forms/form-contact/form-contact.html')
+                  
+                     <video class="contact_bg" loading="lazy" autoplay muted loop src="../../img/about/about_6.mp4"></video>
+                  </div>
+
+                  <div class="contact__details">
+                     <div class="contact__details__item">
+                        <div class="item-container">
+                           <div class="icon"><i class="i-clock_fill"></i></div>
+                           <h5 class="item-title">Пн-Пт: 06:00-23:00</h5>
+                           <p class="item-text">Мы быстро обрабатываем поступающие на почту письма, поэтому пишите в любое время. Мы всегда на связи!</p>
+                        </div>
+                     </div>
+                     
+                     <a href="" class="contact__details__item">
+                        <div class="item-container">
+                           <div class="icon"><i class="i-phone-fill"></i></div>
+                           <h5 class="item-title">+8 953 370 88 11</h5>
+                           <p class="item-text">Звоните по любым интересующим Вас вопросам. Мы обязательно Вам поможем и предоставим аткуальную информацию</p>
+                        </div>
+                     </a>
+
+                     <a href="" class="contact__details__item">
+                        <div class="item-container">
+                           <div class="icon"><i class="i-mail"></i></div>
+                           <h5 class="item-title">electronics.info@yandex.com</h5>
+                           <p class="item-text">Мы быстро обрабатываем поступающие на почту письма, поэтому пишите в любое время. Мы всегда на связи!</p>
+                        </div>
+                     </a>
+                  </div>
+               </div>
+            </div>
+         </section>
+      </main>
+
+      @@include('../../components/footer/footer.html')
+      @@include('../../components/menu/mobile-menu/mobile-menu.html')
+      @@include('../../components/popups/fade-side/popup-search/popup-search.html')
+      @@include('../../components/popups/fade-side/popup-cart/popup-cart.html')
+      @@include('../../components/popups/fade-side/popup-login/popup-login.html')
+      @@include('../../components/popups/popup-policy/popup-policy.html')
+      
+      <script type="module" src="js/bundle-page-contact.min.js"></script>
+   </body>
+</html>  

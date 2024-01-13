@@ -250,3 +250,10 @@
    @include uiInput;
    @include uiInputTheme( $theme: dark )
 }
+
+
+.form-item_tel {
+   .ui-input {
+      padding-left: 87px;
+   }
+}

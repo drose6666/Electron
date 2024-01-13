@@ -18,6 +18,8 @@ export const path = {
       'page-productHTML': pageHTMLPath('src', 'page-product'),
       'page-cartHTML': pageHTMLPath('src', 'page-cart'),
       'page-orderHTML': pageHTMLPath('src', 'page-order'),
+      'page-contactHTML': pageHTMLPath('src', 'page-contact'),
+      'page-informationHTML': pageHTMLPath('src', 'page-information'),
 
       indexJs: pagePath('src', 'index', 'js'),
       // 'page-brandsJs': pagePath('src', 'page-brands', 'js'),
@@ -26,6 +28,8 @@ export const path = {
       'page-productJs': pagePath('src', 'page-product', 'js'),
       'page-cartJs': pagePath('src', 'page-cart', 'js'),
       'page-orderJs': pagePath('src', 'page-order', 'js'),
+      'page-contactJs': pagePath('src', 'page-contact', 'js'),
+      'page-informationJs': pagePath('src', 'page-information', 'js'),
 
       indexScss: pagePath('src', 'index', 'scss'), 
       // 'page-brandsScss': pagePath('src', 'page-brands', 'scss'),
@@ -34,6 +38,8 @@ export const path = {
       'page-productScss': pagePath('src', 'page-product', 'scss'),
       'page-cartScss': pagePath('src', 'page-cart', 'scss'),
       'page-orderScss': pagePath('src', 'page-order', 'scss'),
+      'page-contactScss': pagePath('src', 'page-contact', 'scss'),
+      'page-informationScss': pagePath('src', 'page-information', 'scss'),
 
       fonts: `${srcFolder}/fonts/**/*.*`,
       libs: `${srcFolder}/libs/**/*.*`,
@@ -54,6 +60,8 @@ export const path = {
       'page-productHTML': pageHTMLPath('dist', 'page-product'),
       'page-cartHTML': pageHTMLPath('dist', 'page-cart'),
       'page-orderHTML': pageHTMLPath('dist', 'page-order'),
+      'page-contactHTML': pageHTMLPath('dist', 'page-contact'),
+      'page-informationHTML': pageHTMLPath('dist', 'page-information'),
 
       indexJs: pagePath('dist', 'index', 'js'),
       // 'page-brandsJs': pagePath('dist', 'page-brands', 'js'),
@@ -62,6 +70,8 @@ export const path = {
       'page-productJs': pagePath('dist', 'page-product', 'js'),
       'page-cartJs': pagePath('dist', 'page-cart', 'js'),
       'page-orderJs': pagePath('dist', 'page-order', 'js'),
+      'page-contactJs': pagePath('dist', 'page-contact', 'js'),
+      'page-informationJs': pagePath('dist', 'page-information', 'js'),
 
       indexScss: pagePath('dist', 'index', 'css'),
       // 'page-brandsScss': pagePath('dist', 'page-brands', 'css'),
@@ -70,6 +80,8 @@ export const path = {
       'page-productScss': pagePath('dist', 'page-product', 'css'),
       'page-cartScss': pagePath('dist', 'page-cart', 'css'),
       'page-orderScss': pagePath('dist', 'page-order', 'css'),
+      'page-contactScss': pagePath('dist', 'page-contact', 'css'),
+      'page-informationScss': pagePath('dist', 'page-information', 'css'),
 
       fonts: `${distFolder}/fonts/`,
       libs: `${distFolder}/libs/`,
@@ -88,6 +100,8 @@ export const path = {
       'page-productHTML': pageHTMLPath('watch', 'page-product'),
       'page-cartHTML': pageHTMLPath('watch', 'page-cart'),
       'page-orderHTML': pageHTMLPath('watch', 'page-order'),
+      'page-contactHTML': pageHTMLPath('watch', 'page-contact'),
+      'page-informationHTML': pageHTMLPath('watch', 'page-information'),
 
       indexJs: pagePath('watch', null, 'js'),
       // 'page-brandsJs': pagePath('watch', null, 'js'),
@@ -96,6 +110,8 @@ export const path = {
       'page-productJs': pagePath('watch', null, 'js'),
       'page-cartJs': pagePath('watch', null, 'js'),
       'page-orderJs': pagePath('watch', null, 'js'),
+      'page-contactJs': pagePath('watch', null, 'js'),
+      'page-informationJs': pagePath('watch', null, 'js'),
       
       indexScss: pagePath('watch', null, 'scss'),
       // 'page-brandsScss': pagePath('watch', null, 'scss'),
@@ -104,6 +120,8 @@ export const path = {
       'page-productScss': pagePath('watch', null, 'scss'),
       'page-cartScss': pagePath('watch', null, 'scss'),
       'page-orderScss': pagePath('watch', null, 'scss'),
+      'page-contactScss': pagePath('watch', null, 'scss'),
+      'page-informationScss': pagePath('watch', null, 'scss'),
       
       fonts: `${srcFolder}/fonts/**/*.*`,
       libs: `${srcFolder}/libs/**/*.*`, 

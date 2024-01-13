@@ -94,6 +94,31 @@
       }
    }
 
+   &.socials_contact {
+      a {
+         border-color: transparent;
+         background: transparent;
+
+         i {
+            color: var(--light);
+         }
+
+         &:hover {
+            background: var(--dark);
+            border-color: var(--dark);
+
+            i {
+               color: var(--action);
+            }
+         }
+      }
+
+      @container contact (max-width: 1145px) {
+         width: 100%;
+         justify-content: center;
+      }
+   }
+
    &.socials_header {
       gap: 5px;
 

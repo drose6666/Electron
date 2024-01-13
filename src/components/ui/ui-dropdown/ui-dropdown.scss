@@ -175,7 +175,7 @@
 
          &__item {
             font-size: 16px;
-            font-weight: 500;
+            font-weight: 400;
          }
       }
 
@@ -211,6 +211,34 @@
             &.disabled {
                color: var(--border);
                background: transparent;
+            }
+         }
+      }
+
+      &.dark {
+         .selected {
+            background: var(--ui_darker);
+            
+            &__item {
+               color: var(--light);
+            }
+         }
+
+         .options {
+            background: var(--ui_dark);
+
+            &__item {
+               color: var(--light); 
+
+               &:hover {
+                  background: var(--ui_darker);
+                  color: var(--light);
+               }
+      
+               &.current {
+                  color: var(--light);
+                  background: var(--ui_darker);
+               }
             }
          }
       }

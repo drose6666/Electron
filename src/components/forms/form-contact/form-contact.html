@@ -1,0 +1,39 @@
+<div class="contact__form__wrap">
+   <form action="" class="contact__form">
+      <h3 class="contact__form__title">Остались вопросы?</h3>
+      <p class="contact__form__subtitle">Если у Вас остались вопросы, предложения или пожелания, можете написать об этом, заполнив форму ниже. <br> <strong>Мы всегда рады общению!</strong></p>
+
+      <fieldset class="fields-group">
+         <div class="ui-form-item">
+            <input type="text" name="user_name" inputmode="text" autocomplete="given-name" placeholder="Имя" class="ui-input dark">
+            <span class="error-message"></span>
+         </div>
+
+         <div class="ui-form-item">
+            <input type="email" name="user_email" inputmode="email" autocomplete="email" placeholder="Email" class="ui-input dark">
+            <span class="error-message"></span>
+         </div>
+
+         <div class="ui-form-item form-item_tel full-width">
+            <div class="ui-dropdown dropdown_tel dark"></div>
+            <input type="tel" name="user_tel" inputmode="tel" autocomplete="tel" placeholder="Телефон" class="ui-input dark">
+            <span class="error-message"></span>
+         </div>
+
+         <div class="ui-form-item full-width">
+            <textarea name="user_message" placeholder="Сообщение" class="ui-textarea dark"></textarea>
+            <span class="error-message"></span>
+         </div>
+
+         <div class="ui-form-submit full-width">
+            @@include('../../ui/ui-button/ui-btn/ui-button.html', {
+               "type": "submit",
+               "text": "Отправить",
+               "className": "btn_primary-action"
+            })
+
+            <p class="warning-text">Отправляя форму, вы соглашаетесь с условиями <strong class="btn_policy">политики конфиденциальности</strong></p>
+         </div>
+      </fieldset>
+   </form>
+</div>
