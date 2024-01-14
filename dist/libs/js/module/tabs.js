@@ -8,6 +8,6 @@ export default function Tabs ({ visible, collapse, firstHide = false}) {
       
    $(visible).on('click', function () {
       $(visible).removeClass('active').eq($(this).index()).addClass('active');
-      $(collapse).hide().removeClass('active').eq($(this).index()).fadeIn('500').addClass('active');
+      $(collapse).hide().removeClass('active').eq($(this).index()).fadeIn('1000').addClass('active');
    })
 }
