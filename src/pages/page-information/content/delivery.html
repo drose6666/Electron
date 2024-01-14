@@ -1,0 +1,48 @@
+<ul class="info-content">
+   <li class="info-content__item item_delivery">
+      <div class="item-container">
+         <h4 class="item-title">Доставка курьером</h4>
+         <p class="item-text">В течении 3-х дней</p>
+         <span class="item-price">0.00 ₽</span>
+      </div>
+   </li>
+
+   <li class="info-content__item item_delivery">
+      <div class="item-container">
+         <h4 class="item-title">Забрать в магазине</h4>
+         <p class="item-text">Самовывоз. Пн-Вс: 09:00-20:00</p>
+         <span class="item-price">0.00 ₽</span>
+      </div>
+   </li>
+
+   <li class="info-content__item item_delivery">
+      <div class="item-container">
+         <h4 class="item-title">Yandex.Доставка</h4>
+         <p class="item-text">Расчитывается исходя из региона доставки</p>
+         @@include('../../../components/ui/ui-button/ui-btn/ui-button.html', {
+            "text": "Рассчитать",
+            "type": "button",
+            "className": "btn_ui-dark btn_delivery"
+         })
+      </div>
+   </li>
+
+   <li class="info-content__item item_preorder">
+      <div class="item-container">
+         <h4 class="item-title">Предзаказ</h4>
+         <p class="item-text">Если товара нет в наличии, Вы можете сделать предзаказ на сайте, нажав на кнопку “Заказать” или связаться с менеджером, нажав на “Заказать звонок”.</p>
+      </div>
+   </li>
+
+   <li class="info-content__item item_contact">
+      <div class="item-container">
+         <p class="item-text">Если перечисленные способы доставки Вам не подходят и Вы хотите предложить более удобный для Вас способ получения товара, свяжитесь с нами, и мы поможем Вам</p>
+         
+         @@include('../../../components/ui/ui-button/ui-btn/ui-button-link.html', {
+            "link": "../../../pages/page-contact/page-contact.html",
+            "text": "Связаться с нами",
+            "className": "btn_ui-action info_btn"
+         })
+      </div>
+   </li>
+</ul>

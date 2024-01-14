@@ -1,0 +1,121 @@
+@import '../../scss/common';
+@import '../../components/ui/ui-breadcrumbs/ui-breadcrumbs';
+@import '../../components/shopping-cart/shopping-cart-info';
+
+
+.information-section {
+   margin-bottom: var(--section_gutter);
+
+   .info-content {
+      display: grid;
+      grid-template: auto / repeat(3, 1fr);
+      gap: 20px;
+
+      &__item {
+         display: flex;
+         container-name: infoItem;
+         container-type: inline-size;
+
+         &.item_contact {
+            .item-container {
+               padding: 30px clamp(15px, 10cqi, 30px);
+               background: var(--dark);
+            }
+
+            .item-text {
+               color: var(--text_additional);
+               max-width: 420px;
+            }
+         }
+
+         &.item_delivery {
+            .item-title {
+               margin-bottom: 10px;
+            }
+
+            .item-text {
+               margin-bottom: 40px;
+               line-height: 110%;
+            }
+
+            .item-price {
+               font-size: 35px;
+               font-weight: 500;
+               line-height: 100%;
+               color: var(--dark);
+            }
+         }
+
+         &.item_preorder {
+            .item-container {
+               background: var(--action_slow);
+            }
+
+            .item-text, .item-title {
+               color: #600A0A;
+            }
+         }
+      }
+
+      .item-container {
+         padding: 30px clamp(15px, 6cqi, 30px);
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         border-radius: var(--mdRd);
+         background: var(--separating);
+         width: 100%;
+      }
+
+      .item-title {
+         margin: 0 auto 20px auto;
+         font-size: 28px;
+         font-weight: 500;
+         line-height: 100%;
+         color: var(--dark);
+         text-align: center;
+      }
+
+      .item-text {
+         font-size: 16px;
+         font-weight: 300;
+         line-height: 130%;
+         color: var(--dark);
+         text-align: center;
+         max-width: 380px;
+         flex: 0 0 auto;
+      }
+
+      .info_btn {
+         margin-top: 20px;
+      }
+
+      &.col-2 {
+         grid-template: auto / repeat(2, 1fr);
+
+         .item-text {
+            max-width: 470px;
+         }
+      }
+
+      @include media (max-width, 1000px) {
+         grid-template: auto / repeat(2, 1fr);
+      }
+
+      @include media (max-width, 690px) {
+         grid-template: auto / 1fr;
+
+         &.col-2 {
+            grid-template: auto / 1fr;
+         }
+
+         .item-text, &.col-2 .item-text {
+            max-width: 450px;
+         }
+
+         .item-title {
+            font-size: clamp(26px, 10cqi, 28px);
+         }
+      }
+   }
+}

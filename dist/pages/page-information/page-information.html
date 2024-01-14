@@ -31,9 +31,9 @@
    <link rel="stylesheet" href="../../libs/css/reset.min.css?_v=20240114093106">
    <link rel="stylesheet" as="font" href="../../fonts/fonts.css?_v=20240114093106">
    <link rel="stylesheet" as="font" href="../../fonts/icon-font.css?_v=20240114093106">
-   <link rel="stylesheet" href="css/page-category.min.css?_v=20240114093106">
+   <link rel="stylesheet" href="css/page-information.min.css?_v=20240114093106">
    
-   <title>Категории</title>
+   <title>Информация</title>
 </head>
 
    <body>
@@ -218,157 +218,174 @@
       <main>
          <section class="page-head-section page_category">
             <div class="ui-container">
-               <h1 class="ui-page-title ">Комплектующие</h1>
+               <h1 class="ui-page-title ">Информация</h1>
    
                <div class="ui-breadcrumbs">
                   <a href="/" class="ui-breadcrumbs-item basicHoverUnderline breadcrumbs_link">
    <span class="child">Главная</span>
 </a>
-                  <span class="ui-breadcrumbs-item">Комплектующие</span>
+                  <span class="ui-breadcrumbs-item">Информация</span>
                </div>
             </div>
 
             <img src="../../img/categories/page_category_bg_2.webp" alt="" class="page-head__bg">
          </section>
+         
+         <section class="information-section">
+            <div class="ui-container contact-section__container">
+               <ul class="ui-tabs product_tabs">
+                  <li class="ui-tab tab_lg info_tab active">Доставка</li>
+                  <li class="ui-tab tab_lg info_tab">Ремонт и обслуживание</li>
+                  <li class="ui-tab tab_lg info_tab">Гарантия</li>
+                  <li class="ui-tab tab_lg info_tab">Условия возврата</li>
+               </ul>
 
-         <section class="subcategory-section">
-            <div class="ui-container">
-               <div class="ui-tabs catefory_tabs">
-                  <button type="button" class="ui-tab tab_category active">Для ноутбуков и ПК</button><button type="button" class="ui-tab tab_category">Для смартфонов</button>
+               <div class="content-wrap">
+                  <ul class="info-content">
+   <li class="info-content__item item_delivery">
+      <div class="item-container">
+         <h4 class="item-title">Доставка курьером</h4>
+         <p class="item-text">В течении 3-х дней</p>
+         <span class="item-price">0.00 ₽</span>
+      </div>
+   </li>
+
+   <li class="info-content__item item_delivery">
+      <div class="item-container">
+         <h4 class="item-title">Забрать в магазине</h4>
+         <p class="item-text">Самовывоз. Пн-Вс: 09:00-20:00</p>
+         <span class="item-price">0.00 ₽</span>
+      </div>
+   </li>
+
+   <li class="info-content__item item_delivery">
+      <div class="item-container">
+         <h4 class="item-title">Yandex.Доставка</h4>
+         <p class="item-text">Расчитывается исходя из региона доставки</p>
+         <button type="button" class="btn_ui-dark btn_delivery">Рассчитать</button>
+      </div>
+   </li>
+
+   <li class="info-content__item item_preorder">
+      <div class="item-container">
+         <h4 class="item-title">Предзаказ</h4>
+         <p class="item-text">Если товара нет в наличии, Вы можете сделать предзаказ на сайте, нажав на кнопку “Заказать” или связаться с менеджером, нажав на “Заказать звонок”.</p>
+      </div>
+   </li>
+
+   <li class="info-content__item item_contact">
+      <div class="item-container">
+         <p class="item-text">Если перечисленные способы доставки Вам не подходят и Вы хотите предложить более удобный для Вас способ получения товара, свяжитесь с нами, и мы поможем Вам</p>
+         
+         <a href="../../../pages/page-contact/page-contact.html" class="btn_ui-action info_btn">Связаться с нами</a>
+      </div>
+   </li>
+</ul>
+                  <ul class="info-content col-2">
+   <li class="info-content__item">
+      <div class="item-container">
+         <h4 class="item-title">Обслуживание</h4>
+         <p class="item-text">Мы предоставляем  улуги по обслуживанию техники, приобретенной как у нас, так и в других магазинах. Свяжитесь с нами для более подробной информации</p>
+         
+         <a href="../../../pages/page-contact/page-contact.html" class="btn_ui-dark info_btn">Связаться с нами</a>
+      </div>
+   </li>
+
+   <li class="info-content__item">
+      <div class="item-container">
+         <h4 class="item-title">Ремонт</h4>
+         <p class="item-text">Мы также ремонтируем технику, приобретенную как у нас, так и в других магазинах. Для более подробной инофрмации свяжитесь с нашим менеджером</p>
+         
+         <a href="../../../pages/page-contact/page-contact.html" class="btn_ui-dark info_btn">Связаться с нами</a>
+      </div>
+   </li>
+</ul>
+                  <ul class="info-content">
+   <li class="info-content__item">
+      <div class="item-container">
+         <h4 class="item-title">Полная поддержка</h4>
+         <p class="item-text">Мы гарантируем, что в случае неисправности устройства, Вы можете обратиться к нам. Наши специалисты проведут диагностику и выполнят ремонт</p>
+      </div>
+   </li>
+
+   <li class="info-content__item">
+      <div class="item-container">
+         <h4 class="item-title">Защита покупателя</h4>
+         <p class="item-text">Ваша покупка защищена от дефектов и недостатков. Если в течение гарантийного периода возникнет проблема с товаром, мы предоставим вам замену или ремонт</p>
+      </div>
+   </li>
+
+   <li class="info-content__item">
+      <div class="item-container">
+         <h4 class="item-title">Прозрачные условия</h4>
+         <p class="item-text">Все условия гарантии указаны в гарантийном талоне, который вы получаете вместе с товаром. Мы стремимся сделать наши условия максимально понятными</p>
+      </div>
+   </li>
+
+   <li class="info-content__item">
+      <div class="item-container">
+         <h4 class="item-title">Простота и удобство</h4>
+         <p class="item-text">Процесс обращения по гарантии у нас максимально удобен для вас. Вы всегда можете обратиться к нам, и мы оперативно поможем вам решить любую проблему</p>
+      </div>
+   </li>
+
+   <li class="info-content__item item_contact">
+      <div class="item-container">
+         <p class="item-text">Если перечисленные способы доставки Вам не подходят и Вы хотите предложить более удобный для Вас способ получения товара, свяжитесь с нами, и мы поможем Вам</p>
+         
+         <a href="../../../pages/page-contact/page-contact.html" class="btn_ui-action info_btn">Связаться с нами</a>
+      </div>
+   </li>
+</ul>
+                  <ul class="info-content">
+   <li class="info-content__item">
+      <div class="item-container">
+         <h4 class="item-title">Сроки возврата</h4>
+         <p class="item-text">Вы можете вернуть товар в течение 14 дней с момента покупки. Вернуть можно товар, который не был использован, имеет сохраненную упаковку и оригинальные ярлыки</p>
+      </div>
+   </li>
+
+   <li class="info-content__item">
+      <div class="item-container">
+         <h4 class="item-title">Оригинальная упаковка</h4>
+         <p class="item-text">Мы просим вернуть товар в оригинальной упаковке. Это поможет нам убедиться в сохранности товара и его комплектации</p>
+      </div>
+   </li>
+
+   <li class="info-content__item">
+      <div class="item-container">
+         <h4 class="item-title">Гарантийный талон</h4>
+         <p class="item-text">Пожалуйста, верните товар вместе с гарантийным талоном. Это позволит нам быстрее обработать ваш запрос</p>
+      </div>
+   </li>
+
+   <li class="info-content__item">
+      <div class="item-container">
+         <h4 class="item-title">Процесс возврата</h4>
+         <p class="item-text">Для возврата товара свяжитесь с нами удобным для Вас способом. Мы предоставим вам необходимую информацию о процедуре возврата и адрес для отправки</p>
+      </div>
+   </li>
+
+   <li class="info-content__item">
+      <div class="item-container">
+         <h4 class="item-title">Состояние товара</h4>
+         <p class="item-text">Мы оценим состояние товара при его возврате. Если товар был использован или имеет повреждения, мы оставляем за собой право удержать определенную сумму в качестве компенсации</p>
+      </div>
+   </li>
+
+   <li class="info-content__item item_contact">
+      <div class="item-container">
+         <p class="item-text">Если перечисленные способы доставки Вам не подходят и Вы хотите предложить более удобный для Вас способ получения товара, свяжитесь с нами, и мы поможем Вам</p>
+         
+         <a href="../../../pages/page-contact/page-contact.html" class="btn_ui-action info_btn">Связаться с нами</a>
+      </div>
+   </li>
+</ul>
                </div>
-
-               <!-- Module Subcategory list (page category) -->
-<div class="subcategory-list">
-   <a href="../../pages/page-category/page-category.html" class="subcategory-card">
-   <div class="subcategory-card__container">
-      <div class="subcategory-card__img">
-         <img src="../../img/subcategory/subcategory_1.webp" alt="">
-      </div>
-
-      <h4 class="subcategory-card__name">Процессоры</h4>
-   </div>
-</a><a href="../../pages/page-category/page-category.html" class="subcategory-card">
-   <div class="subcategory-card__container">
-      <div class="subcategory-card__img">
-         <img src="../../img/subcategory/subcategory_2.webp" alt="">
-      </div>
-
-      <h4 class="subcategory-card__name">Видеокарты</h4>
-   </div>
-</a><a href="../../pages/page-category/page-category.html" class="subcategory-card">
-   <div class="subcategory-card__container">
-      <div class="subcategory-card__img">
-         <img src="../../img/subcategory/subcategory_3.webp" alt="">
-      </div>
-
-      <h4 class="subcategory-card__name">Системы охлаждения</h4>
-   </div>
-</a><a href="../../pages/page-category/page-category.html" class="subcategory-card">
-   <div class="subcategory-card__container">
-      <div class="subcategory-card__img">
-         <img src="../../img/subcategory/subcategory_4.webp" alt="">
-      </div>
-
-      <h4 class="subcategory-card__name">Жесткие диски</h4>
-   </div>
-</a>
-</div>
-<!-- End Module Subcategory list (page category) -->
-               <!-- Module Subcategory list (page category) -->
-<div class="subcategory-list">
-   <a href="../../pages/page-category/page-category.html" class="subcategory-card">
-   <div class="subcategory-card__container">
-      <div class="subcategory-card__img">
-         <img src="../../img/subcategory/subcategory_1.webp" alt="">
-      </div>
-
-      <h4 class="subcategory-card__name">Процессоры</h4>
-   </div>
-</a><a href="../../pages/page-category/page-category.html" class="subcategory-card">
-   <div class="subcategory-card__container">
-      <div class="subcategory-card__img">
-         <img src="../../img/subcategory/subcategory_2.webp" alt="">
-      </div>
-
-      <h4 class="subcategory-card__name">Видеокарты</h4>
-   </div>
-</a><a href="../../pages/page-category/page-category.html" class="subcategory-card">
-   <div class="subcategory-card__container">
-      <div class="subcategory-card__img">
-         <img src="../../img/subcategory/subcategory_3.webp" alt="">
-      </div>
-
-      <h4 class="subcategory-card__name">Системы охлаждения</h4>
-   </div>
-</a><a href="../../pages/page-category/page-category.html" class="subcategory-card">
-   <div class="subcategory-card__container">
-      <div class="subcategory-card__img">
-         <img src="../../img/subcategory/subcategory_4.webp" alt="">
-      </div>
-
-      <h4 class="subcategory-card__name">Жесткие диски</h4>
-   </div>
-</a>
-</div>
-<!-- End Module Subcategory list (page category) -->
             </div>
+
+            
          </section>
-
-         <!-- Module catalog (список товаров с сортировкой) -->
-<section class="catalog-section">
-   <div class="ui-container">
-      <div class="dropdown-sort-wrap">
-         <div class="dropdown-sort">
-            <h6 class="dropdown-sort__label"><i class="i-filter"></i> Сортировка</h6>
-            <div class="ui-dropdown dropdown_sort catalog_sort"></div>
-         </div>
-
-         <div class="catalog-count">
-            Всего товаров: <span>23</span>
-         </div>
-      </div>
-
-      <div class="swiper-wrapper product-list" data-products="product-list">
-   
-</div>
-
-      <!-- Module Pagination -->
-<div class="ui-pagination ">
-   <button class="btn_dynamic-loading">
-      <i class="i-arrow_more"></i>
-   </button>
-
-   <div class="pagination">
-      <a href="" class="pagination__item back disabled"></a>
-      <a href="" class="pagination__item current">1</a>
-      <a href="" class="pagination__item">2</a>
-      <a href="" class="pagination__item">3</a>
-      <a href="" class="pagination__item forward"></a>
-   </div>
-</div>
-<!-- End Module Pagination -->
-   </div>
-</section>
-<!-- End Module catalog-->
-         <!-- Module Recommended products slider -->
-<section class="recommendend-products-section">
-   <div class="ui-container">
-      <h2 class="ui-section-title center">Вам может понравиться</h2>
-
-
-      <div class="swiper-container container_recommendend-products">
-         <div class="swiper" id="recommendend-products-swiper">
-            <div class="swiper-wrapper " data-products="product-list">
-   
-</div>
-         </div>
-      
-         <div class="btn_circle swiper-arrow dark basic-swiper_arrow prev"></div>
-         <div class="btn_circle swiper-arrow dark basic-swiper_arrow next"></div>
-      </div>
-   </div>
-</section>
-<!-- End Module Recommended products slider -->
       </main>
 
       <!-- Module subscribe -->
@@ -1043,183 +1060,6 @@
    <div class="ui-popup__overlay" id="overlay-cart"></div>
 </div>
 <!-- End popup-cart (popup корзина) -->
-      <!-- popup quickview (popup быстрый просмотр товара) -->
-<div class="ui-popup fade-side popup-with-images" id="popup-quickview">
-   <div class="ui-popup__container"> 
-
-      <!-- Здесь контент -->
-      <div class="ui-popup__images-wrap swiper-container">
-         <div class="ui-popup__images swiper" id="quickview-product-swiper">
-            <div class="swiper-wrapper">
-               <div class="swiper-slide img btn_image-preview">
-                  <img loading="lazy" src="../../../../img/cards/card_16.webp" alt="">
-               </div>
-
-               <div class="swiper-slide img btn_image-preview">
-                  <img loading="lazy" src="../../../../img/cards/card_7.webp" alt="">
-               </div>
-
-               <div class="swiper-slide img btn_image-preview">
-                  <img loading="lazy" src="../../../../img/cards/card_3.webp" alt="">
-               </div>
-
-               <div class="swiper-slide img btn_image-preview">
-                  <img loading="lazy" src="../../../../img/cards/card_4.webp" alt="">
-               </div>
-
-               <div class="swiper-slide img btn_image-preview">
-                  <img loading="lazy" src="../../../../img/cards/card_17.webp" alt="">
-               </div>
-
-               <div class="swiper-slide img btn_image-preview">
-                  <img loading="lazy" src="../../../../img/cards/card_6.webp" alt="">
-               </div>
-
-               <div class="swiper-slide img btn_image-preview">
-                  <img loading="lazy" src="../../../../img/cards/card_7.webp" alt="">
-               </div>
-
-               <div class="swiper-slide img btn_image-preview">
-                  <img loading="lazy" src="../../../../img/cards/card_8.webp" alt="">
-               </div>
-
-               <div class="swiper-slide img btn_image-preview">
-                  <img loading="lazy" src="../../../../img/cards/card_9.webp" alt="">
-               </div>
-
-               <div class="swiper-slide img btn_image-preview">
-                  <img loading="lazy" src="../../../../img/cards/card_10.webp" alt="">
-               </div>
-
-               <div class="swiper-slide img btn_image-preview">
-                  <img loading="lazy" src="../../../../img/cards/card_11.webp" alt="">
-               </div>
-
-               <div class="swiper-slide img btn_image-preview">
-                  <img loading="lazy" src="../../../../img/cards/card_6.webp" alt="">
-               </div>
-
-               <div class="swiper-slide img btn_image-preview">
-                  <img loading="lazy" src="../../../../img/cards/card_10.webp" alt="">
-               </div>
-
-               <div class="swiper-slide img btn_image-preview">
-                  <img loading="lazy" src="../../../../img/cards/card_11.webp" alt="">
-               </div>
-               
-               <div class="swiper-slide img btn_image-preview">
-                  <img loading="lazy" src="../../../../img/cards/card_13.webp" alt="">
-               </div>
-            </div>
-         </div>
-
-         <div class="btn_circle dark swiper-arrow prev quickview_arrow"></div>
-         <div class="btn_circle dark swiper-arrow next quickview_arrow"></div>
-      </div>
-
-      <!-- Здесь информация о товаре -->
-      <div class="ui-popup__content-wrap">
-         <!-- Module Product info (popup-quickview) -->
-<div class="product-info quickview">
-   <div class="product-info__brand-wrap">
-      <a href="../../../pages/page-brand-single/page-brand-single.html" class="product-info__brand basicHoverUnderline">
-         <span class="child">Asus</span>
-      </a>
-<!-- 
-      <div class="product-info__controls">
-         <button class="product-controls-btn">
-            <i class="i-compare"></i>
-         </button>
-
-         <button class="product-controls-btn active">
-            <i class="i-heart"></i>
-         </button>
-      </div> -->
-   </div>
-
-   <h2 class="product-info__name">VivoBook 15 M1502IA-BQ011W</h2>
-
-   <div class="product-info__price-wrap">
-      <h3 class="product-info__price">170 990 ₽</h3>
-
-      <div class="ui-one-star-rating light">
-   <i class="i-star ui-star"></i>
-   <span class="rating-value">4.6</span>
-</div>
-   </div>
-
-   <div class="product-info__stickers">
-      <div class="ui-sticker sticker_sold">Нет в наличии</div>
-   </div>
-
-   <!-- Опции товара + кнопки -->
-   <form action="" class="product-info__options form-options quickview">
-      <!-- Здесь опции товара. Подключаются в JS (product-info.js) -->
-   
-      <div class="ui-form-submit">
-         <div class="ui-form-submit__container">
-            <div class="product-info__counter submit_item">
-               <!-- product counter -->
-<div class="product-counter product_info quickview">
-   <i class="i-minus count-down"></i>
-   <input type="text" value="1" inputmode="numeric" class="count" name="product_count">
-   <i class="i-plus count-up"></i>
-</div>
-<!-- End product counter -->
-            </div>
-
-            <button type="button" class="btn_primary-outlineOnDark submit_item btn_cart-add">Добавить в корзину</button>
-   
-            <a href="../../../pages/page-order/page-order.html" class="btn_primary-action submit_item">Купить сейчас</a>
-   
-            <a href="../../../pages/page-product/page-product.html" class="ui-more_basic-slow_dark submit_item">
-   <span class="child">Перейти к товару</span>
-</a>
-         </div>
-      </div>
-   </form>
-</div>
-<!-- End Module Product info (popup-quickview) -->
-      </div>
-      
-      <div class="ui-close close_fade-side left_side popup-quickview-close">
-   <i class="i-angle_right"></i>
-</div>
-   </div>
-
-   <!-- Здесь контент -->
-
-   <div class="ui-popup__overlay" id="overlay-quickview"></div>
-</div>
-<!-- End popup quickview-->
-      <!-- popup image-preview (popup просмотр увеличенных изображений товара) -->
-<div class="ui-popup popup" id="popup-image-preview">
-   <div class="ui-popup__container">
-
-      <!-- Здесь контент -->
-      <ul class="image-preview-list">
-         <li class="image-preview-item"><img loading="lazy" src="../../../img/cards/cards_large/card_1.webp" alt=""></li>
-         <li class="image-preview-item"><img loading="lazy" src="../../../img/cards/cards_large/card_2.webp" alt=""></li>
-         <li class="image-preview-item"><img loading="lazy" src="../../../img/cards/cards_large/card_3.webp" alt=""></li>
-         <li class="image-preview-item"><img loading="lazy" src="../../../img/cards/cards_large/card_4.webp" alt=""></li>
-         <li class="image-preview-item"><img loading="lazy" src="../../../img/cards/cards_large/card_5.webp" alt=""></li>
-         <li class="image-preview-item"><img loading="lazy" src="../../../img/review/review_13.webp" alt=""></li>
-         <li class="image-preview-item"><img loading="lazy" src="../../../img/review/review-img_12.webp" alt=""></li>
-         <li class="image-preview-item"><img loading="lazy" src="../../../img/review/review_14.webp" alt=""></li>
-         <li class="image-preview-item"><img loading="lazy" src="../../../img/review/review_16.webp" alt=""></li>
-         <li class="image-preview-item"><img loading="lazy" src="../../../img/cards/cards_large/card_7.webp" alt=""></li>
-         <li class="image-preview-item"><img loading="lazy" src="../../../img/cards/cards_large/card_17.webp" alt=""></li>
-      </ul>
-      <!-- Здесь контент -->
-   </div>
-
-   <div class="ui-close close_popup popup-image-preview-close">
-   <i class="i-close"></i>
-</div>
-
-   <div class="ui-popup__overlay" id="overlay-image-preview"></div>
-</div>
-<!-- End popup image-preview -->
       <!-- popup login (popup входа/регистрации - не используется) -->
 <div class="ui-popup fade-side" id="popup-login">
    <div class="ui-popup__container popup-login__container">
@@ -1348,37 +1188,6 @@
    <div class="ui-popup__overlay" id="overlay-login"></div>
 </div>
 <!-- End popup login-->
-      <!-- popup-notification (popup добавление товара в корзину) -->
-<div class="product-add-notification">
-   <h3 class="notification-title">
-      <img src="../../../img/check_notification.svg" alt=""> Добавлено в корзину
-   </h3>
-
-   <!--  -->
-<div class="notification-card">
-   <div class="notification-card__img">
-      <img src="../../../img/cards/card_3.webp" alt="">
-   </div>
-
-   <div class="notification-card__info">
-      <h4 class="notification-card__title">Samsung Galaxy S23 Ultra в комплекте с Buds 2 Pro</h4>
-      <span class="notification-card__price">156 999 ₽</span>
-   </div>
-</div>
-
-   <div class="notification-nav">
-      <a href="../../../pages/page-order/page-order.html" class="btn_ui-action btn_notification">Оформить заказ</a>
-
-      <a href="../../../pages/page-cart/page-cart.html" class="notification_more">
-   <span class="child">Перейти в корзину</span>
-</a>
-   </div>
-
-   <div class="ui-close ui-close close_remove right">
-   <i class="i-close"></i>
-</div>
-</div>
-<!-- End popup-notification -->
       <!-- popup send-review (popup оставить отзыв товару/магазину) -->
 <div class="ui-popup popup" id="popup-policy">
    <div class="ui-popup__container">
@@ -1417,7 +1226,87 @@
    <div class="ui-popup__overlay" id="overlay-policy"></div>
 </div>
 <!-- End popup send-review -->
+      <!-- popup delivery (popup расчета достваки) -->
+<div class="ui-popup fade-side" id="popup-delivery">
+   <div class="ui-popup__container">
+
+      <h2 class="ui-popup__title title_md">Расчет доставки</h2>
+      <p class="ui-popup__text">Данные расчеты несут информационный характер для Вашего удобства. Непосредственный выбор способа доставки происходит на этапе оформления заказа</p>
+
+      <form action="" class="address-delivery dark" id="form-calc-delivery">
+   <div class="grid-item">
+   <div class="ui-form__item">
+      <input type="text" name="user_country" inputmode="text" autocomplete="country-name" placeholder="Страна" value="Россия" readonly class="ui-input">
+      <span class="error-message"></span>
+   </div>
+   
+   <div class="ui-form__item">
+      <input type="text" name="user_city" inputmode="text" autocomplete="address-level2" placeholder="Город" class="ui-input">
+      <span class="error-message"></span>
+   </div>
+</div>
+
+<div class="grid-item unequal">
+   <div class="ui-form__item">
+      <input type="text" name="user_address" inputmode="text" autocomplete="shipping street-address" placeholder="Адрес доставки" class="ui-input">
+      <span class="error-message"></span>
+   </div>
+
+   <div class="ui-form__item">
+      <input type="text" name="user_postal_code" inputmode="numeric" autocomplete="postal-code" placeholder="Почтовый индекс" class="ui-input">
+      <span class="error-message"></span>
+   </div>
+</div>
+
+   <div class="ui-form__submit">
+      <label class="ui-control checkbox">
+   <input type="checkbox" name="save_delivery_data" value="Сохранить введенные данные" class="ui-control__input visually-hidden">
+   <span class="ui-control__custom"></span>
+
+   <div class="ui-control__name">Сохранить введенные данные</div>
+</label>
+
+
+      <button type="submit" class="btn_small-action">Рассчитать</button>
+   </div>
+</form>
+
+      <div class="shopping-cart-info calc_delivery">
+   <div class="shopping-cart-info__container">
+
+      <ul class="shopping-cart-info__list">
+         <li class="info-item">
+            <span class="key info-item__text">В корзине:</span>
+            <span class="value info-item__text">товаров: 3</span>
+         </li>
       
-      <script type="module" src="js/bundle-page-category.min.js?_v=20240114093106"></script>
+         <li class="info-item">
+            <span class="key info-item__text">Сумма:</span>
+            <span class="value bold info-item__text">97 950 ₽</span>
+         </li>
+      
+         <li class="info-item">
+            <span class="key info-item__text">Доставка:</span>
+            <span class="value info-item__text">заполните форму</span>
+         </li>
+      
+         <li class="info-item total_item">
+            <span class="key info-item__text">Итого:</span>
+            <span class="value info-item__text">97 950 ₽</span>
+         </li>
+      </ul>
+   </div>
+</div>
+
+      <div class="ui-close close_fade-side left_side popup-delivery-close">
+   <i class="i-angle_right"></i>
+</div>
+   </div>
+
+   <div class="ui-popup__overlay" id="overlay-delivery"></div>
+</div>
+<!-- End popup delivery (popup расчета достваки) -->
+      
+      <script type="module" src="js/bundle-page-information.min.js?_v=20240114093106"></script>
    </body>
 </html>  
