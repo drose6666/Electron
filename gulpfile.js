@@ -63,6 +63,8 @@ function watcher() {
    gulp.watch(path.watch['page-orderHTML'], () => pagesHTML('page-order'))
    gulp.watch(path.watch['page-contactHTML'], () => pagesHTML('page-contact'))
    gulp.watch(path.watch['page-informationHTML'], () => pagesHTML('page-information'))
+   gulp.watch(path.watch['page-404HTML'], () => pagesHTML('page-404'))
+   gulp.watch(path.watch['page-nothing-foundHTML'], () => pagesHTML('page-nothing-found'))
 
    // gulp.watch(path.watch.js, js)
    gulp.watch(path.watch.indexJs, () => js('index'))
@@ -74,6 +76,8 @@ function watcher() {
    gulp.watch(path.watch['page-orderJs'], () => js('page-order'))
    gulp.watch(path.watch['page-contactJs'], () => js('page-contact'))
    gulp.watch(path.watch['page-informationJs'], () => js('page-information'))
+   gulp.watch(path.watch['page-404Js'], () => js('page-404'))
+   gulp.watch(path.watch['page-nothing-foundJs'], () => js('page-nothing-found'))
 
    // gulp.watch(path.watch.scss, scss)
    gulp.watch(path.watch.indexScss, () => scss('index'))
@@ -85,6 +89,8 @@ function watcher() {
    gulp.watch(path.watch['page-orderScss'], () => scss('page-order'))
    gulp.watch(path.watch['page-contactScss'], () => scss('page-contact'))
    gulp.watch(path.watch['page-informationScss'], () => scss('page-information'))
+   gulp.watch(path.watch['page-404Scss'], () => scss('page-404'))
+   gulp.watch(path.watch['page-nothing-foundScss'], () => scss('page-nothing-found'))
 
    gulp.watch(path.watch.fonts, fonts)
    gulp.watch(path.watch.libs, copyLibs)
@@ -108,9 +114,9 @@ function watcher() {
  * ------------------------------------------------------------------
  */
 const mainTasks = gulp.parallel(
-   html, /* () => pagesHTML('page-brands'), () => pagesHTML('page-brand-single') */ () => pagesHTML('page-category'), () => pagesHTML('page-product'), () => pagesHTML('page-cart'), () => pagesHTML('page-order'), () => pagesHTML('page-contact'), () => pagesHTML('page-information'),
-   () => js('index'), /* () => js('page-brands'), () => js('page-brand-single') */ () => js('page-category'), () => js('page-product'), () => js('page-cart'), () => js('page-order'), () => js('page-contact'), () => js('page-information'),
-   () => scss('index'), /* () => scss('page-brands'), () => scss('page-brand-single') */ () => scss('page-category'), () => scss('page-product'), () => scss('page-cart'), () => scss('page-order'), () => scss('page-contact'), () => scss('page-information'),
+   html, /* () => pagesHTML('page-brands'), () => pagesHTML('page-brand-single') */ () => pagesHTML('page-category'), () => pagesHTML('page-product'), () => pagesHTML('page-cart'), () => pagesHTML('page-order'), () => pagesHTML('page-contact'), () => pagesHTML('page-information'), () => pagesHTML('page-404'), () => pagesHTML('page-nothing-found'), 
+   () => js('index'), /* () => js('page-brands'), () => js('page-brand-single') */ () => js('page-category'), () => js('page-product'), () => js('page-cart'), () => js('page-order'), () => js('page-contact'), () => js('page-information'), () => js('page-404'), () => js('page-nothing-found'), 
+   () => scss('index'), /* () => scss('page-brands'), () => scss('page-brand-single') */ () => scss('page-category'), () => scss('page-product'), () => scss('page-cart'), () => scss('page-order'), () => scss('page-contact'), () => scss('page-information'), () => scss('page-404'), () => scss('page-nothing-found'), 
    fonts, copyLibs, copyOther, gulp.parallel(cleanImg, copyImg));
 
 

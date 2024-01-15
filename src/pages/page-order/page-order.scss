@@ -4,18 +4,18 @@
 @import '../../components/ui/ui-breadcrumbs/ui-breadcrumbs';
 @import '../../components/delivery/delivery';
 @import '../../components/shopping-cart/shopping-cart-info';
-@import '../../components/forms/form-order/form-order';
-@import './order-final/order-final';
 @import '../../components/popups/popup-success-order/popup-success-order';
+@import './order/order';
+@import './form/form';
 
 
 // TODO Order section
 .order-section {
    padding-bottom: var(--section_gutter);
-   overflow: hidden;
 
-   .order-content {
-      position: relative;
-
+   &__container {
+      display: grid;
+      grid-template: auto / 1.3fr 1fr;
+      gap: clamp(50px, 20cqi, 130px);
    }
 }

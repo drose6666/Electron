@@ -36,16 +36,8 @@
          </section>
 
          <section class="order-section">
-            <div class="ui-container">
-               <div class="ui-tabs order_tabs" id="order_tabs">
-                  <button data-for="1" class="ui-tab tab_lg tab_order nav_order active">1 - Контактные данные</button>
-                  <button data-for="2" class="ui-tab tab_lg tab_order nav_order">2 - Доставка</button>
-               </div>
-
-               <div class="order-content">
-                  @@include('../../components/forms/form-order/form-order.html')
-                  @@include('./order-final/order-final.html')
-               </div>
+            <div class="order-section__container ui-container">
+               @@include('./form/form.html')
             </div>
          </section>
       </main>

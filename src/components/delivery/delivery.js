@@ -127,10 +127,10 @@ orderDeliveryList?.insertAdjacentHTML('beforeend', createHTMLDeliveryCart(delive
 const orderDeliveryItems = document.querySelectorAll('.order_delivery .delivery-item__input')
 const deliveryValue = document.querySelector('.delivery_value')
 
-orderDeliveryItems.forEach(item => {
-   if (item.checked ) deliveryValue.textContent = `${item.value} ₽` 
+// orderDeliveryItems.forEach(item => {
+//    if (item.checked ) deliveryValue.textContent = `${item.value} ₽` 
 
-   item.addEventListener('change', function () {
-      deliveryValue.textContent = `${item.value} ₽` 
-   })
-})
+//    item.addEventListener('change', function () {
+//       deliveryValue.textContent = `${item.value} ₽` 
+//    })
+// })

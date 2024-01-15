@@ -1,0 +1,30 @@
+.form-order {
+   .contact-fields {
+      display: grid;
+      grid-template: auto / 1fr 1fr;
+      gap: var(--fields_gutter);
+   }
+}
+
+.order-item {
+   &__title {
+      margin-bottom: 25px;
+      font-size: 25px;
+      font-weight: 500;
+      line-height: 100%;
+      color: var(--dark);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+   }
+
+   &:not(:last-child) {
+      margin-bottom: 60px;
+   }
+
+   .btn-wrap {
+      margin-top: 30px;
+      display: flex;
+      justify-content: flex-end;
+   }
+}

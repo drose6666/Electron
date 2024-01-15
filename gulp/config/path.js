@@ -20,6 +20,8 @@ export const path = {
       'page-orderHTML': pageHTMLPath('src', 'page-order'),
       'page-contactHTML': pageHTMLPath('src', 'page-contact'),
       'page-informationHTML': pageHTMLPath('src', 'page-information'),
+      'page-404HTML': pageHTMLPath('src', 'page-404'),
+      'page-nothing-foundHTML': pageHTMLPath('src', 'page-nothing-found'),
 
       indexJs: pagePath('src', 'index', 'js'),
       // 'page-brandsJs': pagePath('src', 'page-brands', 'js'),
@@ -30,6 +32,8 @@ export const path = {
       'page-orderJs': pagePath('src', 'page-order', 'js'),
       'page-contactJs': pagePath('src', 'page-contact', 'js'),
       'page-informationJs': pagePath('src', 'page-information', 'js'),
+      'page-404Js': pagePath('src', 'page-404', 'js'),
+      'page-nothing-foundJs': pagePath('src', 'page-nothing-found', 'js'),
 
       indexScss: pagePath('src', 'index', 'scss'), 
       // 'page-brandsScss': pagePath('src', 'page-brands', 'scss'),
@@ -40,6 +44,8 @@ export const path = {
       'page-orderScss': pagePath('src', 'page-order', 'scss'),
       'page-contactScss': pagePath('src', 'page-contact', 'scss'),
       'page-informationScss': pagePath('src', 'page-information', 'scss'),
+      'page-404Scss': pagePath('src', 'page-404', 'scss'),
+      'page-nothing-foundScss': pagePath('src', 'page-nothing-found', 'scss'),
 
       fonts: `${srcFolder}/fonts/**/*.*`,
       libs: `${srcFolder}/libs/**/*.*`,
@@ -62,6 +68,8 @@ export const path = {
       'page-orderHTML': pageHTMLPath('dist', 'page-order'),
       'page-contactHTML': pageHTMLPath('dist', 'page-contact'),
       'page-informationHTML': pageHTMLPath('dist', 'page-information'),
+      'page-404HTML': pageHTMLPath('dist', 'page-404'),
+      'page-nothing-foundHTML': pageHTMLPath('dist', 'page-nothing-found'),
 
       indexJs: pagePath('dist', 'index', 'js'),
       // 'page-brandsJs': pagePath('dist', 'page-brands', 'js'),
@@ -72,6 +80,9 @@ export const path = {
       'page-orderJs': pagePath('dist', 'page-order', 'js'),
       'page-contactJs': pagePath('dist', 'page-contact', 'js'),
       'page-informationJs': pagePath('dist', 'page-information', 'js'),
+      'page-404Js': pagePath('dist', 'page-404', 'js'),
+      'page-nothing-foundJs': pagePath('dist', 'page-nothing-found', 'js'),
+      
 
       indexScss: pagePath('dist', 'index', 'css'),
       // 'page-brandsScss': pagePath('dist', 'page-brands', 'css'),
@@ -82,6 +93,8 @@ export const path = {
       'page-orderScss': pagePath('dist', 'page-order', 'css'),
       'page-contactScss': pagePath('dist', 'page-contact', 'css'),
       'page-informationScss': pagePath('dist', 'page-information', 'css'),
+      'page-404Scss': pagePath('dist', 'page-404', 'css'),
+      'page-nothing-foundScss': pagePath('dist', 'page-nothing-found', 'css'),
 
       fonts: `${distFolder}/fonts/`,
       libs: `${distFolder}/libs/`,
@@ -102,6 +115,8 @@ export const path = {
       'page-orderHTML': pageHTMLPath('watch', 'page-order'),
       'page-contactHTML': pageHTMLPath('watch', 'page-contact'),
       'page-informationHTML': pageHTMLPath('watch', 'page-information'),
+      'page-404HTML': pageHTMLPath('watch', 'page-404'),
+      'page-nothing-foundHTML': pageHTMLPath('watch', 'page-nothing-found'),
 
       indexJs: pagePath('watch', null, 'js'),
       // 'page-brandsJs': pagePath('watch', null, 'js'),
@@ -112,6 +127,8 @@ export const path = {
       'page-orderJs': pagePath('watch', null, 'js'),
       'page-contactJs': pagePath('watch', null, 'js'),
       'page-informationJs': pagePath('watch', null, 'js'),
+      'page-404Js': pagePath('watch', null, 'js'),
+      'page-nothing-foundJs': pagePath('watch', null, 'js'),
       
       indexScss: pagePath('watch', null, 'scss'),
       // 'page-brandsScss': pagePath('watch', null, 'scss'),
@@ -122,6 +139,8 @@ export const path = {
       'page-orderScss': pagePath('watch', null, 'scss'),
       'page-contactScss': pagePath('watch', null, 'scss'),
       'page-informationScss': pagePath('watch', null, 'scss'),
+      'page-404Scss': pagePath('watch', null, 'scss'),
+      'page-nothing-foundScss': pagePath('watch', null, 'scss'),
       
       fonts: `${srcFolder}/fonts/**/*.*`,
       libs: `${srcFolder}/libs/**/*.*`, 
