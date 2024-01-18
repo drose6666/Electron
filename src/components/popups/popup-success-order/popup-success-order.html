@@ -3,11 +3,21 @@
    <div class="ui-popup__container">
 
       <!-- Здесь контент -->
-      
+      <div class="order-success">
+         <div class="order-success__img"><img src="../../../img/order/success_order.svg" alt="congrates"></div>
+         <h2 class="order-success__title">Ваш заказ успешно оформлен!</h2>
+         
+         <p class="order-success__text">
+            Поздравляем! Ваш заказ успешно оформлен! Вы сможете оплатить его любым удобным для вас способом.
+            <strong>Мы работаем для вас!</strong>
+         </p>
+
+         <a href="/" class="btn_primary-dark">Вернуться на главную</a>
+      </div>
       <!-- Здесь контент -->
 
       @@include('../../ui/ui-close/ui-close.html', {
-         "className": "close_popup popup-success-order-close",
+         "className": "close_popup light popup-success-order-close",
          "classNameIcon": "close"
       })
    </div>

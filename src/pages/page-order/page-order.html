@@ -36,8 +36,9 @@
          </section>
 
          <section class="order-section">
-            <div class="order-section__container ui-container">
+            <div class="order-section__container">
                @@include('./form/form.html')
+               @@include('./order/order.html')
             </div>
          </section>
       </main>
@@ -46,9 +47,10 @@
       @@include('../../components/menu/mobile-menu/mobile-menu.html')
       @@include('../../components/popups/fade-side/popup-search/popup-search.html')
       @@include('../../components/popups/fade-side/popup-cart/popup-cart.html')
-      <!-- @@include('../../components/popups/popup-success-order/popup-success-order.html') -->
+      @@include('../../components/popups/popup-success-order/popup-success-order.html')
       @@include('../../components/popups/fade-side/popup-login/popup-login.html')
       @@include('../../components/popups/popup-policy/popup-policy.html')
+      @@include('../../components/popups/popup-rules/popup-rules.html')
       
       <script type="module" src="js/bundle-page-order.min.js"></script>
    </body>

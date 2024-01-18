@@ -132,6 +132,21 @@ i {
       @extend %dynamicRadius40to25;
    }
 
+   @include media (max-width, 1630px) {
+      .ui-page-title {
+         text-align: center;
+
+         &:after {
+            left: 50%;
+            transform: translateX(-50%);
+         }
+      }
+
+      .ui-breadcrumbs {
+         justify-content: center;
+      }
+   }
+
    @include media (max-width, 330px) {
       width: 100%;
       max-width: 100%;

@@ -1,45 +1,128 @@
-<form action="" class="form-order" id="formOrder">
-   <fieldset class="order-item">
-      <legend class="order-item__title">Контакты</legend>
-
-      <div class="contact-fields">
-         <div class="ui-form-item">
-            <input type="text" name="user_name" inputmode="text" autocomplete="given-name" placeholder="Имя" class="ui-input ">
-            <span class="error-message"></span>
-         </div>
-
-         <div class="ui-form-item">
-            <input type="text" name="user_surname" inputmode="text" autocomplete="family-name" placeholder="Фамилия" class="ui-input ">
-            <span class="error-message"></span>
-         </div>
-
-         <div class="ui-form-item">
-            <input type="email" name="user_email" inputmode="email" autocomplete="email" placeholder="Email" class="ui-input">
-            <span class="error-message"></span>
-         </div>
+<div class="form-order-container">
+   <form action="" class="form-order left_padding" id="formOrder">
+      <!-- Конткаты -->
+      <!-- <fieldset class="order-item contact_item">
+         <legend class="order-item__title">Контакты</legend>
    
-         <div class="ui-form-item form-item_tel">
-            <div class="ui-dropdown dropdown_tel"></div>
-            <input type="tel" name="user_tel" inputmode="tel" autocomplete="tel" placeholder="Телефон" class="ui-input">
+         <div class="data-container">
+            <div class="contact-fields">
+               <div class="ui-form-item">
+                  <input type="text" name="user_name" inputmode="text" autocomplete="given-name" placeholder="Имя" class="ui-input ">
+                  <span class="error-message"></span>
+               </div>
+         
+               <div class="ui-form-item">
+                  <input type="text" name="user_surname" inputmode="text" autocomplete="family-name" placeholder="Фамилия" class="ui-input ">
+                  <span class="error-message"></span>
+               </div>
+         
+               <div class="ui-form-item">
+                  <input type="email" name="user_email" inputmode="email" autocomplete="email" placeholder="Email" class="ui-input">
+                  <span class="error-message"></span>
+               </div>
+         
+               <div class="ui-form-item form-item_tel">
+                  <div class="ui-dropdown dropdown_tel"></div>
+                  <input type="tel" name="user_tel" inputmode="tel" autocomplete="tel" placeholder="Телефон" class="ui-input">
+                  <span class="error-message"></span>
+               </div>
+            </div>
+         </div>
+      </fieldset> -->
+   
+      <!-- Контакты (сохраненные) -->
+      <fieldset class="order-item address_item">
+         <legend class="order-item__title">
+            Контакты <span class="edit"></span>
+         </legend>
+   
+         <div class="data-container">
+            <ul class="saved-list">
+               <li class="saved-list__item">
+                  <div class="key">Имя:</div>
+                  <div class="value">Константин</div>
+               </li>
+   
+               <li class="saved-list__item">
+                  <div class="key">Фамилия:</div>
+                  <div class="value">Константинополевский</div>
+               </li>
+   
+               <li class="saved-list__item">
+                  <div class="key">Email:</div>
+                  <div class="value">danila.rose.web@gmail.com</div>
+               </li>
+   
+               <li class="saved-list__item">
+                  <div class="key">Телефон:</div>
+                  <div class="value">+37377946969</div>
+               </li>
+            </ul>
+         </div>
+      </fieldset>
+   
+      <!-- Адрес доставки -->
+      <!-- <fieldset class="order-item address_item">
+         <legend class="order-item__title">Адрес доставки</legend>
+   
+         <div class="data-container">
+            <div class="address-delivery">
+               @@include('../../../components/forms/address-delivery/address-delivery.html')
+            </div>
+         </div>
+      </fieldset> -->
+
+      <!-- Адрес доставки (сохраненные) -->
+      <fieldset class="order-item address_item">
+         <legend class="order-item__title">
+            Адрес доставки <span class="edit"></span>
+         </legend>
+   
+         <div class="data-container">
+            <ul class="saved-list">
+               <li class="saved-list__item">
+                  <div class="key">Страна:</div>
+                  <div class="value">Россия</div>
+               </li>
+   
+               <li class="saved-list__item">
+                  <div class="key">Город:</div>
+                  <div class="value">Санкт-Петербург</div>
+               </li>
+   
+               <li class="saved-list__item">
+                  <div class="key">Адрес:</div>
+                  <div class="value">М.Фрунзенская, Московский пр. 75А</div>
+               </li>
+   
+               <li class="saved-list__item">
+                  <div class="key">Почтовый индекс:</div>
+                  <div class="value">10001</div>
+               </li>
+            </ul>
+         </div>
+      </fieldset>
+   
+      <!-- Способы доставки -->
+      <fieldset class="order-item">
+         <legend class="order-item__title">Способ доставки</legend>
+   
+         <div class="delivery-list order_delivery-list"></div>
+         <!-- <div class="btn-wrap">
+            <button class="btn_small-dark btn_apply-delivery">Применить</button>
+         </div> -->
+      </fieldset>
+   
+      <!-- Комментарий -->
+      <fieldset class="order-item">
+         <legend class="order-item__title">Комментирий</legend>
+   
+         <div class="ui-form-item full-width">
+            <textarea name="user_review" placeholder="Комментирий" class="ui-textarea"></textarea>
             <span class="error-message"></span>
          </div>
-      </div>
-   </fieldset>
+         
+      </fieldset>
+   </form>
+</div>
 
-   <fieldset class="order-item">
-      <legend class="order-item__title">Адрес доставки</legend>
-
-      <div class="address-delivery">
-         @@include('../../../components/forms/address-delivery/address-delivery.html')
-      </div>
-   </fieldset>
-
-   <fieldset class="order-item">
-      <legend class="order-item__title">Способ доставки</legend>
-
-      <div class="delivery-list order_delivery-list"></div>
-      <div class="btn-wrap">
-         <button class="btn_small-dark btn_apply-delivery">Применить</button>
-      </div>
-   </fieldset>
-</form>

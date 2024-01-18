@@ -1,3 +1,17 @@
+.form-order-container {
+   padding-left: 20px;
+   container-name: order;
+   container-type: inline-size;
+
+   @container (max-width: 600px) {
+      .form-order {
+         .contact-fields {
+            grid-template: auto / 1fr;
+         }
+      }
+   }
+}
+
 .form-order {
    .contact-fields {
       display: grid;
@@ -7,24 +21,94 @@
 }
 
 .order-item {
-   &__title {
-      margin-bottom: 25px;
-      font-size: 25px;
-      font-weight: 500;
-      line-height: 100%;
-      color: var(--dark);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-   }
+   .saved-list {
+      &__item {
+         padding: 7px 0;
+         display: flex;
+         align-items: center;
+         justify-content: space-between;
+         width: 100%;
+         border-radius: 5px;
+         position: relative;
+         transition: all .2s ease;
 
-   &:not(:last-child) {
-      margin-bottom: 60px;
+         .key {
+            padding-right: clamp(10px, 4cqi, 50px);
+            font-size: 14px;
+            font-weight: 300;
+            line-height: 100%;
+            color: var(--text_additional);
+            text-transform: uppercase;
+            background: var(--light);
+            position: relative;
+            z-index: 1;
+         }
+
+         .value {
+            padding-left: clamp(10px, 4cqi, 50px);
+            font-size: 18px;
+            font-weight: 300;
+            line-height: 100%;
+            color: var(--dark);
+            text-align: right;
+            background: var(--light);
+            position: relative;
+            z-index: 1;
+         }
+
+         &:after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            width: 100%;
+            border: 1px dashed var(--border);
+         }
+      }
    }
 
    .btn-wrap {
       margin-top: 30px;
       display: flex;
       justify-content: flex-end;
+   }
+}
+
+@include media (max-width, 950px) {
+   .form-order-container {
+      padding-right: 20px;
+   }
+}
+
+@include media (max-width, 430px) {
+   .order-item {
+      .saved-list {
+         &__item {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 3px;
+
+            &:after {
+               display: none;
+            }
+
+            &:not(:last-child) {
+               margin-bottom: 5px;
+            }
+
+            .key {
+               padding-right: 0;
+               font-size: 14px;
+            }
+
+            .value {
+               padding-left: 0;
+               font-size: 20px;
+               text-align: left;
+            }
+
+         }
+      }
    }
 }

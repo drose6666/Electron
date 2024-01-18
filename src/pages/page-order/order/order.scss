@@ -1,0 +1,71 @@
+@import '../../../components/product/product-card/product-order-card/product-order-card';
+
+.order-wrap {
+   position: sticky;
+   top: 82px;
+   align-self: start;
+   container-name: order;
+   container-type: inline-size;
+
+   .order-item:not(.order-item.your-order) {
+      padding-right: 20px;
+   }
+
+   @include media (max-width, 950px) {
+      .order-item:not(.order-item.your-order) {
+         padding: 0 20px;
+      }
+   }
+}
+
+.order-list {
+   padding-right: 20px;
+   padding-bottom: 10px;
+   display: flex;
+   align-items: flex-start;
+   flex-wrap: nowrap;
+   gap: 10px;
+   width: 100%;
+   overflow-y: visible;
+   overflow-y: auto;
+
+   &::-webkit-scrollbar,
+   &::-webkit-scrollbar-thumb {
+      display: none;
+   }
+
+   .product-order-card {
+      min-width: 300px;
+      
+   }
+
+   .product-page-cart {
+      min-width: 100%;
+   }
+}
+
+@include media (max-width, 950px) {
+   .order-wrap {
+      .order-item:not(.order-item.your-order) {
+         padding: 0 20px;
+      }
+   }
+
+   .order-list {
+      padding: 0 20px;
+   }
+}
+
+@container order (max-width: 550px) {
+   .order-list {
+      .product-order-card {
+         min-width: 100%;
+
+
+
+         &:not(:only-child) {
+            min-width: calc(100% - (var(--default_padding) * 2 - 20px));
+         }
+      }
+   }
+}

@@ -11,9 +11,10 @@ import '../components/menu/mobile-menu/mobile-menu.js';
  */
 import '../components/popups/fade-side/popup-cart/popup-cart.js';
 // import '../components/popups/fade-side/popup-compare/popup-compare.js';
-import '../components/popups/fade-side/popup-login/popup-login.js';
+// import '../components/popups/fade-side/popup-login/popup-login.js';
 import '../components/popups/fade-side/popup-search/popup-search.js';
 import '../components/popups/popup-policy/popup-policy.js';
+import '../components/popups/popup-rules/popup-rules.js';
 
 /**
  * TODO UI

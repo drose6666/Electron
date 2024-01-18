@@ -12,7 +12,7 @@
       border-radius: var(--mdRd);
       background: var(--separating);
       display: grid;
-      grid-template: auto / 220px 1fr;
+      grid-template: auto / 250px 1fr;
       gap: 20px;
       transition: all .2s ease;
    }
@@ -26,7 +26,6 @@
    }
 
    .product-img {
-      max-width: 220px;
       border-radius: 16px;
       background: var(--separating_contrast);
       overflow: hidden;
@@ -45,7 +44,7 @@
    .product-name {
       margin-bottom: 20px;
       font-size: 23px;
-      font-weight: 400;
+      font-weight: 300;
       line-height: 105%;
       transition: all .2s ease;
 
@@ -67,14 +66,20 @@
             font-size: 15px;
             font-weight: 400;
             line-height: 100%;
-            color: var(--dark);
+            color: var(--text_additional);
             display: flex;
             align-items: center;
             justify-content: center;
+            gap: 5px;
             min-height: 32px;
             white-space: nowrap;
             border-radius: var(--defaultRd);
             background: var(--separating_contrast);
+
+            span {
+               font-weight: 400;
+               color: var(--dark);
+            }
 
             &.color {
                padding: 0;
@@ -87,11 +92,36 @@
          }
    }
 
+   // .product-options {
+   //    padding: 0 10px;
+
+   //    &__item {
+   //       font-size: 16px;
+   //       font-weight: 300;
+   //       line-height: 100%;
+   //       color: var(--text_additional);
+   //       display: flex;
+   //       align-items: center;
+   //       column-gap: 5px;
+   //       white-space: nowrap;
+
+   //       span {
+   //          font-weight: 300;
+   //          color: var(--dark);
+   //          white-space: wrap;
+   //       }
+
+   //       &:not(:last-child) {
+   //          margin-bottom: 5px;
+   //       }
+   //    }
+   // }
+
   .product-controls {
       padding-right: 25px;
       display: flex;
       align-items: center;
-      gap: 30px;
+      gap: clamp(30px, 6cqi, 70px);
 
       .product-price {
          font-size: 20px;
@@ -133,10 +163,6 @@
          grid-template: auto / 300px 1fr;
       }
 
-      .product-img {
-         max-width: 300px;
-      }
-
       .product-details {
          padding: 15px 20px 15px 0;
          flex-direction: column;
@@ -168,16 +194,12 @@
          gap: 10px;
       }
 
-      .product-img {
-         max-width: 100%;
-      }
-
       .product-details {
          margin: 0 auto;
          padding: 5px 10px 15px 10px;
          flex-direction: column;
          align-items: center;
-         gap: 30px;
+         gap: 50px;
       }
 
       .product-name {

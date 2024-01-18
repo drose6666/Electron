@@ -14,11 +14,11 @@
    }
 
    &__title {
-      margin-bottom: clamp(35px, 6cqi, 45px);
-      font-size: clamp(23px, 7cqi, 33px);
+      font-size: clamp(20px, 7cqi, 28px);
       font-weight: 600;
       line-height: 100%;
       color: var(--light);
+      text-transform: uppercase;
    }
 
    &__list {
@@ -57,29 +57,31 @@
                color: var(--light);
 
                &.bold {
-                  font-size: clamp(19px, 2cqi, 22px);
+                  font-size: clamp(19px, 2.7cqi, 22px);
                   font-weight: 400;
                }
             }
          }
+      }
+   }
 
-         &.total_item {
-            margin-top: clamp(20px, 5cqi, 25px);
+   .total {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: clamp(15px, 5cqi, 50px);
+      width: 100%;
 
-            .info-item__text {
-               font-weight: 500;
-               color: var(--light);
+      .info-item__text {
+         font-weight: 500;
+         color: var(--light);
 
-               &.key {
-                  font-size: clamp(21px, 5cqi, 28px);
-                  text-transform: uppercase;
-               }
+         &.key {
+            text-transform: uppercase;
+         }
 
-               &.value {
-                  font-size: clamp(22px, 5cqi, 28px);
-                  font-weight: 600;
-               }
-            }
+         &.value {
+            font-weight: 600;
          }
       }
    }
@@ -87,6 +89,24 @@
    &.cart_page {
       position: sticky;
       top: 82px;
+
+      .shopping-cart-info__container {
+         display: flex;
+         align-items: flex-start;
+         gap: clamp(35px, 6cqi, 45px);
+      }
+
+      .total {
+         .info-item__text {
+            &.key {
+               font-size: clamp(19px, 5cqi, 28px);
+            }
+   
+            &.value {
+               font-size: clamp(20px, 5cqi, 28px);
+            }
+         }
+      }
    }
 
    &.calc_delivery {
@@ -95,6 +115,20 @@
       .shopping-cart-info__container {
          padding: 0;
          background: transparent;
+      }
+
+      .total {
+         margin-top: 30px;
+
+         .info-item__text {
+            &.key {
+               font-size: clamp(19px, 5cqi, 22px);
+            }
+   
+            &.value {
+               font-size: clamp(20px, 5cqi, 22px);
+            }
+         }
       }
 
       .shopping-cart-info__list {

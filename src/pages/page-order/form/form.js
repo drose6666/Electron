@@ -7,8 +7,10 @@ const telData = [
    { id: 4, value: '+373' },
 ]
 
-new Dropdown ('.dropdown_tel', {
-   data: telData,
-   id: 1,
-   placeholder: ''
+window.addEventListener('load', function() {
+   new Dropdown ('.dropdown_tel', {
+      data: telData,
+      id: 1,
+      placeholder: ''
+   })
 })

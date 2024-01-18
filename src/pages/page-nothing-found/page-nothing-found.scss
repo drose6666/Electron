@@ -1,0 +1,120 @@
+@import '../../scss/common';
+
+.nothing-found {
+   margin-top: clamp(80px, 10cqi, 100px);
+   margin-bottom: var(--section_gutter);
+
+   .ui-container {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      column-gap: 50px;
+      row-gap: 40px;
+   }
+
+   &__title {
+      margin-bottom: 20px;
+      font-size: 35px;
+      font-weight: 400;
+      line-height: 85%;
+      color: var(--dark);
+   }
+
+   &__text {
+      font-size: 17px;
+      font-weight: 300;
+      line-height: 125%;
+      color: var(--text_additional);
+      max-width: 610px;
+   }
+
+   .contact_link {
+      margin-top: 50px;
+   }
+
+   &__img {
+      max-width: clamp(350px, 30cqi, 465px);
+
+      img {
+         max-width: 100%;
+         height: auto;
+      }
+   }
+
+   @include media (max-width, 780px) {
+      .ui-container {
+         flex-direction: column;
+         align-items: center;
+      }
+
+      &__img {
+         max-width: 500px;
+      }
+
+      .contact_link {
+         margin-top: 40px;
+      }
+   }
+}
+
+
+// TODO Похожие запросы
+.related-search-section {
+
+   .related-search {
+      margin-bottom: var(--section_gutter);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      max-width: 1280px;
+
+      &__item {
+         padding: 8px 15px;
+         background: var(--separating);
+         border-radius: var(--defaultRd);
+         white-space: nowrap;
+         transition: all .2s ease;
+
+         a {
+            font-size: 17px;
+            font-weight: 300;
+            font-style: oblique;
+            line-height: 100%;
+            color: var(--dark);
+         }
+
+         &:hover {
+            background: var(--separating_contrast);
+            transform: translateY(-2px);
+         }
+      }
+   }
+
+   @include media (max-width, 1290px) {
+      .ui-section-title {
+         margin-bottom: 20px;
+      }
+
+      .related-search {
+         padding: 5px 0;
+         justify-content: flex-start;
+         flex-wrap: nowrap;
+         overflow-y: visible;
+         overflow-x: auto;
+
+         &::-webkit-scrollbar,
+         &::-webkit-scrollbar-thumb {
+            display: none;
+         }
+      }
+   }
+}
+
+
+// TODO Похожие товары
+.related-products {
+   margin-bottom: var(--section_gutter);
+}
+

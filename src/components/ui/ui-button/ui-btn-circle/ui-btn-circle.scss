@@ -262,7 +262,7 @@
    // ADDITIONAL Основной размер и расположение стрелок слайдера
    &.basic-swiper_arrow {
       $size: clamp(35px, 7cqw, 45px);
-      $iconSize: clamp(13px, 3cqi, 20px);
+      $iconSize: clamp(13px, 3cqi, 19px);
 
       width: $size;
       height: $size;

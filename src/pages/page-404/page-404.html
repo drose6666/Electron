@@ -10,15 +10,29 @@
       @@include('../../components/header/header.html')
 
       <main>
-        
+         <section class="section-404">
+            <div class="ui-container">
+               <div class="img-404"><img src="../../img/404/404.svg" alt="omatech 404"></div>
+              
+               <div class="info-404">
+                  <h1 class="title-404">Страница не найдена</h1>
+                  <p class="text-404">Страница, которую вы пытаетесь найти, не существет. Попробуйте вернуться назад или проверьте URL-адрес искомой страницы</p>
+                  
+                  <div class="nav-404">
+                     <button onclick="window.history.back()" class="btn_primary-action">Назад</button>
+                     <a href="/" class="btn_primary-outlineGrey">Вернуться на главную</a>
+                  </div>
+               </div>
+            </div>
+         </section>
       </main>
 
       @@include('../../components/footer/footer.html')
       @@include('../../components/menu/mobile-menu/mobile-menu.html')
       @@include('../../components/popups/fade-side/popup-search/popup-search.html')
       @@include('../../components/popups/fade-side/popup-cart/popup-cart.html')
-      @@include('../../components/popups/fade-side/popup-login/popup-login.html')
       @@include('../../components/popups/popup-policy/popup-policy.html')
+      @@include('../../components/popups/popup-rules/popup-rules.html')
       
       <script type="module" src="js/bundle-page-404.min.js"></script>
    </body>

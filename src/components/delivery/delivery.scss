@@ -80,7 +80,8 @@
          transition: all .3s ease;
 
          &:hover {
-            background: var(--separating_contrast);
+            background: transparent;
+            border-color: var(--border);
          }
       }
 

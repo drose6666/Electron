@@ -40,3 +40,12 @@
       }
    }
 }
+
+@container order (max-width: 600px) {
+   .address-delivery {
+      .grid-item, .grid-item.unequal {
+         grid-template: auto / 1fr;
+      }
+   }
+}
+

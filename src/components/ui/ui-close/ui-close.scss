@@ -46,6 +46,19 @@
       }
    }
 
+   &.light {
+      background: var(--light);
+      box-shadow: var(--light_btn_shadow);
+
+      i {
+         color: var(--dark);
+      }
+
+      &:hover {
+         color: var(--action);
+      }
+   }
+
    &.close_popup {
       top: 23px;
       right: -23px;

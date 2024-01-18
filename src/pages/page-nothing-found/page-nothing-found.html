@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+   @@include('../../components/head/head.html', {
+      "mainCss": "css/page-nothing-found.min.css",
+      "title": "Ничего не найдено"
+   })
+   <body>
+      @@include('../../components/ui/ui-preloader/ui-preloader.html')
+      @@include('../../components/header/header-top/header-top.html')
+      @@include('../../components/header/header.html')
+
+      <main>
+         <section class="nothing-found">
+            <div class="ui-container">
+               <div class="nothing-found__info">
+                  <h2 class="nothing-found__title">Мы ничего не нашли по запросу «апавпав»</h2>
+                  <p class="nothing-found__text">Попробуйте изменить запрос. Чем точнее Вы сформулируете  запрос, тем больше шансов, что найдете то, что ищите. В противном случае, Вы можете связаться с нами, мы обязательно Вам поможем</p>
+                  <a href="../../pages/page-contact/page-contact.html" class="btn_primary-outlineGrey contact_link">Связаться с нами</a>
+               </div>
+               
+               <div class="nothing-found__img"><img src="../../img/search/nothing_found.svg" alt="search"></div>
+            </div>
+         </section>
+
+         <section class="related-search-section">
+            <div class="ui-container">
+               <h2 class="ui-section-title md center">Несколько рекомендаций для Вас</h2>
+
+               <ul class="related-search">
+                  <li class="related-search__item"><a href="">Смартфон</a></li>
+                  <li class="related-search__item"><a href="">iPhone 14</a></li>
+                  <li class="related-search__item"><a href="">MacBook Pro (2023)</a></li>
+                  <li class="related-search__item"><a href="">MacBook Pro</a></li>
+                  <li class="related-search__item"><a href="">ASUS Vivobok 15</a></li>
+                  <li class="related-search__item"><a href="">iPhone 15 Pro Max</a></li>
+                  <li class="related-search__item"><a href="">Apple смартфоны</a></li>
+                  <li class="related-search__item"><a href="">Samsung Galaxy S23</a></li>
+                  <li class="related-search__item"><a href="">Samsung Galaxy S22 Ultra</a></li>
+                  <li class="related-search__item"><a href="">Чехлы для iPhone 14 Pro Max</a></li>
+                  <li class="related-search__item"><a href="">защитные стекла</a></li>
+                  <li class="related-search__item"><a href="">Чехлы для samsung s22 ultra</a></li>
+               </ul>
+            </div>
+         </section>
+
+         <section class="related-products">
+            <div class="ui-container">
+               <h2 class="ui-section-title center">Вам может понравиться</h2>
+
+               <div class="swiper-wrapper product-list" data-products="product-list"></div>
+            </div>
+         </section>
+      </main>
+
+      @@include('../../components/footer/footer.html')
+      @@include('../../components/menu/mobile-menu/mobile-menu.html')
+      @@include('../../components/popups/fade-side/popup-search/popup-search.html')
+      @@include('../../components/popups/fade-side/popup-cart/popup-cart.html')
+      @@include('../../components/popups/popup-policy/popup-policy.html')
+      @@include('../../components/popups/popup-rules/popup-rules.html')
+      @@include('../../components/popups/fade-side/popup-quickview/popup-quickview.html')
+      @@include('../../components/popups/popup-image-preview/popup-image-preview.html')
+      @@include('../../components/product/product-notifications/product-add-notification.html')
+      
+      <script type="module" src="js/bundle-page-nothing-found.min.js"></script>
+   </body>
+</html>  

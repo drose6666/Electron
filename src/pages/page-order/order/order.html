@@ -1,0 +1,28 @@
+<div class="order-wrap">
+   <div class="order-item your-order">
+      <div class="order-item-title-wrap">
+         <h4 class="order-item__title right_padding">Ваш заказ <a href="../../../pages/page-cart/page-cart.html" class="edit"></a></h4>
+      </div>
+
+      <div class="order-list">
+         @@include('../../../components/product/product-card/product-page-cart/product-page-cart.html')
+         <!-- @@include('../../../components/product/product-card/product-order-card/product-order-card.html')
+         @@include('../../../components/product/product-card/product-order-card/product-order-card.html')
+         @@include('../../../components/product/product-card/product-order-card/product-order-card.html')
+         @@include('../../../components/product/product-card/product-order-card/product-order-card.html') -->
+      </div>
+   </div>
+
+   <div class="order-item">
+      <div class="right_padding">
+         @@include('../../../components/shopping-cart/shopping-cart-info-order.html')
+      </div>
+   </div>
+
+   <div class="order-item">
+      <div class="btn_group right_padding">
+         <a type="submit" form="formOrder" class="btn_target-action btn_order btn_success-order">Оформить заказ</a>
+         <a class="btn_target-outlineGrey" href="../../../pages/page-cart/page-cart.html">Вернуться в корзину</a>
+      </div>
+   </div>
+</div>

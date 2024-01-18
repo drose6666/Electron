@@ -113,6 +113,7 @@
       font-weight: $fWeight;
       line-height: 100%;
       color: $color;
+      white-space: nowrap;
    }
 
    &:after {
