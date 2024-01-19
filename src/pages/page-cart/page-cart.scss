@@ -2,7 +2,6 @@
 
 // TODO UI
 @import '../../components/ui/ui-breadcrumbs/ui-breadcrumbs';
-@import '../../components/product/product-card/product-page-cart/product-page-cart';
 @import '../../components/delivery/delivery';
 @import '../../components/shopping-cart/shopping-cart-info';
 
@@ -40,5 +39,9 @@
    @include media (max-width, 1000px) {
       grid-template: auto / 1fr;
       gap: 40px;
+
+      .delivery-list {
+         gap: 10px;
+      }
    }
 }

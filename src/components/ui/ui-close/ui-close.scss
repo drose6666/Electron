@@ -144,6 +144,31 @@
          color: var(--dark)
       }
    }
+
+   &.close_product-cardOrder {
+      width: 40px;
+      height: 40px;
+      top: -7px;
+      right: -7px;
+      background: var(--separating_contrast);
+      box-shadow: none;
+      opacity: 1;
+      visibility: visible;
+      transform: none;
+
+      i {
+         font-size: 15px;
+         color: var(--dark);
+      }
+
+      &:hover {
+         background: var(--btn_close);
+
+         i {
+            color: var(--dark);
+         }
+      }
+   }
 }
 
 .ui-popup.active {

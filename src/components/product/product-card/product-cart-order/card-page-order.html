@@ -1,19 +1,18 @@
 <!-- Product card (page cart) -->
-<div class="product-page-cart">
-   <div class="product-page-cart__container">
-      <a href="../../../../pages/page-product/page-product.html" class="product-img"><img src="../../../../img/cards/card_6_2.webp" alt=""></a>
+<div class="product-cart-order order_card">
+   <div class="product-cart-order__container">
+      <a href="../../../../pages/page-product/page-product.html" class="product-img">
+         <img src="../../../../img/cards/card_6_2.webp" alt="">
+         <div class="product-color"><span class="color"></span></div>
+      </a>
 
       <div class="product-details">
          <div class="product-card-info">
             <h3 class="product-name">
                <a href="../../../../pages/page-product/page-product.html"> Samsung Galaxy S23 Ultra в комплекте с Buds 2 Pro</a>
             </h3>
+
             <ul class="product-options">
-               <!-- <li class="product-options__item color"></li>
-               <li class="product-options__item">16/512 Gb</li>
-               <li class="product-options__item">Dual SIM</li>
-               <li class="product-options__item">Esim + SIM</li>
-               <li class="product-options__item">512 Gb</li> -->
                <li class="product-options__item">Тип соединения: <span>Esim + SIM</span></li>
                <li class="product-options__item">Диагональ: <span>15"</span></li>
                <li class="product-options__item">Память: <span>16/512 Gb</span></li>
@@ -22,10 +21,10 @@
          </div>
 
          <div class="product-controls">
-            @@include('../../product-counter/product-counter.html', {
-               "className": "product_page-cart"
-            })
-   
+            <div class="product-count">
+               Количество: <span>1</span>
+            </div>
+
             <div class="product-price">9 999 999 ₽</div>
          </div>
       </div>

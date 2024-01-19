@@ -1,0 +1,37 @@
+<!-- Product card (page cart) -->
+<div class="product-cart-order cart_card">
+   <div class="product-cart-order__container">
+      <a href="../../../../pages/page-product/page-product.html" class="product-img">
+         <img src="../../../../img/cards/card_6_2.webp" alt="">
+         <div class="product-color"><span class="color"></span></div>
+      </a>
+
+      <div class="product-details">
+         <div class="product-card-info">
+            <h3 class="product-name">
+               <a href="../../../../pages/page-product/page-product.html"> Samsung Galaxy S23 Ultra в комплекте с Buds 2 Pro</a>
+            </h3>
+
+            <ul class="product-options">
+               <li class="product-options__item">Тип соединения: <span>Esim + SIM</span></li>
+               <li class="product-options__item">Диагональ: <span>15"</span></li>
+               <li class="product-options__item">Память: <span>16/512 Gb</span></li>
+               <li class="product-options__item">SSD: <span>2 Tb</span></li>
+            </ul>
+         </div>
+
+         <div class="product-controls">
+            @@include('../../product-counter/product-counter.html', {
+               "className": "counter_cartOrder"
+            })
+            <div class="product-price">9 999 999 ₽</div>
+         </div>
+      </div>
+   </div>
+
+   @@include('../../../ui/ui-close/ui-close.html', {
+      "className": "ui-close close_product-cardOrder",
+      "classNameIcon": "close"
+   })
+</div>
+<!-- End Product card (page cart) -->
