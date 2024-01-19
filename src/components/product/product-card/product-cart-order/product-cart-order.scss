@@ -66,14 +66,20 @@
 
    .product-name {
       margin-bottom: 20px;
-      font-size: 23px;
-      font-weight: 300;
+      font-size: 22px;
+      font-weight: 400;
       line-height: 105%;
       transition: all .2s ease;
 
       a {
          color: var(--dark);
          transition: inherit;
+      }
+
+      &:hover {
+         a {
+            color: var(--action);
+         }
       }
    }
 
@@ -87,7 +93,7 @@
       &__item {
          padding: 5px 15px;
          font-size: 15px;
-         font-weight: 400;
+         font-weight: 300;
          line-height: 100%;
          color: var(--text_additional);
          display: flex;
@@ -98,19 +104,15 @@
          white-space: nowrap;
          border-radius: var(--defaultRd);
          background: var(--separating_contrast);
+         transition: all .2s ease;
 
          span {
             font-weight: 400;
             color: var(--dark);
          }
 
-         &.color {
-            padding: 0;
-            width: 26px;
-            height: 26px;
-            min-height: auto;
-            border-radius: var(--circleRd);
-            background: #DE8E86;
+         &:hover {
+            transform: translateY(-2px);
          }
       }
    }
@@ -130,21 +132,13 @@
       white-space: nowrap;
    }
 
-   &:hover {
-      .product-name {
-         a {
-            color: var(--action);
-         }
-      }
-   }
-
    // TODO Карточка товара на странице оформления заказа
    &.order_card {
       max-width: 850px;
       width: 100%;
 
       .product-count {
-         font-size: 18px;
+         font-size: 16px;
          font-weight: 300;
          line-height: 100%;
          color: var(--text_additional);
@@ -154,6 +148,8 @@
          gap: 5px;
 
          span {
+            font-size: 18px;
+            font-weight: 400;
             color: var(--dark);
          }
       }
@@ -262,13 +258,24 @@
    } 
 
    @container (max-width: 340px) {
-      .product-controls {
-         flex-direction: column;
-         gap: 10px;
+      &.cart_card {
+         .product-controls {
+            flex-direction: column;
+            gap: 10px;
+         }
       }
 
       .product-details {
          padding: 5px clamp(1px, 2cqi, 20px) 20px;
+      }
+   }
+
+   @container (max-width: 290px) {
+      &.order_card {
+         .product-controls {
+            flex-direction: column;
+            gap: 10px;
+         }
       }
    }
 }
