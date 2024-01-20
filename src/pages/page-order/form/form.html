@@ -1,7 +1,7 @@
 <div class="form-order-container">
    <form action="" class="form-order left_padding" id="formOrder">
       <!-- Конткаты -->
-      <!-- <fieldset class="order-item contact_item">
+      <fieldset class="order-item contact_item">
          <legend class="order-item__title">Контакты</legend>
    
          <div class="data-container">
@@ -28,10 +28,10 @@
                </div>
             </div>
          </div>
-      </fieldset> -->
+      </fieldset>
    
       <!-- Контакты (сохраненные) -->
-      <fieldset class="order-item address_item">
+      <!-- <fieldset class="order-item address_item">
          <legend class="order-item__title">
             Контакты <span class="edit"></span>
          </legend>
@@ -59,21 +59,24 @@
                </li>
             </ul>
          </div>
+      </fieldset> -->
+
+      <!-- Способы доставки -->
+      <fieldset class="order-item">
+         <legend class="order-item__title">Способ доставки</legend>
+   
+         <div class="delivery-list order_delivery-list"></div>
       </fieldset>
    
       <!-- Адрес доставки -->
-      <!-- <fieldset class="order-item address_item">
+      <fieldset class="order-item address_item">
          <legend class="order-item__title">Адрес доставки</legend>
    
-         <div class="data-container">
-            <div class="address-delivery">
-               @@include('../../../components/forms/address-delivery/address-delivery.html')
-            </div>
-         </div>
-      </fieldset> -->
+         <div class="data-container"></div>
+      </fieldset>
 
       <!-- Адрес доставки (сохраненные) -->
-      <fieldset class="order-item address_item">
+      <!-- <fieldset class="order-item address_item">
          <legend class="order-item__title">
             Адрес доставки <span class="edit"></span>
          </legend>
@@ -101,17 +104,7 @@
                </li>
             </ul>
          </div>
-      </fieldset>
-   
-      <!-- Способы доставки -->
-      <fieldset class="order-item">
-         <legend class="order-item__title">Способ доставки</legend>
-   
-         <div class="delivery-list order_delivery-list"></div>
-         <!-- <div class="btn-wrap">
-            <button class="btn_small-dark btn_apply-delivery">Применить</button>
-         </div> -->
-      </fieldset>
+      </fieldset> -->
    
       <!-- Комментарий -->
       <fieldset class="order-item">
@@ -121,7 +114,6 @@
             <textarea name="user_review" placeholder="Комментирий" class="ui-textarea"></textarea>
             <span class="error-message"></span>
          </div>
-         
       </fieldset>
    </form>
 </div>

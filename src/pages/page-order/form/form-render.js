@@ -1,50 +1,7 @@
-
-
-
-// TODO Сохраненная инфа "Контакты"
-const saveDataContacts = [
-   { key: 'Имя:', value: 'Константин' },
-   { key: 'Фамилия:', value: 'Константинополевский' },
-   { key: 'Email:', value: 'danila.rose.web@gmail.com' },
-   { key: 'Телефон:', value: '+37377946969' },
-]
-
-// TODO Сохраненная инфа "Адрес доставки"
-// const saveDataAddress = [
-//    { key: 'Страна:', value: 'Россия' },
-//    { key: 'Город:', value: 'Санкт-Петербург' },
-//    { key: 'Адрес:', value: 'М.Фрунзенская, Московский пр. 75А' },
-//    { key: 'Почтовый индекс:', value: '10001' },
-// ]
-
-// TODO HTML-структура для блока Контакты
-const orderContactsTemplate = `
-   <div class="contact-fields">
-      <div class="ui-form-item">
-         <input type="text" name="user_name" inputmode="text" autocomplete="given-name" placeholder="Имя" class="ui-input ">
-         <span class="error-message"></span>
-      </div>
-
-      <div class="ui-form-item">
-         <input type="text" name="user_surname" inputmode="text" autocomplete="family-name" placeholder="Фамилия" class="ui-input ">
-         <span class="error-message"></span>
-      </div>
-
-      <div class="ui-form-item">
-         <input type="email" name="user_email" inputmode="email" autocomplete="email" placeholder="Email" class="ui-input">
-         <span class="error-message"></span>
-      </div>
-
-      <div class="ui-form-item form-item_tel">
-         <div class="ui-dropdown dropdown_tel"></div>
-         <input type="tel" name="user_tel" inputmode="tel" autocomplete="tel" placeholder="Телефон" class="ui-input">
-         <span class="error-message"></span>
-      </div>
-   </div>
+const pickup = `
+   <p class="delivery_details__text">Вы сможете забрать заказ в любое удобное для вас время <strong>с 09:00 до 21:00</strong> по адресу: <strong>город Санкт-Петербург Новоизмайловский проспект 4</strong></p>
 `
-
-// TODO HTML-структура для блока Адреса доставки
-const orderAddressTemplate = `
+const deliveryAddresFields = `
    <div class="address-delivery">
       <div class="grid-item">
          <div class="ui-form__item">
@@ -71,26 +28,32 @@ const orderAddressTemplate = `
       </div>
    </div>
 `
+const deliveryItems = document.querySelectorAll('.order_delivery .delivery-item__input')
 
-// TODO HTML-шаблон для сохраненной информации
-function createHTMLSavedInfo (arr) {
-   let savedInfoHTML = arr.map(item => {
-      return `
-         <li class="saved-list__item">
-            <div class="key">${item.key}</div>
-            <div class="value">${item.value}</div>
-         </li>
-      `
+
+// TODO Меняем поля адреса доставки на текст для самовывоза при
+//      при изменении способа доставки
+deliveryItems.forEach(item => {
+   item.addEventListener('change', () => {
+      item.dataset.id == 2
+         ? renderAddressContentOnChooseDelivery(pickup, 'Мы ждем вас!')
+         : renderAddressContentOnChooseDelivery(deliveryAddresFields, 'Адрес доставки')
    })
+})
 
-   return `
-      <ul class="saved-list">
-         ${savedInfoHTML.join('')}
-      </ul>
-   `
+// TODO по умолчанию - поля для воода адреса доставки
+window.addEventListener('load', () => renderAddressContentOnChooseDelivery(deliveryAddresFields, 'Адрес доставки'))
+
+
+// TODO Рендерим нужный контент
+function renderAddressContentOnChooseDelivery(content, title) {
+   const addressItemTitle = document.querySelector('.address_item .order-item__title')
+   const addressItemContainer = document.querySelector('.address_item .data-container')
+
+   addressItemContainer.innerHTML = ''
+
+   addressItemTitle.textContent = title
+   addressItemContainer.insertAdjacentHTML('afterbegin', content)
 }
 
 
-function selectVariantTemplate (data) {
-
-}

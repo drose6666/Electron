@@ -21,7 +21,7 @@
 
 
 .container_hero-swiper {
-   margin-top: 60px;
+   margin-top: 40px;
    margin-bottom: var(--section_gutter);
    container-type: inline-size;
    container-name: heroContainer;
@@ -37,7 +37,7 @@
          padding-left: clamp(20px, 5cqi, 90px);
          padding-right: 20px;
          width: 100%;
-         height: clamp(560px, 40cqi, 650px);
+         height: clamp(520px, 60cqi, 700px);
          position: relative;
          display: flex;
          flex-direction: column;
@@ -60,25 +60,33 @@
          }
 
          &__title {
-            font-size: clamp(40px, 14cqi, 75px);
-            font-weight: 600;
-            line-height: 100%;
             color: var(--light);
-            letter-spacing: -2.25px;
+            // letter-spacing: -2.25px;
             position: relative;
             z-index: 1;
             
             @extend %fadeInContent;
 
+            span {
+               margin-bottom: 15px;
+               font-size: clamp(55px, 17.5cqi, 90px);
+               font-weight: 600;
+               line-height: 70%;
+               display: block;
+            }
+
             strong {
+               font-size: clamp(40px, 14cqi, 75px);
+               font-weight: 200;
+               line-height: 100%;
                white-space: nowrap;
             }
          }
 
          &__subtitle {
-            margin-top: 20px;
+            margin-top: 30px;
             margin-bottom: 70px;
-            font-size: clamp(30px, 5cqi, 35px);
+            font-size: clamp(27px, 5cqi, 32px);
             font-weight: 300;
             line-height: 100%;
             color: var(--light);
@@ -158,6 +166,22 @@
          bottom: 20px;
          right: 20px;
          gap: 10px;
+      }
+   }
+
+   @container (max-width: 320px) {
+      .hero-swiper {
+         .hero-slide {
+            &__title {
+               span {
+                  font-size: clamp(45px, 15cqi, 95px);
+               }
+
+               strong {
+                  font-size: clamp(35px, 12cqi, 75px);
+               }
+            }
+         }
       }
    }
 }

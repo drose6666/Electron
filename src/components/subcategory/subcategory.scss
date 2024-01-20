@@ -4,8 +4,7 @@
 }
 
 .subcategory-list {
-   padding-bottom: 5px;
-   // display: flex;
+   padding: 5px 0;
    display: grid;
    grid-template: auto / repeat(4, minmax(240px, 1fr));
    column-gap: clamp(10px, 1.2cqi, 20px);

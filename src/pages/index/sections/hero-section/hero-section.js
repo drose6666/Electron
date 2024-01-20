@@ -11,7 +11,7 @@ new Swiper('.hero-swiper', {
    effect: 'fade',
    crossFade: true,
    loop: true,
-   autoplay: true,
+   autoplay: false,
    delay: 5000,
    pauseOnMouseEnter: true
 })

@@ -35,6 +35,6 @@ const options = {
    }
 }
 
-window.addEventListener('load', () => {
+window.addEventListener('DOMContentLoaded', () => {
    new Swiper('#new-product-swiper', options)
 })

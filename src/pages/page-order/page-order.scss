@@ -103,8 +103,8 @@ $orderSectiongutter: calc((100vw - var(--full_container_width) - 40px) / 2);
       align-items: center;
       justify-content: flex-start;
       flex-wrap: wrap;
-      column-gap: 30px;
-      row-gap: 15px;
+      column-gap: 15px;
+      row-gap: 10px;
    }
 
    @include media (max-width, 950px) {
@@ -134,7 +134,7 @@ $orderSectiongutter: calc((100vw - var(--full_container_width) - 40px) / 2);
    }
 }
 
-@container order (max-width: 560px) {
+@container order (max-width: 600px) {
    .order-section {
       .btn_group {
          flex-direction: column;

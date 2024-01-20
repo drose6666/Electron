@@ -75,6 +75,23 @@
    }
 }
 
+// TODO Когда пользователь выбирает "Самовывоз", появляется этот блок
+.delivery_details {
+
+   &__text {
+      font-size: 17px;
+      font-weight: 300;
+      line-height: 140%;
+      color: var(--text_additional);
+      max-width: 540px;
+
+      strong {
+         font-weight: 400;
+         color: var(--dark);
+      }
+   }
+}
+
 @include media (max-width, 950px) {
    .form-order-container {
       padding-right: 20px;

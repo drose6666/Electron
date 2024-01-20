@@ -92,7 +92,7 @@ function createHTMLDeliveryCart(arr) {
          return `
             <label class="delivery-item order_delivery">
                <div class="delivery-item__container">
-                  <input type="radio" name="delivery" value="${delivery.price}" ${delivery.selected ? 'checked': ''} class="delivery-item__input visually-hidden">
+                  <input type="radio" name="delivery" data-id="${delivery.id}" value="${delivery.price}" ${delivery.selected ? 'checked': ''} class="delivery-item__input visually-hidden">
                
                   <div class="delivery-item__custom">
                      <div class="delivery-details">
