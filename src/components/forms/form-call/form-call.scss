@@ -1,0 +1,19 @@
+.contact-form {
+   display: grid;
+   grid-template: auto / 1fr;
+   gap: var(--fields_gutter);
+   container-type: inline-size;
+
+   .grid_c-two {
+      width: 100%;
+      display: grid;
+      grid-template: auto / 1fr 1fr;
+      gap: var(--fields_gutter);
+   }
+
+   @container (max-width: 500px) {
+      .grid_c-two {
+         grid-template: auto / 1fr;
+      }
+   }
+}

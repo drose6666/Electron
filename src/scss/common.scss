@@ -24,7 +24,7 @@
 
 
 // Components
-@import '../components/order/cost-order/cost-order';
+// @import '../components/order/cost-order/cost-order';
 @import '../components/menu/mobile-menu/mobile-menu';
 @import '../components/header/header';
 @import '../components/slider-ui/slider-ui';
@@ -34,10 +34,11 @@
 @import '../components/sections/section-footer/section-footer';
 @import '../components/product/product-card/product-card-cart/product-card-cart';
 @import '../components/popups/popups';
-@import '../components/login-reminder/login-methods/login-methods';
+@import '../components/popups/popup-call/popup-call';
+// @import '../components/login-reminder/login-methods/login-methods';
 @import '../components/forms/ui-form';
 @import '../components/forms/form-search/forms-search';
-@import '../components/brand/brand';
+// @import '../components/brand/brand';
 
 
 // Custom scrollbar for Firefox 

@@ -15,7 +15,9 @@
          </div>
 
          <div class="ui-form-item form-item_tel full-width">
-            <div class="ui-dropdown dropdown_tel dark"></div>
+            <div class="ui-dropdown dropdown_tel dark">
+               <div class="selected"><span class="selected__item">+7</span></div>
+            </div>
             <input type="tel" name="user_tel" inputmode="tel" autocomplete="tel" placeholder="Телефон" class="ui-input dark">
             <span class="error-message"></span>
          </div>
@@ -26,12 +28,7 @@
          </div>
 
          <div class="ui-form-submit full-width">
-            @@include('../../ui/ui-button/ui-btn/ui-button.html', {
-               "type": "submit",
-               "text": "Отправить",
-               "className": "btn_primary-action"
-            })
-
+            <button type="submit" class="btn_primary-action">Заказать звонок</button>
             <p class="warning-text">Отправляя форму, вы соглашаетесь с условиями <strong class="btn_policy">политики конфиденциальности</strong></p>
          </div>
       </fieldset>

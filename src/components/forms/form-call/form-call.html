@@ -1,0 +1,26 @@
+<form action="" class="contact-form" id="form-call">
+   <fieldset class="fields-group grid_c-two">
+      <div class="ui-form-item">
+         <input type="text" name="user_name" inputmode="text" autocomplete="given-name" placeholder="Имя" class="ui-input dark">
+         <span class="error-message"></span>
+      </div>
+
+      <div class="ui-form-item form-item_tel">
+         <div class="ui-dropdown dropdown_tel dark">
+            <div class="selected"><span class="selected__item">+7</span></div>
+         </div>
+         <input type="tel" name="user_tel" inputmode="tel" autocomplete="tel" placeholder="Телефон" class="ui-input dark">
+         <span class="error-message"></span>
+      </div>
+   </fieldset>
+
+   <div class="ui-form-item">
+      <textarea name="user_message" placeholder="Сообщение" class="ui-textarea dark"></textarea>
+      <span class="error-message"></span>
+   </div>
+
+   <div class="ui-form-submit">
+      <button type="submit" class="btn_primary-action">Заказать звонок</button>
+      <p class="warning-text">Отправляя форму, вы соглашаетесь с условиями <strong class="btn_policy">политики конфиденциальности</strong></p>
+   </div>
+</form>

@@ -1,0 +1,68 @@
+@import '../../forms/form-call/form-call';
+
+#popup-call {
+   text-align: center;
+
+   .ui-popup__title {
+      margin-bottom: 20px;
+      text-align: center;
+   }
+
+   .call-text {
+      margin: 0 auto 50px auto;
+      font-size: clamp(16px, 3cqi, 17px);
+      font-weight: 300;
+      line-height: 130%;
+      color: var(--text_additional);
+      text-align: center;
+      max-width: 500px;
+
+      strong {
+         font-weight: 400;
+         color: var(--action);
+      }
+   }
+
+   .ui-form-submit {
+      margin-top: 35px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      column-gap: 30px;
+      row-gap: 15px;
+
+      .warning-text {
+         font-size: 15px;
+         font-weight: 300;
+         line-height: 100%;
+         color: var(--text_additional);
+         max-width: 260px;
+         text-align: right;
+   
+         strong {
+            color: var(--light);
+            cursor: pointer;
+            transition: all .2s ease;
+   
+            &:hover {
+               color: var(--action);
+            }
+         }
+      }
+   }
+}
+
+@container uiPopupContainer (max-width: 460px) {
+   #popup-call {
+      .ui-popup__container {
+         .ui-form-submit {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            column-gap: 30px;
+            row-gap: 15px;
+         }
+      }
+   }
+}

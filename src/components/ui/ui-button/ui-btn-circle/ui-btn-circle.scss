@@ -377,7 +377,7 @@
    @include uiBtnCircle(
       $size: clamp(25px, 12cqw, 45px),
       $bgColor: var(--light),
-      $iconSize: clamp(14px, 5cqi, 16px),
+      $iconSize: clamp(14px, 5cqi, 15px),
       $iconColor: var(--text_additional)
    );
    

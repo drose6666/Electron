@@ -3,8 +3,8 @@ const deliveryCartData = [
       id: 1,
       name: 'Доставка курьером',
       info: {
-         description: 'В течении 3-х дней,',
-         condition: ''
+         description: 'Доставка в течении ',
+         condition: '1-2-х дней'
       },
       price: '0.00',
    },
@@ -13,7 +13,7 @@ const deliveryCartData = [
       id: 2,
       name: 'Забрать из магазина',
       info: {
-         description: 'Пн-Вс: 09:00-20:00,',
+         description: 'Пн-Вс: 09:00-21:00,',
          condition: 'В наличии'
       },
       price: '0.00',
@@ -23,8 +23,8 @@ const deliveryCartData = [
       id: 3,
       name: 'СДЭК',
       info: {
-         description: 'В течении 1 дня при оплате с сайта',
-         condition: ''
+         description: 'Доставка ',
+         condition: 'от 4 до 7 дней'
       },
       price: null
    },
@@ -35,8 +35,8 @@ const deliveryOrderData = [
       id: 1,
       name: 'Доставка курьером',
       info: {
-         description: 'В течении 3-х дней,',
-         condition: ''
+         description: 'Доставка в течении ',
+         condition: '1-2-х дней'
       },
       price: '0.00',
       inOrder: true,
@@ -47,7 +47,7 @@ const deliveryOrderData = [
       id: 2,
       name: 'Забрать из магазина',
       info: {
-         description: 'Пн-Вс: 09:00-20:00,',
+         description: 'Пн-Вс: 09:00-21:00,',
          condition: 'В наличии'
       },
       price: '0.00',
@@ -59,8 +59,8 @@ const deliveryOrderData = [
       id: 3,
       name: 'СДЭК',
       info: {
-         description: 'В течении 1 дня при оплате с сайта',
-         condition: ''
+         description: 'Доставка ',
+         condition: 'от 4 до 7 дней'
       },
       price: '450',
       inOrder: true,

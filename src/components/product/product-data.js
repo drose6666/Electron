@@ -138,9 +138,9 @@ productsLists.forEach(item => {
 
 function renderProductList (productsList) {
    // NOTE Стикер "Нет в наличии" - товара нет в наличии
-   const stickerSoldOut = `
-      <div class="ui-sticker sticker_sold ">Нет в наличии</div>
-   `
+   const stickerSoldOut = `<span class="ui-sticker sticker_sold ">Нет в наличии</span>`
+   const stickerSale = `<span class="sticker_sale">-10%</span>`
+
 
    // TODO Вывод списка товаров
    let products = productsList.map(product => {
@@ -164,6 +164,7 @@ function renderProductList (productsList) {
                </div>
          
                <div class="action-wrap">
+                  ${ product.soldOut ? stickerSale : ''}
                   ${ renderCartBtn(product.soldOut, product.inCart) }
                </div>
             </div>
@@ -203,13 +204,7 @@ function renderCartBtn(availability, statusCart) {
          <i class="i-cart"></i>
       </button>
    `
-   const orderCartBtn = `
-      <a href="../../../../pages/page-product/page-product.html" class="btn_card-order">Заказать</a>
-   `
+   const orderCartBtn = `<a href="../../../../pages/page-product/page-product.html" class="btn_card-order">Заказать</a>`
+
    return availability ? orderCartBtn : defaultCartBtn
 }
-
-
-// TODO ПРи клике на кнопку корзины товар будет удаляться/добавляться в корзину
-// Код наже описывает визиуальную часть кнопки корзины в карточке товара 
-// без связи с массивом товаров

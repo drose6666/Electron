@@ -60,30 +60,20 @@
       </div>
 
       <div class="ui-popup__action">
-         @@include('../../../order/cost-order/cost-order-cart.html', {
-            "className": "product_cart"
-         })
+         <ul class="cost-order">
+            <li class="cost-item">
+               <div class="key cost_text">Сумма:</div>
+               <div class="value cost_text">652 970 999 ₽</div>
+            </li>
+         </ul>
 
          <div class="ui-popup__btns">
-            @@include('../../../ui/ui-button/ui-btn/ui-button-link.html', {
-               "text": "Оформить заказ",
-               "className": "btn_primary-action",
-               "link": "../../../../pages/page-order/page-order.html"
-            })
-            @@include('../../../ui/ui-button/ui-btn/ui-button-link.html', {
-               "text": "Перейти в корзину",
-               "className": "btn_primary-outlineOnDark",
-               "link": "../../../../pages/page-cart/page-cart.html"
-            })
-            
+            <a href="../../../../pages/page-order/page-order.html" class="btn_primary-action">Оформить заказ</a>
+            <a href="../../../../pages/page-cart/page-cart.html" class="btn_primary-outlineOnDark">Перейти в корзину</a>
          </div>
 
          <p class="delivery-text">Доставка расчитывается на этапе оформления заказа</p>
       </div>
-
-      
-
-      
 
       @@include('../../../ui/ui-close/ui-close.html', {
          "className": "close_fade-side left_side popup-cart-close",

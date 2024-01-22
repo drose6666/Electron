@@ -1,0 +1,19 @@
+<!-- popup send-review (popup оставить отзыв товару/магазину) -->
+<div class="ui-popup popup" id="popup-call">
+   <div class="ui-popup__container">
+
+      <!-- Здесь контент -->
+      <h3 class="ui-popup__title center">Заказать звонок</h3>
+      <p class="call-text">Для предзаказа товара заполните форму ниже, и мы свяжемся с вами в ближайшее время для уточнения деталей и оформления заказа <br> <strong>Мы работаем для вас!</strong></p>
+      @@include('../../forms/form-call/form-call.html')
+      <!-- Здесь контент -->
+
+      @@include('../../ui/ui-close/ui-close.html', {
+         "className": "close_popup popup-call-close",
+         "classNameIcon": "close"
+      })
+   </div>
+
+   <div class="ui-popup__overlay" id="overlay-call"></div>
+</div>
+<!-- End popup send-review -->

@@ -159,6 +159,7 @@
 
          .product-option__input:checked ~ .product-option__custom {
             background: var(--dark);
+            box-shadow: var(--light_btn_shadow);
       
             .product-option__custom__name {
                color: var(--light);
@@ -241,12 +242,13 @@
 
       .ui-form-submit {
          border-color: var(--ui_dark);
+
+         .product_link {
+            grid-column: 1 / 3;
+            width: auto;
+         }
       }
    }
-}
-
-@include media (max-width, 530px) {
-   
 }
 
 @container productInfo (max-width: 530px) {
@@ -267,6 +269,14 @@
             grid-column: 1 / 2;
          }
       } 
+
+      &.quickview {
+         .ui-form-submit {
+            .product_link {
+               grid-column: 1 / 2;
+            }
+         }
+      }
    }
 }
 

@@ -16,7 +16,7 @@
    $paddingRight: 10px,
    $height: 50px,
    $fSize: 17px,
-   $fWeight: 300,
+   $fWeight: 400,
 ) {
    padding: $paddingY $paddingRight $paddingY $paddingLeft;
    display: flex;
@@ -44,6 +44,7 @@
    border: $border;
    
    &::placeholder {
+      font-weight: 200;
       color: var(--text_additional);
    }
 

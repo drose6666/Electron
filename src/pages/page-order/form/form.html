@@ -1,5 +1,5 @@
 <div class="form-order-container">
-   <form action="" class="form-order left_padding" id="formOrder">
+   <form action="" class="form-order left_padding" id="form-order">
       <!-- Конткаты -->
       <fieldset class="order-item contact_item">
          <legend class="order-item__title">Контакты</legend>
@@ -22,7 +22,9 @@
                </div>
          
                <div class="ui-form-item form-item_tel">
-                  <div class="ui-dropdown dropdown_tel"></div>
+                  <div class="ui-dropdown dropdown_tel light">
+                     <div class="selected"><span class="selected__item">+7</span></div>
+                  </div>
                   <input type="tel" name="user_tel" inputmode="tel" autocomplete="tel" placeholder="Телефон" class="ui-input">
                   <span class="error-message"></span>
                </div>
@@ -108,10 +110,10 @@
    
       <!-- Комментарий -->
       <fieldset class="order-item">
-         <legend class="order-item__title">Комментирий</legend>
+         <legend class="order-item__title">Комментарий</legend>
    
          <div class="ui-form-item full-width">
-            <textarea name="user_review" placeholder="Комментирий" class="ui-textarea"></textarea>
+            <textarea name="user_review" placeholder="Комментарий" class="ui-textarea"></textarea>
             <span class="error-message"></span>
          </div>
       </fieldset>

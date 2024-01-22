@@ -163,3 +163,34 @@
       }
    }
 }
+
+
+// TODO Сумма корзины в модальном окне корзины (popup-cart)
+
+.cost-order {
+   margin-bottom: 40px;
+   width: 100%;
+
+   .cost-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 15px;
+      position: relative;
+
+      .cost_text {
+         font-size: 25px;
+         line-height: 100%;
+         color: var(--light);
+
+         &.key {
+            font-weight: 300;
+         }
+   
+         &.value {
+            font-weight: 500;
+         }
+      }
+   }
+}

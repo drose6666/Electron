@@ -1,11 +1,12 @@
 <!-- Module Product info (popup-quickview) -->
 <div class="product-info quickview">
    <div class="product-info__brand-wrap">
-      <a href="../../../pages/page-brand-single/page-brand-single.html" class="product-info__brand basicHoverUnderline">
+      <span class="ui-sticker sticker_sold ">Нет в наличии</span>
+      <!-- <a href="../../../pages/page-brand-single/page-brand-single.html" class="product-info__brand basicHoverUnderline">
          <span class="child">Asus</span>
-      </a>
-<!-- 
-      <div class="product-info__controls">
+      </a> -->
+      
+      <!-- <div class="product-info__controls">
          <button class="product-controls-btn">
             <i class="i-compare"></i>
          </button>
@@ -27,16 +28,33 @@
    </div>
 
    <div class="product-info__stickers">
-      @@include('../../ui/ui-button/ui-btn/ui-sticker.html', {
-         "className": "sticker_sold",
-         "text": "Нет в наличии"
-      })
+      <div class="sale-block">
+         <span class="sale-count sale-block__item">-10%</span>
+         <span class="sale-info sale-block__item">на предзаказ</span>
+      </div>
    </div>
 
    <!-- Опции товара + кнопки -->
    <form action="" class="product-info__options form-options quickview">
       <!-- Здесь опции товара. Подключаются в JS (product-info.js) -->
    
+      <!-- <div class="ui-form-submit">
+         <div class="ui-form-submit__container">
+            <div class="product-info__counter submit_item">
+         
+            </div>
+
+            <button class="btn_primary-outlineOnDark submit_item btn_cart-add">Добавить в корзину</button>
+            <a href="../../../pages/page-order/page-order.html" class="btn_primary-action submit_item">Купить сейчас</a>
+   
+            @@include('../../ui/ui-more/ui-more-link.html', {
+               "link": "../../../pages/page-product/page-product.html",
+               "text": "Перейти к товару",
+               "className": "ui-more_basic-slow_dark submit_item"
+            })
+         </div>
+      </div> -->
+
       <div class="ui-form-submit">
          <div class="ui-form-submit__container">
             <div class="product-info__counter submit_item">
@@ -44,23 +62,13 @@
                   "className": "product_info quickview" 
                })
             </div>
+   
+            <div class="btn_primary-action submit_item btn_call">Заказать звонок</div>
 
-            @@include('../../ui/ui-button/ui-btn/ui-button.html', {
-               "className": "btn_primary-outlineOnDark submit_item btn_cart-add",
-               "text": "Добавить в корзину",
-               "type": "button"
-            })
-   
-            @@include('../../ui/ui-button/ui-btn/ui-button-link.html', {
-               "link": "../../../pages/page-order/page-order.html",
-               "className": "btn_primary-action submit_item",
-               "text": "Купить сейчас"
-            })
-   
             @@include('../../ui/ui-more/ui-more-link.html', {
                "link": "../../../pages/page-product/page-product.html",
                "text": "Перейти к товару",
-               "className": "ui-more_basic-slow_dark submit_item"
+               "className": "ui-more_basic-slow_dark submit_item center product_link"
             })
          </div>
       </div>

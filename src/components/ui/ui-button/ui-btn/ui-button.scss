@@ -13,7 +13,6 @@
    @if $theme == dark {
       $color: var(--light);
       $bg: var(--dark);
-      
       color: $color;
       background: $bg;
 
@@ -163,6 +162,7 @@
    border-radius: var(--defaultRd);
    white-space: nowrap;
    padding: 5px $paddingX;
+   cursor: pointer;
    
 
    @if $type == target {
@@ -376,6 +376,25 @@
    box-shadow: var(--light_btn_shadow);
    backdrop-filter: blur(2px);
 }
+
+.sticker_sale {
+   font-size: 15px;
+   font-weight: 600;
+   line-height: 100%;
+   color: var(--light);
+   letter-spacing: -4%;
+   background: var(--sticker_sale_page);
+   border-radius: var(--circleRd);
+   // backdrop-filter: blur(2px);
+   box-shadow: 0 0 0 5px rgba(246, 46, 46, 0.25);
+   width: 46px;
+   height: 46px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+
 
 .btn_card-order {
    @include btnType( $type: small );
