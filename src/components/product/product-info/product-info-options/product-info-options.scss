@@ -28,7 +28,6 @@
    
    // TODO Color option
    &.color_option {
-
       .product-option__custom {
          padding: 0;
          width: 34px;
@@ -117,7 +116,7 @@
          display: grid;
          // grid-template: auto / repeat(auto-fit, minmax(185px, 1fr));
          column-gap: 10px;
-         row-gap: 15px;
+         row-gap: 10px;
       }
 
       .submit_item {

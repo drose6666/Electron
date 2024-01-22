@@ -37,11 +37,16 @@
    <!-- Опции товара + кнопки -->
    <form action="" class="product-info__options form-options quickview">
       <!-- Здесь опции товара. Подключаются в JS (product-info.js) -->
-   
+
+      <!-- Для товара, в наличии -->
       <!-- <div class="ui-form-submit">
          <div class="ui-form-submit__container">
             <div class="product-info__counter submit_item">
-         
+               <div class="product-counter product_info quickviewe">
+                  <i class="i-minus count-down"></i>
+                  <input type="text" value="1" inputmode="numeric" class="count" name="product_count" readonly>
+                  <i class="i-plus count-up"></i>
+               </div>
             </div>
 
             <button class="btn_primary-outlineOnDark submit_item btn_cart-add">Добавить в корзину</button>
@@ -55,12 +60,15 @@
          </div>
       </div> -->
 
+      <!-- Для товара, которого нет в наличии -->
       <div class="ui-form-submit">
          <div class="ui-form-submit__container">
             <div class="product-info__counter submit_item">
-               @@include('../product-counter/product-counter.html', { 
-                  "className": "product_info quickview" 
-               })
+               <div class="product-counter product_info quickviewe">
+                  <i class="i-minus count-down"></i>
+                  <input type="text" value="1" inputmode="numeric" class="count" name="product_count" readonly>
+                  <i class="i-plus count-up"></i>
+               </div>
             </div>
    
             <div class="btn_primary-action submit_item btn_call">Заказать звонок</div>
