@@ -11,13 +11,15 @@ const options = {
    speed: 400,
    pauseOnMouseEnter: true,
    observer: true,
+   autoplay: true,
+   delay: 3000,
    keyboard: {
       enabled: true,
       onlyInViewport: false,
    },
    navigation: {
       nextEl: `.new-products-container .next`,
-      prevEl: `.new-products-container .prev`
+      prevEl: `.new-products-container .prev`,
    },
    breakpoints: {
       500: {

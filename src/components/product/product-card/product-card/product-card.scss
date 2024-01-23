@@ -88,9 +88,9 @@ $positionHiddenEls: clamp(12px, 5cqi, 15px);
       }
 
       .title {
-         font-size: clamp(18px, 8cqi, 20px);
+         font-size: clamp(18px, 8cqi, 22px);
          font-weight: 300;
-         line-height: clamp(105%, 8cqi, 110%);
+         line-height: clamp(100%, 8cqi, 100%);
          text-align: center;
          max-width: 320px;
          transition: all .2s ease;
@@ -109,7 +109,7 @@ $positionHiddenEls: clamp(12px, 5cqi, 15px);
 
       .price {
          color: var(--dark);
-         font-size: clamp(18px, 5cqi, 20px);
+         font-size: clamp(18px, 6cqi, 21px);
          font-weight: 500;
          line-height: 100%;
       }

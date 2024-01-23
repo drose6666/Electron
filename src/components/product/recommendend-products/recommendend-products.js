@@ -4,6 +4,8 @@ const options = {
    spaceBetween: 20,
    speed: 400,
    pauseOnMouseEnter: true,
+   autoplay: true,
+   delay: 3000,
    observer: true,
    keyboard: {
       enabled: true,
@@ -19,18 +21,21 @@ const options = {
          slidesPerGroup: 1,
          spaceBetween: 20,
          observer: true,
+         pauseOnMouseEnter: true,
       },
       1000: {
          spaceBetween: 20,
          slidesPerView: 3,
          slidesPerGroup: 1,
          observer: true,
+         pauseOnMouseEnter: true,
       },
       1200: {
          spaceBetween: 20,
          slidesPerView: 4,
          slidesPerGroup: 1,
          observer: true,
+         pauseOnMouseEnter: true,
       },
    }
 }
