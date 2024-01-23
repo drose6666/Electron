@@ -3,8 +3,8 @@ const deliveryCartData = [
       id: 1,
       name: 'Доставка курьером',
       info: {
-         description: 'Доставка в течении ',
-         condition: '1-2-х дней'
+         description: 'Доставка в течении 1-2-х дней. ',
+         condition: 'От 450 ₽'
       },
       price: '0.00',
    },
@@ -13,8 +13,8 @@ const deliveryCartData = [
       id: 2,
       name: 'Забрать из магазина',
       info: {
-         description: 'Пн-Вс: 09:00-21:00,',
-         condition: 'В наличии'
+         description: 'Пн-Вс: 09:00-21:00. ',
+         condition: 'СПб, Новоизмайловский проспект 4'
       },
       price: '0.00',
    },
@@ -35,8 +35,8 @@ const deliveryOrderData = [
       id: 1,
       name: 'Доставка курьером',
       info: {
-         description: 'Доставка в течении ',
-         condition: '1-2-х дней'
+         description: 'Доставка в течении 1-2-х дней. ',
+         condition: 'От 450 ₽'
       },
       price: '0.00',
       inOrder: true,
@@ -48,7 +48,7 @@ const deliveryOrderData = [
       name: 'Забрать из магазина',
       info: {
          description: 'Пн-Вс: 09:00-21:00,',
-         condition: 'В наличии'
+         condition: 'СПб, Новоизмайловский проспект 4'
       },
       price: '0.00',
       inOrder: true,
