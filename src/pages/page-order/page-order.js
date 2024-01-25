@@ -4,4 +4,5 @@ import '../../components/product/product-counter/product-counter.js';
 import '../../components/delivery/delivery.js';
 import './form/form-render.js';
 import '../../components/popups/popup-success-order/popup-success-order.js';
+import '../../components/popups/popup-delivery-areas/popup-delivery-areas.js';
 // import '../../components/ui/ui-dropdown/ui-dropdown-tel.js';

@@ -221,6 +221,17 @@
       font-weight: $fWeight;
       height: $height;
 
+   } @else if $type == xs {
+      $height: 35px;
+      $paddingX: 15px;
+      $fSize: 15px;
+      $fWeight: 300;
+
+      padding: 5px $paddingX;
+      font-size: $fSize;
+      font-weight: $fWeight;
+      height: $height;
+
    } @else if $type == sticker {
       $height: 30px;
       $paddingX: 15px;
@@ -231,7 +242,7 @@
       font-size: $fSize;
       font-weight: $fWeight;
       height: $height;
-   } 
+   }
 }
 
 // TODO primary
@@ -362,6 +373,13 @@
 
 .btn_small-dark {
    @include btnType( $type: small );
+   @include btnTheme( $theme: dark );
+}
+
+
+// TODO xs 
+.btn_xs-dark {
+   @include btnType( $type: xs );
    @include btnTheme( $theme: dark );
 }
 

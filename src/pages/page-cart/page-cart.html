@@ -40,7 +40,50 @@
                </div>
 
                <div class="cart-info">
-                  <div class="delivery-list cart_delivery-list"></div>
+                  <div class="delivery-list cart_delivery-list">
+                     <!-- Доставка курьером -->
+                     <div class="delivery-item cart_delivery">
+                        <div class="delivery-item__container">
+                           <div class="delivery-item__custom">
+                              <div class="delivery-details">
+                                 <h4 class="delivery-name">Доставка курьером</h4>
+                                 <p class="delivery-info">Доставка в течении 1-2-х дней. <strong class="mark">От 290 ₽</strong></p>
+                              </div>
+                        
+                              <span class="delivery-price">от 290 ₽</span>
+                           </div>
+                        </div>
+                     </div>
+
+                     <!-- Забрать из магазина -->
+                     <div class="delivery-item cart_delivery">
+                        <div class="delivery-item__container">
+                           <div class="delivery-item__custom">
+                              <div class="delivery-details">
+                                 <h4 class="delivery-name">Забрать из магазина</h4>
+                                 <p class="delivery-info">Пн-Вс: 09:00-21:00. <strong class="mark">СПб, Новоизмайловский проспект 4</strong></p>
+                              </div>
+                        
+                              <span class="delivery-price">Бесплатно</span>
+                           </div>
+                        </div>
+                     </div>   
+                     
+                     <!-- СДЭК -->
+                     <div class="delivery-item cart_delivery">
+                        <div class="delivery-item__container">
+                           <div class="delivery-item__custom">
+                              <div class="delivery-details">
+                                 <h4 class="delivery-name">СДЭК</h4>
+                                 <p class="delivery-info">Доставка <strong class="mark">от 4 до 7 дней</strong></p>
+                              </div>
+                        
+                              <button class="btn_small-dark btn_delivery">Рассчитать</button>
+                           </div>
+                        </div>
+                     </div>   
+
+                  </div>
                   @@include('../../components/shopping-cart/shopping-cart-info.html')
                </div>
 

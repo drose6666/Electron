@@ -1,0 +1,45 @@
+
+<div class="ui-popup popup" id="popup-delivery-areas">
+   <div class="ui-popup__container">
+
+      <!-- Здесь контент -->
+      <h3 class="ui-popup__title center">Выберите зону доставки</h3>
+      <p class="delivery-text">Выберите зону доставки, если необходимый вам адрес доставки находится в одной из зон, указанных на карте. <strong>В противном случае, вы можете закрыть это окно и ввести адрес доставки в блоке “Адрес доставки”</strong></p>
+
+      <div class="delivery-areas">
+         <label class="delivery-area free_area">
+            <input type="radio" value="0" name="delivery-area" class="delivery-area__input visually-hidden">
+            <div class="delivery-area__custom">
+               <div class="delivery-area__check"></div>
+
+               <div class="delivery-area__detail">
+                  <h4 class="area-price">Бесплатно</h4>
+                  <span class="area-color">Зеленая зона</span>
+               </div>
+            </div>
+         </label>
+
+         <label class="delivery-area second_area">
+            <input type="radio" value="290" name="delivery-area" class="delivery-area__input visually-hidden">
+            <div class="delivery-area__custom">
+               <div class="delivery-area__check"></div>
+
+               <div class="delivery-area__detail">
+                  <h4 class="area-price">от 290 ₽</h4>
+                  <span class="area-color">Красная зона</span>
+               </div>
+            </div>
+         </label>
+      </div>
+
+      <div class="map" id="map"></div>
+      <!-- Здесь контент -->
+
+      @@include('../../ui/ui-close/ui-close.html', {
+         "className": "close_popup popup-delivery-areas-close",
+         "classNameIcon": "close"
+      })
+   </div>
+
+   <div class="ui-popup__overlay" id="overlay-delivery-areas"></div>
+</div>

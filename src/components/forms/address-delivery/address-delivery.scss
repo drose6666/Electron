@@ -13,6 +13,12 @@
       }
    }
 
+   .ui-form__item {
+      &.w100 {
+         grid-column: 1 / 2;
+      }
+   }
+
    .ui-form__submit {
       margin-top: 25px;
       display: flex;

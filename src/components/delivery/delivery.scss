@@ -13,11 +13,11 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 30px;
+      gap: 50px;
    }
 
    .delivery-info {
-      font-size: 17px;
+      font-size: clamp(16px, 3cqi, 17px);
       font-weight: 300;
       line-height: 105%;
       color: var(--text_additional);
@@ -31,7 +31,7 @@
 
    &.cart_delivery {
       .delivery-item__container {
-         padding: clamp(15px, 5cqi, 30px);
+         padding: clamp(25px, 5cqi, 30px) clamp(20px, 5cqi, 30px);
          background: var(--separating_contrast);
       }
 
@@ -44,7 +44,7 @@
       }
 
       .delivery-price {
-         font-size: clamp(21px, 3cqi, 23px);
+         font-size: clamp(20px, 3cqi, 22px);
          font-weight: 600;
          line-height: 100%;
          color: var(--dark);
@@ -103,6 +103,13 @@
          }
       }
 
+      .check-wrap {
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         gap: 15px;
+      }
+
       .delivery-check {
          width: 40px;
          height: 40px;
@@ -143,15 +150,23 @@
       }
    }
 
-   @container (max-width: 360px) {
+   @container (max-width: 475px) {
       .delivery-item__custom {
          flex-direction: column;
          align-items: center;
-         gap: 25px;
+         gap: 30px;
       }
 
       .delivery-name, .delivery-info {
          text-align: center;
+      }
+
+      &.order_delivery {
+         .check-wrap {
+            flex-direction: column-reverse;
+            align-items: center;
+            gap: 10px;
+         }
       }
    }
 }

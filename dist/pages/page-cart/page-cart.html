@@ -5,7 +5,7 @@
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <meta property="og:type" content="website">
-   <meta property="og:title" content="Electron - лучший выбор в мире электроники">
+   <meta property="og:title" content="OMATECH - лучший выбор в мире электроники">
    <meta property="og:description" content="Компьютеры, смартфоны, комплектующие и аксессуары от оригинальных производителей">
    <meta property="og:url" content="http://danilarose.net">
    <!-- <meta property="og:image" content="http://danilarose.net/img/og-image.jpg"> -->
@@ -22,16 +22,13 @@
    <link rel="icon" href="../../img/favicon/fav_48.png" type="image/png" sizes="48x48">
    <link rel="icon" href="../../img/favicon/fav_128.png" type="image/png" sizes="128x128">
    
-   <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css?_v=20240123220233" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
-   <!-- <link rel="stylesheet" href="../../libs/css/bootstrap-grid.min.css?_v=20240123220233"> -->
-
-   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css?_v=20240123220233" />
-   <script defer src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js?_v=20240123220233"></script>
-   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js?_v=20240123220233" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-   <link rel="stylesheet" href="../../libs/css/reset.min.css?_v=20240123220233">
-   <link rel="stylesheet" as="font" href="../../fonts/fonts.css?_v=20240123220233">
-   <link rel="stylesheet" as="font" href="../../fonts/icon-font.css?_v=20240123220233">
-   <link rel="stylesheet" href="css/page-cart.min.css?_v=20240123220233">
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css?_v=20240125210118" />
+   <script defer src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js?_v=20240125210118"></script>
+   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js?_v=20240125210118" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+   <link rel="stylesheet" href="../../libs/css/reset.min.css?_v=20240125210118">
+   <link rel="stylesheet" as="font" href="../../fonts/fonts.css?_v=20240125210118">
+   <link rel="stylesheet" as="font" href="../../fonts/icon-font.css?_v=20240125210118">
+   <link rel="stylesheet" href="css/page-cart.min.css?_v=20240125210118">
    
    <title>Корзина</title>
 </head>
@@ -363,7 +360,50 @@
                </div>
 
                <div class="cart-info">
-                  <div class="delivery-list cart_delivery-list"></div>
+                  <div class="delivery-list cart_delivery-list">
+                     <!-- Доставка курьером -->
+                     <div class="delivery-item cart_delivery">
+                        <div class="delivery-item__container">
+                           <div class="delivery-item__custom">
+                              <div class="delivery-details">
+                                 <h4 class="delivery-name">Доставка курьером</h4>
+                                 <p class="delivery-info">Доставка в течении 1-2-х дней. <strong class="mark">От 290 ₽</strong></p>
+                              </div>
+                        
+                              <span class="delivery-price">от 290 ₽</span>
+                           </div>
+                        </div>
+                     </div>
+
+                     <!-- Забрать из магазина -->
+                     <div class="delivery-item cart_delivery">
+                        <div class="delivery-item__container">
+                           <div class="delivery-item__custom">
+                              <div class="delivery-details">
+                                 <h4 class="delivery-name">Забрать из магазина</h4>
+                                 <p class="delivery-info">Пн-Вс: 09:00-21:00. <strong class="mark">СПб, Новоизмайловский проспект 4</strong></p>
+                              </div>
+                        
+                              <span class="delivery-price">Бесплатно</span>
+                           </div>
+                        </div>
+                     </div>   
+                     
+                     <!-- СДЭК -->
+                     <div class="delivery-item cart_delivery">
+                        <div class="delivery-item__container">
+                           <div class="delivery-item__custom">
+                              <div class="delivery-details">
+                                 <h4 class="delivery-name">СДЭК</h4>
+                                 <p class="delivery-info">Доставка <strong class="mark">от 4 до 7 дней</strong></p>
+                              </div>
+                        
+                              <button class="btn_small-dark btn_delivery">Рассчитать</button>
+                           </div>
+                        </div>
+                     </div>   
+
+                  </div>
                   <div class="shopping-cart-info cart_page">
    <div class="shopping-cart-info__container">
       <h4 class="shopping-cart-info__title">Информация о заказе</h4>
@@ -1078,16 +1118,9 @@
    </div>
 </div>
 
-<div class="grid-item unequal">
-   <div class="ui-form__item">
-      <input type="text" name="user_address" inputmode="text" autocomplete="shipping street-address" placeholder="Адрес доставки" class="ui-input">
-      <span class="error-message"></span>
-   </div>
-
-   <div class="ui-form__item">
-      <input type="text" name="user_postal_code" inputmode="numeric" autocomplete="postal-code" placeholder="Почтовый индекс" class="ui-input">
-      <span class="error-message"></span>
-   </div>
+<div class="ui-form__item w100">
+   <input type="text" name="user_address" inputmode="text" autocomplete="shipping street-address" placeholder="Адрес доставки" class="ui-input">
+   <span class="error-message"></span>
 </div>
 
    <div class="ui-form__submit">
@@ -1212,6 +1245,6 @@
 </div>
 <!-- End popup send-review -->
       
-      <script type="module" src="js/bundle-page-cart.min.js?_v=20240123220233"></script>
+      <script type="module" src="js/bundle-page-cart.min.js?_v=20240125210118"></script>
    </body>
 </html>  

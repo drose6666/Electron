@@ -6,6 +6,7 @@
 @import '../../components/popups/popup-success-order/popup-success-order';
 @import './order/order';
 @import './form/form';
+@import '../../components/popups/popups';
 
 $orderSectiongutter: calc((100vw - var(--full_container_width) - 40px) / 2);
 
