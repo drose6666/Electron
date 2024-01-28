@@ -3,6 +3,7 @@ const productImgThumbs = new Swiper(".product-img__thumbs", {
    slidesPerView: 3,
    slidesPerGroup: 1,
    freeMode: true,
+   centerInsufficientSlides: true,
    watchSlidesProgress: true,
 });
 

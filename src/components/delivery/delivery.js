@@ -4,7 +4,7 @@ const deliveryOrderData = [
       name: 'Доставка курьером',
       info: {
          description: 'Доставка в течении 1-2-х дней. ',
-         condition: 'От 450 ₽'
+         condition: 'От 290 ₽'
       },
       selected: true
    },

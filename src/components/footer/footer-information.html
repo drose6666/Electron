@@ -1,0 +1,55 @@
+<!-- Footer -->
+<footer>
+   <div class="ui-container footer-inside">
+      <div class="footer-col main">
+         <a href="/" class="logo">
+            <img src="../../img/logo/logo_light.svg" alt="">
+         </a>
+
+         <p class="text">Мы поможем подобрать лучшее устройство, которое подходит именно Вам!</p>
+
+         @@include('../socials/socials.html', { "className": "only_icon" })
+      </div>
+
+      <div class="footer-col navigation">
+         <div class="links-col">
+            <h5 class="navigation-title">Информация</h5>
+            <ul class="navigation-list">
+               <li><a href="../../pages/page-contact/page-contact.html" class="hoverLinks">Контакты</a></li>
+               <li><a href="../../pages/page-information/page-information.html" class="hoverLinks">Сервис</a></li>
+               <li><a href="../../pages/page-information/page-information.html" class="hoverLinks">Доставка</a></li>
+            </ul>
+         </div>
+
+         <div class="links-col">
+            <h5 class="navigation-title">Магазин</h5>
+            <ul class="navigation-list">
+               <li><a href="" class="hoverLinks">Ноутбуки</a></li>
+               <li><a href="" class="hoverLinks">Смартфоны</a></li>
+               <li><a href="" class="hoverLinks">Аксессуары</a></li>
+               <li><a href="" class="hoverLinks">Комплектующие</a></li>
+            </ul>
+         </div>
+
+         <div class="footer-col contact">
+            <a href="tel:" class="phone">+7 911 149 05 05</a>
+   
+            <div class="contact-inside">
+               <a href="mailto:electronics.info@yandex.com" class="contact-inside__item contact_email">electronics.info@yandex.com</a>
+               <div class="contact-inside__item">График: <strong>Пн-Вс: 09:00-20:00</strong></div>
+            </div>
+   
+            @@include('../ui/ui-button/ui-btn/ui-button-link.html', {
+               "text": "Свзяться с нами",
+               "className": "btn_primary-action",
+               "link": "../../pages/page-contact/page-contact.html"
+            })
+         </div>
+      </div>
+   </div>
+
+   <div class="ui-container">
+      @@include('../copyright/copyright.html')
+   </div>
+</footer>
+<!-- End Footer -->

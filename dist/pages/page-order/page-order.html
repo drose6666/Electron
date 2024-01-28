@@ -24,17 +24,17 @@
    
 
    <!-- Yandex.Карта -->
-   <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;coordorder=longlat&amp;apikey=6d611886-5e5e-4dcc-8869-89a44a656c63&_v=20240128024129" type="text/javascript"></script>
-   <script  src="../../libs/ymap/delivery_zones.js?_v=20240128024129" type="text/javascript"></script>
+   <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;coordorder=longlat&amp;apikey=6d611886-5e5e-4dcc-8869-89a44a656c63&_v=20240128192158" type="text/javascript"></script>
+   <script  src="../../libs/ymap/delivery_zones.js?_v=20240128192158" type="text/javascript"></script>
    <!-- Yandex.Карта -->
 
-   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css?_v=20240128024129" />
-   <script defer src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js?_v=20240128024129"></script>
-   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js?_v=20240128024129" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-   <link rel="stylesheet" href="../../libs/css/reset.min.css?_v=20240128024129">
-   <link rel="stylesheet" as="font" href="../../fonts/fonts.css?_v=20240128024129">
-   <link rel="stylesheet" as="font" href="../../fonts/icon-font.css?_v=20240128024129">
-   <link rel="stylesheet" href="css/page-order.min.css?_v=20240128024129">
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css?_v=20240128192158" />
+   <script defer src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js?_v=20240128192158"></script>
+   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js?_v=20240128192158" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+   <link rel="stylesheet" href="../../libs/css/reset.min.css?_v=20240128192158">
+   <link rel="stylesheet" as="font" href="../../fonts/fonts.css?_v=20240128192158">
+   <link rel="stylesheet" as="font" href="../../fonts/icon-font.css?_v=20240128192158">
+   <link rel="stylesheet" href="css/page-order.min.css?_v=20240128192158">
    
    <title>Оформление заказа</title>
 </head>
@@ -240,7 +240,7 @@
                </div>
             </div>
 
-            <img src="../../img/page_order_bg.webp" alt="" class="page-head__bg">
+            <img src="../../img/pages/page_bg_3_1.5x.webp" alt="" class="page-head__bg">
          </section>
 
          <section class="order-section">
@@ -408,7 +408,7 @@
 
    <div class="order-item">
       <div class="btn_group right_padding">
-         <a type="submit" form="formOrder" class="btn_target-action btn_order btn_success-order">Оформить заказ</a>
+         <button type="submit" form="form-order" class="btn_target-action">Оформить заказ</button>
          <a class="btn_target-outlineGrey" href="../../../pages/page-cart/page-cart.html">Вернуться в корзину</a>
       </div>
    </div>
@@ -531,7 +531,7 @@
                <li><a href="" class="hoverLinks">Аксессуары</a></li>
                <li><a href="" class="hoverLinks">Комплектующие</a></li>
             </ul>
-         </div>
+         </div> 
 
          <div class="footer-col contact">
             <a href="tel:" class="phone">+7 911 149 05 05</a>
@@ -570,6 +570,7 @@
 </div>
    </div>
 </footer>
+
 <!-- End Footer -->
       <!-- Mobile menu -->
 <div class="ui-popup fade-side left-side" id="mobile-menu">
@@ -1072,160 +1073,6 @@
    <div class="ui-popup__overlay" id="overlay-cart"></div>
 </div>
 <!-- End popup-cart (popup корзина) -->
-      <!-- popup send-review (popup оставить отзыв товару/магазину) -->
-<div class="ui-popup popup" id="popup-success-order">
-   <div class="ui-popup__container">
-
-      <!-- Здесь контент -->
-      <div class="order-success">
-         <div class="order-success__img"><img src="../../../img/order/success_order.svg" alt="congrates"></div>
-         <h2 class="order-success__title">Ваш заказ успешно оформлен!</h2>
-         
-         <p class="order-success__text">
-            Поздравляем! Ваш заказ успешно оформлен! Вы сможете оплатить его любым удобным для вас способом.
-            <strong>Мы работаем для вас!</strong>
-         </p>
-
-         <a href="/" class="btn_primary-dark">Вернуться на главную</a>
-      </div>
-      <!-- Здесь контент -->
-
-      <div class="ui-close close_popup light popup-success-order-close">
-   <i class="i-close"></i>
-</div>
-   </div>
-
-   <div class="ui-popup__overlay" id="overlay-success-order"></div>
-</div>
-<!-- End popup send-review -->
-      <!-- popup login (popup входа/регистрации - не используется) -->
-<div class="ui-popup fade-side" id="popup-login">
-   <div class="ui-popup__container popup-login__container">
-
-      <!-- Здесь контент -->
-      <div class="sign-wrap">
-
-         <!-- IMPORTANT Вход -->
-         <div class="sign-wrap__item sign-in" data-id="start-screen">
-            <!-- <img src="../../../../img/congrates.gif" alt=""> -->
-            <h2 class="ui-popup__title title_part-of-block center"><span>Вход</span></h2>
-            <p class="popup-login-text">Еще нет аккаунта? <strong data-for="sign-up" class="sign-nav">Создайте его</strong></p>
-
-            <ul class="login-methods">
-   <li><img src="../../../img/login/login_google.svg" alt=""></li>
-   <li><img src="../../../img/login/login_yandex.svg" alt=""></li>
-   <li><img src="../../../img/login/login_vk.svg" alt=""></li>
-</ul>
-            <div class="login-separator"><span>или</span></div>
-            <form action="" class="ui-form_login" id="form-sign-in">
-   <div class="ui-form-item">
-      <input type="email" name="user_email" inputmode="email" autocomplete="email" placeholder="Email" class="ui-input_popup">
-      <span class="error-message"></span>
-   </div>
-
-   <div class="ui-form-item">
-      <input type="password" inputmode="text" name="user_password" autocomplete="off" placeholder="Пароль" class="ui-input_popup input_password">
-      <label class="password-control">
-   <input type="checkbox" name="password" class="password-control__input visually-hidden">
-   <i class="i-eye password_show"></i>
-   <i class="i-eye_slash password_hide"></i>
-</label>
-      <span class="error-message"></span>
-   </div>
-
-   <div class="ui-form-submit">
-      <button type="submit" class="btn_primary-action">Войти</button>
-
-      <div class="forgot-password-link hoverLinks" data-for="forgot-password">Забыли пароль?</div>
-   </div>
-</form>
-
-
-         </div>
-
-
-         <!-- IMPORTANT Регистрация -->
-         <div class="sign-wrap__item sign-up hidden" data-id="sign-up">
-            <h2 class="ui-popup__title title_part-of-block center"><span>Регистрация</span></h2>
-            <p class="popup-login-text">Уже есть аккаунт? <strong data-for="start-screen" class="sign-nav">Войти</strong></p>
-            
-            <ul class="login-methods">
-   <li><img src="../../../img/login/login_google.svg" alt=""></li>
-   <li><img src="../../../img/login/login_yandex.svg" alt=""></li>
-   <li><img src="../../../img/login/login_vk.svg" alt=""></li>
-</ul>
-            <div class="login-separator"><span>или</span></div>
-            <form action="" class="ui-form_login" id="form-sign-up">
-   <!-- <div class="ui-form-item">
-      <input type="text" name="user_name" inputmode="text" autocomplete="name" placeholder="Имя" class="ui-input_popup dark_theme">
-      <span class="error-message"></span>
-   </div> -->
-
-   <div class="ui-form-item">
-      <input type="email" name="user_email" inputmode="email" autocomplete="email" placeholder="Email" class="ui-input_popup">
-      <span class="error-message"></span>
-   </div>
-
-   <div class="ui-form-item">
-      <input type="password" inputmode="text" name="user_password" autocomplete="new-password" placeholder="Пароль" class="ui-input_popup input_password">
-      <label class="password-control">
-   <input type="checkbox" name="password" class="password-control__input visually-hidden">
-   <i class="i-eye password_show"></i>
-   <i class="i-eye_slash password_hide"></i>
-</label>
-      <span class="error-message"></span>
-   </div>
-
-   <div class="ui-form-item">
-      <input type="password" inputmode="text" name="user_password" autocomplete="new-password" placeholder="Повторите пароль" class="ui-input_popup input_password">
-      <label class="password-control">
-   <input type="checkbox" name="password" class="password-control__input visually-hidden">
-   <i class="i-eye password_show"></i>
-   <i class="i-eye_slash password_hide"></i>
-</label>
-      <span class="error-message"></span>
-   </div>
-
-   <p class="warning-text">Нажимая кнопку ниже, вы соглашаетесь с условиями <strong class="btn_privacy-policy btn_policy">политики конфиденциальности</strong></p>
-
-   <div class="ui-form-submit">
-      <button type="submit" class="btn_primary-action">Создать аккаунт</button>
-   </div>
-</form>
-
-
-         </div>
-
-
-         <!-- IMPORTANT Забыли пароль -->
-         <div class="sign-wrap__item forgot-password hidden" data-id="forgot-password">
-            <h2 class="ui-popup__title title_part-of-block center"><span>Забыли пароль?</span></h2>
-            <p class="popup-login-text">Уже вспомнили? <strong data-for="start-screen" class="sign-nav">Войти</strong></p>
-
-            <p class="help-text">Введите ниже адрес электронной почты, на который создавался аккаунт. На него будет отправлена ссылка для сброса пароля</p>
-         
-            <form action="" class="ui-form_login" id="form-forgot-password">
-   <div class="ui-form-item">
-      <input type="email" name="user_email" inputmode="email" autocomplete="email" placeholder="Email" class="ui-input_popup">
-      <span class="error-message"></span>
-   </div>
-
-   <div class="ui-form-submit">
-      <button type="submit" class="btn_primary-action">Отправить</button>
-   </div>
-</form>
-         </div>
-      </div>
-
-      <div class="ui-close close_fade-side left_side popup-login-close">
-   <i class="i-angle_right"></i>
-</div>
-      <!-- Здесь контент -->
-   </div>
-
-   <div class="ui-popup__overlay" id="overlay-login"></div>
-</div>
-<!-- End popup login-->
       
 <div class="ui-popup popup" id="popup-delivery-areas">
    <div class="ui-popup__container">
@@ -1261,7 +1108,7 @@
       </div>
 
       <div class="map" id="map">
-         <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ad956589d31b0c98f4cbbd270ae9602e21958ba5f184b14c29fbc2ce37aa5c3a3&amp;width=100%25&amp;height=450&amp;lang=ru_RU&amp;scroll=true&_v=20240128024129"></script>
+         <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ad956589d31b0c98f4cbbd270ae9602e21958ba5f184b14c29fbc2ce37aa5c3a3&amp;width=100%25&amp;height=450&amp;lang=ru_RU&amp;scroll=true&_v=20240128192158"></script>
       </div>
       <!-- Здесь контент -->
 
@@ -1378,6 +1225,6 @@
 </div>
 <!-- End popup send-review -->
       
-      <script type="module" src="js/bundle-page-order.min.js?_v=20240128024129"></script>
+      <script type="module" src="js/bundle-page-order.min.js?_v=20240128192158"></script>
    </body>
 </html>  

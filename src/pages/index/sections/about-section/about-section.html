@@ -10,17 +10,8 @@
          <p class="about-text">Мы - твоя платформа для воплощения идей в цифровую реальность. С нами ты обретешь силу инноваций, удобства онлайн-покупок и качественной техники. Наша цель - сделать технологии доступными для каждого, воплощая твои потребности в каждом устройстве и аксессуаре. Присоединяйся к нашей электронной революции!</p>
 
          <div class="btn-group">
-            @@include('../../../../components/ui/ui-button/ui-btn/ui-button-link.html', {
-               "text": "Наши контакты",
-               "link": "../../../../pages/page-contact/page-contact.html",
-               "className": "btn_primary-action btn_about"
-            })
-
-            @@include('../../../../components/ui/ui-button/ui-btn/ui-button.html', {
-               "text": "Оставить отзыв",
-               "type": "button",
-               "className": "btn_primary-outlineLight btn_about btn_send-review"
-            })
+            <a href="../../../../pages/page-contact/page-contact.html" class="btn_primary-action btn_about">Наши контакты</a>
+            <button class="btn_primary-outlineLight btn_about btn_send-review">Оставить отзыв</button>
          </div>
 
          @@include('../../../../components/socials/socials.html', {
@@ -28,7 +19,7 @@
          })
       </div>
 
-      <video loading="lazy" src="../../../../img/about/about_4.mp4" autoplay muted loop class="about-bg-video"></video>
+      <video loading="lazy" src="../../../../img/video/about_bg.mp4" autoplay muted loop class="about-bg-video"></video>
    </div>
 </section>
 <!-- End Module about -->

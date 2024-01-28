@@ -53,7 +53,6 @@ const fieldsetAddress = document.querySelector('.address_item')   // Весь б
 const containeAddressItem = fieldsetAddress.querySelector('.data-container')    // Контейнер для полей адреса доставки
 
 
-
 // TODO Переключаем способы доставки
 deliveryItems.forEach(item => {
    item.addEventListener('change', switchDeliveryItem.bind(this, item.dataset.id))
