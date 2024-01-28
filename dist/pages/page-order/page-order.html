@@ -24,17 +24,17 @@
    
 
    <!-- Yandex.Карта -->
-   <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;coordorder=longlat&amp;apikey=6d611886-5e5e-4dcc-8869-89a44a656c63&_v=20240125210118" type="text/javascript"></script>
-   <script src="../../libs/ymap/delivery_zones.js?_v=20240125210118" type="text/javascript"></script>
+   <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;coordorder=longlat&amp;apikey=6d611886-5e5e-4dcc-8869-89a44a656c63&_v=20240128024129" type="text/javascript"></script>
+   <script  src="../../libs/ymap/delivery_zones.js?_v=20240128024129" type="text/javascript"></script>
    <!-- Yandex.Карта -->
 
-   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css?_v=20240125210118" />
-   <script defer src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js?_v=20240125210118"></script>
-   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js?_v=20240125210118" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-   <link rel="stylesheet" href="../../libs/css/reset.min.css?_v=20240125210118">
-   <link rel="stylesheet" as="font" href="../../fonts/fonts.css?_v=20240125210118">
-   <link rel="stylesheet" as="font" href="../../fonts/icon-font.css?_v=20240125210118">
-   <link rel="stylesheet" href="css/page-order.min.css?_v=20240125210118">
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css?_v=20240128024129" />
+   <script defer src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js?_v=20240128024129"></script>
+   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js?_v=20240128024129" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+   <link rel="stylesheet" href="../../libs/css/reset.min.css?_v=20240128024129">
+   <link rel="stylesheet" as="font" href="../../fonts/fonts.css?_v=20240128024129">
+   <link rel="stylesheet" as="font" href="../../fonts/icon-font.css?_v=20240128024129">
+   <link rel="stylesheet" href="css/page-order.min.css?_v=20240128024129">
    
    <title>Оформление заказа</title>
 </head>
@@ -269,7 +269,7 @@
                </div>
          
                <div class="ui-form-item form-item_tel">
-                  <div class="ui-dropdown dropdown_tel light">
+                  <div class="ui-dropdown dropdown_form dropdown_tel light">
                      <div class="selected"><span class="selected__item">+7</span></div>
                   </div>
                   <input type="tel" name="user_tel" inputmode="tel" autocomplete="tel" placeholder="Телефон" class="ui-input">
@@ -279,37 +279,6 @@
          </div>
       </fieldset>
    
-      <!-- Контакты (сохраненные) -->
-      <!-- <fieldset class="order-item address_item">
-         <legend class="order-item__title">
-            Контакты <span class="edit"></span>
-         </legend>
-   
-         <div class="data-container">
-            <ul class="saved-list">
-               <li class="saved-list__item">
-                  <div class="key">Имя:</div>
-                  <div class="value">Константин</div>
-               </li>
-   
-               <li class="saved-list__item">
-                  <div class="key">Фамилия:</div>
-                  <div class="value">Константинополевский</div>
-               </li>
-   
-               <li class="saved-list__item">
-                  <div class="key">Email:</div>
-                  <div class="value">danila.rose.web@gmail.com</div>
-               </li>
-   
-               <li class="saved-list__item">
-                  <div class="key">Телефон:</div>
-                  <div class="value">+37377946969</div>
-               </li>
-            </ul>
-         </div>
-      </fieldset> -->
-
       <!-- Способы доставки -->
       <fieldset class="order-item">
          <legend class="order-item__title">Способ доставки</legend>
@@ -321,40 +290,31 @@
       <fieldset class="order-item address_item">
          <legend class="order-item__title">Адрес доставки</legend>
    
-         <div class="data-container"></div>
+         <div class="data-container">
+            <div class="address-delivery">
+               <div class="grid-item">
+                  <div class="ui-form__item">
+                     <input id="country" type="text" name="user_country" inputmode="text" autocomplete="country-name" placeholder="Страна" value="Россия" readonly class="ui-input">
+                     <span class="error-message"></span>
+                  </div>
+                  
+                  <div class="ui-form__item">
+                     <input id="city" type="text" name="user_city" inputmode="text" autocomplete="address-level2" placeholder="Город" value="Санкт-Петеребург" readonly class="ui-input">
+                     <span class="error-message"></span>
+                  </div>
+               </div>
+         
+               <div class="ui-form__item w100">
+                  <input id="address" type="text" name="user_address" inputmode="text" autocomplete="shipping street-address" placeholder="Адрес доставки" class="ui-input">
+                  <span class="error-message"></span>
+               </div>
+            </div>
+
+            <p class="address_hint">Если выбран способ доставки "Доставка курьером", мы автоматически проверим введенный адрес на соответствие одной из зон доставки через 1.5 секунды после заполнения поля "Адрес". </p>
+            <p class="address_hint bold"><strong>ВНИМАНИЕ!!!</strong> Яндекс изменяет значение адреса, если оно было введено некорректно, чтобы повысить результаты поиска. Результаты совпадения зон верны! Но вводите реальные и корректные адреса</p>
+         </div>
       </fieldset>
 
-      <!-- Адрес доставки (сохраненные) -->
-      <!-- <fieldset class="order-item address_item">
-         <legend class="order-item__title">
-            Адрес доставки <span class="edit"></span>
-         </legend>
-   
-         <div class="data-container">
-            <ul class="saved-list">
-               <li class="saved-list__item">
-                  <div class="key">Страна:</div>
-                  <div class="value">Россия</div>
-               </li>
-   
-               <li class="saved-list__item">
-                  <div class="key">Город:</div>
-                  <div class="value">Санкт-Петербург</div>
-               </li>
-   
-               <li class="saved-list__item">
-                  <div class="key">Адрес:</div>
-                  <div class="value">М.Фрунзенская, Московский пр. 75А</div>
-               </li>
-   
-               <li class="saved-list__item">
-                  <div class="key">Почтовый индекс:</div>
-                  <div class="value">10001</div>
-               </li>
-            </ul>
-         </div>
-      </fieldset> -->
-   
       <!-- Комментарий -->
       <fieldset class="order-item">
          <legend class="order-item__title">Комментарий</legend>
@@ -1272,7 +1232,7 @@
 
       <!-- Здесь контент -->
       <h3 class="ui-popup__title center">Выберите зону доставки</h3>
-      <p class="delivery-text">Выберите зону доставки, если необходимый вам адрес доставки находится в одной из зон, указанных на карте. <strong>В противном случае, вы можете закрыть это окно и ввести адрес доставки в блоке “Адрес доставки”</strong></p>
+      <p class="delivery-text"><strong>Доставка курьером осуществляется только в пределах зон, указанных на карте.</strong> Выберите зону доставки, если необходимый вам адрес находится в одной из указанных на карте зон. <strong>В случае, если необходимый вам адрес доставки не попадает ни в одну из зон, измените способ доставки на "СДЭК".</strong></p>
 
       <div class="delivery-areas">
          <label class="delivery-area free_area">
@@ -1300,7 +1260,9 @@
          </label>
       </div>
 
-      <div class="map" id="map"></div>
+      <div class="map" id="map">
+         <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ad956589d31b0c98f4cbbd270ae9602e21958ba5f184b14c29fbc2ce37aa5c3a3&amp;width=100%25&amp;height=450&amp;lang=ru_RU&amp;scroll=true&_v=20240128024129"></script>
+      </div>
       <!-- Здесь контент -->
 
       <div class="ui-close close_popup popup-delivery-areas-close">
@@ -1387,7 +1349,35 @@
    <div class="ui-popup__overlay" id="overlay-rules"></div>
 </div>
 <!-- End popup send-review -->
+      <!-- popup send-review (popup оставить отзыв товару/магазину) -->
+<div class="ui-popup popup" id="popup-notification">
+   <div class="ui-popup__container">
+
+      <!-- Здесь контент -->
+      <div class="status-address free_area">
+         <div class="delivery-zone">
+            <div class="delivery-zone__check"></div>
+            <div class="delivery-zone__details">
+               <h4 class="zone-price">Бесплатно</h4>
+               <span class="zone-color">Зеленая зона</span>
+            </div>
+         </div>
+
+         <button class="btn_ui-outlineOnDark popup-notification-close">Ок, закрыть</button>
+         <p class="notification-text">Вы указали адрес, который попадает в <strong class="color">зеленую зону</strong> доставки. В данном случае доставка будет <strong class="count">бесплатной</strong>
+      </div>
+            
+      <!-- Здесь контент -->
+
+      <div class="ui-close close_popup popup-notification-close">
+   <i class="i-close"></i>
+</div>
+   </div>
+
+   <div class="ui-popup__overlay" id="overlay-notification"></div>
+</div>
+<!-- End popup send-review -->
       
-      <script type="module" src="js/bundle-page-order.min.js?_v=20240125210118"></script>
+      <script type="module" src="js/bundle-page-order.min.js?_v=20240128024129"></script>
    </body>
 </html>  

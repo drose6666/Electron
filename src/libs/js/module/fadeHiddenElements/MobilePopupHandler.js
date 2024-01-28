@@ -1,10 +1,11 @@
 export default class MobilePopupHandler {
-   constructor ({ selector, btnClose, btnOpen, overlay }) {
+   constructor ({ selector, btnClose, btnOpen = null, overlay, openByEvent = false }) {
       this.selector = document.querySelector(selector);
-      this.btnClose = document.querySelectorAll(btnClose);
+      this.btnClose = document?.querySelectorAll(btnClose);
       // this.elementsClose = document.querySelectorAll(elementsClose);
-      this.btnOpen = document.querySelectorAll(btnOpen);
-      this.overlay = document.querySelector(overlay);
+      this.btnOpen = document?.querySelectorAll(btnOpen);
+      this.overlay = document?.querySelector(overlay);
+      this.openByEvent = openByEvent;
 
       this.#setup()
    }
@@ -12,6 +13,9 @@ export default class MobilePopupHandler {
    body = document.body
 
    #setup () {
+      this.openByEvent ? this.open() : this.close()
+
+
       this.#eventHandler('click', this.btnOpen, this.open.bind(this))
       this.#eventHandler('click', this.btnClose, this.close.bind(this))
       this.#eventHandler('click', this.overlay, this.close.bind(this))
@@ -47,7 +51,7 @@ export default class MobilePopupHandler {
    /**
     * 
     * @param {string} handler - cобытие (event) 
-    * @param {HTMLElement} element - элемент, кна котором будет обработчик события
+    * @param {HTMLElement} element - элемент, на котором будет обработчик события
     * @param {function} callback - callback-фцнкция, выполняющаяся при собитии (event)
     */
    #eventHandler (handler, element, callback) {

@@ -1,8 +1,8 @@
 import MobilePopupHandler from "./MobilePopupHandler.js";
 
 export default class PopupHandler extends MobilePopupHandler {
-   constructor ({ selector, btnClose, btnOpen, overlay, frame = null, insertTo = null }) {
-      super ({ selector, btnClose, btnOpen, overlay })
+   constructor ({ selector, btnClose, btnOpen = null, overlay, frame = null, insertTo = null, openByEvent = null }) {
+      super ({ selector, btnClose, btnOpen, overlay, openByEvent })
       
       this.frame = frame
       this.insertTo = this.selector.querySelector(insertTo)

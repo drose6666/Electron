@@ -4,7 +4,7 @@
 
       <!-- Здесь контент -->
       <h3 class="ui-popup__title center">Выберите зону доставки</h3>
-      <p class="delivery-text">Выберите зону доставки, если необходимый вам адрес доставки находится в одной из зон, указанных на карте. <strong>В противном случае, вы можете закрыть это окно и ввести адрес доставки в блоке “Адрес доставки”</strong></p>
+      <p class="delivery-text"><strong>Доставка курьером осуществляется только в пределах зон, указанных на карте.</strong> Выберите зону доставки, если необходимый вам адрес находится в одной из указанных на карте зон. <strong>В случае, если необходимый вам адрес доставки не попадает ни в одну из зон, измените способ доставки на "СДЭК".</strong></p>
 
       <div class="delivery-areas">
          <label class="delivery-area free_area">
@@ -32,7 +32,9 @@
          </label>
       </div>
 
-      <div class="map" id="map"></div>
+      <div class="map" id="map">
+         <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ad956589d31b0c98f4cbbd270ae9602e21958ba5f184b14c29fbc2ce37aa5c3a3&amp;width=100%25&amp;height=450&amp;lang=ru_RU&amp;scroll=true"></script>
+      </div>
       <!-- Здесь контент -->
 
       @@include('../../ui/ui-close/ui-close.html', {

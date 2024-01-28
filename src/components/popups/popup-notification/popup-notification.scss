@@ -1,0 +1,80 @@
+// TODO Информирование о попаднии адреса в зону доставки
+.status-address {
+   $checkSize: 70px;
+   
+   --status_color: var(--free_area);
+
+   &.free_area {
+      --status_color: var(--free_area)
+   }
+
+   &.second-area {
+      --status_color: var(--second_area)
+   }
+
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+
+   .delivery-zone {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      column-gap: 20px;
+      row-gap: 10px;
+
+      &__check {
+         width: $checkSize;
+         height: $checkSize;
+         position: relative;
+         border-radius: var(--circleRd);
+         background: var(--status_color);
+
+         &:after {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-family: var(--icon_font);
+            font-size: 30px;
+            color: var(--light);
+         }
+      }
+
+      &__details {
+         display: flex;
+         flex-direction: column;
+         
+         .zone-price {
+            margin-bottom: 5px;
+            font-size: 35px;
+            font-weight: 500;
+            line-height: 100%;
+            color: var(--light);
+         }
+
+         .zone-color {
+            font-size: 19px;
+            font-weight: 400;
+            line-height: 100%;
+            color: var(--status_color);
+         }
+      }
+   }
+
+   .notification-text {
+      font-size: 17px;
+      font-weight: 300;
+      line-height: 130%;
+      color: var(--text_selected_on_dark);
+
+      .count {
+         font-weight: 500;
+         color: var(--light);
+      }
+
+      .color {
+         color: var(--status_color);
+      }
+   }
+}

@@ -18,6 +18,7 @@ $transitionDuration: .2s ease;
 @import './fade-side/popup-delivery/popup-delivery';
 @import './popup-policy/popup-policy';
 @import './popup-rules/popup-rules';
+@import './popup-notification/popup-notification';
 @import './popup-delivery-areas/popup-delivery-areas';
 
 .ui-popup {
@@ -114,8 +115,7 @@ $transitionDuration: .2s ease;
    }
 
 
-   &.popup_fixed-content {
-      
+   &.popup_fixed-content { 
       .ui-popup__container {
          padding: 
             110px 
@@ -150,6 +150,13 @@ $transitionDuration: .2s ease;
             height: auto;
             max-height: auto;
          }
+      }
+   }
+
+
+   #popup-notification {
+      .ui-popup__container {
+         padding: 30px clamp(20px, 7cqi, 30px);
       }
    }
 

@@ -72,8 +72,10 @@ function renderDropdown(options) {
          <span class="selected__item">${textForSelected}</span>
       </div>
 
-      <ul class="options">
-         ${innerOptions.join('')}
-      </ul>
+      <div class="options-wrap">
+         <ul class="options">
+            ${innerOptions.join('')}
+         </ul>
+      </div>
    `
 }

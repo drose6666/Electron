@@ -114,9 +114,9 @@ function watcher() {
  * ------------------------------------------------------------------
  */
 const mainTasks = gulp.parallel(
-   html, /* () => pagesHTML('page-brands'), () => pagesHTML('page-brand-single') */ () => pagesHTML('page-category'), () => pagesHTML('page-product'), () => pagesHTML('page-cart'), () => pagesHTML('page-order'), () => pagesHTML('page-contact'), () => pagesHTML('page-information'), () => pagesHTML('page-404'), () => pagesHTML('page-nothing-found'), 
-   () => js('index'), /* () => js('page-brands'), () => js('page-brand-single') */ () => js('page-category'), () => js('page-product'), () => js('page-cart'), () => js('page-order'), () => js('page-contact'), () => js('page-information'), () => js('page-404'), () => js('page-nothing-found'), 
-   () => scss('index'), /* () => scss('page-brands'), () => scss('page-brand-single') */ () => scss('page-category'), () => scss('page-product'), () => scss('page-cart'), () => scss('page-order'), () => scss('page-contact'), () => scss('page-information'), () => scss('page-404'), () => scss('page-nothing-found'), 
+   html, () => pagesHTML('page-category'), () => pagesHTML('page-product'), () => pagesHTML('page-cart'), () => pagesHTML('page-order'), () => pagesHTML('page-contact'), () => pagesHTML('page-information'), () => pagesHTML('page-404'), () => pagesHTML('page-nothing-found'), 
+   () => js('index'), () => js('page-category'), () => js('page-product'), () => js('page-cart'), () => js('page-order'), () => js('page-contact'), () => js('page-information'), () => js('page-404'), () => js('page-nothing-found'), 
+   () => scss('index'), () => scss('page-category'), () => scss('page-product'), () => scss('page-cart'), () => scss('page-order'), () => scss('page-contact'), () => scss('page-information'), () => scss('page-404'), () => scss('page-nothing-found'), 
    fonts, copyLibs, copyOther, gulp.parallel(cleanImg, copyImg));
 
 

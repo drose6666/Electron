@@ -85,6 +85,11 @@ $orderSectiongutter: calc((100vw - var(--full_container_width) - 40px) / 2);
          z-index: 1;
       }
 
+      &.address_item {
+         position: relative;
+         z-index: 1;
+      }
+
       &.your-order {
          .order-item-title-wrap {
             padding-right: 20px;

@@ -1,5 +1,5 @@
-$freeArea: #10E866; 
-$secondArea: #E81010;
+$freeArea: var(--free_area); 
+$secondArea: var(--second_area);
 $borderR: var(--mdRd);
 
 #popup-delivery-areas {
@@ -8,26 +8,32 @@ $borderR: var(--mdRd);
    }
 
    .ui-popup__title {
-      margin-bottom: 20px;
+      margin-bottom: 30px;
    }
 
    .delivery-text {
-      margin: 0 auto 50px auto;
+      margin: 0 auto 60px auto;
       font-size: 17px;
       font-weight: 300;
       line-height: 130%;
       color: var(--text_additional);
       text-align: center;
-      max-width: 780px;
+      max-width: 850px;
 
       strong {
          color: var(--text_selected_on_dark);
+      }
+
+      &.additional_text {
+         margin-bottom: 25px;
+         font-size: 16px;
+         max-width: 570px;
       }
    }
 
    // TODO Зоны доставки
    .delivery-areas {
-      margin-bottom: 50px;
+      margin-bottom: 60px;
       display: grid;
       grid-template: auto / repeat(auto-fit, minmax(300px, 1fr));
       column-gap: 20px;

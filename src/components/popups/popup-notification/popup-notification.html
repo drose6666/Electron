@@ -1,0 +1,29 @@
+<!-- popup send-review (popup оставить отзыв товару/магазину) -->
+<div class="ui-popup popup" id="popup-notification">
+   <div class="ui-popup__container">
+
+      <!-- Здесь контент -->
+      <div class="status-address free_area">
+         <div class="delivery-zone">
+            <div class="delivery-zone__check"></div>
+            <div class="delivery-zone__details">
+               <h4 class="zone-price">Бесплатно</h4>
+               <span class="zone-color">Зеленая зона</span>
+            </div>
+         </div>
+
+         <button class="btn_ui-outlineOnDark popup-notification-close">Ок, закрыть</button>
+         <p class="notification-text">Вы указали адрес, который попадает в <strong class="color">зеленую зону</strong> доставки. В данном случае доставка будет <strong class="count">бесплатной</strong>
+      </div>
+            
+      <!-- Здесь контент -->
+
+      @@include('../../ui/ui-close/ui-close.html', {
+         "className": "close_popup popup-notification-close",
+         "classNameIcon": "close"
+      })
+   </div>
+
+   <div class="ui-popup__overlay" id="overlay-notification"></div>
+</div>
+<!-- End popup send-review -->

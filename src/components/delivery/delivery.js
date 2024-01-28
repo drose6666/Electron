@@ -11,16 +11,6 @@ const deliveryOrderData = [
 
    {
       id: 2,
-      name: 'Забрать из магазина',
-      info: {
-         description: 'Пн-Вс: 09:00-21:00,',
-         condition: 'СПб, Новоизмайловский проспект 4'
-      },
-      selected: false
-   },
-
-   {
-      id: 3,
       name: 'СДЭК',
       info: {
          description: 'Доставка ',
@@ -28,6 +18,16 @@ const deliveryOrderData = [
       },
       selected: false
    },
+
+   {
+      id: 3,
+      name: 'Забрать из магазина',
+      info: {
+         description: 'Пн-Вс: 09:00-21:00,',
+         condition: 'СПб, Новоизмайловский проспект 4'
+      },
+      selected: false
+   }, 
 ]
 
 

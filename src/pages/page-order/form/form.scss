@@ -68,6 +68,23 @@
       }
    }
 
+   .address_hint {
+      margin-top: 15px;
+      font-size: 15px;
+      font-weight: 300;
+      line-height: 120%;
+      color: var(--text_additional);
+      max-width: 750px;
+
+      &.bold {
+         color: var(--dark);
+
+         strong {
+            font-weight: 600;
+         }
+      }
+   }
+
    .btn-wrap {
       margin-top: 30px;
       display: flex;

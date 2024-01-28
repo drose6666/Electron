@@ -34,11 +34,12 @@
       }
    }
 
-   .options {
+   .options-wrap {
+      padding: 10px 5px;
       position: absolute;
       left: 0;
       top: 110%;
-      background: var(--separating_contrast);
+      background: var(--separating);
       border-radius: var(--slRd);
       width: 100%;
       overflow-y: auto;
@@ -46,7 +47,9 @@
       visibility: hidden;
       transition: inherit;
       transform: translateY(10px);
+   }
 
+   .options {
       &__item {
          padding: 5px 20px;
          font-size: 17px;
@@ -75,7 +78,7 @@
    }
 
    &.active {
-      .options {
+      .options-wrap {
          opacity: 1;
          visibility: visible;
          transform: none;
@@ -155,26 +158,26 @@
    }
 
    // TODO Серые в инпутах
-   &.dropdown_tel {
-      position: absolute;
-      top: 2px;
-      left: 2px;
+   &.dropdown_form {
+      position: relative;
+      z-index: 1;
+      width: 100%;
 
       .selected {
-         padding: 5px;
-         width: 65px;
-         height: 46px;
+         padding: 5px 20px;
+         height: 50px;
+         width: 100%;
          display: flex;
          align-items: center;
-         justify-content: center;
+         background: var(--separating);
          border-radius: var(--defaultRd);
-         
+
          &:after {
-            display: none;
+            right: 20px;
          }
 
          &__item {
-            font-size: 16px;
+            font-size: 17px;
             font-weight: 400;
          }
       }
@@ -183,8 +186,27 @@
          padding: 5px;
          background: var(--separating);
          border-radius: var(--mdRd);
+         max-height: 350px;
+         overflow-y: auto;
+         overflow-x: visible;
+
+         &::-webkit-scrollbar {
+            background: var(--separating);
+            width: 5px;
+            height: 5px;
+         }
+         
+         &::-webkit-scrollbar-thumb {
+            background: var(--border);
+            border-radius: 50px;
+         }
+         
+         &::-webkit-scrollbar-corner {
+            background: transparent;
+         }
 
          &__item {
+            padding: 3px 15px;
             font-size: 15px;
             font-weight: 400;
             height: 35px;
@@ -193,7 +215,6 @@
             border-radius: var(--defaultRd);
             display: flex;
             align-items: center;
-            justify-content: center;
 
             &:not(:last-child) {
                margin-bottom: 3px;
@@ -211,6 +232,23 @@
             &.disabled {
                color: var(--border);
                background: transparent;
+            }
+         }
+      }
+
+      &.dropdown_tel {
+         position: absolute;
+         top: 2px;
+         left: 2px;
+         width: auto;
+
+         .selected {
+            width: 65px;
+            height: 46px;
+            background: var(--separating_contrast);
+
+            &:after {
+               display: none;
             }
          }
       }

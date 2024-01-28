@@ -103,16 +103,16 @@
    } @else if $theme == outlineOnDark {
       $color: var(--light);
       $bg: transparent;
-      $borderColor: var(--text_additional);
+      $borderColor: var(--border_dark);
 
       color: $color;
       background: $bg;
       border: 1px solid $borderColor;
    
       &:hover {
-         background: var(--border);
+         background: var(--separating);
          color: var(--dark);
-         border-color: var(--border);
+         border-color: var(--separating);
       }
 
    } @else if $theme == light {
