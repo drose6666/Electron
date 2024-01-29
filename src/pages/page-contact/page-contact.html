@@ -24,7 +24,14 @@
 
                      @@include('../../components/forms/form-contact/form-contact.html')
                   
-                     <video class="contact_bg" loading="lazy" autoplay muted loop src="../../img/video/contact_bg.mp4"></video>
+                     <div class="contact-bg-wrap">
+                        <picture class="contact_bg">
+                           <source media="(max-width: 1185px)" srcset="../../img/contact/contact_bg_2_1185w.webp">
+                           <img src="../../img/contact/contact_bg_2.webp" alt="omatech contact">
+                         </picture>
+                     </div>
+                     
+                     <!-- <video class="contact_bg" loading="lazy" autoplay muted loop src="../../img/video/contact_bg.mp4"></video> -->
                   </div>
 
                   <div class="contact__details">

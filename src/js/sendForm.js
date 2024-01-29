@@ -14,19 +14,17 @@ export default async function sendForm(form) {
          });
 
          if (response.ok) {
-         alert("Данные успешно отправлены на сервер.");
+         alert("Отлично! Мы получили данные и в ближайшее время с вами свяжемся");
          } else {
-         alert("Произошла ошибка при отправке данных на сервер.");
+         alert("Упс, что-то пошло не так...");
          }
       }
    } catch (error) {
-      console.error("Ошибка:", error);
-      alert("Произошла ошибка при отправке данных.");
+      alert("Упс, что-то пошло не так...");
    }
 }
 
 function validateForm(form) {
-   console.log('validateForm');
    const inputs = form.querySelectorAll("input, textarea");
    let isFormValid = true;
 
@@ -52,7 +50,7 @@ function validateForm(form) {
          case "tel":
             applyPhoneMask(input); // Применяем маску к полю телефона
             if ((isRequired && value === "") || !validatePhone(value)) {
-               onError(errorMessage, parentInputEl, "Поле 'Телефон' заполнено некорректно.");
+               onError(errorMessage, parentInputEl, "Введите корректный номер телефона");
                isFormValid = false;
             } else {
                onSuccess(errorMessage, parentInputEl);
@@ -61,7 +59,7 @@ function validateForm(form) {
 
          case "email":
             if ((isRequired && value === "") || !validateEmail(value)) {
-               onError(errorMessage, parentInputEl, "Поле 'Email' заполнено некорректно.");
+               onError(errorMessage, parentInputEl, "Введите корректный Email");
                isFormValid = false;
             } else {
                onSuccess(errorMessage, parentInputEl);
@@ -70,7 +68,7 @@ function validateForm(form) {
 
          case "message":
             if ((isRequired && value === "") || !validateMessage(value)) {
-               onError(errorMessage, parentInputEl, "Поле 'Сообщение' заполнено некорректно.");
+               onError(errorMessage, parentInputEl, "Это поле тоже нужно заполнить");
                isFormValid = false;
             } else {
                onSuccess(errorMessage, parentInputEl);
@@ -135,3 +133,9 @@ function clearErrorsForInput(input) {
 function applyPhoneMask(input) {
    Inputmask('999 999 99 99', { showMaskOnHover: false }).mask(input);
 }
+
+const telInput = document.querySelector('input[data-type="tel"]');
+// Применяем маску при вводе
+telInput.addEventListener('input', () => {
+   applyPhoneMask(telInput);
+});

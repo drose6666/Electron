@@ -168,6 +168,8 @@ $borderR: var(--mdRd);
       }
    }
 
+   
+
    @include media (max-width, 1280px) {
       .popup-delivery-areas-close {
          right: 15px;
