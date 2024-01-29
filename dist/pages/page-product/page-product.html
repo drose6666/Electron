@@ -17,18 +17,19 @@
    <link rel="icon" href="../../img/favicon/fav_16.png" type="image/png" sizes="16x16">
    <link rel="icon" href="../../img/favicon/fav_32.png" type="image/png" sizes="32x32">
    <link rel="icon" href="../../img/favicon/fav_64.png" type="image/png" sizes="64x64">
-   
+
    <!-- Дополнительные размеры или форматы иконок -->
    <link rel="icon" href="../../img/favicon/fav_48.png" type="image/png" sizes="48x48">
    <link rel="icon" href="../../img/favicon/fav_128.png" type="image/png" sizes="128x128">
   
-   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css?_v=20240128192158" />
-   <script defer src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js?_v=20240128192158"></script>
-   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js?_v=20240128192158" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-   <link rel="stylesheet" href="../../libs/css/reset.min.css?_v=20240128192158">
-   <link rel="stylesheet" as="font" href="../../fonts/fonts.css?_v=20240128192158">
-   <link rel="stylesheet" as="font" href="../../fonts/icon-font.css?_v=20240128192158">
-   <link rel="stylesheet" href="css/page-product.min.css?_v=20240128192158">
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css?_v=20240129122133" />
+   <script defer src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js?_v=20240129122133"></script>
+   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js?_v=20240129122133" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.8/jquery.inputmask.min.js?_v=20240129122133"></script>
+   <link rel="stylesheet" href="../../libs/css/reset.min.css?_v=20240129122133">
+   <link rel="stylesheet" as="font" href="../../fonts/fonts.css?_v=20240129122133">
+   <link rel="stylesheet" as="font" href="../../fonts/icon-font.css?_v=20240129122133">
+   <link rel="stylesheet" href="css/page-product.min.css?_v=20240129122133">
    
    <title>ASUS VivoBook 15 M1502IA-BQ011W</title>
 </head>
@@ -1732,10 +1733,12 @@
       <!-- Здесь контент -->
       <h3 class="ui-popup__title center">Заказать звонок</h3>
       <p class="call-text">Для предзаказа товара заполните форму ниже, и мы свяжемся с вами в ближайшее время для уточнения деталей и оформления заказа <br> <strong>Мы работаем для вас!</strong></p>
-      <form action="" class="contact-form" id="form-call">
+      <form action="" class="contact-form" id="form_call">
    <fieldset class="fields-group grid_c-two">
+      <input type="hidden" name="subject" value="Заказ звонка с сайта">
+
       <div class="ui-form-item">
-         <input type="text" name="user_name" inputmode="text" autocomplete="given-name" placeholder="Имя" class="ui-input dark">
+         <input type="text" name="user_name" inputmode="text" autocomplete="given-name" placeholder="Имя" class="ui-input dark" data-required data-type="name">
          <span class="error-message"></span>
       </div>
 
@@ -1743,13 +1746,13 @@
          <div class="ui-dropdown dropdown_tel dropdown_form dark">
             <div class="selected"><span class="selected__item">+7</span></div>
          </div>
-         <input type="tel" name="user_tel" inputmode="tel" autocomplete="tel" placeholder="Телефон" class="ui-input dark">
+         <input type="tel" name="user_tel" inputmode="tel" autocomplete="tel" placeholder="Телефон" class="ui-input dark" data-required data-type="tel">
          <span class="error-message"></span>
       </div>
    </fieldset>
 
    <div class="ui-form-item">
-      <textarea name="user_message" placeholder="Сообщение" class="ui-textarea dark"></textarea>
+      <textarea name="user_message" placeholder="Сообщение" class="ui-textarea dark" data-type="message"></textarea>
       <span class="error-message"></span>
    </div>
 
@@ -1874,6 +1877,6 @@
 </div>
 <!-- End popup send-review -->
       
-      <script type="module" src="js/bundle-page-product.min.js?_v=20240128192158"></script>
+      <script type="module" src="js/bundle-page-product.min.js?_v=20240129122133"></script>
    </body>
 </html>  

@@ -1,1 +1,6 @@
-// import '../../ui/ui-dropdown/ui-dropdown-tel.js'
+import sendForm from "../../../js/sendForm.js";
+
+document.getElementById('form_call').addEventListener('submit', async function (e) {
+   e.preventDefault();
+   await sendForm(this)
+});

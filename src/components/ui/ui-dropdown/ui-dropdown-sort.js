@@ -44,9 +44,8 @@ export default class Dropdown {
       document.querySelector(`${this.selector} .options [data-id="${currentId}"]`).classList.add('current')
 
       if (currentItem) {
-         this.$selected.value = currentItem.value
+         this.$selected.textContent = currentItem.value
          this.$selected.dataset.id = currentId
-         this.$selected.dispatchEvent(new Event('change'))
       }
    }
 }  
@@ -70,7 +69,7 @@ function renderDropdown(options) {
 
    return `
       <div class="selected">
-         <input type="text" value="${textForSelected}" readonly class="selected__item">
+         <span type="text" class="selected__item">${textForSelected}</span>
       </div>
 
       <div class="options-wrap">

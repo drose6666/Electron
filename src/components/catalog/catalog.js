@@ -1,4 +1,4 @@
-import Dropdown from "../ui/ui-dropdown/ui-dropdown.js";
+import Dropdown from "../ui/ui-dropdown/ui-dropdown-sort.js";
 
 const catalogFiltersData = [
    { id: 1, value: 'Цена по возрастанию' },

@@ -1,16 +1,18 @@
 <div class="contact__form__wrap">
-   <form action="" class="contact__form">
+   <form action="" class="contact__form" id="contact_form">
       <h3 class="contact__form__title">Остались вопросы?</h3>
       <p class="contact__form__subtitle">Если у Вас остались вопросы, предложения или пожелания, можете написать об этом, заполнив форму ниже. <br> <strong>Мы всегда рады общению!</strong></p>
 
       <fieldset class="fields-group">
+         <input type="hidden" name="subject" value="Сообщение c сайта (контактная форма)">
+         
          <div class="ui-form-item">
-            <input type="text" name="user_name" inputmode="text" autocomplete="given-name" placeholder="Имя" class="ui-input dark">
+            <input type="text" name="user_name" inputmode="text" autocomplete="given-name" placeholder="Имя" class="ui-input dark" data-required data-type="name">
             <span class="error-message"></span>
          </div>
 
          <div class="ui-form-item">
-            <input type="email" name="user_email" inputmode="email" autocomplete="email" placeholder="Email" class="ui-input dark">
+            <input type="email"  name="user_email" inputmode="email" autocomplete="email" placeholder="Email" class="ui-input dark" data-required data-type="email">
             <span class="error-message"></span>
          </div>
 
@@ -18,12 +20,12 @@
             <div class="ui-dropdown dropdown_tel dropdown_form dark">
                <div class="selected"><span class="selected__item">+7</span></div>
             </div>
-            <input type="tel" name="user_tel" inputmode="tel" autocomplete="tel" placeholder="Телефон" class="ui-input dark">
+            <input type="tel" name="user_tel" inputmode="tel" autocomplete="tel" placeholder="Телефон" class="ui-input dark" data-required data-type="tel">
             <span class="error-message"></span>
          </div>
 
          <div class="ui-form-item full-width">
-            <textarea name="user_message" placeholder="Сообщение" class="ui-textarea dark"></textarea>
+            <textarea name="user_message" placeholder="Сообщение" class="ui-textarea dark" data-required data-type="message"></textarea>
             <span class="error-message"></span>
          </div>
 

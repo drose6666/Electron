@@ -1,7 +1,9 @@
-<form action="" class="contact-form" id="form-call">
+<form action="" class="contact-form" id="form_call">
    <fieldset class="fields-group grid_c-two">
+      <input type="hidden" name="subject" value="Заказ звонка с сайта">
+
       <div class="ui-form-item">
-         <input type="text" name="user_name" inputmode="text" autocomplete="given-name" placeholder="Имя" class="ui-input dark">
+         <input type="text" name="user_name" inputmode="text" autocomplete="given-name" placeholder="Имя" class="ui-input dark" data-required data-type="name">
          <span class="error-message"></span>
       </div>
 
@@ -9,13 +11,13 @@
          <div class="ui-dropdown dropdown_tel dropdown_form dark">
             <div class="selected"><span class="selected__item">+7</span></div>
          </div>
-         <input type="tel" name="user_tel" inputmode="tel" autocomplete="tel" placeholder="Телефон" class="ui-input dark">
+         <input type="tel" name="user_tel" inputmode="tel" autocomplete="tel" placeholder="Телефон" class="ui-input dark" data-required data-type="tel">
          <span class="error-message"></span>
       </div>
    </fieldset>
 
    <div class="ui-form-item">
-      <textarea name="user_message" placeholder="Сообщение" class="ui-textarea dark"></textarea>
+      <textarea name="user_message" placeholder="Сообщение" class="ui-textarea dark" data-type="message"></textarea>
       <span class="error-message"></span>
    </div>
 

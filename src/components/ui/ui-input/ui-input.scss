@@ -215,23 +215,26 @@
    position: relative;
    
    .error-message {
-      font-size: 13px;
-      font-weight: 400;
+      margin-top: 5px;
+      font-size: 15px;
+      font-weight: 500;
       line-height: 100%;
       color: var(--error);
       position: relative;
-      top: 2px;
+      text-align: left;
       display: none;
    }
 
    &.error {
-      .ui-input {
+      .ui-input,
+      .ui-textarea {
          background: var(--error_bg);
          color: var(--error);
-         outline-color: var(--error);
+         border-color: var(--error);
 
          &::placeholder {
-            color: var(-error);
+            font-weight: 400;
+            color: var(--error);
          }
       }
 
