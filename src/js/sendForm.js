@@ -1,7 +1,6 @@
 // import Inputmask from "inputmask";
 
 export default async function sendForm(form) {
-   console.log('sendForm');
    try {
       const isValid = validateForm(form);
       if (isValid) {
@@ -14,9 +13,9 @@ export default async function sendForm(form) {
          });
 
          if (response.ok) {
-         alert("Отлично! Мы получили данные и в ближайшее время с вами свяжемся");
+            alert("Отлично! Мы получили данные и в ближайшее время с вами свяжемся");
          } else {
-         alert("Упс, что-то пошло не так...");
+            alert("Упс, что-то пошло не так...");
          }
       }
    } catch (error) {
@@ -109,7 +108,6 @@ function validateMessage(message) {
 }
 
 function onError(element, parentEl, message) {
-   console.log('onError');
    parentEl.classList.add("error");
    element.textContent = message;
 }
@@ -137,5 +135,15 @@ function applyPhoneMask(input) {
 const telInput = document.querySelector('input[data-type="tel"]');
 // Применяем маску при вводе
 telInput.addEventListener('input', () => {
+   applyPhoneMask(telInput);
+});
+
+// Применяем маску при изменении значения (в том числе, когда браузер заполняет автоматически)
+telInput.addEventListener('change', () => {
+   applyPhoneMask(telInput);
+});
+
+// Если значение меняется программно (например, при автозаполнении браузера), также применяем маску
+telInput.addEventListener('DOMSubtreeModified', () => {
    applyPhoneMask(telInput);
 });

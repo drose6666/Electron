@@ -7,42 +7,20 @@ const productOptions = [
       id: 1,
       name : 'Цвет',
       options: [
-         { id: 1, name: 'colors', value: 'Светлый титан', color: '#F4F2EE', disabled: false, selected: true},
-         { id: 2, name: 'colors', value: 'Темный титан', color: '#4A4846', disabled: false, selected: false},
-         { id: 3, name: 'colors', value: 'Натуральный титан', color: '#FDE8CF', disabled: false, selected: false},
-         { id: 4, name: 'colors', value: 'Красный титан', color: '#DE8E86', disabled: false, selected: false},
-         { id: 5, name: 'colors', value: 'Зеленый титан', color: '#516956', disabled: false, selected: false},
-         { id: 6, name: 'colors', value: 'Синий титан', color: '#82A7C8', disabled: false, selected: false},
+         { id: 1, name: 'colors', value: 'Желтый', color: '#EAE1BA', disabled: false, selected: true},
+         { id: 2, name: 'colors', value: 'Черный', color: '#4C4D4F', disabled: false, selected: false},
       ]
    },
    {
       id: 2,
       name : 'Память',
       options: [
-         { id: 1, name: 'memory', value: '16/512 Gb', disabled: false, selected: true },
-         { id: 2, name: 'memory', value: '32/512 Gb', disabled: false, selected: false },
-         { id: 3, name: 'memory', value: '128/512 Gb', disabled: false, selected: false },
+         { id: 1, name: 'memory', value: '128 Gb', disabled: false, selected: false },
+         { id: 2, name: 'memory', value: '256 Gb', disabled: false, selected: true },
+         { id: 3, name: 'memory', value: '512 Gb', disabled: false, selected: false },
+         { id: 5, name: 'memory', value: '1 Tb', disabled: true, selected: false },
       ]
    },
-   {
-      id: 3,
-      name : 'SSD',
-      options: [
-         { id: 1, name: 'ssd', value: '256 Gb', disabled: false, selected: false },
-         { id: 2, name: 'ssd', value: '512 Gb', disabled: false, selected: false },
-         { id: 3, name: 'ssd', value: '1 Tb', disabled: false, selected: true },
-         { id: 4, name: 'ssd', value: '2 Tb', disabled: false, selected: false },
-      ]
-   },
-   {
-      id: 4,
-      name : 'Диагональ',
-      options: [
-         { id: 1, name: 'diagonal', value: '14.3”', disabled: false, selected: false },
-         { id: 2, name: 'diagonal', value: '15.3”', disabled: false, selected: true },
-         { id: 3, name: 'diagonal', value: '15.6”', disabled: false, selected: false },
-      ]
-   }
 ]
 
 function createHTMLOptionItem (productOptions) {

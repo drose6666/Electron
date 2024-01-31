@@ -35,13 +35,13 @@
    $color: var(--dark),
    $bg: var(--separating),
    $borderColor: transparent,
-   $border: 1px solid $borderColor,
+   // $border: 1px solid $borderColor,
    $theme: light
 ) {
    color: $color;
    background: $bg;
    outline: none;
-   border: $border;
+   border: none;
    
    &::placeholder {
       font-weight: 200;
@@ -230,7 +230,7 @@
       .ui-textarea {
          background: var(--error_bg);
          color: var(--error);
-         border-color: var(--error);
+         // border-color: var(--error);
 
          &::placeholder {
             font-weight: 400;

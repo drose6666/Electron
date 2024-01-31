@@ -11,8 +11,6 @@ const options = {
    speed: 400,
    pauseOnMouseEnter: true,
    observer: true,
-   autoplay: true,
-   delay: 3000,
    keyboard: {
       enabled: true,
       onlyInViewport: false,

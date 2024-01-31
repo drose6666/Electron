@@ -33,6 +33,7 @@
          width: 34px;
          height: 34px;
          border-radius: var(--circleRd);
+         box-shadow: var(--color_inner_shadow);
          border: none;
          outline: 1px solid transparent;
       }
@@ -41,6 +42,7 @@
          width: 34px;
          height: 34px;
          outline-offset: 3px;
+         box-shadow: var(--color_inner_shadow);
       }
 
       .product-option__input:disabled ~ .product-option__custom {
@@ -178,6 +180,7 @@
             .product-option__input:checked ~ .product-option__custom {
                border: none;
                outline-color: var(--dark);
+               box-shadow: var(--color_inner_shadow);
             }
          }
       }

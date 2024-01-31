@@ -4,8 +4,6 @@ const options = {
    spaceBetween: 20,
    speed: 400,
    pauseOnMouseEnter: true,
-   autoplay: true,
-   delay: 3000,
    observer: true,
    keyboard: {
       enabled: true,
